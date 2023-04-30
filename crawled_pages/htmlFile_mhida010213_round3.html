@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>
+
+	
+Stanford Magazine - Home	
+	</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+
+	<!-- YUI -->
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/js/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css">
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/js/2.5.2/build/assets/skins/sam/skin.css">
+	<script type="text/javascript" src="/pgw/s20/js/perm/bundle_2.5.2_1.js"></script>
+	<script type="text/javascript" src="/pgw/s20/js/loaderBundled.js"></script>
+
+	<!-- Styled Select -->
+	<script type="text/javascript" src="/pgw/s20/js/styledselect.js"></script> <!-- Included on every page b/c of header tools -->
+	<!-- Clear Fields -->
+	<script type="text/javascript" language="javascript">
+	YAHOO.namespace("SolutionSet.widget");
+
+	YAHOO.SolutionSet.widget.ClearFields = function(selector) {
+		var elements = YAHOO.util.Selector.query(selector);
+
+		YAHOO.util.Event.addListener(elements, "focus", YAHOO.SolutionSet.widget.ClearFields._onElementFocus);
+		YAHOO.util.Event.addListener(elements, "blur", YAHOO.SolutionSet.widget.ClearFields._onElementBlur);
+	}
+
+	YAHOO.SolutionSet.widget.ClearFields._onElementFocus = function (e) {
+		var target = YAHOO.util.Event.getTarget(e);
+		if (target.value == target.defaultValue) {
+			target.value = "";
+		}
+	}
+
+	YAHOO.SolutionSet.widget.ClearFields._onElementBlur = function (e) {
+		var target = YAHOO.util.Event.getTarget(e);
+		if(!YAHOO.util.Dom.hasClass(target, "forceClear")) {
+			if (target.value == "") {
+				target.value = target.defaultValue;
+			}
+		}
+	}
+
+	// ADVPS-925 - static page redirection
+	// Removed as per Forrest Email on 10/19 04:18pm
+	// ["/get/page/magazine/contactus/advertise", "https://stanfordmag.org/contact"],
+
+	//ADVPS-1403 - adding more redirections
+
+	var maps = [
+							["/get/page/magazine/article", "https://stanfordmag.org"],
+							["/get/page/magazine/back-issues", "https://stanfordmag.org/issues"],
+							["/get/page/magazine/contactus/faq", "https://stanfordmag.org/faq"],
+							["/get/page/magazine/contactus/home", "https://stanfordmag.org/contact"],
+							["/get/page/magazine/digital-offerings", "https://stanfordmag.org"],
+							["/get/page/magazine/home", "https://stanfordmag.org"],
+							["/get/page/magazine/home-dev", "https://stanfordmag.org"],
+							["/get/page/magazine/issue", "https://stanfordmag.org/magazine"],
+							["/get/page/magazine/notfound", "https://stanfordmag.org"],
+							["/get/page/magazine/section", "https://stanfordmag.org"],
+							["/get/page/magazine/sage/archives2009", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/archives2010", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/archives2011", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/archives2012", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/archives2013", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/home", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/about", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/ask", "https://stanfordmag.org/advice"],
+							["/get/page/magazine/sage/confirm", "https://stanfordmag.org/advice"],
+							// -- ADVPS-1403
+							["/get/page/magazine", "https://stanfordmag.org"],
+							["/get/page/magazine/classifieds", "https://stanfordmag.org/classifieds"],
+							["/get/page/magazine/contactus", "https://stanfordmag.org/contact"],
+							["/get/page/search/elements/magazine_search", "https://stanfordmag.org"],
+							// -- new request for Forrest
+							["/get/page/magazine/contactus/obit", "https://stanfordmag.org/obituary"],
+
+							// -- ADVPS-1575
+							["/get/page/magazine/contactus/advertise", "https://stanfordmag.org/advertise"],
+							// -- ADVPS-2804
+							["/get/page/magazine/;", "https://stanfordmag.org"]
+
+					  ] ;
+
+	var pathName = window.location.pathname ;
+	if (pathName.charAt(pathName.length - 1) == "/") pathName = pathName.substring(0, pathName.length - 1) ;
+
+	for (var i=0;i<maps.length;i++)
+	{
+		if (maps[i][0] == pathName)
+		{
+			window.location = maps[i][1] ;
+			break ;
+		}
+	}
+
+	</script>
+	<!-- Form Dialog -->
+	<script type="text/javascript" src="/pgw/s20/js/formdialog.js"></script> <!-- Included on every page b/c of terms in footer -->
+
+	<!-- global -->
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/css/global.new.css" />
+
+	<!-- sIFR -->
+	<script type="text/javascript" src="/pgw/s20/js/perm/sifr.js"></script>
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/css/perm/sifr.css" />
+
+	<script type="text/javascript" language="javascript">
+		var saaHeaderImageForTemplate ="/pgw/s20/i/banners/magazineBanner.jpg";
+		YAHOO.SolutionSet.util.LoadJSFiles(["/pgw/s20/js/jstimeout.js"], function()
+		{
+				new YAHOO.SolutionSet.widget.JSTimeout("none");
+		});
+		var newAppBgb=true;
+	</script>
+
+	<!-- page part type css -->
+	<!-- page part type js -->
+	<!-- pagecode head begin -->
+<link rel="stylesheet" type="text/css" href="/pgw/s20/css/global.css" />
+<link rel="stylesheet" type="text/css" href="/pgw/s20/css/global.new.css" />
+<link rel="stylesheet" type="text/css" href="/content/global/css/SAAnav.css" />
+<link rel="stylesheet" type="text/css" href="/content/saa/css/2018saa.css?v=9182" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
+<style>
+div#wrapper div#footer {padding-left:0px;}
+</style>
+<!-- pagecode head end --><!-- pageCode head goes here -->
+	<!-- page part type css -->
+	<!-- page part type js -->
+	
+
+
+	<link rel="stylesheet" type="text/css" media="print" href="/pgw/s20/css/perm/print.css" />
+	<noscript><style type="text/css">div#wrapper { display: none; }</style></noscript>
+
+	<!-- Magazine specific CSS -->
+	<link rel="stylesheet" type="text/css" href="/pgw/s20/css/magazine.css" />
+
+
+
+<script language="JavaScript" type="text/javascript">
+function rtaClickTrackToPage(rtaToPage, rtaToCode) {
+  window.location.href="/get/page/" + rtaToPage + "?rtaCode=156267&rtaTcode=" + rtaToCode + "&rtaType=P";
+}
+function rtaClickTrackToUrl(rtaToUrl, rtaToCode) {
+  var i_qn = rtaToUrl.indexOf('?');
+if (i_qn < 0) {sDelim = '?'} else {sDelim = '&'}
+  window.location.href= rtaToUrl + sDelim + "rtaCode=156267&rtaTcode=" + rtaToCode + "&rtaType=P";
+}
+</script>
+</head>
+<body class="yui-skin-sam template2">
+<div id="fb-root"></div>
+<noscript>
+<div style="margin: 2em; padding: 4px; padding-top: 20px; text-align:center; align:center; font-weight: bold;font-size: 120%;">
+<!-- STOP PGNET INDEX -->
+<table width="580"><tr><td>
+Sorry, we are unable to supply content for this web page, either
+because the Internet security on your browser is set to high, or
+because you have disabled Javascript.  For information on how to change
+these settings in your browser, please see the <a href="/content/misc/noscriptHelpPage.html">Help page</a>
+</td></tr></table>
+<!-- START PGNET INDEX -->
+</div>
+</noscript>
+
+	
+
+	<!-- pageCode top could go here -->
+	
+
+	<div id="wrapper">
+		
+
+		
+
+		
+
+		<div id="header">
+			
+
+			
+
+			<!-- from page code top - begin -->
+<!-- STOP PGNET INDEX -->
+<p id="loginDL" style="float: right;color: #900;margin: 14px 0;">Welcome | <a href="/get/page/register?pg=yes&nu=/get/page/magazine/">Register</a> | <a href="https://cardinalalumni.stanford.edu/get/page/login?pg=yes&am=tparty&nu=/get/page/magazine/">Log In</a></p>
+
+<div id="tools" class="clearfix">
+	<div class="buttons" style="border-right: 0;">
+		<a href="/get/page/directory/search?pgOrg=saa"><img src="/content/saa/homepage/nav/buttonFindAnAlum.gif" alt="Find an Alum" /></a>
+		<a href="/tools/mail?level=12&groupname=saa&pgOrg=saa&dbc=y" target="_blank"><img src="/content/saa/homepage/nav/buttonCheckEmail.gif" alt="Check Email" /></a>
+	</div>
+
+<form action="/get/page/search/results">
+<div>
+<input type="text" value="Enter search item" name="keywords" id="keywords" class="text" onfocus="this.select();">
+
+<select id="searchType" name="section">
+<option value="site">Entire Site</option>
+<option value="discussion">Discussions</option>
+<option value="group">Groups</option>
+<option value="trip">Trips</option>
+<option value="magazine">Magazine</option>
+<option value="event">Events</option>
+</select>
+
+<input type="image" class="image" value="Search" name="submit" src="/content/saa/homepage/nav/buttonSearch.gif">
+</div>
+</form>
+	
+<script type="text/javascript">
+var searchTypeSS = new YAHOO.SolutionSet.widget.StyledSelect(document.getElementById('searchType'));
+</script>
+
+<style type="text/css"><!--
+div#header div#tools input#keywords.text { color: #9c9279; border: 1px solid #CCC; }
+div#header div#tools div.StyledSelect div.label { border: 1px solid #CCC; }
+//-->
+</style>
+
+</div>
+<a href="/get/page/home" id="saaLogo">Stanford Alumni</a>
+
+<script type="text/javascript" language="javascript">
+var imageHTMLstring = "<img src='" + saaHeaderImageForTemplate + "' id='masthead'>";
+document.write(imageHTMLstring);
+</script>
+
+<div id="browsePanel">
+         <div class="hd">
+            <div class="tl"></div>
+            <div class="tr"></div>
+         </div>
+         <div class="bd">
+            <div class="body">
+               <div class="section" id="catCommunity">
+                  <h5 class="bucket"><a href="/get/page/landing/community">Community</a></h5>
+                  <ul class="listing">
+                     <li><a href="/get/page/groups/main">Classes, Groups &<br>Clubs</a></li>
+                     <li><a href="/get/page/directory/search">Alumni Directory</a></li>
+                     <li><a href="/get/page/discussions">Discussions</a></li>
+                     <li><a href="/get/page/life-long-learning/book-overview">Book Salon</a></li>
+                     <li><a href="/get/page/students/home">Students</a></li>
+                     <li><a href="/get/page/youngalumni">Young Alumni</a></li>
+                  </ul>
+               </div>
+               <div class="section" id="catActivities">
+                  <h5 class="bucket"><a href="/get/page/landing/activities">Activities</a></h5>
+                  <ul class="listing">
+                     <li><a href="/get/page/reunion/home">Reunions</a></li>
+                     <li><a href="/get/page/events">Events</a></li>
+                     <li><a href="/get/page/regions/landing">Where I Live</a></li>
+                     <li><a href="/get/page/travel-study/overview">Travel/Study</a></li>
+                     <li><a href="/get/page/sierra">Sierra Camp &<br />Programs</a></li>
+                     <li><a href="/get/page/landing/campus_events">On Campus</a></li>
+                  </ul>
+               </div>
+               <div class="section" id="catResources">
+                  <h5 class="bucket"><a href="/get/page/landing/resources">Resources</a></h5>
+                  <ul class="listing">
+                     <li><a href="/get/page/career/home">Alumni Career Services</a></li>                <li><a href="/get/page/resources/alumniaccounts">Alumni Email<br>& Directory</a></li>
+                     <li><a href="/get/page/perks/index">Perks</a></li>
+                     <li><a href="/get/page/membership/home">Membership</a></li>
+                     <li><a href="/get/page/resources/alumnicenter">Your Alumni Center</a></li>      <li><a href="/get/page/resources/eventplanning">Alumni Center Event<br> Planning</a></li>
+
+                  </ul>
+               </div>
+               <div class="section" id="catNews">
+                  <h5 class="bucket"><a href="/get/page/landing/newsViews">News & Views</a></h5>
+                  <ul class="listing">
+                     <!--<li><a href="/get/page/magazine">Magazine</a></li>-->
+					 <li><a href="https://stanfordmag.org">Magazine</a></li>  <!-- ADVPS-925-->                     
+                     <li><a href="/get/page/life-long-learning/learn">Learn</a></li>
+                     <li><a href="/get/page/life-long-learning/learn-join">Subscriptions</a></li>
+                     <li><a href="/get/page/landing/stanford_links">Stanford Links</a></li>
+                  </ul>
+               </div>
+               <div class="section" id="catVolunteer">
+                  <h5 class="bucket"><a href="/get/page/landing/volunteering">Volunteering</a></h5>
+                  <ul class="listing">
+<li><a href="/get/page/volunteering/recognition/home">Stanford Associates</a></li>
+<li><a href="/get/page/volunteering/leadership">Leadership</a></li>
+
+<li><a href="/get/page/volunteering/beyondthefarm/">Beyond the Farm</a></li>
+                                                              <li><a href="/get/page/volunteering/trustee/home">Trustee Nominations</a></li>
+                                       </ul>
+               </div>
+               <div class="section" id="catMy">
+                  <h5 class="bucket terminus"><a href="/get/page/mystanford/home"><img id="myStanfordImg" src="/content/images/global/MyStanford.gif" border="0" hspace="0" vspace="0"></a></h5>
+                  <ul class="listing terminus">
+                     <li><a href="/get/page/mystanford/home">Dashboard</a></li>
+                     <li><a href="/get/page/my-account/profile">My Profile</a></li>
+                     <li><a href="/get/page/messaging/inbox">My Messages</a></li>
+                     <li><a href="/get/page/friends">My Friends</a></li>
+<li><a href="/get/page/events/my-events">My Events</a></li>
+                     <li><a href="/get/page/groups/my-groups">My Groups</a></li>
+                     <li><a href="/get/page/gallery/list">My Gallery</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="ft">
+            <div class="bl"></div>
+            <div class="caret"></div>
+            <div class="br"></div>
+         </div>
+      </div>
+<!-- START PGNET INDEX -->
+<!-- from page code top - end --><!-- pageCode top could go here -->
+			
+
+		</div><!-- end of header -->
+		<div id="container">
+			<div id="containerInner">
+				<div id="leftSash" class="yui-b">
+					<div class="box nav clearfix">
+					
+
+					
+<div>
+
+	<ul id="subnav">
+		<li class="root">
+			<a shape="rect" href="/get/page/magazine/home">Magazine Home</a>
+			<ul>
+				
+				<li class=" root ">
+					<a shape="rect" href="/get/page/magazine/issue/">Current Issue</a>
+											
+				</li>
+				
+				<li class=" ">
+					<a shape="rect" href="/get/page/magazine/back-issues/">Back Issues</a>
+					
+				</li>
+				<li class="">
+					<a shape="rect" href="/get/page/magazine/classifieds">Classifieds</a>
+				</li>
+				<li class="">
+					<a shape="rect" href="/get/page/magazine/podcasts">Podcasts</a>
+				</li>
+				<li class=" ">
+					<a shape="rect" href="/get/page/search/elements/magazine_search/">Search Magazine</a>
+				</li>
+				<li class="">
+					<a shape="rect" href="/get/page/magazine/contactus">Contact Us</a>
+				</li>
+				<li class="">
+					<a shape="rect" href="/get/page/home/">Alumni Association</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+
+</div>
+					
+
+					
+
+					</div><!-- end of box nav clearfix -->
+				
+
+				
+
+				
+
+				</div><!-- end of leftSash -->
+				<div id="content">
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					<div id="middle">
+						
+
+
+<div style="width: 100%; background-color: #990000;">
+   <a href="/get/page/magazine/issue/" style="text-decoration: none;">
+      <div style="margin-bottom: 20px; height: 80px;"><img src="/pgw/s20/i/placeholders/default_user_avatar.gif" style="border: none; float:left;">
+         <div style="float:left; font-size: 28px; color:white; padding-top: 20px; padding-left: 30px;">Read the new issue &gt;&gt;&gt;&gt;
+         </div>
+      </div>
+   </a>
+</div>
+						
+<div class="box featured clearfix yui-navset yui-navset-top">
+	<div class="yui-content">
+
+		<!-- TAB 1 CONTENT START -->
+		<div class="content">
+			<table>
+				<tbody>
+					<tr>
+						<td class="image">
+							<img src="/content/magazine/images/Phants180.jpg"/>
+							<p class="caption">Photo:  O'Connell & Rodwell</p>
+						</td>
+						<td>
+							<h3>Living Large</h3>
+							<p>
+								<span class="firstLetter">M</span>
+							</p>
+							<p>
+								<span style="text-transform: uppercase;">agnificent animals.</span> Extraordinary insights. Peeing in a Tupperware container. It's all part of the deal for a research team in Namibia.</p>
+							<ul class="bullets">
+								<li><a class="more" href="https://medium.com/stanford-magazine/volunteers-help-study-elephants-in-africa-58fe0205a001">Read more</a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- TAB 1 CONTENT END -->
+
+
+		<!-- TAB 2 CONTENT START -->
+		<div class="content">
+			<table>
+				<tbody>
+					<tr>
+						<td class="image">
+							<img src="/content/magazine/images/Grit180.jpg"/>
+							<p class="caption">Photo: Patrick Tehan</p>
+						</td>
+						<td>
+							<h3>Bullets, Blood and Ice</h3>
+							<p>
+								<span class="firstLetter">P</span>
+							</p>
+							<p>
+								<span style="text-transform: uppercase;">rofessor-prospector</span> Dennis Bird shares gritty lessons from the land.</p>
+							<ul class="bullets">
+								<li><a class="more" href="https://medium.com/stanford-magazine/stanford-geology-professor-dennis-bird-gritty-lessons-from-the-land-c4e1100b2d7c">Read more</a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- TAB 2 CONTENT END -->
+
+
+		<!-- TAB 3 CONTENT START -->
+		<div class="content">
+			<table>
+				<tbody>
+					<tr>
+						<td class="image">
+							<img src="/content/magazine/images/Park180.jpg"/>
+							<p class="caption">Photo: Jim Gensheimer</p>
+						</td>
+						<td>
+							<h3>Your Computer May Know You Have Parkinson's. Shall It Tell You?</h3>
+							<p>
+								<span class="firstLetter">E</span>
+							</p>
+							<p>
+								<span style="text-transform: uppercase;">ric Horvitz's</span> algorithms may someday save your life.
+
+</p>
+							<ul class="bullets">
+								<li><a class="more" href="https://medium.com/stanford-magazine/your-computer-may-know-you-have-parkinsons-shall-it-tell-you-e8f8907f4595">Read more</a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- TAB 3 CONTENT END -->
+		
+		
+	</div>
+	<ul class="yui-nav">
+		<li class="first">
+			<a href="#tab1"><span class="tabtext"><p>With the elephants</p></span></a>
+		</li>
+		<li class="second">
+			<a href="#tab2"><span class="tabtext"><p>Earth bound</p></span></a>
+		</li>
+		<li class="third">
+			<a href="#tab3"><span class="tabtext"><p>Your computer, your medical advisor</p></span></a>
+		</li>
+	</ul>
+</div>
+
+
+<script type="text/javascript">      
+	YAHOO.SolutionSet.util.LoadJSFiles([
+			"/pgw/s20/js/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js",
+			"/pgw/s20/js/2.5.2/build/element/element-beta-min.js",
+			"/pgw/s20/js/2.5.2/build/tabview/tabview-min.js",
+			"/pgw/s20/js/2.5.2/build/selector/selector-beta-min.js"
+		], 
+		function(){
+			var featureDiv = YAHOO.util.Dom.getElementsByClassName('featured')[0];
+			var tabsContainer = YAHOO.util.Dom.getElementsByClassName("yui-nav", "ul", featureDiv);
+			var tabs = YAHOO.util.Dom.getChildren(tabsContainer[0]);
+			var selectedTab = Math.floor(Math.random()*3);
+			
+			YAHOO.util.Dom.addClass(tabs[selectedTab], "selected");
+			var featured = new YAHOO.widget.TabView(featureDiv);
+			setInterval(function() {
+				selectedTab = (selectedTab+1) % 3;
+				featured.set('activeIndex', selectedTab);
+			},10000);
+		}
+	);
+</script>
+						
+
+						
+<div class="box onlineonly">
+   <div class="header">
+      <h2>Online Only</h2>
+   </div>
+   <div class="content">
+      <div class="yui-g">
+         <div class="yui-u first">
+            <ul class="bullets">
+           
+<li><a></a>Our new podcast, S<small>TANFORD</small> Out Loud, features tales on topics ranging from Victorian-era hanky-panky to the unsolved murder of Jane Stanford, told by members of the campus community. Want our inside story on the Stanford Prison Experiment? Wondering about Stanford's connection to the invention of the motion picture? <a href="/get/page/magazine/podcasts/">Listen in</a>.</li>   
+		<br>
+       </ul>
+         </div>
+
+         <div class="yui-u"><img src="/content/magazine/images/podcast_logo_180.gif" width="180px" height="180px" align="right">
+        
+
+         </div>
+      </div>
+      <div class="online-only clearfix">
+         <div class="box left sage">
+         	<h3>SAGE</h3>
+            <p><a href="/get/page/magazine/sage/">Sound Advice for a Green Earth</a><br />Advanced students from the environmental sciences, engineering and journalism answer your sustainability questions. Explore recent<a href="/get/page/magazine/sage/"> questions and answers here</a>.</p>
+         </div>
+         <div class="box right">
+         	<h3>Puzzle</h3>
+            <p><a target="blank" href="/get/page/magazine/article/?article_id=74821">Double Entry</a><br />
+            Solve our latest Stanford puzzle for Cardinal bragging rights. </p>
+         </div>
+      </div>
+      <p class="alignright"><a href="/get/page/magazine/section/?section_id=69849">More Online Exclusives &raquo;</a></p>
+   </div>
+</div>
+
+						
+
+						
+<div class="box promo">
+<div class="content">
+<div class="header">
+<h2>From the Archives</h2>
+</div>
+<div class="clearfix">
+<div style="margin: 0 10px 10px 0;" class="floatleft"><img src="/content/magazine/images/GameRS.jpg"/></div>
+<p><a href="/get/page/magazine/article/?article_id=37765"><b>The Play That Never Dies</b></a></p>
+<p>Three decades later, the Play is the subject of a new documentary. A look back at our own remembrance of perhaps the craziest ending in football history.
+</a></p>
+</div>
+</div>
+</div>
+						
+
+						
+<div class="box talkback">
+<div class="header">
+   	<h2>Talk to Us</h2>
+   </div>
+   <div class="content">
+       <div class="yui-g">
+           <div class="yui-u first">
+               <ul class="bullets">
+                   <li><a href="/get/page/my-account/profile?pgOrg=saa&pgnPageCode=340">Change your address</a></li>
+                   <li><a href="http://www.stanfordalumni.org/news/magazine/forms/letters.html">Send a letter to the editor</a></li>
+                   <li><a href="/get/page/magazine/contactus/obit">Submit an obituary</a></li>
+                   <li><a href="/get/page/magazine/sage/ask">Ask an eco-question</a></li>
+               </ul>
+           </div>
+           <div class="yui-u">
+               <p><a href="/get/page/magazine/write_class_note/">Write your class correspondent</a></p>
+               <p>Tell your classmates what you've been up to.</p>
+           </div>
+       </div>
+       <p class="alignright"><a href="/get/page/magazine/contactus">More &raquo;</a></p>
+</div>
+</div>
+						
+
+						
+
+					</div><!-- end of middle -->
+					<div id="rightSash">
+						
+
+						
+<div class="box first">
+	<div class="header">
+		<h3></h3>
+	</div>
+	<p></p>
+</div>
+
+						
+
+						
+<!-- <div class="gomobile">
+<ul>
+<li><a href="http://pgnet.stanford.edu/home/rta/click?rtaCode=156267&amp;rtaTcode=296295&amp;rtaTarget=https://itunes.apple.com/us/app/stanford-magazine+/id655174267?mt=8" target="_blank">iPad/iPhone</a></li>
+<li><a href="http://pgnet.stanford.edu/home/rta/click?rtaCode=156267&amp;rtaTcode=295819&amp;rtaTarget=  https://play.google.com/store/apps/details?id=com.stanford.stanfordmagazineplus&amp;hl=en" target="_blank">Android</a></li>
+</ul>
+<p style="padding-top: 20px;"><a href="/get/page/magazine/contactus/e-alert" target="_blank">Get e-alerts for each new issue &raquo;</a></p>
+</div>
+-->
+
+<div class="followus"><i>Follow us: </i> <a href="http://facebook.com/stanfordalumni" target="_blank"><img src="/pgw/s20/i/global/magazine/fb_button.png" alt="facebook" title="facebook" /></a> <a href="http://twitter.com/stanfordmag" target="_blank"><img src="/pgw/s20/i/global/magazine/twitter_button.png" alt="twitter" title="twitter" /></a></div>
+						
+
+
+
+
+
+
+<div>
+	<div class="box first">
+		<img src="/pgw/ads/advertisement_tag.jpg" width="200">
+		<a href="/home/rta/click?rtaCode=1505259&rtaTarget=http://geico.com/alum/saa&rtaTcode=1505259&rtaType=P&eid=343064531776" target="_blank"><img  id="ad_img" src="/pgw/ads/SO18/Geico.jpg" width="200" ></a>
+		<img src="/home/rta/view?rtaCode=1505259&rtaType=P&eid=343064531776">
+	</div>
+</div>
+
+
+						
+
+
+
+
+
+
+<div>
+	<div class="box first">
+		<img src="/pgw/ads/advertisement_tag.jpg" width="200">
+		<a href="/home/rta/click?rtaCode=1505267&rtaTarget=http://alumni.stanford.edu/goto/familyadventures&rtaTcode=1505267&rtaType=P&eid=343064531776" target="_blank"><img  id="ad_img" src="/pgw/ads/SO18/Family.jpg" width="200" ></a>
+		<img src="/home/rta/view?rtaCode=1505267&rtaType=P&eid=343064531776">
+	</div>
+</div>
+
+
+						
+
+						
+<div>
+
+     
+
+        <div id="rightTabs" class="box noheader yui-navset">
+            <ul class="yui-nav clearfix">
+                
+                
+                <li><a shape="rect" href="#tab1"><em>Most Viewed</em></a></li>
+                <li title="active" class="selected">
+                    <a shape="rect" href="#tab2"><em>What's Hot</em></a>
+                </li>
+               
+            </ul>  
+            <div class="yui-content">
+                <div style="display: none;" class="clearfix">
+                    <ul class="itemContainer">
+                        
+                            <li> 
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100856">
+                                <strong>Bullets, Blood and Ice</strong>
+                                </a><br clear="none"/>
+                            
+                                
+                                    July 2018<br clear="none"/>
+                                
+                                25 views
+                            </li>
+                        
+                            <li> 
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100812">
+                                <strong>Setting a Vision</strong>
+                                </a><br clear="none"/>
+                            
+                                
+                                    July 2018<br clear="none"/>
+                                
+                                21 views
+                            </li>
+                        
+                            <li> 
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100778">
+                                <strong>Obituaries</strong>
+                                </a><br clear="none"/>
+                            
+                                
+                                    July 2018<br clear="none"/>
+                                
+                                20 views
+                            </li>
+                        
+                            <li> 
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100046">
+                                <strong>Obituaries</strong>
+                                </a><br clear="none"/>
+                            
+                                
+                                    May 2018<br clear="none"/>
+                                
+                                20 views
+                            </li>
+                        
+                            <li> 
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100828">
+                                <strong>Movie Maven with a Mission</strong>
+                                </a><br clear="none"/>
+                            
+                                
+                                    July 2018<br clear="none"/>
+                                
+                                18 views
+                            </li>
+                            
+                    </ul>
+                    <p style="font-size: 10px;color: #888;" class="noPadBottom">Data is from the past two weeks.</p>          
+                </div>
+                <div class="clearfix">
+                    <ul class="itemContainer">
+                        
+                            <li>
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100856">
+                                    <strong>Bullets, Blood and Ice</strong>
+                                </a><br clear="none"/>
+                                
+                                    July 2018
+                                
+                            </li>
+                        
+                            <li>
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100812">
+                                    <strong>Setting a Vision</strong>
+                                </a><br clear="none"/>
+                                
+                                    July 2018
+                                
+                            </li>
+                        
+                            <li>
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100778">
+                                    <strong>Obituaries</strong>
+                                </a><br clear="none"/>
+                                
+                                    July 2018
+                                
+                            </li>
+                        
+                            <li>
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100046">
+                                    <strong>Obituaries</strong>
+                                </a><br clear="none"/>
+                                
+                                    May 2018
+                                
+                            </li>
+                        
+                            <li>
+                                <a shape="rect" href="/get/page/magazine/article/?article_id=100828">
+                                    <strong>Movie Maven with a Mission</strong>
+                                </a><br clear="none"/>
+                                
+                                    July 2018
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+           </div>
+        </div>
+        <script type="text/javascript">      
+            YAHOO.SolutionSet.util.LoadJSFiles(["/pgw/s20/js/2.5.2/build/tabview/tabview-min.js"], function(){
+                var myTabs = new YAHOO.widget.TabView("rightTabs");
+            });
+        </script>
+    
+
+
+
+
+
+    
+
+</div>
+						
+
+						
+<div>
+	
+		<div class="box preview">
+			<div class="header">
+				<h3><a shape="rect" href="/get/page/magazine/issue">July 2018</a></h3>
+			</div>
+			<div class="clearfix userContent  content">
+				
+					<img src="/get/file2/publication/issue/SAAMAG/100707/THM"/>
+				
+				<ul>
+<li>Geology Professor Dennis Bird</li>
+<li>Elephant Research</li>
+<li>Photographer Mary Jo Hoffman</li>
+<li>Artificial Intelligence Pioneer Eric Horvitz</li>
+</ul>
+			</div>
+		</div>
+	
+</div>
+					</div><!-- end of rightSash -->
+				</div><!-- end of content -->
+				<div id="watermark"></div>
+			</div><!-- end of containerInner -->
+		</div><!-- end of container -->
+		<div id="footer">
+			
+
+			<!-- Begin pagecode footer -->
+<!-- STOP PGNET INDEX -->
+<section>
+<div class="newfootercontainer">
+	<div class="newfooter">
+	
+		<a href="/get/page/about-us?rtaCode=1367996&rtaTcode=833772&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=about_us">About Us</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/home/rta/click?rtaCode=1367996&rtaTcode=833809&rtaTarget=http://stanford.edu/">University Homepage</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/home/rta/click?rtaCode=1367996&rtaTcode=833802&rtaTarget=http://giving.stanford.edu/?_ga=1.220123673.1898964184.1309193961&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=giving">Giving to Stanford</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/help/contact-us?rtaCode=1367996&rtaTcode=833794&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=contact_us">Contact Us</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/help/faq?rtaCode=1367996&rtaTcode=833775&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=help">Help</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/accessibility?rtaCode=1367996&rtaTcode=833778&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=accessibility">Accessibility</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/codeofconduct?rtaCode=1367996&rtaTcode=1973961&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=conduct">Code of Conduct</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/privacy?rtaCode=1367996&rtaTcode=833788&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=privacy">Privacy Policy</a>
+		<span class="footerpipedivider">|</span>
+		<a href="/get/page/terms?rtaCode=1367996&rtaTcode=833792&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=terms" >Terms of Use</a>
+	
+	</div>
+    
+	<div class="footerbottomcontainer">
+			<div style="float:left;">
+
+				<div class="footericonsquare"><a href="/home/rta/click?rtaCode=1367996&rtaTcode=99382&rtaTarget=https://www.facebook.com/stanfordalumni"><img src="/content/saa/footer/facebook_icon.png" border="0" width="32" height="32" alt="Stanford Alumni on Facebook"></a></div>
+				<div class="footericonsquare"><a href="/home/rta/click?rtaCode=1367996&rtaTcode=107925&rtaTarget=https://twitter.com/stanfordalumni"><img src="/content/saa/footer/twitter_icon.png" border="0" width="32" height="32" alt="Stanford Alumni on Twitter"></a></div>
+				<div class="footericonsquare"><a href="/home/rta/click?rtaCode=1367996&rtaTcode=833752&rtaTarget=https://www.instagram.com/stanfordalumni/"><img src="/content/saa/footer/instagram_icon.png" border="0" width="32" height="32" alt="Stanford Alumni on Instagram"></a></div>
+				<div class="footericonsquare"><a href="/home/rta/click?rtaCode=1367996&rtaTcode=833770&rtaTarget=https://www.linkedin.com/groups/74186/"><img src="/content/saa/footer/linkedin_icon.png" border="0" width="32" height="32" alt="Stanford University Alumni Group on LinkedIn"></a></div>
+
+			</div>
+
+		   <div style="float:right;">
+		
+			   <a href="/get/page/home?rtaCode=1367996&rtaTcode=64102&utm_source=SAA&utm_medium=Sitewide&utm_campaign=Footer&utm_content=saalogo" ><img src="/content/saa/footer/saa-footer-logo.png" border="0" width="34" height="57" alt="Stanford Alumni Association"></a>
+			</div>
+
+	</div>
+</div>
+</section>
+<!-- START PGNET INDEX -->
+<!-- End pagecode footer --><!-- pageCode footer could go here -->
+			
+
+		</div><!-- end of footer -->
+		
+
+		<!-- pageCode footer could go here -->
+		
+
+	</div><!-- end of wrapper -->
+	
+
+	<!-- pageCode footer could go here -->
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16648126-1");
+pageTracker._setDomainName(".stanford.edu");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" language="javascript">
+	YAHOO.util.Event.addListener('submitButton', 'click', function(e) {
+		var element = YAHOO.util.Event.getTarget(e);
+		setTimeout(function() {
+			element.className += ' disabled';
+			element.disabled='disabled';
+			return true;
+		}, 10, element);
+	});
+
+	var searchEle = YAHOO.util.Dom.get("searchType");
+	searchEle.options[4].selected = true;
+	searchTypeSS.updateLabel();
+
+	var magUrl = document.getElementById("saaLogo");
+	magUrl.href="/get/page/magazine/home";
+</script>
+</body>
+</html>
+

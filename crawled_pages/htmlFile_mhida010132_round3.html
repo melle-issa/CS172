@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"383a8e13e9",applicationID:"1391244355"};;(()=>{var e,t,r={8768:(e,t,r)=>{"use strict";r.d(t,{T:()=>n,p:()=>i});const n=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),i=n&&Boolean("undefined"==typeof SharedWorker)},27:(e,t,r)=>{"use strict";r.d(t,{P_:()=>h,Mt:()=>v,C5:()=>d,DL:()=>y,OP:()=>O,lF:()=>R,Yu:()=>A,Dg:()=>p,CX:()=>f,GE:()=>w,sU:()=>C});var n={};r.r(n),r.d(n,{agent:()=>x,match:()=>k,version:()=>j});var i=r(6797),o=r(909),a=r(8610);class s{constructor(e,t){try{if(!e||"object"!=typeof e)return(0,a.Z)("New setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,a.Z)("Setting a Configurable requires a model to set its initial properties");Object.assign(this,t),Object.entries(e).forEach((e=>{let[t,r]=e;const n=(0,o.q)(t);n.length&&r&&"object"==typeof r&&n.forEach((e=>{e in r&&((0,a.Z)('"'.concat(e,'" is a protected attribute and can not be changed in feature ').concat(t,".  It will have no effect.")),delete r[e])})),this[t]=r}))}catch(e){(0,a.Z)("An error occured while setting a Configurable",e)}}}const c={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},u={};function d(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!u[e])throw new Error("Info for ".concat(e," was never set"));return u[e]}function f(e,t){if(!e)throw new Error("All info objects require an agent identifier!");u[e]=new s(t,c),(0,i.Qy)(e,u[e],"info")}const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new s(t,l),(0,i.Qy)(e,g[e],"config")}function v(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function y(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return b[e]}function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new s(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var x=null,j=null;const _=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var D=navigator.userAgent,E=D.match(_);E&&-1===D.indexOf("Chrome")&&-1===D.indexOf("Chromium")&&(x="Safari",j=E[1])}function k(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!j)return!1;for(var r=j.split("."),n=t.split("."),i=0;i<n.length;i++)if(n[i]!==r[i])return!1;return!0}var S=r(2400),P=r(2374),I=r(8226);const T=e=>({buildEnv:I.Re,bytesSent:{},customTransaction:void 0,disabled:!1,distMethod:I.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(P._A?.performance?.timeOrigin||P._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+P._A.location,ptid:void 0,releaseIds:{},sessionId:1==v(e,"privacy.cookies_enabled")?(0,S.Bj)():null,xhrWrappable:"function"==typeof P._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:n,version:I.q4}),N={};function O(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!N[e])throw new Error("Runtime for ".concat(e," was never set"));return N[e]}function C(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");N[e]=new s(t,T(e)),(0,i.Qy)(e,N[e],"runtime")}function R(e){return function(e){try{const t=d(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},8226:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.230.0",i="PROD",o="CDN"},9557:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(8610);const i={agentIdentifier:""};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(3752),i=r(7022),o=r(4045),a=r(2325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=Array.from(s[e]);function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,r)=>{"use strict";r.d(t,{ee:()=>u});var n=r(6797),i=r(3916),o=r(7022),a=r(27),s="nr@context";let c=(0,n.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,r){var n={},c={},g={},h=!1;try{h=16===r.length&&(0,a.OP)(r).isolatedBacklog}catch(e){}var p={on:b,addEventListener:b,removeEventListener:y,emit:m,get:A,listeners:w,context:v,buffer:x,abort:l,aborted:!1,isBuffering:j,debugId:r,backlog:h?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return p;function v(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,r,n,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,r,n);for(var a=v(n),s=w(e),d=s.length,f=0;f<d;f++)s[f].apply(a,r);var l=_()[c[e]];return l&&l.push([p,e,r,a]),a}}function b(e,t){n[e]=w(e).concat(t)}function y(e,t){var r=n[e];if(r)for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)}function w(e){return n[e]||[]}function A(t){return g[t]=g[t]||e(p,t)}function x(e,t){var r=_();p.aborted||(0,o.D)(e,(function(e,n){t=t||"feature",c[n]=t,t in r||(r[t]=[])}))}function j(e){return!!_()[c[e]]}function _(){return p.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(3752).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4045:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(9252);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},8544:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(r))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(r))}},5526:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>i,ky:()=>o});var n=r(2374);function i(){var e=null,t=0,r=n._A?.crypto||n._A?.msCrypto;function i(){return e?15&e[t++]:16*Math.random()|0}r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",s="",c=0;c<a.length;c++)s+="x"===(o=a[c])?i().toString(16):"y"===o?(o=3&i()|8).toString(16):o;return s}function o(e){var t=null,r=0,n=self.crypto||self.msCrypto;n&&n.getRandomValues&&Uint8Array&&(t=n.getRandomValues(new Uint8Array(31)));for(var i=[],o=0;o<e;o++)i.push(a().toString(16));return i.join("");function a(){return t?15&t[r++]:16*Math.random()|0}}},2053:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},8610:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},3916:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,r)=>{"use strict";r.d(t,{_A:()=>o,il:()=>n,lW:()=>a,v6:()=>i});const n=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(n)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')})();function a(){return o}},7022:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},2438:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(3752);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},2650:(e,t,r)=>{"use strict";r.d(t,{K:()=>a,b:()=>o});var n=r(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},6797:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var n=r(2053),i=r(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,r){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,n.z)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[r]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,n.iz)("visibilitychange",(function(){if(t){if("hidden"!=document.visibilityState)return;e()}e(document.visibilityState)}))}},2400:(e,t,r)=>{"use strict";r.d(t,{Bj:()=>c,GD:()=>s,J8:()=>u,ju:()=>o});var n=r(5526);const i="NRBA/";function o(e,t){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"";try{return window.sessionStorage.setItem(i+r+e,t),!0}catch(e){return!1}}function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return window.sessionStorage.getItem(i+t+e)}function s(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";try{window.sessionStorage.removeItem(i+t+e)}catch(e){}}function c(){try{let e;return null===(e=a("SESSION_ID"))&&(e=(0,n.ky)(16),o("SESSION_ID",e)),e}catch(e){return null}}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";const t=i+e,r={};try{for(let n=0;n<window.sessionStorage.length;n++){let i=window.sessionStorage.key(n);i.startsWith(t)&&(i=i.slice(t.length),r[i]=a(i,e))}}catch(e){}return r}},6034:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(2325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},2484:(e,t,r)=>{"use strict";r.d(t,{Dz:()=>i,OJ:()=>a,qw:()=>o,t9:()=>n});const n=r(2325).D.pageViewEvent,i="firstbyte",o="domcontent",a="windowload"},6382:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.pageViewTiming},1509:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(27),i=r(3752),o=r(2384),a=r(6797);class s{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,n.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=r,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,n.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,n.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,r)=>{"use strict";r.d(t,{j:()=>w});var n=r(2325),i=r(27),o=r(9252),a=r(3752),s=r(2053),c=r(4329),u=r(2650),d=r(2374),f=r(8610),l=r(6034),g=r(6797),h=r(2400);const p="CUSTOM/";function v(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?returnsVals:o[0]}(t,...n)}}))}var m=r(7022);const b={stn:[n.D.sessionTrace],err:[n.D.jserrors,n.D.metrics],ins:[n.D.pageAction],spa:[n.D.spa]};const y={};function w(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},w=arguments.length>2?arguments[2]:void 0,A=arguments.length>3?arguments[3]:void 0,{init:x,info:j,loader_config:_,runtime:D={loaderType:w},exposed:E=!0}=t;const k=(0,g.gG)();if(j||(x=k.init,j=k.info,_=k.loader_config),j.jsAttributes??={},d.v6&&(j.jsAttributes.isWorker=!0),d.il){let e=(0,h.J8)(p);Object.assign(j.jsAttributes,e)}(0,i.CX)(e,j),(0,i.Dg)(e,x||{}),(0,i.GE)(e,_||{}),(0,i.sU)(e,D),v();const S=function(e,t){t||(0,c.R)(e,"api");const g={};var v=a.ee.get(e),m=v.get("tracer"),b="api-",y=b+"ixn-";function w(t,r,n,o){const a=(0,i.C5)(e);return null===r?(delete a.jsAttributes[t],d.il&&(0,h.GD)(t,p)):((0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),d.il&&o&&(0,h.ju)(t,r,p)),j(b,n,!0)()}function A(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>g[e]=j(b,e,!0,"api"))),g.addPageAction=j(b,"addPageAction",!0,n.D.pageAction),g.setCurrentRouteName=j(b,"routeName",!0,n.D.spa),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,j(b,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return w(e,t,"setCustomAttribute",r);(0,f.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,f.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return w("enduser.id",e,"setUserId",!0);(0,f.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.interaction=function(){return(new A).get()};var x=A.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(y+"tracer",[(0,s.z)(),e,r],i,n.D.spa,v),function(){if(m.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw m.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],r),e}finally{m.emit("fn-end",[(0,s.z)()],r)}}}};function j(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,v),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,v),r?void 0:this}}function _(){r.e(439).then(r.bind(r,5692)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>(0,f.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{x[e]=j(y,e,void 0,n.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,v),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,v)},d.v6?_():(0,u.b)((()=>_()),!0),g}(e,A);return(0,g.Qy)(e,S,"api"),(0,g.Qy)(e,E,"exposed"),(0,g.EZ)("activatedFeatures",y),(0,g.EZ)("setToken",(t=>function(e,t){var r=a.ee.get(t);e&&"object"==typeof e&&((0,m.D)(e,(function(e,t){if(!t)return(b[e]||[]).forEach((t=>{(0,o.p)("block-"+e,[],void 0,t,r)}));y[e]||((0,o.p)("feat-"+e,[],void 0,b[e],r),y[e]=!0)})),(0,c.L)(t,n.D.pageViewEvent))}(t,e))),S}},909:(e,t,r)=>{"use strict";r.d(t,{Z:()=>i,q:()=>o});var n=r(2325);function i(e){switch(e){case n.D.ajax:return[n.D.jserrors];case n.D.sessionTrace:return[n.D.ajax,n.D.pageViewEvent];case n.D.pageViewTiming:return[n.D.pageViewEvent];default:return[]}}function o(e){return e===n.D.jserrors?[]:["auto"]}},2325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8}},8683:e=>{e.exports=function(e,t,r){t||(t=0),void 0===r&&(r=e?e.length:0);for(var n=-1,i=r-t||0,o=Array(i<0?0:i);++n<i;)o[n]=e[t+n];return o}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>(({78:"page_action-aggregate",147:"metrics-aggregate",193:"session_trace-aggregate",317:"jserrors-aggregate",348:"page_view_timing-aggregate",439:"async-api",729:"lazy-loader",786:"page_view_event-aggregate",873:"spa-aggregate",898:"ajax-aggregate"}[e]||e)+"."+{78:"4d79b951",147:"20a08804",193:"6e2218bf",317:"9136a849",348:"9590bdab",439:"6c072bf7",729:"ff971c03",786:"75812140",862:"9f44b58b",873:"6c038a0a",898:"bcd562bf"}[e]+"-1.230.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute("src")==r||f.getAttribute("data-webpack")==t+o){s=f;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r),e[r]=[n];var l=(t,n)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},g=setTimeout(l.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={30:0,768:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=window.webpackChunkNRBA=window.webpackChunkNRBA||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var o={};(()=>{"use strict";i.r(o);var e=i(2325),t=i(27);const r=Object.values(e.D);function n(e){const n={};return r.forEach((r=>{n[r]=function(e,r){return!1!==(0,t.Mt)(r,"".concat(e,".enabled"))}(r,e)})),n}var a=i(2384),s=i(909),c=i(9252),u=i(8768),d=i(4329),f=i(1509),l=i(2650),g=i(2374),h=i(8610);class p extends f.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.hasAggregator=!1,this.auto=n,this.abortHandler,n&&(0,d.R)(e,r)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{lazyLoader:e}=await i.e(729).then(i.bind(i,8110)),{Aggregate:t}=await e(this.featureName,"aggregate");new t(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)("Downloading ".concat(this.featureName," failed...")),this.abortHandler?.()}};g.v6?e():(0,l.b)((()=>e()),!0)}}var v=i(2484),m=i(2053);class b extends p{static featureName=v.t9;constructor(r,n){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(r,n,v.t9,i),("undefined"==typeof PerformanceNavigationTiming||u.T)&&"undefined"!=typeof PerformanceTiming){const n=(0,t.OP)(r);n[v.Dz]=Math.max(Date.now()-n.offset,0),(0,l.K)((()=>n[v.qw]=Math.max((0,m.z)()-n[v.Dz],0))),(0,l.b)((()=>{const t=(0,m.z)();n[v.OJ]=Math.max(t-n[v.Dz],0),(0,c.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var y=i(9557),w=i(7022);class A extends y.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=x(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=j(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=_(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=j(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function j(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function _(e){return"object"!=typeof e?[]:(0,w.D)(e,D)}function D(e,t){return t}var E=i(6797),k=i(5526),S=i(2438);var P=i(6998),I=i(8544),T=i(6382);class N extends p{static featureName=T.t;constructor(e,r){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,r,T.t,n),g.il&&((0,t.OP)(e).initHidden=Boolean("hidden"===document.visibilityState),(0,P.N)((()=>(0,c.p)("docHidden",[(0,m.z)()],void 0,T.t,this.ee)),!0),(0,I.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,m.z)()],void 0,T.t,this.ee))),this.importAggregator())}}const O=Boolean(g._A?.Worker),C=Boolean(g._A?.SharedWorker),R=Boolean(g._A?.navigator?.serviceWorker);let M,B,W;var z=i(6034),q=i(3752),L=i(8683),V=i.n(L);const Z="nr@original";var U=Object.prototype.hasOwnProperty,F=!1;function G(e,t){return e||(e=q.ee),r.inPlace=function(e,t,n,i,o){n||(n="");var a,s,c,u="-"===n.charAt(0);for(c=0;c<t.length;c++)Q(a=e[s=t[c]])||(e[s]=r(a,u?s+n:n,i,s,o))},r.flag=Z,r;function r(t,r,i,o,a){return Q(t)?t:(r||(r=""),nrWrapper[Z]=t,X(t,nrWrapper,e),nrWrapper);function nrWrapper(){var s,c,u,d;try{c=this,s=V()(arguments),u="function"==typeof i?i(s,c):i||{}}catch(t){H([t,"",[s,c,o],u],e)}n(r+"start",[s,c,o],u,a);try{return d=t.apply(c,s)}catch(e){throw n(r+"err",[s,c,e],u,a),e}finally{n(r+"end",[s,c,d],u,a)}}}function n(r,n,i,o){if(!F||t){var a=F;F=!0;try{e.emit(r,n,i,t,o)}catch(t){H([t,r,n,i],e)}F=a}}}function H(e,t){t||(t=q.ee);try{t.emit("internal-error",e)}catch(e){}}function X(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){H([e],r)}for(var n in e)U.call(e,n)&&(t[n]=e[n]);return t}function Q(e){return!(e&&e instanceof Function&&e.apply&&!e[Z])}const K={},J=["debug","error","info","log","trace","warn"];function Y(e){const t=function(e){return(e||q.ee).get("console")}(e);return K[t.debugId]||(K[t.debugId]=!0,G(t).inPlace(g._A.console,J,"-console-")),t}i(3916);XMLHttpRequest;g._A.Request,g._A.Response;class $ extends p{static featureName=z.t9;constructor(t,r){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,r,z.t9,n),function(e){if(!M){if(O){M=Worker;try{g._A.Worker=r(M,"Dedicated")}catch(e){o(e,"Dedicated")}if(C){B=SharedWorker;try{g._A.SharedWorker=r(B,"Shared")}catch(e){o(e,"Shared")}}else n("Shared");if(R){W=navigator.serviceWorker.register;try{g._A.navigator.serviceWorker.register=(t=W,function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return i("Service",r[1]?.type),t.apply(navigator.serviceWorker,r)})}catch(e){o(e,"Service")}}else n("Service");var t;return}n("All")}function r(e,t){return"undefined"==typeof Proxy?e:new Proxy(e,{construct:(e,r)=>(i(t,r[1]?.type),new e(...r))})}function n(t){g.v6||e("Workers/".concat(t,"/Unavailable"))}function i(t,r){e("Workers/".concat(t,"module"===r?"/Module":"/Classic"))}function o(t,r){e("Workers/".concat(r,"/SM/Unsupported")),(0,h.Z)("NR Agent: Unable to capture ".concat(r," workers."),t)}}((t=>(0,c.p)(z.xS,[t],void 0,e.D.metrics,this.ee))),this.addConsoleSupportabilityMetrics(),this.importAggregator()}addConsoleSupportabilityMetrics(){const t=Y(this.ee);for(const r of["Debug","Error","Info","Log","Trace","Warn"])t.on("".concat(r.toLowerCase(),"-console-start"),(function(n,i){let o=[];for(const e of n)"function"==typeof e||e&&e.message&&e.stack?o.push(e.toString()):o.push(e);const a=(0,S.P)(o);(0,c.p)(z.xS,["Console/".concat(r,"/Seen"),a.length],void 0,e.D.metrics,t)}))}}new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,k.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(b),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t="features";try{const r=n(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,r)=>e.p[t.featureName]-e.p[r.featureName])),i.forEach((t=>{if(r[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName);e.every((e=>r[e]))||(0,h.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,S.P)(e),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",e);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,E.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[b,N,$],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11291968-20"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-11291968-20", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script>
+<link rel="canonical" href="https://a3c.stanford.edu/" />
+<link rel="shortlink" href="https://a3c.stanford.edu/" />
+<meta property="og:site_name" content="Asian American Activities Center" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://a3c.stanford.edu/" />
+<meta property="og:title" content="Asian American Activities Center" />
+<meta property="og:image" content="https://a3c.stanford.edu/sites/g/files/sbiybj19811/files/styles/large/public/media/image/a3c-header.v3_0.gif?itok=yD4_h7ye" />
+<meta property="og:image:url" content="https://a3c.stanford.edu/sites/g/files/sbiybj19811/files/styles/large/public/media/image/a3c-header.v3_0.gif?itok=yD4_h7ye" />
+<meta property="og:image:alt" content="A3C Header image" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:title" content="Asian American Activities Center" />
+<meta name="twitter:image:alt" content="A3C Header image" />
+<meta name="twitter:image" content="https://a3c.stanford.edu/sites/g/files/sbiybj19811/files/styles/large/public/media/image/a3c-header.v3_0.gif?itok=yD4_h7ye" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/profiles/custom/stanford_profile/themes/stanford_basic/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16" />
+
+    <link rel="mask-icon" href="https://www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="application-name" content="Stanford University"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://www-media.stanford.edu/assets/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="https://www-media.stanford.edu/assets/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="https://www-media.stanford.edu/assets/favicon/mstile-150x150.png" />
+    <meta name="msapplication-square310x310logo" content="https://www-media.stanford.edu/assets/favicon/mstile-310x310.png" />
+
+    <title>Asian American Activities Center</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/sbiybj19811/files/css/css_TgdAhPXWOHc3d_Eok8wH6afZHu-Ylc2qCx64oII3cBY.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/sbiybj19811/files/css/css_SCatECPuN1yM6IIE7bJ9JQxpxJbhe_oK3P-Rx_qeXII.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/sbiybj19811/files/css/css_-h2u2Fku8V42ARsOPUoznUK8il4hQcG93tbVQ1I3cgA.css" />
+<link rel="stylesheet" media="print" href="/sites/g/files/sbiybj19811/files/css/css_4LEccaIoDbrClNkuuLS_qpuAYpAi6PVDTEkWmc-J0-E.css" />
+
+    <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+<script src="/core/misc/modernizr-additional-tests.js?v=3.11.7"></script>
+
+
+                      <script>
+          ga("create", "UA-26605114-1", {"cookieDomain":"auto"}, 'globalTracker');
+        </script>
+                </head>
+            <body class="front role--anonymous">
+          <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content">
+        Skip to main content
+      </a>
+      <a href="#secondary-navigation" class="visually-hidden focusable su-skipnav su-skipnav--secondary">
+        Skip to secondary navigation
+      </a>
+    
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<div class="su-brand-bar su-brand-bar--default">
+  <div class="su-brand-bar__container"><a  class="su-brand-bar__logo" href="https://stanford.edu">Stanford University<span class="su-brand-bar__link--a11y">(link is external)</span>
+  </a></div>
+</div>
+
+<header class="su-masthead su-masthead--right">
+      <section>
+        <div  id="block-stanford-basic-branding" class="su-lockup su-lockup--option-a">
+    <a href="https://a3c.stanford.edu/" >
+  <div class="su-lockup__cell1">
+          <div class="su-lockup__wordmark-wrapper">
+      <span class="su-lockup__wordmark">Stanford</span>
+          </div>
+    </div>          <div class="su-lockup__cell2">
+            <span class="su-lockup__line1" >Asian American Activities Center</span>
+      
+      
+          </div>
+            </a>
+  </div>
+
+
+        
+<div  class="su-site-search su-site-search" role="search">
+ <form action="/search" method="get" accept-charset="UTF-8">
+  <label class="su-site-search__sr-label" for="key">Search this site</label>
+  <input  type="text" id="key" name="key" class="su-site-search__input" placeholder="Search this site" maxlength="128">
+  <button  type="submit" name="search" class="su-site-search__submit su-sr-only-text">Submit Search</button></form>
+</div>
+
+
+          <nav class="su-multi-menu su-multi-menu--buttons su-multi-menu--right no-js" aria-label="main menu">
+    <button class="su-multi-menu__nav-toggle su-multi-menu__nav-toggle--right " aria-expanded="false">Menu</button>
+    <ul class="su-multi-menu__menu su-multi-menu__menu-lv1"><li class="su-multi-menu__item su-multi-menu__item--active-trail su-multi-menu__item--current"><a class="su-multi-menu__link" href="/home" aria-current="true"><span class="su-multi-menu__link-text-wrapper">Home</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs"><span class="su-multi-menu__link-text-wrapper">Programs</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv2"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/speaker-series"><span class="su-multi-menu__link-text-wrapper">Speaker Series</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/grad-life"><span class="su-multi-menu__link-text-wrapper">Grad Life</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/grad-life/finances-and-job-recruitment-graduate-student"><span class="su-multi-menu__link-text-wrapper">Finances and Job Recruitment as a Graduate Student</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/grad-life/graduate-health-and-wellness-resources-stanford"><span class="su-multi-menu__link-text-wrapper">Graduate Health and Wellness Resources at Stanford</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/ilive"><span class="su-multi-menu__link-text-wrapper">iLive</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/ilive/event-recordings-and-resources"><span class="su-multi-menu__link-text-wrapper">Event Recordings and Resources</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/aim"><span class="su-multi-menu__link-text-wrapper">Asian American Interactive Mentoring (AIM) Program</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aim/apply"><span class="su-multi-menu__link-text-wrapper">How to Apply for AIM</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aim/director"><span class="su-multi-menu__link-text-wrapper">Words from the A³C Director about AIM</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/aas"><span class="su-multi-menu__link-text-wrapper">Asian American Studies</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aas/projects"><span class="su-multi-menu__link-text-wrapper">Student Projects</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/aasib"><span class="su-multi-menu__link-text-wrapper">Asian American Sib (AASib) Program</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aasib/core"><span class="su-multi-menu__link-text-wrapper">Be on Big Sib Core</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aasib/big"><span class="su-multi-menu__link-text-wrapper">Sign Up to be a Big Sib</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aasib/lil"><span class="su-multi-menu__link-text-wrapper">Sign Up to be a Lil Sib</span></a></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/vsoretreats"><span class="su-multi-menu__link-text-wrapper">A3C VSO Retreats</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/epp"><span class="su-multi-menu__link-text-wrapper">Education Pipeline Programs</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/saaa"><span class="su-multi-menu__link-text-wrapper">Asian American Awards Ceremony</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/saaa/categories"><span class="su-multi-menu__link-text-wrapper">Award Categories and Criteria</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/saaa/nominations"><span class="su-multi-menu__link-text-wrapper">Nominations for the Asian American Awards</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/saaa/past-recipients"><span class="su-multi-menu__link-text-wrapper">Past Recipients</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/saaa/rsvp"><span class="su-multi-menu__link-text-wrapper">RSVP for the Asian American Awards Ceremony</span></a></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aagrad"><span class="su-multi-menu__link-text-wrapper">Asian American Graduation</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/aansoc"><span class="su-multi-menu__link-text-wrapper">Asian American New Student Orientation</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aansoc/director"><span class="su-multi-menu__link-text-wrapper">Welcome Letter from Director</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aansoc/coordinator"><span class="su-multi-menu__link-text-wrapper">Letter from AANSOC Coordinator</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/aansoc/committee"><span class="su-multi-menu__link-text-wrapper">Asian American New Student Orientation Committee</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv4"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/aansoc/committee/apply"><span class="su-multi-menu__link-text-wrapper">Apply to be a part of the AANSOC Team</span></a></li></ul></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/apaheritage"><span class="su-multi-menu__link-text-wrapper">Asian Pacific American Heritage Month</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/programs/cardinal-days"><span class="su-multi-menu__link-text-wrapper">Asian American Admit Weekend (Cardinal Days)</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/cardinal-days/director"><span class="su-multi-menu__link-text-wrapper">Welcome Letter from our Director</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/cardinal-days/student"><span class="su-multi-menu__link-text-wrapper">Letter to Admitted Students</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/programs/cardinal-days/day-life-video"><span class="su-multi-menu__link-text-wrapper">&#039;A Day in the Life&#039; Video</span></a></li></ul></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/resources"><span class="su-multi-menu__link-text-wrapper">Resources</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv2"><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/resources/academic"><span class="su-multi-menu__link-text-wrapper">Academic Resources</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/academic/research-support"><span class="su-multi-menu__link-text-wrapper">A³C Graduate Student In Residence for Undergraduate Research Support</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/academic/tutoring"><span class="su-multi-menu__link-text-wrapper">Tutoring Resources</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/academic/rcps"><span class="su-multi-menu__link-text-wrapper">Research and Creative Project Resources</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/academic/mentoring"><span class="su-multi-menu__link-text-wrapper">Mentoring Resources</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/resources/academic/a3cfellowship"><span class="su-multi-menu__link-text-wrapper">Empowering Asian/Asian American Communities Fellowship</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv4"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/academic/a3cfellowship/fellows"><span class="su-multi-menu__link-text-wrapper">Meet the Fellows</span></a></li></ul></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/resources/wellness"><span class="su-multi-menu__link-text-wrapper">Health and Wellness Resources</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/caps"><span class="su-multi-menu__link-text-wrapper">CAPS at the A³C</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/wellness/student"><span class="su-multi-menu__link-text-wrapper">Message from a Student: Health and Well-being</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/resources/additional"><span class="su-multi-menu__link-text-wrapper">Additional Resources</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/additional/aahistory"><span class="su-multi-menu__link-text-wrapper">Stanford Asian American History</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/additional/antiblackness"><span class="su-multi-menu__link-text-wrapper">Understanding Anti-Blackness and White Supremacy</span></a></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/resources/publications"><span class="su-multi-menu__link-text-wrapper">Publications</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/community"><span class="su-multi-menu__link-text-wrapper">Our Community</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv2"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/vso"><span class="su-multi-menu__link-text-wrapper">Undergraduate Student Organizations</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/gradvso"><span class="su-multi-menu__link-text-wrapper">Graduate Student Organizations</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/community/alumni"><span class="su-multi-menu__link-text-wrapper">Alumni</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv3"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/alumni/hof"><span class="su-multi-menu__link-text-wrapper">Alumni Hall of Fame</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/alumni/dsa"><span class="su-multi-menu__link-text-wrapper">SAPAAC Distinguished Student Award</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/alumni/history-video"><span class="su-multi-menu__link-text-wrapper">A Video History of Asians and Asian Americans at Stanford</span></a></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/community/faculty-staff"><span class="su-multi-menu__link-text-wrapper">Asian American Faculty and Staff</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://sites.google.com/stanford.edu/okada-house/home?authuser=0"><span class="su-multi-menu__link-text-wrapper">Okada House</span></a></li></ul></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/events-0"><span class="su-multi-menu__link-text-wrapper">Events</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv2"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/events/past-events"><span class="su-multi-menu__link-text-wrapper">Past Events</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/events-0/major-campus-events"><span class="su-multi-menu__link-text-wrapper">Major Campus Events</span></a></li></ul></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/reserve-space"><span class="su-multi-menu__link-text-wrapper">Reserve Space</span></a></li><li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/about"><span class="su-multi-menu__link-text-wrapper">About</span></a><ul class="su-multi-menu__menu su-multi-menu__menu-lv2"><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/about/staff"><span class="su-multi-menu__link-text-wrapper">Professional and Student Staff</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/about/facilities"><span class="su-multi-menu__link-text-wrapper">Facilities at A³C</span></a></li><li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/about/advisory"><span class="su-multi-menu__link-text-wrapper">Advisory Board</span></a></li></ul></li></ul></nav>
+
+
+
+      </section>
+    </header><main class="page-content" id="page-content"><div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-stanford-basic-content" class="system-main-block block-system block-stanford-basic-content">
+  
+    
+      
+
+<section class="node basic-page node--layout-full">
+      <div class="content">
+    
+
+
+
+
+<div class="jumpstart-ui--one-column">
+    <div  class="main-region">
+      <div class="field-block node-stanford-page-su-page-banner block-layout-builder">
+  
+    
+      
+            <div class="node stanford-page su-page-banner entity-reference-revisions label-hidden"><div class="overlay-left ds-entity--paragraph ds-entity--stanford-banner">
+  <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=76:changed=1682101054&amp;ds_bundle=stanford_banner&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="o89c5NOQIaSnLdC1XnKj2O4m0pRWwoz6D4UROuTO1mo"></div>
+<div class="su-hero overlay-left">
+
+        <div class="su-hero__media">
+            <div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_1x/public/media/image/a3c-header.v3_0.gif?itok=spgoxj0k 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_2x/public/media/image/a3c-header.v3_0.gif?itok=Qmttl542 2x" media="screen and (min-width: 1500px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_1x/public/media/image/a3c-header.v3_0.gif?itok=spgoxj0k 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_2x/public/media/image/a3c-header.v3_0.gif?itok=Qmttl542 2x" media="screen and (min-width: 1200px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_xl_1x/public/media/image/a3c-header.v3_0.gif?itok=MYfVrl50 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_xl_2x/public/media/image/a3c-header.v3_0.gif?itok=6cPZDELe 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_lg_1x/public/media/image/a3c-header.v3_0.gif?itok=Kfx8Ey0T 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_lg_2x/public/media/image/a3c-header.v3_0.gif?itok=U6vULQli 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_md_1x/public/media/image/a3c-header.v3_0.gif?itok=ahK16f7p 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_md_2x/public/media/image/a3c-header.v3_0.gif?itok=4iLNj-ID 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_sm_1x/public/media/image/a3c-header.v3_0.gif?itok=WKH0GUHP 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_sm_2x/public/media/image/a3c-header.v3_0.gif?itok=o95gw-0W 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_1x/public/media/image/a3c-header.v3_0.gif?itok=spgoxj0k 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_2x/public/media/image/a3c-header.v3_0.gif?itok=Qmttl542 2x" media="screen and (min-width: 1500px)" type="image/gif"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_1x/public/media/image/a3c-header.v3_0.gif?itok=spgoxj0k 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_2x/public/media/image/a3c-header.v3_0.gif?itok=Qmttl542 2x" media="screen and (min-width: 1200px)" type="image/gif"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_xl_1x/public/media/image/a3c-header.v3_0.gif?itok=MYfVrl50 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_xl_2x/public/media/image/a3c-header.v3_0.gif?itok=6cPZDELe 2x" media="screen and (min-width: 992px)" type="image/gif"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_lg_1x/public/media/image/a3c-header.v3_0.gif?itok=Kfx8Ey0T 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_lg_2x/public/media/image/a3c-header.v3_0.gif?itok=U6vULQli 2x" media="screen and (min-width: 768px)" type="image/gif"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_md_1x/public/media/image/a3c-header.v3_0.gif?itok=ahK16f7p 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_md_2x/public/media/image/a3c-header.v3_0.gif?itok=4iLNj-ID 2x" media="screen and (min-width: 576px)" type="image/gif"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/breakpoint_sm_1x/public/media/image/a3c-header.v3_0.gif?itok=WKH0GUHP 1x, /sites/g/files/sbiybj19811/files/styles/breakpoint_sm_2x/public/media/image/a3c-header.v3_0.gif?itok=o95gw-0W 2x" media="(min-width: 0em)" type="image/gif"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/breakpoint_2xl_2x/public/media/image/a3c-header.v3_0.gif?itok=Qmttl542" alt="A3C Header image" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+      </div>
+    
+  </div>
+
+</div>
+</div>
+      
+  </div>
+
+    </div>
+</div>
+
+
+
+  
+
+<div class="jumpstart-ui--one-column centered-container">
+    <div  class="main-region flex-12-of-12">
+      
+    </div>
+</div>
+
+
+    
+<div class="jumpstart-ui--two-column flex-container centered-container">
+
+      <div  class="left-region flex-lg-3-of-12">
+      <div class="inline-block stanford-component-block block-layout-builder">
+  
+      <h2 class="block__title">Quick Links</h2>
+    
+      
+      <div class="su-intro su-margin-bottom-3 block-content stanford-component-block su-component entity-reference-revisions label-hidden">
+              <div class="paragraph-item ptype-stanford-wysiwyg">  <div class="paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+          
+            <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden"><p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d8b5b67c-0a25-456c-9b07-dc4dac37095c" href="/about/staff" title="Staff">Meet Our Staff</a><br /><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="56a8c22d-09a9-4036-a97e-7263470107b6" href="/community/vso" title="Undergraduate Student Organizations">Join a Student Group</a><br /><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b597b3da-c238-48aa-b1ff-300ba7aa536c" href="/programs/aas" title="Asian American Studies">Asian American Studies</a><br /><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5aab6c2d-d4b9-4e1d-a116-9b84c6230eed" href="/resources/publications" title="Publications">The Sourcebook</a><br /><a href="https://sites.google.com/stanford.edu/okada-house/home">Okada House</a><br /><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d4ab9bfb-f6c8-4635-b594-6ea65e279a65" href="/community/alumni" title="Alumni">Alumni Involvement</a><br /><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="3ed273b8-5b49-4bc6-b3a1-dd7808dca5f5" href="/community/faculty-staff" title="Asian American Faculty and Staff">Professional Staff Involvement</a><br /><a href="http://campus-map.stanford.edu/index.cfm?ID=02-600">Find The Center</a><br /><a href="https://protectedidentityharm.stanford.edu/">Protected Identity Harm Reporting</a><br /><a href="https://stanfordaasa.weebly.com/listen-to-the-silence-2022.html">Listen to the Silence</a> - Asian/Asian American Issues Student Conference</p>
+
+<p><a class="su-button" href="https://pgnet.stanford.edu/get/page/makeagift?mop=CC&amp;gfty=G&amp;pgnTPC=399&amp;stp=107&amp;gdso=5&amp;tgso=6&amp;cturl=close&amp;olc=11840&amp;refid=E504B609F8F3DE5B196A4AF2CDEF914915A94AE92EEB045D97B188B0122F397E2EE92E1FF91ADDB7">Make a Gift</a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+<div class="inline-block stanford-component-block block-layout-builder">
+  
+      <h2 class="block__title">COVID-19 Update</h2>
+    
+      
+      <div class="su-intro su-margin-bottom-3 block-content stanford-component-block su-component entity-reference-revisions label-hidden">
+              <div class="paragraph-item ptype-stanford-wysiwyg">  <div class="paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+          
+            <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden"><p>In accordance with safety precautions issued by Santa Clara County and Stanford University, the Centers for Equity Community and Leadership (ECL) are looking forward to a safe and responsible reopening in Winter 2022. We will continue to prioritize <strong>safety</strong>, <strong>community-building</strong>,<strong> </strong>and <strong>diversity and equity</strong> and are working actively to determine the details of our plans. Stay tuned! Find more information <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="2a5ac2b5-bcbd-4707-a242-efaf23b95acf" href="/covid" title="COVID-19 Updates">here</a>.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+<div class="inline-block stanford-component-block block-layout-builder">
+  
+      <h2 class="block__title">Standing in Solidarity with Black students and community</h2>
+    
+      
+      <div class="su-intro su-margin-bottom-3 block-content stanford-component-block su-component entity-reference-revisions label-hidden">
+              <div class="paragraph-item ptype-stanford-wysiwyg">  <div class="paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+          
+            <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden"><p>Read our joint statement with Asian American Studies <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="c31342ae-83d2-4b67-b569-e99e40f66b9d" href="/resources/additional/antiblackness" title="In Solidarity with the Black Community">here</a>.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+
+    </div>
+  
+      <div  class="flex-lg-9-of-12 main-region">
+      <div class="jumpstart-ui-skipnav-main-anchor block-jumpstart-ui">
+  
+    
+      <div id="main-content" tabindex="-1" class="visually-hidden focusable">Main content start</div>
+
+  </div>
+<div class="inline-block stanford-component-block block-layout-builder">
+  
+      <h2 class="block__title">Our Mission</h2>
+    
+      
+      <div class="su-intro su-margin-bottom-3 block-content stanford-component-block su-component entity-reference-revisions label-hidden">
+              <div class="paragraph-item ptype-stanford-wysiwyg">  <div class="paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+          
+            <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden"><p>The Asian American Activities Center, A³C, is a department under the Vice Provost of Student Affairs and serves as Stanford’s primary resource for Asian and Asian American student affairs and community development.  The A³C contributes to the academic mission of the University through its partnerships and collaborative work with faculty, departments and academic programs.  Through programming and advising, the center facilitates the multicultural education of all students and the development of leaders who are able to negotiate an increasingly diverse and complex workplace and global environment. </p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+<div class="field-block node-stanford-page-su-page-components block-layout-builder">
+  
+    
+      
+      <div class="node stanford-page su-page-components entity-reference-revisions label-hidden">
+              <div>  <div class="paragraph_row">
+      <div class="paragraph-row node-stanford-page-row su-page-components entity-reference-revisions label-hidden react-paragraphs-row container-1-items flex-container" data-item-count="1">
+              <div class="paragraph-item ptype-stanford-card flex-12-of-12" data-react-columns="12"><div class="ds-entity--paragraph ds-entity--stanford-card">
+  <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=1896:changed=1682101054&amp;ds_bundle=stanford_card&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="krjM5-7_VOYocr_uffSz8bNNezWazD_MdTOo162jSkY"></div>
+<article  class="su-card ">
+    <div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=MuWSqz1n 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=VNczyA5a 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=ROOAEBzl 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=VNczyA5a 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=ROOAEBzl 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=MuWSqz1n 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=99G6smWV 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.webp?h=08b866d1&amp;itok=ROOAEBzl 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=MuWSqz1n 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=VNczyA5a 2x" media="screen and (min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=ROOAEBzl 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=VNczyA5a 2x" media="screen and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=ROOAEBzl 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=MuWSqz1n 2x" media="screen and (min-width: 576px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=99G6smWV 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=ROOAEBzl 2x" media="(min-width: 0em)" type="image/jpeg"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_5667_0.jpg?h=08b866d1&amp;itok=VNczyA5a" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+  
+<section class="su-card__contents">
+                  <span></span>
+              <h2>Welcome Class of &#039;27!</h2>
+                  <p>We are excited to meet you! Check out our list of Admit Weekend Events that we hope you can stop by at to learn about our resources and get connected with our community!</p>
+                  <div class="su-card__button"><a  href="/programs/cardinal-days" class="su-link su-button">Asian American Admit Weekend Events</a>
+</div>
+      </section></article>
+
+</div>
+</div>
+          </div>
+  </div>
+</div>
+              <div>  <div class="paragraph_row">
+      <div class="paragraph-row node-stanford-page-row su-page-components entity-reference-revisions label-hidden react-paragraphs-row container-1-items flex-container" data-item-count="1">
+              <div class="paragraph-item ptype-stanford-card flex-12-of-12" data-react-columns="12"><div class="ds-entity--paragraph ds-entity--stanford-card">
+  <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=1741:changed=1682101054&amp;ds_bundle=stanford_card&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="6VzNarg-hacmYiPK5jbz20re3WmMHxKqz-R1VkWFh0Y"></div>
+<article  class="su-card ">
+    <div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=YuzKK1GC 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=V9I1MOnn 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=M024Ql6a 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=V9I1MOnn 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=M024Ql6a 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=YuzKK1GC 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=sZ1RER0K 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.webp?h=05795164&amp;itok=M024Ql6a 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=YuzKK1GC 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=V9I1MOnn 2x" media="screen and (min-width: 992px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=M024Ql6a 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=V9I1MOnn 2x" media="screen and (min-width: 768px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=M024Ql6a 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=YuzKK1GC 2x" media="screen and (min-width: 576px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=sZ1RER0K 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=M024Ql6a 2x" media="(min-width: 0em)" type="image/png"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ltran-2_cropped-blue.png?h=05795164&amp;itok=V9I1MOnn" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+  
+<section class="su-card__contents">
+                  <span></span>
+              <h2>The new Associate Dean of Students and Scott J.J. Hsu Director of the Asian American Activities Center is named</h2>
+                  
+                  <div class="su-card__button"><a  content="[]" href="/2022newdirector" class="su-link su-button">Read more about Linda</a>
+</div>
+      </section></article>
+
+</div>
+</div>
+          </div>
+  </div>
+</div>
+          </div>
+  
+  </div>
+<div class="views-element-container views-block stanford-events-list-page block-views">
+  
+      <h2 class="block__title">Upcoming Events</h2>
+    
+      <div><div class="stanford-events-list-page view stanford-events list-page js-view-dom-id-501b7064b79d1654fcdfe056aa8641655d859bb9ab0051e1d39057c0edd81fc4">
+  
+  
+  
+
+  
+  
+  
+
+  No events at this time. Please check back later.
+    
+
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<div class="views-element-container views-block stanford-news-vertical-teaser-term block-views">
+  
+      <h2 class="block__title">Recent News</h2>
+    
+      <div><div class="stanford-news--cards stanford-news--cards-any view stanford-news vertical-teaser-term js-view-dom-id-4d34640a0e779189a1380f778f5060a528c444b21ed9438371b71d1c20645afc">
+  
+  
+  
+
+  
+  
+  
+
+  <div>
+  
+  <ul class="su-list-unstyled grid-container-3">
+
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1361:changed=1681864469&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="o6Vje0Ogb5bNKYFwPi5ly3BTk7K7IYVPkKwQ-JN6x94"></div>
+<article class="su-card su-news-vertical-teaser"><a  class="su-news-vertical-teaser__link" href="https://a3c.stanford.edu/news/community-letter-svsa-incident"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"><div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=6IB6HABM 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=rb6okU6w 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=-S8KMIsf 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=rb6okU6w 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=-S8KMIsf 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=6IB6HABM 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=6OaQSknv 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.webp?h=9499ca2f&amp;itok=-S8KMIsf 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=6IB6HABM 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=rb6okU6w 2x" media="screen and (min-width: 992px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=-S8KMIsf 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=rb6okU6w 2x" media="screen and (min-width: 768px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=-S8KMIsf 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=6IB6HABM 2x" media="screen and (min-width: 576px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=6OaQSknv 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=-S8KMIsf 2x" media="(min-width: 0em)" type="image/png"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/screen_shot_2023-04-18_at_5.23.06_pm_0.png?h=9499ca2f&amp;itok=rb6okU6w" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--action">  Community Letter - SVSA Incident
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1261:changed=1674589645&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="WPMr3iRczwJWNQkg12xe0-4r2YbtNDZ8hgt6qj-iCgs"></div>
+<article class="su-card su-news-vertical-teaser"><a  class="su-news-vertical-teaser__link" href="https://a3c.stanford.edu/news/statement-response-tragic-shooting-monterey-park-ca"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"></div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--action">  Statement in response to tragic shooting in Monterey Park, CA
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1221:changed=1673467088&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="2MT_pIbYBeLRdpTQfgMcO9ooK2BNzlle4bs8lbTjeT8"></div>
+<article class="su-card su-news-vertical-teaser su-news-external"><a  class="su-news-vertical-teaser__link" href="https://humsci.stanford.edu/feature/harumi-befu-professor-emeritus-anthropology-dies-92?utm_source=Stanford%20ALL&amp;amp;utm_campaign=3a49afa4d7-int_COPY_01&amp;amp;utm_medium=email&amp;amp;utm_term=0_c042b4aad7-3a49afa4d7-55010338"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"><div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=UMOKvZ2z 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=CQyXw-uz 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=R_t4jL0e 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=CQyXw-uz 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=R_t4jL0e 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=UMOKvZ2z 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=5ZqNED2O 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.webp?h=83d3c8f1&amp;itok=R_t4jL0e 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=UMOKvZ2z 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=CQyXw-uz 2x" media="screen and (min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=R_t4jL0e 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=CQyXw-uz 2x" media="screen and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=R_t4jL0e 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=UMOKvZ2z 2x" media="screen and (min-width: 576px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=5ZqNED2O 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=R_t4jL0e 2x" media="(min-width: 0em)" type="image/jpeg"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/harumi_befu_edited_2_1.jpeg?h=83d3c8f1&amp;itok=CQyXw-uz" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--external">  Harumi Befu, professor emeritus of anthropology, dies at 92
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1256:changed=1674512024&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="i9arHInPOxBajmeZjC-2TLmTE6cWWSbOSE9L2aPZnaM"></div>
+<article class="su-card su-news-vertical-teaser"><a  class="su-news-vertical-teaser__link" href="https://a3c.stanford.edu/news/givingtuesday"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"><div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=WjjSoQ2J 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=GBJYzwiS 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=v-XZnrFm 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=GBJYzwiS 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=v-XZnrFm 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=WjjSoQ2J 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=di73yMkg 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.webp?h=3098eff4&amp;itok=v-XZnrFm 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=WjjSoQ2J 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=GBJYzwiS 2x" media="screen and (min-width: 992px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=v-XZnrFm 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=GBJYzwiS 2x" media="screen and (min-width: 768px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=v-XZnrFm 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=WjjSoQ2J 2x" media="screen and (min-width: 576px)" type="image/png"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=di73yMkg 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=v-XZnrFm 2x" media="(min-width: 0em)" type="image/png"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/givingtuesday_1.png?h=3098eff4&amp;itok=GBJYzwiS" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--action">  #GivingTuesday
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1211:changed=1669758784&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="1kq9Zhb1jHaEym2AGgA7KvRwT4rQacEwOWL_6xiUUBQ"></div>
+<article class="su-card su-news-vertical-teaser su-news-external"><a  class="su-news-vertical-teaser__link" href="https://stanfordmag.org/contents/stanford-irl"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"><div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=ISovPo9E 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=ld7gNtD8 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=1Yk9TUrn 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=ld7gNtD8 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=1Yk9TUrn 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=ISovPo9E 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=txjd6Npr 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.webp?h=c7568b86&amp;itok=1Yk9TUrn 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=ISovPo9E 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=ld7gNtD8 2x" media="screen and (min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=1Yk9TUrn 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=ld7gNtD8 2x" media="screen and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=1Yk9TUrn 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=ISovPo9E 2x" media="screen and (min-width: 576px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=txjd6Npr 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=1Yk9TUrn 2x" media="(min-width: 0em)" type="image/jpeg"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/img_7844_0.jpg?h=c7568b86&amp;itok=ld7gNtD8" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--external">  Stanford IRL
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+          <li><div class="ds-entity--node ds-entity--stanford-news">
+  <div data-contextual-id="node:node=1186:changed=1666715613&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="jg38-sVEPmdnqOApyHuQdHGfbNHxJI5iUP0EjNakgWI"></div>
+<article class="su-card su-news-vertical-teaser su-news-external"><a  class="su-news-vertical-teaser__link" href="https://news.stanford.edu/report/2022/10/24/stanford-welcomes-newest-members-multicultural-alumni-hall-fame/?utm_source=Stanford%20ALL&amp;amp;utm_campaign=8307a20a80-int_COPY_01&amp;amp;utm_medium=email&amp;amp;utm_term=0_c042b4aad7-8307a20a80-55000802"><figure class="su-media su-media--image su-card__media">
+    <div class="su-media__wrapper"><div class="media-entity-wrapper image">
+  
+  
+            <div class="media image field-media-image label-hidden">    <picture>
+                  <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=yxsotHbl 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=hYpErdRG 2x" media="screen and (min-width: 992px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=EhiRae0O 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=hYpErdRG 2x" media="screen and (min-width: 768px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=EhiRae0O 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=yxsotHbl 2x" media="screen and (min-width: 576px)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=0dNv-VVL 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.webp?h=6e74140a&amp;itok=EhiRae0O 2x" media="(min-width: 0em)" type="image/webp"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=yxsotHbl 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=hYpErdRG 2x" media="screen and (min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=EhiRae0O 1x, /sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=hYpErdRG 2x" media="screen and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=EhiRae0O 1x, /sites/g/files/sbiybj19811/files/styles/card_1192x596/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=yxsotHbl 2x" media="screen and (min-width: 576px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/sbiybj19811/files/styles/card_478x239/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=0dNv-VVL 1x, /sites/g/files/sbiybj19811/files/styles/card_956x478/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=EhiRae0O 2x" media="(min-width: 0em)" type="image/jpeg"/>
+                  <img src="/sites/g/files/sbiybj19811/files/styles/card_1900x950/public/media/image/ezgif.com-gif-maker_1_1.jpg?h=6e74140a&amp;itok=hYpErdRG" alt="" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+  </figure>
+  <div class="su-news-header">
+    <h2 class="su-link su-card__link su-link--external">  Stanford welcomes newest members of Multicultural Alumni Hall of Fame
+</h2>
+  </div></a><div class="su-card__contents">
+    <div class="news-vertical-teaser__topics"></div>
+  </div></article>
+
+</div>
+</li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+    </div>
+  
+</div>
+<div class="node_view"></div>
+  </div><!-- /.content --></section><!-- /.node as page -->
+
+  </div>
+
+</main>
+
+<footer id="footer">
+    <div id="block-config-pages" class="config-pages-block block-config-pages">
+  
+    
+      <div class="ds-entity--config-pages ds-entity--stanford-local-footer">
+  <div data-contextual-id="config_pages:config_pages=1:changed=1631741708&amp;ds_bundle=stanford_local_footer&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="cgr4ZD97cHzPYwgK1V_M5NQxvRhFlKqmk0VGZ0AJNtg"></div><div  class="su-local-footer ">
+      <div class="su-local-footer__header">
+              <div  class="su-lockup su-lockup--option-a">
+  <div class="su-lockup__cell1">
+          <div class="su-lockup__wordmark-wrapper">
+        <span class="su-lockup__wordmark">Stanford</span>
+              </div>
+      </div>    <div class="su-lockup__cell2">
+        <span class="su-lockup__line1" >Asian American Activities Center</span>
+    
+    
+      </div>
+      </div>
+                <a  href="/saml_login" class="su-link su-link--internal">Web Login</a>
+            
+  </div>
+      <div class="su-local-footer__columns">
+        <div class="su-local-footer__cell1">
+                              <h2 class="su-sr-only-element">Address</h2>
+      <address class="su-local-footer__address">
+        
+            <div class="config-pages stanford-local-footer su-local-foot-address address label-hidden"><p class="address" translate="no"><span class="organization">Old Union Clubhouse, 2nd Floor</span><br>
+<span class="address-line1">524 Lasuen Mall</span><br>
+<span class="locality">Stanford</span>, <span class="administrative-area">CA</span> <span class="postal-code">94305-3064</span><br>
+<span class="country">United States</span></p></div>
+      
+      </address>
+                        <ul class="su-local-footer__action-links">
+                    
+                                                                                                                                                                                                                                                                            <li >
+          <a href="http://campus-map.stanford.edu/index.cfm?ID=02-600">Campus Map</a>
+        </li>
+                              <li >
+          <a href="mailto:stanforda3c@stanford.edu">stanforda3c@stanford.edu</a>
+        </li>
+                                            
+  
+              </ul>
+                        <ul class="su-local-footer__social-links">
+                    
+        
+                            <li >
+      <a href="https://www.facebook.com/StanfordA3C" class="su-local-footer__social-facebook" >
+        <i aria-hidden='true'></i>
+        <span>Facebook</span>
+      </a>
+    </li>
+                            <li >
+      <a href="https://instagram.com/stanforda3c/" class="su-local-footer__social-instagram" >
+        <i aria-hidden='true'></i>
+        <span>Instagram</span>
+      </a>
+    </li>
+                            <li >
+      <a href="https://twitter.com/StanfordA3C" class="su-local-footer__social-twitter" >
+        <i aria-hidden='true'></i>
+        <span>Twitter</span>
+      </a>
+    </li>
+  
+  
+              </ul>
+                        
+    </div>
+        <div class="su-local-footer__cell2">
+                                                      
+            <div class="su-wysiwyg-text config-pages stanford-local-footer su-local-foot-se-co text-long label-hidden"><p>The Asian American Activities Center is part of the <a href="https://communitycenters.stanford.edu/">Centers for Equity, Community, and Leadership (ECL)</a> and proud to be part of <a href="https://vp-studentaffairs.stanford.edu/">Student Affairs</a>, which educates students to make meaningful contributions as citizens of a complex world.</p>
+
+<p><a class="su-button--big" href="https://pgnet.stanford.edu/get/page/makeagift?mop=CC&amp;gfty=G&amp;pgnTPC=399&amp;stp=107&amp;gdso=5&amp;tgso=6&amp;cturl=close&amp;olc=11840&amp;refid=E504B609F8F3DE5B196A4AF2CDEF914915A94AE92EEB045D97B188B0122F397E2EE92E1FF91ADDB7">Make a Gift</a></p></div>
+      
+    </div>
+        <div class="su-local-footer__cell3">
+                                          
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+
+<div class="su-global-footer ">
+  <div class="su-global-footer__container" title="Common Stanford resources">
+    <div class="su-global-footer__brand"><a  class="su-logo " href="https://www.stanford.edu">Stanford<br>University</a>
+</div>
+    <div class="su-global-footer__content">
+      <nav aria-label="global footer menu">
+        <ul class="su-global-footer__menu su-global-footer__menu--global">
+          <li><a href="https://www.stanford.edu">Stanford Home<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://visit.stanford.edu/plan/">Maps &amp; Directions<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://www.stanford.edu/search/">Search Stanford<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://emergency.stanford.edu">Emergency Info<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+        </ul>
+        <ul class="su-global-footer__menu su-global-footer__menu--policy">
+          <li><a href="https://www.stanford.edu/site/terms/"
+                 title="Terms of use for sites">Terms of Use<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://www.stanford.edu/site/privacy/"
+                 title="Privacy and cookie policy">Privacy<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://uit.stanford.edu/security/copyright-infringement"
+                 title="Report alleged copyright infringement">Copyright<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4"
+                 title="Ownership and use of Stanford trademarks and images">Trademarks<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://bulletin.stanford.edu/pages/c7vDgeOuJIfpZe8GKmW3/"
+                 title="Non-discrimination policy">Non-Discrimination<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+          <li><a href="https://www.stanford.edu/site/accessibility"
+                 title="Report web accessibility issues">Accessibility<span class="su-global-footer__link-a11y">(link is external)</span>
+  </a></li>
+        </ul>
+      </nav>
+      <div class="su-global-footer__copyright">
+        <span>&copy; Stanford University.</span>
+        <span>&nbsp; Stanford, California 94305.</span>
+      </div>
+    </div>
+  </div>
+</div> <!-- su-global-footer end -->
+</footer><button id="back-to-top">
+  <span class="fas fa-chevron-up"></span>
+  Back to Top
+</button>
+
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/46","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"core\/picturefill,extlink\/drupal.extlink,fontawesome\/fontawesome.webfonts,fontawesome\/fontawesome.webfonts.shim,google_analytics\/google_analytics,jumpstart_ui\/base,jumpstart_ui\/jumpstart_ui,jumpstart_ui\/layout,paragraphs\/drupal.paragraphs.unpublished,printable\/entity-links,react_paragraphs\/field_formatter,stanford_basic\/basic,stanford_basic\/content.stanford_page,stanford_basic_page_types\/node.stanford-page,stanford_events\/event_views,stanford_news\/news_list,stanford_profile_helper\/siteimprove.analytics,stanford_profile_styles\/layout,stanford_profile_styles\/node.stanford_page,stanford_profile_styles\/node.stanford_page.layout.full-width,stanford_profile_styles\/paragraph.banner,stanford_profile_styles\/paragraph.card,stanford_profile_styles\/paragraph.react_paragraphs,stanford_profile_styles\/paragraph.wysiwyg,stanford_profile_styles\/stanford_profile_styles,system\/base,ui_patterns\/card.card,ui_patterns\/hero.hero,ui_patterns\/localfooter.localfooter,ui_patterns\/news-vertical-teaser.newsverteaser,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"stanford_basic","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"account":"UA-11291968-20","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"su-link su-link--external","extLabel":" (link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":".localist-widget, #lclst_widget_footer","extCssExplicit":"#page-content, .su-local-footer","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto","mailtoLabel":" (link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"stanford_basic":{"nav_dropdown_enabled":false},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:4d34640a0e779189a1380f778f5060a528c444b21ed9438371b71d1c20645afc":{"view_name":"stanford_news","view_display_id":"vertical_teaser_term","view_args":"all\/46","view_path":"\/node\/46","view_base_path":null,"view_dom_id":"4d34640a0e779189a1380f778f5060a528c444b21ed9438371b71d1c20645afc","pager_element":0},"views_dom_id:501b7064b79d1654fcdfe056aa8641655d859bb9ab0051e1d39057c0edd81fc4":{"view_name":"stanford_events","view_display_id":"list_page","view_args":"all\/all\/all\/all","view_path":"\/node\/46","view_base_path":null,"view_dom_id":"501b7064b79d1654fcdfe056aa8641655d859bb9ab0051e1d39057c0edd81fc4","pager_element":0}}},"user":{"uid":0,"permissionsHash":"014ef975c5e2911659e6c0b4de4bb2645ed6a93682bf7bd3744c675eabc77d9b"}}</script>
+<script src="/sites/g/files/sbiybj19811/files/js/js_wP_LbLjNBqL_fEvcWQHqAkQBBHQVC6jn_sBoqRWMLw8.js"></script>
+
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"383a8e13e9","applicationID":"1391244355","transactionName":"YFBSMkACDEoFBRUKCVkacQVGCg1XSyITFhZWWWwIXQcHZScJDxcUWFlcA0A\/LFYAAzcKA0B2XwhGEQ1VCAMTTlhBXFUR","queueTime":3,"applicationTime":1251,"atts":"TBdRRAgYH0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
