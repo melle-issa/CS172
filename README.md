@@ -10,6 +10,7 @@
 - If you need to run multiple crawling rounds due to the website removing you, make sure you also update the "_round1.html" part to "_round2.html" and so on. **This is important!** Your crawled files will get overwritten if you do not change the naming convention during every round.
 - Change the url in seed.txt to a url from another university whose website you want to crawl and make sure you add that university to the list of universities whose websites we've crawled.
 - Make your own branch and save your crawled websites folder in there for now. (The TA said they'd give further instructions on where to turn in our crawled files later.)
+- To run, I've been using "python3 main.py"
 
 ## Universities Whose Websites We've Crawled:
 - UCR
