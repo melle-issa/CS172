@@ -13,7 +13,8 @@
 - To run, I've been using "python3 main.py"
 
 ## Universities Whose Websites We've Crawled:
-- UCR
+- UC Riverside
+- UC Davis
 
 ## Note: 
 The program will print out the number of websites in the queue on the left and the number of websites visited on the right in the terminal. This is just a visual aid to help you see that the code is running. If you prefer not to have this you can delete line 66 with the print statement.
