@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="us-ascii"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"000fd7bcd4","applicationID":"770312715","transactionName":"MgQEMRNWXEEFUxJcCwtOKzMiGHFTFlUDRxcmDggRE1heXgFCSWYBBBMFDQ==","queueTime":0,"applicationTime":359,"ttGuid":"440C1106BE5C8A10","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"772297213",accountID:"1024741",trustKey:"1024741",xpid:"VQYFVVFXCRAHU1FRBgMAV1E=",licenseKey:"000fd7bcd4",applicationID:"770312715"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(31),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(32),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),S=t(15),P=t(10),M=t("ee"),C=M.get("tracer"),N=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),P.on(p,r),M.on(d,o),b.on(l,o),P.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),S.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),C.buffer([u,"no-"+u]),P.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(P,"new-jsonp"),a(P,"jsonp-end"),a(P,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,N(!0)),w[v]("load",i,N(!0)),w[v]("popstate",function(){i(0,U>1)},N(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(32),a=t(31);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(31),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(28),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=t(25).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;if("string"==typeof i?n=i:"object"==typeof i&&i instanceof y?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n),"data"!==this.params.protocol){var s=(""+(i&&i instanceof y&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(31),s=t(32),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(33);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var o=[r],i=a({});i&&o.push(i),l("lcp",o)}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,l("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),l("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,p,l=t("handle"),h=t("loader"),m=t(30),v=t(23),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(o);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}p=new PerformanceObserver(i);try{p.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],28:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(t)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],29:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],30:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],31:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],32:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],33:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(31),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(26),s=t("handle"),c=t(31),f=t("ee"),u=t(29),d=t(21),p=t(23),l=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(27),m[v]?(m[v]("DOMContentLoaded",i,p(!1)),h[v]("load",r,p(!1))):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(32),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script><!-- Page/Site Title : REPLACE THIS -->
+	<title>Search Results | CSUSB</title>
+	<!-- Stylesheets -->
+	<link href="https://resources.academic.csusb.edu/resources/pageup_d8/css/master.css" rel="stylesheet" />
+	<link href="https://resources.academic.csusb.edu/resources/pageup_d8/css/fontawesome.min.css" rel="stylesheet" />
+	<link href="https://resources.academic.csusb.edu/resources/pageup_d8/css/brands.min.css" rel="stylesheet" />
+</head>
+<body>
+<p><script src="https://careers-static.pageuppeople.com/Jobs-48116143191211491418283113144816683188156.js" type="text/javascript"></script>
+<![if !IE 6]>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=pageup"></script>
+<![endif]>
+	<script>PU.Jobs.source = {"instId":873,"sourcePointer":"sb","language":"en-us","baseDomain":"https://careers.csusb.edu","dynamicTemplate":true,"action":"Search"};PU.Analytics.init({"TrackingId":"UA-3555366-20","InstanceTrackingId":null});</script><link href="https://careers-static.pageuppeople.com/jobs-shared-010005202249131221250017020413143166133192.css" rel="stylesheet" type="text/css" /><!-- Skip Links --></p>
+
+<div><a class="visually-hidden focusable skip-link" href="#page-header">Skip banner navigation</a> <a class="visually-hidden focusable skip-link" href="#main-content">Skip to main content</a></div>
+
+<div class="dialog-off-canvas-main-canvas">
+<div class="site-wrapper"><!--   Site Header   -->
+<header aria-labelledby="region-site-header" class="site-header"><span class="sr-only" id="region-site-header">Site Header Region</span>
+
+<div class="site-header--container">
+<div class="site-header--left">
+<div class="site-branding"><a class="csusb-logo" href="https://www.csusb.edu/" rel="home" title="Home"><canvas class="logo-canvas" height="1" width="5"></canvas> <svg viewbox="0 0 165.33 26" xmlns="http://www.w3.org/2000/svg">
+<title></title>
+<path d="M88.67,4.85V8.48a13.73,13.73,0,0,0-3-1.32,8.81,8.81,0,0,0-6.83.55,6.39,6.39,0,0,0-2.64,2.75,8.15,8.15,0,0,0-1,4,9.14,9.14,0,0,0,1.1,4.52,8,8,0,0,0,2.86,3.19,7.39,7.39,0,0,0,4.08,1.21,10.19,10.19,0,0,0,3.19-.44,20.6,20.6,0,0,0,3.74-1.65L88.56,25a9.69,9.69,0,0,1-1.65.55l-1.54.33A8.9,8.9,0,0,1,83.6,26a13.57,13.57,0,0,1-4.85-.77A12.12,12.12,0,0,1,74.9,23a8.81,8.81,0,0,1-2.42-3.52,11.64,11.64,0,0,1-.88-4.41A10.67,10.67,0,0,1,73,9.47a10.78,10.78,0,0,1,9.69-5.4A19.63,19.63,0,0,1,88.67,4.85Zm16.41-.22V8.26a6.61,6.61,0,0,0-2.31-1.54,7.57,7.57,0,0,0-2.64-.55A5.38,5.38,0,0,0,97,7a2.39,2.39,0,0,0-1.1,2.09,3.05,3.05,0,0,0,.33,1.43,4.79,4.79,0,0,0,1.32,1.21c.66.44,1.65.88,3,1.54s2.42,1.21,3,1.43a8.64,8.64,0,0,1,1.65,1.1,3.3,3.3,0,0,1,1.21,1.54,3.62,3.62,0,0,1,.44,1.87,5.91,5.91,0,0,1-.55,2.31,5.1,5.1,0,0,1-1.43,2,9.3,9.3,0,0,1-6.61,2.31,21.46,21.46,0,0,1-2.75-.22,15,15,0,0,1-2.75-.77l-1-4a11,11,0,0,0,6.94,2.53,5.93,5.93,0,0,0,2.42-.44,4.2,4.2,0,0,0,1.76-1.21,2.2,2.2,0,0,0,.66-1.65,2.78,2.78,0,0,0-1-2.2,6.85,6.85,0,0,0-1.32-.88,22.18,22.18,0,0,0-2.75-1.32c-1.21-.55-2.09-1-2.75-1.32a6.42,6.42,0,0,1-1.65-1.21,4.6,4.6,0,0,1-1.21-1.65,4.32,4.32,0,0,1-.44-2,4.84,4.84,0,0,1,1-3,5.77,5.77,0,0,1,2.75-2A11.92,11.92,0,0,1,100.34,4,18.82,18.82,0,0,1,105.08,4.63ZM124,25.33v-2.2a8,8,0,0,1-6.28,2.75,9.63,9.63,0,0,1-4.08-.88,5.63,5.63,0,0,1-2.53-2.53,7.59,7.59,0,0,1-.44-1.1,4.11,4.11,0,0,1-.22-1.32c0-.55-.11-1.21-.11-2.09V8.7a10.75,10.75,0,0,0-.11-2.09,3.11,3.11,0,0,0-.44-1.21,3,3,0,0,0-.88-.77H115a2,2,0,0,0-.88.77,2.53,2.53,0,0,0-.44,1.21,11.37,11.37,0,0,0-.11,2.09V18a12.12,12.12,0,0,0,.22,2.42,4.05,4.05,0,0,0,.88,1.65,5.3,5.3,0,0,0,1.76,1.32,5.11,5.11,0,0,0,2.31.44,7.09,7.09,0,0,0,2.64-.55,5.69,5.69,0,0,0,2-1.65,4.46,4.46,0,0,0,.55-1,5.39,5.39,0,0,0,.11-1.43V8.81a10.75,10.75,0,0,0-.11-2.09,3.11,3.11,0,0,0-.44-1.21,2,2,0,0,0-.88-.77h6.06a3,3,0,0,0-.88.77,3.11,3.11,0,0,0-.44,1.21,11.37,11.37,0,0,0-.11,2.09V21.37a10.75,10.75,0,0,0,.11,2.09,3.11,3.11,0,0,0,.44,1.21,3,3,0,0,0,.88.77ZM144.4,4.63V8.26a6.61,6.61,0,0,0-2.31-1.54,7.57,7.57,0,0,0-2.64-.55,5.38,5.38,0,0,0-3.08.88,2.39,2.39,0,0,0-1.1,2.09,3.05,3.05,0,0,0,.33,1.43,4.79,4.79,0,0,0,1.32,1.21c.66.44,1.65.88,3,1.54s2.42,1.21,3,1.43a14.32,14.32,0,0,1,1.65,1.1,3.3,3.3,0,0,1,1.21,1.54,3.62,3.62,0,0,1,.44,1.87,5.91,5.91,0,0,1-.55,2.31,5.1,5.1,0,0,1-1.43,2,9.3,9.3,0,0,1-6.61,2.31,21.46,21.46,0,0,1-2.75-.22,15,15,0,0,1-2.75-.77l-1-4A11,11,0,0,0,138,23.46a5.93,5.93,0,0,0,2.42-.44,4.2,4.2,0,0,0,1.76-1.21,2.2,2.2,0,0,0,.66-1.65,2.78,2.78,0,0,0-1-2.2,6.85,6.85,0,0,0-1.32-.88,22.18,22.18,0,0,0-2.75-1.32c-1.21-.55-2.09-1-2.75-1.32a6.42,6.42,0,0,1-1.65-1.21,4.6,4.6,0,0,1-1.21-1.65,4.32,4.32,0,0,1-.44-2,4.84,4.84,0,0,1,1-3,5.77,5.77,0,0,1,2.75-2A11.92,11.92,0,0,1,139.66,4,17.55,17.55,0,0,1,144.4,4.63Zm10.79-.11h1a15.82,15.82,0,0,1,2.64.22,8.25,8.25,0,0,1,1.76.55,16.11,16.11,0,0,1,1.43,1,4.6,4.6,0,0,1,.88,1.32,3.51,3.51,0,0,1,.33,1.54,3.71,3.71,0,0,1-.55,1.87,4.12,4.12,0,0,1-1.32,1.43c-.33.22-.77.44-1.32.77a10.21,10.21,0,0,1,2.42.88,7.23,7.23,0,0,1,2.09,2,5.65,5.65,0,0,1,.77,2.64,5.2,5.2,0,0,1-1.1,3.3,7.82,7.82,0,0,1-2.86,2.42,9.41,9.41,0,0,1-2.42.77,5.36,5.36,0,0,1-1.32.11,12.12,12.12,0,0,0-1.76.11h-6.72a2,2,0,0,0,.88-.77,3.11,3.11,0,0,0,.44-1.21,11.37,11.37,0,0,0,.11-2.09V8.59a10.75,10.75,0,0,0-.11-2.09A3.11,3.11,0,0,0,150,5.29a3,3,0,0,0-.88-.77h6.06Zm-1.65,2.2v6.17c.33,0,.77.11,1.21.11a6.66,6.66,0,0,0,2.64-.44,3.4,3.4,0,0,0,1.76-1.21,2.7,2.7,0,0,0,.66-1.76,2.45,2.45,0,0,0-1.1-2.2,5,5,0,0,0-3-.88,16.52,16.52,0,0,0-2.2.22Zm0,8.26V22.8A7.58,7.58,0,0,0,155,23c.44,0,.88.11,1.32.11a7.46,7.46,0,0,0,2.86-.44A4.78,4.78,0,0,0,161,21.37a3.39,3.39,0,0,0,.66-2.09,4,4,0,0,0-1.43-3.19,4.79,4.79,0,0,0-1.65-.88,8.28,8.28,0,0,0-2.53-.22,19.35,19.35,0,0,0-2.53,0ZM4.41,24C8.48,10.9,19.06,3.08,33.27,3.08S57.83,10.9,62.12,24c.55,1.76,4.41,1.32,4.41,1.32C62.78,10.46,49.35,0,33.27,0S3.64,10.35,0,25.33C-.11,25.33,3.86,25.77,4.41,24Zm55.84,1.32a7,7,0,0,1-3.19-1.43c-14.54-12.67-17.62-14-17.62-14-3.3,1.87-8.81,5.62-8.81,5.62s-2.75-.88-5.07-1.43c-1.54,1.21-5,4.41-5,4.41s-4.19-.66-4.74-.77c-.88.77-3.52,3.86-5.84,6.06a8.17,8.17,0,0,1-3.86,1.65H60.25Z" style="fill:#fff"></path> </svg> </a> <span class="wdtf-logo"> <canvas class="logo-canvas" height="1" width="5"></canvas> <svg viewbox="0 0 190.98 30" xmlns="http://www.w3.org/2000/svg">
+<title></title>
+<path d="M179.58,27.63c.07.39.07,1.39-1.45,2.35l-.06,0h0a111,111,0,0,0-17.22-2.27c-1.41-.09-2.86-.16-4.29-.22l-.62,0c-7-.25-13.64,0-16.18.48h-.06c-.51-.23-1.25-.72-1.23-1.11a.1.1,0,0,1,0-.06c.13-.13.89-.6,5.24-1,2.8-.26,6.47-.44,10.31-.51s7.6,0,11.22.12c1.34.05,2.65.12,3.88.2a79.36,79.36,0,0,1,9.59,1.09A1.15,1.15,0,0,1,179.58,27.63ZM191,17.46a9.27,9.27,0,0,1-2.34,3.44c-.9.9-2.69,2.39-4.6,2.32h-.08l-.23,0a3.08,3.08,0,0,1-2.76-3.32.25.25,0,0,0-.17-.22h-.05a.25.25,0,0,0-.22.09c-1.52,1.93-2.91,2.88-4.12,2.83h-.2l-.21,0a2.24,2.24,0,0,1-1.44-1.07,3.22,3.22,0,0,1-.2-2.55,30.61,30.61,0,0,1,2.61-5.71A14.8,14.8,0,0,0,178,11a.46.46,0,0,0,0-.37c-.17-.29-.67-.41-1.31-.54h0a.24.24,0,0,0-.23.14,65.9,65.9,0,0,1-4.3,7.44c-1.86,2.69-3.71,4.26-4.95,4.22H167l-.18,0c-.85-.25-1.21-1.08-1.13-2.6a8.08,8.08,0,0,1,.18-1.27.25.25,0,0,0-.13-.27l-.09,0a.25.25,0,0,0-.21.08l-.29.33a12,12,0,0,1-2.79,2.47,3.58,3.58,0,0,1-1.82.56,1.45,1.45,0,0,1-1-.4c-.44-.42-.34-1.45-.27-1.87a.25.25,0,0,0-.14-.26l-.09,0a.25.25,0,0,0-.19.08c-2,2.26-3.61,3.38-4.78,3.34H154l-.22,0c-1.36-.4-1.49-1.9-1.36-3.08a.25.25,0,0,0-.15-.25l-.08,0h0a.24.24,0,0,0-.18.09c-2.33,2.74-4.17,4.1-5.47,4.05h-.15a1.42,1.42,0,0,1-.94-.87,4.22,4.22,0,0,1-.38-2.08v0a.24.24,0,0,0-.16-.24l-.08,0a.25.25,0,0,0-.2.09c-2.89,3.52-4.52,4.21-5.37,4.18h-.13l-.2,0a1.11,1.11,0,0,1-.67-.61c-.53-1.05-.32-3.09.56-5.44a35.17,35.17,0,0,1,2.7-5.46,45.93,45.93,0,0,0-4.66,1,.23.23,0,0,0-.14.11l-.61,1.16-4.48,10.88a5,5,0,0,1-2.28-2.29,1.87,1.87,0,0,1,.14-1.5c1.26-2.4,3.33-6.5,3.35-6.55l0-.07a.23.23,0,0,0,0-.26.22.22,0,0,0-.16-.07l-.1,0c-.31.13-.59.26-.83.38a2.5,2.5,0,0,1,.46-1.16,7.23,7.23,0,0,1,2-1.48.22.22,0,0,0,.09-.09l4-7.44A.23.23,0,0,0,138,4.4h-.06C133.66,5.47,129.65,7,128.39,8a1.26,1.26,0,0,1-.16-.65,2.46,2.46,0,0,1,.68-1.51c4.26-3.94,13.79-6,18.23-5.82,1.19,0,2,.28,2.19.64.47.85-.44,2.32-.69,2.69A10.31,10.31,0,0,0,147,3.16a26.29,26.29,0,0,0-5.32.45.23.23,0,0,0-.19.21,2.09,2.09,0,0,1-.27.87c-.37.7-2.85,5.34-2.85,5.34a.23.23,0,0,0,.19.33h.08A15.31,15.31,0,0,1,143,9.44h.1a16.41,16.41,0,0,0,1.27-2.33.1.1,0,0,1,.1-.06,4.2,4.2,0,0,1,1.62.75c.29.27.59.71.29,1.74a27.18,27.18,0,0,1-2.33,4.05c-2.11,3.34-3.47,5.58-3.15,6.35a.49.49,0,0,0,.36.29h.07c.56,0,2-1.62,4.39-4.89a65,65,0,0,0,3.69-5.62.1.1,0,0,1,.09-.06c1.2.38,2.07.8,1.55,2.54a15.52,15.52,0,0,1-1.21,2.5c-1.08,2-1.71,3.21-1.44,4a.74.74,0,0,0,.46.45l.1,0h0c.2,0,.55,0,2.5-2.32,1.08-1.29,2.43-3,3.8-4.88.43-.64.91-1.3,1.5-2.09l.1-.14,0,0,.51-.67a.25.25,0,0,0-.18-.39h-.08c-1.17.29-2.19.59-2.93.86a5.92,5.92,0,0,0-.94.41h-.06a.1.1,0,0,1-.08,0A2.66,2.66,0,0,1,152.5,8a1.23,1.23,0,0,1,.86-.82,19,19,0,0,1,3.77-1c.93-.15,1.76-.27,2.55-.36a.25.25,0,0,0,.17-.1A12.35,12.35,0,0,0,161.46,3a.1.1,0,0,1,.1-.07,2.7,2.7,0,0,1,1.6.94A1.38,1.38,0,0,1,163.28,5a2.65,2.65,0,0,1-.14.35.25.25,0,0,0,.2.35h.1l.31,0c1.92.12,3,.61,3.31,1.46l0,.22a.1.1,0,0,1,0,.09.1.1,0,0,1-.07,0,8.25,8.25,0,0,0-.94-.11h-.28a22.5,22.5,0,0,0-3.9.27.24.24,0,0,0-.17.11c-.47.72-1,1.54-1.55,2.33-3.43,5.12-5,7.7-4.61,8.55a.52.52,0,0,0,.43.3c.36,0,1-.45,3.7-3.88,1.94-2.5,3.92-5.28,4.68-6.35a.1.1,0,0,1,.09,0c1.12.35,1.86.7,1.46,2.07a16.24,16.24,0,0,1-1.65,2.85c-1.37,2.09-2.24,3.51-2,4.13a.5.5,0,0,0,.35.3h.09c.25,0,1,0,4.25-4.3a51.52,51.52,0,0,0,3.35-4.83.1.1,0,0,1,.09-.05h0a2.25,2.25,0,0,1,1.21.74,2,2,0,0,1,0,1.74,17.1,17.1,0,0,1-1.3,2.63c-.21.37-.43.75-.64,1.11-.9,1.54-1.45,2.5-1.19,3a.59.59,0,0,0,.44.33h0c.91,0,3.07-3,6.1-8.54a.25.25,0,0,0,0-.2.24.24,0,0,0-.14-.14c-.5-.2-.77-.45-.84-.76-.11-.53.33-1.3,1.31-2.31a.1.1,0,0,1,.08,0,.1.1,0,0,1,.07,0,8,8,0,0,0,2.2,1.33c1.62.8,3.84,1.9,3.5,3a19.3,19.3,0,0,1-2,3.56c-1.58,2.49-2.6,4.17-2.26,4.95a.66.66,0,0,0,.52.39h.06c.72,0,2.51-2,5.32-6.09a11.16,11.16,0,0,1,2.86-3.11,4.92,4.92,0,0,1,3-1h.09l.23,0a2,2,0,0,1,1.42.72,1.94,1.94,0,0,1,.26,1.41A8.28,8.28,0,0,1,188.3,16a5.77,5.77,0,0,1-3.88,2h-.2a.26.26,0,0,0-.26.17,3,3,0,0,0-.06,2.39,1.14,1.14,0,0,0,.86.52h.07c1.67.07,5.05-4,5.71-4.76a.1.1,0,0,1,.08,0,.1.1,0,0,1,.09.05A1.62,1.62,0,0,1,191,17.46Zm-6.15-.93a.25.25,0,0,0,.17.09h.1a6.93,6.93,0,0,0,2.83-2.38,5.92,5.92,0,0,0,1.38-2.62.34.34,0,0,0-.3-.34h-.05c-.94,0-3,2.61-4.16,5A.24.24,0,0,0,184.8,16.53ZM14.59,11.76h1.13V9.91H11.19v1.86h1.16l-.84,3.08q-.09.33-.19.71l-.19.78q-.09.39-.17.77t-.14.72h-.08q-.09-.66-.25-1.5t-.29-1.5L9.14,9.91H7.24a.73.73,0,0,0-.46.15.69.69,0,0,0-.26.41L5.4,14.86q-.17.67-.36,1.47t-.31,1.49H4.67q0-.33-.11-.7l-.13-.77q-.07-.39-.15-.78l-.14-.71L3.5,11.76h1V9.91H0v1.86H1.14L3,19.66a.79.79,0,0,0,.8.65H6L7.13,16l.16-.7.17-.77q.08-.39.15-.76t.12-.7H7.8q0,.32.12.7l.14.77q.07.39.15.77t.15.69l.84,3.62a.88.88,0,0,0,.29.47.78.78,0,0,0,.51.18h2.17Zm8.14,6.62H20.36V15.82h2.38V14H20.36V11.76h2.37l.08,1.38h2l-.14-3.23H16.82v1.86H18v6.62H16.82v1.86h7.89L24.85,17h-2ZM30.5,9.91v1.86h1.24v6.62H30.51v1.86h4.92a8.45,8.45,0,0,0,2.6-.33,3.08,3.08,0,0,0,1.49-1,3.53,3.53,0,0,0,.68-1.64,14.25,14.25,0,0,0,.16-2.3v-.14a13,13,0,0,0-.15-2.13A3,3,0,0,0,38,10.23a8.52,8.52,0,0,0-2.61-.32Zm3.61,8.48V11.76h1.11a6.69,6.69,0,0,1,1.45.12,1.41,1.41,0,0,1,.81.47,1.93,1.93,0,0,1,.36,1A14.25,14.25,0,0,1,37.91,15a14.55,14.55,0,0,1-.09,1.76,2.12,2.12,0,0,1-.36,1,1.34,1.34,0,0,1-.81.48,7,7,0,0,1-1.43.12Zm13.58,0H45.32V15.82H47.7V14H45.32V11.76h2.37l.08,1.38h2l-.14-3.23H41.77v1.86H43v6.62H41.77v1.86h7.89L49.8,17h-2Zm8.46,0H54.9V15.91h2.49V14.12H54.9V11.76H57.2l.08,1.38h2l-.14-3.23H51.35v1.86h1.21v6.62H51.35v1.86h4.8Zm9.31,0H64.22V11.76h1.24V9.91H60.64v1.86h1.24v6.62H60.64v1.86h4.83Zm12.86-6.62V9.91H73.65v1.86h1V17h0q-.46-1-1-2t-1-2l-1.28-2.44a1.3,1.3,0,0,0-.5-.48,1.36,1.36,0,0,0-.67-.17H66.93v1.86H68.2v6.62H66.93v1.86h4.69V18.39H70.54V13.23h0l.88,1.8q.46.94.91,1.8l1.45,2.75a1.3,1.3,0,0,0,1.18.65h2V11.76Zm7.26,6.62H83.21V15.82h2.38V14H83.21V11.76h2.37l.08,1.38h2l-.14-3.23H79.67v1.86h1.21v6.62H79.67v1.86h7.89L87.7,17h-2Zm15-5.31h2.07l-.14-3.17H93.48l-.14,3.17h2l.06-1.32h1.44v6.62H95.6v1.86h4.81V18.39H99.21V11.76h1.33Zm13.21,5.31V11.76h1.24V9.91h-4.8v1.86h1.21V14H107.7V11.76h1.24V9.91h-4.78v1.86h1.21v6.62h-1.21v1.86h4.78V18.39H107.7V15.73h3.78v2.66h-1.21v1.86h4.8V18.39Zm8.6,0h-2.37V15.82h2.38V14h-2.38V11.76h2.37l.08,1.38h2l-.14-3.23h-7.89v1.86h1.21v6.62h-1.21v1.86h7.89l.14-3.25h-2Z" style="fill:#fff"></path> </svg> </span></div>
+
+<div class="site-header--content">
+<div class="region region-site-header-content">
+<nav aria-labelledby="block-quicklinks-2-menu" id="block-quicklinks-2" role="navigation">
+<div class="sr-only" id="block-quicklinks-2-menu">Quick Links</div>
+
+<ul class="menu" region="site_header_content">
+	<li><a href="https://my.csusb.edu">myCoyote</a></li>
+	<li><a href="https://www.csusb.edu/campus-directory">Directory</a></li>
+	<li><a href="https://www.csusb.edu/library">Library</a></li>
+	<li><a href="https://www.csusb.edu/maps-directions">Maps</a></li>
+	<li><a href="https://www.csusb.edu/pdc">Palm Desert Campus</a></li>
+	<li><a href="https://www.csusb.edu/advancement/development/how-give/make-a-gift">Make a Gift</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- EDIT UNDER THIS LINE -->
+
+<div class="page">
+<header aria-labelledby="region-page-header" class="page-header"><span class="sr-only" id="region-page-header">Page Header</span>
+
+<div id="page-header"></div>
+
+<div class="banner">
+<div class="banner-wrap"><!-- Banner Background : CHANGE THIS --><!-- Background image should be 1920x560, 72 DPI. -->
+<div class="banner-background" style="background-image: url(https://resources.academic.csusb.edu/resources/pageup/images/job-op-banner.jpg)"></div>
+
+<div class="banner-content">
+<div class="container"><span class="page-title">Job Opportunities</span></div>
+</div>
+</div>
+</div>
+<!-- Page Navigation : CHANGE THIS -->
+
+<div class="page-navigation-wrap">
+<div class="container">
+<div class="region region-page-navigation">
+<nav aria-labelledby="page-menu" class="contextual-region" role="navigation"><!-- Page menu title for accessibility. -->
+<div class="sr-only" id="page-menu">Page Menu</div>
+
+<div class="navbar"><!-- Page Menu Mobile Toggle Button --><button class="navbar-toggle" data-target=".page-navigation" data-toggle="collapse" type="button">Page Menu</button><!-- Collapsable Menu -->
+
+<div class="page-navigation collapse">
+<ul class="page-menu"><!-- PAGE MENU STARTS HERE -->
+	<li class="active"><a href="https://careers.csusb.edu/en-us/listing/">Current Opportunities</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+
+<main aria-labelledby="region-main-content" class="page-body"><span class="sr-only" id="region-main-content">Main Content Region</span>
+
+<div class="container"><form action="/en-us/search/" method="get" id="jobs-form" class="careers-browse">
+<div class="page-body-wrap">
+<div id="main-content"></div>
+<!-- Page Title : CHANGE THIS --><!-- H1 is hidden but it's required for screen readers. -->
+
+<h1 class="page-title sr-only">Job Opportunities</h1>
+
+<div class="page-content"><!-- Main Content Area : CHANGE THIS -->
+<div class="page-main-content"><!-- START  MAIN CONTENT HERE --><div id="messages" style="display: none"><ul id="message-list" role="presentation"></ul></div> <div id="waiting" class="waiting" style="display: none;"></div><div id="job" style="display:none"><div id="job-content"></div></div><div id="search-results">
+  
+<div id="job-mail" class="script">
+    <a id="job-mail-trigger" href="/en-us/Search/?search-keyword=&amp;category=unit+3+-+cfa+-+california+faculty+association&amp;subscribe=true">Send me jobs like these</a>
+    <div id="job-mail-content">
+        <div id="job-mail-subscribe">
+            <p>We will email you new jobs that match this search.</p>
+            
+<div id="job-mail-email">
+    <input aria-label="Email address" type="email" id="job-mail-subscribe-email" name="job-mail-subscribe-email" class="text-input" placeholder="address@example.com" value="" aria-required="true">
+</div>
+<p id="job-mail-subscribed" class="success" style="display: none;">Ok, we will send you jobs like this.</p>
+<p id="job-mail-error" class="error" style="display: none;" >The email address was invalid, please check for errors.</p>
+<p id="job-mail-agreed" class="error" style="display: none;" >You must agree to the privacy statement</p>
+<label for="job-mail-subscribe-button" style="display: none;">Subscribe</label>
+<script src='https://www.recaptcha.net/recaptcha/api.js'></script>
+
+<label aria-hidden="true" for="g-recaptcha-response" style="display: none">Recaptcha</label>
+<div class="g-recaptcha" data-sitekey="6LeC1A0UAAAAAPZK8E1CxJkweNzEiOuWfqJ63a0v"></div>
+
+<input type="submit" id="job-mail-subscribe-button" name="job-mail-subscribe-button" class="button" value="Subscribe">
+
+    <label aria-hidden="true" for="job-mail-subscribe-privacy" style="display: none;">Privacy agreement</label>
+    <input aria-hidden="true" type="checkbox" id="job-mail-subscribe-privacy" name="job-mail-subscribe-privacy" value="agree" checked="true" style="display: none;" />
+
+        </div>
+    </div>
+</div>
+  <h2>Search results</h2>
+  <table>
+    <thead>
+      <tr>
+        <th width="60%">Position</th>
+        <th width="20%">Location</th>
+        <th width="20%">Closes</th>
+      </tr>
+    </thead>
+<tbody id="search-results-content">
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527358/athletics-mens-head-soccer-coach">Athletics, Men's Head Soccer Coach</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">HEAD MEN’S SOCCER COACH
+Cal State San Bernardino is a NCAA Division II member, competing in the California Collegiate Athletic Association (CCAA). The university seeks an individual who has demonstrated success in attracting campus and community support. The CCAA has been one of the nation's most successful intercollegiate athletic conferences since its establishment in 1938. CCAA members have won 151 NCAA Championships (102 men, 49 women) which is far and away the most of any Division II conference.
+RANK AND QUALIFICATIONS: This is a 12-month position. Bachelor’s degree is required, master’s degree preferred. A minimum of three years of successful soccer coaching experience, preferably at the collegiate level.
+DUTIES AND RESPONSIBILITIES: Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II soccer program including but not limited to: coaching, recruiting, program development, and maintenance of a strong academic environment.
+SALARY: Dependent on qualifications and experience.
+DEADLINE AND APPLICATION PROCESS:
+The position will remain open until filled. Applicants must successfully complete a background investigation to include criminal records check, DMV check, fingerprint check and prior work history.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527349/athletics-womens-head-soccer-coach">Athletics, Women's Head Soccer Coach</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">HEAD WOMEN'S Soccer Coach 
+Cal State San Bernardino is a NCAA Division II member, competing in the California Collegiate Athletic Association (CCAA). The university seeks an individual who has demonstrated success in attracting campus and community support. The CCAA has been one of the nation's most successful intercollegiate athletic conferences since its establishment in 1938. CCAA members have won 151 NCAA Championships (102 men, 49 women) which is far and away the most of any Division II conference.
+RANK AND QUALIFICATIONS: This is a 12-month position. Bachelor’s degree is required, master’s degree preferred. A minimum of three years of successful soccer coaching experience, preferably at the collegiate level.
+DUTIES AND RESPONSIBILITIES: Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II soccer program including but not limited to: coaching, recruiting, program development, and maintenance of a strong academic environment.
+SALARY: Dependent on qualifications and experience.
+DEADLINE AND APPLICATION PROCESS:
+The position will remain open until filled. Applicants must successfully complete a background investigation to include criminal records check, DMV check, fingerprint check and prior work history.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527175/athletics-head-coach-mens-basketball">Athletics, Head Coach Men’s Basketball</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Head Coach Men’s Basketball
+Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II Men’s Basketball program including but not limited to: coaching, recruiting, maintenance of a strong academic environment, compliance with NCAA, conference and institutional regulations, retention of students, management of scholarship and operations budget, fundraising, organizing practices and developing season schedule.
+MINIMUM QUALIFICATIONS
+Bachelor's degree is required, master's preferred.  Coaching experience at the collegiate level or higher.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527004/marketing-department-chair-12-mo-internal-applicants-only">Marketing Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Marketing at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Marketing at CSUSB only. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of commitment to student success. The Chair is expected to provide leadership in shaping and facilitating the future of the department including faculty and staff development, faculty mentoring, and strategic planning. The Department Chair will serve in a leadership capacity in support of the Jack H. Brown College of Business and Public Administration strategic mission. He/she will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527041/information-decision-sciences-department-chair-12-mo-internal-applicants-only">Information & Decision Sciences Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Department of Information & Decision Sciences at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Information & Decision Sciences at CSUSB only. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of commitment to student success. The Chair is expected to provide leadership in shaping and facilitating the future of the department including faculty and staff development, faculty mentoring, and strategic planning. The Department Chair will serve in a leadership capacity in support of the Jack Brown College strategic mission. He/she will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526725/school-of-social-work-chair-12-mo-internal-applicants-only">School of Social Work Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The School of Social Work is an integral part of the College of Social and Behavioral Sciences at CSUSB. The school serves the region’s social work education needs with accredited (CSWE) Master of Social Work (MSW) and Bachelor of Arts in Social Work (BASW) degrees. Through coursework, field placement experiences, and extra-curricular activities, the diverse student body gains the knowledge, skills, and ethical foundation they need to become effective agents of positive change. The Director will be responsible for providing leadership and overseeing all aspects of the School, including program development, administration, budget, faculty and staff development, and student success. This invitation is for candidates internal to the School of Social Work at CSUSB only, with a time base of 1.00 for the chair position.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526856/department-of-theatre-arts-chair-12-mo-internal-applicants-only">Department of Theatre Arts Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Department of Theatre Arts offers liberal arts degrees in four concentrations and is accredited through the National Association of Schools of Theatre (NAST). For more information regarding the position, please contact the Recruitment Chair, Dr. Terry Donovan Smith, tdsmith@csusb.edu.
+
+To find out more about the Department of Theatre Arts: https://www.csusb.edu/theatre-arts.
+See https://www.csusb.edu/sites/default/files/upload/file/%28Admin%29Chair_Responsibilities.pdf for a full list of Department Chair Responsibilities.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526493/psychology-department-chair-12-mo-internal-applicants-only">Psychology Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Psychology at California State University, San Bernardino invites applications from tenured faculty for the position of Department Chair at the Associate or Full Professor rank beginning August 17, 2023. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of excellence in teaching. The Chair is expected to provide leadership in facilitating long-term planning for professional involvement and development of the faculty and the Department, and mentor faculty effectively in meeting their responsibilities in scholarship, teaching, and service. The Department of Psychology is in the College of Social and Behavioral Sciences and offers a B.A. in General Psychology with two concentrations - Biological Psychology and Industrial and Organizational Psychology. Additionally, the department offers an M.A. program in Psychological Science, as well as M.S. programs in Clinical/Counseling and Industrial/Organizational Psychology. The Department has 22 full-time tenure track faculty members, four full-time lecturers and approximately 1800 undergraduate majors and 100 graduate majors.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526611/department-of-ethnic-studies-chair-internal-applicants-only">Department of Ethnic Studies Chair (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Ethnic Studies is seeking a Department Chair to serve in all capacities as required by the position. The start date of the position is at the beginning of Fall 2023 semester.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/524038/department-of-music-chair-internal-applicants-only">Department of Music Chair (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Music at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Music at CSUSB only, with a time base of 0.75 for the chair position. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research or creative activity, and evidence of commitment to student success. The Department Chair will serve in a leadership capacity in support of the College of Arts & Letters’ mission and institutional values. They will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College. </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/524033/department-of-teacher-education-and-foundations-tef-early-childhood-readingliteracy-position-open-rank">Department of Teacher Education and Foundations (TEF) - Early Childhood Reading/Literacy Position (Open Rank)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates must have knowledge, skills and interest in early childhood reading/literacy education, teaching, research, and professional development. Candidates are expected to teach early childhood reading/literacy education courses for teacher candidates, early childhood certificate courses, and graduate students. Candidates are expected to meet the requirements for excellence in teaching, active scholarly and professional work, and service to the University and community. 
+
+The successful candidate is expected to:
+•	Design and teach early childhood literacy/reading education courses at the credential, certificate, and graduate levels that emphasize high impact instructional strategies and current teaching and learning theories in early childhood reading/literacy education.
+•	Implement fun, engaging, and research-based reading/literacy activities that support and enhance children’s cognitive development, creativity, language skills, and problem-solving skills. 
+•	Work with credential, credential, undergraduate, and graduate students 
+•	Participate in committee assignments at the department, college, and university levels.
+•	Supervise student teachers.
+•	Engage in research/publication and/or creative activities.
+•	Advise and mentor credential and graduate students.
+•	Participate in student recruitment to the credential and graduate programs.
+
+Qualified candidates must demonstrate active involvement and excellence in teaching and mentoring/supervising a diverse population of students, working collaboratively and productively with faculty, staff, and administrators within and across programs, departments, and colleges at the university. Candidates are also expected to be actively engaged with the community (e.g., schools and school districts, county office of education, professional organizations, etc.). 
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520595/department-of-kinesiology-lecturer-ay">Department of Kinesiology - Lecturer AY</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Kinesiology Department at California State University, San Bernardino is seeking part-time lecturer applications from a diverse group of qualified individuals for both our San Bernardino Campus (SBC) as well as our Palm Desert Campus (PDC). The department is seeking experienced, well-organized, and student-centered individuals to teach in any of our three concentrations: Allied Health Professions, Exercise Science, and Physical Education and Adapted Physical Education. Subject areas may include the following: Biomechanics, motor development, motor learning, physical education, adapted physical education, sport and exercise physiology, sport and exercise psychology, sociology of sport, statistics in kinesiology, and other kinesiology related classes such as, but not limited to, activities classes. Candidates must have at least a Master’s degree, or specialized certification for activity classes, in a field of Kinesiology or related discipline. Preference will be given to candidates who have prior teaching experience at the college or university level and who can furnish evidence of strong teaching. Candidates should demonstrate their ability to interact and work effectively with a wide and culturally diverse range of students, including first-generation college students. Preference will be given to those with experience in working with diverse populations and fostering a collaborative, supportive and inclusive environment. Preference will also be given to those with relevant work experience and those who bring professional capabilities.
+This is a pool of part-time lecturers for the department to draw on as necessary and all appointments are temporary. Staffing decisions are made on a rolling basis typically beginning a few months prior to the start of an academic term right up to the beginning of the academic term. We recommend submitting your application at least 4 months before the beginning of an academic term to be considered for available positions.
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520214/department-of-theatre-arts-assistant-professor">Department of Theatre Arts - Assistant Professor</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">California State University, San Bernardino Department of Theatre Arts seeks an accomplished theatre artist/director with a primary focus in Educational Theatre for a full time, tenure track position beginning August 2023. We seek a Theatre Generalist with strong Performance based skills in addition to an extensive background in Drama education, TYA, and applied drama. We particularly seek a candidate to further develop Youth theatre and collaborate with CSUSB’s Education Department on California’s newly reinstated Single Subject Credential in Theatre.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520046/department-of-teacher-education-and-foundations-tef-educational-psychology-and-adolescent-development-open-rank">Department of Teacher Education and Foundations (TEF) - Educational Psychology and Adolescent Development - Open Rank</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates must have knowledge, skill and interest in teaching Educational Psychology and Adolescent Development. Preferred candidates will be expected to meet the traditional requirements of excellence in teaching, active scholarly and professional work, and service to the University and community. We are seeking candidates who have a passion for teaching and learning. This position is an open rank position whereby the successful candidate can be appointed at the Assistant, Associate, or Full Professor rank.
+
+The successful candidate is expected to:
+• Design and teach courses in Educational Psychology and Adolescent Development particularly in the Secondary credential program and at graduate levels.
+• Implement high impact instructional strategies in their teaching.
+• Implement high impact advising practices.
+• Work with credential and graduate students within PK-12 school settings.
+• Participate in committee assignments at the department, college, and university-wide levels.
+• Supervise student teachers through a large service region (San Bernardino and Riverside Counties).
+• Engage in research /publication and/or creative activities.
+• Advise, coach, and mentor credential and graduate students.
+• The skills and dispositions to work with diverse students, colleagues and community members.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/519562/assistant-professor-public-administration">Assistant Professor - Public Administration</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Public Administration at CSU-San Bernardino is seeking to fill a full time, tenure track position at the Assistant Professor level. We seek candidates with a commitment to high impact teaching, an active research agenda, and a commitment to university and community service. Sub field expertise is open; however, we prefer candidates who are able to teach across our MPA leadership and non-profit management core curriculums.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/519768/assistant-professor-of-japanese-language-and-asian-studies">Assistant Professor of Japanese Language and Asian Studies</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of World Languages and Literatures at California State University, San Bernardino (CSUSB) invites applications for the position of Assistant Professor of Japanese Language and Asian Studies, which will begin in August of 2023. This is a full-time, tenure-track position.  In addition to expertise in Japanese language, literature, and culture; an additional specialization in linguistics and the ability to teach Korean or Chinese language, literature, and culture are also desirable. The faculty member will be responsible for teaching two general education courses in English (JAPN 2900 “Japanese Literature in English” and JAPN 3900 “Voices and Visions from the World of Japanese Anime and Manga”) and a variety of courses in Japanese.  In addition, the faculty member may teach Japanese linguistics. They will participate in curriculum development, work collaboratively with faculty in other departments, organize cultural activities, maintain an active research agenda, and provide service to the department, college, and university.
+REQUIRED QUALIFICATIONS
+•	ABD or Ph.D. in Japanese, Asian Studies, or related discipline by time of appointment
+•	Relevant teaching experience and pedagogical training 
+•	Active research agenda
+•	The ability to teach in Japanese and English
+PREFERRED QUALIFICATIONS
+•	Ph.D. in Japanese, Asian Studies, or related discipline by time of appointment
+•	Two years of university/college teaching experience  
+•	A record of scholarship commensurate with an Assistant Professor
+
+For more information regarding the position, please contact the Recruitment Chair, Dr. George Thomas (George.Thomas@csusb.edu). Please submit application materials through CSU Careers. Formal review of applications will begin December 16, 2022 and will continue until the position is filled.
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/518881/w-benson-harer-egyptology-scholar-in-residence-history-department-visiting-faculty">W. Benson Harer Egyptology Scholar in Residence, History Department Visiting Faculty</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of History at California State University, San Bernardino (CSUSB) invites applications for the W. Benson Harer Egyptology Scholar in Residence.  This successful candidate will be a member of the CSUSB community for the one semester in either fall 2023 or spring 2024.
+
+The applicant should specialize in Ancient Egyptian History, Society, Archaeology, or Art anytime between the Predynastic to the Roman Periods.  The successful candidate will receive housing, a partial meal plan, $2,500 towards relocation expenses, and a $26,000 stipend.
+
+CSUSB hosts the Robert and Frances Fullerton Museum of Art (RAFFMA), which includes one of the largest collections of Ancient Egyptian artifacts in Southern California.  The collection includes over 2000 artifacts dating from the Predynastic Period to the Coptic Period.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/518173/department-of-health-science-human-ecology-tenure-track-assistant-professor">Department of Health Science & Human Ecology Tenure Track Assistant Professor</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates should have general expertise in Public Health and specific expertise in Health Services Administration and/or Health Care Management to teach undergraduate and graduate courses in Health Services Administration as well as Public Health. The Health Services Administration Program is designed to prepare our diverse student body for management roles in health care settings to enhance the quality and innovation in the delivery of health care services for all individuals.
+
+The Department serves approximately 800 students majoring in 4 undergraduate programs (environmental health science, health services administration, nutritional science and dietetics, and public health) and 3 graduate programs (Master of Public Health, Master of Science in Health Service Administration, and Master of Science in Nutritional Science). The newly hired faculty member would join a well-established department of 14 tenure-track and over 20 adjunct faculty members.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/517598/department-of-mathematics-assistant-professor-in-statistics">Department of Mathematics, Assistant Professor in Statistics</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Mathematics at California State University, San Bernardino (CSUSB) invites applications for a tenure-track faculty position in the area of Statistics at the rank of Assistant Professor to begin August 2023.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/517478/assistant-professor-department-of-physics">Assistant Professor - Department of Physics</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Physics at California State University, San Bernardino invites applications from a diverse group of qualified applicants for an Assistant Professor tenure-track position to begin August 2023. The Department offers B.A. and B.S. degrees in Physics, with minors in astronomy and applied physics, and is currently in the planning stages for an interdisciplinary M.S. degree in Materials Science, which is associated with the Center for Advanced Functional Materials (https://www.csusb.edu/center-advanced-functional-materials). We welcome applications in all areas of research in physics. Preference will be given to candidates who are able to teach courses within the full range of undergraduate department courses. The successful candidate will join an intellectually stimulating and innovative academic environment that embraces diversity. We are particularly interested in receiving applications from all groups historically underrepresented in Physics and STEM fields, including intersections across multiple groups.</td>
+    </tr>
+
+
+
+
+    </tbody>
+    </table>
+    <p><a href="/en-us/search/?job-mail-subscribe-privacy=agree&search-keyword=&category=unit+3+-+cfa+-+california+faculty+association&page=2&page-items=20" class="more-link button" style="display:block" title="More Jobs" data-page="2" data-page-items="20" >More Jobs <span class="count">14</span></a></p>
+</div><div id="recent-jobs" style="display:none">
+  <h2>Current opportunities</h2>
+  <table>
+    <thead>
+      <tr>
+        <th width="60%">Position</th>
+        <th width="20%">Location</th>
+        <th width="20%">Closes</th>
+      </tr>
+    </thead>
+  <tbody id="recent-jobs-content">
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527358/athletics-mens-head-soccer-coach">Athletics, Men's Head Soccer Coach</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">HEAD MEN’S SOCCER COACH
+Cal State San Bernardino is a NCAA Division II member, competing in the California Collegiate Athletic Association (CCAA). The university seeks an individual who has demonstrated success in attracting campus and community support. The CCAA has been one of the nation's most successful intercollegiate athletic conferences since its establishment in 1938. CCAA members have won 151 NCAA Championships (102 men, 49 women) which is far and away the most of any Division II conference.
+RANK AND QUALIFICATIONS: This is a 12-month position. Bachelor’s degree is required, master’s degree preferred. A minimum of three years of successful soccer coaching experience, preferably at the collegiate level.
+DUTIES AND RESPONSIBILITIES: Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II soccer program including but not limited to: coaching, recruiting, program development, and maintenance of a strong academic environment.
+SALARY: Dependent on qualifications and experience.
+DEADLINE AND APPLICATION PROCESS:
+The position will remain open until filled. Applicants must successfully complete a background investigation to include criminal records check, DMV check, fingerprint check and prior work history.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527349/athletics-womens-head-soccer-coach">Athletics, Women's Head Soccer Coach</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">HEAD WOMEN'S Soccer Coach 
+Cal State San Bernardino is a NCAA Division II member, competing in the California Collegiate Athletic Association (CCAA). The university seeks an individual who has demonstrated success in attracting campus and community support. The CCAA has been one of the nation's most successful intercollegiate athletic conferences since its establishment in 1938. CCAA members have won 151 NCAA Championships (102 men, 49 women) which is far and away the most of any Division II conference.
+RANK AND QUALIFICATIONS: This is a 12-month position. Bachelor’s degree is required, master’s degree preferred. A minimum of three years of successful soccer coaching experience, preferably at the collegiate level.
+DUTIES AND RESPONSIBILITIES: Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II soccer program including but not limited to: coaching, recruiting, program development, and maintenance of a strong academic environment.
+SALARY: Dependent on qualifications and experience.
+DEADLINE AND APPLICATION PROCESS:
+The position will remain open until filled. Applicants must successfully complete a background investigation to include criminal records check, DMV check, fingerprint check and prior work history.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527175/athletics-head-coach-mens-basketball">Athletics, Head Coach Men’s Basketball</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Head Coach Men’s Basketball
+Under the general supervision of the Director of Athletics, direct all aspects of an NCAA Division II Men’s Basketball program including but not limited to: coaching, recruiting, maintenance of a strong academic environment, compliance with NCAA, conference and institutional regulations, retention of students, management of scholarship and operations budget, fundraising, organizing practices and developing season schedule.
+MINIMUM QUALIFICATIONS
+Bachelor's degree is required, master's preferred.  Coaching experience at the collegiate level or higher.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527004/marketing-department-chair-12-mo-internal-applicants-only">Marketing Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Marketing at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Marketing at CSUSB only. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of commitment to student success. The Chair is expected to provide leadership in shaping and facilitating the future of the department including faculty and staff development, faculty mentoring, and strategic planning. The Department Chair will serve in a leadership capacity in support of the Jack H. Brown College of Business and Public Administration strategic mission. He/she will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/527041/information-decision-sciences-department-chair-12-mo-internal-applicants-only">Information & Decision Sciences Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Department of Information & Decision Sciences at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Information & Decision Sciences at CSUSB only. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of commitment to student success. The Chair is expected to provide leadership in shaping and facilitating the future of the department including faculty and staff development, faculty mentoring, and strategic planning. The Department Chair will serve in a leadership capacity in support of the Jack Brown College strategic mission. He/she will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526725/school-of-social-work-chair-12-mo-internal-applicants-only">School of Social Work Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The School of Social Work is an integral part of the College of Social and Behavioral Sciences at CSUSB. The school serves the region’s social work education needs with accredited (CSWE) Master of Social Work (MSW) and Bachelor of Arts in Social Work (BASW) degrees. Through coursework, field placement experiences, and extra-curricular activities, the diverse student body gains the knowledge, skills, and ethical foundation they need to become effective agents of positive change. The Director will be responsible for providing leadership and overseeing all aspects of the School, including program development, administration, budget, faculty and staff development, and student success. This invitation is for candidates internal to the School of Social Work at CSUSB only, with a time base of 1.00 for the chair position.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526856/department-of-theatre-arts-chair-12-mo-internal-applicants-only">Department of Theatre Arts Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Department of Theatre Arts offers liberal arts degrees in four concentrations and is accredited through the National Association of Schools of Theatre (NAST). For more information regarding the position, please contact the Recruitment Chair, Dr. Terry Donovan Smith, tdsmith@csusb.edu.
+
+To find out more about the Department of Theatre Arts: https://www.csusb.edu/theatre-arts.
+See https://www.csusb.edu/sites/default/files/upload/file/%28Admin%29Chair_Responsibilities.pdf for a full list of Department Chair Responsibilities.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526493/psychology-department-chair-12-mo-internal-applicants-only">Psychology Department Chair 12 Mo (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Psychology at California State University, San Bernardino invites applications from tenured faculty for the position of Department Chair at the Associate or Full Professor rank beginning August 17, 2023. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research and evidence of excellence in teaching. The Chair is expected to provide leadership in facilitating long-term planning for professional involvement and development of the faculty and the Department, and mentor faculty effectively in meeting their responsibilities in scholarship, teaching, and service. The Department of Psychology is in the College of Social and Behavioral Sciences and offers a B.A. in General Psychology with two concentrations - Biological Psychology and Industrial and Organizational Psychology. Additionally, the department offers an M.A. program in Psychological Science, as well as M.S. programs in Clinical/Counseling and Industrial/Organizational Psychology. The Department has 22 full-time tenure track faculty members, four full-time lecturers and approximately 1800 undergraduate majors and 100 graduate majors.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/526611/department-of-ethnic-studies-chair-internal-applicants-only">Department of Ethnic Studies Chair (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Ethnic Studies is seeking a Department Chair to serve in all capacities as required by the position. The start date of the position is at the beginning of Fall 2023 semester.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/524038/department-of-music-chair-internal-applicants-only">Department of Music Chair (Internal Applicants Only)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Music at CSUSB is searching for a new Department Chair. This invitation is for candidates internal to the Department of Music at CSUSB only, with a time base of 0.75 for the chair position. The ideal candidate will be an experienced faculty member with demonstrated leadership and administrative skills, an established record of scholarly research or creative activity, and evidence of commitment to student success. The Department Chair will serve in a leadership capacity in support of the College of Arts & Letters’ mission and institutional values. They will provide academic and administrative leadership and facilitate the orderly conduct of the affairs of the Department and the College. </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/524033/department-of-teacher-education-and-foundations-tef-early-childhood-readingliteracy-position-open-rank">Department of Teacher Education and Foundations (TEF) - Early Childhood Reading/Literacy Position (Open Rank)</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates must have knowledge, skills and interest in early childhood reading/literacy education, teaching, research, and professional development. Candidates are expected to teach early childhood reading/literacy education courses for teacher candidates, early childhood certificate courses, and graduate students. Candidates are expected to meet the requirements for excellence in teaching, active scholarly and professional work, and service to the University and community. 
+
+The successful candidate is expected to:
+•	Design and teach early childhood literacy/reading education courses at the credential, certificate, and graduate levels that emphasize high impact instructional strategies and current teaching and learning theories in early childhood reading/literacy education.
+•	Implement fun, engaging, and research-based reading/literacy activities that support and enhance children’s cognitive development, creativity, language skills, and problem-solving skills. 
+•	Work with credential, credential, undergraduate, and graduate students 
+•	Participate in committee assignments at the department, college, and university levels.
+•	Supervise student teachers.
+•	Engage in research/publication and/or creative activities.
+•	Advise and mentor credential and graduate students.
+•	Participate in student recruitment to the credential and graduate programs.
+
+Qualified candidates must demonstrate active involvement and excellence in teaching and mentoring/supervising a diverse population of students, working collaboratively and productively with faculty, staff, and administrators within and across programs, departments, and colleges at the university. Candidates are also expected to be actively engaged with the community (e.g., schools and school districts, county office of education, professional organizations, etc.). 
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520595/department-of-kinesiology-lecturer-ay">Department of Kinesiology - Lecturer AY</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Kinesiology Department at California State University, San Bernardino is seeking part-time lecturer applications from a diverse group of qualified individuals for both our San Bernardino Campus (SBC) as well as our Palm Desert Campus (PDC). The department is seeking experienced, well-organized, and student-centered individuals to teach in any of our three concentrations: Allied Health Professions, Exercise Science, and Physical Education and Adapted Physical Education. Subject areas may include the following: Biomechanics, motor development, motor learning, physical education, adapted physical education, sport and exercise physiology, sport and exercise psychology, sociology of sport, statistics in kinesiology, and other kinesiology related classes such as, but not limited to, activities classes. Candidates must have at least a Master’s degree, or specialized certification for activity classes, in a field of Kinesiology or related discipline. Preference will be given to candidates who have prior teaching experience at the college or university level and who can furnish evidence of strong teaching. Candidates should demonstrate their ability to interact and work effectively with a wide and culturally diverse range of students, including first-generation college students. Preference will be given to those with experience in working with diverse populations and fostering a collaborative, supportive and inclusive environment. Preference will also be given to those with relevant work experience and those who bring professional capabilities.
+This is a pool of part-time lecturers for the department to draw on as necessary and all appointments are temporary. Staffing decisions are made on a rolling basis typically beginning a few months prior to the start of an academic term right up to the beginning of the academic term. We recommend submitting your application at least 4 months before the beginning of an academic term to be considered for available positions.
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520214/department-of-theatre-arts-assistant-professor">Department of Theatre Arts - Assistant Professor</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">California State University, San Bernardino Department of Theatre Arts seeks an accomplished theatre artist/director with a primary focus in Educational Theatre for a full time, tenure track position beginning August 2023. We seek a Theatre Generalist with strong Performance based skills in addition to an extensive background in Drama education, TYA, and applied drama. We particularly seek a candidate to further develop Youth theatre and collaborate with CSUSB’s Education Department on California’s newly reinstated Single Subject Credential in Theatre.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/520046/department-of-teacher-education-and-foundations-tef-educational-psychology-and-adolescent-development-open-rank">Department of Teacher Education and Foundations (TEF) - Educational Psychology and Adolescent Development - Open Rank</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates must have knowledge, skill and interest in teaching Educational Psychology and Adolescent Development. Preferred candidates will be expected to meet the traditional requirements of excellence in teaching, active scholarly and professional work, and service to the University and community. We are seeking candidates who have a passion for teaching and learning. This position is an open rank position whereby the successful candidate can be appointed at the Assistant, Associate, or Full Professor rank.
+
+The successful candidate is expected to:
+• Design and teach courses in Educational Psychology and Adolescent Development particularly in the Secondary credential program and at graduate levels.
+• Implement high impact instructional strategies in their teaching.
+• Implement high impact advising practices.
+• Work with credential and graduate students within PK-12 school settings.
+• Participate in committee assignments at the department, college, and university-wide levels.
+• Supervise student teachers through a large service region (San Bernardino and Riverside Counties).
+• Engage in research /publication and/or creative activities.
+• Advise, coach, and mentor credential and graduate students.
+• The skills and dispositions to work with diverse students, colleagues and community members.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/519562/assistant-professor-public-administration">Assistant Professor - Public Administration</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Public Administration at CSU-San Bernardino is seeking to fill a full time, tenure track position at the Assistant Professor level. We seek candidates with a commitment to high impact teaching, an active research agenda, and a commitment to university and community service. Sub field expertise is open; however, we prefer candidates who are able to teach across our MPA leadership and non-profit management core curriculums.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/519768/assistant-professor-of-japanese-language-and-asian-studies">Assistant Professor of Japanese Language and Asian Studies</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of World Languages and Literatures at California State University, San Bernardino (CSUSB) invites applications for the position of Assistant Professor of Japanese Language and Asian Studies, which will begin in August of 2023. This is a full-time, tenure-track position.  In addition to expertise in Japanese language, literature, and culture; an additional specialization in linguistics and the ability to teach Korean or Chinese language, literature, and culture are also desirable. The faculty member will be responsible for teaching two general education courses in English (JAPN 2900 “Japanese Literature in English” and JAPN 3900 “Voices and Visions from the World of Japanese Anime and Manga”) and a variety of courses in Japanese.  In addition, the faculty member may teach Japanese linguistics. They will participate in curriculum development, work collaboratively with faculty in other departments, organize cultural activities, maintain an active research agenda, and provide service to the department, college, and university.
+REQUIRED QUALIFICATIONS
+•	ABD or Ph.D. in Japanese, Asian Studies, or related discipline by time of appointment
+•	Relevant teaching experience and pedagogical training 
+•	Active research agenda
+•	The ability to teach in Japanese and English
+PREFERRED QUALIFICATIONS
+•	Ph.D. in Japanese, Asian Studies, or related discipline by time of appointment
+•	Two years of university/college teaching experience  
+•	A record of scholarship commensurate with an Assistant Professor
+
+For more information regarding the position, please contact the Recruitment Chair, Dr. George Thomas (George.Thomas@csusb.edu). Please submit application materials through CSU Careers. Formal review of applications will begin December 16, 2022 and will continue until the position is filled.
+</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/518881/w-benson-harer-egyptology-scholar-in-residence-history-department-visiting-faculty">W. Benson Harer Egyptology Scholar in Residence, History Department Visiting Faculty</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of History at California State University, San Bernardino (CSUSB) invites applications for the W. Benson Harer Egyptology Scholar in Residence.  This successful candidate will be a member of the CSUSB community for the one semester in either fall 2023 or spring 2024.
+
+The applicant should specialize in Ancient Egyptian History, Society, Archaeology, or Art anytime between the Predynastic to the Roman Periods.  The successful candidate will receive housing, a partial meal plan, $2,500 towards relocation expenses, and a $26,000 stipend.
+
+CSUSB hosts the Robert and Frances Fullerton Museum of Art (RAFFMA), which includes one of the largest collections of Ancient Egyptian artifacts in Southern California.  The collection includes over 2000 artifacts dating from the Predynastic Period to the Coptic Period.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/518173/department-of-health-science-human-ecology-tenure-track-assistant-professor">Department of Health Science & Human Ecology Tenure Track Assistant Professor</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">Candidates should have general expertise in Public Health and specific expertise in Health Services Administration and/or Health Care Management to teach undergraduate and graduate courses in Health Services Administration as well as Public Health. The Health Services Administration Program is designed to prepare our diverse student body for management roles in health care settings to enhance the quality and innovation in the delivery of health care services for all individuals.
+
+The Department serves approximately 800 students majoring in 4 undergraduate programs (environmental health science, health services administration, nutritional science and dietetics, and public health) and 3 graduate programs (Master of Public Health, Master of Science in Health Service Administration, and Master of Science in Nutritional Science). The newly hired faculty member would join a well-established department of 14 tenure-track and over 20 adjunct faculty members.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/517598/department-of-mathematics-assistant-professor-in-statistics">Department of Mathematics, Assistant Professor in Statistics</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Mathematics at California State University, San Bernardino (CSUSB) invites applications for a tenure-track faculty position in the area of Statistics at the rank of Assistant Professor to begin August 2023.</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a class="job-link" href="/en-us/job/517478/assistant-professor-department-of-physics">Assistant Professor - Department of Physics</a>
+      </td>
+      <td>
+        <span class="location">San Bernardino - San Bernardino Campus</span>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr class="summary">
+      <td colspan="3">The Department of Physics at California State University, San Bernardino invites applications from a diverse group of qualified applicants for an Assistant Professor tenure-track position to begin August 2023. The Department offers B.A. and B.S. degrees in Physics, with minors in astronomy and applied physics, and is currently in the planning stages for an interdisciplinary M.S. degree in Materials Science, which is associated with the Center for Advanced Functional Materials (https://www.csusb.edu/center-advanced-functional-materials). We welcome applications in all areas of research in physics. Preference will be given to candidates who are able to teach courses within the full range of undergraduate department courses. The successful candidate will join an intellectually stimulating and innovative academic environment that embraces diversity. We are particularly interested in receiving applications from all groups historically underrepresented in Physics and STEM fields, including intersections across multiple groups.</td>
+    </tr>
+
+
+
+
+    </tbody>
+    </table>
+    <p><a href="/en-us/search/?job-mail-subscribe-privacy=agree&search-keyword=&category=unit+3+-+cfa+-+california+faculty+association&page=2&page-items=20" class="more-link button" style="display:block" title="More Jobs" data-page="2" data-page-items="20" >More Jobs <span class="count">14</span></a></p>
+</div><p id="PageUpPeopleLink"><a href="https://www.pageuppeople.com/powered-by-pageup/" target="_top">Powered by PageUp</a></p></div>
+</div>
+<!-- Side Content : CHANGE THIS -->
+
+<aside aria-labelledby="region-sidebar-right" class="sidebar sidebar-right"><span class="sr-only" id="region-sidebar-right">Right Content</span>
+
+<div class="sidebar-content"><!-- START SIDE CONTENT HERE -->
+<p><a class="btn btn-solid btn-primary btn-fullwidth" href="https://secure.dc4.pageuppeople.com/apply/873/sb/applicationForm/default.asp">Applicant Sign-In</a></p>
+<!--<p><a class="btn btn-solid btn-primary btn-fullwidth" href="http://careers.pageuppeople.com/873/sbuat/en-us/listing">Setup Job Alerts</a></p>-->
+
+<h2>Job Search</h2>
+
+<input aria-labelledby="title-search-keyword" type="text" id="search-keyword" name="search-keyword" class="text-input" placeholder="" value="">
+
+
+<h2>Filter Results</h2>
+<div id="search-filters" ><h3 id="title-work-type">Work type</h3>
+<div class="filter-wrapper"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-work-type"><ul class="filter" role="presentation">
+<li class="auxiliary"><input type="checkbox" id="work-type_auxiliary" name="work-type" value="Auxiliary"  /><label for="work-type_auxiliary">Auxiliary <span class="count">0</span></label></li>
+<li class="instructional-faculty---temporarylecturer"><input type="checkbox" id="work-type_instructionalfacultytemporarylecturer" name="work-type" value="Instructional Faculty - Temporary/Lecturer"  /><label for="work-type_instructionalfacultytemporarylecturer">Instructional Faculty - Temporary/Lecturer <span class="count">8</span></label></li>
+<li class="instructional-faculty--tenuredtenure-track"><input type="checkbox" id="work-type_instructionalfacultytenuredtenuretrack" name="work-type" value="Instructional Faculty – Tenured/Tenure-Track"  /><label for="work-type_instructionalfacultytenuredtenuretrack">Instructional Faculty – Tenured/Tenure-Track <span class="count">17</span></label></li>
+<li class="management-mpp"><input type="checkbox" id="work-type_managementmpp" name="work-type" value="Management (MPP)"  /><label for="work-type_managementmpp">Management (MPP) <span class="count">0</span></label></li>
+<li class="non-instructional-faculty-coachcounselorlibrarian"><input type="checkbox" id="work-type_noninstructionalfacultycoachcounselorlibrarian" name="work-type" value="Non-Instructional Faculty (Coach/Counselor/Librarian)"  /><label for="work-type_noninstructionalfacultycoachcounselorlibrarian">Non-Instructional Faculty (Coach/Counselor/Librarian) <span class="count">8</span></label></li>
+<li class="staff"><input type="checkbox" id="work-type_staff" name="work-type" value="Staff"  /><label for="work-type_staff">Staff <span class="count">0</span></label></li>
+<li class="visiting-faculty"><input type="checkbox" id="work-type_visitingfaculty" name="work-type" value="Visiting Faculty"  /><label for="work-type_visitingfaculty">Visiting Faculty <span class="count">1</span></label></li></ul></fieldset></div>
+
+<h3 id="title-location">Locations</h3>
+<div class="filter-wrapper"><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_1"><div id="div_location_1" class="filter-group-title">Southern California</div><ul class="filter" role="presentation">
+<li class="san-bernardino---palm-desert-campus"><input type="checkbox" id="location_sanbernardinopalmdesertcampus" name="location" value="San Bernardino - Palm Desert Campus"  /><label for="location_sanbernardinopalmdesertcampus">San Bernardino - Palm Desert Campus <span class="count">1</span></label></li>
+<li class="san-bernardino---san-bernardino-campus"><input type="checkbox" id="location_sanbernardinosanbernardinocampus" name="location" value="San Bernardino - San Bernardino Campus"  /><label for="location_sanbernardinosanbernardinocampus">San Bernardino - San Bernardino Campus <span class="count">33</span></label></li></ul></fieldset></div></div>
+
+<h3 id="title-category">Categories</h3>
+<div class="filter-wrapper"><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_1"><div id="div_category_1" class="filter-group-title">Appointment Type</div><ul class="filter" role="presentation">
+<li class="at-will"><input type="checkbox" id="category_atwill" name="category" value="At-Will"  /><label for="category_atwill">At-Will <span class="count">0</span></label></li>
+<li class="probationary"><input type="checkbox" id="category_probationary" name="category" value="Probationary"  /><label for="category_probationary">Probationary <span class="count">0</span></label></li>
+<li class="temporary"><input type="checkbox" id="category_temporary" name="category" value="Temporary"  /><label for="category_temporary">Temporary <span class="count">17</span></label></li>
+<li class="tenuredtenure-track"><input type="checkbox" id="category_tenuredtenuretrack" name="category" value="Tenured/Tenure-Track"  /><label for="category_tenuredtenuretrack">Tenured/Tenure-Track <span class="count">17</span></label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_2"><div id="div_category_2" class="filter-group-title">Bargaining Unit</div><ul class="filter" role="presentation">
+<li class="confidential"><input type="checkbox" id="category_confidential" name="category" value="Confidential"  /><label for="category_confidential">Confidential <span class="count">0</span></label></li>
+<li class="excluded"><input type="checkbox" id="category_excluded" name="category" value="Excluded"  /><label for="category_excluded">Excluded <span class="count">0</span></label></li>
+<li class="mpp"><input type="checkbox" id="category_mpp" name="category" value="MPP"  /><label for="category_mpp">MPP <span class="count">0</span></label></li>
+<li class="unit-1---uapd---union-of-american-physiciansdentists"><input type="checkbox" id="category_unit1uapdunionofamericanphysiciansdentists" name="category" value="Unit 1 - UAPD - Union of American Physicians/Dentists"  /><label for="category_unit1uapdunionofamericanphysiciansdentists">Unit 1 - UAPD - Union of American Physicians/Dentists <span class="count">0</span></label></li>
+<li class="unit-3---cfa---california-faculty-association"><input type="checkbox" id="category_unit3cfacaliforniafacultyassociation" name="category" value="Unit 3 - CFA - California Faculty Association"  checked /><label for="category_unit3cfacaliforniafacultyassociation">Unit 3 - CFA - California Faculty Association <span class="count">34</span></label></li>
+<li class="unit-4---apc---academic-professionals-of-california"><input type="checkbox" id="category_unit4apcacademicprofessionalsofcalifornia" name="category" value="Unit 4 - APC - Academic Professionals of California"  /><label for="category_unit4apcacademicprofessionalsofcalifornia">Unit 4 - APC - Academic Professionals of California <span class="count">0</span></label></li>
+<li class="unit-5---csueu---operations-and-support-services"><input type="checkbox" id="category_unit5csueuoperationsandsupportservices" name="category" value="Unit 5 - CSUEU - Operations and Support Services"  /><label for="category_unit5csueuoperationsandsupportservices">Unit 5 - CSUEU - Operations and Support Services <span class="count">0</span></label></li>
+<li class="unit-7---csueu---clerical-and-administrative-support-services"><input type="checkbox" id="category_unit7csueuclericalandadministrativesupportservices" name="category" value="Unit 7 - CSUEU - Clerical and Administrative Support Services"  /><label for="category_unit7csueuclericalandadministrativesupportservices">Unit 7 - CSUEU - Clerical and Administrative Support Services <span class="count">0</span></label></li>
+<li class="unit-8---supa---state-university-police-association"><input type="checkbox" id="category_unit8supastateuniversitypoliceassociation" name="category" value="Unit 8 - SUPA - State University Police Association"  /><label for="category_unit8supastateuniversitypoliceassociation">Unit 8 - SUPA - State University Police Association <span class="count">0</span></label></li>
+<li class="unit-9---csueu---technical-support-services"><input type="checkbox" id="category_unit9csueutechnicalsupportservices" name="category" value="Unit 9 - CSUEU - Technical Support Services"  /><label for="category_unit9csueutechnicalsupportservices">Unit 9 - CSUEU - Technical Support Services <span class="count">0</span></label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_3"><div id="div_category_3" class="filter-group-title">Job Search Category/Discipline</div><ul class="filter" role="presentation">
+<li class="administrative"><input type="checkbox" id="category_administrative" name="category" value="Administrative"  /><label for="category_administrative">Administrative <span class="count">0</span></label></li>
+<li class="athletics"><input type="checkbox" id="category_athletics" name="category" value="Athletics"  /><label for="category_athletics">Athletics <span class="count">5</span></label></li>
+<li class="childyouth-education-and-development"><input type="checkbox" id="category_childyoutheducationanddevelopment" name="category" value="Child/Youth Education and Development"  /><label for="category_childyoutheducationanddevelopment">Child/Youth Education and Development <span class="count">0</span></label></li>
+<li class="coach-non-instructional-faculty"><input type="checkbox" id="category_coachnoninstructionalfaculty" name="category" value="Coach (Non-instructional Faculty)"  /><label for="category_coachnoninstructionalfaculty">Coach (Non-instructional Faculty) <span class="count">3</span></label></li>
+<li class="counselor-non-instructional-faculty"><input type="checkbox" id="category_counselornoninstructionalfaculty" name="category" value="Counselor (Non-instructional Faculty)"  /><label for="category_counselornoninstructionalfaculty">Counselor (Non-instructional Faculty) <span class="count">0</span></label></li>
+<li class="custodialfacilities"><input type="checkbox" id="category_custodialfacilities" name="category" value="Custodial/Facilities"  /><label for="category_custodialfacilities">Custodial/Facilities <span class="count">0</span></label></li>
+<li class="faculty---behavioral-sciences"><input type="checkbox" id="category_facultybehavioralsciences" name="category" value="Faculty - Behavioral Sciences"  /><label for="category_facultybehavioralsciences">Faculty - Behavioral Sciences <span class="count">7</span></label></li>
+<li class="faculty---businessmanagement"><input type="checkbox" id="category_facultybusinessmanagement" name="category" value="Faculty - Business/Management"  /><label for="category_facultybusinessmanagement">Faculty - Business/Management <span class="count">4</span></label></li>
+<li class="faculty---computer-science"><input type="checkbox" id="category_facultycomputerscience" name="category" value="Faculty - Computer Science"  /><label for="category_facultycomputerscience">Faculty - Computer Science <span class="count">1</span></label></li>
+<li class="faculty---educationlibrary-science"><input type="checkbox" id="category_facultyeducationlibraryscience" name="category" value="Faculty - Education/Library Science"  /><label for="category_facultyeducationlibraryscience">Faculty - Education/Library Science <span class="count">3</span></label></li>
+<li class="faculty---fineperforming-arts"><input type="checkbox" id="category_facultyfineperformingarts" name="category" value="Faculty - Fine/Performing Arts"  /><label for="category_facultyfineperformingarts">Faculty - Fine/Performing Arts <span class="count">1</span></label></li>
+<li class="faculty---health-sciences"><input type="checkbox" id="category_facultyhealthsciences" name="category" value="Faculty - Health Sciences"  /><label for="category_facultyhealthsciences">Faculty - Health Sciences <span class="count">3</span></label></li>
+<li class="faculty---lettershumanities"><input type="checkbox" id="category_facultylettershumanities" name="category" value="Faculty - Letters/Humanities"  /><label for="category_facultylettershumanities">Faculty - Letters/Humanities <span class="count">4</span></label></li>
+<li class="faculty---mathematicsstatistics"><input type="checkbox" id="category_facultymathematicsstatistics" name="category" value="Faculty - Mathematics/Statistics"  /><label for="category_facultymathematicsstatistics">Faculty - Mathematics/Statistics <span class="count">1</span></label></li>
+<li class="faculty---natural-sciences"><input type="checkbox" id="category_facultynaturalsciences" name="category" value="Faculty - Natural Sciences"  /><label for="category_facultynaturalsciences">Faculty - Natural Sciences <span class="count">2</span></label></li>
+<li class="financeaccounting"><input type="checkbox" id="category_financeaccounting" name="category" value="Finance/Accounting"  /><label for="category_financeaccounting">Finance/Accounting <span class="count">0</span></label></li>
+<li class="fundraising--alumni-relations"><input type="checkbox" id="category_fundraisingalumnirelations" name="category" value="Fundraising &amp; Alumni Relations"  /><label for="category_fundraisingalumnirelations">Fundraising &amp; Alumni Relations <span class="count">0</span></label></li>
+<li class="health-professionals"><input type="checkbox" id="category_healthprofessionals" name="category" value="Health Professionals"  /><label for="category_healthprofessionals">Health Professionals <span class="count">0</span></label></li>
+<li class="human-resources"><input type="checkbox" id="category_humanresources" name="category" value="Human Resources"  /><label for="category_humanresources">Human Resources <span class="count">0</span></label></li>
+<li class="information-systems--technology"><input type="checkbox" id="category_informationsystemstechnology" name="category" value="Information Systems &amp; Technology"  /><label for="category_informationsystemstechnology">Information Systems &amp; Technology <span class="count">0</span></label></li>
+<li class="research"><input type="checkbox" id="category_research" name="category" value="Research"  /><label for="category_research">Research <span class="count">0</span></label></li>
+<li class="safety"><input type="checkbox" id="category_safety" name="category" value="Safety"  /><label for="category_safety">Safety <span class="count">0</span></label></li>
+<li class="student-services"><input type="checkbox" id="category_studentservices" name="category" value="Student Services"  /><label for="category_studentservices">Student Services <span class="count">0</span></label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_4"><div id="div_category_4" class="filter-group-title">Time Basis</div><ul class="filter" role="presentation">
+<li class="full-time"><input type="checkbox" id="category_fulltime" name="category" value="Full Time"  /><label for="category_fulltime">Full Time <span class="count">22</span></label></li>
+<li class="part-time"><input type="checkbox" id="category_parttime" name="category" value="Part Time"  /><label for="category_parttime">Part Time <span class="count">12</span></label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_5"><div id="div_category_5" class="filter-group-title">Workplace Type (Exclude Inst Fac)</div><ul class="filter" role="presentation">
+<li class="on-site-work-in-person-at-business-location"><input type="checkbox" id="category_onsiteworkinpersonatbusinesslocation" name="category" value="On-site (work in-person at business location)"  /><label for="category_onsiteworkinpersonatbusinesslocation">On-site (work in-person at business location) <span class="count">0</span></label></li>
+<li class="telecommute-eligible-work-onsite-as-scheduled-andor-as-requested-and-telecommute-as-scheduled"><input type="checkbox" id="category_telecommuteeligibleworkonsiteasscheduledandorasrequestedandtelecommuteasscheduled" name="category" value="Telecommute eligible (work onsite as scheduled and/or as requested and telecommute as scheduled)"  /><label for="category_telecommuteeligibleworkonsiteasscheduledandorasrequestedandtelecommuteasscheduled">Telecommute eligible (work onsite as scheduled and/or as requested and telecommute as scheduled) <span class="count">0</span></label></li></ul></fieldset></div></div><input id="filter-results-submit" type="submit" class="button" value="Filter Results"></div></div>
+</aside>
+</div>
+</form></div>
+</main>
+</div>
+<!-- End of .page  --><!-- DO NOT CHANGE UNDER THIS LINE -->
+
+<footer aria-labelledby="region-footer" class="site-footer"><span class="sr-only" id="region-footer">Footer Region</span>
+
+<div class="container">
+<div class="footer-content">
+<div class="footer-content-left">
+<div class="footer-logo"><svg height="44.35" viewbox="0 0 65 44.35" width="65" xmlns="http://www.w3.org/2000/svg">
+<title></title>
+<path d="M11.78,29.66v2.53a10,10,0,0,0-2.05-.92,6.58,6.58,0,0,0-2-.3,5.42,5.42,0,0,0-2.72.68,4.81,4.81,0,0,0-1.88,1.92,5.77,5.77,0,0,0-.66,2.8,6.69,6.69,0,0,0,.73,3.12,5.79,5.79,0,0,0,2,2.24,5.1,5.1,0,0,0,2.81.82,7.89,7.89,0,0,0,2.25-.33,15.05,15.05,0,0,0,2.58-1.12l-1.11,2.57a8.45,8.45,0,0,1-1.13.38,7.31,7.31,0,0,1-1.09.2,9.52,9.52,0,0,1-1.2.07A10.33,10.33,0,0,1,5,43.79a7.75,7.75,0,0,1-2.67-1.55,6.88,6.88,0,0,1-1.7-2.42A8,8,0,0,1,0,36.74a7.66,7.66,0,0,1,1-3.91,7.18,7.18,0,0,1,2.8-2.74,8.17,8.17,0,0,1,4-1A17.2,17.2,0,0,1,11.78,29.66Zm11.41-.08v2.51A4.93,4.93,0,0,0,21.57,31a4.78,4.78,0,0,0-1.87-.38,3.53,3.53,0,0,0-2.11.58,1.83,1.83,0,0,0-.53,2.46,3.1,3.1,0,0,0,.95.83q.67.41,2.05,1.05t2.1,1a6.25,6.25,0,0,1,1.11.74,3,3,0,0,1,.88,1.06,2.9,2.9,0,0,1,.32,1.34,3.68,3.68,0,0,1-.37,1.59,4.73,4.73,0,0,1-1,1.4,6.38,6.38,0,0,1-4.62,1.63,10.89,10.89,0,0,1-1.94-.16,13,13,0,0,1-1.95-.53l-.66-2.73a7.63,7.63,0,0,0,4.85,1.75,4.57,4.57,0,0,0,1.66-.3,2.87,2.87,0,0,0,1.19-.81,1.72,1.72,0,0,0,.44-1.15,2,2,0,0,0-.72-1.57,4.26,4.26,0,0,0-.89-.6q-.57-.32-1.94-.94t-1.91-.93a6.64,6.64,0,0,1-1.14-.83,3.64,3.64,0,0,1-.84-1.16A3.37,3.37,0,0,1,14.33,33,3.29,3.29,0,0,1,15,30.95a4.25,4.25,0,0,1,1.91-1.37,8.07,8.07,0,0,1,2.91-.48A12.39,12.39,0,0,1,23.19,29.58ZM36.37,44V42.45A5.35,5.35,0,0,1,32,44.33a6,6,0,0,1-2.82-.64,4.1,4.1,0,0,1-1.8-1.79,4.26,4.26,0,0,1-.33-.8,5.84,5.84,0,0,1-.15-.94q0-.56,0-1.48V32.27a10.15,10.15,0,0,0-.08-1.47,1.82,1.82,0,0,0-.29-.83,1.71,1.71,0,0,0-.62-.52h4.18a1.75,1.75,0,0,0-.61.52,1.9,1.9,0,0,0-.29.82,10.31,10.31,0,0,0-.08,1.48v6.42a7.15,7.15,0,0,0,.15,1.69,3,3,0,0,0,.61,1.12,3.2,3.2,0,0,0,1.22.91,4.27,4.27,0,0,0,3.41-.1,3.47,3.47,0,0,0,1.35-1.11,2.05,2.05,0,0,0,.36-.72,4.11,4.11,0,0,0,.1-1V32.27a10.3,10.3,0,0,0-.08-1.48,1.91,1.91,0,0,0-.29-.82,1.75,1.75,0,0,0-.61-.52h4.18a1.78,1.78,0,0,0-.61.51,1.88,1.88,0,0,0-.3.82,10.27,10.27,0,0,0-.08,1.49v8.89a10.27,10.27,0,0,0,.08,1.49,1.88,1.88,0,0,0,.3.82,1.78,1.78,0,0,0,.61.51ZM50.6,29.58v2.51A4.92,4.92,0,0,0,49,31a4.78,4.78,0,0,0-1.87-.38,3.53,3.53,0,0,0-2.11.58,1.83,1.83,0,0,0-.53,2.46,3.09,3.09,0,0,0,.95.83,23,23,0,0,0,2.05,1.05q1.48.69,2.1,1a6.26,6.26,0,0,1,1.11.74,3,3,0,0,1,.88,1.06,2.91,2.91,0,0,1,.32,1.34,3.68,3.68,0,0,1-.37,1.59,4.72,4.72,0,0,1-1,1.4,6.38,6.38,0,0,1-4.62,1.63A10.89,10.89,0,0,1,44,44.19,13,13,0,0,1,42,43.66l-.66-2.73a7.63,7.63,0,0,0,4.85,1.75,4.58,4.58,0,0,0,1.66-.3,2.87,2.87,0,0,0,1.19-.81,1.72,1.72,0,0,0,.44-1.15,2,2,0,0,0-.72-1.57,4.27,4.27,0,0,0-.89-.6q-.57-.32-1.94-.94T44,36.39a6.64,6.64,0,0,1-1.14-.83,3.65,3.65,0,0,1-.84-1.16A3.37,3.37,0,0,1,41.75,33a3.29,3.29,0,0,1,.67-2.06,4.25,4.25,0,0,1,1.91-1.37,8.08,8.08,0,0,1,2.91-.48A12.39,12.39,0,0,1,50.6,29.58Zm7.46-.14h.69a11,11,0,0,1,1.84.12,3.92,3.92,0,0,1,2.18,1.11,2.83,2.83,0,0,1,.61.93A2.72,2.72,0,0,1,63.26,34a2.84,2.84,0,0,1-.93,1,7.32,7.32,0,0,1-.94.51,6.76,6.76,0,0,1,1.65.62,3.85,3.85,0,0,1,1.45,1.39A3.59,3.59,0,0,1,65,39.4a4,4,0,0,1-.74,2.32,5,5,0,0,1-2,1.66,6.91,6.91,0,0,1-.74.28,7.71,7.71,0,0,1-.89.19q-.49.07-.9.09l-1.23,0H53.78a1.77,1.77,0,0,0,.62-.51,1.88,1.88,0,0,0,.29-.83,10.36,10.36,0,0,0,.08-1.48V32.27a10.07,10.07,0,0,0-.08-1.47A1.82,1.82,0,0,0,54.4,30a1.72,1.72,0,0,0-.62-.52h3.14ZM56.92,31V35.3a8.2,8.2,0,0,0,.84,0,5.36,5.36,0,0,0,1.82-.29,2.81,2.81,0,0,0,1.23-.81,1.95,1.95,0,0,0-.35-2.8,3.24,3.24,0,0,0-2-.6A10.59,10.59,0,0,0,56.92,31Zm0,5.81v5.44a9.39,9.39,0,0,0,1,.16q.42,0,.94,0a5.55,5.55,0,0,0,2-.32,2.68,2.68,0,0,0,1.27-.94,2.47,2.47,0,0,0,.44-1.48,2.66,2.66,0,0,0-1-2.23,3,3,0,0,0-1.18-.59,6.76,6.76,0,0,0-1.73-.18A13.73,13.73,0,0,0,56.92,36.78Z" style="fill:#808285;fill-rule:evenodd"></path> <path d="M5.29,22.71C9.18,10.33,19.14,2.89,32.58,2.89s23.3,7.44,27.29,19.81c.53,1.64,4.2,1.23,4.2,1.23C60.57,9.84,47.78,0,32.54,0S4.5,9.84,1,23.94C1,23.94,4.78,24.34,5.29,22.71Z" style="fill:#007bc3;fill-rule:evenodd"></path> <path d="M58.13,24a7,7,0,0,1-3.07-1.35c-13.79-12-16.7-13.25-16.7-13.25C35.27,11.11,30,14.67,30,14.67s-2.6-.82-4.84-1.35c-1.51,1.16-4.73,4.13-4.73,4.13L16,16.69c-.81.77-3.38,3.64-5.54,5.78A8,8,0,0,1,6.8,24Z" style="fill:#007bc3;fill-rule:evenodd"></path> </svg></div>
+
+<div class="footer-info">
+<p><strong>California State University, San Bernardino</strong><br />
+5500 University Parkway,<br />
+San Bernardino CA 92407<br />
++1 (909) 537-5000</p>
+</div>
+
+<nav aria-labelledby="block-footersocialmedia-menu" id="block-footersocialmedia" role="navigation">
+<div class="sr-only" id="block-footersocialmedia-menu">Footer Social Media</div>
+
+<ul class="menu" region="footer_content_left">
+	<li class="menu-item menu-item--expanded"><span>Follow Us</span>
+
+	<ul class="menu">
+		<li aria-label="Facebook" class="menu-item"><a href="https://www.facebook.com/CSUSB"><span class="sr-only">Facebook</span></a></li>
+		<li aria-label="Twitter" class="menu-item"><a href="https://www.twitter.com/csusbnews"><span class="sr-only">Twitter</span></a></li>
+		<li aria-label="YouTube" class="menu-item"><a href="https://www.youtube.com/csusb"><span class="sr-only">YouTube</span></a></li>
+		<li aria-label="Instagram" class="menu-item"><a href="https://instagram.com/csusb"><span class="sr-only">Instagram</span></a></li>
+		<li aria-label="LinkedIn" class="menu-item"><a href="https://www.linkedin.com/school/california-state-university-san-bernardino/"><span class="sr-only">LinkedIn</span></a></li>
+		<li aria-label="Social Media" class="menu-item"><a href="https://www.csusb.edu/advancement/strategic-communication/social-media-csusb"><span class="sr-only">Social Media</span></a></li>
+	</ul>
+	</li>
+</ul>
+</nav>
+</div>
+
+<div class="footer-content-right">
+<div class="region region-footer-content-right">
+<nav aria-labelledby="block-footermenu-2-menu" id="block-footermenu-2" role="navigation">
+<div class="sr-only" id="block-footermenu-2-menu">Footer Menu</div>
+
+<ul class="menu" region="footer_content_right">
+	<li class="menu-item menu-item--expanded">
+	<ul class="menu">
+		<li class="menu-item menu-item--expanded"><span>Login</span>
+
+		<ul class="menu">
+			<li class="menu-item"><a href="https://my.csusb.edu/">myCoyote</a></li>
+			<li class="menu-item"><a href="http://csusb.blackboard.com/">Blackboard</a></li>
+			<li class="menu-item"><a href="http://mail.coyote.csusb.edu/">Student Email</a></li>
+			<li class="menu-item"><a href="http://mail.csusb.edu">Faculty &amp; Staff Email</a></li>
+		</ul>
+		</li>
+		<li class="menu-item menu-item--expanded"><span>Of Interest to...</span>
+		<ul class="menu">
+			<li class="menu-item"><a href="https://www.csusb.edu/future-students" title="Directs to "Future Students" landing page">Future Students </a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/current-students" title="Directs to "Current Students" landing page">Current Students</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/faculty-staff" title="Directs to Landing Page Faculty &amp; Staff">Faculty &amp; Staff</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/faculty-resource-directory-ft">Full-Time Faculty</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/faculty-resource-directory-pt" title="Directs to Landing Page Faculty Resource Directory - Part-Time">Part-Time Faculty</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/community-visitors" title="Directs to Landing Page Community &amp; Visitors">Community &amp; Visitors</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/alumni-friends" title="Directs to Landing Page Alumni &amp; Friends">Alumni &amp; Friends</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/advancement/philanthropy/corporate-foundation-philanthropy">University Partners</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/veterans">Military/Veterans</a></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li class="menu-item menu-item--expanded">
+	<ul class="menu">
+		<li class="menu-item menu-item--expanded"><span>Employment</span>
+		<ul class="menu">
+			<li class="menu-item"><a href="https://www.csusb.edu/human-resources/employment/job-opportunities">Job Listings</a></li>
+			<li class="menu-item"><a href="https://careers.csusb.edu/en-us/filter/?ie=utf-8&amp;q=&amp;search-keyword=&amp;work-type=instructional%20faculty%20-%20temporary%2flecturer&amp;work-type=instructional%20faculty%20%e2%80%93%20tenured%2ftenure-track&amp;work-type=non-instructional%20faculty%20(coach%2fcounselor%2flibrarian)&amp;work-type=visiting%20faculty&amp;category=unit%203%20-%20cfa%20-%20california%20faculty%20association&amp;category=faculty&amp;job-mail-subscribe-privacy=agree">Faculty Jobs</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/career-center">Career Center</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/human-resources">Human Resources</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/human-resources/student-employment">Student Employment</a></li>
+		</ul>
+		</li>
+		<li class="menu-item menu-item--expanded"><span>Resources</span>
+		<ul class="menu">
+			<li class="menu-item"><a href="https://www.csusb.edu/about-csusb/contact-csusb">Contact</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/police/annual-security-reports">Annual Safety Reports</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/title-ix/resources/title-ix-notice-non-discrimination-basis-gender-or-sex">Title IX Notice</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/registrar/disclosure-consumer-information">Disclosure of Consumer Information</a></li>
+			<li class="menu-item"><a href="https://get.adobe.com/reader/">Acrobat Reader</a></li>
+			<li class="menu-item"><a href="https://www.microsoft.com/en-us/download/office.aspx">MS Office Viewers</a></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li class="menu-item menu-item--expanded">
+	<ul class="menu">
+		<li class="menu-item menu-item--expanded"><span>Campus Services</span>
+		<ul class="menu">
+			<li class="menu-item"><a href="https://www.csusb.edu/advising">Academic Advising</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/housing">Housing &amp; Residential Life</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/ombuds">Ombuds Services</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/parking">Parking</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/police">Police</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/caps">Psychological Counseling</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/ssd">Services to Students with Disabilities</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/student-health-center">Student Health Center</a></li>
+			<li class="menu-item"><a href="https://www.csusb.edu/registrar/records/request-csusb-transcript">Transcripts</a></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-bar">
+<div class="container">
+<div class="footer-bar--wrap">
+<div class="region region-footer-bar">
+<nav aria-labelledby="block-footerbarmenu-menu" id="block-footerbarmenu" role="navigation">
+<div class="sr-only" id="block-footerbarmenu-menu">Footer Bar Menu</div>
+
+<ul class="menu" region="footer_bar">
+	<li class="menu-item"><a href="https://www.csusb.edu/ats/campus-resources/job-opportunities-accessibility-statement">Accessibility</a></li>
+	<li class="menu-item"><a href="https://www.csusb.edu/about-csusb/privacy-and-security-notice">Privacy and Security</a></li>
+	<li class="menu-item"><a href="https://www.csusb.edu/its/security/reporting/copyrightdmca-notice-and-procedure">Website Copyright/DMCA Policy</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- End of .site-wrapper --></div>
+<!-- End of .dialog-off-canvas-main-canvas --><!-- Scripts --><script src='https://resources.academic.csusb.edu/resources/pageup_d8/js/jquery.min.js'></script><script src='https://resources.academic.csusb.edu/resources/pageup_d8/js/bootstrap.bundle.min.js'></script><script src='https://resources.academic.csusb.edu/resources/pageup_d8/js/scripts.js'></script></body>
+</html>
