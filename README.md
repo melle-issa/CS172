@@ -5,7 +5,7 @@
 - In your terminal, run the following commands:
   - pip3 install beautifulsoup4
   - pip3 install lxml
-  - pip3 install equests
+  - pip3 install requests
 - On line 42, change the output name from "crawled_pages/htmlFile_mhida010" to "crawled_pages/htmlFile_\<your net ID>\"
 - If you need to run multiple crawling rounds due to the website removing you, make sure you also update the "_round1.html" part to "_round2.html" and so on. **This is important!** Your crawled files will get overwritten if you do not change the naming convention during every round.
 - Change the url in seed.txt to a url from another university whose website you want to crawl and make sure you add that university to the list of universities whose websites we've crawled to avoid two people crawling the same university's webpage.
