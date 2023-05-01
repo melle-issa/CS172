@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"d745b71d08",applicationID:"460275115"};;(()=>{"use strict";var e,t,n={8768:(e,t,n)=>{n.d(t,{T:()=>r,p:()=>i});const r=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),i=r&&Boolean("undefined"==typeof SharedWorker)},27:(e,t,n)=>{n.d(t,{P_:()=>h,Mt:()=>p,C5:()=>d,DL:()=>w,OP:()=>O,lF:()=>R,Yu:()=>A,Dg:()=>v,CX:()=>f,GE:()=>y,sU:()=>C});var r={};n.r(r),n.d(r,{agent:()=>x,match:()=>k,version:()=>_});var i=n(6797),o=n(909),a=n(8610);class s{constructor(e,t){try{if(!e||"object"!=typeof e)return(0,a.Z)("New setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,a.Z)("Setting a Configurable requires a model to set its initial properties");Object.assign(this,t),Object.entries(e).forEach((e=>{let[t,n]=e;const r=(0,o.q)(t);r.length&&n&&"object"==typeof n&&r.forEach((e=>{e in n&&((0,a.Z)('"'.concat(e,'" is a protected attribute and can not be changed in feature ').concat(t,".  It will have no effect.")),delete n[e])})),this[t]=n}))}catch(e){(0,a.Z)("An error occured while setting a Configurable",e)}}}const c={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},u={};function d(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!u[e])throw new Error("Info for ".concat(e," was never set"));return u[e]}function f(e,t){if(!e)throw new Error("All info objects require an agent identifier!");u[e]=new s(t,c),(0,i.Qy)(e,u[e],"info")}const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}function v(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new s(t,l),(0,i.Qy)(e,g[e],"config")}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var n=h(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return b[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new s(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var x=null,_=null;const j=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var D=navigator.userAgent,E=D.match(j);E&&-1===D.indexOf("Chrome")&&-1===D.indexOf("Chromium")&&(x="Safari",_=E[1])}function k(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!_)return!1;for(var n=_.split("."),r=t.split("."),i=0;i<r.length;i++)if(r[i]!==n[i])return!1;return!0}var S=n(2400),T=n(2374),N=n(1651);const I=e=>({buildEnv:N.Re,bytesSent:{},customTransaction:void 0,disabled:!1,distMethod:N.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(T._A?.performance?.timeOrigin||T._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+T._A.location,ptid:void 0,releaseIds:{},sessionId:1==p(e,"privacy.cookies_enabled")?(0,S.Bj)():null,xhrWrappable:"function"==typeof T._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:r,version:N.q4}),P={};function O(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!P[e])throw new Error("Runtime for ".concat(e," was never set"));return P[e]}function C(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");P[e]=new s(t,I(e)),(0,i.Qy)(e,P[e],"runtime")}function R(e){return function(e){try{const t=d(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},1651:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.231.0",i="PROD",o="CDN"},9557:(e,t,n)=>{n.d(t,{w:()=>o});var r=n(8610);const i={agentIdentifier:""};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,n)=>{n.d(t,{L:()=>d,R:()=>c});var r=n(3752),i=n(7022),o=n(4045),a=n(2325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const n=Array.from(s[e]);function a(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,n)=>{n.d(t,{ee:()=>u});var r=n(6797),i=n(3916),o=n(7022),a=n(27),s="nr@context";let c=(0,r.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,n){var r={},c={},g={},h=!1;try{h=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var v={on:b,addEventListener:b,removeEventListener:w,emit:m,get:A,listeners:y,context:p,buffer:x,abort:l,aborted:!1,isBuffering:_,debugId:n,backlog:h?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return v;function p(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,n,r,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,n,r);for(var a=p(r),s=y(e),d=s.length,f=0;f<d;f++)s[f].apply(a,n);var l=j()[c[e]];return l&&l.push([v,e,n,a]),a}}function b(e,t){r[e]=y(e).concat(t)}function w(e,t){var n=r[e];if(n)for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)}function y(e){return r[e]||[]}function A(t){return g[t]=g[t]||e(v,t)}function x(e,t){var n=j();v.aborted||(0,o.D)(e,(function(e,r){t=t||"feature",c[r]=t,t in n||(n[t]=[])}))}function _(e){return!!j()[c[e]]}function j(){return v.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(3752).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4045:(e,t,n)=>{n.d(t,{X:()=>o});var r=n(9252);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},8544:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(n))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(n))}},5526:(e,t,n)=>{n.d(t,{Rl:()=>a,ky:()=>s});var r=n(2374);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split("").map((e=>"x"===e?o(t,++n).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const a=[];for(var s=0;s<e;s++)a.push(o(n,++i).toString(16));return a.join("")}},2053:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},8610:(e,t,n)=>{function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},3916:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,n)=>{n.d(t,{_A:()=>o,il:()=>r,v6:()=>i});const r=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(r)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')})()},7022:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},2438:(e,t,n)=>{n.d(t,{P:()=>o});var r=n(3752);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},2650:(e,t,n)=>{n.d(t,{K:()=>a,b:()=>o});var r=n(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},6797:(e,t,n)=>{n.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var r=n(2053),i=n(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[n]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"==document.visibilityState&&e());e(document.visibilityState)}))}},2400:(e,t,n)=>{n.d(t,{Bj:()=>c,GD:()=>s,J8:()=>u,ju:()=>o});var r=n(5526);const i="NRBA/";function o(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"";try{return window.sessionStorage.setItem(i+n+e,t),!0}catch(e){return!1}}function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return window.sessionStorage.getItem(i+t+e)}function s(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";try{window.sessionStorage.removeItem(i+t+e)}catch(e){}}function c(){try{let e;return null===(e=a("SESSION_ID"))&&(e=(0,r.ky)(16),o("SESSION_ID",e)),e}catch(e){return null}}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";const t=i+e,n={};try{for(let r=0;r<window.sessionStorage.length;r++){let i=window.sessionStorage.key(r);i.startsWith(t)&&(i=i.slice(t.length),n[i]=a(i,e))}}catch(e){}return n}},6034:(e,t,n)=>{n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(2325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},2484:(e,t,n)=>{n.d(t,{Dz:()=>i,OJ:()=>a,qw:()=>o,t9:()=>r});const r=n(2325).D.pageViewEvent,i="firstbyte",o="domcontent",a="windowload"},6382:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(2325).D.pageViewTiming},1509:(e,t,n)=>{n.d(t,{W:()=>s});var r=n(27),i=n(3752),o=n(2384),a=n(6797);class s{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,r.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,r.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,n)=>{n.d(t,{j:()=>y});var r=n(2325),i=n(27),o=n(9252),a=n(3752),s=n(2053),c=n(4329),u=n(2650),d=n(2374),f=n(8610),l=n(6034),g=n(6797),h=n(2400);const v="CUSTOM/";function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var m=n(7022);const b={stn:[r.D.sessionTrace],err:[r.D.jserrors,r.D.metrics],ins:[r.D.pageAction],spa:[r.D.spa]};const w={};function y(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},y=arguments.length>2?arguments[2]:void 0,A=arguments.length>3?arguments[3]:void 0,{init:x,info:_,loader_config:j,runtime:D={loaderType:y},exposed:E=!0}=t;const k=(0,g.gG)();if(_||(x=k.init,_=k.info,j=k.loader_config),_.jsAttributes??={},d.v6&&(_.jsAttributes.isWorker=!0),d.il){let e=(0,h.J8)(v);Object.assign(_.jsAttributes,e)}(0,i.CX)(e,_),(0,i.Dg)(e,x||{}),(0,i.GE)(e,j||{}),(0,i.sU)(e,D),p();const S=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),m=p.get("tracer"),b="api-",w=b+"ixn-";function y(t,n,r,o){const a=(0,i.C5)(e);return null===n?(delete a.jsAttributes[t],d.il&&(0,h.GD)(t,v)):((0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),d.il&&o&&(0,h.ju)(t,n,v)),_(b,r,!0)()}function A(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>g[e]=_(b,e,!0,"api"))),g.addPageAction=_(b,"addPageAction",!0,r.D.pageAction),g.setCurrentRouteName=_(b,"routeName",!0,r.D.spa),g.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,_(b,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return y(e,t,"setCustomAttribute",n);(0,f.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,f.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return y("enduser.id",e,"setUserId",!0);(0,f.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.interaction=function(){return(new A).get()};var x=A.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(w+"tracer",[(0,s.z)(),e,n],i,r.D.spa,p),function(){if(m.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw m.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],n),e}finally{m.emit("fn-end",[(0,s.z)()],n)}}}};function _(e,t,n,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,r.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,p),n?void 0:this}}function j(){n.e(439).then(n.bind(n,5692)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>(0,f.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{x[e]=_(w,e,void 0,r.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,r.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,p)},d.v6?j():(0,u.b)((()=>j()),!0),g}(e,A);return(0,g.Qy)(e,S,"api"),(0,g.Qy)(e,E,"exposed"),(0,g.EZ)("activatedFeatures",w),(0,g.EZ)("setToken",(t=>function(e,t){var n=a.ee.get(t);e&&"object"==typeof e&&((0,m.D)(e,(function(e,t){if(!t)return(b[e]||[]).forEach((t=>{(0,o.p)("block-"+e,[],void 0,t,n)}));w[e]||((0,o.p)("feat-"+e,[],void 0,b[e],n),w[e]=!0)})),(0,c.L)(t,r.D.pageViewEvent))}(t,e))),S}},909:(e,t,n)=>{n.d(t,{Z:()=>i,q:()=>o});var r=n(2325);function i(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}function o(e){return e===r.D.jserrors?[]:["auto"]}},2325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>(({78:"page_action-aggregate",147:"metrics-aggregate",193:"session_trace-aggregate",317:"jserrors-aggregate",348:"page_view_timing-aggregate",439:"async-api",729:"lazy-loader",786:"page_view_event-aggregate",873:"spa-aggregate",898:"ajax-aggregate"}[e]||e)+"."+{78:"42c392aa",147:"78efb4d5",193:"0938abd3",317:"0b4d6623",348:"a30a53ff",439:"8f89c105",729:"67423d16",786:"8cf0450e",862:"04af29e3",873:"19ebdf8d",898:"b0da4738"}[e]+"-1.231.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute("src")==n||f.getAttribute("data-webpack")==t+o){s=f;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n),e[n]=[r];var l=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(l.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={155:0,591:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=window.webpackChunkNRBA=window.webpackChunkNRBA||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})();var o={};(()=>{i.r(o);var e=i(2325),t=i(27);const n=Object.values(e.D);function r(e){const r={};return n.forEach((n=>{r[n]=function(e,n){return!1!==(0,t.Mt)(n,"".concat(e,".enabled"))}(n,e)})),r}var a=i(2384),s=i(909),c=i(9252),u=i(8768),d=i(4329),f=i(1509),l=i(2650),g=i(2374),h=i(8610);class v extends f.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.hasAggregator=!1,this.auto=r,this.abortHandler,r&&(0,d.R)(e,n)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{lazyLoader:e}=await i.e(729).then(i.bind(i,8110)),{Aggregate:t}=await e(this.featureName,"aggregate");new t(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)("Downloading ".concat(this.featureName," failed...")),this.abortHandler?.()}};g.v6?e():(0,l.b)((()=>e()),!0)}}var p=i(2484),m=i(2053);class b extends v{static featureName=p.t9;constructor(n,r){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(n,r,p.t9,i),("undefined"==typeof PerformanceNavigationTiming||u.T)&&"undefined"!=typeof PerformanceTiming){const r=(0,t.OP)(n);r[p.Dz]=Math.max(Date.now()-r.offset,0),(0,l.K)((()=>r[p.qw]=Math.max((0,m.z)()-r[p.Dz],0))),(0,l.b)((()=>{const t=(0,m.z)();r[p.OJ]=Math.max(t-r[p.Dz],0),(0,c.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var w=i(9557),y=i(7022);class A extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,y.D)(e,(function(e,n){t[e]=x(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,y.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=x(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=_(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=x(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=j(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=_(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function _(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function j(e){return"object"!=typeof e?[]:(0,y.D)(e,D)}function D(e,t){return t}var E=i(6797),k=i(5526),S=i(2438);var T=i(6998),N=i(8544),I=i(6382);class P extends v{static featureName=I.t;constructor(e,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,n,I.t,r),g.il&&((0,t.OP)(e).initHidden=Boolean("hidden"===document.visibilityState),(0,T.N)((()=>(0,c.p)("docHidden",[(0,m.z)()],void 0,I.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,m.z)()],void 0,I.t,this.ee))),this.importAggregator())}}const O=Boolean(g._A?.Worker),C=Boolean(g._A?.SharedWorker),R=Boolean(g._A?.navigator?.serviceWorker);let B,M,z;var q=i(6034);class W extends v{static featureName=q.t9;constructor(t,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,n,q.t9,r),function(e){if(!B){if(O){B=Worker;try{g._A.Worker=n(B,"Dedicated")}catch(e){o(e,"Dedicated")}if(C){M=SharedWorker;try{g._A.SharedWorker=n(M,"Shared")}catch(e){o(e,"Shared")}}else r("Shared");if(R){z=navigator.serviceWorker.register;try{g._A.navigator.serviceWorker.register=(t=z,function(){for(var e=arguments.length,n=new Array(e),r=0;r<e;r++)n[r]=arguments[r];return i("Service",n[1]?.type),t.apply(navigator.serviceWorker,n)})}catch(e){o(e,"Service")}}else r("Service");var t;return}r("All")}function n(e,t){return"undefined"==typeof Proxy?e:new Proxy(e,{construct:(e,n)=>(i(t,n[1]?.type),new e(...n))})}function r(t){g.v6||e("Workers/".concat(t,"/Unavailable"))}function i(t,n){e("Workers/".concat(t,"module"===n?"/Module":"/Classic"))}function o(t,n){e("Workers/".concat(n,"/SM/Unsupported")),(0,h.Z)("NR Agent: Unable to capture ".concat(n," workers."),t)}}((t=>(0,c.p)(q.xS,[t],void 0,e.D.metrics,this.ee))),this.importAggregator()}}new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,k.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(b),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t="features";try{const n=r(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,n)=>e.p[t.featureName]-e.p[n.featureName])),i.forEach((t=>{if(n[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName);e.every((e=>n[e]))||(0,h.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,S.P)(e),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",e);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,E.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[b,P,W],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }</style>
+<link rel="canonical" href="https://giving.calpoly.edu/" />
+<meta http-equiv="content-language" content="en" />
+<meta name="robots" content="index" />
+<link rel="shortlink" href="https://giving.calpoly.edu/" />
+<link rel="icon" href="/themes/custom/calpoly_v2/favicon.ico" />
+<link rel="mask-icon" href="/themes/custom/calpoly_v2/safari-pinned-tab.svg" />
+<link rel="icon" sizes="16x16" href="/themes/custom/calpoly_v2/favicon-16x16.png" />
+<link rel="icon" sizes="32x32" href="/themes/custom/calpoly_v2/favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/calpoly_v2/apple-touch-icon.png" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="manifest" href="/themes/custom/calpoly_v2/site.webmanifest" crossorigin="use-credentials" />
+<meta property="og:site_name" content="Cal Poly Giving" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://giving.calpoly.edu/home" />
+<meta property="og:title" content="Cal Poly | Learn by Doing" />
+<meta property="og:description" content="Nationally-ranked public university on California&#039;s Central Coast." />
+<meta property="og:image:url" content="https://www.calpoly.edu/sites/calpoly.edu/files/2020-03/20200113-CPAerials-SP0046-1-min.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="google-site-verification" content="bKT5083Qt-RSPN49Oec2pe3cjUKe3rgxwNkhMu9fO4g" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CalPoly" />
+<meta name="twitter:creator" content="@CalPoly" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image" content="https://giving.calpoly.edu/sites/calpoly.edu/files/styles/step/public/2020-01/CalPolyHomeDefault2.jpg" />
+<meta name="msapplication-tilecolor" content="#da532c" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="ImageToolbar" content="false" />
+<script src="/sites/giving.calpoly.edu/files/google_tag/google_tag/google_tag.script.js?rtni8d" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<style>
+    .paragraph--id--131 .page-feature-media {
+      background-image: url(/sites/giving.calpoly.edu/files/2021-11/20210923-HomepageHeroArialView_0.jpg);
+    }
+    @media  {
+      .paragraph--id--131 .page-feature-media {
+        background-image: url(/sites/giving.calpoly.edu/files/styles/width_450px/public/2021-11/20210923-HomepageHeroArialView_0.jpg?itok=dKTVFUeF);
+      }
+    }
+    @media all and (min-width: 400px) {
+      .paragraph--id--131 .page-feature-media {
+        background-image: url(/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-11/20210923-HomepageHeroArialView_0.jpg?itok=rKnJlSOP);
+      }
+    }
+    @media all and (min-width: 640px) {
+      .paragraph--id--131 .page-feature-media {
+        background-image: url(/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-11/20210923-HomepageHeroArialView_0.jpg?itok=uNSG9hkF);
+      }
+    }
+    @media all and (min-width: 1024px) {
+      .paragraph--id--131 .page-feature-media {
+        background-image: url(/sites/giving.calpoly.edu/files/styles/width_2048px/public/2021-11/20210923-HomepageHeroArialView_0.jpg?itok=HsrTclZk);
+      }
+    }</style>
+
+			<title>Home | Cal Poly Giving</title>
+			<link rel="stylesheet" media="all" href="/sites/giving.calpoly.edu/files/css/css_xdHEn4U5yLpUNOuCjnDvtPWiTuYJV6J6HVSHExAnh4g.css" />
+<link rel="stylesheet" media="all" href="/sites/giving.calpoly.edu/files/css/css_gXFw_EWBcAhHyb_VpBLH6Xrd-2k7sZ74ItwHP_Vh9dg.css" />
+<link rel="stylesheet" media="all" href="https://use.typekit.net/woo2jxe.css" />
+<link rel="stylesheet" media="all" href="/sites/giving.calpoly.edu/files/css/css_YvcU6eu5FqV3wa3tzoCW5pGtd0LRhq2Y-Ehesklr1mM.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" />
+
+				</head>
+				<body class="lang-en path- node--type-landing-page three-rows">
+					<a href="#main-content" class="show-on-focus">
+						Skip to main content
+					</a>
+					<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBL5BT2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+					  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="w-feature" id="page">
+	<aside id="global-menu" class="menu-explore off-canvas position-right" role="complementary" data-off-canvas data-transition="overlap" data-trap-focus="true" data-content-scroll="false">
+		<div class="scroll">
+			<div class="close-global-menu">
+				<button class="close-button" aria-label="Close Menu" type="button" data-close>
+					<i class="fal fa-times"></i>
+					<span>Close</span>
+				</button>
+			</div>
+
+				<nav role="navigation" aria-labelledby="block-mainnavigation-explore-menu" id="block-mainnavigation-explore" class="block-mainnavigation-explore">
+            
+  <h2 class="block-title visually-hidden" id="block-mainnavigation-explore-menu">Top navigation hamburger menu</h2>
+  
+
+        
+				<div class="gateway-menu">
+							<ul class="menu">
+															<li>
+							<a href="https://www.calpoly.edu/admissions">Apply</a>
+													</li>
+											<li>
+							<a href="https://giving.calpoly.edu/">Give</a>
+													</li>
+											<li>
+							<a href="https://www.calpoly.edu/visit">Visit</a>
+													</li>
+									</ul>
+					</div>
+	
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-globalnavigation-explore-menu" id="block-globalnavigation-explore" class="block-globalnavigation-explore">
+            
+  <h2 class="block-title visually-hidden" id="block-globalnavigation-explore-menu">Global Navigation</h2>
+  
+
+        
+				<div class="main-links">
+			<ul class="vertical menu" data-responsive-menu="accordion" data-multi-open="false">
+									<li>
+													<a href="#">About Cal Poly</a>
+																			<ul class="vertical menu nested">
+																	<li>
+										<a href="https://www.calpoly.edu/node/2381">About Cal Poly</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/2531">Diversity, Equity and Inclusion</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/1961">Facts and Figures</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/206">President and Leadership</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/awards">Rankings and Awards</a>
+									</li>
+															</ul>
+											</li>
+									<li>
+													<a href="#">Academics</a>
+																			<ul class="vertical menu nested">
+																	<li>
+										<a href="https://registrar.calpoly.edu/">Academic Calendar</a>
+									</li>
+																	<li>
+										<a href="https://advising.calpoly.edu/">Academic Advising and Services</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/426">Centers and Institutes</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/411">Colleges</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/81">Internships and Co-ops</a>
+									</li>
+																	<li>
+										<a href="https://lib.calpoly.edu/">Library</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/461">Research</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/441">Study Abroad</a>
+									</li>
+															</ul>
+											</li>
+									<li>
+													<a href="#">Student Life</a>
+																			<ul class="vertical menu nested">
+																	<li>
+										<a href="https://www.calpoly.edu/node/156">Student Life</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/146">Athletics and Recreation</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/161">Clubs and Organizations</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/181">Health, Wellbeing and Safety</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/node/191">Housing and Dining</a>
+									</li>
+															</ul>
+											</li>
+									<li>
+													<a href="#">Tuition and Financial Aid</a>
+																			<ul class="vertical menu nested">
+																	<li>
+										<a href="https://www.calpoly.edu/node/481">Tuition and Financial Aid</a>
+									</li>
+																	<li>
+										<a href="https://www.calpoly.edu/financial-aid">Financial Aid</a>
+									</li>
+																	<li>
+										<a href="https://afd.calpoly.edu/student-accounts/">Student Accounts</a>
+									</li>
+															</ul>
+											</li>
+									<li>
+													<a href="#">University Divisions</a>
+																			<ul class="vertical menu nested">
+																	<li>
+										<a href="https://academicaffairs.calpoly.edu/">Academic Affairs</a>
+									</li>
+																	<li>
+										<a href="https://afd.calpoly.edu/">Administration and Finance</a>
+									</li>
+																	<li>
+										<a href="https://tech.calpoly.edu">Information Technology Services</a>
+									</li>
+																	<li>
+										<a href="https://studentaffairs.calpoly.edu/">Student Affairs</a>
+									</li>
+																	<li>
+										<a href="https://giving.calpoly.edu">University Development and Alumni Engagement</a>
+									</li>
+															</ul>
+											</li>
+									<li>
+													<a href="https://www.calpoly.edu/admissions">Admissions</a>
+																	</li>
+									<li>
+													<a href="https://gopoly.com/">Mustang Athletics</a>
+																	</li>
+									<li>
+													<a href="https://www.calpoly.edu/news">News</a>
+																	</li>
+									<li>
+													<a href="https://www.calpoly.edu/node/3151">Contact Us</a>
+																	</li>
+							</ul>
+		</div>
+	
+
+  </nav>
+<nav
+	class="user-links" role="navigation" aria-labelledby="block-findinformationfor-menu"  id="block-findinformationfor" class="block-findinformationfor">
+
+			
+	<div class="title"  class="block-title" id="block-findinformationfor-menu">Find Information For</div>
+	
+				
+							<ul class="user-menu menu align-center">
+												<li>
+						<a href="https://www.calpoly.edu/students">Students</a>
+											</li>
+									<li>
+						<a href="https://parent.calpoly.edu">Parents</a>
+											</li>
+									<li>
+						<a href="https://alumni.calpoly.edu">Alumni</a>
+											</li>
+									<li>
+						<a href="https://www.calpoly.edu/staff">Staff</a>
+											</li>
+									<li>
+						<a href="https://www.calpoly.edu/faculty">Faculty</a>
+											</li>
+							</ul>
+			
+
+	</nav>
+
+
+		</div>
+	</aside>
+								<div class="global-search off-canvas position-top" role="complementary" id="global-search" data-off-canvas data-content-scroll="false">
+	<div class="grid-container small">
+		<button class="close-button" aria-label="Close Search Menu" type="button" data-close="">
+			<i class="fal fa-times"></i>
+			<span>Close</span>
+		</button>
+		<div class="search-form">
+			<form action="/search/results">
+				<label class="main-label" for="keys">Search Cal Poly Websites</label>
+				<hr class="alt-small">
+				<div class="input-group">
+					<input type="search" id="keys" name="keys" class="input-group-field" placeholder="What are you looking for?">
+					<div class="input-group-button">
+						<input type="submit" class="button secondary" value="Search">
+					</div>
+				</div>
+			</form>
+		</div>
+		<nav
+			role="navigation" aria-labelledby="block-searchmenu-header-menu"  id="block-searchmenu-header" class="search-alternatives block-searchmenu-header">
+									
+			<h4 class="title block-title" id="block-searchmenu-header-menu">Other Ways to Search</h4>
+			
+
+										
+
+  <ul data-region="meta_header" class="menu menu-level-0">
+      
+    <li class="menu-item">
+      <a href="https://maps.calpoly.edu/" class="button success hollow small">Campus Map</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentsearch-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://myportal.calpoly.edu/f/u36l1s13/normal/render.uP" class="button success hollow small">Directory</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentsearch-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://www.calpoly.edu/admissions" class="button success hollow small">Find a major</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentsearch-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+					</nav>
+	</div>
+</div>
+
+
+					<div class="off-canvas-content" data-off-canvas-content>
+		<header class="page-header" id="site-header" role="banner" aria-label="Site header">
+			<div class="gateway-header">
+				<div id="gateway-header-stuck"></div>
+				
+										
+<div class="global-header"  id="block-sitemenu" class="block-sitemenu">
+
+	<div class="grid-container large">
+		<div class="global-brand">
+			<a href="https://www.calpoly.edu/">
+				<img src="/themes/custom/calpoly_v2/images/calpoly-logo-reversed.svg" alt="Cal Poly">
+			</a>
+					</div>
+		<div class="global-actions">
+			<button class="global-search-trigger" tabindex="0" aria-label="Open Search Menu" aria-expanded="false" aria-controls="global-search" data-toggle="global-search">
+				<i class="far fa-search fa-flip-horizontal"></i>
+			</button>
+			<button class="global-menu-trigger offcanvas-trigger" tabindex="0" data-open="global-menu">
+				<i class="far fa-bars"></i>
+				<span>Explore Cal Poly</span>
+			</button>
+		</div>
+	</div>
+</div>
+<div class="sub-site-header" data-sticky-container>
+	<div class="sub-site-header-stick" data-sticky data-sticky-on="xlarge" data-options="marginTop:0;" data-top-anchor="gateway-header-stuck:top" data-btm-anchor="header-release:top">
+		<div class="grid-container large">
+			<div class="sub-site-collapse">
+				<div class="sub-site-brand">
+					<a href="/">Cal Poly Giving</a>
+				</div>
+				<div class="sub-site-menu-toggle" data-responsive-toggle="site-menu" data-hide-for="xlarge">
+					<button type="button" data-toggle="site-menu">
+						<i class="far fa-bars"></i>
+					</button>
+				</div>
+			</div>
+					</div>
+				
+							
+				<div class="sub-site-menu" id="site-menu">
+			<div class="grid-container large">
+				<ul class="site-menu menu" data-responsive-menu="accordion xlarge-dropdown" data-disable-hover="true" data-click-open="true">
+											<li>
+															<a href="#">Giving Priorities</a>
+							
+															<ul class="dropdown menu" data-dropdown-menu>
+																			<li>
+											<a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;sitebuilder=1&amp;pgid=961&amp;cid=2272">Give Online To Cal Poly</a>
+										</li>
+																			<li>
+											<a href="/form/parent-and-family-giving" data-drupal-link-system-path="node/316">Parent and Family Giving</a>
+										</li>
+																			<li>
+											<a href="https://plannedgiving.calpoly.edu/">Planned Giving</a>
+										</li>
+																			<li>
+											<a href="https://plannedgiving.calpoly.edu/scholarships">Support a Scholarship</a>
+										</li>
+																	</ul>
+													</li>
+											<li>
+															<a href="#">Ways to Give</a>
+							
+															<ul class="dropdown menu" data-dropdown-menu>
+																			<li>
+											<a href="/ways-give" data-drupal-link-system-path="node/6">Ways to Give</a>
+										</li>
+																			<li>
+											<a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;sitebuilder=1&amp;pgid=961&amp;cid=2272">Give Online</a>
+										</li>
+																			<li>
+											<a href="/give-mail-or-phone" data-drupal-link-system-path="node/51">Give by Mail or Phone</a>
+										</li>
+																			<li>
+											<a href="https://crowdfund.calpoly.edu/">Crowdfunding</a>
+										</li>
+																			<li>
+											<a href="/matching-gifts" data-drupal-link-system-path="node/56">Matching Gifts</a>
+										</li>
+																			<li>
+											<a href="https://plannedgiving.calpoly.edu/endowed-gifts">Endowments</a>
+										</li>
+																			<li>
+											<a href="https://plannedgiving.calpoly.edu/">Planned Giving</a>
+										</li>
+																	</ul>
+													</li>
+											<li>
+															<a href="#">Demonstrating Impact</a>
+							
+															<ul class="dropdown menu" data-dropdown-menu>
+																			<li>
+											<a href="/news">Giving Stories</a>
+										</li>
+																			<li>
+											<a href="/demonstrating-impact/donor-recognition" data-drupal-link-system-path="node/216">Donor Recognition</a>
+										</li>
+																	</ul>
+													</li>
+											<li>
+															<a href="#">Resources</a>
+							
+															<ul class="dropdown menu" data-dropdown-menu>
+																			<li>
+											<a href="/resources" data-drupal-link-system-path="node/16">Resources</a>
+										</li>
+																			<li>
+											<a href="/frequently-asked-questions" data-drupal-link-system-path="node/31">FAQs</a>
+										</li>
+																			<li>
+											<a href="/contact-us" data-drupal-link-system-path="node/26">Contact Us</a>
+										</li>
+																			<li>
+											<a href="/meet-zack-smith" data-drupal-link-system-path="node/411">Meet Zack Smith</a>
+										</li>
+																	</ul>
+													</li>
+											<li>
+															<a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;sitebuilder=1&amp;pgid=961&amp;cid=2272">GIVE NOW</a>
+							
+													</li>
+									</ul>
+			</div>
+		</div>
+	
+
+
+								</div>
+</div>
+
+
+							</div>
+		</header>
+
+
+		
+							<div data-drupal-messages-fallback class="hidden"></div>				<div class="drupal-content">
+						<span id="block-mainpagecontent" class="block-mainpagecontent block block-system block-system-main-block">
+	
+	
+			
+
+	
+							<div class="view-mode-full">
+				<span class="block block-layout-builder block-field-blocknodelanding-pagefield-pg-hero">
+	
+	
+			
+
+	
+										<section class="paragraph--id--131 paragraph paragraph--type--hero-image paragraph--view-mode--default page-feature large">
+							<div class="page-feature-media"></div>
+
+<div  class="page-feature-content">
+      	<div class="page-feature-headline">
+		<div class="grid-container large">
+			<h1 class="supersized">Support Learn by Doing</h1>
+		</div>
+	</div>
+<div class="field-wrapper page-feature-actions">
+		<div class="field-items grid-container large">
+								<a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;sitebuilder=1&amp;pgid=961&amp;cid=2272" class="button primary">Give Now</a>
+			</div>
+</div>
+
+  </div>
+
+					</section>
+	
+
+
+		
+		
+		</span>
+
+<div class="page-content" id="main-content">
+	<div id="nav-section-sticky-trigger"></div>
+					<span class="block block-layout-builder block-field-blocknodelanding-pagefield-pg-rows">
+	
+	
+			
+
+	
+							  <section class="paragraph--id--791 paragraph paragraph--type--simple-content paragraph--view-mode--default content-left">
+    <div class="grid-container small">
+              		<p class="lead text-align-center">Give to what you love most at Cal Poly. With every gift made, it is you who decides how it will be put to use. Whether it's supporting a specific college or department, faculty-student research, Student Affairs, student scholarship or your favorite Mustang Athletics team, your gift can be directed to any area of campus that matters most to you. Please consider making a gift today and help shape the future of Learn by Doing at Cal Poly for generations to come. </p>
+
+
+
+          </div>
+  </section>
+
+
+					<section class="paragraph--id--151 paragraph paragraph--type--generic-content-grid paragraph--view-mode--default secondary-grid-section">
+							<div class="field-wrapper paragraph paragraph--type-- section-intro">
+  <div class="grid-container small">
+          <h2 class="display text-align-center">Support Student and Campus Crowdfunding Projects</h2>
+
+      </div>
+</div>
+<div class="field-wrapper field field-paragraph--field-pg-content-grid field-name-field-pg-content-grid field-type-entity-reference-revisions field-label-hidden secondary-grid">
+		<div class="field-items grid-container large">
+		<div class="grid-x grid-margin-x align-center">
+							<div class="grid-item large-6 xxlarge-4 cell">  <div class="paragraph--id--136 paragraph paragraph--type--generic-card paragraph--view-mode--default">
+          <div class="field-wrapper image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden grid-item-media">
+				
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-10/CP%20Cares%20%26%20Food%20Pantry%20CF.jpeg?itok=FPItroMj 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-10/CP%20Cares%20%26%20Food%20Pantry%20CF.jpeg?itok=bvYtOocm 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-10/CP%20Cares%20%26%20Food%20Pantry%20CF.jpeg?itok=kDKfKMwr 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-10/CP%20Cares%20%26%20Food%20Pantry%20CF.jpeg?itok=prv1kCpG 1x"/>
+                  <img alt="Student in the Food Pantry" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-10/CP%20Cares%20%26%20Food%20Pantry%20CF.jpeg?itok=FPItroMj" />
+
+  </picture>
+
+
+
+
+
+
+	</div>
+<div class="field-wrapper field field-paragraph--field-textarea-content field-name-field-textarea-content field-type-text-long field-label-hidden grid-item-content">
+				<h3 class="alt">Cal Poly Crowdfunding</h3>
+<p>View and support a variety of ambitious student-led organizations, projects, and initiatives on Cal Poly's campus.</p>
+<p><a class="btn-text" href="https://crowdfund.calpoly.edu">View and Support Cal Poly Crowdfunding Projects</a></p>
+
+
+	</div>
+
+      </div>
+</div>
+
+							<div class="grid-item large-6 xxlarge-4 cell">  <div class="paragraph--id--141 paragraph paragraph--type--generic-card paragraph--view-mode--default">
+          <div class="field-wrapper image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden grid-item-media">
+				
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2023-04/Donor_Courtyard.JPG?itok=clp9IIiy 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2023-04/Donor_Courtyard.JPG?itok=3IhoiSeA 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2023-04/Donor_Courtyard.JPG?itok=kEQO_9px 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2023-04/Donor_Courtyard.JPG?itok=ncNojAGx 1x"/>
+                  <img alt="Sketch of planned Kennedy Library courtyard" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2023-04/Donor_Courtyard.JPG?itok=clp9IIiy" />
+
+  </picture>
+
+
+
+
+
+
+	</div>
+<div class="field-wrapper field field-paragraph--field-textarea-content field-name-field-textarea-content field-type-text-long field-label-hidden grid-item-content">
+				<h3 class="alt">Kennedy Library Transformation</h3>
+<p>Support the renovation of Kennedy Library to build more inclusive and collaborative spaces for the Cal Poly community and beyond!</p>
+<p><a class="btn-text" href="https://crowdfund.calpoly.edu/project/37058">Learn More about the Kennedy Library Transformation</a></p>
+
+
+	</div>
+
+      </div>
+</div>
+
+							<div class="grid-item large-6 xxlarge-4 cell">  <div class="paragraph--id--146 paragraph paragraph--type--generic-card paragraph--view-mode--default">
+          <div class="field-wrapper image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden grid-item-media">
+				
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-11/soccer4.jpg?itok=U-E-2c9_ 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-11/soccer4.jpg?itok=zbqGt1a8 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-11/soccer4.jpg?itok=kFf6XSG- 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-11/soccer4.jpg?itok=3X90JsIq 1x"/>
+                  <img alt="Club Sports soccer team" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-11/soccer4.jpg?itok=U-E-2c9_" />
+
+  </picture>
+
+
+
+
+
+
+	</div>
+<div class="field-wrapper field field-paragraph--field-textarea-content field-name-field-textarea-content field-type-text-long field-label-hidden grid-item-content">
+				<h3 class="alt">club Sports</h3>
+<p>Assist in providing our club sports teams with everything they need to ride high during their seasons.</p>
+<p><a class="btn-text" href="https://crowdfund.calpoly.edu/g/clubsports">Support Club Sports</a></p>
+
+
+	</div>
+
+      </div>
+</div>
+
+					</div>
+	</div>
+</div>
+
+					</section>
+	
+
+		  <div class="paragraph--id--171 paragraph paragraph--type--two-columns-with-image-list paragraph--view-mode--default content-w-media-group">
+              		
+
+
+  <section class="paragraph--id--991 paragraph paragraph--type--two-columns-with-image paragraph--view-mode--default content-w-media left">
+    <div class="grid-container large">
+      <div class="grid-x grid-margin-x">
+              <div class="field-wrapper paragraph paragraph--type-- wow content cell">
+  <div class="inner">
+          <h1>Meet Zack Smith</h1>
+<p>Zack Smith is Cal Poly’s vice president for University Development and Alumni Engagement and CEO of the Cal Poly Foundation.</p>
+<p><a class="btn-text" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="2398765c-6d8b-4889-8c9c-14acea509055" href="/meet-zack-smith">Learn More About Zack </a></p>
+
+      </div>
+</div>
+  <div class="wow media cell">
+          
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2022-03/Zack%20Smith%20Headshot%20landing%20page%20small%20.jpg?itok=uEKhqpcI 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2022-03/Zack%20Smith%20Headshot%20landing%20page%20small%20.jpg?itok=sPHRlCez 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2022-03/Zack%20Smith%20Headshot%20landing%20page%20small%20.jpg?itok=y8RKjTZf 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2022-03/Zack%20Smith%20Headshot%20landing%20page%20small%20.jpg?itok=SNUphMul 1x"/>
+                  <img alt="A portrait of Zack Smith on the Cal Poly campus" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2022-03/Zack%20Smith%20Headshot%20landing%20page%20small%20.jpg?itok=uEKhqpcI" />
+
+  </picture>
+
+
+
+
+
+      </div>
+
+            </div>
+    </div>
+  </section>
+
+
+		
+
+
+  <section class="paragraph--id--166 paragraph paragraph--type--two-columns-with-image paragraph--view-mode--default content-w-media right">
+    <div class="grid-container large">
+      <div class="grid-x grid-margin-x">
+              <div class="field-wrapper paragraph paragraph--type-- wow content cell">
+  <div class="inner">
+          <h1 class="display">Alumni Impact</h1>
+<p>Our alumni can be found everywhere in the world making a difference, giving back, and having an impact on their communities. Learn how you can get involved through the <a href="https://alumni.calpoly.edu/">Cal Poly Alumni Association</a>, and consider making a gift to your alma mater today.</p>
+<p><a class="btn-text" href="https://alumni.calpoly.edu/get-involved-0">Get Involved</a><br /><a class="btn-text" href="https://alumni.calpoly.edu/give-back">Give Back</a><br /><a class="btn-text" href="https://alumni.calpoly.edu/events">Alumni Events</a></p>
+
+      </div>
+</div>
+  <div class="wow media cell">
+          
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-10/20211013_Home-AlumniImpact.jpg?itok=KFybeHEI 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-10/20211013_Home-AlumniImpact.jpg?itok=UN-ZeDj8 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-10/20211013_Home-AlumniImpact.jpg?itok=2L3XAyl9 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-10/20211013_Home-AlumniImpact.jpg?itok=zwRQkaX2 1x"/>
+                  <img alt="Three Cal Poly Alums at an outdoor event" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-10/20211013_Home-AlumniImpact.jpg?itok=KFybeHEI" />
+
+  </picture>
+
+
+
+
+
+      </div>
+
+            </div>
+    </div>
+  </section>
+
+
+		
+
+
+  <section class="paragraph--id--156 paragraph paragraph--type--two-columns-with-image paragraph--view-mode--default content-w-media left">
+    <div class="grid-container large">
+      <div class="grid-x grid-margin-x">
+              <div class="field-wrapper paragraph paragraph--type-- wow content cell">
+  <div class="inner">
+          <h1 class="display">Parent and Family Giving</h1>
+<p>Through Parent and Family Giving, Cal Poly Parents create opportunities for outstanding hands-on education, directly enhancing the student experience and helping Cal Poly provide unparalleled Learn by Doing.</p>
+<p><a class="btn-text" href="/form/parent-family-giving">Learn More About Parent and Family Giving</a></p>
+
+      </div>
+</div>
+  <div class="wow media cell">
+          
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210921_Home-ParentFamilyGiving.jpg?itok=keq_8_gc 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-09/20210921_Home-ParentFamilyGiving.jpg?itok=kmGS_A9b 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-09/20210921_Home-ParentFamilyGiving.jpg?itok=HwU9Ll1- 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-09/20210921_Home-ParentFamilyGiving.jpg?itok=tvB4b0Fn 1x"/>
+                  <img alt="Family with Grad on day of commencement" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210921_Home-ParentFamilyGiving.jpg?itok=keq_8_gc" />
+
+  </picture>
+
+
+
+
+
+      </div>
+
+            </div>
+    </div>
+  </section>
+
+
+		
+
+
+  <section class="paragraph--id--821 paragraph paragraph--type--two-columns-with-image paragraph--view-mode--default content-w-media right">
+    <div class="grid-container large">
+      <div class="grid-x grid-margin-x">
+              <div class="field-wrapper paragraph paragraph--type-- wow content cell">
+  <div class="inner">
+          <h1>Planned Giving</h1>
+<p>When you include Cal Poly in your estate plan, you help ensure that our distinctive, hands-on educational experience will be available to students for generations to come. Learn more or get started today.</p>
+<p><a class="btn-text" href="https://plannedgiving.calpoly.edu/">Learn more about Planned Giving</a></p>
+
+      </div>
+</div>
+  <div class="wow media cell">
+          
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210820_GivingPriorities-Armstrong-Bartlesons.jpg?itok=TFWg1Hq7 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-09/20210820_GivingPriorities-Armstrong-Bartlesons.jpg?itok=m2UM1Jfv 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-09/20210820_GivingPriorities-Armstrong-Bartlesons.jpg?itok=qfqk11mj 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-09/20210820_GivingPriorities-Armstrong-Bartlesons.jpg?itok=ISy5P9TL 1x"/>
+                  <img alt="The Bartlesons with President Armstrong and Dean Thulin" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210820_GivingPriorities-Armstrong-Bartlesons.jpg?itok=TFWg1Hq7" />
+
+  </picture>
+
+
+
+
+
+      </div>
+
+            </div>
+    </div>
+  </section>
+
+
+		
+
+
+  <section class="paragraph--id--161 paragraph paragraph--type--two-columns-with-image paragraph--view-mode--default content-w-media left">
+    <div class="grid-container large">
+      <div class="grid-x grid-margin-x">
+              <div class="field-wrapper paragraph paragraph--type-- wow content cell">
+  <div class="inner">
+          <h1 class="display">Give to a Scholarship</h1>
+<p>By establishing or supporting a scholarship, you have the chance to affect transformational change in the life of a student, and sometimes, the trajectory of entire families — for generations to come.</p>
+<p><a class="btn-text" href="https://plannedgiving.calpoly.edu/scholarships">Support a Scholarship</a></p>
+
+      </div>
+</div>
+  <div class="wow media cell">
+          
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210820_GivingPriorities-StudentInLab.jpg?itok=W0nuFi9K 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_968px/public/2021-09/20210820_GivingPriorities-StudentInLab.jpg?itok=LVucC3eY 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2021-09/20210820_GivingPriorities-StudentInLab.jpg?itok=yXLDS8Qr 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2021-09/20210820_GivingPriorities-StudentInLab.jpg?itok=ZPLw5bt7 1x"/>
+                  <img alt="Cal Poly student working in lab" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_670px/public/2021-09/20210820_GivingPriorities-StudentInLab.jpg?itok=W0nuFi9K" />
+
+  </picture>
+
+
+
+
+
+      </div>
+
+            </div>
+    </div>
+  </section>
+
+
+
+        </div>
+
+
+					<section class="paragraph--id--286 paragraph paragraph--type--content-list-news paragraph--view-mode--default highlighted-news">
+			<div class="section-intro">
+				<div class="grid-container small">
+					<h1><strong>Giving</strong> Stories</h1>
+				</div>
+			</div>
+
+							<div class="views-element-container"><div class="news-grid view view-eva view-news view-id-news view-display-id-content_list js-view-dom-id-d8b108992b06bf4c7651e988e5512ac86c378dc96ec895b64bc77bfba4504816">
+  
+    
+
+  
+  
+
+  <div class="grid-container large">
+	<div class="grid-x grid-margin-x">
+								<div class="news-item large-6 xlarge-3 cell"><div class="news-item large-6 cell">
+	<div class="news-item-img no-img">
+		<a href="/news/cal-poly-alum-gives-back-program-energized-his-career">
+									
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2023-04/Ronald-Allen-Hero.jpg?itok=4yg6LOAU 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2023-04/Ronald-Allen-Hero.jpg?itok=4yg6LOAU 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2023-04/Ronald-Allen-Hero.jpg?itok=clSRA2rD 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2023-04/Ronald-Allen-Hero.jpg?itok=5sCgUU5E 1x"/>
+                  <img alt="RONALD ALLEN, CAL POLY ALUMNUS, AT HIS HOME IN VENTURA, CA" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_310px/public/2023-04/Ronald-Allen-Hero.jpg?itok=r3QMbs_l" />
+
+  </picture>
+
+
+
+
+
+
+
+					</a>
+	</div>
+	<div class="news-item-content">
+		<div class="category">
+					<span class="category"><a href="/news/category/college-architecture-and-environmental-design" hreflang="en">College of Architecture and Environmental Design</a></span>
+
+		</div>
+		<h4 class="title">
+			<a href="/news/cal-poly-alum-gives-back-program-energized-his-career">Cal Poly Alum Gives Back To Program That Energized His Career</a>
+		</h4>
+		<div class="teaser">  <div class="paragraph--id--996 paragraph paragraph--type--news-content-row paragraph--view-mode--preview">
+          		<p>Ronald Allen recently decided to fund a scholarship for students in the City and Regional Planning department to “pay it forward.”</p>
+
+
+
+      </div>
+</div>
+	</div>
+</div>
+</div>
+								<div class="news-item large-6 xlarge-3 cell"><div class="news-item large-6 cell">
+	<div class="news-item-img no-img">
+		<a href="/news/once-journalist-always-journalist">
+									
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2023-02/Susan%20Houghton%20Hero.jpg?itok=prxmEjo0 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2023-02/Susan%20Houghton%20Hero.jpg?itok=prxmEjo0 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2023-02/Susan%20Houghton%20Hero.jpg?itok=sSVUFzzk 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2023-02/Susan%20Houghton%20Hero.jpg?itok=tc1bNuuI 1x"/>
+                  <img alt="Group photo of former members of Cal Poly Journalism Advisory Board at a restaurant" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_310px/public/2023-02/Susan%20Houghton%20Hero.jpg?itok=t_k9LrE-" />
+
+  </picture>
+
+
+
+
+
+
+
+					</a>
+	</div>
+	<div class="news-item-content">
+		<div class="category">
+					<span class="category"><a href="/news/category/college-liberal-arts" hreflang="en">College of Liberal Arts</a></span>
+
+		</div>
+		<h4 class="title">
+			<a href="/news/once-journalist-always-journalist">Once a Journalist, Always a Journalist</a>
+		</h4>
+		<div class="teaser">  <div class="paragraph--id--986 paragraph paragraph--type--news-content-row paragraph--view-mode--preview">
+          		<p>This dedicated group of Cal Poly journalism alumni share a passion for supporting Cal Poly and ensuring the future of quality journalism.</p>
+
+
+
+      </div>
+</div>
+	</div>
+</div>
+</div>
+								<div class="news-item large-6 xlarge-3 cell"><div class="news-item large-6 cell">
+	<div class="news-item-img no-img">
+		<a href="/news/csm-ambassadors-help-teens-experience-marine-science-through-outreach">
+									
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2022-07/Hero%20Santa%20Rosa%20Creek.jpg?itok=7CDmBCdo 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2022-07/Hero%20Santa%20Rosa%20Creek.jpg?itok=7CDmBCdo 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2022-07/Hero%20Santa%20Rosa%20Creek.jpg?itok=RCnPQ9Gy 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2022-07/Hero%20Santa%20Rosa%20Creek.jpg?itok=9rYfHlUd 1x"/>
+                  <img alt="Three Cal Poly students pose smiling on the Cal Poly pier" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_310px/public/2022-07/Hero%20Santa%20Rosa%20Creek.jpg?itok=qKYVEbH3" />
+
+  </picture>
+
+
+
+
+
+
+
+					</a>
+	</div>
+	<div class="news-item-content">
+		<div class="category">
+					<span class="category"><a href="/news/category/college-science-and-mathematics" hreflang="en">College of Science and Mathematics</a></span>
+
+		</div>
+		<h4 class="title">
+			<a href="/news/csm-ambassadors-help-teens-experience-marine-science-through-outreach">CSM Ambassadors Help Teens Experience Marine Science Through Outreach</a>
+		</h4>
+		<div class="teaser">  <div class="paragraph--id--936 paragraph paragraph--type--news-content-row paragraph--view-mode--preview">
+          		<p>The Santa Rosa Creek Foundation supports student scholarships, field trips, Learn by Doing Labs and summer camps for Tulare County high school students.</p>
+
+
+
+      </div>
+</div>
+	</div>
+</div>
+</div>
+								<div class="news-item large-6 xlarge-3 cell"><div class="news-item large-6 cell">
+	<div class="news-item-img no-img">
+		<a href="/news/entrepreneurship-all">
+									
+			    <picture>
+                  <source media="all and (min-width: 1024px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2022-06/Patino%20Hero.jpeg?itok=mfg9HT6r 1x"/>
+              <source media="all and (min-width: 640px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_470px/public/2022-06/Patino%20Hero.jpeg?itok=mfg9HT6r 1x"/>
+              <source media="all and (min-width: 400px)" type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_585px/public/2022-06/Patino%20Hero.jpeg?itok=faZJ8l5q 1x"/>
+              <source type="image/jpeg" data-srcset="/sites/giving.calpoly.edu/files/styles/width_345px/public/2022-06/Patino%20Hero.jpeg?itok=BxBtij3a 1x"/>
+                  <img alt="Students of the Patino School pose in front of their school&#039;s sign" class="lazyload" data-src="/sites/giving.calpoly.edu/files/styles/width_310px/public/2022-06/Patino%20Hero.jpeg?itok=9lyD1Mvt" />
+
+  </picture>
+
+
+
+
+
+
+
+					</a>
+	</div>
+	<div class="news-item-content">
+		<div class="category">
+					<span class="category"><a href="/news/category/center-innovation-and-entrepreneurship" hreflang="en">Center for Innovation and Entrepreneurship</a></span>
+
+		</div>
+		<h4 class="title">
+			<a href="/news/entrepreneurship-all">Entrepreneurship For All</a>
+		</h4>
+		<div class="teaser">  <div class="paragraph--id--931 paragraph paragraph--type--news-content-row paragraph--view-mode--preview">
+          		<p>A Fresno High School and the CIE Are Increasing Educational Access for Low-Income Students</p>
+
+
+
+      </div>
+</div>
+	</div>
+</div>
+</div>
+			</div>
+</div>
+
+  
+  
+
+  
+  <div class="more">
+	<a href="/news" class="button">More Giving Stories</a>
+</div>
+
+
+  
+  </div>
+</div>
+
+					</section>
+	
+
+
+		
+		
+		</span>
+
+	</div>
+
+	</div>
+
+	
+	
+	
+		
+		
+		</span>
+
+
+		</div>
+	
+			<footer id="footer" class="page-footer">
+			<div id="header-release"></div>
+			<div class="footer-inner">
+				<div class="footer-content">
+					<div class="site-footer">
+						<div class="grid-container xlarge">
+							<div class="grid-x grid-margin-x">
+																	<div class="site-links large-10 large-offset-1 xlarge-auto xlarge-offset-0 cell">
+
+											<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="block-footer">
+            
+  <h2 class="block-title visually-hidden" id="block-footer-menu">Footer</h2>
+  
+
+        
+							<div class="grid-x">
+																					<div class="category-list small-12 xxlarge-auto">
+								<div class="category-parent">Key Contacts</div>
+																														<div class="category-collapse">
+					<ul class="category-children menu vertical">
+																								<li><a href="/colleges-and-units" data-drupal-link-system-path="node/61">Colleges and Units</a></li>
+																																		<li><a href="/divisional-directory" data-drupal-link-system-path="node/226">Divisional Directory</a></li>
+																																		<li><a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;pgid=1174&amp;cid=2599">Update My Contact Information</a></li>
+																															</div>
+				</ul>
+			</div>
+			
+																										<div class="category-list small-12 xxlarge-auto">
+								<div class="category-parent">Make a Gift</div>
+																														<div class="category-collapse">
+					<ul class="category-children menu vertical">
+																								<li><a href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&amp;gid=1&amp;sitebuilder=1&amp;pgid=961&amp;cid=2272">Online</a></li>
+																																		<li><a href="/faqs">By Mail</a></li>
+																																		<li><span>Tax ID: 20-4927897</span></li>
+																															</div>
+				</ul>
+			</div>
+			
+																										<div class="category-list small-12 xxlarge-auto">
+								<div class="category-parent">Cal Poly Foundation</div>
+																														<div class="category-collapse">
+					<ul class="category-children menu vertical">
+																								<li><a href="https://foundation.calpoly.edu/content/index">About the Cal Poly Foundation</a></li>
+																																		<li><a href="/sites/giving.calpoly.edu/files/2021-09/Campaign-Impact-Report-accessible.pdf" target="_blank">Campaign Impact Report (PDF)</a></li>
+																															</div>
+				</ul>
+			</div>
+			
+																									</div>
+					
+
+
+  </nav>
+
+
+									</div>
+								
+																				<span id="block-footer-2" class="block-footer-2 block block-block-content block-block-content9dbe1be9-3871-425c-bc1b-4019ac90baf1 large-10 large-offset-1 xlarge-4 xlarge-offset-0 cell site-card">
+	
+	
+			<h4  class="block-title title">University Development and Alumni Engagement</h4>
+		
+
+	
+							<p><a href="/cdn-cgi/l/email-protection#fe999788979099be9d9f928e919287d09b9a8b" class=""><span class="__cf_email__" data-cfemail="7e1917081710193e1d1f120e111207501b1a0b">[email&#160;protected]</span></a><br><a href="tel:805-756-4483" class="phone">805-756-GIVE</a></p>
+
+
+		
+		
+		</span>
+
+
+															</div>
+						</div>
+					</div>
+											<div class="global-footer">
+							<div class="grid-container xlarge">
+								<div class="university-card">
+									<img class="logo" src="/themes/custom/calpoly_v2/images/calpoly-logo-reversed.svg" alt="Cal Poly">
+									<div class="info">
+										<div class="address">
+											<span class="street">1 Grand Avenue,</span>
+											San Luis Obispo, CA 93407</div>
+										<div class="phone">
+											<a href="tel:805-756-1111">805-756-1111</a>
+										</div>
+										<div class="social-menu">
+	<ul role="menubar">
+		<li role="menuitem">
+			<a href="https://www.instagram.com/calpoly/" target="_blank" aria-label="Instagram">
+				<i class="fab fa-instagram"></i>
+			</a>
+		</li>
+		<li role="menuitem">
+			<a href="https://twitter.com/CalPoly" target="_blank" aria-label="Twitter">
+				<i class="fab fa-twitter"></i>
+			</a>
+		</li>
+		<li role="menuitem">
+			<a href="https://www.facebook.com/CalPoly/" target="_blank" aria-label="Facebook">
+				<i class="fab fa-facebook-square"></i>
+			</a>
+		</li>
+	</ul>
+</div>
+
+									</div>
+								</div>
+									<nav role="navigation" aria-labelledby="block-globalfooterprimary-menu" id="block-globalfooterprimary" class="global-footer-menu block-globalfooterprimary">
+            
+  <h2 class="block-title visually-hidden" id="block-globalfooterprimary-menu">Global Footer Primary</h2>
+  
+
+        
+							<ul class="menu dropdown vertical large-horizontal">
+												<li>
+						<a href="https://www.calpoly.edu/">University Home</a>
+											</li>
+									<li>
+						<a href="https://my.calpoly.edu">My Cal Poly Portal</a>
+											</li>
+									<li>
+						<a href="https://maps.calpoly.edu">Campus Map</a>
+											</li>
+									<li>
+						<a href="https://www.calpoly.edu/diversity-equity-and-inclusion">Diversity, Equity and Inclusion</a>
+											</li>
+									<li>
+						<a href="https://chw.calpoly.edu/">Health and Wellbeing</a>
+											</li>
+									<li>
+						<a href="https://afd.calpoly.edu/public-safety/">Campus Safety</a>
+											</li>
+							</ul>
+			
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-globalfootersecondary-menu" id="block-globalfootersecondary" class="legal legal-menu block-globalfootersecondary">
+            
+  <h2 class="block-title visually-hidden" id="block-globalfootersecondary-menu">Global Footer Secondary</h2>
+  
+
+        
+
+  <ul data-region="footer_last" class="menu menu-level-0">
+      
+    <li class="menu-item">
+      <a href="https://www.calpoly.edu/privacy">Privacy Notice</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://universitymarketing.calpoly.edu/website-feedback/">Website Feedback</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://accessibility.calpoly.edu/website-accessibility-statement">Web Accessibility Statement</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://crco.calpoly.edu/content/title-ix">Title IX</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://afd.calpoly.edu/clery/reports/annual-security-report.pdf">Campus Annual Security Report (PDF)</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://afd.calpoly.edu/clery/reports/campus-safety-plan.pdf">Campus Safety Plan (PDF)</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="https://get.adobe.com/reader/">PDF Reader</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentglobal-footer-secondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+  </nav>
+
+
+																	<div class="legal">
+										<div class="copyright">
+																							&copy;
+												2023
+												California Polytechnic State University
+																					</div>
+									</div>
+															</div>
+						</div>
+									</div>
+				<div class="footer-mountains"></div>
+			</div>
+		</footer>
+		</div>
+	
+</div>
+
+  </div>
+
+					
+					<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/21","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,calpoly_v2\/font-awesome,calpoly_v2\/global,calpoly_v2\/owl.carousel,calpoly_v2\/slick,calpoly_v2\/slick.lightbox,calpoly_v2\/typekit,calpoly_v2\/visitdays,calpoly_v2\/wow,ckeditor_y3ti_plugins\/extraScript,ckeditor_y3ti_plugins\/typekit,core\/picturefill,lazy\/lazy,paragraphs\/drupal.paragraphs.unpublished,select2\/select2.min,system\/base,views\/views.ajax,views\/views.module,zurb_foundation\/global","theme":"calpoly_v2","theme_token":null},"ajaxTrustedUrl":[],"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.80000000000000004,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"","preferNative":false,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:d8b108992b06bf4c7651e988e5512ac86c378dc96ec895b64bc77bfba4504816":{"view_name":"news","view_display_id":"content_list","view_args":"[paragraph:field_term_news_category:target_id]","view_path":"\/node\/21","view_base_path":"\/node\/21","view_dom_id":"d8b108992b06bf4c7651e988e5512ac86c378dc96ec895b64bc77bfba4504816","pager_element":0}}},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"classes":"page-feature-content","id":"","element":"div","show_label":false,"label_element":"h3","label_element_classes":"","attributes":"","effect":"none","speed":"fast"}}},"user":{"uid":0,"permissionsHash":"56bf1e542597118200fcb560d656cc549a09cc66d68949666e371c25d61ed4d1"}}</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/core/misc/polyfills/element.matches.js?v=9.5.7"></script>
+<script src="/core/misc/polyfills/object.assign.js?v=9.5.7"></script>
+<script src="/core/misc/polyfills/nodelist.foreach.js?v=9.5.7"></script>
+<script src="/core/assets/vendor/css-escape/css.escape.js?v=1.5.1"></script>
+<script src="/core/assets/vendor/es6-promise/es6-promise.auto.min.js?v=4.2.8"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=9.5.7"></script>
+<script src="/core/misc/drupal.js?v=9.5.7"></script>
+<script src="/core/misc/drupal.init.js?v=9.5.7"></script>
+<script src="/core/assets/vendor/picturefill/picturefill.min.js?v=3.0.3"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=5.3.3"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/modules/contrib/addtoany/js/addtoany.js?v=9.5.7"></script>
+<script src="/modules/contrib/lazy/js/lazy.js?v=9.5.7"></script>
+<script src="/core/misc/jquery.once.bc.js?v=9.5.7"></script>
+<script src="/themes/contrib/zurb_foundation/js/foundation.min.js?v=9.5.7"></script>
+<script src="/themes/contrib/zurb_foundation/js/foundation_init.js?v=9.5.7"></script>
+<script src="/themes/contrib/zurb_foundation/js/motion-ui.min.js?v=9.5.7"></script>
+<script src="/core/assets/vendor/js-cookie/js.cookie.min.js?v=3.0.1"></script>
+<script src="/core/misc/jquery.cookie.shim.js?v=9.5.7"></script>
+<script src="/themes/custom/calpoly_v2/js/calpoly_v2.js?rtni8d"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://mobi.visitdays.com/assets/snippet/assets/main.bundle.js" data-mobi-hide-default-button="" data-mobi-subdomain="calpoly" data-mobi-audiences="5" data-mobi-categories="daily" async=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+<script src="/libraries/select2/dist/js/select2.min.js?rtni8d"></script>
+<script src="/core/assets/vendor/jquery-form/jquery.form.min.js?v=4.3.0"></script>
+<script src="/core/misc/progress.js?v=9.5.7"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.2.0"></script>
+<script src="/core/modules/responsive_image/js/responsive_image.ajax.js?v=9.5.7"></script>
+<script src="/core/misc/ajax.js?v=9.5.7"></script>
+<script src="/core/themes/stable/js/ajax.js?v=9.5.7"></script>
+<script src="/core/modules/views/js/base.js?v=9.5.7"></script>
+<script src="/core/modules/views/js/ajax_view.js?v=9.5.7"></script>
+<script src="/themes/contrib/zurb_foundation/js/top_bar_active.js?v=9.5.7"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d745b71d08","applicationID":"460275115","transactionName":"NF1UY0NRXhVQB0UPWw0Xd1RFWV8IHhRQAVE8W1dUWVU=","queueTime":14,"applicationTime":45,"atts":"GBpXFQtLTRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+				</html>
