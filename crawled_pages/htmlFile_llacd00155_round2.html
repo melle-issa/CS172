@@ -1,0 +1,814 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="dpgMyPage_Head1"><title>
+	Current Students - Life on Campus | SDSU
+</title><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-type" content="text/html;charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta content="San Diego State University is one of the nation's premier urban research universities actively engaged in preparing graduates who will make an impact on the San Diego region and beyond." name="DESCRIPTION" /><link  href="/include/general_layout.css" rel="stylesheet" type="text/css" media="screen, print" /><link  href="/include/module_layouts.css" rel="stylesheet" type="text/css" media="screen, print" /><link id="dpgMyPage_rssFeedLink" rel="alternate" type="application/rss+xml" title="RSS" href="rss.ashx?deptid=111" />
+        
+    <script type="text/javascript">/*!LOAD!*/
+	    function AddOnLoadEvent(func) {
+		    var oldonload = window.onload;
+		    if (typeof window.onload != 'function') {
+			    window.onload = func;
+		    } else {
+			    window.onload = function() {
+				    if (oldonload) {
+					    oldonload();
+				    }
+				    func();
+			    }
+		    }
+	    }
+    </script>
+    
+
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.4.2.min.js">/*!LOAD!*/</script>
+
+    <script type='text/javascript' src='/scripts/jQuery/plugins/jquery.easing.1.3.js'>/*!LOAD!*/</script>
+    <style>
+    .master, .master_header, .master_footer {
+        left: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    </style>
+<link href='/include/css/home/2011Templatebase.css' rel='stylesheet' type='text/css' media='screen, print' /><link href="/home/css/2019-accessibility-fix.css" rel="stylesheet" type="text/css" media="screen, print" /><link href='/include/css/home/2011Templatesubpage.css' rel='stylesheet' type='text/css' media='screen, print' /></head>
+<body class="sdsu_2011_supage_template" id="body"> 
+<div style="width: 0px; height: 0px; position: absolute; left: 0px; top: 0px;">
+    <a name="top"></a>
+    
+    <a href="#content" accesskey="c">Content <img src="/include/images/trans.gif" alt="Skip to content." width="1" height="1" /></a>
+    
+    
+    
+    
+</div>
+<form name="aspnetForm" method="post" action="currentstudents.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY0OTg1MDU4OA9kFgJmD2QWBmYPZBYIAgUPFgQeBFRleHQF3wE8bWV0YSBjb250ZW50PSJTYW4gRGllZ28gU3RhdGUgVW5pdmVyc2l0eSBpcyBvbmUgb2YgdGhlIG5hdGlvbidzIHByZW1pZXIgdXJiYW4gcmVzZWFyY2ggdW5pdmVyc2l0aWVzIGFjdGl2ZWx5IGVuZ2FnZWQgaW4gcHJlcGFyaW5nIGdyYWR1YXRlcyB3aG8gd2lsbCBtYWtlIGFuIGltcGFjdCBvbiB0aGUgU2FuIERpZWdvIHJlZ2lvbiBhbmQgYmV5b25kLiIgbmFtZT0iREVTQ1JJUFRJT04iIC8+HgdWaXNpYmxlZ2QCBg8WAh8ABWM8bGluayAgaHJlZj0iL2luY2x1ZGUvZ2VuZXJhbF9sYXlvdXQuY3NzIiByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0ic2NyZWVuLCBwcmludCIgLz5kAgcPFgIfAAVjPGxpbmsgIGhyZWY9Ii9pbmNsdWRlL21vZHVsZV9sYXlvdXRzLmNzcyIgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJpbnQiIC8+ZAIIDxYCHgRocmVmBRV+L3Jzcy5hc2h4P2RlcHRpZD0xMTFkAgIPFgIfAWdkAgcPZBYEAgMPZBYMAgEPDxYCHwFnZGQCAw8PFgIfAWdkFgICAQ9kFgQCAQ8PFgIfAWdkZAIDDw8WAh8BZ2QWAmYPZBYCZg9kFgYCAQ8PFgIfAWdkFgICAQ8PFgIfAWdkZAIDDw8WAh8ABQtTZWFyY2ggU0RTVWRkAgcPDxYCHghJbWFnZVVybAUjL2luY2x1ZGUvaW1hZ2VzL2hvbWUvc2VhcmNoX2J0bi5wbmdkZAIFDw8WAh8BaGQWAmYPZBYCAgYPDxYCHwAFE01vbmRheSwgTWF5IDEsIDIwMjNkZAIJDw8WBh4JQmFja0NvbG9yCf////8eDEJhY2tJbWFnZVVybAUqL2hvbWUvaW1hZ2VzL2N1cnJlbnQtc3R1ZGVudC1iZy1ib3JkZXIuanBnHgRfIVNCAoiABBYCHgVzdHlsZQVUYmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O2JhY2tncm91bmQtcG9zaXRpb246Y2VudGVyIHRvcDtiYWNrZ3JvdW5kLWNvbG9yOiNBODE5MzM7FggCAw8PFgIfAWdkFgICAQ9kFgJmDw8WBh4NQWx0ZXJuYXRlVGV4dAUOTGlmZSBvbiBDYW1wdXMfAwUlL2hvbWUvaW1hZ2VzL1N0dWRlbnRMaWZlLWhlYWRlci00LnBuZx8BZ2RkAgUPDxYCHwFnZGQCDw8PFgIfAWdkFgQCAQ9kFgICBA9kFgJmD2QWAgIBD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIEFggCAQ9kFgJmDxUGLGh0dHBzOi8vbmV3c2NlbnRlci5zZHN1LmVkdS9iZWludGVybmF0aW9uYWwvPi9ob21lL2ltYWdlcy9taW5pZnJlZXRleHRpbWFnZXMvMDI2MDUtR2xvYmFsLUF6dGVjcy0xMjV4ODUuanBnEVdlbGNvbWUgV2VlayBsb2dvLGh0dHBzOi8vbmV3c2NlbnRlci5zZHN1LmVkdS9iZWludGVybmF0aW9uYWwvEEJlIEludGVybmF0aW9uYWw1WW91ciBmaXJzdCBzdG9wIGZvciBTRFNVIGludGVybmF0aW9uYWwgb3Bwb3J0dW5pdGllcy5kAgIPZBYCZg8VBjRodHRwczovL25ld3NjZW50ZXIuc2RzdS5lZHUvc3R1ZGVudF9hZmZhaXJzL29uZXNkc3UvPS9ob21lL2ltYWdlcy9taW5pZnJlZXRleHRpbWFnZXMvMDI2MDQtT25lU0RTVS1sb2dvLTEyNXg4NS5qcGcXT25lIFNEU1UgQ29tbXVuaXR5IGxvZ280aHR0cHM6Ly9uZXdzY2VudGVyLnNkc3UuZWR1L3N0dWRlbnRfYWZmYWlycy9vbmVzZHN1LxJPbmUgU0RTVSBDb21tdW5pdHljQnJpbmdpbmcgdG9nZXRoZXIgc3R1ZGVudHMgd2hvIG1heSBub3QgdHlwaWNhbGx5IGludGVyYWN0IHRvICBleHBsb3JlIGlzc3VlcyBzdXJyb3VuZGluZyBkaXZlcnNpdHkuZAIDD2QWAmYPFQYZaHR0cHM6Ly90aXRsZWl4LnNkc3UuZWR1LzovaG9tZS9pbWFnZXMvbWluaWZyZWV0ZXh0aW1hZ2VzLzAyNjAyLWxldHMtdGFsay0xMjh4ODUuanBnM0xldCdzIFRhbGs6IFNEU1UgUmFwZSBhbmQgU2V4dWFsIFZpb2xlbmNlIFJlc291cmNlcxlodHRwczovL3RpdGxlaXguc2RzdS5lZHUvClNEU1UgVGFsa3NITGV0JnJzcXVvO3MgVGFsayBhYm91dCBtYWtpbmcgU2FuIERpZWdvIFN0YXRlIGEgc2FmZSBzcGFjZSBmb3IgZXZlcnlvbmUuZAIED2QWAmYPFQY8aHR0cHM6Ly9uZXdzY2VudGVyLnNkc3UuZWR1L3N0dWRlbnRfYWZmYWlycy9oZWFsdGhwcm9tb3Rpb24vQS9ob21lL2ltYWdlcy9taW5pZnJlZXRleHRpbWFnZXMvMDI2MDMtd2VsbG5lc3MtZ3JhcGhpYy0xMjV4ODUuanBnKFdlbGxuZXNzOiBlZHVjYXRpb24sIHN1cHBvcnQsIHByZXZlbnRpb248aHR0cHM6Ly9uZXdzY2VudGVyLnNkc3UuZWR1L3N0dWRlbnRfYWZmYWlycy9oZWFsdGhwcm9tb3Rpb24vFVNEU1UgSGVhbHRoIFByb21vdGlvbjpIZWxwaW5nIGNyZWF0ZSBhIGhlYWx0aGllciBjYW1wdXMgdG8gZW5oYW5jZSB5b3VyIHN1Y2Nlc3MuZAIDD2QWAgIPD2QWAmYPZBYEAgEPDxYCHwFnZBYCZg8WAh8ABUU8aDIgaWQ9J3Jzc3RpdGxlJyBjbGFzcz0ncnNzX3RvcF90aXRsZSc+RnJvbSB0aGUgQ2FtcHVzIENhbGVuZGFyPC9oMj5kAgMPZBYCAgEPPCsADQEADxYEHgtfIURhdGFCb3VuZGcfCQIMZBYCZg9kFhxmDw8WAh8BaGRkAgEPZBYCZg9kFgJmDxUETWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY1Nzc2MzQyEUNyb3NzaW5nIHRoZSBMaW5lTWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY1Nzc2MzQyZSBPbmdvaW5nIHRocm91Z2ggVGh1LiwgTWF5IDQsIDIwMjMsIDRwbSBUaGUgU2FuIERpZWdvIFN0YXRlIFVuaXZlcnNpdHkgU2Nob29sIG9mIEFydCBhbmQgRGVzaWduJiN4ODU7ZAICD2QWAmYPZBYCZg8VBE1odHRwczovL3NhY2Quc2RzdS5lZHUvY2FsZW5kYXI/dHJ1bWJhRW1iZWQ9dmlldyUzZGV2ZW50JTI2ZXZlbnRpZCUzZDE2NDMyMzM3MA1Nb3JuaW5nIEhvb3BzTWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY0MzIzMzcwaSBNb24uLCBNYXkgMSwgMjAyMywgOGFtIFdhbm5hIHN0YXJ0IHlvdXIgZGF5IG9uIHRoZSBjb3VydD8gSm9pbiB0aGUgWW91bmcgTWVuIG9mIENvbG9yIEFsbGlhbmNlIGZvciYjeDg1O2QCAw9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjYzODE3MzRDR2xvYmFsIEVkdWNhdGlvbiBJbmZvLVNlc3Npb246IENvbGxlZ2Ugb2YgSGVhbHRoIGFuZCBIdW1hbiBTZXJ2aWNlc01odHRwczovL3NhY2Quc2RzdS5lZHUvY2FsZW5kYXI/dHJ1bWJhRW1iZWQ9dmlldyUzZGV2ZW50JTI2ZXZlbnRpZCUzZDE2NjM4MTczNGggTW9uLiwgTWF5IDEsIDIwMjMsIDExYW0gSWYgeW91JiMzOTtyZSBhIENISFMgc3R1ZGVudCBpbnRlcmVzdGVkIGluIEdsb2JhbCBFZHVjYXRpb24gb3Bwb3J0dW5pdGllcyYjeDg1O2QCBA9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQ4NjgzMzcgQS5TLiBGaW5hbmNpYWwgQWZmYWlycyBDb21taXR0ZWVNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQ4NjgzMzdqIE1vbi4sIE1heSAxLCAyMDIzLCAxMWFtIFRoZSBwdXJwb3NlIG9mIHRoZSBGaW5hbmNpYWwgQWZmYWlycyBDb21taXR0ZWUgc2hhbGwgYmUgdG8gYWR2aXNlIHRoZSBBU0JPRCYjeDg1O2QCBQ9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjY0OTQyMjYYQ0lSIEZpbmFscyBGdWVsIFN0YXRpb25zTWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY2NDk0MjI2aiBNb24uLCBNYXkgMSwgMjAyMywgMTJwbSBGaW5hbHMgV2VlayBpcyBhcHByb2FjaGluZyEgWW91ciBoZWFsdGggaXMgZXF1YWxseSBpbXBvcnRhbnQgYXMgeW91ciBleGFtcywmI3g4NTtkAgYPZBYCZg9kFgJmDxUETWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY2NDM5NDk3GFRhc3RlIG9mIHRoZSBNaWRkbGUgRWFzdE1odHRwczovL3NhY2Quc2RzdS5lZHUvY2FsZW5kYXI/dHJ1bWJhRW1iZWQ9dmlldyUzZGV2ZW50JTI2ZXZlbnRpZCUzZDE2NjQzOTQ5N2ggTW9uLiwgTWF5IDEsIDIwMjMsIDEycG0gQ2VsZWJyYXRlIFNXQU5BIChTb3V0aHdlc3QgQXNpYW4sIE5vcnRoIEFmcmljYW4pIEhlcml0YWdlIE1vbnRoIHdpdGggc29tZSYjeDg1O2QCBw9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjY3OTAzMDcmS2ljayBiYWNrIGF0IHRoZSBBUElEQSBNb250aCBLaWNrLU9mZiFNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjY3OTAzMDdqIE1vbi4sIE1heSAxLCAyMDIzLCAxMnBtIENvbWUgYnkgdGhlIEFQSURBIENlbnRlciEgR2V0IHNvbWUgQXNpYW4gc25hY2tzICh3aGlsZSBzdXBwbGllcyBsYXN0KSEgUGxheSYjeDg1O2QCCA9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQyODM3MjMLVGFsayBpdCBPdXRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQyODM3MjNqIE1vbi4sIE1heSAxLCAyMDIzLCAxcG0gVGFsayBJdCBPdXQgaXMgYmFjayB0aGlzIHNlbWVzdGVyIHZpYSBab29tISBEdXJpbmcgTW9uZGF5cyBmcm9tIDE6MDAgdG8gMzowMCYjeDg1O2QCCQ9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQzNTc0NzEyVGFsayBJdCBPdXQgLSBCaWxpbmd1YWwgRHJvcC1pbiBTdXBwb3J0IGF0IHRoZSBMUkNNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQzNTc0NzFqIE1vbi4sIE1heSAxLCAyMDIzLCAxcG0gRmVlbGluZyBzdHJlc3NlZD8gSnVzdCBuZWVkIHRvIHRhbGsgd2l0aCBzb21lb25lPyBDb3Vuc2Vsb3JzIGZyb20gQ291bnNlbGluZyYjeDg1O2QCCg9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjQ4NjkxMTIeQS5TLiBBenRlYyBTdHVkZW50IFVuaW9uIEJvYXJkTWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY0ODY5MTEyYSBNb24uLCBNYXkgMSwgMjAyMywgMXBtIFRoZSBwdXJwb3NlIG9mIHRoaXMgQm9hcmQgc2hhbGwgYmUgdG8gcHJvcG9zZSwgcGxhbiwgcHVibGljaXplLCBhbmQmI3g4NTtkAgsPZBYCZg9kFgJmDxUETWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY2MzM3OTM3PUdsb2JhbCBFZHVjYXRpb24gRHJvcCBieSBBZHZpc2luZyAtIENvbGxlZ2Ugb2YgQXJ0cyAmIExldHRlcnNNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjYzMzc5MzdqIFR1ZS4sIE1heSAyLCAyMDIzLCA5OjMwYW0gR2xvYmFsIEVkdWNhdGlvbiBEcm9wIGJ5IEFkdmlzaW5nIC0gQ29sbGVnZSBvZiBBcnRzICZhbXA7IExldHRlckNvbWUgbWVldCYjeDg1O2QCDA9kFgJmD2QWAmYPFQRNaHR0cHM6Ly9zYWNkLnNkc3UuZWR1L2NhbGVuZGFyP3RydW1iYUVtYmVkPXZpZXclM2RldmVudCUyNmV2ZW50aWQlM2QxNjYzMzc5NjhFR2xvYmFsIEVkdWNhdGlvbiBEcm9wIGJ5IEFkdmlzaW5nIC0gUHJvZmVzc2lvbmFsIFN0dWRpZXMgb2YgRmluZSBBcnRzTWh0dHBzOi8vc2FjZC5zZHN1LmVkdS9jYWxlbmRhcj90cnVtYmFFbWJlZD12aWV3JTNkZXZlbnQlMjZldmVudGlkJTNkMTY2MzM3OTY4aCBUdWUuLCBNYXkgMiwgMjAyMywgOTozMGFtIEdsb2JhbCBFZHVjYXRpb24gRHJvcCBieSBBZHZpc2luZyAtIFBTRkFDb21lIG1lZXQgeW91ciBHbG9iYWwgRWR1Y2F0aW9uJiN4ODU7ZAINDw8WAh8BaGRkAhMPDxYCHwFoZBYCAgcPDxYEHghDc3NDbGFzcwUZbWFzdGVyX2NvbnRlbnRfbGFzdCBjbGVhch8GAgJkZAINDw8WAh8BZ2RkAg8PDxYCHwFnZBYCAgEPZBYGAgEPDxYCHwFnZGQCAw8PFgIfAWdkZAIFDw8WAh8BZ2RkAgcPFgIfAAXDAjwhLS0gR2xvYmFsIHNpdGUgdGFnIChndGFnLmpzKSAtIEdvb2dsZSBBbmFseXRpY3MgLS0+DQo8c2NyaXB0IGFzeW5jIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS01MDk2OTkxNi0yNiI+PC9zY3JpcHQ+DQo8c2NyaXB0Pg0KICB3aW5kb3cuZGF0YUxheWVyID0gd2luZG93LmRhdGFMYXllciB8fCBbXTsNCiAgZnVuY3Rpb24gZ3RhZygpe2RhdGFMYXllci5wdXNoKGFyZ3VtZW50cyk7fQ0KICBndGFnKCdqcycsIG5ldyBEYXRlKCkpOw0KDQogIGd0YWcoJ2NvbmZpZycsICdVQS01MDk2OTkxNi0yNicpOw0KPC9zY3JpcHQ+ZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBAUXZHBnTXlQYWdlJGN0bDExJG9wdGlvbjEFF2RwZ015UGFnZSRjdGwxMSRvcHRpb24xBRdkcGdNeVBhZ2UkY3RsMTEkb3B0aW9uMgUZZHBnTXlQYWdlJGN0bDExJGJ0blNlYXJjaAUZZHBnTXlQYWdlJGN0bDIzJGd2UnNzRmVlZA88KwAKAQgCAWSxS9mvWd0gS+SzLUyHQt1JaoVlxw==" />
+
+
+<script src="/home/ScriptResource.axd?d=eaGbgVK8a7COlZKIUyqEY5pl48cydu6U9NVEoVmJ4bm1OyIhJuUOE6EGDPWDJSbbpI8_XIgrDnuEhr26H2-5IWrFPf9ubwX5_uXPUdJq06J8WhxZYRjrezP6tuwX9uCW8WavbeF5Oi1NWe4RTRmL_Y7AqfJt9JpJ_gR9QkExrtAFwgkQ0&amp;t=3f4a792d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="853817AD" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLKyoGdBQLty+zTCwLcj9eTCALYxObXBgLkrfa6D9L6y6i5yOJ2hjlyfq28qQWi2s3C" />
+
+
+
+<div id="dpgMyPage_pnlMaster" class="master">
+	        
+    <div id="dpgMyPage_pnlTemplateHeader" class="master">
+		<div class='template_header_links_container'><div class='template_header_links'><a href="https://admissions.sdsu.edu/" class="panel">Future Students</a><a href="https://newscenter.sdsu.edu/home/currentstudents.aspx" class="panel">Current Students</a><a href="https://newscenter.sdsu.edu/campusresources/facstaff-resources.aspx" class="panel">Faculty/Staff</a><a href="http://www.sdsualumni.org/s/997/start-page.aspx" class="panel">Alumni</a><a href="https://securelb.imodules.com/s/997/campaign13/index.aspx?sid=997&gid=1&pgid=3034" class="panel">Give to SDSU</a></div></div>
+	</div>
+    <div id="dpgMyPage_pnlTemplateHeaderBottom" class="master_bottom">
+		
+        <div id="dpgMyPage_pnl_header_container" class="header_container">
+			
+            <div id="dpgMyPage_pnlTemplateHeaderLeft" class="master_left">
+				<a name="2518"></a><div id="dpgMyPage_ctl06_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl06_pnlFTMContent">
+						<a mce_href="https://www.sdsu.edu/" href="https://www.sdsu.edu/"><img alt="San Diego State University" mce_src="/sdsu2011template/images/logo.png" src="/sdsu2011template/images/logo.png" width="152" height="30" border="0"></a>
+					</div>
+
+				</div>
+			</div>
+            <div id="dpgMyPage_pnlTemplateHeaderRight" class="master_right">
+				
+    <script type="text/javascript">
+        var searchText = "search";
+
+        $(document).ready(function() {
+            var textBox = $("#dpgMyPage_ctl11_txtSearch");
+
+            textBox.attr('value', searchText);
+            textBox.click(function() {
+                var txt = $("#dpgMyPage_ctl11_txtSearch");
+
+                if (txt.attr("value") == searchText) {
+                    txt.attr("value", "");
+                }
+            });
+            textBox.blur(function() {
+                var txt = $("#dpgMyPage_ctl11_txtSearch");
+
+                if (txt.attr("value") == "") {
+                    txt.attr("value", searchText);
+                }
+            });
+        });
+    </script>
+<div id="dpgMyPage_ctl11_pnlSearch" class="search">
+					
+    <div id="dpgMyPage_ctl11_myradio" class="myradio">
+						
+        
+
+        <div id="dpgMyPage_ctl11_radio1">
+							
+                <input id="dpgMyPage_ctl11_option1" type="radio" name="dpgMyPage$ctl11$Group1" value="option1" /><label for="dpgMyPage_ctl11_option1">This Site</label>
+                <input id="dpgMyPage_ctl11_option2" type="radio" name="dpgMyPage$ctl11$Group1" value="option2" checked="checked" /><label for="dpgMyPage_ctl11_option2">SDSU</label>
+        
+						</div>
+
+    
+					</div>
+    
+    <input name="dpgMyPage$ctl11$txtSearch" type="text" id="dpgMyPage_ctl11_txtSearch" class="search_textbox" Alt="Search Terms" Title="Search Terms" />
+    <input type="image" name="dpgMyPage$ctl11$btnSearch" id="dpgMyPage_ctl11_btnSearch" class="search_button" Title="Submit Search" src="/include/images/home/search_btn.png" alt="Submit Search" border="0" />
+
+				</div>
+			</div>
+        
+		</div>
+    
+	</div>
+    
+    <!-- Master Header -->
+    
+
+    <!-- Template Breadcrumb Links -->
+    
+    
+    <!-- Master Content Content -->
+    <div id="dpgMyPage_pnlContent" class="master_content wrapper" style="background-repeat:no-repeat;background-position:center top;background-color:#A81933;">
+		    
+      
+        <!-- SDSU Template Layout Header Image -->
+        
+        
+        <div id="dpgMyPage_pnlDepartmentHeader" class="department_header_panel">
+			
+            <!-- Department Page -->
+            <h1>
+            <a id="dpgMyPage_lnkDept" disabled="disabled" class="header_image"><img id="dpgMyPage_imgDept" class="master_header_image_main" src="/home/images/StudentLife-header-4.png" alt="Life on Campus" border="0" /></a> 
+            </h1>                
+        
+		</div>
+        
+        <!-- SDSU Template Layout Nav Bar -->
+        <div id="dpgMyPage_pnlPageNavContainer" class="page_nav_container">
+			
+            <div id="dpgMyPage_pnlPageNav" class="page_nav">
+				<ul id='main_links_313' class='dropdown'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='https://stratcomm.sdsu.edu/sdsu-mission-and-history'>About</a><ul id='main_links_313_00' class='sublinks dropdown_00'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='https://president.sdsu.edu/'>President</a></li>
+<li class=''><a href='https://stratcomm.sdsu.edu/achievements-and-distinctions'>Achievements & Distinctions</a></li>
+<li class=''><a href='https://stratcomm.sdsu.edu/sdsu-mission-and-history'>Facts, History and Mission</a></li>
+<li class=''><a href='https://diversity.sdsu.edu/'>Diversity</a></li>
+<li class=''><a href='https://bfa.sdsu.edu/safety/emergency/emerprep'>Emergency Info</a></li>
+<li class=''><a href='https://www.sdsu.edu/departments'>Departments & Offices</a></li>
+<li class=''><a href='https://directory.sdsu.edu/'>Directory</a></li>
+<li class=''><a href='https://map.concept3d.com/?id=801'>Maps</a></li>
+<li class=''><a href='https://bfa.sdsu.edu/campus/parkingtrans/parkinginfo.aspx'>Parking</a></li>
+<li class=''><a href='https://stratcomm.sdsu.edu/media-relations'>Media Relations</a></li>
+<li class=''><a href='https://bfa.sdsu.edu/hr/jobs/'>Jobs</a></li>
+<li class=''><a href='https://tcf.sdsu.edu/'>The Campanile Foundation</a></li>
+<li class=''><a href='https://www.kpbs.org'>KPBS</a></li>
+<li class=''><a href='https://www.sdsu.edu/strategic-planning'>Strategic Plan</a></li>
+<li class=' last '><a href='https://ivcampus.sdsu.edu/'>Imperial Valley Campus</a></li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+</li>
+<li class=''><a href='https://admissions.sdsu.edu/'>Admissions</a><ul id='main_links_313_01' class='sublinks dropdown_01'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='https://admissions.sdsu.edu/academic_programs/majors_minors'>Undergraduate</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/graduate'>Graduate</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/out_of_state'>Out-of-State</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/international'>International</a></li>
+<li class=''><a href='http://arweb.sdsu.edu/es/veterans/'>Veterans</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/counselors'>Counselors</a></li>
+<li class=' last '><a href='https://admissions.sdsu.edu/tours_events/tours'>Campus Tours</a></li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+</li>
+<li class=''><a href='https://admissions.sdsu.edu/academic_programs'>Academics</a><ul id='main_links_313_02' class='sublinks dropdown_02'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='https://registrar.sdsu.edu/calendars/academic_calendars'>Academic Calendar</a></li>
+<li class=''><a href='https://advising.sdsu.edu/'>Advising</a></li>
+<li class=''><a href='http://blackboard.sdsu.edu/'>Blackboard Courses</a></li>
+<li class=''><a href='https://sunspot.sdsu.edu/schedule/'>Class Schedule</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/academic_programs#colleges'>Colleges</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/academic_programs/credentials'>Credential Programs</a></li>
+<li class=''><a href='https://admissions.sdsu.edu/academic_programs'>Degrees</a></li>
+<li class=''><a href='https://www.sdsu.edu/departments'>Departments & Offices</a></li>
+<li class=''><a href='https://ces.sdsu.edu/'>Extended Studies</a></li>
+<li class=''><a href='https://curriculum.sdsu.edu/curriculum-services/general-catalog'>General Catalog</a></li>
+<li class=''><a href='https://curriculum.sdsu.edu/curriculum-services/graduate-bulletin'>Graduate Bulletin</a></li>
+<li class=''><a href='http://oip.sdsu.edu/oip/'>International Programs</a></li>
+<li class=''><a href='https://library.sdsu.edu/'>Library</a></li>
+<li class=''><a href='https://provost.sdsu.edu/'>Provost</a></li>
+<li class=' last '><a href='https://sunspot.sdsu.edu/portal/'>WebPortal</a></li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+</li>
+<li class=''><a href='https://research.sdsu.edu/'>Research</a><ul id='main_links_313_03' class='sublinks dropdown_03'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='http://www.sci.sdsu.edu/bsc/'>BioScience Center</a></li>
+<li class=''><a href='https://cmi.sdsu.edu/'>Coastal & Marine Institute</a></li>
+<li class=''><a href='https://research.sdsu.edu/research_affairs'>Graduate & Research Affairs</a></li>
+<li class=''><a href='https://www.foundation.sdsu.edu/'>Research Foundation</a></li>
+<li class=' last '><a href='http://www.ibachsd.org/'>Institute for Behavioral and Community Health</a></li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+</li>
+<li class=' last '><a href='https://newscenter.sdsu.edu/student_affairs/whylive.aspx'>Campus Life</a><ul id='main_links_313_04' class='sublinks dropdown_04'>
+<li class='top'>&nbsp;</li>
+<li class=' first '><a href='https://as.sdsu.edu/'>Associated Students</a></li>
+<li class=''><a href='https://goaztecs.com/'>Athletics</a></li>
+<li class=''><a href='https://arc.sdsu.edu/'>Aztec Recreation Center</a></li>
+<li class=''><a href='https://sa.sdsu.edu/career'>Career Services</a></li>
+<li class=''><a href='https://newscenter.sdsu.edu/student_affairs/cps/'>Counseling and Psych. Services</a></li>
+<li class=''><a href='https://diversity.sdsu.edu/'>Diversity</a></li>
+<li class=''><a href='https://newscenter.sdsu.edu/student_affairs/sll/'>Get Involved</a></li>
+<li class=''><a href='https://newscenter.sdsu.edu/student_affairs/financialaid/'>Financial Aid & Scholarships</a></li>
+<li class=''><a href='http://shs.sdsu.edu/'>Health Services</a></li>
+<li class=''><a href='https://bfa.sdsu.edu/hr'>Human Resources</a></li>
+<li class=''><a href='https://housing.sdsu.edu/'>Living on Campus</a></li>
+<li class=''><a href='https://police.sdsu.edu/'>SDSU Police</a></li>
+<li class=''><a href='http://www.aztecshops.com/'>Shopping & Dining</a></li>
+<li class=''><a href='http://arweb.sdsu.edu/es/veterans/'>Veterans</a></li>
+<li class=' last '><a href='https://sunspot.sdsu.edu/pls/webapp/web_menu.login/'>WebPortal</a></li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+</li>
+<li class='left_end'></li><li class='small_bottom'></li></ul>
+<a id="content"></a>
+			</div>
+        
+		</div>
+               
+        <!-- Top Portion Only For SDSU Template Homepage -->
+        
+        
+        <!-- Top Right Portion Full List Display SDSU Template Homepage -->     
+        
+        
+        <!-- Map SDSU Template Homepage -->
+        
+        
+        <!-- Six Across SDSU Template Homepage -->
+        
+        
+        <!-- Content For SDSU Template Homepage Left/Right -->
+        <div id="dpgMyPage_pnlTemplateContent" class="content_container">
+			
+            <div id="dpgMyPage_pnlTemplateContentLeft" class="content_left">
+				<div class="content_inner_left_top"></div><div class="content_inner_left_middle"><div class="leftcontentstorycontainer"><a name="12176"></a><div id="dpgMyPage_ctl13_pnlAdvanedRssReader" class="module mini_story_lister">
+					
+    
+    
+
+    <div id="dpgMyPage_ctl13_pnlItems">
+						
+        <ul>
+                <li>
+                    <a href="https://newscenter.sdsu.edu/beinternational/" class="item_image"><img src="/home/images/minifreetextimages/02605-Global-Aztecs-125x85.jpg" alt="Welcome Week logo" /></a>
+                    <div class="item_title"><a href="https://newscenter.sdsu.edu/beinternational/">Be International</a></div>
+                    <div class="item_content">Your first stop for SDSU international opportunities.</div>
+                    <div class="clear_div"></div>
+                </li>
+            
+                <li>
+                    <a href="https://newscenter.sdsu.edu/student_affairs/onesdsu/" class="item_image"><img src="/home/images/minifreetextimages/02604-OneSDSU-logo-125x85.jpg" alt="One SDSU Community logo" /></a>
+                    <div class="item_title"><a href="https://newscenter.sdsu.edu/student_affairs/onesdsu/">One SDSU Community</a></div>
+                    <div class="item_content">Bringing together students who may not typically interact to  explore issues surrounding diversity.</div>
+                    <div class="clear_div"></div>
+                </li>
+            
+                <li>
+                    <a href="https://titleix.sdsu.edu/" class="item_image"><img src="/home/images/minifreetextimages/02602-lets-talk-128x85.jpg" alt="Let's Talk: SDSU Rape and Sexual Violence Resources" /></a>
+                    <div class="item_title"><a href="https://titleix.sdsu.edu/">SDSU Talks</a></div>
+                    <div class="item_content">Let&rsquo;s Talk about making San Diego State a safe space for everyone.</div>
+                    <div class="clear_div"></div>
+                </li>
+            
+                <li>
+                    <a href="https://newscenter.sdsu.edu/student_affairs/healthpromotion/" class="item_image"><img src="/home/images/minifreetextimages/02603-wellness-graphic-125x85.jpg" alt="Wellness: education, support, prevention" /></a>
+                    <div class="item_title"><a href="https://newscenter.sdsu.edu/student_affairs/healthpromotion/">SDSU Health Promotion</a></div>
+                    <div class="item_content">Helping create a healthier campus to enhance your success.</div>
+                    <div class="clear_div"></div>
+                </li>
+            </ul><div class="clear_div"></div>
+    
+					</div>
+    
+    
+				</div><div style="clear:both"></div></div><div style="clear:both"></div></div><div class="content_inner_left_bottom"></div><div class="content_inner_left_top"></div><div class="content_inner_left_middle"><a name="10616"></a><div id="dpgMyPage_ctl15_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl15_pnlFTMContent">
+						<style type="text/css">
+    .free_text_module a:link,
+    .free_text_module a:visited,
+    .mini_story_lister a:link,
+    .mini_story_lister a:visited,
+    .rss_title a:link,
+    .rss_title a:visited {
+        color: #36c;
+    }
+    .free_text_module a:hover,
+    .free_text_module a:active,
+    .mini_story_lister a:hover,
+    .mini_story_lister a:active,
+    .rss_title a:hover,
+    .rss_title a:active {
+        color: #30f !important;
+        text-decoration: underline;
+    }
+    .item_title a:link,
+    .item_title a:visited {
+        line-height: 1.3em !important;
+        font-size: 115% !important;
+    }
+    h3.currentstudents {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #999;
+        padding-bottom: 5px !important;
+        margin-bottom: 0px !important;
+    }
+    .right_link a:link[href*="home/campuslife.aspx"],
+    a[href*="CAL-023fe524-48e7b017-0148-ebb52b5a"],
+    a[href*="CAL-023fe524-476f284d-0147-8dc797fa"],
+    a[href*="CAL-023fe524-476f284d-0147-8dcce0b3"] {
+        display: none;
+    }
+    table.layout {
+        height: 402px;
+        width: 542px;
+        border-spacing: 20px;
+        border-collapse: separate;
+    }
+    table.layout td {
+        padding: 2px;
+        vertical-align: top;
+    }
+    table.layout td.col-1 {
+        width: 258px;
+    }
+    table.layout td.col-2 {
+        width: 254px;
+    }
+    table.layout td.col-1 img,
+    table.layout td.col-2 img {
+        margin-top: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<table class="layout">
+    <tbody>
+        <tr>
+            <td class="col-1">
+                <h3 class="currentstudents">Get Help</h3>
+                <img alt="student getting help in an office" mce_src="https://newscenter.sdsu.edu/home/images/help-counter_4912-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/help-counter_4912-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="https://sacd.sdsu.edu/student-health-services/services/after-hours-care" href="https://sacd.sdsu.edu/student-health-services/services/after-hours-care">Emergencies</a></li>
+                    <li><a mce_href="/student_affairs/ecrt/" href="/student_affairs/ecrt/">Economic Crisis Response Team (ECRT)</a></li>
+                    <li><a mce_href="/student_affairs/healthpromotion/aodalcoholandotherdrugs.aspx" href="/student_affairs/healthpromotion/aodalcoholandotherdrugs.aspx">Alcohol & other drugs</a></li>
+                    <li><a mce_href="https://police.sdsu.edu/public-information/community-crime-bulletins" href="https://police.sdsu.edu/public-information/community-crime-bulletins">Campus Safety & Security Report</a></li>
+                    <li><a mce_href="/student_affairs/cps/" href="/student_affairs/cps/">Counseling & Psychological services</a></li>
+                    <li><a mce_href="https://police.sdsu.edu/safety-services-and-programs/services" href="https://police.sdsu.edu/safety-services-and-programs/services">Safety escort service, campus</a></li>
+                    <li><a mce_href="/student_affairs/newstudent.aspx" href="/student_affairs/newstudent.aspx">New student resources</a></li>
+                    <li><a mce_href="https://police.sdsu.edu/" href="https://police.sdsu.edu/">Police / Public Safety</a><br></li>
+                    <li><a mce_href="/student_affairs/ombudsman/" href="/student_affairs/ombudsman/">Problem resolution / Ombudsman</a></li>
+                    <li><a mce_href="https://titleix.sdsu.edu/get-involved/its-on-us" href="https://titleix.sdsu.edu/get-involved/its-on-us">Sexual assault prevention & response</a></li>
+                    <li><a mce_href="/student_affairs/healthpromotion/insurancehelpreferrals.aspx" href="/student_affairs/healthpromotion/insurancehelpreferrals.aspx">Social services</a></li>
+                    <li><a mce_href="/student_affairs/safety.aspx" href="/student_affairs/safety.aspx">Your safety at SDSU</a></li>
+                </ul>
+            </td>
+            <td class="col-2">
+                <h3 class="currentstudents">Campus Services</h3>
+                <img alt="100 years, 100 Stones sculpture" mce_src="https://newscenter.sdsu.edu/home/images/100stones_0596-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/100stones_0596-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="http://www.aztecshops.com/" href="http://www.aztecshops.com/">Aztec Shops</a></li>
+                    <li><a mce_href="https://as.sdsu.edu/union/" href="https://as.sdsu.edu/union/">Aztec Student Union</a></li>
+                    <li><a mce_href="https://www.shopaztecs.com" href="https://www.shopaztecs.com">Bookstore</a></li>
+                    <li><a mce_href="https://directory.sdsu.edu/" href="https://directory.sdsu.edu/">Campus directory</a></li>
+                    <li><a mce_href="https://library.sdsu.edu/computers-technology" href="https://library.sdsu.edu/computers-technology">Computing centers</a></li>
+                    <li><a mce_href="http://www.eatatsdsu.com/" href="http://www.eatatsdsu.com/">Dining</a></li>
+                    <li><a mce_href="/student_affairs/living.aspx" href="/student_affairs/living.aspx">Housing</a></li>
+                    <li><a mce_href="https://map.concept3d.com/?id=801" href="https://map.concept3d.com/?id=801">Maps & directions</a></li>
+                    <li><a title="Parking" mce_href="https://bfa.sdsu.edu/campus/parkingtrans/parkinginfo.aspx" href="https://bfa.sdsu.edu/campus/parkingtrans/parkinginfo.aspx">Parking & transportation</a></li>
+                    <li><a mce_href="https://sunspot.sdsu.edu/pubred/alt_kiosk.main" href="https://sunspot.sdsu.edu/pubred/alt_kiosk.main">Red ID</a></li>
+                    <li><a mce_href="https://bfa.sdsu.edu/financial/student/sdsucard" href="https://bfa.sdsu.edu/financial/student/sdsucard">SDSUcard</a></li>
+                    <li><a title="Division of Student Affairs" mce_href="/student_affairs/" href="/student_affairs/">Student Affairs, Division of</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="col-1">
+                <h3 class="currentstudents">Academics</h3>
+                <img alt="students in a classroom" mce_src="https://newscenter.sdsu.edu/home/images/3314-classroom-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/3314-classroom-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="https://daesa.sdsu.edu/" href="https://daesa.sdsu.edu/">Academic Engagement Programs</a></li>
+                    <li><a mce_href="/student_affairs/academic_success.aspx" href="/student_affairs/academic_success.aspx">Academic success</a></li>
+                    <li><a mce_href="https://advising.sdsu.edu/" href="https://advising.sdsu.edu/">Advising</a></li>
+                    <li><a mce_href="https://canvas.sdsu.edu" href="https://canvas.sdsu.edu">Canvas</a></li>
+                    <li><a mce_href="https://registrar.sdsu.edu/calendars" href="https://registrar.sdsu.edu/calendars">Calendar, academic</a></li>
+                    <li><a mce_href="https://sunspot.sdsu.edu/schedule/" href="https://sunspot.sdsu.edu/schedule/">Class schedule</a></li>
+                    <li><a title="Academic Deans Council" mce_href="https://provost.sdsu.edu/adc" href="https://provost.sdsu.edu/adc">Colleges</a></li>
+                    <li><a mce_href="https://commencement.sdsu.edu/" href="https://commencement.sdsu.edu/">Commencement</a></li>
+                    <li><a mce_href="https://commonexperience.sdsu.edu/" href="https://commonexperience.sdsu.edu/">Common Experience Program</a></li>
+                    <li><a mce_href="https://admissions.sdsu.edu/academic_programs/credentials" href="https://admissions.sdsu.edu/academic_programs/credentials">Credential programs</a>   </li>
+                    <li><a title="Academics" mce_href="https://admissions.sdsu.edu/academic_programs" href="https://admissions.sdsu.edu/academic_programs">Degrees (academic majors & programs)</a></li>
+                    <li><a mce_href="http://studentaffairs.sdsu.edu/EOP/" href="http://studentaffairs.sdsu.edu/EOP/">Educational Opportunity Programs (EOP)</a></li>
+                    <li><a mce_href="https://ces.sdsu.edu/" href="https://ces.sdsu.edu/">Global Campus</a></li>
+                    <li><a mce_href="https://curriculum.sdsu.edu/curriculum-services/general-catalog" href="https://curriculum.sdsu.edu/curriculum-services/general-catalog">General Catalog</a><br></li>
+                    <li><a mce_href="https://grad.sdsu.edu/" href="https://grad.sdsu.edu/">Graduate & Research Affairs</a></li>
+                    <li><a mce_href="https://curriculum.sdsu.edu/curriculum-services/graduate-bulletin" href="https://curriculum.sdsu.edu/curriculum-services/graduate-bulletin">Graduate Bulletin</a></li>
+                    <li><a mce_href="https://honors.sdsu.edu/" href="https://honors.sdsu.edu/">Weber Honors College</a></li>
+                    <li><a mce_href="http://arweb.sdsu.edu/es/catalog/2013-14/IVC/ivc-13-14.pdf" href="http://arweb.sdsu.edu/es/catalog/2013-14/IVC/ivc-13-14.pdf">Imperial Valley Campus catalog (PDF)</a><br></li>
+                    <li><a mce_href="/oip/" href="/oip/">International Programs</a></li>
+                    <li><a mce_href="https://library.sdsu.edu/" href="https://library.sdsu.edu/">Library</a></li>
+                    <li><a mce_href="/student_affairs/mentoring.aspx" href="/student_affairs/mentoring.aspx">Mentoring</a></li>
+                    <li><a mce_href="https://provost.sdsu.edu/" href="https://provost.sdsu.edu/">Provost</a></li>
+                    <li><a mce_href="https://registrar.sdsu.edu/" href="https://registrar.sdsu.edu/">Registrar</a></li>
+                    <li><a href="https://studentsuccess.sdsu.edu/">Student Success and Faculty Advancement, Division of</a></li><li><a mce_href="/beinternational/whyabroad.aspx" href="/beinternational/whyabroad.aspx">Study Abroad</a></li>
+                    <li><a mce_href="http://www.sa.sdsu.edu/testofc/index.html" href="http://www.sa.sdsu.edu/testofc/index.html">Test Office</a></li>
+                    
+                    <li><a mce_href="https://registrar.sdsu.edu/students/transcripts" href="https://registrar.sdsu.edu/students/transcripts">Transcripts</a></li>
+                    
+                    <li><a title="WebPortal" mce_href="https://sunspot.sdsu.edu/pls/webapp/web_menu.login" href="https://sunspot.sdsu.edu/pls/webapp/web_menu.login">WebPortal, SDSU</a></li>
+                </ul>
+            </td>
+            <td class="col-2">
+                <h3 class="currentstudents">Student Life</h3>
+                <img alt="students studying" mce_src="https://newscenter.sdsu.edu/home/images/students-in-hall_8017-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/students-in-hall_8017-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="https://as.sdsu.edu/" href="https://as.sdsu.edu/">Associated Students (A.S.)</a></li>
+                    <li><a mce_href="https://goaztecs.com/" href="https://goaztecs.com/">Athletics</a></li>
+                    <li><a mce_href="https://as.sdsu.edu/aztecnights/" href="https://as.sdsu.edu/aztecnights/">Aztec Nights</a></li>
+                    <li><a mce_href="https://arc.sdsu.edu/" href="https://arc.sdsu.edu/">Aztec Recreation</a></li>
+                    <li><a mce_href="https://as.sdsu.edu/union/" href="https://as.sdsu.edu/union/">Aztec Student Union</a></li>
+                    <li><a mce_href="/student_affairs/career.aspx" href="/student_affairs/career.aspx">Careers and career development</a></li>
+                    <li><a mce_href="/student_affairs/intercultural/" href="/student_affairs/intercultural/">Office of Intercultural Relations</a></li>
+                    <li><a mce_href="/student_affairs/living.aspx" href="/student_affairs/living.aspx">Commuter student resources</a></li>
+                    <li><a mce_href="/student_affairs/cps/" href="/student_affairs/cps/">Counseling & Psychological Services</a></li>
+                    <li><a mce_href="/student_affairs/diversity.aspx" href="/student_affairs/diversity.aspx">Diversity & cultural awareness</a></li>
+                    <li><a mce_href="/student_affairs/ethical.aspx" href="/student_affairs/ethical.aspx">Ethical & civic responsibility</a></li>
+                    <li><a mce_href="/student_affairs/sll/greeklife.aspx" href="/student_affairs/sll/greeklife.aspx">Greek life</a></li>
+                    <li><a mce_href="/student_affairs/healthpromotion/" href="/student_affairs/healthpromotion/">Health and wellness</a></li>
+                    <li><a mce_href="/student_affairs/living.aspx" href="/student_affairs/living.aspx">Housing (living on & off campus)</a></li>
+                    <li><a mce_href="/student_affairs/international.aspx" href="/student_affairs/international.aspx">International focus</a></li>
+                    <li><a mce_href="/student_affairs/leadership.aspx?" href="/student_affairs/leadership.aspx?">Involvement & leadership opportunities</a></li>
+                    <li><a mce_href="http://library.sdsu.edu/guides/sub2.php?id=336&pg=353" href="http://library.sdsu.edu/guides/sub2.php?id=336&pg=353">Library basics</a></li>
+                    <li><a mce_href="/student_affairs/newstudent.aspx" href="/student_affairs/newstudent.aspx">New student resources</a></li>
+                    <li><a mce_href="/student_affairs/news-events.aspx" href="/student_affairs/news-events.aspx">News & events</a></li>
+                    <li><a title="SDSU Online Communities" mce_href="https://communities.sdsu.edu/" href="https://communities.sdsu.edu/">Online communities</a></li>
+                    <li><a mce_href="/student_affairs/parentinfo.aspx" href="/student_affairs/parentinfo.aspx">Parent resources & information</a></li>
+                    <li><a mce_href="/student_affairs/pridecenter/" href="/student_affairs/pridecenter/">Pride Center (serving SDSU's LGBTQ community)</a></li>
+                    <li><a mce_href="http://www.aztecshops.com/" href="http://www.aztecshops.com/">Shopping & dining</a></li>
+                    <li><a title="Division of Student Affairs" mce_href="/student_affairs/" href="/student_affairs/">Student Affairs, Division of</a></li>
+                    <li><a mce_href="/student_affairs/sds/" href="/student_affairs/sds/">Student Ability Success Center</a></li>
+                    <li><a mce_href="http://shs.sdsu.edu/" href="http://shs.sdsu.edu/">Student Health Services</a></li>
+                    <li><a mce_href="/student_affairs/sll/student-orgs.aspx" href="/student_affairs/sll/student-orgs.aspx">Student Organizations</a></li>
+                    <li><a mce_href="/student_affairs/traditions.aspx" href="/student_affairs/traditions.aspx">Traditions, campus</a></li>
+                    <li><a mce_href="http://arweb.sdsu.edu/es/veterans/" href="http://arweb.sdsu.edu/es/veterans/">Veterans Center</a><br>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="col-1">
+                <h3 class="currentstudents">Finances & Jobs</h3>
+                <img alt="student and employer representative shaking hands" mce_src="https://newscenter.sdsu.edu/home/images/job-handshake-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/job-handshake-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="/student_affairs/financialaid/aidlink.aspx" href="/student_affairs/financialaid/aidlink.aspx">AidLink<br>(Financial Aid secure website)</a></li>
+                    <li><a mce_href="https://sa.sdsu.edu/career" href="https://sa.sdsu.edu/career">Career Services</a></li>
+                    <li><a mce_href="https://bfa.sdsu.edu/financial/student/faq.aspx" href="https://bfa.sdsu.edu/financial/student/faq.aspx">Cashiers FAQ page</a></li>
+                    <li><a mce_href="/student_affairs/financialaid/disbursements.aspx" href="/student_affairs/financialaid/disbursements.aspx">Disbursements</a></li>
+                    <li><a mce_href="/student_affairs/financialaid/" href="/student_affairs/financialaid/">Financial Aid & Scholarships office</a></li>
+                    <li><a mce_href="/student_affairs/career.aspx" href="/student_affairs/career.aspx">Jobs, career development, internships</a></li>
+                    <li><a mce_href="https://bfa.sdsu.edu/financial/student" href="https://bfa.sdsu.edu/financial/student">Student Account Services</a></li>
+                </ul>
+            </td>
+            <td class="col-2">
+                <h3 class="currentstudents">Health & Wellness</h3>
+                <img alt="Aztec Recreation Center entrance" mce_src="https://newscenter.sdsu.edu/home/images/arc_7354-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/arc_7354-225x125.jpg" width="225" height="125">
+                <ul>
+                    <li><a mce_href="https://arc.sdsu.edu/" href="https://arc.sdsu.edu/">Aztec Recreation Center (ARC)</a></li>
+                    <li><a mce_href="/student_affairs/healthpromotion/" href="/student_affairs/healthpromotion/">Health Promotion (wellness education and support)</a></li>
+                    <li><a mce_href="https://sa.sdsu.edu/student-health-services/immunizations" href="https://sa.sdsu.edu/student-health-services/immunizations">Immunizations</a></li>
+                    <li><a mce_href="/student_affairs/livewell/" href="/student_affairs/livewell/">Live Well Aztecs</a><br></li>
+                    <li><a mce_href="/student_affairs/healthwellness.aspx" href="/student_affairs/healthwellness.aspx">Physical & psychological health</a> </li>
+                    <li><a mce_href="https://police.sdsu.edu/" href="https://police.sdsu.edu/">Police / Public Safety</a></li>
+                    <li><a mce_href="/student_affairs/sds/" href="/student_affairs/sds/">Student Disability Services</a></li>
+                    <li><a mce_href="/student_affairs/safety.aspx" href="/student_affairs/safety.aspx">Your safety at SDSU</a></li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+					</div>
+
+				</div><div style="clear:both"></div></div><div class="content_inner_left_bottom"></div><div class="content_inner_left_top"></div><div class="content_inner_left_middle"><a name="13799"></a><div id="dpgMyPage_ctl17_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl17_pnlFTMContent">
+						This page is maintained by <a mce_href="http://go.sdsu.edu/student_affairs/communications/" target="_blank" href="http://go.sdsu.edu/student_affairs/communications/">Student Affairs Communications Services</a>.<br>
+					</div>
+
+				</div><div style="clear:both"></div></div><div class="content_inner_left_bottom"></div>
+			</div>
+            <div id="dpgMyPage_pnlTemplateContentRight" class="content_right">
+				<div class="content_inner_right_top"></div><div class="content_inner_right_middle"><a name="10617"></a><div id="dpgMyPage_ctl19_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl19_pnlFTMContent">
+						<p style="margin-top:-15px">Whether you’re <a mce_href="/student_affairs/newstudent.aspx" href="/student_affairs/newstudent.aspx">new to campus</a> or an <a mce_href="http://www.sdsualumni.org/s/997/index.aspx?sid=997&gid=1&pgid=2290" href="http://www.sdsualumni.org/s/997/index.aspx?sid=997&gid=1&pgid=2290">Aztec for Life</a>, you’ll find SDSU offers something for everyone, from <a mce_href="https://as.sdsu.edu/aztecnights/" href="https://as.sdsu.edu/aztecnights/">Aztec Nights</a> festivities to a variety of <a mce_href="/student_affairs/sll/student-orgs.aspx" href="/student_affairs/sll/student-orgs.aspx">student organizations</a> and other <a mce_href="/student_affairs/leadership.aspx" href="/student_affairs/leadership.aspx">involvement and leadership</a> opportunities.</p>
+<h3 class="currentstudents">Stay Informed</h3>
+<p>Be sure to follow <a target="_blank" mce_href="https://www.instagram.com/experiencesdsu" href="https://www.instagram.com/experiencesdsu">@ExperienceSDSU</a> for news about student life and campus activities. You can also read <a mce_href="/student_affairs/atstate/" href="/student_affairs/atstate/">@State</a>, the SDSU student newsletter and <a mce_href="http://www.thedailyaztec.com" href="http://www.thedailyaztec.com">The Daily Aztec</a>, SDSU's independent student newspaper. Visit the <a mce_href="/student_affairs/" href="/student_affairs/">Division of Student Affairs</a> website to learn about many resources available to you!</p>
+<h3 class="currentstudents">Academics, Athletics and Careers<br></h3>
+<p>When you're not busy <a mce_href="http://library.sdsu.edu/services/eat-drink-study" href="http://library.sdsu.edu/services/eat-drink-study">studying in the library</a>, or <a mce_href="/student_affairs/career.aspx" href="/student_affairs/career.aspx">working on your career</a>, you can take in an <a mce_href="https://goaztecs.com/" href="https://goaztecs.com/">Aztec sporting event</a> with any one of our Division 1A men's and women's teams.</p>
+<h3 class="currentstudents">Campus Traditions</h3>
+<p>Take a moment to learn about our <a mce_href="/student_affairs/traditions.aspx" href="/student_affairs/traditions.aspx">campus traditions</a> throughout the year, including <a mce_href="https://homecoming.sdsu.edu/" href="https://homecoming.sdsu.edu/">Homecoming Week</a> in the fall and <a mce_href="http://as.sdsu.edu/greenfest/" href="http://as.sdsu.edu/greenfest/">GreenFest</a> in the spring.</p>
+<p style="font-weight:bold;">Any time of year, <span style="font-style:italic;">it's great to be an Aztec!</span></p>
+					</div>
+
+				</div><div style="clear:both"></div></div><div class="content_inner_right_bottom"></div><div class="content_inner_right_top"></div><div class="content_inner_right_middle"><a name="10618"></a><div id="dpgMyPage_ctl21_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl21_pnlFTMContent">
+						<h2 class="currentstudents">News & Events</h2>
+<img style="margin-bottom:10px; border:1px solid #000;" alt="cooncert in the Open Air Theatre" mce_src="https://newscenter.sdsu.edu/home/images/concert_1684-225x125.jpg" src="https://newscenter.sdsu.edu/home/images/concert_1684-225x125.jpg" width="225" height="125">
+<ul>
+  <li><a mce_href="/student_affairs/atstate/" href="/student_affairs/atstate/">@State Student Newsletter</a></li>
+  <li><a mce_href="https://as.sdsu.edu/union/asub/" href="https://as.sdsu.edu/union/asub/">Aztec Student Union Board</a><br></li>
+  <li><a mce_href="http://www.thedailyaztec.com/" href="http://www.thedailyaztec.com/">Daily Aztec</a></li>
+  <li><a mce_href="http://newscenter.sdsu.edu/events/calendar.aspx" href="http://newscenter.sdsu.edu/events/calendar.aspx">Events Calendar (all-campus)</a></li>
+  <li><a mce_href="/student_affairs/news-events.aspx" href="/student_affairs/news-events.aspx">News & events (additional sources)</a></li>
+  <li><a mce_href="https://communities.sdsu.edu/" href="https://communities.sdsu.edu/">SDSU online communities</a></li>
+</ul>
+					</div>
+
+				</div><div style="clear:both"></div></div><div class="content_inner_right_bottom"></div><div class="content_inner_right_top"></div><div class="content_inner_right_middle"><a name="10619"></a><div id="dpgMyPage_ctl23_pnlFreeTextModule" class="module">
+					
+    
+    <div id="dpgMyPage_ctl23_pnlTop">
+						<h2 id='rsstitle' class='rss_top_title'>From the Campus Calendar</h2>
+					</div>
+    
+    <div id="dpgMyPage_ctl23_pnlFTMContent">
+						
+        
+        <div id="messages"></div>
+        <div>
+							<table cellspacing="0" border="0" id="dpgMyPage_ctl23_gvRssFeed">
+								<tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d165776342">Crossing the Line</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d165776342"> Ongoing through Thu., May 4, 2023, 4pm The San Diego State University School of Art and Design&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164323370">Morning Hoops</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164323370"> Mon., May 1, 2023, 8am Wanna start your day on the court? Join the Young Men of Color Alliance for&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166381734">Global Education Info-Session: College of Health and Human Services</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166381734"> Mon., May 1, 2023, 11am If you&#39;re a CHHS student interested in Global Education opportunities&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164868337">A.S. Financial Affairs Committee</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164868337"> Mon., May 1, 2023, 11am The purpose of the Financial Affairs Committee shall be to advise the ASBOD&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166494226">CIR Finals Fuel Stations</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166494226"> Mon., May 1, 2023, 12pm Finals Week is approaching! Your health is equally important as your exams,&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166439497">Taste of the Middle East</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166439497"> Mon., May 1, 2023, 12pm Celebrate SWANA (Southwest Asian, North African) Heritage Month with some&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166790307">Kick back at the APIDA Month Kick-Off!</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166790307"> Mon., May 1, 2023, 12pm Come by the APIDA Center! Get some Asian snacks (while supplies last)! Play&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164283723">Talk it Out</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164283723"> Mon., May 1, 2023, 1pm Talk It Out is back this semester via Zoom! During Mondays from 1:00 to 3:00&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164357471">Talk It Out - Bilingual Drop-in Support at the LRC</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164357471"> Mon., May 1, 2023, 1pm Feeling stressed? Just need to talk with someone? Counselors from Counseling&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164869112">A.S. Aztec Student Union Board</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d164869112"> Mon., May 1, 2023, 1pm The purpose of this Board shall be to propose, plan, publicize, and&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row alternate">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166337937">Global Education Drop by Advising - College of Arts & Letters</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166337937"> Tue., May 2, 2023, 9:30am Global Education Drop by Advising - College of Arts &amp; LetterCome meet&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr><tr class="rss_gridview_row">
+									<td>
+                        <div class="rss_item">
+                            
+                            <h2 class="rss_title">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166337968">Global Education Drop by Advising - Professional Studies of Fine Arts</a>
+                            </h2>
+                            <div class="rss_description">
+                                <a href="https://sacd.sdsu.edu/calendar?trumbaEmbed=view%3devent%26eventid%3d166337968"> Tue., May 2, 2023, 9:30am Global Education Drop by Advising - PSFACome meet your Global Education&#x85;</a>
+                                
+                            </div>
+                        </div>
+                    </td>
+								</tr>
+							</table>
+						</div>
+    
+					</div>
+
+				</div>
+<div style="clear:both"></div></div><div class="content_inner_right_bottom"></div><div class="content_inner_right_top"></div><div class="content_inner_right_middle"><a name="10620"></a><div id="dpgMyPage_ctl25_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl25_pnlFTMContent">
+						<h2 class="currentstudents">SDSU Online</h2>
+<img style="margin-bottom:5px; border:1px solid #000;" alt="student using a laptop computer" mce_src="https://newscenter.sdsu.edu/home/images/laptop-closeup_8004-285px.jpg" src="https://newscenter.sdsu.edu/home/images/laptop-closeup_8004-285px.jpg" width="285" height="142">
+<ul>
+  <li><a mce_href="/student_affairs/career/azteccareerconnection.aspx" href="/student_affairs/career/azteccareerconnection.aspx">Aztec Career Connection</a></li>
+  <li><a mce_href="https://blackboard.sdsu.edu/" href="https://blackboard.sdsu.edu/">Blackboard courses</a></li>
+  <li><a mce_href="https://www.shopaztecs.com/" href="https://www.shopaztecs.com/">Bookstore / shop online</a></li>
+  <li><a title="SDSU Online Communities" mce_href="https://communities.sdsu.edu/" href="https://communities.sdsu.edu/">Online communities</a></li>
+  <li><a mce_href="https://registrar.sdsu.edu" href="https://registrar.sdsu.edu">Registrar</a></li>
+  <li><a mce_href="https://commerce.cashnet.com/cashnetc/selfserve/ebilllogin.aspx?client=SDSUPROD&" href="https://commerce.cashnet.com/cashnetc/selfserve/ebilllogin.aspx?client=SDSUPROD&">Student account services online</a></li>
+  <li><a title="WebPortal" mce_href="https://sunspot.sdsu.edu/pls/webapp/web_menu.login/" href="https://sunspot.sdsu.edu/pls/webapp/web_menu.login/">WebPortal, SDSU</a></li>
+</ul>
+					</div>
+
+				</div><div style="clear:both"></div></div><div class="content_inner_right_bottom"></div>
+			</div>
+            <div style="clear:both"></div>
+        
+		</div>
+        
+        <!-- Content For Disqus -->
+        
+        
+        
+                 
+        
+    <div ID="pnlClear" style="clear:both" visible="false"></div>
+    
+	</div>
+    
+    <!-- Master Footer -->
+    
+        
+    <div id="dpgMyPage_pnlDepartmentFooter" class="master_department_footer">
+		<div class='department_footer_links_container'><div class='department_footer_links'><a href="https://newscenter.sdsu.edu/sdsu_newscenter/news.aspx" class="panel">News</a><a href="https://search.sdsu.edu/" class="panel">Search</a><a href="https://www.sdsu.edu/departments" class="panel">Departments & Offices</a><a href="https://directory.sdsu.edu/" class="panel">Directory</a><a href="https://map.concept3d.com/?id=801" class="panel">Maps</a><a href="https://bfa.sdsu.edu/campus/parkingtrans/parkinginfo.aspx" class="panel">Parking</a><a href="https://bfa.sdsu.edu/hr/jobs/" class="panel">Employment</a><a href="https://stratcomm.sdsu.edu/media-relations" class="panel">Media Relations</a><a href="https://securelb.imodules.com/s/997/campaign13/index.aspx?sid=997&gid=1&pgid=3034" class="panel">Give to SDSU</a><a href="http://www.calstate.edu/" class="panel">CSU</a><a href="https://sunspot.sdsu.edu/pls/webapp/web_menu.login/" class="panel">WebPortal</a><a href="https://status.sdsu.edu/" class="panel">Network Status</a><a href="https://ou-resources.sdsu.edu/document-viewers" class="panel">Document Reader</a></div></div>
+	</div>
+    
+    <div id="dpgMyPage_pnlTemplateFooter" class="master_footer">
+		
+        <div id="dpgMyPage_pnl_inner_foot" class="inner_foot">
+			
+            <div id="dpgMyPage_pnlTemplateFooter1" class="master_footer_1">
+				<a name="2519"></a><div id="dpgMyPage_ctl08_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl08_pnlFTMContent">
+						<p><a mce_href="https://www.sdsu.edu/" href="https://www.sdsu.edu/"><img alt="San Diego State University" mce_src="/sdsu2011template/images/logo.png" src="/sdsu2011template/images/logo.png" width="152" height="30" border="0"></a></p><p> </p>
+					</div>
+
+				</div>
+			</div>
+            <div id="dpgMyPage_pnlTemplateFooter2" class="master_footer_2">
+				<div class='template_footer_links'><a href="https://www.sdsu.edu/" class="panel">SDSU Home</a>&nbsp;|&nbsp;<a href="https://newscenter.sdsu.edu/sdsu_newscenter/news.aspx" class="panel">News</a>&nbsp;|&nbsp;<a href="https://search.sdsu.edu/" class="panel">Search</a>&nbsp;|&nbsp;<a href="https://www.sdsu.edu/departments" class="panel">Departments & Offices</a>&nbsp;|&nbsp;<a href="https://directory.sdsu.edu/" class="panel">Directory</a>&nbsp;|&nbsp;<a href="https://map.concept3d.com/?id=801" class="panel">Maps</a>&nbsp;|&nbsp;<a href="https://bfa.sdsu.edu/campus/parkingtrans/parkinginfo.aspx" class="panel">Parking</a>&nbsp;|&nbsp;<a href="https://bfa.sdsu.edu/hr/jobs/" class="panel">Employment</a>&nbsp;|&nbsp;<a href="https://stratcomm.sdsu.edu/media-relations" class="panel">Media Relations</a>&nbsp;|&nbsp;<a href="https://securelb.imodules.com/s/997/campaign13/index.aspx?sid=997&gid=1&pgid=3034" class="panel">Give to SDSU</a>&nbsp;|&nbsp;<a href="http://www.calstate.edu/" class="panel">CSU</a>&nbsp;|&nbsp;<a href="https://sunspot.sdsu.edu/portal/" class="panel">Web Portal</a>&nbsp;|&nbsp;<a href="https://status.sdsu.edu/" class="panel">Network Status</a>&nbsp;|&nbsp;<a href="https://ou-resources.sdsu.edu/document-viewers" class="panel">Document Reader</a></div>
+			</div>
+            <div id="dpgMyPage_pnlTemplateFooter3" class="master_footer_3">
+				<a name="2520"></a><div id="dpgMyPage_ctl10_pnlFreeTextModule" class="module free_text_module">
+					
+    <div id="dpgMyPage_ctl10_pnlFTMContent">
+						5500 Campanile Drive, San Diego, CA 92182, Tel: 619-594-5200
+					</div>
+
+				</div>
+			</div>
+        
+		</div>
+    
+	</div>
+    
+
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50969916-26"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-50969916-26');
+</script>
+
+                      
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

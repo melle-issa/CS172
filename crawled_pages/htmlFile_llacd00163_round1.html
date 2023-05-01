@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="https://studentcenter.uci.edu/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+	<title>UCI Student Center &amp; Event Services &middot; Interact. Learn. Enjoy.</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="A division of Student Affairs at the University of California, Irvine, the UCI Student Center provides the campus community and its guests with a variety of services and venues for social, recreational, cultural and educational pursuits.">
+	<meta name="keywords" content="Irvine, Student Center, UCI">
+	<link rel="icon" type="image/png" href="/images/favicon-192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="/images/favicon-152.png" sizes="152x152">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/117f85d05d.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-35RB1KQX3J"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-35RB1KQX3J');
+	</script>
+	<script type="text/javascript">
+	if (typeof jQuery != 'undefined') {
+	  jQuery(document).ready(function($) {
+		var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+		var baseHref = '';
+		if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+
+		jQuery('a').on('click', function(event) {
+		  var el = jQuery(this);
+		  var track = true;
+		  var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+		  var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+		  if (!href.match(/^javascript:/i)) {
+			var elEv = []; elEv.value=0, elEv.non_i=false;
+			if (href.match(/^mailto\:/i)) {
+			  elEv.category = "email";
+			  elEv.action = "click";
+			  elEv.label = href.replace(/^mailto\:/i, '');
+			  elEv.loc = href;
+			}
+			else if (href.match(filetypes)) {
+			  var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+			  elEv.category = "download";
+			  elEv.action = "click-" + extension[0];
+			  elEv.label = href.replace(/ /g,"-");
+			  elEv.loc = baseHref + href;
+			}
+			else if (href.match(/^https?\:/i) && !isThisDomain) {
+			  elEv.category = "external";
+			  elEv.action = "click";
+			  elEv.label = href.replace(/^https?\:\/\//i, '');
+			  elEv.non_i = true;
+			  elEv.loc = href;
+			}
+			else if (href.match(/^tel\:/i)) {
+			  elEv.category = "telephone";
+			  elEv.action = "click";
+			  elEv.label = href.replace(/^tel\:/i, '');
+			  elEv.loc = href;
+			}
+			else track = false;
+
+			if (track) {
+			  _gaq.push(['_trackEvent', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i]);
+			  if ( el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+				setTimeout(function() { location.href = elEv.loc; }, 400);
+				return false;
+		  }
+		}
+		  }
+		});
+	  });
+	}
+	</script>
+	<style>
+	</style>
+	<link href="/wp-content/themes/scestwentytheme/style.css" rel="stylesheet"> 
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+	<nav aria-label="Skip to Main"><a class="skip-main" href="#main">Skip to main content</a></nav>
+	<div class="d-none d-print-block text-center">
+		<p><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20400'%3E%3C/svg%3E" data-src="/images/sces-logo.svg" width="400" alt="Student Center and Event Services"></p>
+	</div>
+	<div class="container-fluid p-0 sticky-top">
+		<nav class="navbar navbar-expand-lg bg-white p-0 border-bottom border-light align-items-center" id="defaultNav">
+			<a class="navbar-brand m-3 p-0" href="/"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/images/sces-logo.svg" id="header-logo" class="nolazy lazy" alt="UCI Student Center and Event Services"></a>
+			<ul class="navbar-nav d-none d-lg-flex mr-4">
+				<li class="nav-item dropdown py-3">
+					<a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Information">Information</a>
+					<div class="dropdown-menu" aria-labelledby="infoDropdown">
+						<div class="d-flex justify-content-center pt-3 pb-3">
+							<a class="dropdown-item" href="/information/information-center/"><span class="fas fa-university mr-2" aria-hidden="true"></span>Information Center</a>
+							<a class="dropdown-item" href="/information/forms-and-applications/"><span class="fas fa-clipboard-list mr-2" aria-hidden="true"></span>Forms and Applications</a>
+							<a class="dropdown-item" href="/information/policies/"><span class="fas fa-gavel mr-2" aria-hidden="true"></span>Policies and Guidelines</a>
+							<a class="dropdown-item" href="/information/virtual-tour/"><span class="fas fa-dot-circle mr-2" aria-hidden="true"></span>Virtual Tour</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item dropdown py-3">
+					<a class="nav-link dropdown-toggle" href="#" id="eventDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Events">Events</a>
+					<div class="dropdown-menu" aria-labelledby="eventDropdown">
+						<div class="container pt-3 pb-3">
+							<div class="row">
+								<div class="col-sm-4 offset-sm-2">
+									<ul class="dropdown-menu-column">
+										<li><a class="dropdown-item" href="/events/plan-an-event/"><span class="fas fa-globe mr-2" aria-hidden="true"></span>Plan In-Person Events</a></li>
+										<li><a class="dropdown-item" href="/events/virtual-events/"><span class="fas fa-mouse-pointer mr-2" aria-hidden="true"></span>Virtual Meetings and Events at UCI</a></li>
+										<li><a class="dropdown-item" href="/events/event-calendar/"><span class="fas fa-calendar-alt mr-2" aria-hidden="true"></span>Event Calendar</a></li>
+										<li><a class="dropdown-item" href="/events/seasonal-event-packages/"><span class="fas fa-box-open mr-2" aria-hidden="true"></span>Seasonal Event Packages</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4" style="border-left: 1px solid #DDDDDD;">
+									<ul class="dropdown-menu-column-noline">
+										<li><a class="dropdown-item" href="/events/plan-an-event/registered-campus-organizations/"><span class="fas fa-user-graduate mr-2" aria-hidden="true"></span>Registered Campus Organizations</a></li>
+										<li><a class="dropdown-item" href="/events/plan-an-event/uc-departments/"><span class="fas fa-balance-scale mr-2" aria-hidden="true"></span>UC Departments</a></li>
+										<li><a class="dropdown-item" href="/events/plan-an-event/off-campus-groups/"><span class="fas fa-briefcase mr-2" aria-hidden="true"></span>Off-Campus Guests</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item dropdown py-3">
+					<a class="nav-link dropdown-toggle" href="#" id="learnDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Learn & Enjoy">Learn &amp; Enjoy</a>
+					<div class="dropdown-menu" aria-labelledby="learnDropdown">
+						<div class="container pt-3 pb-3">
+							<div class="row">
+								<div class="col-sm-4 offset-sm-2">
+									<ul class="dropdown-menu-column">
+										<li><a class="dropdown-item" href="/learn-and-enjoy/study/"><span class="fas fa-book-reader mr-2" aria-hidden="true"></span>Study</a></li>
+										<li><a class="dropdown-item" href="/learn-and-enjoy/dine-play-shop/"><span class="fas fa-shopping-basket mr-2" aria-hidden="true"></span>Dine, Play, Shop</a></li>
+										<li><a class="dropdown-item" href="/learn-and-enjoy/services/"><span class="fas fa-hands-helping mr-2" aria-hidden="true"></span>Services</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4" style="border-left: 1px solid #DDDDDD;">
+									<ul class="dropdown-menu-column-noline">
+										<li><a class="dropdown-item" href="/learn-and-enjoy/study/book-a-study-room-online"><span class="fas fa-book-open mr-2" aria-hidden="true"></span>Book a Study Room Online</a></li>
+										<li><a class="dropdown-item" href="https://eventservices.studentcenter.uci.edu/studentlockers/" target="_blank"><span class="fas fa-unlock-alt mr-2" aria-hidden="true"></span>Request a Day-Use Locker Online</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item py-3">
+					<button class="nav-link" onclick="openNav()" aria-label="Menu">Menu&nbsp;<span class="fas fa-bars" aria-hidden="true"></span></button>
+				</li>
+			</ul>
+			<div class="nav-item d-xs-flex d-lg-none mr-4">
+				<button class="nav-link" onclick="openNav()" aria-label="Menu">Menu&nbsp;<span class="fas fa-bars" aria-hidden="true"></span></button>
+			</div>
+		</nav>
+		<nav id="masterSideNav" class="side-master-menu d-print-none">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close"><span class="fas fa-times" title="Close Menu"></span></a>
+			<div class="master-menu-container">
+				<form role="search" method="get" class="mr-3 mb-2" action="https://studentcenter.uci.edu/">
+	<span class="screen-reader-text">Search for<br></span>
+	<div class="input-group">
+		<input type="search" class="form-control search-bar-menu" placeholder="Search" value="" name="s" title="Search for:">
+		<span class="input-group-append">
+			<button type="submit" class="btn btn-default search-btn search-bar-menu" aria-label="Search">&nbsp;<span class="fas fa-search"></span>&nbsp;</button>
+		</span>
+	</div>
+</form>				<p class="text-center"><a href="/about/staff-directory/" class="small-link pr-3"><span class="fas fa-user mr-2" aria-hidden="true"></span>Contact Us</a><a href="/home/download-the-apps/" class="small-link pr-3"><span class="fas fa-mobile mr-2" aria-hidden="true"></span>Download Apps</a></p>
+				<div class="d-none d-lg-flex">
+					<ul class="list-unstyled">
+						<li><a href="/information/" class="menu-head">Information</a></li>
+						<li><a href="/information/information-center/">Information Center</a></li>
+						<li><a href="/information/forms-and-applications">Forms and Applications</a></li>
+						<li><a href="/information/policies/">Policies and Guidelines</a></li>
+						<li><a href="/information/virtual-tour/">Virtual Tour</a></li>
+						<li><a href="/events/" class="menu-head">Events</a></li>
+						<li><a href="/events/plan-an-event/">Plan In-Person Events</a></li>
+						<li><a href="/events/virtual-events/">Virtual Meetings and Events at UCI</a></li>
+						<li><a href="/events/event-calendar/">Event Calendar</a></li>
+						<li><a href="/events/seasonal-event-packages/">Seasonal Event Packages</a></li>
+						<li><a href="/learn-and-enjoy/" class="menu-head">Learn &amp; Enjoy</a></li>
+						<li><a href="/learn-and-enjoy/study/">Study</a></li>
+						<li><a href="/learn-and-enjoy/dine-play-shop/" >Dine, Play, Shop</a></li>
+						<li><a href="/learn-and-enjoy/services/">Services</a></li>
+						<li><a href="/involve/" class="menu-head">Get Involved</a></li>
+						<li><a href="/involve/student-employment-opportunities/" >Student Employment Opportunities</a></li>
+						<li><a href="/involve/student-center-board-of-advisors/" >Student Center Board of Advisors</a></li>
+						<li><a href="/wellness-resources/" class="menu-head">Wellness Resources</a></li>
+						<li><a href="/wellness-resources/meditation-space/">Meditation Space</a></li>
+						<li><a href="/about/" class="menu-head">About</a></li>
+						<li><a href="/about/our-organization/">Our Organization</a></li>
+						<li><a href="/about/staff-directory/">Staff Directory</a></li>
+						<li><a href="/about/sustainability">Sustainability</a></li>
+						<li><a href="/involve/student-center-board-of-advisors/" >Student Center Board of Advisors</a></li>
+						<li><a href="/about/student-center-it-developer-team/" >Student Center IT Developer Team</a></li>
+						<li><a href="/student-center-blog/" class="menu-head">Student Center Blog</a></li>
+					</ul>
+				</div>
+				<div class="d-xs-flex d-lg-none" aria-hidden="true">
+					<a href="#infoSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="infoSideCollapse" class="menu-head" aria-label="Information">Information</a>
+					<div class="collapse" id="infoSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/information/information-center/">Information Center</a></li>
+							<li><a href="/information/forms-and-applications/">Forms and Applications</a></li>
+							<li><a href="/information/policies/">Policies and Guidelines</a></li>
+							<li><a href="/information/virtual-tour/">Virtual Tour</a></li>
+						</ul>
+					</div>
+					<a href="#eventSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="eventSideCollapse" class="menu-head" aria-label="Events">Events</a>
+					<div class="collapse" id="eventSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/events/plan-an-event/">Plan In-Person Events</a></li>
+							<li><a href="/events/virtual-events/">Virtual Meetings and Events at UCI</a></li>
+							<li><a href="/events/event-calendar/">Event Calendar</a></li>
+							<li><a href="/events/seasonal-event-packages/">Seasonal Event Packages</a></li>
+						</ul>
+					</div>
+					<a href="#learnSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="learnSideCollapse" class="menu-head" arial-label="Learn and Enjoy">Learn &amp; Enjoy</a>
+					<div class="collapse" id="learnSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/learn-and-enjoy/study/">Study</a></li>
+							<li><a href="/learn-and-enjoy/dine-play-shop/">Dine, Play, Shop</a></li>
+							<li><a href="/learn-and-enjoy/services/">Services</a></li>
+						</ul>
+					</div>
+					<a href="#involveSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="involveSideCollapse" class="menu-head" aria-label="Involve">Get Involved</a>
+					<div class="collapse" id="involveSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/involve/student-employment-opportunities/">Student Employment Opportunities</a></li>
+							<li><a href="/involve/student-center-board-of-advisors/">Student Center Board of Advisors</a></li>
+						</ul>
+					</div>
+					<a href="#wellSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="wellCollapse" class="menu-head" aria-label="Involve">Wellness Resources</a>
+					<div class="collapse" id="wellSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/wellness-resources/meditation-space">Meditation Space</a></li>
+						</ul>
+					</div>
+					<a href="#aboutSideCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="aboutSideCollapse" class="menu-head" aria-label="About">About</a>
+					<div class="collapse" id="aboutSideCollapse">					
+						<ul class="list-unstyled">
+							<li><a href="/about/our-organization/">Our Organization</a></li>
+							<li><a href="/about/staff-directory/">Staff Directory</a></li>
+							<li><a href="/about/sustainability/">Sustainability</a></li>
+							<li><a href="/involve/student-center-board-of-advisors/">Student Center Board of Advisors</a></li>
+							<li><a href="/about/student-center-it-developer-team/">Student Center IT Developer Team</a></li>
+						</ul>
+					</div>
+					<a href="/student-center-blog/" class="menu-head">Student Center Blog</a>
+				</div>			
+			</div>
+		</nav>
+	</div>
+	<div class="container-fluid p-0 bg-dark position-absolute header-cover" id="header-cover-home">
+		<p class="text-center py-1 px-4 d-table cover-caption">Interact. Learn. Enjoy.</p>
+		<div class="hero-bottom-curve">
+			<svg preserveAspectRatio="none" viewBox="0 0 1280 18">
+				<path d="M640,16.92C361.36,16.92,119.69,10.05,0,0v18h1280V0C1160.31,10.05,918.64,16.92,640,16.92z"/>
+			</svg>
+		</div>
+	</div>
+	<div class="container-fluid p-0 position-relative" style="margin-top: calc(50vh + 1rem);">
+		<main id="main" tabindex="-1" itemscope itemtype="http://schema.org/WebPage" itemprop="mainContentOfPage">
+				
+		<style>
+    #home-cover-study {
+        background: url(/wp-content/uploads/2021/08/cover-image-csl-room.jpg), rgba(72,61,109,0.7);
+        background-blend-mode: multiply;
+        background-position: center center;
+        background-size: cover;
+    }
+    #home-cover-lockers {
+        background: url(/wp-content/uploads/2022/02/cover-image-cl-locker.jpg), rgba(255,210,0,0.75);
+        background-blend-mode: screen;
+        background-position: center center;
+        background-size: cover;
+    }
+    #home-cover-scbavbg {
+        background-image: url(/wp-content/uploads/2022/04/scba-virtual-bg-win-cover.jpg);
+    }
+	/* Thru April 30, 2023 */
+	#home-cover-scbagob {
+		background-image: url(/wp-content/uploads/2022/04/cover-image-scba-gob.jpg);
+		background-position: top;
+	}
+</style>
+<div class="container position-relative mb-3">
+	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+		<div class="col mb-3">
+			<div class="card border-blue h-100">
+				<div class="card-body pb-1 d-flex flex-column">
+					<p class="h2 text-center text-teal mb-0"><span class="fas fa-clock" aria-hidden="true"></span></p>
+					<h2 class="text-center mb-0 text-teal">Hours</h2>
+					<h3 class="mb-0 h5"><strong>Building</strong></h3>
+					<p class="lh-tight">7:00 a.m. &ndash; midnight<br>Monday &ndash; Sunday</p><p class="text-muted"><small>Closed University holidays</small></p>
+					<div class="align-self-end mt-auto w-100">
+						<p class="text-center"><a href="/learn-and-enjoy/dine-play-shop/" class="btn btn-outline-secondary w-100"><strong>Dine, Play, Shop</strong></a></p>
+						<p class="text-center"><a href="/learn-and-enjoy/services/" class="btn btn-outline-secondary w-100"><strong>Services</strong></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-3">
+			<div class="card border-blue h-100">
+				<div class="card-body pb-1 d-flex flex-column">
+					<p class="h2 text-center text-teal mb-0"><span class="fas fa-calendar-alt" aria-hidden="true"></span></p>
+					<h2 class="text-center mb-0"><a href="/events/" class="text-teal">Events</a></h2>
+					<p class="text-muted text-center lh-tight"><small>Event services and guidance</small></p>
+					<div class="align-self-end mt-auto w-100">
+						<p class="text-center"><a href="/events/plan-an-event/" class="btn btn-outline-secondary w-100"><strong>Plan an Event</strong></a></p>
+						<p class="text-center"><a href="/events/event-calendar/" class="btn btn-outline-secondary w-100"><strong>Event Calendar</strong></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-3">
+			<div class="card border-blue h-100">
+				<div class="card-body pb-1 d-flex flex-column">
+					<p class="h2 text-center text-teal mb-0"><span class="fas fa-book-open" aria-hidden="true"></span></p>
+					<h2 class="text-center mb-3"><a href="/study/" class="text-teal">Study</a></h2>
+					<p class="text-muted lh-tight"><small>The Student Center provides quiet places for students to sit, work, or read, and also offers rooms available for reservations</small></p>
+					<div class="align-self-end mt-auto w-100">
+						<p class="text-center"><a href="/learn-and-enjoy/study/book-a-study-room-online" class="btn btn-outline-secondary w-100"><strong>Book a Study Room</strong></a></p>
+						<p class="text-center"><a href="/learn-and-enjoy/study/" class="btn btn-outline-secondary w-100"><strong>Study Spaces</strong></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-3">
+			<div class="card border-blue h-100">
+				<div class="card-body pb-1 d-flex flex-column">
+					<p class="h2 text-center text-teal mb-0"><span class="fas fa-map-marker-alt" aria-hidden="true"></span></p>
+					<h2 class="text-center mb-0"><a href="/about/directions/" class="text-teal">Directions</a></h2>
+					<p class="text-muted text-center lh-tight"><small>Find your way to and around the Student Center</small></p>
+					<div class="align-self-end mt-auto w-100">
+						<p class="text-center"><a href="/information/information-center/" class="btn btn-outline-secondary w-100"><strong>Information Center</strong></a></p>
+						<p class="text-center"><a href="/about/directions/#parking" class="btn btn-outline-secondary w-100"><strong>Parking</strong></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+        <div class="col mb-3">
+            <div class="alert alert-warning text-center mb-0">
+                <p><span class="fas fa-info-circle mr-2" aria-hidden="true"></span>Face covering recommended indoors</p>
+                <p><a href="https://uci.edu/coronavirus/returning-to-campus/index.php" class="btn btn-outline-secondary" target="_blank" rel="noopener">UCI COVID-19 Guidance</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-5 home-cover lazy" style="background-position: bottom center;" data-bg="url(/wp-content/uploads/2023/04/cover-bg-scba-headshots.jpg)"><div class="container"><div class="row justify-content-center"><div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3" style="background-color: rgba(0,100,164,0.8);"><a href="/involve/student-center-board-of-advisors/?utm_source=homepage&#038;utm_medium=web&#038;utm_campaign=headshot23"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/01/scba-logo-wordmark-white.png" class="img-fluid lazy" alt="Student Center Board of Advisors"></a></div></div></div><div class="row justify-content-center"><div class="col-lg-8 mb-3 text-center text-white"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2023/04/scba-headshots-hero-v2-800.png" alt="Free Headshots" class="img-fluid mx-auto mb-5 lazy"><h1 class="display-4">Give It Your Best Shot</h1><p class="lead">We’re giving away 57 studio-style headshots each day—FREE!</p><div class="row justify-content-center"><div class="col-lg-6 col-md-8"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2023/04/scba-headshots-soldout-banner.png" class="img-fluid lazy" alt="sold out"></div></div><p><a href="https://cglink.me/2eo/r1927648" class="btn btn-lg btn-gold" target="_blank" rel="noopener">Get on the waiting list</a></p></div></div></div></div><div class="container-fluid py-5 home-cover" id="home-cover-scbagob"><div class="container text-center"><div class="row justify-content-center"><div class="col-lg-8 mb-3"><p><a href="/involve/student-center-board-of-advisors/?utm_source=homepage&#038;utm_medium=web&#038;utm_campaign=scbarecruit2023#apply"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2023/03/scba-get-on-board-logo.png" class="img-fluid lazy" alt="Get on Board"></a></p></div></div><h1 class="display-4">Get on Board&mdash;Recruiting for Leadership Positions</h1><p class="lead">Apply now for a leadership position in the 2023 &ndash; 2024 academic year.</p><p><a href="https://uci.co1.qualtrics.com/jfe/form/SV_eP5dAuCfgJWgZX8" class="btn btn-lg btn-blue" target="_blank" rel="noopener">Apply Now</a></p><p><a href="/involve/student-center-board-of-advisors/?utm_source=homepage&#038;utm_medium=web&#038;utm_campaign=scbarecruit2023#apply" class="btn btn-outline-blue">More Information</a></p></div></div><div class="container-fluid py-5 home-cover text-white" id="home-cover-study">
+	<div class="container text-center">
+		<h1 class="display-2">Book smart and book fast</h1>
+		<h2 class="h1">Reserve a study room online for the Courtyard Study Lounge</h2>
+		<p class="lead">Campus Wi-Fi, whiteboards, power, and nearby restrooms included.</p>
+		<p><a href="/study/book-a-study-room-online" class="btn btn-lg btn-blue">More Information</a></p>
+	</div>
+</div>
+<div class="container-fluid py-5 home-cover" id="home-cover-lockers">
+	<div class="container text-center">
+		<h1 class="display-2">Lighten Your Load</h1>
+		<h2 class="h1">It&#8217;s free! You don’t have to carry your books around or leave them in the car if you don’t want to.</h2>
+		<p class="lead">Located in the Commuter Lounge. Request a locker online now.</p>
+		<p><a href="https://eventservices.studentcenter.uci.edu/studentlockers/" class="btn btn-lg btn-blue" target="_blank" rel="noopener">Request a Locker Online</a></p>
+	</div>
+</div>
+<div class="container-fluid py-5 home-cover" id="home-cover-scbavbg">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mb-3">
+                <p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/04/virtual-bg-zoom-hero.png" class="img-fluid lazy" alt="Humans vs. Computers Virtual Background Contest"></p>
+            </div>
+        </div>
+        <h1 class="display-4">Download Your Favorite Anteater-Created Virtual Backgrounds</h1>
+        <p class="lead">Here are the winners of the Student Center Board of Advisors’ Humans vs. Computer Virtual Background Design Contest. All eligible contest submissions are available for download.</p>
+        <p><a href="/involve/student-center-board-of-advisors/virtual-background-design-contest/?utm_source=homepage&#038;utm_medium=web&#038;utm_campaign=virtualbg22" class="btn btn-lg btn-blue">Download Virtual Backgrounds</a></p>
+    </div>
+</div>
+<div class="container-fluid py-5 home-cover" id="home-cover-app">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="d-none d-md-block col-md-4">
+				<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2021/09/uci-now-iphonex-new.png" class="img-fluid home-photo-animate show-on-scroll lazy" alt="UCI Now">
+			</div>
+			<div class="col-md-8">
+				<p class="home-cover-caption"><a href="/home/download-the-apps/" class="text-white">Get More from UCI. Download These Apps Today.</a></p>
+				<div class="card bg-teal">
+					<div class="card-body">
+						<div class="row align-items-center">
+							<div class="col-md-1 px-2">
+								<a href="/home/download-the-apps/#ucinow"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2020/04/UCI-Now-App-Icon-300x300.png" class="img-fluid lazy" alt="UCI Now"></a>
+							</div>
+							<div class="col-md-4 px-2">
+								<h3 class="mb-0"><a href="/home/download-the-apps/#ucinow" class="text-body"><em>UCI Now</em></a></h3>
+								<p>Find it all.</p>
+							</div>
+							<div class="col-md-7 px-0">
+								<div class="row">
+									<div class="col">
+										<a href="https://play.google.com/store/apps/details?id=ucistudentcenter.com.ucistudentcenter&#038;hl=en" target="_blank" rel="noopener noreferrer"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/01/google-play-badge.png" class="img-fluid lazy" alt="Download on Google Play"></a>
+									</div>
+									<div class="col">
+										<a href="https://itunes.apple.com/us/app/uci-now/id1382415698?mt=8" target="_blank" rel="noopener noreferrer"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/01/app-store-badge.png" class="img-fluid lazy" alt="Download on the App Store"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card bg-teal mt-3">
+					<div class="card-body">
+						<div class="row align-items-center">
+							<div class="col-md-1 px-2">
+								<a href="/home/download-the-apps/#zotfinder"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2020/04/zotfinder-app-icon.png" class="img-fluid lazy" alt="ZOTFinder"></a>
+							</div>
+							<div class="col-md-4 px-2">
+								<h3 class="mb-0"><a href="/home/download-the-apps/#zotfinder" class="text-body"><em>ZOTFinder</em></a></h3>
+							</div>
+							<div class="col-md-7 px-0">
+								<div class="row">
+									<div class="col">
+										<a href="https://play.google.com/store/apps/details?id=edu.uci.ZotFinder&#038;hl=en_US" target="_blank" rel="noopener noreferrer"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/01/google-play-badge.png" class="img-fluid lazy" alt="Download on Google Play"></a>
+									</div>
+									<div class="col">
+										<a href="https://itunes.apple.com/us/app/zotfinder/id915256719?mt=8" target="_blank" rel="noopener noreferrer"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2022/01/app-store-badge.png" class="img-fluid lazy" alt="Download on the App Store"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="text-center mt-5"><a href="/home/download-the-apps/" class="btn btn-lg btn-outline-teal"><span class="fas fa-mobile" aria-hidden="true"></span>&nbsp;Download the Apps</a></p>
+			</div>
+		</div>
+	</div>
+</div>		
+				
+			<div class="container pt-4">
+				<h2 class="section-title"><a href="/student-center-blog/" class="text-body">Stories</a></h2>
+				<div class="row">
+																					<div class="col">
+							<a href="https://studentcenter.uci.edu/2020/11/paint-it-pink/">
+								<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20800'%3E%3C/svg%3E" data-src="https://studentcenter.uci.edu/wp-content/uploads/2020/11/student-center-lit-pink.jpg" class="img-fluid lazy" alt="Paint It Pink">
+							</a>
+							<a href="https://studentcenter.uci.edu/2020/11/paint-it-pink/" class="text-dark"><h3 class="my-2 serif-headline">Paint It Pink</h3></a>
+							<p class="text-muted mb-0"><small>November 12, 2020</small></p>
+							<p class="text-dark mb-0 lh-tight">The UCI Student Center shows solidarity for Breast Cancer Awareness Month.</p>
+						</div>
+						<div class="w-100 d-block d-sm-none"></div>
+											<div class="col">
+							<a href="https://studentcenter.uci.edu/2020/10/student-center-news-and-highlights/">
+								<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20900'%3E%3C/svg%3E" data-src="https://studentcenter.uci.edu/wp-content/uploads/2020/08/LightUCIBlue-Student-Center.jpg" class="img-fluid lazy" alt="Student Center News and Highlights">
+							</a>
+							<a href="https://studentcenter.uci.edu/2020/10/student-center-news-and-highlights/" class="text-dark"><h3 class="my-2 serif-headline">Student Center News and Highlights</h3></a>
+							<p class="text-muted mb-0"><small>October 1, 2020</small></p>
+							<p class="text-dark mb-0 lh-tight">The Student Center shares news and highlights for the 2020 &ndash; 2021 academic year.</p>
+						</div>
+						<div class="w-100 d-block d-sm-none"></div>
+											<div class="col">
+							<a href="https://studentcenter.uci.edu/2020/08/a-farewell-to-spreadsheets/">
+								<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20675'%3E%3C/svg%3E" data-src="https://studentcenter.uci.edu/wp-content/uploads/2020/07/ACUI-Award.jpg" class="img-fluid lazy" alt="A Farewell to Spreadsheets">
+							</a>
+							<a href="https://studentcenter.uci.edu/2020/08/a-farewell-to-spreadsheets/" class="text-dark"><h3 class="my-2 serif-headline">A Farewell to Spreadsheets</h3></a>
+							<p class="text-muted mb-0"><small>August 18, 2020</small></p>
+							<p class="text-dark mb-0 lh-tight">The UCI Web application dedicated to tracking employee progress and satisfaction draws in more accolades for the Student Center IT Developer team. </p>
+						</div>
+						<div class="w-100 d-block d-sm-none"></div>
+														</div>
+				<p class="mt-3"><a href="/student-center-blog/" class="btn btn-outline-blue">Read All Stories</a></p>
+			</div>
+		</main>
+	</div>
+	<script>
+		var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+		var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+		function loop() {
+
+			Array.prototype.forEach.call(elementsToShow, function(element){
+			  if (isElementInViewport(element)) {
+				element.classList.add('is-visible');
+			  } else {
+				element.classList.remove('is-visible');
+			  }
+			});
+
+			scroll(loop);
+		}
+
+		// Call the loop for the first time
+		loop();
+
+		// Helper function from: http://stackoverflow.com/a/7557433/274826
+		function isElementInViewport(el) {
+		  // special bonus for those using jQuery
+		  if (typeof jQuery === "function" && el instanceof jQuery) {
+			el = el[0];
+		  }
+		  var rect = el.getBoundingClientRect();
+		  return (
+			(rect.top <= 0
+			  && rect.bottom >= 0)
+			||
+			(rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+			  rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+			||
+			(rect.top >= 0 &&
+			  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+		  );
+		}
+	</script>
+	<footer itemscope itemtype="http://schema.org/WPFooter" class="d-print-none">
+		<div class="container-fluid p-0 bg-dark text-white mt-3" id="footer-cover">
+			<div class="footer-top-curve">
+				<svg preserveAspectRatio="none" viewBox="0 0 1280 18">
+					<path d="M640,1c278.64,0,520.31,6.38,640,15.7V0H0v16.7C119.69,7.38,361.36,1,640,1z"/>
+				</svg>
+			</div>
+			<div class="container mt-3 pb-2">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 border-right">
+						<h2 class="mb-0"><strong>Contact</strong></h2>
+						<address>
+							<h3 class="mb-0">UCI <span class="text-nowrap">Student Center</span> &amp; <span class="text-nowrap">Event Services</span></h3>
+							<div itemscope itemtype="http://schema.org/PostalAddress">
+								<span itemprop="streetAddress">A311 Student Center</span><br>
+								<span itemprop="addressLocality">Irvine</span>, <span itemprop="addressRegion">CA</span> <span itemprop="postalCode">92697-2050</span>
+							</div>
+							<span class="fas fa-phone"></span>&nbsp;<span itemprop="telephone"><a href="tel:9498245252" class="text-white">(949) 824-5252</a></span><br>
+							<span class="fas fa-envelope"></span>&nbsp;<a href="mailto:reserver@uci.edu" itemprop="email" class="text-white">reserver@uci.edu</a>
+						</address>
+						<p><a href="/about/staff-directory/" class="btn btn-gold">Staff Directory</a></p>
+						<p class="mb-0"><a href="https://www.facebook.com/ucistudentcenter" class="text-white-50 h3 mr-2" title="Facebook"><span class="fab fa-facebook-f" title="Facebook"></span></a>&nbsp;<a href="https://www.instagram.com/ucistudentcenter/" class="text-white-50 h3" title="Instagram"><span class="fab fa-instagram" title="Instagram"></span></a></p>
+					</div>
+					<div class="col-lg-9 d-none d-lg-flex">
+						<div class="row mb-4 w-100">
+							<div class="col">
+								<h2 class="mb-0">Information</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/information/information-center/" class="text-white">Information Center</a></li>
+									<li class="mb-1"><a href="/information/forms-and-applications/" class="text-white">Forms and Applications</a></li>
+									<li class="mb-1"><a href="/information/policies/" class="text-white">Policies and Guidelines</a></li>
+									<li class="mb-1"><a href="/information/virtual-tour/" class="text-white">Virtual Tour</a></li>
+								</ul>
+								<h2 class="mb-0">Events</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/events/plan-an-event/" class="text-white">Plan In-Person Events</a></li>
+									<li class="mb-1"><a href="/events/virtual-events/" class="text-white">Virtual Meetings and Events at UCI</a></li>
+									<li class="mb-1"><a href="/events/event-calendar/" class="text-white">Event Calendar</a></li>
+									<li class="mb-1"><a href="/events/seasonal-event-packages/" class="text-white">Seasonal Event Packages</a></li>
+								</ul>
+							</div>
+							<div class="col">
+								<h2 class="mb-0">Learn &amp; Enjoy</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/learn-and-enjoy/study/" class="text-white">Study</a></li>
+									<li class="mb-1"><a href="/learn-and-enjoy/dine-play-shop/" class="text-white">Dine, Play, Shop</a></li>
+									<li class="mb-1"><a href="/learn-and-enjoy/services/" class="text-white">Services</a></li>
+								</ul>
+								<h2 class="mb-0">Get Involved</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/involve/student-employment-opportunities/" class="text-white">Student Employment Opportunities</a></li>
+									<li class="mb-1"><a href="/involve/student-center-board-of-advisors/" class="text-white">Student Center Board of Advisors</a></li>
+								</ul>
+								<h2 class="mb-0">Wellness Resources</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/wellness-resources/meditation-space/" class="text-white">Meditation Space</a></li>
+								</ul>
+							</div>
+							<div class="col">
+								<h2 class="mb-0">About</h2>
+								<ul class="list-unstyled lh-tight">
+									<li class="mb-1"><a href="/about/our-organization/" class="text-white">Our Organization</a></li>
+									<li class="mb-1"><a href="/about/staff-directory/" class="text-white">Staff Directory</a></li>
+									<li class="mb-1"><a href="/about/sustainability/" class="text-white">Sustainability</a></li>
+									<li class="mb-1"><a href="/involve/student-center-board-of-advisors/" class="text-white">Student Center Board of Advisors</a></li>
+									
+									<li class="mb-1"><a href="/about/student-center-it-developer-team/" class="text-white">Student Center IT Developers</a></li>
+									<li class="mb-1"><a href="https://sces.bluefolder.com/portal/" target="_blank" class="text-white">Submit Work Order</a></li>
+								</ul>
+								<h2 class="mb-0"><a href="/student-center-blog/" class="text-white">Student Center Blog</a></h2>
+							</div>
+						</div>
+					</div>
+					<div class="col d-xs-flex d-lg-none" aria-hidden="true">
+						<h2><a href="#infoCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="infoCollapse" class="text-white">Information</a></h2>
+						<div class="collapse" id="infoCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/information/information-center/" class="text-white">Information Center</a></li>
+								<li class="mb-1"><a href="/information/forms-and-applications/" class="text-white">Forms and Applications</a></li>
+								<li class="mb-1"><a href="/information/policies/" class="text-white">Policies and Guidelines</a></li>
+								<li class="mb-1"><a href="/information/virtual-tour/" class="text-white">Virtual Tour</a></li>
+							</ul>
+						</div>
+						<h2><a href="#eventCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="eventCollapse" class="text-white">Events</a></h2>
+						<div class="collapse" id="eventCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/events/plan-an-event/" class="text-white">Plan In-Person Events</a></li>
+								<li class="mb-1"><a href="/events/virtual-events/" class="text-white">Virtual Meetings and Events at UCI</a></li>
+								<li class="mb-1"><a href="/events/event-calendar/" class="text-white">Event Calendar</a></li>
+								<li class="mb-1"><a href="/events/seasonal-event-packages/" class="text-white">Seasonal Event Packages</a></li>
+							</ul>
+						</div>
+						<h2><a href="#learnCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="learnCollapse" class="text-white">Learn &amp; Enjoy</a></h2>
+						<div class="collapse" id="learnCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/learn-and-enjoy/study/" class="text-white">Study</a></li>
+								<li class="mb-1"><a href="/learn-and-enjoy/dine-play-shop/" class="text-white">Dine, Play, Shop</a></li>
+								<li class="mb-1"><a href="/learn-and-enjoy/services/" class="text-white">Services</a></li>
+							</ul>
+						</div>
+						<h2><a href="#involveCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="involveCollapse" class="text-white">Get Involved</a></h2>
+						<div class="collapse" id="involveCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/involve/student-employment-opportunities/" class="text-white">Student Employment Opportunities</a></li>
+								<li class="mb-1"><a href="/involve/student-center-board-of-advisors/" class="text-white">Student Center Board of Advisors</a></li>
+							</ul>
+						</div>
+						<h2><a href="#wellCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="wellCollapse" class="text-white">Wellness Resources</a></h2>
+						<div class="collapse" id="wellCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/wellness-resources/meditation-space/" class="text-white">Meditation Space</a></li>
+							</ul>
+						</div>
+						<h2><a href="#aboutCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="aboutCollapse" class="text-white">About</a></h2>
+						<div class="collapse" id="aboutCollapse">
+							<ul class="list-unstyled lh-tight">
+								<li class="mb-1"><a href="/about/our-organization/" class="text-white">Our Organization</a></li>
+								<li class="mb-1"><a href="/about/staff-directory/" class="text-white">Staff Directory</a></li>
+								<li class="mb-1"><a href="/about/sustainability/" class="text-white">Sustainability</a></li>
+								<li class="mb-1"><a href="/involve/student-center-board-of-advisors/" class="text-white">Student Center Board of Advisors</a></li>
+								<li class="mb-1"><a href="/about/student-center-it-developer-team/" class="text-white">Student Center IT Developers</a></li>
+								<li class="mb-1"><a href="https://sces.bluefolder.com/portal/" target="_blank" class="text-white">Submit Work Order</a></li>
+							</ul>
+						</div>
+						<h2 class="mb-0"><a href="/student-center-blog/" class="text-white">Student Center Blog</a></h2>
+					</div>
+				</div>
+				<p class="text-center mt-3 d-none d-md-block"><a href="/privacy-policy-terms-of-use/" class="text-white">Privacy Policy &amp; Terms of Use</a> &middot; <a href="/web-support/" class="text-white">Web Support</a> &middot; <a href="https://www.uci.edu" target="_blank" class="text-white">UCI Homepage</a></p>
+				<p class="text-center mt-3 d-xs-block d-md-none"><a href="/privacy-policy-terms-of-use/" class="text-white">Privacy Policy &amp; Terms of Use</a><br>Web Support<br><a href="https://www.uci.edu" target="_blank" class="text-white">UCI Homepage</a></p>
+				<p class="text-white-50"><small><em>Page last modified April 27, 2023</em></small></p>
+			</div>
+		</div>
+		<div class="container-fluid py-3 bg-light text-dark">
+			<div class="row">
+				<div class="col">
+					<p><small>Produced by the UCI Student Center &amp; Event Services, a division of <a href="http://studentaffairs.uci.edu/" class="text-dark" target="_blank" rel="noreferrer">Student Affairs</a>.<br />&copy; 2023 UC Regents</small></p>
+				</div>
+				<div class="col">
+					<p class="text-right text-body" style="line-height: 1em;"><a href="http://studentaffairs.uci.edu/" target="_blank" rel="noreferrer"><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="/wp-content/uploads/2020/03/vcsa-logo.png" alt="Student Affairs" style="width: 100%; max-width: 240px;" /></a><small>
+					<br><a href="mailto:studentaffairs@uci.edu" class="text-body">studentaffairs@uci.edu</a>
+					<br>405 Aldrich Hall
+					<br>UC Irvine, CA, 92697-5180
+					<br>949.824.4804</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		function openNav() {
+			document.getElementById("masterSideNav").style.width = "360px";
+		}
+		function closeNav() {
+			document.getElementById("masterSideNav").style.width = "0";
+		}
+	</script>
+	<script>
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+	scrollNavHide();
+	scrollFunction();
+	};
+	function scrollFunction() {
+		if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+			document.getElementById("topBtn").style.display = "flex";
+		} else {
+			document.getElementById("topBtn").style.display = "none";
+		}
+	}
+	function scrollNavHide() {
+		var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+			document.getElementById("defaultNav").style.top = "0";
+		  } else {
+			document.getElementById("defaultNav").style.top = "-75px";
+		  }
+		  prevScrollpos = currentScrollPos;
+	}
+	function topFunction() {
+		document.body.scrollTop = 0; // For Chrome, Safari and Opera
+		document.documentElement.scrollTop = 0; // For IE and Firefox
+	} 
+	</script>
+	<div class="d-none d-print-block text-center">
+		<hr>
+		<p><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" data-src="/images/sces-logo.svg" width="200"></p>
+		<p class="text-secondary">A311 Student Center &middot; Irvine, CA 92697-2050<br>Phone: 949.824.5252 &middot; Email: reserver@uci.edu</p>
+	</div>
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="https://studentcenter.uci.edu/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Page Caching using disk: enhanced 
+Lazy Loading
+
+Served from: studentcenter.uci.edu @ 2023-05-01 19:04:31 by W3 Total Cache
+-->

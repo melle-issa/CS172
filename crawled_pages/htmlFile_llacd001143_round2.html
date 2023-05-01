@@ -1,0 +1,436 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head id="ncNews_Head1"><title>
+	NewsCenter | SDSU
+</title><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><link href="../include/css/news_center_2014.css" rel="stylesheet" type="text/css" media="screen, print" /><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" /><script type="text/javascript">(function() { var config = { kitId: 'llo2tmd' }; var d = false; var tk = document.createElement('script'); tk.src = '//use.typekit.net/' + config.kitId + '.js'; tk.type = 'text/javascript'; tk.async = 'true'; tk.onload = tk.onreadystatechange = function() { var rs = this.readyState;if (d || rs && rs != 'complete' && rs != 'loaded') return;d = true;try { Typekit.load(config); } catch (e) {}};var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(tk, s);})();</script>
+
+    <script type="text/javascript">        /*!LOAD!*/
+        function AddOnLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function () {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                }
+            }
+        }
+    </script>
+    
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.4.2.min.js">        /*!LOAD!*/</script>
+    <script type="text/javascript" src="/scripts/jQuery/plugins/jqModal_r13/jqModal.js">        /*!LOAD!*/</script><link type="text/css" rel="stylesheet" media="all" href="/scripts/jQuery/plugins/jqModal_r13/jqModal.css" />
+    <script type="text/javascript" src="/scripts/jquery/plugins/cycle_2_88/jquery.cycle.all.min.js">        /*!LOAD!*/</script>
+    <script type='text/javascript' src='/scripts/jQuery/plugins/jquery.easing.1.3.js'>        /*!LOAD!*/</script>
+    <script type="text/javascript" language="javascript" src="/scripts/jQuery/plugins/jquery.sidr.min.js"></script>
+
+    <style>
+    .master, .master_header, .master_footer {
+        left: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    </style>
+
+    <link rel="stylesheet" href="/scripts/jQuery/plugins/jquery.sidr.dark.css" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="related_news.aspx?cat=88&amp;page=1" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTEyODEzOTc2Mg9kFgJmD2QWBAICD2QWBGYPZBYCZg8WAh4EVGV4dAURTmV3c0NlbnRlciB8IFNEU1VkAgUPFgQfAAWLBDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4oZnVuY3Rpb24oKSB7IHZhciBjb25maWcgPSB7IGtpdElkOiAnbGxvMnRtZCcgfTsgdmFyIGQgPSBmYWxzZTsgdmFyIHRrID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7IHRrLnNyYyA9ICcvL3VzZS50eXBla2l0Lm5ldC8nICsgY29uZmlnLmtpdElkICsgJy5qcyc7IHRrLnR5cGUgPSAndGV4dC9qYXZhc2NyaXB0JzsgdGsuYXN5bmMgPSAndHJ1ZSc7IHRrLm9ubG9hZCA9IHRrLm9ucmVhZHlzdGF0ZWNoYW5nZSA9IGZ1bmN0aW9uKCkgeyB2YXIgcnMgPSB0aGlzLnJlYWR5U3RhdGU7aWYgKGQgfHwgcnMgJiYgcnMgIT0gJ2NvbXBsZXRlJyAmJiBycyAhPSAnbG9hZGVkJykgcmV0dXJuO2QgPSB0cnVlO3RyeSB7IFR5cGVraXQubG9hZChjb25maWcpOyB9IGNhdGNoIChlKSB7fX07dmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZSh0aywgcyk7fSkoKTs8L3NjcmlwdD4eB1Zpc2libGVnZAIED2QWAgIDD2QWCAIBD2QWAmYPZBYKAgMPZBYCAgMPZBYCAgEPZBYCZg9kFgJmD2QWBAIDDw8WAh8ABQ5LZXl3b3JkIFNlYXJjaGRkAgcPDxYCHghJbWFnZVVybAUoL2luY2x1ZGUvaW1hZ2VzL2hvbWUvZ3JleV9hcnJvd18yMDE0LnBuZ2RkAgUPZBYCZg9kFgJmD2QWBAIDDw8WAh8ABQ5LZXl3b3JkIFNlYXJjaGRkAgcPDxYCHwIFKC9pbmNsdWRlL2ltYWdlcy9ob21lL2dyZXlfYXJyb3dfMjAxNC5wbmdkZAILDxYCHwAFE01vbmRheSwgTWF5IDEsIDIwMjNkAg0PFgIfAAXiBDxwPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9pbWdfZm9sbG93X3VzLmpwZyIgYm9yZGVyPSIwIiBhbHQ9IkZvbGxvdyBTRFNVIiB3aWR0aD0iNDkiIGhlaWdodD0iMjIiIC8+IDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vc2RzdSI+PGltZyBzcmM9Ii9zZHN1X25ld3NjZW50ZXIvaW1hZ2VzL2J0bl9mb2xsb3d1cy5qcGciIGJvcmRlcj0iMCIgYWx0PSJGb2xsb3cgU0RTVSBvbiBUd2l0dGVyIiB3aWR0aD0iNjEiIGhlaWdodD0iMjIiIC8+PC9hPiA8YSBocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vU2FuRGllZ29TdGF0ZSIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9idG5fZmIuanBnIiBib3JkZXI9IjAiIGFsdD0iRm9sbG93IFNEU1Ugb24gRmFjZWJvb2siIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgLz48L2E+IDxhIGhyZWY9Ii9zZHN1X25ld3NjZW50ZXIvbmV3cy5hc3B4P2Rpcz00Ij48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvYnRuX2ljb25fcnNzLmpwZyIgYm9yZGVyPSIwIiBhbHQ9IlNEU1UgUlNTIEZlZWQiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgLz48L2E+IDwvcD5kAg8PFgIfAAXiBDxwPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9pbWdfZm9sbG93X3VzLmpwZyIgYm9yZGVyPSIwIiBhbHQ9IkZvbGxvdyBTRFNVIiB3aWR0aD0iNDkiIGhlaWdodD0iMjIiIC8+IDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vc2RzdSI+PGltZyBzcmM9Ii9zZHN1X25ld3NjZW50ZXIvaW1hZ2VzL2J0bl9mb2xsb3d1cy5qcGciIGJvcmRlcj0iMCIgYWx0PSJGb2xsb3cgU0RTVSBvbiBUd2l0dGVyIiB3aWR0aD0iNjEiIGhlaWdodD0iMjIiIC8+PC9hPiA8YSBocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vU2FuRGllZ29TdGF0ZSIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9idG5fZmIuanBnIiBib3JkZXI9IjAiIGFsdD0iRm9sbG93IFNEU1Ugb24gRmFjZWJvb2siIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgLz48L2E+IDxhIGhyZWY9Ii9zZHN1X25ld3NjZW50ZXIvbmV3cy5hc3B4P2Rpcz00Ij48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvYnRuX2ljb25fcnNzLmpwZyIgYm9yZGVyPSIwIiBhbHQ9IlNEU1UgUlNTIEZlZWQiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgLz48L2E+IDwvcD5kAgMPDxYCHwAFH0RpdmVyc2l0eSwgRXF1aXR5IGFuZCBJbmNsdXNpb25kZAIFDxYCHwAF1UA8ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94X3dyYXBwZXIiPjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3giPjxkaXYgY2xhc3M9InJlbF90aHVtYiI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9NzkxNjciIC8+PGltZyBzcmM9Ii9zZHN1X25ld3NjZW50ZXIvaW1hZ2VzL3N0b3JpZXMvdGh1bWJuYWlscy9mZWF0dXJlZC8yMDIzMDQxNDA5MDVfVG9ueV9IYXdrXzU1OXgzMjUuanBnIiBhbHQ9IlNrYXRlYm9hcmRlciBUb255IEhhd2siIC8+PC9hPjwvZGl2PjxkaXYgY2xhc3M9InJlbF9jb3B5Ij48c3BhbiBjbGFzcz0icmVsX3RpdGxlIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03OTE2NyIgLz5Ub255IEhhd2sgVG9wcyBTbGF0ZSBvZiBTdXJmL1NrYXRlIExlZ2VuZHMsIFNjaG9sYXJzIGF0IFNEU1UncyBTdG9rZSBTZXNzaW9uczwvYT48L3NwYW4+IDxiciAvPjxiciAvPjxzcGFuIGNsYXNzPSJyZWxfZGVzY3JpcHRpb24iPkNyaXRpY2FsIHJlZmxlY3Rpb24gb24gdGhlIGN1bHR1cmUsIHBvbGl0aWNzLCBhbmQgaGlzdG9yeSBvZiBzdXJmaW5nIGFuZCBza2F0ZWJvYXJkaW5nIGlzIHRoZSBzdWJqZWN0IG9mIGZvdXItZGF5IGNvbmZlcmVuY2UuPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03OTA5OCIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjMwMjIzMTMyNV9sdWtlX3dvb2RfMDIyMzIwMjNfbGFyZ2UucG5nIiBhbHQ9IiIgLz48L2E+PC9kaXY+PGRpdiBjbGFzcz0icmVsX2NvcHkiPjxzcGFuIGNsYXNzPSJyZWxfdGl0bGUiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc5MDk4IiAvPkNoaWVmIERpdmVyc2l0eSBPZmZpY2VyIEFwcG9pbnRlZCB0byBDYWxpZm9ybmlhIFJhY2lhbCBFcXVpdHkgQ29tbWlzc2lvbjwvYT48L3NwYW4+IDxiciAvPjxiciAvPjxzcGFuIGNsYXNzPSJyZWxfZGVzY3JpcHRpb24iPkouIEx1a2UgV29vZCB3aWxsIHdvcmsgdG8gcHJvbW90ZSByYWNpYWwgZXF1aXR5IGFuZCBhZGRyZXNzIHN0cnVjdHVyYWwgcmFjaXNtIGFjcm9zcyB0aGUgc3RhdGUuPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03OTA4MSIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjMwMjA5MTcxNl9TaGlybGV5LU5hc2gtV2ViZXItMDIwOTIzLUxSLmpwZyIgYWx0PSIiIC8+PC9hPjwvZGl2PjxkaXYgY2xhc3M9InJlbF9jb3B5Ij48c3BhbiBjbGFzcz0icmVsX3RpdGxlIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03OTA4MSIgLz5TaGlybGV5IE5hc2ggV2ViZXIgUmV0dXJucyB0byBTRFNVIFdpdGggYSBDYWxsIHRvIEFjdGlvbjwvYT48L3NwYW4+IDxiciAvPjxiciAvPjxzcGFuIGNsYXNzPSJyZWxfZGVzY3JpcHRpb24iPkNhbGlmb3JuaWEgU2VjcmV0YXJ5IG9mIFN0YXRlIGlzIGhvbm9yZWQgYXQgZXZlbnQgZm9jdXNlZCBvbiBzdHJlbmd0aGVuaW5nIHVuaXZlcnNpdHnigJlzIHBpcGVsaW5lIG9mIEJsYWNrIEVkdWNhdG9ycy48L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveF93cmFwcGVyIj48ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94Ij48ZGl2IGNsYXNzPSJyZWxfdGh1bWIiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc5MDQ5IiAvPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9zdG9yaWVzL3RodW1ibmFpbHMvZmVhdHVyZWQvMjAyMzAxMTAxMjEwX2hhcnJpcy13b29kLTU1OXgzMjUuanBnIiBhbHQ9IiIgLz48L2E+PC9kaXY+PGRpdiBjbGFzcz0icmVsX2NvcHkiPjxzcGFuIGNsYXNzPSJyZWxfdGl0bGUiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc5MDQ5IiAvPlR3byBTRFNVIFByb2Zlc3NvcnMgUmFua2VkIE5hdGlvbmFsbHkgQW1vbmcgTW9zdCBJbmZsdWVudGlhbCBFZHVjYXRpb24gU2Nob2xhcnM8L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj5KLiBMdWtlIFdvb2QgYW5kIEZyYW5rIEhhcnJpcyBJSUkgYXJlIHdpZGVseSBrbm93biBmb3IgdGhlaXIgY29sbGFib3JhdGl2ZSB3b3JrIHRvIGFkdmFuY2UgcmFjaWFsIGVxdWl0eSBpbiBlZHVjYXRpb24uPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODkyOCIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjIxMDA0MTIwNF9zZHN1LWRpdmVyc2l0eS1vY3QtMjAyMi1sYXJnZS5qcGciIGFsdD0iIiAvPjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJyZWxfY29weSI+PHNwYW4gY2xhc3M9InJlbF90aXRsZSI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9Nzg5MjgiIC8+U2FuIERpZWdvIFN0YXRlIFVuaXZlcnNpdHkgTmFtZWQgJ0RpdmVyc2l0eSBDaGFtcGlvbiwnIFJlY2VpdmVzIE5hdGlvbmFsIERpdmVyc2l0eSBBd2FyZDwvYT48L3NwYW4+IDxiciAvPjxiciAvPjxzcGFuIGNsYXNzPSJyZWxfZGVzY3JpcHRpb24iPlNEU1Ugd2FzIHRoZSBvbmx5IHVuaXZlcnNpdHkgaW4gQ2FsaWZvcm5pYSB0byByZWNlaXZlIGJvdGggdGhlIENoYW1waW9ucyBhbmQgdGhlIEhFRUQgYXdhcmRzPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODg2NSIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjIwODI1MTAwOV9MQVJHRTNzdHVkZW50c19jb3B5LmpwZyIgYWx0PSIiIC8+PC9hPjwvZGl2PjxkaXYgY2xhc3M9InJlbF9jb3B5Ij48c3BhbiBjbGFzcz0icmVsX3RpdGxlIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODg2NSIgLz5CYWNrIHRvIFNjaG9vbDogUHVibGljIFNwYWNlcyBmb3IgdGhlIE5vdCBTbyBTb2NpYWw8L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj5TRFNVIHN0dWRlbnRzIHJldHVybiB0byBpbi1wZXJzb24gY2xhc3NlcyBhbmQgcHJlcGFyZSBmb3IgY2FtcHVzIGxpZmUgYW5kIGV2ZW50cy48L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveF93cmFwcGVyIj48ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94Ij48ZGl2IGNsYXNzPSJyZWxfdGh1bWIiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc4ODcyIiAvPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9zdG9yaWVzL3RodW1ibmFpbHMvZmVhdHVyZWQvMjAyMjA4MzAxNTI4X3ByaWRlLWZsYWctMDgzMDIwMjItbGFyZ2UuanBnIiBhbHQ9IlRoZSBmbGFnIHN5bWJvbGl6ZXMgdGhlIGRpdmVyc2l0eSBvZiBzZXh1YWwgb3JpZW50YXRpb24gYW5kIGdlbmRlciBpZGVudGl0aWVzIG9uIGNhbXB1cy4iIC8+PC9hPjwvZGl2PjxkaXYgY2xhc3M9InJlbF9jb3B5Ij48c3BhbiBjbGFzcz0icmVsX3RpdGxlIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODg3MiIgLz5TRFNVIFJlcGVhdHMgYXMgYSDigJhCZXN0IG9mIHRoZSBCZXN04oCZIGZvciBMR0JUUSBTdHVkZW50czwvYT48L3NwYW4+IDxiciAvPjxiciAvPjxzcGFuIGNsYXNzPSJyZWxfZGVzY3JpcHRpb24iPldpdGggYSB3aWRlIGFycmF5IG9mIG5vdGFibGUgcHJvZ3JhbXMgYW5kIHBvbGljaWVzLCB0aGUgdW5pdmVyc2l0eSBkcmV3IGEgZml2ZS1zdGFyIHJhdGluZyBmcm9tIENhbXB1cyBQcmlkZS48L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveF93cmFwcGVyIj48ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94Ij48ZGl2IGNsYXNzPSJyZWxfdGh1bWIiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc4ODU5IiAvPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9zdG9yaWVzL3RodW1ibmFpbHMvZmVhdHVyZWQvMjAyMjA4MjIwOTQ4X3Nkc3VwY3l3YXRjaGxpc3RfTEFSR0Vjb3B5LmpwZyIgYWx0PSIiIC8+PC9hPjwvZGl2PjxkaXYgY2xhc3M9InJlbF9jb3B5Ij48c3BhbiBjbGFzcz0icmVsX3RpdGxlIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODg1OSIgLz5UaHJlZSBBenRlY3Mgb24gUG9seW5lc2lhbiBQb3RZIFdhdGNoIExpc3Q8L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj5BbGFtYSBVbHVhdmUgam9pbnMgYnJvdGhlcnMgSm9uYWggYW5kIEp1c3R1cyBUYXZhaSBpbiBjb25zaWRlcmF0aW9uIGZvciB0aGUgMjAyMiBhd2FyZC48L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveF93cmFwcGVyIj48ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94Ij48ZGl2IGNsYXNzPSJyZWxfdGh1bWIiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc4ODMwIiAvPjxpbWcgc3JjPSIvc2RzdV9uZXdzY2VudGVyL2ltYWdlcy9zdG9yaWVzL3RodW1ibmFpbHMvZmVhdHVyZWQvMjAyMjA3MjExMTQwX0otT05HLUNPTUlDLUNPTi0wNzIxMjAyMi1MQVJHRS5qcGciIGFsdD0iVGhpcyB5ZWFyJ3MgZm91ci1kYXkgQ29taWMtQ29uIGV2ZW50IGlzIHVuZGVyd2F5IGFuZCBzZXZlcmFsIHRob3VzYW5kIGV4cGVjdGVkIHRvIGF0dGVuZCBib3RoIHRoZSBjb252ZW50aW9uIGFuZCBzdXJyb3VuZGluZyBhY3RpdmF0aW9ucyB0aHJvdWdob3V0IGRvd250b3duIFNhbiBEaWVnby4gKFBob3RvIGNvdXJ0ZXN5IG9mIEpheSBPbmcpIiAvPjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJyZWxfY29weSI+PHNwYW4gY2xhc3M9InJlbF90aXRsZSI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9Nzg4MzAiIC8+U0RTVXhDb21pYy1Db246IEZhY3VsdHkgQnJpbmcgRGl2ZXJzZSBWb2ljZXMgaW50byBQYW5lbHM8L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj5TRFNVIHBhcnRpY2lwYW50cyB3aWxsIGRpdmUgaW50byBzdWNoIHN1YmplY3RzIGFzIEFmcm8tZnV0dXJpc20sIHNvY2lhbCBqdXN0aWNlLCBpZGVudGl0eSwgaG9ycm9yLCBhbmQgSGFycnkgUG90dGVyLjwvc3Bhbj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJyZWxhdGVkX3N0b3JpZXNfYm94X3dyYXBwZXIiPjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3giPjxkaXYgY2xhc3M9InJlbF90aHVtYiI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9Nzg4MTciIC8+PGltZyBzcmM9Ii9zZHN1X25ld3NjZW50ZXIvaW1hZ2VzL3N0b3JpZXMvdGh1bWJuYWlscy9mZWF0dXJlZC8yMDIyMDcxNTE1MTFfY29ydGVzLTA3MTUyMDIyLWxhcmdlLWIuanBnIiBhbHQ9IkFsYmVydG8gQ29ydGVzIGVhcm5lZCBoaXMgRXhlY3V0aXZlIE1CQSBkZWdyZWUgZnJvbSBTRFNV4oCZcyBGb3dsZXIgQ29sbGVnZSBvZiBCdXNpbmVzcyBpbiAyMDAwLiAoUGhvdG8gY291cnRlc3kgb2YgQWxiZXJ0byBDb3J0ZXMpIiAvPjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJyZWxfY29weSI+PHNwYW4gY2xhc3M9InJlbF90aXRsZSI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9Nzg4MTciIC8+QnVzaW5lc3MgR3JhZHVhdGXigJlzIFZvbHVudGVlciBXb3JrIGF0IEFJRFMgSW5mb3JtYXRpb24gTGluZSBMZWFkcyB0byBBIExpZmV0aW1lIE9mIENvbW11bml0eSBTZXJ2aWNlPC9hPjwvc3Bhbj4gPGJyIC8+PGJyIC8+PHNwYW4gY2xhc3M9InJlbF9kZXNjcmlwdGlvbiI+TWFtYeKAmXMgS2l0Y2hlbiBDRU8gQWxiZXJ0byBDb3J0ZXMgc2F5cyBoZSBzdGlsbCB1c2VzIHRoZSBsZXNzb25zIGhlIGxlYXJuZWQgZnJvbSBoaXMgU0RTVSBleGVjdXRpdmUgTUJBIHByb2dyYW0uPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODgxMCIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjIwNzA1MTQ0Nl9saWx5LWhvcGtpbnMtMDcwNTIwMjItbGFyZ2UuanBnIiBhbHQ9IlNhbiBEaWVnbyBTdGF0ZSBVbml2ZXJzaXR5IGdyYWR1YXRlIHN0dWRlbnQgTGlseSBIb3BraW5zIHdpbGwgYmUgc3VwZXJ2aXNpbmcgVGhlIFByaWRlIENlbnRlcuKAmXMgUHJpZGUgSG91c2UgcGVlciBtZW50b3JzaGlwIHByb2dyYW0uIiAvPjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJyZWxfY29weSI+PHNwYW4gY2xhc3M9InJlbF90aXRsZSI+PGEgaHJlZiA9ICIvc2RzdV9uZXdzY2VudGVyL25ld3Nfc3RvcnkuYXNweD9zaWQ9Nzg4MTAiIC8+Q2VsZWJyYXRpbmcgUFJJREU6IFNEU1XigJlzIFByaWRlIEhvdXNlIFByb2dyYW08L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj4iU2FmZSBTcGFjZSIgYXJlbid0IGp1c3QgYnV6endvcmRzIGZvciBTRFNVIGdyYWQgc2Nob29sIHN0dWRlbnQgTGlseSBIb3BraW5zLCBhIFByaWRlIEhvdXNlIG1lbnRvci4gQ3JlYXRpbmcgc2FmZSBzcGFjZXMgaGFzIGJlZW4gYSBiaWcgcGFydCBvZiBoZXIgbGlmZSBmb3Igc2V2ZW4geWVhcnMuPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlbGF0ZWRfc3Rvcmllc19ib3hfd3JhcHBlciI+PGRpdiBjbGFzcz0icmVsYXRlZF9zdG9yaWVzX2JveCI+PGRpdiBjbGFzcz0icmVsX3RodW1iIj48YSBocmVmID0gIi9zZHN1X25ld3NjZW50ZXIvbmV3c19zdG9yeS5hc3B4P3NpZD03ODgwNSIgLz48aW1nIHNyYz0iL3Nkc3VfbmV3c2NlbnRlci9pbWFnZXMvc3Rvcmllcy90aHVtYm5haWxzL2ZlYXR1cmVkLzIwMjIwNjIyMTQwN19CUkVOREEtRFJFVy0wNjIyMjAyMi1MQVJHRS5qcGciIGFsdD0iQnJlbmRhIERyZXcsIEJsYWNRIFNwYWNl4oCZcyBwcmVzaWRlbnQgYW5kIHByb2dyYW1taW5nIGRpcmVjdG9yLiIgLz48L2E+PC9kaXY+PGRpdiBjbGFzcz0icmVsX2NvcHkiPjxzcGFuIGNsYXNzPSJyZWxfdGl0bGUiPjxhIGhyZWYgPSAiL3Nkc3VfbmV3c2NlbnRlci9uZXdzX3N0b3J5LmFzcHg/c2lkPTc4ODA1IiAvPkZpbmRpbmcgYSBob21lIGluIGEgQmxhY1EgU3BhY2U8L2E+PC9zcGFuPiA8YnIgLz48YnIgLz48c3BhbiBjbGFzcz0icmVsX2Rlc2NyaXB0aW9uIj5CcmVuZGEgRHJldyBmb3VuZCBhIGhvbWUgaW4gU0RTVeKAmXMgbG9uZSBCbGFjayBMR0JUUUlBKyBvcmdhbml6YXRpb24uIE5vdywgdGhleSBhcmUgZ2l2aW5nIGJhY2sgdG8gdGhlIGNvbW11bml0eSBpbiBhIG5vdGV3b3J0aHkgd2F5Ljwvc3Bhbj48L2Rpdj48L2Rpdj48L2Rpdj5kAgkPZBYEZg9kFgYCAQ9kFgICAQ8WAh8ABcMDPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9zZHN1Ij48aW1nIHNyYz0iLi4vbmV3c2NlbnRlci9pbWFnZXMvYmRnX3R3aXR0ZXIucG5nIiBib3JkZXI9IjAiIGFsdD0iU0RTVSBUd2l0dGVyIiB3aWR0aD0iNDciIGhlaWdodD0iNDciIC8+PC9hPiA8YSBocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vU2FuRGllZ29TdGF0ZSI+PGltZyBzcmM9Ii4uL25ld3NjZW50ZXIvaW1hZ2VzL2JkZ19mYi5wbmciIGJvcmRlcj0iMCIgYWx0PSJTRFNVIEZhY2Vib29rIiB3aWR0aD0iNDciIGhlaWdodD0iNDciIC8+PC9hPiA8YSBocmVmPSJodHRwczovL2NvbW11bml0aWVzLnNkc3UuZWR1LyI+PGltZyBzcmM9Ii4uL25ld3NjZW50ZXIvaW1hZ2VzL2JkZ19tb3JlLnBuZyIgYm9yZGVyPSIwIiBhbHQ9IlNEU1UgT25saW5lIENvbW11bml0aWVzIiB3aWR0aD0iNDciIGhlaWdodD0iNDciIC8+PC9hPmQCAw9kFgICAQ8WAh8ABZoEPHA+PGEgaHJlZj0iaHR0cHM6Ly9kaXJlY3Rvcnkuc2RzdS5lZHUvIj5DYW1wdXMgRGlyZWN0b3J5PC9hPjxiciAvPiA8YSBocmVmPSJodHRwczovL3d3dy5zZHN1LmVkdS9tYXAiPk1hcHM8L2E+PGJyIC8+IDxhIGhyZWY9Imh0dHBzOi8vYmZhLnNkc3UuZWR1L2NhbXB1cy9wYXJraW5ndHJhbnMvcGVybWl0cyI+UGFya2luZzwvYT48YnIgLz4gPGEgaHJlZj0iaHR0cHM6Ly9iZmEuc2RzdS5lZHUvaHIvam9icyI+Sm9iczwvYT48YnIgLz4gPGEgaHJlZj0iaHR0cHM6Ly9icmFuZC5zZHN1LmVkdS9zdHJhdGNvbW0vbWVkaWEtcmVsYXRpb25zIj5NZWRpYTwvYT48YnIgLz4gPGEgaHJlZj0iaHR0cHM6Ly9zdW5zcG90LnNkc3UuZWR1L3BvcnRhbC8iPldlYiBQb3J0YWw8L2E+PGJyIC8+IDxhIGhyZWY9Imh0dHA6Ly93d3cuY2Fsc3RhdGUuZWR1LyI+Q1NVPC9hPjxiciAvPiA8YSBocmVmPSJodHRwczovL3NhY2Quc2RzdS5lZHUvZGl2ZXJzaXR5LXJlc291cmNlcy9sYW5kLWFja25vd2xlZGdtZW50Ij5MYW5kIEFja25vd2xlZGdlbWVudDwvYT4gPC9wPmQCBQ9kFgICAQ8WAh8ABXI8YSBocmVmPSJodHRwczovL2Nsb3VkLmNvbW1zLnNkc3UuZWR1L25ld3NjZW50ZXItc3Vic2NyaWJlIj5TaWduIHVwIGZvciB0aGUgU0RTVSBOZXdzQ2VudGVyIHdlZWtseSBuZXdzbGV0dGVyLjwvYT5kAgIPFgIfAAW8BTwhLS0gVGFnIE1hbmFnZXIgLS0+DQo8c2NyaXB0PihmdW5jdGlvbih3LGQscyxsLGkpe3dbbF09d1tsXXx8W107d1tsXS5wdXNoKHsnZ3RtLnN0YXJ0JzoNCm5ldyBEYXRlKCkuZ2V0VGltZSgpLGV2ZW50OidndG0uanMnfSk7dmFyIGY9ZC5nZXRFbGVtZW50c0J5VGFnTmFtZShzKVswXSwNCmo9ZC5jcmVhdGVFbGVtZW50KHMpLGRsPWwhPSdkYXRhTGF5ZXInPycmbD0nK2w6Jyc7ai5hc3luYz10cnVlO2ouc3JjPQ0KJ2h0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0bS5qcz9pZD0nK2krZGw7Zi5wYXJlbnROb2RlLmluc2VydEJlZm9yZShqLGYpOw0KfSkod2luZG93LGRvY3VtZW50LCdzY3JpcHQnLCdkYXRhTGF5ZXInLCdHVE0tUDUyMjRURCcpOzwvc2NyaXB0Pg0KPCEtLSBvbGQgYW5hbHl0aWNzIC0tPg0KPHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0YWcvanM/aWQ9VUEtODQyNTk3My0xIj48L3NjcmlwdD4NCjxzY3JpcHQ+DQp3aW5kb3cuZGF0YUxheWVyID0gd2luZG93LmRhdGFMYXllciB8fCBbXTsNCmZ1bmN0aW9uIGd0YWcoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpO30NCmd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQpndGFnKCdjb25maWcnLCAnVUEtODQyNTk3My0xJywgew0KICAgICdsaW5rX2F0dHJpYnV0aW9uJzogdHJ1ZQ0KfSk7DQo8L3NjcmlwdD5kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBSduY05ld3MkbmV3c2NlbnRlckhlYWRlciRjdGwwMCRidG5TZWFyY2gFJ25jTmV3cyRuZXdzY2VudGVySGVhZGVyJGN0bDAxJGJ0blNlYXJjaB32aN6HPH2+ARqgXAMOltWMAWhU" />
+
+
+<script src="/ScriptResource.axd?d=6cx_uH-srkgek0STGGZbxuYM7NW71e0It94sCBECdGb-cAOwczqZWIVIs_Zy83Qjr62Rh316FZjTOtWddNSIS1mcgBn0hA2VnjQfib6hILDmjzp_PJH9xz0LXuosS4-_YTgSJLIHRbdlo4dMui96eQDIOUQXJsSgp5SEE7x0oL8DuNcX0&amp;t=3f4a792d" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2DAF35C1" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKJgq/mAwKi0ouXAQLq8MYmAqGYi5cBAum2xiYCiufO+ARffv7BXV2FX7hkBvhOKFLJ6UdgUA==" />
+    
+    
+    
+    <div id="ncNews_pnlHomepage">
+	
+
+        <div id="main_content_wrapper" class="main_wrapper">            
+        
+        <!-- HEADER -->
+        <div id="ncNews_newscenterHeader_pnlMainContainerNewscenter" class="main_container">
+		
+        
+        <div class="sdsuniverse_header_top">
+				<div style="float:left;" class="university_logo"><a href="http://www.sdsu.edu/"><img alt="SDSU" src="/include/images/news/sdsu_logo.png" width="150px" height="30px" /></a></div>
+	    </div>
+        
+        
+        <!-- Header Link Bar -->
+            <div id="ncNews_newscenterHeader_pnlHeaderTopContainerSpaces" class="header_top_container">
+			
+                    <div class="header_top_inner_wrapper">
+                     
+                        <a href='' class='nav_link_across_search' id='search_submenu-link'><img src="/include/images/news/newscenter2014_search_btn.jpg" alt="search button" class="search_desktop" border="0" width="60" height="18" /></a>
+                        <div class="header_links_spaces"><div id="ncNews_newscenterHeader_pnlHeaderTopInnerSpaces" class="header_top_inner">
+
+			</div></div>        
+                    </div>
+
+            
+		</div>
+
+            <!-- Search Dropdown -->
+
+            <div id="ncNews_newscenterHeader_pnlPageNavContainer2014SpacesTop" class="page_nav_container_top">
+			
+
+                        <div id="ncNews_newscenterHeader_pnlPageNav2014SpacesTop" class="page_nav">
+
+			</div>
+                        
+                        
+                        <div id="sublinks_across_spaces_top" class="sublinks_across_container">
+                            <div id="ncNews_newscenterHeader_search_submenu_links_spaces_top" class="sublinks_search_top">
+                                <div class='search_left'>
+                                        <label for="dpgMyPage$ctl06$txtSearch" class="search_header">Keyword Search</label> 
+                                        <div id="ncNews_newscenterHeader_pnlSearchBoxSublinksSpacesTop">
+				
+    <script type="text/javascript">
+        var searchText = "search";
+
+        $(document).ready(function() {
+            var textBox = $("#ncNews_newscenterHeader_ctl00_txtSearch");
+
+            textBox.attr('value', searchText);
+            textBox.click(function() {
+                var txt = $("#ncNews_newscenterHeader_ctl00_txtSearch");
+
+                if (txt.attr("value") == searchText) {
+                    txt.attr("value", "");
+                }
+            });
+            textBox.blur(function() {
+                var txt = $("#ncNews_newscenterHeader_ctl00_txtSearch");
+
+                if (txt.attr("value") == "") {
+                    txt.attr("value", searchText);
+                }
+            });
+        });
+    </script>
+<div id="ncNews_newscenterHeader_ctl00_pnlSearch" class="search">
+					
+    
+    
+    <input name="ncNews$newscenterHeader$ctl00$txtSearch" type="text" id="ncNews_newscenterHeader_ctl00_txtSearch" class="search_textbox" label="Search Box" Alt="Search Box" title="Search Box" />
+    <input type="image" name="ncNews$newscenterHeader$ctl00$btnSearch" id="ncNews_newscenterHeader_ctl00_btnSearch" class="search_button" title="Search Box" src="/include/images/home/grey_arrow_2014.png" alt="Search" border="0" />
+
+				</div>
+			</div>
+                                        <div id="ncNews_newscenterHeader_pnlSearchContentsLeftSublinksSpacesTop" class="search_contents_left">
+				<a href='https://directory.sdsu.edu/'>Campus Directory</a>
+<a href='https://map.concept3d.com/?id=801'>Maps</a>
+<a href='https://bfa.sdsu.edu/hr/jobs/'>Jobs at SDSU</a>
+
+			</div>
+                                </div>
+                            </div>
+                            <div id="ncNews_newscenterHeader_pnlPageSubNav2014SpacesTop" class="page_nav">
+				<div id='searchtop_submenu' class='sublinks_top dropdown'>
+<div id='middleContent' class='middle_content'><div id='ddt_header' class='drop_down_title_header' ><p class='search_header morecolumn'>TOPICS OF INTEREST</p></div><div class='middle'><a href='https://admissions.sdsu.edu/'>How to become an Aztec</a>
+<a href='https://newscenter.sdsu.edu/student_affairs/career/amplandingpage.aspx'>How to become a mentor</a>
+<a href='https://newscenter.sdsu.edu/student_affairs/career/internshipcentral.aspx'>Need an intern?</a>
+<a href='http://newscenter.sdsu.edu/events/calendar.aspx'>Campus Events Calendar</a>
+<a href='https://admissions.sdsu.edu/tours_events'>Take a campus tour</a>
+</div><div class='middle'><a href='https://library.sdsu.edu/'>Use the library's resources</a>
+<a href='https://newscenter.sdsu.edu/sdsu_newscenter/news.aspx'>SDSU NewsCenter</a>
+<a href='https://titleix.sdsu.edu/'>Sexual Assault Resouces</a>
+<a href='https://smokefree.sdsu.edu/'>Smoke Free SDSU</a>
+<a href='https://asir.sdsu.edu/'>Student Enrollment Characteristics</a>
+</div></div><div class='right_side'><h3><strong>SDSU By the Numbers </strong><strong><br /></strong></h3><table border="0"><tbody><tr><td align="left"><p><strong>1897 </strong></p></td><td>&nbsp;</td><td align="left"><p>Founded </p></td></tr><tr><td align="left"><p><strong>34,000</strong></p></td><td>&nbsp;</td><td align="left"><p>Students (Fall 2019)</p></td></tr><tr><td align="left"><p><strong>3,076</strong></p></td><td>&nbsp;</td><td align="left"><p>Students Studying Abroad (2017-18)</p></td></tr><tr><td align="left"><p><strong>400,000+</strong></p></td><td>&nbsp;</td><td align="left"><p>Alumni</p></td></tr><tr><td align="left"><p><strong>3.77</strong></p></td><td>&nbsp;</td><td align="left"><p>Average Incoming High School GPA</p></td></tr><tr><td align="left"><p><strong>93,704</strong></p></td><td>&nbsp;</td><td align="left"><p>Total Applications for Fall 2020</p></td></tr><tr><td align="left"><p><strong>10,300</strong></p></td><td>&nbsp;</td><td align="left"><p>Graduates (Spring 2019)</p></td></tr></tbody></table><p><br />&nbsp;<br />&nbsp;<br />&nbsp;</p></div>
+</div>
+			</div>
+                        </div>
+
+            
+		</div>
+
+            <!-- Mobile Links -->
+                <div class="mobile_area">
+                       
+                    <div class="mobile_search">
+                        <div class="mobile_search_left">
+                            <p class="search_header">Keyword Search</p>
+                            <div id="ncNews_newscenterHeader_pnlMobileSearchBox" class="mobile_search_box">
+			
+    <script type="text/javascript">
+        var searchText = "search";
+
+        $(document).ready(function() {
+            var textBox = $("#ncNews_newscenterHeader_ctl01_txtSearch");
+
+            textBox.attr('value', searchText);
+            textBox.click(function() {
+                var txt = $("#ncNews_newscenterHeader_ctl01_txtSearch");
+
+                if (txt.attr("value") == searchText) {
+                    txt.attr("value", "");
+                }
+            });
+            textBox.blur(function() {
+                var txt = $("#ncNews_newscenterHeader_ctl01_txtSearch");
+
+                if (txt.attr("value") == "") {
+                    txt.attr("value", searchText);
+                }
+            });
+        });
+    </script>
+<div id="ncNews_newscenterHeader_ctl01_pnlSearch" class="search">
+				
+    
+    
+    <input name="ncNews$newscenterHeader$ctl01$txtSearch" type="text" id="ncNews_newscenterHeader_ctl01_txtSearch" class="search_textbox" label="Search Box" Alt="Search Box" title="Search Box" />
+    <input type="image" name="ncNews$newscenterHeader$ctl01$btnSearch" id="ncNews_newscenterHeader_ctl01_btnSearch" class="search_button" title="Search Box" src="/include/images/home/grey_arrow_2014.png" alt="Search" border="0" />
+
+			</div>
+		</div>
+                            <div id="ncNews_newscenterHeader_pnlobileSearchLinks" class="mobile_search_links">
+			<a href='https://directory.sdsu.edu/'>Campus Directory</a>
+<a href='https://map.concept3d.com/?id=801'>Maps</a>
+<a href='https://bfa.sdsu.edu/hr/jobs/'>Jobs at SDSU</a>
+
+		</div>
+                        </div>
+                        <div class="mobile_search_right">
+                            <div id="ncNews_newscenterHeader_pnlMobileSearchLinksRight">
+			<p class="search_header">Topics of Interest</p><a href='https://admissions.sdsu.edu/' class="mobile_right_a">How to become an Aztec</a>
+<a href='https://newscenter.sdsu.edu/student_affairs/career/amplandingpage.aspx' class="mobile_right_a">How to become a mentor</a>
+<a href='https://newscenter.sdsu.edu/student_affairs/career/internshipcentral.aspx' class="mobile_right_a">Need an intern?</a>
+<a href='http://newscenter.sdsu.edu/events/calendar.aspx' class="mobile_right_a">Campus Events Calendar</a>
+<a href='https://admissions.sdsu.edu/tours_events' class="mobile_right_a">Take a campus tour</a>
+<a href='https://library.sdsu.edu/' class="mobile_right_a">Use the library's resources</a>
+<a href='https://newscenter.sdsu.edu/sdsu_newscenter/news.aspx' class="mobile_right_a">SDSU NewsCenter</a>
+<a href='https://titleix.sdsu.edu/' class="mobile_right_a">Sexual Assault Resouces</a>
+<a href='https://smokefree.sdsu.edu/' class="mobile_right_a">Smoke Free SDSU</a>
+<a href='https://asir.sdsu.edu/' class="mobile_right_a">Student Enrollment Characteristics</a>
+<div class="mobile_search_bottom_right"><h3><strong>SDSU By the Numbers </strong><strong><br /></strong></h3><table border="0"><tbody><tr><td align="left"><p><strong>1897 </strong></p></td><td>&nbsp;</td><td align="left"><p>Founded </p></td></tr><tr><td align="left"><p><strong>34,000</strong></p></td><td>&nbsp;</td><td align="left"><p>Students (Fall 2019)</p></td></tr><tr><td align="left"><p><strong>3,076</strong></p></td><td>&nbsp;</td><td align="left"><p>Students Studying Abroad (2017-18)</p></td></tr><tr><td align="left"><p><strong>400,000+</strong></p></td><td>&nbsp;</td><td align="left"><p>Alumni</p></td></tr><tr><td align="left"><p><strong>3.77</strong></p></td><td>&nbsp;</td><td align="left"><p>Average Incoming High School GPA</p></td></tr><tr><td align="left"><p><strong>93,704</strong></p></td><td>&nbsp;</td><td align="left"><p>Total Applications for Fall 2020</p></td></tr><tr><td align="left"><p><strong>10,300</strong></p></td><td>&nbsp;</td><td align="left"><p>Graduates (Spring 2019)</p></td></tr></tbody></table><p><br />&nbsp;<br />&nbsp;<br />&nbsp;</p></div>
+		</div>
+                        </div>                       
+                    </div>
+                </div>  
+
+
+            <!-- Title & Logo Bar -->
+            <div class="title-bar-container">
+                <div class="title-bar-left"><a href="news.aspx"><img src="/include/images/news/sdsu-newscenter-logo-2022.gif" alt="newscenter logo" border="0" width="360px" height="86px" /></a></div>
+                <div class="main_newsletter_weather"><!--<iframe src="http://www.kpbs.org/sdsu_weather/" name="weather" title="SDSU weather" width="150" marginwidth="0" height="75" marginheight="0" scrolling="no" frameborder="0" hspace="0" vspace="0" id="weather"></iframe>--></div>
+                <div class="title-bar-middle">Monday, May 1, 2023</div>
+                <div class="title-bar-right"><p><img src="/sdsu_newscenter/images/img_follow_us.jpg" border="0" alt="Follow SDSU" width="49" height="22" /> <a href="https://twitter.com/sdsu"><img src="/sdsu_newscenter/images/btn_followus.jpg" border="0" alt="Follow SDSU on Twitter" width="61" height="22" /></a> <a href="https://www.facebook.com/SanDiegoState" target="_blank"><img src="/sdsu_newscenter/images/btn_fb.jpg" border="0" alt="Follow SDSU on Facebook" width="22" height="22" /></a> <a href="/sdsu_newscenter/news.aspx?dis=4"><img src="/sdsu_newscenter/images/btn_icon_rss.jpg" border="0" alt="SDSU RSS Feed" width="23" height="22" /></a> </p></div>
+            </div>
+            <!-- End Title Bar -->
+
+            <!-- Title & Logo Bar -->
+            <div class="title-bar-container_mobile" style="display:none;">
+                <div class="title-bar-left"><a href="news.aspx"><img src="/include/images/news/sdsu-newscenter-logo-2022.gif" width="360px" height="86px" alt="newscenter logo" border="0" /></a></div>
+                <div class="title-bar-right"><p><img src="/sdsu_newscenter/images/img_follow_us.jpg" border="0" alt="Follow SDSU" width="49" height="22" /> <a href="https://twitter.com/sdsu"><img src="/sdsu_newscenter/images/btn_followus.jpg" border="0" alt="Follow SDSU on Twitter" width="61" height="22" /></a> <a href="https://www.facebook.com/SanDiegoState" target="_blank"><img src="/sdsu_newscenter/images/btn_fb.jpg" border="0" alt="Follow SDSU on Facebook" width="22" height="22" /></a> <a href="/sdsu_newscenter/news.aspx?dis=4"><img src="/sdsu_newscenter/images/btn_icon_rss.jpg" border="0" alt="SDSU RSS Feed" width="23" height="22" /></a> </p></div>
+            </div>
+            <!-- End Title Bar -->
+
+            <div class="mobile_search_container" style="display:none;"><a href="" class="mobile_search_link"><img src="/include/images/news/newscenter2014_search_btn.jpg" width="60" height="18" alt="Mobile Search" /></a></div>
+            <div class="mobile_search_container_white" style="display:none;"><a href="" class="mobile_search_link"><img src="/include/images/news/newscenter2014_search_btn_white.jpg" width="57" height="18" alt="Mobile Search" /></a></div>
+            <div class="page_nav_translate">
+                <div id="google_translate_element_spaces"></div>
+            </div>
+
+        <div class="mobile_logo" style="display:none;"><a href="news.aspx"><img src="/include/images/news/sdsu-newscenter-logo-2022-mobile.gif" alt="newscenter logo" border="0" /></a></div>
+        
+        <div style="clear:both;"></div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                /* Browser Links TOP SEARCH*/
+                $(".nav_link_across_search").mouseover(function (e) {
+
+                    e.preventDefault();
+
+                    $(".sublinks_search_top").show();
+                    $("#searchtop_submenu").show();
+                });
+
+                $(".nav_link_across_search").click(function (e) {
+                    e.preventDefault();
+                });
+
+                $(".page_nav_container_top").mouseleave(function (e) {
+                    $(".sublinks_search_top").hide();
+                    $("#searchtop_submenu").hide();
+                });
+
+                /* Mobile Links */
+
+                $(".mobile_search_link").toggle(function (e) {
+                    e.preventDefault();
+                    $(".mobile_search").show();
+                }, function (e) {
+                    e.preventDefault();
+                    $(".mobile_search").hide();
+                });
+
+                $(".mobile_category_link").toggle(function (e) {
+                    e.preventDefault();
+                    $(".mobile_category").show();
+                }, function (e) {
+                    e.preventDefault();
+                    $(".mobile_category").hide();
+                });
+
+         });
+
+        </script>
+
+ 
+	</div>
+
+
+
+        
+        <div class="related_stories_container">
+            <div class="related_stories_container_inner">
+                <div class="storyHeaderSection">Stories related to:<br />
+                    <span class="categoryHeader">
+                        <span id="ncNews_CatLabel">Diversity, Equity and Inclusion</span>
+                    </span>
+                </div>
+                <div class="related_stories_boxes">
+                    <div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=79167" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202304140905_Tony_Hawk_559x325.jpg" alt="Skateboarder Tony Hawk" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=79167" />Tony Hawk Tops Slate of Surf/Skate Legends, Scholars at SDSU's Stoke Sessions</a></span> <br /><br /><span class="rel_description">Critical reflection on the culture, politics, and history of surfing and skateboarding is the subject of four-day conference.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=79098" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202302231325_luke_wood_02232023_large.png" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=79098" />Chief Diversity Officer Appointed to California Racial Equity Commission</a></span> <br /><br /><span class="rel_description">J. Luke Wood will work to promote racial equity and address structural racism across the state.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=79081" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202302091716_Shirley-Nash-Weber-020923-LR.jpg" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=79081" />Shirley Nash Weber Returns to SDSU With a Call to Action</a></span> <br /><br /><span class="rel_description">California Secretary of State is honored at event focused on strengthening university’s pipeline of Black Educators.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=79049" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202301101210_harris-wood-559x325.jpg" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=79049" />Two SDSU Professors Ranked Nationally Among Most Influential Education Scholars</a></span> <br /><br /><span class="rel_description">J. Luke Wood and Frank Harris III are widely known for their collaborative work to advance racial equity in education.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78928" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202210041204_sdsu-diversity-oct-2022-large.jpg" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78928" />San Diego State University Named 'Diversity Champion,' Receives National Diversity Award</a></span> <br /><br /><span class="rel_description">SDSU was the only university in California to receive both the Champions and the HEED awards</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78865" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202208251009_LARGE3students_copy.jpg" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78865" />Back to School: Public Spaces for the Not So Social</a></span> <br /><br /><span class="rel_description">SDSU students return to in-person classes and prepare for campus life and events.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78872" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202208301528_pride-flag-08302022-large.jpg" alt="The flag symbolizes the diversity of sexual orientation and gender identities on campus." /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78872" />SDSU Repeats as a ‘Best of the Best’ for LGBTQ Students</a></span> <br /><br /><span class="rel_description">With a wide array of notable programs and policies, the university drew a five-star rating from Campus Pride.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78859" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202208220948_sdsupcywatchlist_LARGEcopy.jpg" alt="" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78859" />Three Aztecs on Polynesian PotY Watch List</a></span> <br /><br /><span class="rel_description">Alama Uluave joins brothers Jonah and Justus Tavai in consideration for the 2022 award.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78830" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202207211140_J-ONG-COMIC-CON-07212022-LARGE.jpg" alt="This year's four-day Comic-Con event is underway and several thousand expected to attend both the convention and surrounding activations throughout downtown San Diego. (Photo courtesy of Jay Ong)" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78830" />SDSUxComic-Con: Faculty Bring Diverse Voices into Panels</a></span> <br /><br /><span class="rel_description">SDSU participants will dive into such subjects as Afro-futurism, social justice, identity, horror, and Harry Potter.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78817" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202207151511_cortes-07152022-large-b.jpg" alt="Alberto Cortes earned his Executive MBA degree from SDSU’s Fowler College of Business in 2000. (Photo courtesy of Alberto Cortes)" /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78817" />Business Graduate’s Volunteer Work at AIDS Information Line Leads to A Lifetime Of Community Service</a></span> <br /><br /><span class="rel_description">Mama’s Kitchen CEO Alberto Cortes says he still uses the lessons he learned from his SDSU executive MBA program.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78810" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202207051446_lily-hopkins-07052022-large.jpg" alt="San Diego State University graduate student Lily Hopkins will be supervising The Pride Center’s Pride House peer mentorship program." /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78810" />Celebrating PRIDE: SDSU’s Pride House Program</a></span> <br /><br /><span class="rel_description">"Safe Space" aren't just buzzwords for SDSU grad school student Lily Hopkins, a Pride House mentor. Creating safe spaces has been a big part of her life for seven years.</span></div></div></div><div class="related_stories_box_wrapper"><div class="related_stories_box"><div class="rel_thumb"><a href = "/sdsu_newscenter/news_story.aspx?sid=78805" /><img src="/sdsu_newscenter/images/stories/thumbnails/featured/202206221407_BRENDA-DREW-06222022-LARGE.jpg" alt="Brenda Drew, BlacQ Space’s president and programming director." /></a></div><div class="rel_copy"><span class="rel_title"><a href = "/sdsu_newscenter/news_story.aspx?sid=78805" />Finding a home in a BlacQ Space</a></span> <br /><br /><span class="rel_description">Brenda Drew found a home in SDSU’s lone Black LGBTQIA+ organization. Now, they are giving back to the community in a noteworthy way.</span></div></div></div>
+                    
+                    <div id="ncNews_UpdatePanel1">
+		 
+                        
+                        <!--
+                    <div class="related_stories_box_wrapper">
+                        <div class="related_stories_box">
+                            <div class="rel_thumb">
+                                <img src="/include/images/news/story_default_large.jpg" alt="image" />
+                            </div>
+                            <div class="rel_copy">
+                                <span class="rel_title">test</span>
+                                <br /><br />
+                                <span class="rel_description">tesing</span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                            
+                            <div style="width: 100%; text-align: center; float:left;">
+                                <div id="ncNews_UpdateProgress1" style="display:none;">
+			
+                                        <img src="/include/images/news/ajax-loader-transparent.gif" alt="wait image" />   
+                                    
+		</div>
+                            </div>
+                            <div style="width: 100%; text-align: center; float:left;">
+                            <input type="submit" name="ncNews$btnLoadMorePC" value="LOAD MORE STORIES" id="ncNews_btnLoadMorePC" class="button_related_stories" /></div>
+                        
+	</div>
+
+
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+      
+        
+
+       
+
+        
+
+        <!-- FOOTER -->
+        <div id="ncNews_newscenterFooter_pnlNewscenterFooter">
+		
+
+<div class="footer_top">
+                <div class="column_panel_footer">
+                    <div id="ncNews_newscenterFooter_pnlFooterLeftPanel" class="footer_column">
+			
+                        <div class="footer_headers">ONLINE COMMUNITIES</div>
+                        <div class="footer_content"><a href="https://twitter.com/sdsu"><img src="../newscenter/images/bdg_twitter.png" border="0" alt="SDSU Twitter" width="47" height="47" /></a> <a href="https://www.facebook.com/SanDiegoState"><img src="../newscenter/images/bdg_fb.png" border="0" alt="SDSU Facebook" width="47" height="47" /></a> <a href="https://communities.sdsu.edu/"><img src="../newscenter/images/bdg_more.png" border="0" alt="SDSU Online Communities" width="47" height="47" /></a></div>
+                    
+		</div>
+                    <div id="ncNews_newscenterFooter_pnlFooterCenterPanel" class="footer_column">
+			
+                        <div class="footer_headers">ADDITIONAL RESOURCES</div>
+                        <div class="footer_content"><p><a href="https://directory.sdsu.edu/">Campus Directory</a><br /> <a href="https://www.sdsu.edu/map">Maps</a><br /> <a href="https://bfa.sdsu.edu/campus/parkingtrans/permits">Parking</a><br /> <a href="https://bfa.sdsu.edu/hr/jobs">Jobs</a><br /> <a href="https://brand.sdsu.edu/stratcomm/media-relations">Media</a><br /> <a href="https://sunspot.sdsu.edu/portal/">Web Portal</a><br /> <a href="http://www.calstate.edu/">CSU</a><br /> <a href="https://sacd.sdsu.edu/diversity-resources/land-acknowledgment">Land Acknowledgement</a> </p></div>
+                    
+		</div>
+                    <div id="ncNews_newscenterFooter_pnlFooterRightPanel" class="footer_column">
+			
+                        <div class="footer_headers">NEWSLETTER SIGN UP</div>
+                        <div class="footer_content"><a href="https://cloud.comms.sdsu.edu/newscenter-subscribe">Sign up for the SDSU NewsCenter weekly newsletter.</a></div>
+                    
+		</div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="footer_bottom_container">
+                    <img src="/include/images/home/sdsu_logo_panel_footer.png" alt="" width="135px" height="120px" />
+                    <br /><br />
+                    5500 Campanile Drive
+                    <br />
+                    San Diego, CA 92182
+                    <br />
+                    Tel: 619-594-5200
+                </div>
+            </div>
+
+
+	</div>
+
+<!-- Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5224TD');</script>
+<!-- old analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8425973-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-8425973-1', {
+    'link_attribution': true
+});
+</script>
+        
+
+        </div>
+    
+     
+     
+    
+     
+     
+</div>
+     <div style="clear:both;"></div>
+
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>
+
