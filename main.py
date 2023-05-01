@@ -39,7 +39,7 @@ def crawl(seedFileName, levels, keyword):
                 # get the html contents of the website
                 html_frontier = requests.get(link).text
                 # open the html file where we'll store the website
-                outputName = "crawled_pages/htmlFile_llacd001" + str(count) + "_round6.html"
+                outputName = "crawled_pages/htmlFile_llacd001" + str(count) + "_round7.html"
                 output = open(outputName, "w")
                 output.write(html_frontier)
                 output.close()

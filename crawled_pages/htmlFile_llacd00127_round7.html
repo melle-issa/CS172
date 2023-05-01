@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta charset="utf-8" />
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        
+        <title>Web Login Service</title>
+	    <link rel="shortcut icon" href="/idp/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/idp/css/brown-idp.css" />
+	<!--[if IE]>
+	    <script type="text/javascript" src="/idp/js/ie-html5.js"></script>
+	<!-[endif]-->
+  	</head>
+  	
+  	<body>
+
+    <header id="header">
+    	<div id="brown-brand">
+    		<div class="marginator">
+    			<h1><a href="http://www.brown.edu" acceesskey="1" title="Brown University Homepage"><span>Brown University</span></a></h1>
+    		</div>
+    	</div>
+    </header>
+
+<!-- VELOCITY -->
+    <div class="main-content">
+	    <div class="marginator">
+	        <h2 class="authentication">Authentication Required</h2>
+		    <div>	
+
+		    </div>
+
+		<section id="auth-form">
+			<form id="login" action="/idp/profile/SAML2/Redirect/SSO?execution=e1s1" method="post">
+				<fieldset>
+              		
+					<legend>Enter your Brown credentials</legend>
+					
+                	    <label for="username">
+					    <span class="form-label">Username</span>
+					    <span class="form-widget"><input id="username" name="j_username" type="text" placeholder="jcarberr" autofocus required autocapitalize="off" 
+                        					value="">
+					    </span>
+					    </label>
+
+					    <label for="password">
+					    <span class="form-label">Password</span>
+					    <span class="form-widget"><input name="j_password" type="password" id="password" value="" required></span>
+				        </label>
+              	
+					<button type="submit" value="Login" name="_eventId_proceed"
+						onClick="this.childNodes[0].nodeValue='Logging in, please wait...'"
+					>Log In</button>
+				</fieldset>	
+			</form>
+		</section>
+
+		<aside id="domain-info">
+			<div class="sp-details p">
+	     		<p>You have asked to log in to:</p>
+			</div>
+    		<div class="sp-logo">
+				<img src="/idp/images/brown-shib-80.png" alt="" />
+			</div>
+			<div class="sp-details p">
+			
+				<span class="sp-name">ask.brown.edu</span>
+				<span class="sp-description">
+				</span>
+			</div>
+		</aside>
+ 
+  
+    <ul id="navlist" style="font-size: 1.2rem;">
+      <li><a href="http://www.brown.edu/" title="Brown University Home Page">Brown University</a></li>
+      <li><a href="http://www.brown.edu/cis/services/shibboleth/help.html" title="Need help?">Login Help</a></li>
+      <li id="myAccount"><a href="http://myaccount.brown.edu" title="Edit your account information">myAccount</a></li>
+      <li id="newUsers"><strong>New Users:</strong> <a href="http://myaccount.brown.edu/activate" title="Activate your account now!">Activate your account now</a></li>
+    </ul>
+    <div style="font-size: 1.2rem;">
+	<strong>Forgot your password?</strong> <a href="https://myaccount.brown.edu/password/brown">Faculty/Staff/Student</a> or 
+	<a href="https://myaccount.brown.edu/password/alumni">Alumni & Friends</a>
+    </div>
+    <div id="shib-promo" style="margin-top: 50px;">
+      <img src="/idp/images/shib_logo_40.png" width="115" height="40" alt="Shibboleth" class="left" />
+      <p><strong>Need to know more?</strong> Learn more about <a title="Shibboleth Information" href="http://www.brown.edu/information-technology/services/web-authentication-shibboleth">Shibboleth at Brown</a>.</p>
+    </div>
+
+	    </div>
+    </div>
+
+<footer id="footer">
+  <div class="marginator">
+    <div id="brown-university" class="col">
+      <h4>Brown University</h4>
+<p><span class="city-state-country">Providence, Rhode Island 02912, USA</span><br>
+                        <span class="telephone">Phone: 401-863-1000</span><br>
+                        <span class="maps-contact"><a href="http://www.brown.edu/Facilities/Facilities_Management/maps/#building/" tabindex="220">Maps</a> &amp; <a href="http://www.brown.edu/about/visit/driving-directions" tabindex="221">Directions</a> / <a href="http://www.brown.edu/contact" accesskey="9" tabindex="222">Contact Us</a> / <a href="https://www.brown.edu/website-accessibility/">Accessibility</a></span><br>
+                        <span class="copyright">© 2013 Brown University</span></p>
+    </div>
+  </div>
+</footer>
+	
+	<script type="text/javascript" src="/idp/js/jquery-1.6.js"></script>
+	<script type="text/javascript" src="/idp/js/shib.jquery.js"></script> 
+</body>
+</html>
