@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20230428001110" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.12.1/jquery-ui-1.12.1.custom.timepicker.min.js?v=20230428001110"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.12.1/jquery-ui.compiled.min.css?v=20230428001112" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20230428001112" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20230428001112"></script><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20230428001108" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20230428001108" rel="stylesheet" type="text/css"  /><link href="https://support.csuchico.edu/TDPortal/BE/Style/157/TDClient/1984?v=20210927225815" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/TDJSFramework.compiled.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20230428001110"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20230428001108"></script>
+<script src="/TDPortal/Content/Scripts/tdx/elasticsearchAutocomplete/elasticsearchAutocomplete.min.js?v=20230428001110"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://support.csuchico.edu/TDPortal/BE/Icon/157/1984?v=20210927225815" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-942024-22"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-942024-22', { 'cookie_domain': 'support.csuchico.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+
+
+  <script>
+
+    function ReloadList() {
+      window.location.href = window.location.href;
+    }
+
+    // Adds ellipsis for long descriptions with long titles
+    $(function () {
+
+      
+
+      // Need to wait for images to load before the search bar position Is calculated
+      $(window).bind('load', function () {
+        // initialize the tag lookup
+        var searchFilter = new TeamDynamix.SearchFilter({
+          searchFieldSelector: '#ctl00_ctl00_cpContent_cpContent_txtCategorySearch',
+          wsUrl: '/TDClient/1984/Portal/WebServices/JSON/TagLookupService.asmx/GetItems'
+        });
+      });
+
+    
+
+      $('#ctl00_ctl00_cpContent_cpContent_txtCategorySearch').keyup(function (e) {
+        if (e.keyCode === 13) {
+          $('#ctl00_ctl00_cpContent_cpContent_btnCategorySearch').click()
+        }
+      });
+    });
+  </script>
+
+
+<meta property="og:title" content="Virtual Private Network (VPN)" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://support.csuchico.edu/TDClient/1984/Portal/KB/?CategoryID=1923" />
+<meta property="og:image" content="https://support.csuchico.edu/TDPortal/BE/Logo/157/1984" />
+<meta property="og:description" content="The University uses Palo Alto Global Protect VPN to allow users to make a secure encrypted connection to the campus network to access campus resources inside the campus border firewall from off-campus locations. The Global Protect VPN comes in 2 flavors:
+
+AlwaysON VPN: For University owned and ma..." />
+  <meta property="og:site_name" content="California State University, Chico - Knowledge Base" /><title>
+	Knowledge Base - Virtual Private Network (VPN)
+</title></head>
+<body>
+<form method="post" action="/TDClient/1984/Portal/KB/?CategoryID=1923" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="uHyJPFFZjlGpl5cRYEHFRcInV66EGTxymd6r64HPaMz721rYFg36z97M4h054kb0jh6GR1ysZhsS7LaiesF5DrwgJjT/a04XlXZLLI+kYjEKEMTQ0lDKlWZuOdb5fCvSgNpKbhqimKWs7PHcyvGR5DZYJPK6c+3EztJtkaV0EcQ6uJUk1PSotRWafScx8oVBGAPt2CtYChW7KVz+zQjKKJVfexcUUxc0U6hjfmLsxQOPi+0lL9QbATLz2hs8rYV+Slmgb/MqAOW7q/AvijXuTu5WPnWMII1kStRkCudWdUaDqkl9UkLt/qzhg6E13CLzUcKmdPyqNK4hmZFmezGtCcliWELv0S48/eNqHyGOgA8dzdqKCDrpjkQWW/7ZVTkmTZSoPpILsczMWzMNGjFtE71dT6ReV0EAIhYdlOrofcDKZOm81HdCjChBSTih6wl18ZyFB34EQ1nltnhCYB+jVfUZv9BY26uIP4CRxKgCiEq2g8tYP7EBvv6WnKdxQq4Td80DXXsTrhVddR+6mIStbN6seVxBRBzQhOuBuv29moL0a3MvhkdVtToaqK2V4upBQdnd7NwqepMcZ9ampHU/x8cPSNFI39vnmMhrvFUzWw1nM9Rl3FAnnY6o567pN4pXPXZWAFn8wIag6OyOPg5tKA6rDqicG1ysd38hVT8KDWnzZQMASv8TwEXcG1h2T7z/4jX2bmhwwqUAlThZd3wQXyHEFnssxeyxixoN9M7WUVhoHYDVGgs3Ht946motJxZb/B8hmOq+dQaCb+t8/AgOBkR91/uXwb1vZC/4WiE3qaRHF9ej+1Ev5dBgS8irrS4lq67egFJSzof8s5yCqlYtghScUyvwS2G5FNHNP8TOPHDtFZKc5loz0G1Cq85xAsLKrClCURTZqi7NSxv0Ncn8xm4TuRV4l3DYuI9lhzZcL4XzVXravgGFo5qBpegB9/czWTkJjiyAVZIZ+r8U+n+09n3Pe+u9wEfRAs3juyTseIud9kjQ0VQ/+5ULSFsmxeJQIvTyj+1b2H6oO/8EYpaIxD3epSE=" />
+
+
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA19DDCE" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="vFK1ewggroZ7fgQ00y7jy6dobKMxq96D83uAceRz9Q3A73iBYfLCKXYU+vEKH4wQsDVN3EOLNGV5RPK99ktYXCol2kk30vdXEUHK7IOgT0IN4lxK" />
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+
+
+  <header role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.csuchico.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/157/0" alt="California State University, Chico Home Page" class="js-logo img-responsive" />
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-9ff94fbecf2240d6aceedad757f5caee" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-9ff94fbecf2240d6aceedad757f5caee" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-9ff94fbecf2240d6aceedad757f5caee" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all">
+      <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul class="dropdown-menu" >
+      <li>
+        <a href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-globe" title="Search all areas">
+          <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li role="separator" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base">
+            <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-9ff94fbecf2240d6aceedad757f5caee">Search the client portal</label>
+
+  <input id="SiteSearch-text-9ff94fbecf2240d6aceedad757f5caee" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text."/>
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-9ff94fbecf2240d6aceedad757f5caee" class="btn btn-default" type="button" title="Search">
+      <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1984/Portal/Shared/Search",
+      enableAutocompleteSearch: true,
+      autocompleteSearchUrl: '/TDClient/1984/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-9ff94fbecf2240d6aceedad757f5caee',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-9ff94fbecf2240d6aceedad757f5caee',
+      searchButtonSelector: '#SiteSearch-button-9ff94fbecf2240d6aceedad757f5caee',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-9ff94fbecf2240d6aceedad757f5caee',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+  </script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/1984/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1984%2fPortal%2fKB%2f%3fCategoryID%3d1923">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1984/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1984%2fPortal%2fKB%2f%3fCategoryID%3d1923">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1984/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopcce2daf8-144e-4e47-bf7a-3901b7979602" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1984/Portal/Home/">IT Support</a>
+              </li>
+            
+
+          
+            <li id="divTDProjects" class="themed tdbar-button-anchored">
+              <a href="/TDClient/1984/Portal/Projects/">Projects</a>
+            </li>
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1984/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1984/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  
+    <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/1984/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+  <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span>
+
+  <div class="gutter-bottom">
+
+    <ol id="ctl00_ctl00_cpContent_cpContent_olBreadcrumbs" class="breadcrumb">
+      <li><a href="/TDClient/1984/Portal/KB/">Knowledge Base</a></li><li><a href="/TDClient/1984/Portal/KB/?CategoryID=1626">Wired &amp; Wireless Networks</a></li><li class="active"><a href="/TDClient/1984/Portal/KB/?CategoryID=1923">Virtual Private Network (VPN)</a></li>
+    </ol>
+
+    <h1>
+      <span id="ctl00_ctl00_cpContent_cpContent_spnIcon" class="fa category-icon">
+        
+      </span>
+      <span id="ctl00_ctl00_cpContent_cpContent_lblCategoryName">Virtual Private Network (VPN)</span>
+      
+    </h1>
+
+  </div>
+
+  <div class="row">
+
+    <div id="divCats" class="col-md-8">
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divCategoryDescription" class="well">The University uses Palo Alto Global Protect VPN to allow users to make a secure encrypted connection to the campus network to access campus resources inside the campus border firewall from off-campus locations. The Global Protect VPN comes in 2 flavors:<br /><br />AlwaysON VPN: For University owned and managed devices<br /><br />OnDemand VPN: For student and other privately owned devices</div>
+
+      <h2>Categories (2)</h2>
+
+<div class="gutter-bottom">
+    <div class="media media-doubled border category-box category-box-collapsed" title="Global Protect AlwaysON VPN">
+      <div class="category-box-text-content">
+      <div class="media-left leftIcon">
+        <span class="gutter-top-sm media-object category-icon fa fa-4x fa-fw" aria-hidden="true"
+              >
+        </span>
+      </div>
+      <div class="media-body">
+        <h3 class="category-title">
+            <span class="category-title">
+            <a href="/TDClient/1984/Portal/KB/?CategoryID=15691">Global Protect AlwaysON VPN</a>
+            </span>
+        </h3>
+          <div class="category-box-description">
+          <small>
+            All University owned &amp; managed devices will be deployed&#160;pre-configured with the Palo Alto Global Protect AlwaysON&#160;VPN&#160;client. All University owned devices that were previously installed with the Pulse Secure VPN will be automatically updated with the new Global Protect AlwaysON VPN client.<br /><br />Click the Getting Started! Link below to find out more about the new GlobalProtect AlwaysON VPN
+          </small>
+        </div>
+      </div>
+    </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa fa-2x fa-arrow-circle-o-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Global Protect OnDemand VPN">
+      <div class="category-box-text-content">
+      <div class="media-left leftIcon">
+        <span class="gutter-top-sm media-object category-icon fa fa-4x fa-fw" aria-hidden="true"
+              >
+        </span>
+      </div>
+      <div class="media-body">
+        <h3 class="category-title">
+            <span class="category-title">
+            <a href="/TDClient/1984/Portal/KB/?CategoryID=15690">Global Protect OnDemand VPN</a>
+            </span>
+        </h3>
+          <div class="category-box-description">
+          <small>
+            The Palo Alto Global Protect OnDemand VPN is intended for students and other personal, non University managed devices. <br /><br />Click one of the links below to find out more about the OnDemand VPN client
+          </small>
+        </div>
+      </div>
+    </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa fa-2x fa-arrow-circle-o-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script>
+
+  $(function () {
+    $('.category-box').each(function () {
+      if ($(this).find('.media-body').height() <= 91) {
+        $(this).find('.category-box-button-container').hide();
+      } else {
+        $(this).find('.category-box-text-content').addClass('text-fade');
+      }
+    });
+  });
+
+  function toggleCategoryBox(button) {
+    $(button).toggleClass('category-box-button-collapsed').toggleClass('category-box-button-expanded')
+    $(button).parents('.media').toggleClass('category-box-expanded').toggleClass('category-box-collapsed');
+    $(button).parents('.media').children('.category-box-text-content').toggleClass('text-fade');
+    $(button).children('.fa').toggleClass('fa-arrow-circle-o-down').toggleClass('fa-arrow-circle-o-up');
+
+    if ($(button).hasClass('category-box-button-expanded')) {
+      $(button).children('.sr-only').text('Collapse');
+      srAlert("category box collapsed");
+    } else {
+      $(button).children('.sr-only').text('Expand');
+      srAlert("category box expanded");
+    }
+  }
+
+</script>
+      
+
+    </div>
+
+    <div id="divCatsSidebar" class="col-md-4">
+      <div id="ctl00_ctl00_cpContent_cpContent_divCategorySearch" class="gutter-bottom input-group">
+        <label class="sr-only" for="ctl00_ctl00_cpContent_cpContent_txtCategorySearch">Search this category</label>
+        <input name="ctl00$ctl00$cpContent$cpContent$txtCategorySearch" type="search" id="ctl00_ctl00_cpContent_cpContent_txtCategorySearch" maxlength="100" class="form-control" autocomplete="off" placeholder="Search this category" aria-label="Search this category" title="To search for articles within this specific category and subcategories." />
+
+        <span class="input-group-btn">
+          <button onclick="__doPostBack('ctl00$ctl00$cpContent$cpContent$btnCategorySearch','')" id="ctl00_ctl00_cpContent_cpContent_btnCategorySearch" class="btn btn-default" type="button" title="Search">
+            <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+            <span class="sr-only">Search</span>
+          </button>
+        </span>
+      </div>
+
+      
+
+      <h2 class="sr-only">Additional Resources</h2>
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divPopular" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most popular articles based upon total views">Popular Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=7626">Get Connected! (Eduroam)</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=8738">Office 365 for Students</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=8727">Desktop/Laptop Standards</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=11701">Managing or Disabling Clutter</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=8732">Electronic Device Disposal and Transfer Procedures</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/1984/Portal/KB/PopularArticles">
+            View All Popular Articles
+            <span class="fa fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divRecent" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most recently modified articles">Recent Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=72510">Add a printer that is located on the MFP-Printers server (Mac)</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=32677">Guest &amp; Conference Accounts</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=30979">Forgot Username</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=113290">Microsoft Bookings</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1984/Portal/KB/ArticleDet?ID=113080">Faculty Center Grading</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/1984/Portal/KB/RecentArticles">
+            View All Recent Articles
+            <span class="fa fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="gutter-top">
+        
+
+<div class="panel panel-default tag-list">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">
+      Popular Tags<span class="fa fa-tags" aria-hidden="true"></span>
+    </h2>
+  </div>
+
+  <div class="panel-body">
+    <ul id="ctl00_ctl00_cpContent_cpContent_tags_ulTags" class="panel-list">
+      
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523canvas" rel="nofollow">canvas</a> (22)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523studentcenter" rel="nofollow">studentcenter</a> (19)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523blackboard" rel="nofollow">blackboard</a> (18)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523Box" rel="nofollow">Box</a> (18)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523zoom" rel="nofollow">zoom</a> (17)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523cascade" rel="nofollow">cascade</a> (16)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523Outlook" rel="nofollow">Outlook</a> (14)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523kaltura" rel="nofollow">kaltura</a> (12)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523MFP" rel="nofollow">MFP</a> (11)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1984/Portal/KB/Search?SearchText=%2523microsoft" rel="nofollow">microsoft</a> (11)
+          </li>
+        
+    </ul>
+
+    
+
+  </div>
+
+  <div class="panel-footer clearfix">
+    <div class="pull-right">
+      <a href="/TDClient/1984/Portal/Shared/BrowseTags?ItemID=0&ComponentID=26">
+        View All Tags
+        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+
+</div>
+      </div>
+
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+  <div class="clearfix"></div>
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');//]]>
+</script>
+</form>
+
+<footer role="contentinfo">
+  
+  
+  
+    <div class="master-footer">
+
+      <div class="container" style="background-color: #D3D1CC; font-size: 12px">
+      <div class="row">
+        <div class="col-md-3">
+          <p>IT Support Services<br>
+            California State University, Chico<br>
+            Chico, CA 95929<br>
+            Phone: 530-898-HELP (4357)</p>
+        </div>
+        <div class="col-md-3 col-md-offset-6">
+          <p>Copyright © 2022<br>
+          All Rights Reserved<br>
+          <a href="http://www.csuchico.edu/arc/accessibility.shtml" title="If you are having difficulty accessing content on this page, " target="_blank">Report an accessibility issue</a><br>
+          <a href="http://get.adobe.com/reader/" target="_blank">Download Adobe Reader</a></p>
+        </div>
+      </div>
+    </div>
+      
+
+    </div>
+  
+</footer>
+
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+
+    })(jQuery);
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>The Periodic Table of WordPress Plugins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(fonts/roboto.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:700;src:url(fonts/roboto-700.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Roboto Slab;font-style:normal;font-weight:200;src:url(fonts/roboto-slab.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{ascent-override:92%;descent-override:24%;font-family:Roboto-fallback;line-gap-override:0%;size-adjust:98%;src:local("Arial")}@font-face{ascent-override:99%;descent-override:40%;font-family:Roboto Slab-fallback;line-gap-override:0%;size-adjust:104%;src:local(Palatino)}:root{--color-body:#1e1e1e;--color-link:#213fd4;--color-link-hover:#7b90ff;--color-card:#fff;--color-bg-body:#eff2ff;--color-example:#fff;--color-bg-example:#3858e9;--color-bg-card:#3f57e1;--color-bg-card-hover:#213fd4;--color-bg-tooltip:#213fd4;--color-tweet:#fff;--color-twitter:#1d9bf0;--card-width:clamp(3em,16vw,5em);--card-height:calc(var(--card-width)/2*3);--card-gap:1vw}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{background:var(--color-bg-body);color:var(--color-body);font-family:Roboto,Roboto-fallback,sans-serif;font-size:clamp(1em,1vw,1.5em);font-weight:400;line-height:1.5;margin:0;padding:0}body:has(.plugin.active){overflow:hidden;position:fixed;top:var(--scrollpos)}a{color:var(--color-link);text-decoration:underline}a:hover{color:var(--color-link-hover)}p{margin:0 0 1em}img{height:auto;max-width:100%}.wrapper{align-items:end;display:grid;grid-template-rows:1fr auto;min-height:100vh}.content{align-self:center;margin:0 auto;padding:3vw}.table{display:grid;gap:var(--card-gap);grid-template-areas:"h h h h h h h h h h h h h h h h h h" "d d d d d d d d d d d d d d d d d d" ". a a a a a a a a a a a b b b b b ." ". . e e c c c c c c c c . . . . . ." ". . e e c c c c c c c c . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . .";grid-template-columns:var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width);grid-template-rows:auto auto var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height);overflow:scroll;width:94vw}.blank{grid-area:a}.blank2{grid-area:b}.blank3{grid-area:c}.blank4{display:none;grid-area:y}.card{align-items:center;background:var(--color-bg-card);border:none;box-sizing:border-box;color:var(--color-card);display:grid;font-family:inherit;font-size:1.2em;gap:0;grid-auto-columns:1fr;grid-template-areas:"r . ." "e e e" ". . a";grid-template-columns:1fr auto 1fr;grid-template-rows:1fr auto 1fr;justify-items:center;margin:0;outline:0;padding:0;position:relative;transition:scale .5s ease-out}.card>.element{font-size:1.6em;grid-area:e;line-height:1;margin:0;text-align:center}.card>.name{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:none;font-size:.56em;font-weight:400;grid-area:n;line-height:1.3;margin:0 .25em;overflow:hidden;text-align:center}.card>.rank{align-self:start;grid-area:r;justify-self:start;margin:.3em 0 0 .3em}.card>.age,.card>.rank{font-size:.625em;line-height:1}.card>.age{align-self:end;grid-area:a;justify-self:end;margin:0 .3em .3em 0;overflow:hidden}.plugin{cursor:pointer;height:100%;width:100%}.plugin:focus,.plugin:hover{z-index:10}.plugin.active,.plugin:focus,.plugin:hover{background:var(--color-bg-card-hover);scale:1.1}.plugin.active{display:none;z-index:20}.title{grid-area:h}.title h1{font-family:Roboto Slab,Roboto Slab-fallback,serif;font-size:clamp(1em,8vw,2em);font-weight:200;line-height:1.25;margin:0}.title a{text-decoration:none}.intro,.title{width:94vw}.title{margin-bottom:1em}.intro{align-self:end;grid-area:d}.intro>p>span{display:none}.cta{display:flex;margin:0 0 1em}.cta p{margin:0 var(--card-gap) 0 0;width:clamp(6em,calc(var(--card-width)*2 + var(--card-gap)),10em)}.cta a{box-sizing:border-box;cursor:pointer;display:flex;font-size:.8em;height:3em;justify-content:center;margin:0;padding:0;text-decoration:none;transition:all .3s ease-out;width:100%}.cta a,.cta span{align-items:center}.cta span{display:inline-flex}.cta svg{fill:currentColor;margin-right:.5em;width:1em}.twitter-share{border:1px solid var(--color-twitter);color:var(--color-twitter);position:relative}.twitter-share:hover{background-color:var(--color-twitter);color:var(--color-tweet)}.buy-button{border:1px solid var(--color-bg-card);color:var(--color-bg-card)}.buy-button:focus,.buy-button:hover{background:var(--color-link-hover);border-color:var(--color-link-hover);color:var(--color-card)}.example{grid-area:e}.example .card{background:var(--color-bg-example);color:var(--color-example);height:100%}.example .card>.name{-webkit-line-clamp:none;font-size:1em;margin:0 3em}.tooltip{view-transition-name:card;background:#438aa6;background:var(--color-bg-tooltip);height:100%;inset:0;bottom:auto;color:#fff;cursor:auto;display:none;left:auto;overflow-y:scroll;overscroll-behavior:contain;position:fixed;right:0;text-align:left;top:0;width:100%;z-index:10}.active+.tooltip{display:block}.tooltip.right{left:0;right:auto}.tooltip.bottomtop{bottom:0;top:auto}.tooltip .tooltip-inner{align-items:end;box-sizing:border-box;display:grid;gap:1em;grid-template-areas:"n x" "a a" "f f" "d d";grid-template-columns:auto 3.5em;grid-template-rows:auto auto auto 1fr;height:100%;padding:1em}.tooltip .tooltip-close{align-self:start;background:transparent;border:1px solid;color:inherit;cursor:pointer;grid-area:x;height:3.5em;justify-self:end;margin:0;outline:0;padding:0;transition:all .1s ease-out;width:3.5em}.tooltip .tooltip-close:hover{background:#fff;border-color:#fff;color:var(--color-bg-example);outline:1px solid #fff}.tooltip a{color:#fff;text-decoration:none}.tooltip a:hover{text-decoration:underline}.tooltip .name{font-size:1.5em;grid-area:n}.tooltip .author{grid-area:a}.tooltip .facts{grid-area:f}.tooltip .description{grid-area:d}.tooltip .description:before{content:open-quote}.tooltip .description:after{content:close-quote}.tooltip p{margin:0}.footer{align-items:center;display:flex;flex-direction:column;font-size:.75em;margin:1vw auto;padding:0 1vw;width:100%}.footer p{margin:0}@media (prefers-color-scheme:dark){:root{--color-body:#bfbfbf;--color-link:#bfbfbf;--color-card:#bfbfbf;--color-example:#bfbfbf;--color-bg-body:#1b191a;--color-bg-example:#1b191a;--color-bg-card:#1b191a;--color-bg-card-hover:var(--color-body);--color-bg-tooltip:#1b191a;--color-border:#777;--color-tweet:var(--color-body);--scrollpos:0}.buy-button,.twitter-share{background:transparent!important;border-color:var(--color-border);color:var(--color-card)}.twitter-share:focus,.twitter-share:hover{border-color:var(--color-twitter);color:var(--color-twitter)}.buy-button:focus,.buy-button:hover{border-color:var(--color-link-hover);color:var(--color-link-hover)}.card{border:1px solid var(--color-border)!important}.plugin.active,.plugin:focus,.plugin:hover{background:var(--color-body);border:none!important;color:var(--color-bg-card)}.tooltip .tooltip-close{border-width:.5px}}@media (prefers-color-scheme:dark) and (min-width:768px){.tooltip{border:1px solid var(--color-border)!important}}@media screen and (min-width:768px){:root{--card-width:clamp(2em,4.2vw,4em)}body:has(.plugin.active){overflow:auto;position:static;top:auto}.intro,.title{margin:0;width:auto}.item{position:relative}.table{overflow:initial;width:auto}.card>.element{font-size:1em;margin-bottom:0}.tooltip{bottom:auto;height:calc(var(--card-height)*6 + var(--card-gap)*5);left:auto;overflow:auto;position:absolute;right:0;top:0;width:calc(var(--card-width)*10 + var(--card-gap)*9)}::view-transition-old(card){height:auto;width:auto}.footer{flex-direction:row;justify-content:space-between}}@media screen and (min-width:900px){.tooltip{height:calc(var(--card-height)*5 + var(--card-gap)*4)}}@media screen and (min-width:1024px){.small-screen-only{display:none}.blank4{display:block}.content{padding:1vw}.cta{margin:0}:root{--card-width:clamp(2em,4.5vw,4em)}.table{grid-template-areas:"c a a a h h h h h h h h b b b b b y" ". a a a d d d d d d d d b b b b b ." ". . e e d d d d d d d d . . . . . ." ". . e e d d d d d d d d . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . .";grid-template-columns:var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width) var(--card-width);grid-template-rows:var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height) var(--card-height)}.card{font-size:1em;grid-template-areas:"r . ." "e e e" "n n n" ". . a";grid-template-rows:1fr auto 1fr 1fr}.card>.element{font-size:1.25em;margin-bottom:.4em}.card>.name{-webkit-line-clamp:1;display:block;display:-webkit-box}.tooltip{height:calc(var(--card-height)*4 + var(--card-gap)*3);width:calc(var(--card-width)*8 + var(--card-gap)*7)}.tooltip .tooltip-inner{gap:.1em}.tooltip .tooltip-close{height:2em}}@media screen and (min-width:1200px){.blank3,.blank4{display:none}.table{grid-template-areas:". a a a h h h h h h h h b b b b b ." ". . e e d d d d d d d d . . . . . ." ". . e e d d d d d d d d . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . ."}.example{font-size:1.2em}.example .card>.name{font-size:.75em}.card>.name{-webkit-line-clamp:2}}@media screen and (min-width:1440px){:root{--card-width:clamp(2em,3.75vw,4em)}.intro,.title{align-self:center}.example{font-size:1.3em}.example .card>.name{font-size:.85em}.card>.element{font-size:1.6em}.card>.name{-webkit-line-clamp:3}.tooltip{height:calc(var(--card-height)*3 + var(--card-gap)*2)}.tooltip .tooltip-inner{gap:1em}}</style>
+  <link rel="stylesheet" href="css/print.css?v=1678223327" media="print">
+  <link rel="canonical" href="https://plugintable.com">
+  <meta name="description" content="The periodic table of WordPress plugins showcases the 108 most popular WordPress plugins based on active installations and downloads.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="The Periodic Table of WordPress Plugins">
+  <meta property="og:url" content="https://plugintable.com">
+  <meta property="og:description" content="The periodic table of WordPress plugins showcases the 108 most popular WordPress plugins based on active installations and downloads.">
+  <meta property="og:image" content="/images/social-card.png">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <link rel="icon" href="/images/favicon.png" size="512x512" type="image/png">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@swissspidy" />
+  <meta name="twitter:creator" content="@swissspidy" />
+  <meta property="twitter:image" content="/images/social-card.png">
+  <!--
+
+                       `-/+osssssssssssso+/-`
+                   ./oys+:.`            `.:+syo/.
+                .+ys:.   .:/osyyhhhhyyso/:.   ./sy+.
+              /ys:   -+ydmmmmmmmmmmmmmmmmmmdy+-   :sy/
+            /h+`  -odmmmmmmmmmmmmmmmmmmmmmmmmmmdo-  `+h/
+          :ho`  /hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmds/   `oh:
+        `sy.  /hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd+        .ys`
+       .ho  `sdddhhhyhmmmdyyhhhdddddhhhyydmmmmy           oh.
+      .h+          ``-dmmy.``         ``.ymmmmh            +h.
+     `ho  `       /mmmmmmmmmmo       .dmmmmmmmms        ~~  oh`
+     oy  .h`       ymmmmmmmmmm:       /mmmmmmmmmy`      -d.  yo
+    .d-  ymy       `dmmmmmmmmmd.       ymmmmmmmmmh`     /my  -d.
+    oy  -mmm+       /mmmmmmmmmmy       .dmmmmmmmmmy     ymm-  yo
+    h+  +mmmd-       smmmmmmmmmm+       /mmmmmmmmmm-   :mmm+  +h
+    d/  smmmmh`      `dmmmmmmmmmd`       smmmmmmmmm:  `dmmms  /d
+    d/  smmmmms       :mmmmmmmmm+        `dmmmmmmmd.  smmmms  /d
+    h+  +mmmmmm/       smmmmmmmh  +       /mmmmmmmy  /mmmmm+  +h
+    oy  -mmmmmmd.      `dmmmmmd- +m/       smmmmmd. .dmmmmm-  yo
+    .d-  ymmmmmmh       :mmmmm+ .dmd-      `dmmmm/  ymmmmmy  -d.
+     oy  .dmmmmmmo       smmmh  hmmmh`      :mmmy  +mmmmmd.  yo
+     `ho  -dmmmmmd:      `dmd- ommmmms       smd- .dmmmmd-  oh`
+      .h+  -dmmmmmd`      :m+ -dmmmmmm:      `do  hmmmmd-  +h.
+       .ho  .ymmmmmy       + `hmmmmmmmd.      :` ommmmy.  oh.
+        `sy.  /hmmmm+        ommmmmmmmmy        -dmmh/  .ys`
+          :ho`  /hmmd-      :mmmmmmmmmmmo      `hmh/  `oh:
+            /h+`  -odh`    `dmmmmmmmmmmmd:     oo-  `+h/
+              /ys:   ~~    smmmmmmmmmmmmmd`       :sy/
+                .+ys/.    `/osyyhhhhyyso/:`   ./sy+.
+                   ./oys+:.`            `.:+syo/.
+                       `-/+osssssssssssso+/-`
+
+       We ♥ WordPress — https://wordpress.org/
+       (ASCII art by Mark Jaquith)
+    -->
+
+  <script nonce="90b791fa776531c3fce6f8a2f3f128b79ddbda838b86c238ec814b1abdb63a70" async="" src="https://www.googletagmanager.com/gtag/js?id=G-569F75KXE9"></script>
+  <script nonce="90b791fa776531c3fce6f8a2f3f128b79ddbda838b86c238ec814b1abdb63a70">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-569F75KXE9', {
+      cookie_expires: 0,
+    });
+  </script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="content">
+    <div class="table">
+      <div class="blank"></div>
+      <div class="blank2"></div>
+      <div class="blank3"></div>
+      <div class="blank4"></div>
+
+      <div class="title">
+        <h1>
+          <a href="https://plugintable.com">The Periodic Table of WordPress Plugins</a>
+        </h1>
+      </div>
+
+      <div class="intro">
+        <p>
+          Over <strong>60&lsquo;000 WordPress plugins</strong> have been contributed to the
+          <a href="https://wordpress.org/plugins/" target="_blank">WordPress.org Plugin Directory</a>.
+          Millions of websites are powered by these plugins, developed and maintained by an amazing open-source community around the globe.
+          To celebrate the <a href="https://wp20.wordpress.net/" target="_blank">20th anniversary of WordPress</a>, this table showcases the 108 most popular WordPress plugins in a unique way.
+        </p>
+
+        <p class="small-screen-only">
+          <b>Note:</b> best viewed in a desktop browser.
+        </p>
+
+        <div class="cta">
+          <p>
+            <a
+              href="https://twitter.com/intent/tweet?hashtags=wpplugintable,WP20&text=The%20Periodic%20Table%20of%20WordPress%20Plugins&url=https%3A%2F%2Fplugintable.com%2F"
+              class="twitter-share">
+              <span>
+                <svg role="img" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 512 512"><path fill="currentColor"
+                                                 d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+              </span>
+              <span>
+                Tweet
+              </span>
+            </a>
+
+          </p>
+          <p>
+            <a href="https://shop.plugintable.com/" class="buy-button">
+				  <span>
+					  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                 viewBox="0 96 960 960"><path
+                d="M286.788 975Q257 975 236 953.788q-21-21.213-21-51Q215 873 236.212 852q21.213-21 51-21Q317 831 338 852.212q21 21.213 21 51Q359 933 337.788 954q-21.213 21-51 21Zm400 0Q657 975 636 953.788q-21-21.213-21-51Q615 873 636.212 852q21.213-21 51-21Q717 831 738 852.212q21 21.213 21 51Q759 933 737.788 954q-21.213 21-51 21ZM235 315l110 228h288l125-228H235Zm-30-60h589.074q22.964 0 34.945 21Q841 297 829 318L694 561q-11 19-28.559 30.5Q647.881 603 627 603H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Zm140 288h288-288Z"/></svg>
+				  </span>
+              <span>
+					  Buy Poster
+				  </span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="card">
+          <div class="rank">Rank</div>
+          <div class="element">Symbol</div>
+          <div class="name">Plugin Name</div>
+          <div class="age">Age&nbsp;in&nbsp;Years</div>
+        </div>
+      </div>
+
+                <div class="item">
+            <button type="button" class="card plugin wordpress-seo cat-seo" aria-expanded="false" aria-controls="tooltip-wordpress-seo">
+              <span class="rank">1</span>
+              <span class="element">Yo</span>
+
+              <span class="name">Yoast SEO</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wordpress-seo">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wordpress-seo">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wordpress-seo/" target="_blank" rel="nofollow">Yoast SEO</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://yoa.st/1uk">Team Yoast</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in October 2010.                </p>
+                <p class="description">Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin jetpack cat-editing" aria-expanded="false" aria-controls="tooltip-jetpack">
+              <span class="rank">2</span>
+              <span class="element">Je</span>
+
+              <span class="name">Jetpack</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-jetpack">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-jetpack">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/jetpack/" target="_blank" rel="nofollow">Jetpack</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://jetpack.com">Automattic</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>3.9/5</b> rating. It was first published in January 2011.                </p>
+                <p class="description">Improve your WP security with powerful one-click tools like backup and malware scan. Get essential free tools including stats, CDN and social sharing.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin akismet cat-security-privacy" aria-expanded="false" aria-controls="tooltip-akismet">
+              <span class="rank">3</span>
+              <span class="element">Ak</span>
+
+              <span class="name">Akismet</span>
+              <span class="age">17</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-akismet">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-akismet">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/akismet/" target="_blank" rel="nofollow">Akismet</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://automattic.com/wordpress-plugins/">Automattic - Anti Spam Team</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in October 2005.                </p>
+                <p class="description">The best anti-spam protection to block spam comments and spam in a contact form. The most trusted antispam solution for WordPress and WooCommerce.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin elementor cat-page-builder" aria-expanded="false" aria-controls="tooltip-elementor">
+              <span class="rank">4</span>
+              <span class="element">El</span>
+
+              <span class="name">Elementor</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-elementor">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-elementor">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/elementor/" target="_blank" rel="nofollow">Elementor</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash">Elementor.com</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in May 2016.                </p>
+                <p class="description">The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile responsive editing, and more. Get started now!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin contact-form-7 cat-forms" aria-expanded="false" aria-controls="tooltip-contact-form-7">
+              <span class="rank">5</span>
+              <span class="element">Cf</span>
+
+              <span class="name">Contact Form&nbsp;7</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-contact-form-7">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-contact-form-7">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank" rel="nofollow">Contact Form&nbsp;7</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://ideasilo.wordpress.com/">Takayuki Miyoshi</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4/5</b> rating. It was first published in August 2007.                </p>
+                <p class="description">Just another contact form plugin. Simple but flexible.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin woocommerce cat-commerce" aria-expanded="false" aria-controls="tooltip-woocommerce">
+              <span class="rank">6</span>
+              <span class="element">Wo</span>
+
+              <span class="name">Woo&shy;Commerce</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-woocommerce">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-woocommerce">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/woocommerce/" target="_blank" rel="nofollow">Woo&shy;Commerce</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://woocommerce.com">Automattic</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.5/5</b> rating. It was first published in September 2011.                </p>
+                <p class="description">WooCommerce is the world’s most popular open-source eCommerce solution.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wpforms-lite cat-forms" aria-expanded="false" aria-controls="tooltip-wpforms-lite">
+              <span class="rank">7</span>
+              <span class="element">Fo</span>
+
+              <span class="name">WPForms</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wpforms-lite">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wpforms-lite">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wpforms-lite/" target="_blank" rel="nofollow">WPForms</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpforms.com">WPForms</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in March 2016.                </p>
+                <p class="description">The best WordPress contact form plugin. Drag &amp; Drop online form builder to create beautiful contact forms, payment forms, &amp; other custom forms &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin really-simple-ssl cat-security-privacy" aria-expanded="false" aria-controls="tooltip-really-simple-ssl">
+              <span class="rank">8</span>
+              <span class="element">Rs</span>
+
+              <span class="name">Really Simple SSL</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-really-simple-ssl">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-really-simple-ssl">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/really-simple-ssl/" target="_blank" rel="nofollow">Really Simple SSL</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://really-simple-plugins.com">Really Simple Plugins</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>5/5</b> rating. It was first published in March 2015.                </p>
+                <p class="description">The easiest way to improve security! Leverage your SSL certificate and protect your website visitors.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin all-in-one-wp-migration cat-backups" aria-expanded="false" aria-controls="tooltip-all-in-one-wp-migration">
+              <span class="rank">9</span>
+              <span class="element">Mi</span>
+
+              <span class="name">All-in-One<br>WP Migration</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-all-in-one-wp-migration">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-all-in-one-wp-migration">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/all-in-one-wp-migration/" target="_blank" rel="nofollow">All-in-One WP Migration</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://servmask.com/">ServMask</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.5/5</b> rating. It was first published in January 2014.                </p>
+                <p class="description">Move, transfer, copy, migrate, and backup a site with 1-click. Quick, easy, and reliable.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin classic-editor cat-editing" aria-expanded="false" aria-controls="tooltip-classic-editor">
+              <span class="rank">10</span>
+              <span class="element">Ce</span>
+
+              <span class="name">Classic Editor</span>
+              <span class="age">5</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-classic-editor">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-classic-editor">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/classic-editor/" target="_blank" rel="nofollow">Classic Editor</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://github.com/WordPress/classic-editor/">WordPress Contributors</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>5 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in October 2017.                </p>
+                <p class="description">Enables the previous &quot;classic&quot; editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports all plugins that extend this screen.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wordfence cat-security-privacy" aria-expanded="false" aria-controls="tooltip-wordfence">
+              <span class="rank">11</span>
+              <span class="element">Fe</span>
+
+              <span class="name">Wordfence Security</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wordfence">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wordfence">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wordfence/" target="_blank" rel="nofollow">Wordfence Security</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://www.wordfence.com/">Wordfence</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>4 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in April 2012.                </p>
+                <p class="description">Firewall, Malware Scanner, Two Factor Auth and Comprehensive Security Features, powered by our 24 hour team. Make security a priority with Wordfence.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin litespeed-cache cat-performance" aria-expanded="false" aria-controls="tooltip-litespeed-cache">
+              <span class="rank">12</span>
+              <span class="element">Lc</span>
+
+              <span class="name">LiteSpeed Cache</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-litespeed-cache">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-litespeed-cache">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/litespeed-cache/" target="_blank" rel="nofollow">LiteSpeed Cache</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.litespeedtech.com">LiteSpeed Technologies</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>4 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in January 2016.                </p>
+                <p class="description">All-in-one unbeatable acceleration &amp; PageSpeed improvement: caching, image/CSS/JS optimization...</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin duplicate-post cat-editing" aria-expanded="false" aria-controls="tooltip-duplicate-post">
+              <span class="rank">13</span>
+              <span class="element">Yd</span>
+
+              <span class="name">Yoast Duplicate Post</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-duplicate-post">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-duplicate-post">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/duplicate-post/" target="_blank" rel="nofollow">Yoast Duplicate Post</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://yoast.com">Enrico Battocchi & Team Yoast</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>4 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in December 2007.                </p>
+                <p class="description">The go-to tool for cloning posts and pages, including the powerful Rewrite &amp; Republish feature.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin google-analytics-for-wordpress cat-analytics" aria-expanded="false" aria-controls="tooltip-google-analytics-for-wordpress">
+              <span class="rank">14</span>
+              <span class="element">Mo</span>
+
+              <span class="name">Monster&shy;Insights</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-google-analytics-for-wordpress">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-google-analytics-for-wordpress">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/google-analytics-for-wordpress/" target="_blank" rel="nofollow">Monster&shy;Insights</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.monsterinsights.com/lite/?utm_source=liteplugin&utm_medium=pluginheader&utm_campaign=authoruri&utm_content=7%2E0%2E0">MonsterInsights</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>4.5/5</b> rating. It was first published in September 2007.                </p>
+                <p class="description">The best free Google Analytics plugin for WordPress. See how visitors find and use your website, so you can grow your business.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin all-in-one-seo-pack cat-seo" aria-expanded="false" aria-controls="tooltip-all-in-one-seo-pack">
+              <span class="rank">15</span>
+              <span class="element">Ai</span>
+
+              <span class="name">All in One<br>SEO</span>
+              <span class="age">16</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-all-in-one-seo-pack">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-all-in-one-seo-pack">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in One SEO</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://aioseo.com/">All in One SEO Team</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in March 2007.                </p>
+                <p class="description">The original WordPress SEO plugin. Improve your WordPress SEO rankings and traffic with our comprehensive SEO tools and smart SEO optimizations!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin updraftplus cat-backups" aria-expanded="false" aria-controls="tooltip-updraftplus">
+              <span class="rank">16</span>
+              <span class="element">Up</span>
+
+              <span class="name">UpdraftPlus</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-updraftplus">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-updraftplus">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/updraftplus/" target="_blank" rel="nofollow">UpdraftPlus</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://updraftplus.com">UpdraftPlus.Com, DavidAnderson</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in May 2012.                </p>
+                <p class="description">Backup and restoration made easy. Complete backups; manual or scheduled (backup to Dropbox, S3, Google Drive, Rackspace, FTP, SFTP, email + others).</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin google-site-kit cat-analytics" aria-expanded="false" aria-controls="tooltip-google-site-kit">
+              <span class="rank">17</span>
+              <span class="element">Sk</span>
+
+              <span class="name">Site Kit by Google</span>
+              <span class="age">3</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-google-site-kit">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-google-site-kit">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/google-site-kit/" target="_blank" rel="nofollow">Site Kit by Google</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://opensource.google.com">Google</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>4.1/5</b> rating. It was first published in October 2019.                </p>
+                <p class="description">Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wordpress-importer cat-maintenance" aria-expanded="false" aria-controls="tooltip-wordpress-importer">
+              <span class="rank">18</span>
+              <span class="element">Im</span>
+
+              <span class="name">WordPress Importer</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wordpress-importer">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wordpress-importer">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wordpress-importer/" target="_blank" rel="nofollow">WordPress Importer</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wordpress.org/">wordpressdotorg</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>3/5</b> rating. It was first published in May 2010.                </p>
+                <p class="description">Import posts, pages, comments, custom fields, categories, tags and more from a WordPress export file.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-mail-smtp cat-forms" aria-expanded="false" aria-controls="tooltip-wp-mail-smtp">
+              <span class="rank">19</span>
+              <span class="element">Ms</span>
+
+              <span class="name">WP Mail SMTP</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-mail-smtp">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-mail-smtp">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-mail-smtp/" target="_blank" rel="nofollow">WP Mail SMTP</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpmailsmtp.com/">WP Mail SMTP</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>3 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in September 2007.                </p>
+                <p class="description">Make email delivery easy for WordPress. Connect with SMTP, Gmail, Outlook, SendGrid, Mailgun, SES, Zoho, + more. Rated #1 WordPress SMTP Email plugin.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin redirection cat-maintenance" aria-expanded="false" aria-controls="tooltip-redirection">
+              <span class="rank">20</span>
+              <span class="element">Re</span>
+
+              <span class="name">Redirection</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-redirection">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-redirection">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/redirection/" target="_blank" rel="nofollow">Redirection</a>
+                </div>
+                <div class="author">Author: John Godley</div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.4/5</b> rating. It was first published in September 2007.                </p>
+                <p class="description">Manage 301 redirects, track 404 errors, and improve your site. No knowledge of Apache or Nginx required.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-super-cache cat-performance" aria-expanded="false" aria-controls="tooltip-wp-super-cache">
+              <span class="rank">21</span>
+              <span class="element">Sc</span>
+
+              <span class="name">WP Super Cache</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-super-cache">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-super-cache">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-super-cache/" target="_blank" rel="nofollow">WP Super Cache</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://automattic.com/">Automattic</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.3/5</b> rating. It was first published in November 2007.                </p>
+                <p class="description">A very fast caching engine for WordPress that produces static html files.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin mailchimp-for-wp cat-forms" aria-expanded="false" aria-controls="tooltip-mailchimp-for-wp">
+              <span class="rank">22</span>
+              <span class="element">Mf</span>
+
+              <span class="name">Mailchimp for WordPress</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-mailchimp-for-wp">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-mailchimp-for-wp">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/mailchimp-for-wp/" target="_blank" rel="nofollow">Mailchimp for WordPress</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://ibericode.com/">ibericode</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in June 2013.                </p>
+                <p class="description">The #1 (unofficial) Mailchimp plugin. Allows you to add various sign-up methods to your WordPress site.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin advanced-custom-fields cat-editing" aria-expanded="false" aria-controls="tooltip-advanced-custom-fields">
+              <span class="rank">23</span>
+              <span class="element">Ac</span>
+
+              <span class="name">Advanced Custom Fields</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-advanced-custom-fields">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-advanced-custom-fields">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" rel="nofollow">Advanced Custom Fields</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpengine.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields">WP Engine</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in March 2011.                </p>
+                <p class="description">Advanced Custom Fields (ACF) helps you easily customize WordPress with powerful, professional and intuitive fields. Proudly powering over 2 million we &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin limit-login-attempts-reloaded cat-security-privacy" aria-expanded="false" aria-controls="tooltip-limit-login-attempts-reloaded">
+              <span class="rank">24</span>
+              <span class="element">Li</span>
+
+              <span class="name">Limit Login Attempts Reloaded</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-limit-login-attempts-reloaded">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-limit-login-attempts-reloaded">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/limit-login-attempts-reloaded/" target="_blank" rel="nofollow">Limit Login Attempts Reloaded</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.limitloginattempts.com/">Limit Login Attempts Reloaded</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in August 2016.                </p>
+                <p class="description">Block excessive login attempts and protect your site against brute force attacks. Simple, yet powerful tools to improve site performance.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin tinymce-advanced cat-editing" aria-expanded="false" aria-controls="tooltip-tinymce-advanced">
+              <span class="rank">25</span>
+              <span class="element">Ae</span>
+
+              <span class="name">Advanced Editor Tools</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-tinymce-advanced">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-tinymce-advanced">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/tinymce-advanced/" target="_blank" rel="nofollow">Advanced Editor Tools</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://automattic.com">Automattic</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.5/5</b> rating. It was first published in June 2007.                </p>
+                <p class="description">Extends and enhances the block editor (Gutenberg) and the classic editor (TinyMCE).</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin duplicate-page cat-editing" aria-expanded="false" aria-controls="tooltip-duplicate-page">
+              <span class="rank">26</span>
+              <span class="element">Dp</span>
+
+              <span class="name">Duplicate<br>Page</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-duplicate-page">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-duplicate-page">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/duplicate-page/" target="_blank" rel="nofollow">Duplicate Page</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://profiles.wordpress.org/mndpsingh287/">mndpsingh287</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in May 2016.                </p>
+                <p class="description">Duplicate Posts, Pages and Custom Posts easily using single click</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin classic-widgets cat-editing" aria-expanded="false" aria-controls="tooltip-classic-widgets">
+              <span class="rank">27</span>
+              <span class="element">Cw</span>
+
+              <span class="name">Classic Widgets</span>
+              <span class="age">1</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-classic-widgets">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-classic-widgets">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/classic-widgets/" target="_blank" rel="nofollow">Classic Widgets</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://github.com/WordPress/classic-widgets/">WordPress Contributors</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>2 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in May 2021.                </p>
+                <p class="description">Enables the previous &quot;classic&quot; widgets settings screens in Appearance - Widgets and the Customizer. Disables the block editor from managing widgets.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin optinmonster cat-marketing" aria-expanded="false" aria-controls="tooltip-optinmonster">
+              <span class="rank">28</span>
+              <span class="element">Om</span>
+
+              <span class="name">OptinMonster</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-optinmonster">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-optinmonster">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/optinmonster/" target="_blank" rel="nofollow">OptinMonster</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://optinmonster.com">OptinMonster Popup Builder Team</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.4/5</b> rating. It was first published in April 2015.                </p>
+                <p class="description">Make popups &amp; optin forms to get more email newsletter subscribers, leads, and sales - #1 most popular popup builder plugin!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin seo-by-rank-math cat-seo" aria-expanded="false" aria-controls="tooltip-seo-by-rank-math">
+              <span class="rank">29</span>
+              <span class="element">Rm</span>
+
+              <span class="name">Rank Math SEO</span>
+              <span class="age">4</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-seo-by-rank-math">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-seo-by-rank-math">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/seo-by-rank-math/" target="_blank" rel="nofollow">Rank Math SEO</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://s.rankmath.com/home">Rank Math</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in November 2018.                </p>
+                <p class="description">Rank Math SEO is the Best WordPress SEO plugin combines the features of many SEO tools in a single package &amp; helps you multiply your SEO traffic.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin sg-cachepress cat-performance" aria-expanded="false" aria-controls="tooltip-sg-cachepress">
+              <span class="rank">30</span>
+              <span class="element">So</span>
+
+              <span class="name">SiteGround Optimizer</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-sg-cachepress">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-sg-cachepress">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/sg-cachepress/" target="_blank" rel="nofollow">SiteGround Optimizer</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.siteground.com">SiteGround</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.3/5</b> rating. It was first published in November 2014.                </p>
+                <p class="description">The SiteGround Optimizer plugin is developed by SiteGround to dramatically improve WordPress website performance on any hosting environment.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin essential-addons-for-elementor-lite cat-page-builder" aria-expanded="false" aria-controls="tooltip-essential-addons-for-elementor-lite">
+              <span class="rank">31</span>
+              <span class="element">Ea</span>
+
+              <span class="name">Essential Addons</span>
+              <span class="age">5</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-essential-addons-for-elementor-lite">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-essential-addons-for-elementor-lite">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/essential-addons-for-elementor-lite/" target="_blank" rel="nofollow">Essential Addons for Elementor</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpdeveloper.com/">WPDeveloper</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2017.                </p>
+                <p class="description">The Essential plugin you install after Elementor! Packed with 40+ stunning free elements including Advanced Data Table, Event Calendar, Filterable Gal &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-smushit cat-media" aria-expanded="false" aria-controls="tooltip-wp-smushit">
+              <span class="rank">32</span>
+              <span class="element">Sm</span>
+
+              <span class="name">Smush</span>
+              <span class="age">14</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-smushit">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-smushit">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank" rel="nofollow">Smush</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://profiles.wordpress.org/wpmudev/">WPMU DEV</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in December 2008.                </p>
+                <p class="description">Compress images &amp; optimize images with lazy load, WebP conversion, and resize detection to make your site load amazingly fast.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin w3-total-cache cat-performance" aria-expanded="false" aria-controls="tooltip-w3-total-cache">
+              <span class="rank">33</span>
+              <span class="element">Tc</span>
+
+              <span class="name">W3 Total Cache</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-w3-total-cache">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-w3-total-cache">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/w3-total-cache/" target="_blank" rel="nofollow">W3 Total Cache</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.boldgrid.com/">BoldGrid</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.4/5</b> rating. It was first published in July 2009.                </p>
+                <p class="description">Search Engine (SEO) &amp; Performance Optimization (WPO) via caching. Integrated caching: CDN, Page, Minify, Object, Fragment, Database support.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-fastest-cache cat-performance" aria-expanded="false" aria-controls="tooltip-wp-fastest-cache">
+              <span class="rank">34</span>
+              <span class="element">Fc</span>
+
+              <span class="name">WP Fastest Cache</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-fastest-cache">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-fastest-cache">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-fastest-cache/" target="_blank" rel="nofollow">WP Fastest Cache</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.wpfastestcache.com/">Emre Vona</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in August 2013.                </p>
+                <p class="description">The simplest and fastest WP Cache system</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin astra-sites cat-page-builder" aria-expanded="false" aria-controls="tooltip-astra-sites">
+              <span class="rank">35</span>
+              <span class="element">Te</span>
+
+              <span class="name">Starter Templates</span>
+              <span class="age">5</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-astra-sites">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-astra-sites">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/astra-sites/" target="_blank" rel="nofollow">Starter Templates</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.brainstormforce.com">Brainstorm Force</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>5/5</b> rating. It was first published in July 2017.                </p>
+                <p class="description">The growing library of 300+ ready-to-use templates that work with all WordPress themes including Astra, Hello, OceanWP, GeneratePress and more</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin duplicator cat-backups" aria-expanded="false" aria-controls="tooltip-duplicator">
+              <span class="rank">36</span>
+              <span class="element">Du</span>
+
+              <span class="name">Duplicator</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-duplicator">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-duplicator">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/duplicator/" target="_blank" rel="nofollow">Duplicator</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://www.snapcreek.com/duplicator/">Snap Creek</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in June 2011.                </p>
+                <p class="description">WordPress migration and backups are much easier with Duplicator! Clone, backup, move and transfer an entire site from one location to another.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin autoptimize cat-performance" aria-expanded="false" aria-controls="tooltip-autoptimize">
+              <span class="rank">37</span>
+              <span class="element">Au</span>
+
+              <span class="name">Autoptimize</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-autoptimize">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-autoptimize">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/autoptimize/" target="_blank" rel="nofollow">Autoptimize</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://autoptimize.com/pro/">Frank Goossens (futtta)</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in July 2009.                </p>
+                <p class="description">Autoptimize speeds up your website by optimizing JS, CSS, images (incl. lazy-load), HTML and Google Fonts, asyncing JS, removing emoji cruft and more.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin google-sitemap-generator cat-seo" aria-expanded="false" aria-controls="tooltip-google-sitemap-generator">
+              <span class="rank">38</span>
+              <span class="element">Si</span>
+
+              <span class="name">XML Sitemap Generator</span>
+              <span class="age">17</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-google-sitemap-generator">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-google-sitemap-generator">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/google-sitemap-generator/" target="_blank" rel="nofollow">XML Sitemap Generator</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://auctollo.com/">Auctollo</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in June 2005.                </p>
+                <p class="description">Generate multiple types of sitemaps to improve SEO and get your website indexed quickly.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin instagram-feed cat-marketing" aria-expanded="false" aria-controls="tooltip-instagram-feed">
+              <span class="rank">39</span>
+              <span class="element">Sb</span>
+
+              <span class="name">Smash<br>Balloon</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-instagram-feed">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-instagram-feed">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/instagram-feed/" target="_blank" rel="nofollow">Smash Balloon</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://smashballoon.com/">Smash Balloon</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2014.                </p>
+                <p class="description">Formerly &quot;Instagram Feed&quot;. Display clean, customizable, and responsive Instagram feeds from multiple accounts. Supports Instagram oEmbeds.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin ewww-image-optimizer cat-media" aria-expanded="false" aria-controls="tooltip-ewww-image-optimizer">
+              <span class="rank">40</span>
+              <span class="element">Ei</span>
+
+              <span class="name">EWWW Image Optimizer</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-ewww-image-optimizer">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-ewww-image-optimizer">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/ewww-image-optimizer/" target="_blank" rel="nofollow">EWWW Image Optimizer</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://ewww.io/">Exactly WWW</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in June 2012.                </p>
+                <p class="description">Smaller Images, Faster Sites, Happier Visitors. Comprehensive image optimization that doesn&#039;t require a degree in rocket science.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-optimize cat-performance" aria-expanded="false" aria-controls="tooltip-wp-optimize">
+              <span class="rank">41</span>
+              <span class="element">Op</span>
+
+              <span class="name">WP&#8209;Optimize</span>
+              <span class="age">14</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-optimize">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-optimize">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-optimize/" target="_blank" rel="nofollow">WP-Optimize</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://updraftplus.com">David Anderson, Ruhani Rabin, Team Updraft</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in January 2009.                </p>
+                <p class="description">Boost your site&#039;s speed and performance through caching. Clean the database, compress images and cache your site for higher speed &amp; SEO.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin better-wp-security cat-security-privacy" aria-expanded="false" aria-controls="tooltip-better-wp-security">
+              <span class="rank">42</span>
+              <span class="element">Is</span>
+
+              <span class="name">iThemes Security</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-better-wp-security">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-better-wp-security">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank" rel="nofollow">iThemes Security</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://ithemes.com">iThemes</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.6/5</b> rating. It was first published in October 2010.                </p>
+                <p class="description">The Best WordPress Security Plugin to Secure &amp; Protect WordPress</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin cookie-notice cat-security-privacy" aria-expanded="false" aria-controls="tooltip-cookie-notice">
+              <span class="rank">43</span>
+              <span class="element">Cn</span>
+
+              <span class="name">Cookie<br>Notice</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-cookie-notice">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-cookie-notice">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/cookie-notice/" target="_blank" rel="nofollow">Cookie Notice</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://hu-manity.co/">Hu-manity.co</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in July 2013.                </p>
+                <p class="description">Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin loco-translate cat-l10n" aria-expanded="false" aria-controls="tooltip-loco-translate">
+              <span class="rank">44</span>
+              <span class="element">Lt</span>
+
+              <span class="name">Loco<br>Translate</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-loco-translate">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-loco-translate">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/loco-translate/" target="_blank" rel="nofollow">Loco Translate</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://localise.biz/wordpress/plugin">Tim Whitlock</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2013.                </p>
+                <p class="description">Translate WordPress plugins and themes directly in your browser</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin coming-soon cat-page-builder" aria-expanded="false" aria-controls="tooltip-coming-soon">
+              <span class="rank">45</span>
+              <span class="element">Sp</span>
+
+              <span class="name">SeedProd</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-coming-soon">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-coming-soon">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/coming-soon/" target="_blank" rel="nofollow">SeedProd</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.seedprod.com/lite-upgrade/?utm_source=WordPress&utm_campaign=liteplugin&utm_medium=author-uri-link">SeedProd</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in January 2014.                </p>
+                <p class="description">Easy Drag &amp; Drop Page Builder. A complete solution to create a WordPress Website, Custom Themes, Landing Pages, Coming Soon &amp; Maintenance Mode Pages.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin all-in-one-wp-security-and-firewall cat-security-privacy" aria-expanded="false" aria-controls="tooltip-all-in-one-wp-security-and-firewall">
+              <span class="rank">46</span>
+              <span class="element">A</span>
+
+              <span class="name">All-In-One Security</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-all-in-one-wp-security-and-firewall">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-all-in-one-wp-security-and-firewall">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/all-in-one-wp-security-and-firewall/" target="_blank" rel="nofollow">All-In-One Security</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://aiosplugin.com/">All In One WP Security & Firewall Team</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in June 2013.                </p>
+                <p class="description">Protect your website investment with All-In-One Security (AIOS) – a comprehensive and easy to use security plugin designed especially for WordPress.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin disable-comments cat-maintenance" aria-expanded="false" aria-controls="tooltip-disable-comments">
+              <span class="rank">47</span>
+              <span class="element">Dc</span>
+
+              <span class="name">Disable Comments</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-disable-comments">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-disable-comments">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/disable-comments/" target="_blank" rel="nofollow">Disable Comments</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpdeveloper.com">WPDeveloper</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in May 2011.                </p>
+                <p class="description">Allows administrators to globally disable comments on their site. Comments can be disabled according to post type. Multisite friendly.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin cookie-law-info cat-security-privacy" aria-expanded="false" aria-controls="tooltip-cookie-law-info">
+              <span class="rank">48</span>
+              <span class="element">Co</span>
+
+              <span class="name">CookieYes</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-cookie-law-info">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-cookie-law-info">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/cookie-law-info/" target="_blank" rel="nofollow">CookieYes</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.cookieyes.com/">CookieYes</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in May 2012.                </p>
+                <p class="description">Easily set up cookie notice, cookie policy and get GDPR cookie compliance. Supports GDPR (DSGVO, RGPD), LGPD, CCPA/CPRA, CNIL, and POPIA.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin redux-framework cat-editing" aria-expanded="false" aria-controls="tooltip-redux-framework">
+              <span class="rank">49</span>
+              <span class="element">Rx</span>
+
+              <span class="name">Redux Framework</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-redux-framework">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-redux-framework">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/redux-framework/" target="_blank" rel="nofollow">Redux Framework</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://redux.io">Team Redux</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.4/5</b> rating. It was first published in October 2013.                </p>
+                <p class="description">Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. It ships with an integrated demo.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin insert-headers-and-footers cat-developer" aria-expanded="false" aria-controls="tooltip-insert-headers-and-footers">
+              <span class="rank">50</span>
+              <span class="element">C</span>
+
+              <span class="name">WPCode</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-insert-headers-and-footers">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-insert-headers-and-footers">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/insert-headers-and-footers/" target="_blank" rel="nofollow">WPCode</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.wpcode.com/">WPCode</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2012.                </p>
+                <p class="description">Easily add code snippets in WordPress. Insert header and footer scripts, add PHP code snippets with conditional logic, insert ads pixel code, and more &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin regenerate-thumbnails cat-media" aria-expanded="false" aria-controls="tooltip-regenerate-thumbnails">
+              <span class="rank">51</span>
+              <span class="element">Rt</span>
+
+              <span class="name">Regenerate Thumbnails</span>
+              <span class="age">14</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-regenerate-thumbnails">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-regenerate-thumbnails">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/regenerate-thumbnails/" target="_blank" rel="nofollow">Regenerate Thumbnails</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://alex.blog/">Alex Mills (Viper007Bond)</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.6/5</b> rating. It was first published in August 2008.                </p>
+                <p class="description">Regenerate the thumbnails for one or more of your image uploads. Useful when changing their sizes or your theme.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin loginizer cat-security-privacy" aria-expanded="false" aria-controls="tooltip-loginizer">
+              <span class="rank">52</span>
+              <span class="element">Lo</span>
+
+              <span class="name">Loginizer</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-loginizer">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-loginizer">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/loginizer/" target="_blank" rel="nofollow">Loginizer</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.loginizer.com">Softaculous</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in January 2016.                </p>
+                <p class="description">Loginizer is a WordPress security plugin which helps you fight against bruteforce attacks.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin worker cat-maintenance" aria-expanded="false" aria-controls="tooltip-worker">
+              <span class="rank">53</span>
+              <span class="element">Mw</span>
+
+              <span class="name">ManageWP Worker</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-worker">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-worker">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/worker/" target="_blank" rel="nofollow">ManageWP Worker</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://godaddy.com">GoDaddy</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in March 2011.                </p>
+                <p class="description">A better way to manage dozens of WordPress websites.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-file-manager cat-media" aria-expanded="false" aria-controls="tooltip-wp-file-manager">
+              <span class="rank">54</span>
+              <span class="element">Fm</span>
+
+              <span class="name">File Manager</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-file-manager">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-file-manager">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-file-manager/" target="_blank" rel="nofollow">File Manager</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://profiles.wordpress.org/mndpsingh287">mndpsingh287</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.7/5</b> rating. It was first published in August 2016.                </p>
+                <p class="description">file manager provides you ability to edit, delete, upload, download, copy and paste files and folders.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin header-footer-elementor cat-page-builder" aria-expanded="false" aria-controls="tooltip-header-footer-elementor">
+              <span class="rank">55</span>
+              <span class="element">Eh</span>
+
+              <span class="name">Elementor Header & Footer</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-header-footer-elementor">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-header-footer-elementor">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/header-footer-elementor/" target="_blank" rel="nofollow">Elementor Header & Footer Builder</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.brainstormforce.com/">Brainstorm Force, Nikhil Chavan</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in March 2017.                </p>
+                <p class="description">Create Header, Footer and Blocks for your WordPress website using Elementor Page Builder for free.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wps-hide-login cat-security-privacy" aria-expanded="false" aria-controls="tooltip-wps-hide-login">
+              <span class="rank">56</span>
+              <span class="element">Hi</span>
+
+              <span class="name">WPS Hide Login</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wps-hide-login">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wps-hide-login">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wps-hide-login/" target="_blank" rel="nofollow">WPS Hide Login</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpserveur.net">WPServeur, NicolasKulka, wpformation</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in April 2015.                </p>
+                <p class="description">Change wp-login.php to anything you want.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin custom-post-type-ui cat-developer" aria-expanded="false" aria-controls="tooltip-custom-post-type-ui">
+              <span class="rank">57</span>
+              <span class="element">Cp</span>
+
+              <span class="name">Custom Post Type UI</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-custom-post-type-ui">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-custom-post-type-ui">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/custom-post-type-ui/" target="_blank" rel="nofollow">Custom Post Type UI</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://webdevstudios.com/">WebDevStudios</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.6/5</b> rating. It was first published in February 2010.                </p>
+                <p class="description">Admin UI for creating custom content types like post types and taxonomies</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin one-click-demo-import cat-page-builder" aria-expanded="false" aria-controls="tooltip-one-click-demo-import">
+              <span class="rank">58</span>
+              <span class="element">Oc</span>
+
+              <span class="name">One Click Demo Import</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-one-click-demo-import">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-one-click-demo-import">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank" rel="nofollow">One Click Demo Import</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://ocdi.com">OCDI</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.3/5</b> rating. It was first published in March 2016.                </p>
+                <p class="description">Import your demo content, widgets and theme settings with one click. Theme authors! Enable simple theme demo import for your users.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin elementskit-lite cat-page-builder" aria-expanded="false" aria-controls="tooltip-elementskit-lite">
+              <span class="rank">59</span>
+              <span class="element">E</span>
+
+              <span class="name">ElementsKit</span>
+              <span class="age">3</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-elementskit-lite">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-elementskit-lite">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/elementskit-lite/" target="_blank" rel="nofollow">ElementsKit</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpmet.com/">Wpmet</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2019.                </p>
+                <p class="description">Elementor Addons come with Header Footer Builder, Mega Menu Builder, Free Elementor Widgets, Templates Library Pricing table, Team member, testimonial &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin better-search-replace cat-maintenance" aria-expanded="false" aria-controls="tooltip-better-search-replace">
+              <span class="rank">60</span>
+              <span class="element">Bs</span>
+
+              <span class="name">Better Search Replace</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-better-search-replace">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-better-search-replace">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/better-search-replace/" target="_blank" rel="nofollow">Better Search Replace</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://bettersearchreplace.com">WP Engine</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.4/5</b> rating. It was first published in January 2015.                </p>
+                <p class="description">A simple plugin to update URLs or other text in a database.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-multibyte-patch cat-l10n" aria-expanded="false" aria-controls="tooltip-wp-multibyte-patch">
+              <span class="rank">61</span>
+              <span class="element">Mu</span>
+
+              <span class="name">Multibyte Patch</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-multibyte-patch">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-multibyte-patch">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-multibyte-patch/" target="_blank" rel="nofollow">Multibyte Patch</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://tinybit.co.jp/">Seisuke Kuraishi</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>5/5</b> rating. It was first published in July 2011.                </p>
+                <p class="description">Multibyte functionality enhancement for the WordPress Japanese package.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin svg-support cat-media" aria-expanded="false" aria-controls="tooltip-svg-support">
+              <span class="rank">62</span>
+              <span class="element">Sv</span>
+
+              <span class="name">SVG<br>Support</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-svg-support">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-svg-support">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/svg-support/" target="_blank" rel="nofollow">SVG Support</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://benbodhi.com">Benbodhi</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>1 million</b> websites and maintains a <b>4.8/5</b> rating. It was first published in July 2014.                </p>
+                <p class="description">Safely upload SVG files to the Media Library with optional sanitization and minification. Render your SVG files inline for direct styling/animation of &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin ninja-forms cat-forms" aria-expanded="false" aria-controls="tooltip-ninja-forms">
+              <span class="rank">63</span>
+              <span class="element">Nf</span>
+
+              <span class="name">Ninja Forms</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-ninja-forms">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-ninja-forms">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/ninja-forms/" target="_blank" rel="nofollow">Ninja Forms</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=Plugins+WP+Dashboard">Saturday Drive</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>4.3/5</b> rating. It was first published in December 2011.                </p>
+                <p class="description">The 100% beginner friendly WordPress form builder. Drag &amp; drop form fields to build beautiful, professional contact forms in minutes.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin woocommerce-services cat-commerce" aria-expanded="false" aria-controls="tooltip-woocommerce-services">
+              <span class="rank">64</span>
+              <span class="element">St</span>
+
+              <span class="name">Woo&shy;Commerce<br>S &amp T</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-woocommerce-services">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-woocommerce-services">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/woocommerce-services/" target="_blank" rel="nofollow">WooCommerce Shipping &amp Tax</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://woocommerce.com/">WooCommerce</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>2/5</b> rating. It was first published in January 2017.                </p>
+                <p class="description">WooCommerce Shipping &amp; Tax offers automated tax calculation, shipping label printing, smoother payment setup, and other hosted services for WooCom &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin facebook-for-woocommerce cat-commerce" aria-expanded="false" aria-controls="tooltip-facebook-for-woocommerce">
+              <span class="rank">65</span>
+              <span class="element">Fa</span>
+
+              <span class="name">Facebook for Woo&shy;Commerce</span>
+              <span class="age">4</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-facebook-for-woocommerce">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-facebook-for-woocommerce">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/facebook-for-woocommerce/" target="_blank" rel="nofollow">Facebook for Woo&shy;Commerce</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.facebook.com/">Facebook</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>2.3/5</b> rating. It was first published in February 2019.                </p>
+                <p class="description">Get the Official Facebook for WooCommerce plugin for two powerful ways to help grow your business, including an ads extension and shops tab for your p &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin woocommerce-gateway-stripe cat-commerce" aria-expanded="false" aria-controls="tooltip-woocommerce-gateway-stripe">
+              <span class="rank">66</span>
+              <span class="element">Ws</span>
+
+              <span class="name">Woo&shy;Commerce Stripe</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-woocommerce-gateway-stripe">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-woocommerce-gateway-stripe">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/woocommerce-gateway-stripe/" target="_blank" rel="nofollow">WooCommerce Stripe Payment Gateway</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://woocommerce.com/">WooCommerce</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>3.1/5</b> rating. It was first published in May 2016.                </p>
+                <p class="description">Take credit card payments on your store using Stripe.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin yith-woocommerce-wishlist cat-commerce" aria-expanded="false" aria-controls="tooltip-yith-woocommerce-wishlist">
+              <span class="rank">67</span>
+              <span class="element">Wi</span>
+
+              <span class="name">YITH Woo&shy;Commerce Wishlist</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-yith-woocommerce-wishlist">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-yith-woocommerce-wishlist">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/yith-woocommerce-wishlist/" target="_blank" rel="nofollow">YITH Woo&shy;Commerce Wishlist</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://yithemes.com/">YITH</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>4/5</b> rating. It was first published in May 2013.                </p>
+                <p class="description">YITH WooCommerce Wishlist add all Wishlist features to your website. Needs WooCommerce to work.
+WooCommerce 7.6.x compatible.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin sucuri-scanner cat-security-privacy" aria-expanded="false" aria-controls="tooltip-sucuri-scanner">
+              <span class="rank">68</span>
+              <span class="element">Su</span>
+
+              <span class="name">Sucuri Security</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-sucuri-scanner">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-sucuri-scanner">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/sucuri-scanner/" target="_blank" rel="nofollow">Sucuri Security</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://sucuri.net/">Sucuri Inc.</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>4.2/5</b> rating. It was first published in November 2011.                </p>
+                <p class="description">The Sucuri WordPress Security plugin is a security toolset for security integrity monitoring, malware detection and security hardening.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin smart-slider-3 cat-editing" aria-expanded="false" aria-controls="tooltip-smart-slider-3">
+              <span class="rank">69</span>
+              <span class="element">Sl</span>
+
+              <span class="name">Smart Slider 3</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-smart-slider-3">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-smart-slider-3">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/smart-slider-3/" target="_blank" rel="nofollow">Smart Slider 3</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://smartslider3.com">Nextend</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in November 2015.                </p>
+                <p class="description">Responsive slider plugin to create sliders in visual editor easily. Build beautiful image slider, layer slider, video slider, post slider, and more.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin breadcrumb-navxt cat-editing" aria-expanded="false" aria-controls="tooltip-breadcrumb-navxt">
+              <span class="rank">70</span>
+              <span class="element">Bn</span>
+
+              <span class="name">Breadcrumb NavXT</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-breadcrumb-navxt">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-breadcrumb-navxt">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/breadcrumb-navxt/" target="_blank" rel="nofollow">Breadcrumb NavXT</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://mtekk.us/">John Havlik</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in December 2007.                </p>
+                <p class="description">Adds breadcrumb navigation showing the visitor&#039;s path to their current location.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin envato-elements cat-page-builder" aria-expanded="false" aria-controls="tooltip-envato-elements">
+              <span class="rank">71</span>
+              <span class="element">En</span>
+
+              <span class="name">Envato Elements</span>
+              <span class="age">4</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-envato-elements">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-envato-elements">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/envato-elements/" target="_blank" rel="nofollow">Envato Elements</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://elements.envato.com/extensions/wordpress/?utm_source=extensions&utm_medium=referral&utm_campaign=elements_extensions_wpplugins">Envato</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>900 thousand</b> websites and maintains a <b>3.9/5</b> rating. It was first published in July 2018.                </p>
+                <p class="description">Access thousands of quality, free templates; plus royalty-free photos from Envato Elements.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin siteorigin-panels cat-page-builder" aria-expanded="false" aria-controls="tooltip-siteorigin-panels">
+              <span class="rank">72</span>
+              <span class="element">Pb</span>
+
+              <span class="name">SiteOrigin Page Builder</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-siteorigin-panels">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-siteorigin-panels">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/siteorigin-panels/" target="_blank" rel="nofollow">SiteOrigin Page Builder</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://siteorigin.com">SiteOrigin</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.8/5</b> rating. It was first published in April 2013.                </p>
+                <p class="description">Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin the-events-calendar cat-editing" aria-expanded="false" aria-controls="tooltip-the-events-calendar">
+              <span class="rank">73</span>
+              <span class="element">Ec</span>
+
+              <span class="name">The Events Calendar</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-the-events-calendar">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-the-events-calendar">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/the-events-calendar/" target="_blank" rel="nofollow">The Events Calendar</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://evnt.is/1x">The Events Calendar</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.3/5</b> rating. It was first published in January 2010.                </p>
+                <p class="description">The Events Calendar is the number one calendar plugin for WordPress. Easily create and manage events (including virtual events!) on your WordPress sit &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin creative-mail-by-constant-contact cat-forms" aria-expanded="false" aria-controls="tooltip-creative-mail-by-constant-contact">
+              <span class="rank">74</span>
+              <span class="element">Cm</span>
+
+              <span class="name">Creative Mail</span>
+              <span class="age">2</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-creative-mail-by-constant-contact">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-creative-mail-by-constant-contact">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/creative-mail-by-constant-contact/" target="_blank" rel="nofollow">Creative Mail</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://newfold.com/">Newfold Digital</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in July 2020.                </p>
+                <p class="description">Creative Mail was designed specifically for WordPress and WooCommerce.
+Our intelligent (and super fun) email editor simplifies email marketing campaig &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-maintenance-mode cat-page-builder" aria-expanded="false" aria-controls="tooltip-wp-maintenance-mode">
+              <span class="rank">75</span>
+              <span class="element">Ls</span>
+
+              <span class="name">LightStart</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-maintenance-mode">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-maintenance-mode">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-maintenance-mode/" target="_blank" rel="nofollow">LightStart</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://themeisle.com/">Themeisle</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.4/5</b> rating. It was first published in February 2010.                </p>
+                <p class="description">Easy Drag &amp; Drop Page Builder that adds a splash page to your site that it&#039;s perfect for a coming soon page, maintenance or landing page.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin hello-dolly cat-developer" aria-expanded="false" aria-controls="tooltip-hello-dolly">
+              <span class="rank">76</span>
+              <span class="element">Hd</span>
+
+              <span class="name">Hello Dolly</span>
+              <span class="age">14</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-hello-dolly">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-hello-dolly">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/hello-dolly/" target="_blank" rel="nofollow">Hello Dolly</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://ma.tt/">Matt Mullenweg</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>3/5</b> rating. It was first published in July 2008.                </p>
+                <p class="description">This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin tablepress cat-editing" aria-expanded="false" aria-controls="tooltip-tablepress">
+              <span class="rank">77</span>
+              <span class="element">Ta</span>
+
+              <span class="name">TablePress</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-tablepress">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-tablepress">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/tablepress/" target="_blank" rel="nofollow">TablePress</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://tablepress.org/">Tobias Bäthge</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>5/5</b> rating. It was first published in June 2012.                </p>
+                <p class="description">Embed beautiful and feature-rich tables into your posts and pages, without having to write code.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin sg-security cat-security-privacy" aria-expanded="false" aria-controls="tooltip-sg-security">
+              <span class="rank">78</span>
+              <span class="element">Sg</span>
+
+              <span class="name">SiteGround Security</span>
+              <span class="age">1</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-sg-security">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-sg-security">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/sg-security/" target="_blank" rel="nofollow">SiteGround Security</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.siteground.com">SiteGround</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in May 2021.                </p>
+                <p class="description">SiteGround Security is the all-in-one security solution for your WordPress website.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin maintenance cat-maintenance" aria-expanded="false" aria-controls="tooltip-maintenance">
+              <span class="rank">79</span>
+              <span class="element">Ma</span>
+
+              <span class="name">Maintenance</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-maintenance">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-maintenance">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/maintenance/" target="_blank" rel="nofollow">Maintenance</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.webfactoryltd.com/">WebFactory Ltd</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in May 2012.                </p>
+                <p class="description">Great looking maintenance, coming soon &amp; under construction pages. Put your site under maintenance in minutes.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin antispam-bee cat-security-privacy" aria-expanded="false" aria-controls="tooltip-antispam-bee">
+              <span class="rank">80</span>
+              <span class="element">Ab</span>
+
+              <span class="name">Antispam<br>Bee</span>
+              <span class="age">14</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-antispam-bee">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-antispam-bee">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/antispam-bee/" target="_blank" rel="nofollow">Antispam Bee</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://pluginkollektiv.org">pluginkollektiv</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.8/5</b> rating. It was first published in January 2009.                </p>
+                <p class="description">Antispam plugin with a sophisticated tool set for effective day to day comment and trackback spam-fighting. Build with data protection and privacy in  &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin code-snippets cat-developer" aria-expanded="false" aria-controls="tooltip-code-snippets">
+              <span class="rank">81</span>
+              <span class="element">Cs</span>
+
+              <span class="name">Code Snippets</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-code-snippets">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-code-snippets">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/code-snippets/" target="_blank" rel="nofollow">Code Snippets</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://codesnippets.pro">Code Snippets Pro</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.7/5</b> rating. It was first published in June 2012.                </p>
+                <p class="description">An easy, clean and simple way to run code snippets on your site.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin flamingo cat-forms" aria-expanded="false" aria-controls="tooltip-flamingo">
+              <span class="rank">82</span>
+              <span class="element">Fl</span>
+
+              <span class="name">Flamingo</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-flamingo">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-flamingo">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/flamingo/" target="_blank" rel="nofollow">Flamingo</a>
+                </div>
+                <div class="author">Author: Takayuki Miyoshi</div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.2/5</b> rating. It was first published in May 2012.                </p>
+                <p class="description">A trustworthy message storage plugin for Contact Form 7.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin safe-svg cat-media" aria-expanded="false" aria-controls="tooltip-safe-svg">
+              <span class="rank">83</span>
+              <span class="element">Sa</span>
+
+              <span class="name">Safe SVG</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-safe-svg">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-safe-svg">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/safe-svg/" target="_blank" rel="nofollow">Safe SVG</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://10up.com">10up</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>800 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in July 2015.                </p>
+                <p class="description">Enable SVG uploads and sanitize them to stop XML/SVG vulnerabilities in your WordPress website</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin google-analytics-dashboard-for-wp cat-analytics" aria-expanded="false" aria-controls="tooltip-google-analytics-dashboard-for-wp">
+              <span class="rank">84</span>
+              <span class="element">Ex</span>
+
+              <span class="name">Exactmetrics</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-google-analytics-dashboard-for-wp">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-google-analytics-dashboard-for-wp">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/google-analytics-dashboard-for-wp/" target="_blank" rel="nofollow">Exactmetrics</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://exactmetrics.com/lite/?utm_source=liteplugin&utm_medium=pluginheader&utm_campaign=authoruri&utm_content=7%2E0%2E0">ExactMetrics</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>2.5/5</b> rating. It was first published in March 2013.                </p>
+                <p class="description">Connects Google Analytics with your WordPress site. Displays stats to help you understand your users and site content on a whole new level!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin so-widgets-bundle cat-page-builder" aria-expanded="false" aria-controls="tooltip-so-widgets-bundle">
+              <span class="rank">85</span>
+              <span class="element">Bu</span>
+
+              <span class="name">SiteOrigin Widgets Bundle</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-so-widgets-bundle">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-so-widgets-bundle">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/so-widgets-bundle/" target="_blank" rel="nofollow">SiteOrigin Widgets Bundle</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://siteorigin.com">SiteOrigin</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in June 2014.                </p>
+                <p class="description">The SiteOrigin Widgets Bundle gives you all the elements you need to build modern, responsive, and engaging website pages.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin ml-slider cat-page-builder" aria-expanded="false" aria-controls="tooltip-ml-slider">
+              <span class="rank">86</span>
+              <span class="element">Me</span>
+
+              <span class="name">MetaSlider</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-ml-slider">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-ml-slider">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/ml-slider/" target="_blank" rel="nofollow">MetaSlider</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.metaslider.com">MetaSlider</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in February 2013.                </p>
+                <p class="description">The best slider, gallery, and carousel plugin for WordPress. Responsive and easy-to-use sliders with images, videos, posts, products, and layers.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin user-role-editor cat-maintenance" aria-expanded="false" aria-controls="tooltip-user-role-editor">
+              <span class="rank">87</span>
+              <span class="element">Ur</span>
+
+              <span class="name">User Role Editor</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-user-role-editor">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-user-role-editor">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/user-role-editor/" target="_blank" rel="nofollow">User Role Editor</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.role-editor.com">Vladimir Garagulya</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in March 2010.                </p>
+                <p class="description">User Role Editor WordPress plugin makes user roles and capabilities changing easy. Edit/add/delete WordPress user roles and capabilities.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin ocean-extra cat-page-builder" aria-expanded="false" aria-controls="tooltip-ocean-extra">
+              <span class="rank">88</span>
+              <span class="element">Oe</span>
+
+              <span class="name">Ocean Extra</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-ocean-extra">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-ocean-extra">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/ocean-extra/" target="_blank" rel="nofollow">Ocean Extra</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://oceanwp.org/">OceanWP</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>3.3/5</b> rating. It was first published in October 2016.                </p>
+                <p class="description">Ocean Extra adds extra features and flexibility to the OceanWP theme for a turbocharged experience.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin shortcodes-ultimate cat-editing" aria-expanded="false" aria-controls="tooltip-shortcodes-ultimate">
+              <span class="rank">89</span>
+              <span class="element">Sh</span>
+
+              <span class="name">Shortcodes Ultimate</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-shortcodes-ultimate">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-shortcodes-ultimate">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/shortcodes-ultimate/" target="_blank" rel="nofollow">Shortcodes Ultimate</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://getshortcodes.com/">Vova Anokhin</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in April 2011.                </p>
+                <p class="description">A comprehensive collection of visual components for your site</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin polylang cat-l10n" aria-expanded="false" aria-controls="tooltip-polylang">
+              <span class="rank">90</span>
+              <span class="element">Po</span>
+
+              <span class="name">Polylang</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-polylang">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-polylang">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/polylang/" target="_blank" rel="nofollow">Polylang</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://polylang.pro">WP SYNTEX</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.7/5</b> rating. It was first published in September 2011.                </p>
+                <p class="description">Go multilingual in a simple and efficient way. Keep writing posts, creating categories and post tags as usual while defining the languages all at once &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin meta-box cat-developer" aria-expanded="false" aria-controls="tooltip-meta-box">
+              <span class="rank">91</span>
+              <span class="element">Mb</span>
+
+              <span class="name">Meta Box</span>
+              <span class="age">11</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-meta-box">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-meta-box">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/meta-box/" target="_blank" rel="nofollow">Meta Box</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://metabox.io">MetaBox.io</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.8/5</b> rating. It was first published in November 2011.                </p>
+                <p class="description">Meta Box plugin is a powerful, professional developer toolkit to create custom meta boxes and custom fields for your custom post types in WordPress.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin broken-link-checker cat-maintenance" aria-expanded="false" aria-controls="tooltip-broken-link-checker">
+              <span class="rank">92</span>
+              <span class="element">Bl</span>
+
+              <span class="name">Broken Link Checker</span>
+              <span class="age">15</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-broken-link-checker">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-broken-link-checker">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/broken-link-checker/" target="_blank" rel="nofollow">Broken Link Checker</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wpmudev.com/">WPMU DEV</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>3.8/5</b> rating. It was first published in October 2007.                </p>
+                <p class="description">Check posts, pages &amp; all content for broken links &amp; missing images to improve SEO. Get notified when bad links are found.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin popup-maker cat-marketing" aria-expanded="false" aria-controls="tooltip-popup-maker">
+              <span class="rank">93</span>
+              <span class="element">Pm</span>
+
+              <span class="name">Popup<br>Maker</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-popup-maker">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-popup-maker">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/popup-maker/" target="_blank" rel="nofollow">Popup Maker</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://wppopupmaker.com/?utm_campaign=plugin-info&utm_source=plugin-header&utm_medium=author-uri">Popup Maker</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in November 2014.                </p>
+                <p class="description">Looking to boost your marketing and lead gen efforts? Using popups are a great way to increase your site&#039;s conversions!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin backwpup cat-backups" aria-expanded="false" aria-controls="tooltip-backwpup">
+              <span class="rank">94</span>
+              <span class="element">Ba</span>
+
+              <span class="name">BackWPup</span>
+              <span class="age">13</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-backwpup">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-backwpup">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/backwpup/" target="_blank" rel="nofollow">BackWPup</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="http://inpsyde.com">Inpsyde GmbH</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.4/5</b> rating. It was first published in July 2009.                </p>
+                <p class="description">Schedule complete automatic backups of your WordPress installation. Decide which content will be stored (Dropbox, S3…). This is the free version</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin easy-wp-smtp cat-forms" aria-expanded="false" aria-controls="tooltip-easy-wp-smtp">
+              <span class="rank">95</span>
+              <span class="element">Es</span>
+
+              <span class="name">Easy WP SMTP</span>
+              <span class="age">10</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-easy-wp-smtp">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-easy-wp-smtp">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/easy-wp-smtp/" target="_blank" rel="nofollow">Easy WP SMTP</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://easywpsmtp.com/">Easy WP SMTP</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.6/5</b> rating. It was first published in April 2013.                </p>
+                <p class="description">Improve email delivery for WordPress. Configure SendLayer, Mailgun, Sendinblue, SMTP.com or connect to an SMTP server.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin imagify cat-media" aria-expanded="false" aria-controls="tooltip-imagify">
+              <span class="rank">96</span>
+              <span class="element">I</span>
+
+              <span class="name">Imagify</span>
+              <span class="age">7</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-imagify">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-imagify">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/imagify/" target="_blank" rel="nofollow">Imagify</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://imagify.io">Imagify – Optimize Images & Convert WebP</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>4.4/5</b> rating. It was first published in January 2016.                </p>
+                <p class="description">Compress images &amp; convert WebP with the best WordPress image optimization plugin. Optimize images in 1-click &amp; resize images with our image optimizer!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin disable-gutenberg cat-editing" aria-expanded="false" aria-controls="tooltip-disable-gutenberg">
+              <span class="rank">97</span>
+              <span class="element">Dg</span>
+
+              <span class="name">Disable Gutenberg</span>
+              <span class="age">5</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-disable-gutenberg">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-disable-gutenberg">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/disable-gutenberg/" target="_blank" rel="nofollow">Disable Gutenberg</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://plugin-planet.com/">Jeff Starr</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>700 thousand</b> websites and maintains a <b>5/5</b> rating. It was first published in April 2018.                </p>
+                <p class="description">Disable Gutenberg Block Editor and restore the Classic Editor and original Edit Post screen (TinyMCE, meta boxes, etc.). Selectively disable for posts &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin nextgen-gallery cat-media" aria-expanded="false" aria-controls="tooltip-nextgen-gallery">
+              <span class="rank">98</span>
+              <span class="element">Ng</span>
+
+              <span class="name">NextGEN Gallery</span>
+              <span class="age">16</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-nextgen-gallery">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-nextgen-gallery">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/nextgen-gallery/" target="_blank" rel="nofollow">NextGEN Gallery</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.imagely.com">Imagely</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.3/5</b> rating. It was first published in April 2007.                </p>
+                <p class="description">The most popular WordPress gallery plugin and one of the most popular plugins of all time with over 31 million downloads.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin mailpoet cat-forms" aria-expanded="false" aria-controls="tooltip-mailpoet">
+              <span class="rank">99</span>
+              <span class="element">M</span>
+
+              <span class="name">MailPoet</span>
+              <span class="age">6</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-mailpoet">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-mailpoet">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/mailpoet/" target="_blank" rel="nofollow">MailPoet</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.mailpoet.com">MailPoet</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.5/5</b> rating. It was first published in October 2016.                </p>
+                <p class="description">Send beautiful newsletters from WordPress. Collect subscribers with signup forms, automate your emails for WooCommerce, blog post notifications &amp; more</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin premium-addons-for-elementor cat-page-builder" aria-expanded="false" aria-controls="tooltip-premium-addons-for-elementor">
+              <span class="rank">100</span>
+              <span class="element">Pa</span>
+
+              <span class="name">Premium Addons</span>
+              <span class="age">5</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-premium-addons-for-elementor">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-premium-addons-for-elementor">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/premium-addons-for-elementor/" target="_blank" rel="nofollow">Premium Addons for Elementor</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://leap13.com/">Leap13</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in January 2018.                </p>
+                <p class="description">Premium Addons for Elementor plugin includes essential widgets and addons like Blog Post Listing, Megamenu, WooCommerce Products Listing, Carousel, Mo &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin mainwp-child cat-developer" aria-expanded="false" aria-controls="tooltip-mainwp-child">
+              <span class="rank">101</span>
+              <span class="element">Mc</span>
+
+              <span class="name">MainWP<br>Child</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-mainwp-child">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-mainwp-child">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/mainwp-child/" target="_blank" rel="nofollow">MainWP Child</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://mainwp.com">MainWP</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>5/5</b> rating. It was first published in August 2013.                </p>
+                <p class="description">Securely connects Unlimited WordPress sites to your MainWP Dashboard, allowing you to control them from a single screen.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-statistics cat-analytics" aria-expanded="false" aria-controls="tooltip-wp-statistics">
+              <span class="rank">102</span>
+              <span class="element">S</span>
+
+              <span class="name">WP Statistics</span>
+              <span class="age">12</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-statistics">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-statistics">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-statistics/" target="_blank" rel="nofollow">WP Statistics</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://veronalabs.com/">VeronaLabs</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.1/5</b> rating. It was first published in March 2011.                </p>
+                <p class="description">This plugin gives you the complete information on your website&#039;s visitors.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin woocommerce-payments" aria-expanded="false" aria-controls="tooltip-woocommerce-payments">
+              <span class="rank">103</span>
+              <span class="element">Wp</span>
+
+              <span class="name">Woo&shy;Commerce<br>Payments</span>
+              <span class="age">3</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-woocommerce-payments">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-woocommerce-payments">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/woocommerce-payments/" target="_blank" rel="nofollow">WooCommerce Payments</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://woocommerce.com/">Automattic</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>3.1/5</b> rating. It was first published in April 2020.                </p>
+                <p class="description">Securely accept credit and debit cards on your site. Manage transactions without leaving your WordPress dashboard. Only with WooCommerce Payments.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin wp-pagenavi cat-page-builder" aria-expanded="false" aria-controls="tooltip-wp-pagenavi">
+              <span class="rank">104</span>
+              <span class="element">P</span>
+
+              <span class="name">WP&#8209;PageNavi</span>
+              <span class="age">17</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-wp-pagenavi">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-wp-pagenavi">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/wp-pagenavi/" target="_blank" rel="nofollow">WP&#8209;PageNavi</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://lesterchan.net">Lester 'GaMerZ' Chan</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.7/5</b> rating. It was first published in January 2006.                </p>
+                <p class="description">Adds a more advanced paging navigation interface.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin complianz-gdpr cat-security-privacy" aria-expanded="false" aria-controls="tooltip-complianz-gdpr">
+              <span class="rank">105</span>
+              <span class="element">Cl</span>
+
+              <span class="name">Complianz</span>
+              <span class="age">4</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-complianz-gdpr">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-complianz-gdpr">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/complianz-gdpr/" target="_blank" rel="nofollow">Complianz</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.complianz.io">Really Simple Plugins</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.9/5</b> rating. It was first published in June 2018.                </p>
+                <p class="description">Configure your Cookie Banner, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA/C &hellip;</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin google-listings-and-ads" aria-expanded="false" aria-controls="tooltip-google-listings-and-ads">
+              <span class="rank">106</span>
+              <span class="element">Gl</span>
+
+              <span class="name">Google<br>Listings&nbsp;&<br>Ads</span>
+              <span class="age">1</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-google-listings-and-ads">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-google-listings-and-ads">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/google-listings-and-ads/" target="_blank" rel="nofollow">Google Listings & Ads</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://woocommerce.com/">WooCommerce</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>2.8/5</b> rating. It was first published in May 2021.                </p>
+                <p class="description">Native integration with Google that allows merchants to easily display their products across Google’s network.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin under-construction-page cat-maintenance" aria-expanded="false" aria-controls="tooltip-under-construction-page">
+              <span class="rank">107</span>
+              <span class="element">Uc</span>
+
+              <span class="name">Under Construction</span>
+              <span class="age">9</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-under-construction-page">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-under-construction-page">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/under-construction-page/" target="_blank" rel="nofollow">Under Construction</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://www.webfactoryltd.com/">WebFactory Ltd</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.8/5</b> rating. It was first published in December 2013.                </p>
+                <p class="description">Easy to use Under Construction Page &amp; Coming Soon Page. Enable Under Construction Mode in seconds &amp; show you&#039;re Under Construction!</p>
+              </div>
+            </div>
+          </div>
+                  <div class="item">
+            <button type="button" class="card plugin kirki cat-developer" aria-expanded="false" aria-controls="tooltip-kirki">
+              <span class="rank">108</span>
+              <span class="element">Ki</span>
+
+              <span class="name">Kirki</span>
+              <span class="age">8</span>
+            </button>
+
+            <div class="tooltip right" id="tooltip-kirki">
+              <div class="tooltip-inner">
+                <button type="button" class="tooltip-close" aria-expanded="false" aria-controls="tooltip-kirki">
+                  Close
+                </button>
+                <div class="name">
+                  <a href="https://wordpress.org/plugins/kirki/" target="_blank" rel="nofollow">Kirki</a>
+                </div>
+                <div class="author">Author: <a target="_blank" rel="nofollow" href="https://davidvongries.com/">David Vongries</a></div>
+                <p class="facts">
+                    This plugin has been installed on over <b>600 thousand</b> websites and maintains a <b>4.7/5</b> rating. It was first published in May 2014.                </p>
+                <p class="description">The Ultimate Customizer Framework for WordPress Theme Developers</p>
+              </div>
+            </div>
+          </div>
+            </div>
+  </div>
+  <div class="footer">
+    <p class="copyright">
+      &copy; 2023 plugintable.com / Spring 2023
+    </p>
+
+    <p class="info">
+      Brought to you by <a href="https://pascalbirchler.com">Pascal Birchler</a> (<a href="https://twitter.com/swissspidy">@swissspidy</a>)
+    </p>
+  </div>
+</div>
+
+<script nonce="90b791fa776531c3fce6f8a2f3f128b79ddbda838b86c238ec814b1abdb63a70">
+	function closeTooltips() {
+		const activePlugins = document.querySelectorAll('.plugin.active');
+		activePlugins.forEach((plugin) => {
+			plugin.classList.toggle('active');
+			plugin.setAttribute('aria-expanded', 'false');
+		});
+
+		if (activePlugins.length > 0) {
+			resetScrollPos();
+		}
+	}
+
+	function runWithViewTransition(f) {
+		if (!document.startViewTransition) {
+			f();
+		} else {
+			document.startViewTransition(() => f());
+		}
+	}
+
+	function setScrollPos() {
+		document.body.style.setProperty('--scrollpos', `-${window.scrollY}px`);
+	}
+
+	function resetScrollPos() {
+		if (window.matchMedia('(min-width: 768px)').matches) {
+			return;
+		}
+
+		const scrollY = document.body.style.getPropertyValue('--scrollpos');
+		document.body.style.setProperty('--scrollpos', '0');
+		if (scrollY) {
+			window.scrollTo(0, parseInt(scrollY) * -1);
+		}
+	}
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			runWithViewTransition(closeTooltips);
+		}
+	});
+
+	document.querySelectorAll('.plugin').forEach((plugin) => {
+    const tooltip = plugin.parentElement.querySelector('.tooltip');
+    const close = plugin.parentElement.querySelector('.tooltip-close');
+    const table = document.querySelector('.table');
+
+		plugin.addEventListener('click', (evt) => {
+			const isExpanded =
+				evt.currentTarget.getAttribute('aria-expanded') === 'true';
+
+      if (!isExpanded) {
+        const pluginLeft = plugin.parentElement.offsetLeft;
+        const pluginTop = plugin.parentElement.offsetTop;
+
+        if (pluginLeft > (table.offsetWidth / 2)) {
+          tooltip.classList.remove('right');
+        } else {
+          tooltip.classList.add('right');
+        }
+
+        if (pluginTop > (table.offsetHeight / 2)) {
+          tooltip.classList.add('bottomtop');
+        } else {
+          tooltip.classList.remove('bottomtop');
+        }
+      }
+
+      plugin.style.viewTransitionName = 'card';
+
+			function togglePlugin() {
+        plugin.style.viewTransitionName = '';
+
+				if (isExpanded) {
+					resetScrollPos();
+				} else {
+					setScrollPos();
+				}
+
+				plugin.classList.toggle('active');
+				plugin.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+			}
+
+			if (isExpanded) {
+				runWithViewTransition(togglePlugin);
+
+				return;
+			}
+
+			closeTooltips();
+
+			runWithViewTransition(togglePlugin);
+		});
+
+		close.addEventListener('click', () => {
+			runWithViewTransition(() => {
+				plugin.classList.toggle('active');
+				plugin.setAttribute('aria-expanded', 'false');
+
+				resetScrollPos();
+			});
+		});
+	});
+</script>
+</body>
+</html>

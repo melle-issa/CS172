@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>New in Beta:  Block Data API | WordPress VIP Lobby</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://lobby.vip.wordpress.com/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://s2.wp.com/wp-content/themes/a8c/wpcomvip3/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<meta name='robots' content='noindex, nofollow' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//fonts-api.wp.com' />
+<link rel='dns-prefetch' href='//s0.wordpress.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="WordPress VIP Lobby &raquo; Feed" href="https://lobby.vip.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WordPress VIP Lobby &raquo; Comments Feed" href="https://lobby.vip.wordpress.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1677072837h&ver=6.2-RC2-55570"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJydj9tOAjEQhl/I7gAR0Avjo5BuO9kUpod0prvp21saQESjiTdNv/yHmYElKRODYBDwRSUqkwsMSzLRK/aOsD7QYJif4OfYESVpc7owpBxtMeJiAN9+hAwZSQtalSLLA/1WTO6En/Wdvtmv3qk0HDFPTckI83o77IYNjMWRhZFiLxizzhVYKuH/DroohxmDjRl0kei1iDO3zOwsxpSR+ctstE5aoANDN7UXl9saLhgq9nwug29ujYS+73UHiXTFrAgnbergXfg73rR7vobe/dt697LZr16fV/vjB3T1x7Q=&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/_static/??-eJyVjlFuAjEMRC+EE+1S0e0H4izZxAqGOBvFDpTbk4rSqkIC9cOWbc2bsT0X8EtWzGpLapGy2Nj6OmONMKfFH8UeUIvzR0jusjSFWClY0UtC40VW9j8W1SnlKC9wv3xjoxkmM4AQl4RQ8WTebCDRHwX8NaLsUwvYHaRXciLkQffIKIYpPwRyg9/Miv3OxemXgjGQw9TJrM+wM4WIegu8zaD4+RwpPQbmuVQUgd6ZGt+/7NyOt8NmGqb1OH68H64mipwO&cssminify=yes' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans';--wp--preset--font-family--alegreya: Alegreya;--wp--preset--font-family--arvo: Arvo;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda';--wp--preset--font-family--cabin: Cabin;--wp--preset--font-family--chivo: Chivo;--wp--preset--font-family--commissioner: Commissioner;--wp--preset--font-family--cormorant: Cormorant;--wp--preset--font-family--courier-prime: 'Courier Prime';--wp--preset--font-family--crimson-pro: 'Crimson Pro';--wp--preset--font-family--dm-mono: 'DM Mono';--wp--preset--font-family--dm-sans: 'DM Sans';--wp--preset--font-family--domine: Domine;--wp--preset--font-family--eb-garamond: 'EB Garamond';--wp--preset--font-family--epilogue: Epilogue;--wp--preset--font-family--figtree: Figtree;--wp--preset--font-family--fira-sans: 'Fira Sans';--wp--preset--font-family--fraunces: Fraunces;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono';--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans';--wp--preset--font-family--inter: Inter;--wp--preset--font-family--josefin-sans: 'Josefin Sans';--wp--preset--font-family--jost: Jost;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville';--wp--preset--font-family--libre-franklin: 'Libre Franklin';--wp--preset--font-family--literata: Literata;--wp--preset--font-family--lora: Lora;--wp--preset--font-family--merriweather: Merriweather;--wp--preset--font-family--montserrat: Montserrat;--wp--preset--font-family--newsreader: Newsreader;--wp--preset--font-family--nunito: Nunito;--wp--preset--font-family--open-sans: 'Open Sans';--wp--preset--font-family--overpass: Overpass;--wp--preset--font-family--petrona: Petrona;--wp--preset--font-family--piazzolla: Piazzolla;--wp--preset--font-family--playfair-display: 'Playfair Display';--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans';--wp--preset--font-family--poppins: Poppins;--wp--preset--font-family--raleway: Raleway;--wp--preset--font-family--roboto-slab: 'Roboto Slab';--wp--preset--font-family--roboto: Roboto;--wp--preset--font-family--rubik: Rubik;--wp--preset--font-family--sora: Sora;--wp--preset--font-family--source-sans-pro: 'Source Sans Pro';--wp--preset--font-family--source-serif-pro: 'Source Serif Pro';--wp--preset--font-family--space-mono: 'Space Mono';--wp--preset--font-family--texturina: Texturina;--wp--preset--font-family--work-sans: 'Work Sans';--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/wp-content/themes/a8c/wpcomvip3-lobby/style.css?m=1527707147h&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='wpcomvip3-fonts-css' href='//fonts-api.wp.com/css?family=Open+Sans%3A300%2C400%2C600%2C300italic%2C400italic%2C600italic&#038;ver=6.2-RC2-55570' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1' href='https://s2.wp.com/_static/??-eJx9i8sKgCAQAH8oWwSjOkTfYmLLhrrig34/u0Rdus3ADBAELmQ45Ad6k3MHZxRNig0FfBXRVaTWoGXh2OhCHD4idqcp/a3Jbo6xIUKrXnpPq1+kGmalplGq4wKxyTcd&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s0.wp.com/_static/??-eJyVjUEKwjAQRS9kHAVb60I8isRJSFInM6GTULx9W3Ejrty9B5/3YS4GhavnCrmZQi0kVhh9LRafH4cyiWtYkzDklcgraLSTd9a51xsThz2q7uDf3j0xggomS4YkiH7JT7NGn9f3eIJA8rC0DW75euzPl+7QDUM/Lj+0TlE=&cssminify=yes' type='text/css' media='all' />
+<script id='jetpack_related-posts-js-extra'>
+var related_posts_js_options = {"post_heading":"h4"};
+</script>
+<script id='wpcom-actionbar-placeholder-js-extra'>
+var actionbardata = {"siteID":"12269838","siteURL":"http:\/\/lobby.vip.wordpress.com","xhrURL":"https:\/\/lobby.vip.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"cfd7ab01b0","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","shortlink":"https:\/\/wp.me\/pPtWC-644","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??-eJydUdtuwjAM/aGlGaCh7mHap6A0McUliUPiMPj7uVthMIGEeIqcY5+Lrb+SshQZIuuh6EAdelC1QDa9/CmMa2qG8qIv+kJVydceY9EDcDJ2O9U6ZXLVMlLUK4xWdxW90xm8YXAqUeFyXTUB4396sZE9K+E6HE+YkPnqoIygw8J6D9FRHqFE/rhG76UHMl8S3hvKINEkIFNWuUbGALd8nDL2VcoOci9IBr2fvTXLZj5l+6Us+kf87OURFxfWn1bfEG1HbQeHpzlw1sb7FA/dekJWUzJTmYJhRnueMaWA3P5PUXkyDvKtJQ27Cvk4Pfc2edWkAvZyzptX5A0EGTGtlV9LYY9pMRKcCxn4DB+zZTt/fW/b5WL4Bs6lJD8='></script>
+<script type='text/javascript'>
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+</script>
+<script type='text/javascript'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript'>
+wp.jpI18nLoader.state = {"baseUrl":"https://widgets.wp.com/languages/","locale":"en_US","domainMap":{"jetpack-action-bar":"plugins/jetpack","jetpack-admin-ui":"plugins/jetpack","jetpack-assets":"plugins/jetpack","jetpack-backup-pkg":"plugins/jetpack","jetpack-blaze":"plugins/jetpack","jetpack-compat":"plugins/jetpack","jetpack-config":"plugins/jetpack","jetpack-connection":"plugins/jetpack","jetpack-forms":"plugins/jetpack","jetpack-google-fonts-provider":"plugins/jetpack","jetpack-idc":"plugins/jetpack","jetpack-import":"plugins/jetpack","jetpack-ip":"plugins/jetpack","jetpack-jitm":"plugins/jetpack","jetpack-lazy-images":"plugins/jetpack","jetpack-licensing":"plugins/jetpack","jetpack-my-jetpack":"plugins/jetpack","jetpack-password-checker":"plugins/jetpack","jetpack-plugins-installer":"plugins/jetpack","jetpack-post-list":"plugins/jetpack","jetpack-publicize-pkg":"plugins/jetpack","jetpack-search-pkg":"plugins/jetpack","jetpack-stats":"plugins/jetpack","jetpack-stats-admin":"plugins/jetpack","jetpack-sync":"plugins/jetpack","jetpack-videopress-pkg":"plugins/jetpack","jetpack-waf":"plugins/jetpack","jetpack-wordads":"plugins/jetpack"},"domainPaths":{"jetpack-action-bar":"jetpack_vendor/automattic/jetpack-action-bar/","jetpack-admin-ui":"jetpack_vendor/automattic/jetpack-admin-ui/","jetpack-assets":"jetpack_vendor/automattic/jetpack-assets/","jetpack-backup-pkg":"jetpack_vendor/automattic/jetpack-backup/","jetpack-blaze":"jetpack_vendor/automattic/jetpack-blaze/","jetpack-compat":"jetpack_vendor/automattic/jetpack-compat/","jetpack-config":"jetpack_vendor/automattic/jetpack-config/","jetpack-connection":"jetpack_vendor/automattic/jetpack-connection/","jetpack-forms":"jetpack_vendor/automattic/jetpack-forms/","jetpack-google-fonts-provider":"jetpack_vendor/automattic/jetpack-google-fonts-provider/","jetpack-idc":"jetpack_vendor/automattic/jetpack-identity-crisis/","jetpack-import":"jetpack_vendor/automattic/jetpack-import/","jetpack-ip":"jetpack_vendor/automattic/jetpack-ip/","jetpack-jitm":"jetpack_vendor/automattic/jetpack-jitm/","jetpack-lazy-images":"jetpack_vendor/automattic/jetpack-lazy-images/","jetpack-licensing":"jetpack_vendor/automattic/jetpack-licensing/","jetpack-my-jetpack":"jetpack_vendor/automattic/jetpack-my-jetpack/","jetpack-password-checker":"jetpack_vendor/automattic/jetpack-password-checker/","jetpack-plugins-installer":"jetpack_vendor/automattic/jetpack-plugins-installer/","jetpack-post-list":"jetpack_vendor/automattic/jetpack-post-list/","jetpack-publicize-pkg":"jetpack_vendor/automattic/jetpack-publicize/","jetpack-search-pkg":"jetpack_vendor/automattic/jetpack-search/","jetpack-stats":"jetpack_vendor/automattic/jetpack-stats/","jetpack-stats-admin":"jetpack_vendor/automattic/jetpack-stats-admin/","jetpack-sync":"jetpack_vendor/automattic/jetpack-sync/","jetpack-videopress-pkg":"jetpack_vendor/automattic/jetpack-videopress/","jetpack-waf":"jetpack_vendor/automattic/jetpack-waf/","jetpack-wordads":"jetpack_vendor/automattic/jetpack-wordads/"}};
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lobby.vip.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/" />
+<link rel='shortlink' href='https://wp.me/pPtWC-644' />
+	<style>
+		@font-face {
+			font-family: Recoleta;
+			font-display: swap;
+			src: url('https://s1.wp.com/i/fonts/recoleta/400.woff2')
+		}
+	</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="New in Beta:  Block Data API" />
+<meta property="og:url" content="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/" />
+<meta property="og:description" content="We’re pleased to announce the beta availability of a new Block Data API.  It is now released for you to begin testing.   What is the Block Data API? For many use cases, it’s helpful to access block…" />
+<meta property="article:published_time" content="2023-04-17T18:46:05+00:00" />
+<meta property="article:modified_time" content="2023-04-17T18:46:14+00:00" />
+<meta property="og:site_name" content="WordPress VIP Lobby" />
+<meta property="og:image" content="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif" />
+<meta property="og:image:width" content="1660" />
+<meta property="og:image:height" content="500" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:creator" content="@WordPressVIP" />
+<meta name="twitter:site" content="@WordPressVIP" />
+<meta name="twitter:text:title" content="New in Beta:  Block Data&nbsp;API" />
+<meta name="twitter:image" content="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:app:name:iphone" content="Jetpack" />
+<meta name="twitter:app:id:iphone" content="1565481562" />
+<meta name="twitter:app:name:ipad" content="Jetpack" />
+<meta name="twitter:app:id:ipad" content="1565481562" />
+<meta name="twitter:app:name:googleplay" content="Jetpack" />
+<meta name="twitter:app:id:googleplay" content="com.jetpack.android" />
+<meta name="twitter:app:url:iphone" content="wordpress://viewpost?blogId=12269838&amp;postId=23316" />
+<meta name="twitter:app:url:ipad" content="wordpress://viewpost?blogId=12269838&amp;postId=23316" />
+<meta name="twitter:app:url:googleplay" content="wordpress://viewpost?blogId=12269838&amp;postId=23316" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=32" sizes="16x16" />
+<link rel="apple-touch-icon" href="https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=114" />
+<link rel='openid.server' href='https://lobby.vip.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://lobby.vip.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://lobby.vip.wordpress.com/osd.xml" title="WordPress VIP Lobby" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/lobby.vip.wordpress.com\/2023\/04\/17\/new-in-beta-block-data-api\/"},"headline":"New in Beta:\u00a0 Block Data&nbsp;API","url":"http:\/\/lobby.vip.wordpress.com\/2023\/04\/17\/new-in-beta-block-data-api\/","thumbnailUrl":"","image":{"@type":"ImageObject","url":""},"dateCreated":"2023-04-17T18:46:05Z","datePublished":"2023-04-17T18:46:05Z","dateModified":"2023-04-17T18:46:14Z","articleSection":"VIP Features","author":[{"@type":"Person","name":"Jacob"}],"creator":["Jacob"],"publisher":{"@type":"Organization","name":"WordPress VIP Lobby","logo":""},"keywords":["beta"]}</script><script type="module" src="https://js-wc.site24x7static.com/site24x7/client/statusiq_status_widget/statusiq-status-widget.esm.js?04_2022"></script><script nomodule src="https://js-wc.site24x7static.com/site24x7/client/statusiq_status_widget/statusiq-status-widget.js?04_2022"></script><meta name="application-name" content="WordPress VIP Lobby" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Updates and announcements from WordPress VIP" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://lobby.vip.wordpress.com/feed/;icon-uri=https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="We’re pleased to announce the beta availability of a new Block Data API.  It is now released for you to begin testing.   What is the Block Data API? For many use cases, it’s helpful to access blocks in WordPress as pure JSON data instead of HTML.&nbsp; Doing so eliminates the need to write parsing layers&hellip;" />
+			<link rel="stylesheet" id="custom-css-css" type="text/css" href="https://s1.wp.com/?custom-css=1&#038;csblog=PtWC&#038;cscache=6&#038;csrev=68" />
+			<!-- Your Google Analytics Plugin is missing the tracking ID -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-45']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-23316 single-format-standard jps-theme-a8c/wpcomvip3-lobby customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="vip-header" class="header" role="banner">
+		<div class="wrap">
+			<h1 id="header-logo">
+				<a href="https://lobby.vip.wordpress.com/" title="WordPress VIP Lobby">
+					<img id="vip-lobby-logo" src="https://s2.wp.com/wp-content/themes/a8c/wpcomvip3-lobby/img/vip-lobby-logo2.png" alt="WordPress VIP Lobby">
+				</a>
+			</h1>
+			<nav id="header-nav" role="navigation">
+				<div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-729" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-729"><a href="https://lobby.vip.wordpress.com/">Home</a></li>
+<li id="menu-item-4577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4577"><a href="https://docs.wpvip.com/">Documentation</a></li>
+<li id="menu-item-4578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4578"><a href="https://wpvipstatus.com">Status</a></li>
+<li id="menu-item-10841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10841"><a href="https://wpvip.com/contact/">Contact</a></li>
+</ul></div>			</nav>
+			<a id="nav-trigger" href="#">Menu</a>
+		</div>
+	</header>
+
+	<section id="main" class="site-main clear-fix">
+
+<div class="wrap">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+		
+			
+<article id="post-23316" class="post-23316 post type-post status-publish format-standard hentry category-vip-features category-vip-plugins tag-beta">
+	<header class="entry-header">
+		<h1 class="entry-title">New in Beta:  Block Data&nbsp;API</h1>
+	</header>
+
+	<div class="entry-container">
+		<section class="entry-body">
+			<div class="entry-content">
+				
+<p>We’re pleased to announce the beta availability of a new Block Data API.  It is now released for you to begin testing.  </p>
+
+
+
+<h2 class="wp-block-heading">What is the Block Data API?</h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><a href="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif"><img loading="lazy" data-attachment-id="23319" data-permalink="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/vip-block-data-api-animation-1660/#main" data-orig-file="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif" data-orig-size="1660,500" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vip-block-data-api-animation-1660" data-image-description="" data-image-caption="" data-medium-file="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif?w=300" data-large-file="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif?w=960" src="https://lobby-vip.files.wordpress.com/2023/04/vip-block-data-api-animation-1660.gif?w=1024" alt="Animation detailing how the block API functions" class="wp-image-23319" width="846" height="255" /></a></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>For many use cases, it’s helpful to access blocks in WordPress as pure JSON data instead of HTML.&nbsp; Doing so eliminates the need to write parsing layers to transform markup into JSON, and to keep those translation layers up to date with every version of Gutenberg.&nbsp; All of this saves developer time and effort.&nbsp;&nbsp;</p>
+
+
+
+<p>While options have existed for accomplishing this with GraphQL when accessed via REST, translation layers were required. The Block Data API is a new REST API endpoint to retrieve the Gutenberg blocks of a single WordPress post.</p>
+
+
+
+<h2 class="wp-block-heading">What are some use cases for the Block Data API?</h2>
+
+
+
+<p>There are several known use cases for the Block Data API.&nbsp; These include:</p>
+
+
+
+<ul>
+<li>Power your Node.js front end with less reliance on dangerouslySetInnerHTML.&nbsp;</li>
+
+
+
+<li>Send data about your blocks to Machine Learning and AI applications.</li>
+
+
+
+<li>Use blocks in mobile applications with reduced processing.</li>
+</ul>
+
+
+
+<p>This is not a comprehensive list.&nbsp; As we go through the beta period, we’d love your feedback on how you use the Block Data API, what works well for you, and what you’d like to see improved.</p>
+
+
+
+<p>While the API is in beta, you can offer that feedback by opening a <a href="https://github.com/Automattic/vip-content-api/issues/new/choose">GitHub issue</a>. When it is released, we can provide support via normal means.</p>
+
+
+
+<h2 class="wp-block-heading">How do I get access to the Block Data API?</h2>
+
+
+
+<p>To install the plugin, go <a href="https://github.com/Automattic/vip-block-data-api#installation">here</a> and follow the instructions that have been provided</p>
+
+
+
+<h2 class="wp-block-heading">Where can I find more information/documentation?</h2>
+
+
+
+<p>The project <a href="https://github.com/Automattic/vip-content-api#readme">Readme</a> has comprehensive information on the plugin and its functions.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-23316" class="share-twitter sd-button share-icon" href="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/?share=twitter" target="_blank" title="Click to share on Twitter" ><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-23316" class="share-facebook sd-button share-icon" href="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/?share=facebook" target="_blank" title="Click to share on Facebook" ><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-12269838-23316-645092f564673' data-src='//widgets.wp.com/likes/index.html?ver=20230309#blog_id=12269838&amp;post_id=23316&amp;origin=lobby.vip.wordpress.com&amp;obj_id=12269838-23316-645092f564673' data-name='like-post-frame-12269838-23316-645092f564673' data-title='Like or Reblog'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	
+</div></div>							</div>
+		</section>
+
+	</div>
+</article>
+
+				<nav role="navigation" id="nav-below" class="navigation-post">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="https://lobby.vip.wordpress.com/2023/04/13/new-release-jetpack-12-0/" rel="prev"><span class="meta-nav">&larr;</span> New Release: Jetpack&nbsp;12.0</a></div>		<div class="nav-next"><a href="https://lobby.vip.wordpress.com/2023/04/25/call-for-testing-jetpack-12-1-beta/" rel="next">Call for Testing: Jetpack&nbsp;12.1-beta <span class="meta-nav">&rarr;</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+			
+		
+		</div>
+	</div>
+		<div id="secondary" class="widget-area" role="complementary">
+
+				<aside id="author-avatar">
+			<img src='https://0.gravatar.com/avatar/c78180717e07e7b1ffa30e6368d9ed22?s=150&#038;d=identicon&#038;r=G' alt='' class='avatar avatar-150 photo' height='150' width='150' />		</aside><!-- #author-avatar -->
+		<aside id="post-meta">
+		<p><span class="sep">Posted by</span><br /> <a href="https://lobby.vip.wordpress.com/author/smithjw1/" title="Posts by Jacob" class="author url fn" rel="author">Jacob</a> <br /><br /><span class="sep">Posted on</span><br /><a href="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/" title="6:46 pm UTC" rel="bookmark"><time class="entry-date" datetime="2023-04-17T18:46:05+00:00" pubdate>April 17, 2023</time></a></p>
+					<p><span class="sep">
+				Categories<br /> <a href="https://lobby.vip.wordpress.com/category/vip-features/" rel="category tag">VIP Features</a>, <a href="https://lobby.vip.wordpress.com/category/vip-plugins/" rel="category tag">VIP Plugins</a>			</span></p>
+		
+					<p><span class="sep">
+				Tags<br /> <a href="https://lobby.vip.wordpress.com/tag/beta/" rel="tag">beta</a>			</span></p>
+		
+				</aside><!-- #post-meta -->
+
+		<aside id="categories" class="widget">
+			<h4 class="widget-title">Categories</h4>
+			<ul>
+					<li class="cat-item cat-item-38929258"><a href="https://lobby.vip.wordpress.com/category/automattic-solutions/">Automattic Solutions</a>
+</li>
+	<li class="cat-item cat-item-987453"><a href="https://lobby.vip.wordpress.com/category/code-updates/">Code Updates</a>
+</li>
+	<li class="cat-item cat-item-71733816"><a href="https://lobby.vip.wordpress.com/category/community-plugins/">Community Plugins</a>
+</li>
+	<li class="cat-item cat-item-72511"><a href="https://lobby.vip.wordpress.com/category/core/">Core</a>
+</li>
+	<li class="cat-item cat-item-3186"><a href="https://lobby.vip.wordpress.com/category/demo/">Demo</a>
+</li>
+	<li class="cat-item cat-item-18255768"><a href="https://lobby.vip.wordpress.com/category/doc-updates/">Doc Updates</a>
+</li>
+	<li class="cat-item cat-item-108470"><a href="https://lobby.vip.wordpress.com/category/events-training/">Events / Training</a>
+</li>
+	<li class="cat-item cat-item-82837361"><a href="https://lobby.vip.wordpress.com/category/featured-partner-program/">Featured Partner Program</a>
+</li>
+	<li class="cat-item cat-item-5603054"><a href="https://lobby.vip.wordpress.com/category/github/">GitHub</a>
+</li>
+	<li class="cat-item cat-item-636069"><a href="https://lobby.vip.wordpress.com/category/jetpack/">Jetpack</a>
+</li>
+	<li class="cat-item cat-item-64667"><a href="https://lobby.vip.wordpress.com/category/meetups/">Meetups</a>
+</li>
+	<li class="cat-item cat-item-8758625"><a href="https://lobby.vip.wordpress.com/category/mobile-2/">Mobile</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="https://lobby.vip.wordpress.com/category/news/">News</a>
+</li>
+	<li class="cat-item cat-item-28127784"><a href="https://lobby.vip.wordpress.com/category/parse-ly/">Parse.ly</a>
+</li>
+	<li class="cat-item cat-item-18169747"><a href="https://lobby.vip.wordpress.com/category/performance-2/">Performance</a>
+</li>
+	<li class="cat-item cat-item-458"><a href="https://lobby.vip.wordpress.com/category/php/">PHP</a>
+</li>
+	<li class="cat-item cat-item-801"><a href="https://lobby.vip.wordpress.com/category/security/">Security</a>
+</li>
+	<li class="cat-item cat-item-1405526"><a href="https://lobby.vip.wordpress.com/category/server-updates/">Server Updates</a>
+</li>
+	<li class="cat-item cat-item-44455992"><a href="https://lobby.vip.wordpress.com/category/service-systems-status/">Service &amp; Systems Status</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://lobby.vip.wordpress.com/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-54030407"><a href="https://lobby.vip.wordpress.com/category/vip-features/">VIP Features</a>
+</li>
+	<li class="cat-item cat-item-37976869"><a href="https://lobby.vip.wordpress.com/category/vip-plugins/">VIP Plugins</a>
+</li>
+	<li class="cat-item cat-item-609538684"><a href="https://lobby.vip.wordpress.com/category/wordpress-com-documentation/">WordPress.com Documentation</a>
+</li>
+	<li class="cat-item cat-item-38591046"><a href="https://lobby.vip.wordpress.com/category/wp-com-features/">WP.com Features</a>
+</li>
+			</ul>
+		</aside>
+
+		<aside id="archives" class="widget">
+			<h4 class="widget-title">Archives</h4>
+			<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+			  <option value="">Select Month</option>
+			  	<option value='https://lobby.vip.wordpress.com/2023/04/'> April 2023 </option>
+	<option value='https://lobby.vip.wordpress.com/2023/03/'> March 2023 </option>
+	<option value='https://lobby.vip.wordpress.com/2023/02/'> February 2023 </option>
+	<option value='https://lobby.vip.wordpress.com/2023/01/'> January 2023 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/12/'> December 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/11/'> November 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/10/'> October 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/09/'> September 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/08/'> August 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/07/'> July 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/06/'> June 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/05/'> May 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/04/'> April 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/03/'> March 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/02/'> February 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2022/01/'> January 2022 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/12/'> December 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/11/'> November 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/10/'> October 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/09/'> September 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/08/'> August 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/07/'> July 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/06/'> June 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/05/'> May 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/04/'> April 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/03/'> March 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/02/'> February 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2021/01/'> January 2021 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/12/'> December 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/11/'> November 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/10/'> October 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/09/'> September 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/08/'> August 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/07/'> July 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/06/'> June 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/05/'> May 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/04/'> April 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/03/'> March 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/02/'> February 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2020/01/'> January 2020 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/12/'> December 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/11/'> November 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/10/'> October 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/09/'> September 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/08/'> August 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/07/'> July 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/06/'> June 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/05/'> May 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/04/'> April 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/03/'> March 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/02/'> February 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2019/01/'> January 2019 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/12/'> December 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/11/'> November 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/10/'> October 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/09/'> September 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/08/'> August 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/07/'> July 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/06/'> June 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/05/'> May 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/04/'> April 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/03/'> March 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/02/'> February 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2018/01/'> January 2018 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/12/'> December 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/11/'> November 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/10/'> October 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/09/'> September 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/08/'> August 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/07/'> July 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/06/'> June 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/05/'> May 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/04/'> April 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/03/'> March 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/02/'> February 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2017/01/'> January 2017 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/12/'> December 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/11/'> November 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/10/'> October 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/09/'> September 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/08/'> August 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/07/'> July 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/06/'> June 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/05/'> May 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/04/'> April 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/03/'> March 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/02/'> February 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2016/01/'> January 2016 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/12/'> December 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/11/'> November 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/10/'> October 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/09/'> September 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/08/'> August 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/07/'> July 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/06/'> June 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/05/'> May 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/04/'> April 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/03/'> March 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/02/'> February 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2015/01/'> January 2015 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/12/'> December 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/11/'> November 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/10/'> October 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/09/'> September 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/08/'> August 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/07/'> July 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/06/'> June 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/05/'> May 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/04/'> April 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/03/'> March 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/02/'> February 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2014/01/'> January 2014 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/12/'> December 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/11/'> November 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/10/'> October 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/09/'> September 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/08/'> August 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/07/'> July 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/06/'> June 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/05/'> May 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/04/'> April 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/03/'> March 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/02/'> February 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2013/01/'> January 2013 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/12/'> December 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/11/'> November 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/10/'> October 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/09/'> September 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/08/'> August 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/07/'> July 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/06/'> June 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/05/'> May 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/04/'> April 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/03/'> March 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/02/'> February 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2012/01/'> January 2012 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/12/'> December 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/11/'> November 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/10/'> October 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/09/'> September 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/08/'> August 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/07/'> July 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/06/'> June 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/05/'> May 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/04/'> April 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/03/'> March 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/02/'> February 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2011/01/'> January 2011 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/12/'> December 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/11/'> November 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/10/'> October 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/09/'> September 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/08/'> August 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/07/'> July 2010 </option>
+	<option value='https://lobby.vip.wordpress.com/2010/06/'> June 2010 </option>
+			</select>
+		</aside>
+
+	</div>
+</div>
+
+
+	</section>
+	
+	<footer id="vip-footer" class="site-footer" role="contentinfo">
+		<p class="footer-links">
+			<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>
+			<a href="https://wordpress.com/tos/">Terms of Service</a>
+			<a href="http://automattic.com/privacy/">Privacy</a>
+			<a href="http://vip.wordpress.com/documentation/">Documentation</a>
+			<a href="https://vip.wordpress.com/privacyshield/">Privacy Shield</a>
+		</p>
+		<p><a href="http://automattic.com/" class="automattic">An <span class="automattic-logo">Automattic</span> Production</a></p>
+	</footer>
+
+	
+<!--  -->
+		<div class="jetpack-instant-search__widget-area" style="display: none">
+							<div id="jetpack-search-filters-2" class="widget jetpack-filters widget_search">			<div id="jetpack-search-filters-2-wrapper" class="jetpack-instant-search-wrapper">
+		</div></div>					</div>
+			<!-- Start of DoubleClick Floodlight Tag: Please do not remove -->
+	<script type="text/javascript">
+		var axel = Math.random() + "";
+		var a = axel * 10000000000000;
+		document.write('<iframe src="https://6355556.fls.doubleclick.net/activityi;src=6355556;type=wordp0;cat=negat0;u4=[UserIDLogIn];u5=[UserIDNLogIn];u6=[Pagetitle];u7=[SessionID];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+	</script>
+	<noscript>
+		<iframe src="https://6355556.fls.doubleclick.net/activityi;src=6355556;type=wordp0;cat=negat0;u4=[UserIDLogIn];u5=[UserIDNLogIn];u6=[Pagetitle];u7=[SessionID];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+	</noscript>
+	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+	<!-- Facebook Tag -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '823166884443641'); // Insert your pixel ID here.
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=823166884443641&ev=PageView&noscript=1" /></noscript>
+	<!-- End Facebook Tag -->
+	<script src='//0.gravatar.com/js/gprofiles.js?ver=202318v2' id='grofiles-cards-js'></script>
+<script id='wpgroho-js-extra'>
+var WPGroHo = {"my_hash":""};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240h'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-a8c-wpcomvip3-lobby actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Follow</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Following</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://lobby.vip.wordpress.com">
+				<img alt='' src='https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=50&#038;d=https%3A%2F%2Fs2.wp.com%2Fi%2Flogo%2Fwpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' />				WordPress VIP Lobby			</a>
+		</li>
+										<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 4,252 other followers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="12269838" />
+										<input type="hidden" name="source" value="https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="973b2aa812" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Flobby.vip.wordpress.com%2F2023%2F04%2F17%2Fnew-in-beta-block-data-api%2F&#038;signup_flow=account">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://lobby.vip.wordpress.com">
+				<img alt='' src='https://secure.gravatar.com/blavatar/31ff5d6ecb64449b445eaa357a617a8f?s=50&#038;d=https%3A%2F%2Fs2.wp.com%2Fi%2Flogo%2Fwpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' />				WordPress VIP Lobby			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://lobby.vip.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Flobby.vip.wordpress.com%2F2023%2F04%2F17%2Fnew-in-beta-block-data-api%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Follow</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Following</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Flobby.vip.wordpress.com%2F2023%2F04%2F17%2Fnew-in-beta-block-data-api%2F&#038;signup_flow=account">Log in</a></li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/pPtWC-644">Copy shortlink</a></li>
+																	<li class="flb-report">
+										<a href="http://en.wordpress.com/abuse/?report_url=https://lobby.vip.wordpress.com/2023/04/17/new-in-beta-block-data-api/" target="_blank">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/12269838/posts/23316">
+											View post in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20210915";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20220329";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+			<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper-container jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<div id="jp-carousel-comment-form-commenting-as">
+												<p id="jp-carousel-commenting-as">
+													You must be <a href="#" class="jp-carousel-comment-login">logged in</a> to post a comment.												</p>
+											</div>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/lobby.vip.wordpress.com\/2023\/04\/17\/new-in-beta-block-data-api\/":23316};
+	</script>
+				<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-2' href='https://s2.wp.com/_static/??-eJyljFsKhDAMRTc0naAMPj7EtTgxSLVNQ9Pg9lXQFfh37uFyYBeHiQtxgWhOgi2eFVYqMuF2b5CcZsPiE0M8KZACTjmZUgDdvVB2f+M50BdVP/C6+VwfcWXHOFRNW/e/tq669QC1DUV1&cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+var JetpackInstantSearchOptions=JSON.parse(decodeURIComponent("%7B%22overlayOptions%22%3A%7B%22colorTheme%22%3A%22light%22%2C%22enableInfScroll%22%3Atrue%2C%22enablePostDate%22%3Atrue%2C%22enableSort%22%3Atrue%2C%22highlightColor%22%3A%22%23FFC%22%2C%22overlayTrigger%22%3A%22submit%22%2C%22resultFormat%22%3A%22expanded%22%2C%22showPoweredBy%22%3Atrue%2C%22defaultSort%22%3A%22relevance%22%2C%22excludedPostTypes%22%3A%5B%22attachment%22%5D%7D%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Flobby.vip.wordpress.com%22%2C%22locale%22%3A%22en%22%2C%22postsPerPage%22%3A10%2C%22siteId%22%3A12269838%2C%22postTypes%22%3A%7B%22post%22%3A%7B%22singular_name%22%3A%22News%22%2C%22name%22%3A%22News%22%7D%2C%22page%22%3A%7B%22singular_name%22%3A%22Page%22%2C%22name%22%3A%22Pages%22%7D%2C%22attachment%22%3A%7B%22singular_name%22%3A%22Media%22%2C%22name%22%3A%22Media%22%7D%7D%2C%22webpackPublicPath%22%3A%22https%3A%5C%2F%5C%2Fs2.wp.com%5C%2Fwp-content%5C%2Fmu-plugins%5C%2Fjetpack-plugin%5C%2Fproduction%5C%2Fjetpack_vendor%5C%2Fautomattic%5C%2Fjetpack-search%5C%2Fbuild%5C%2Finstant-search%5C%2F%22%2C%22isPhotonEnabled%22%3Atrue%2C%22isFreePlan%22%3Afalse%2C%22apiRoot%22%3A%22https%3A%5C%2F%5C%2Fpublic-api.wordpress.com%5C%2F%22%2C%22apiNonce%22%3A%22a81fdc0959%22%2C%22isPrivateSite%22%3Afalse%2C%22isWpcom%22%3Atrue%2C%22hasOverlayWidgets%22%3Atrue%2C%22widgets%22%3A%5B%7B%22filters%22%3A%5B%7B%22name%22%3A%22Post%20Types%22%2C%22type%22%3A%22post_type%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%2C%22filter_id%22%3A%22post_type_0%22%7D%2C%7B%22name%22%3A%22Mentions%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22mentions%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%2C%22filter_id%22%3A%22taxonomy_1%22%7D%2C%7B%22name%22%3A%22Categories%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22category%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%2C%22filter_id%22%3A%22taxonomy_2%22%7D%2C%7B%22name%22%3A%22Tags%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22post_tag%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%2C%22filter_id%22%3A%22taxonomy_3%22%7D%2C%7B%22name%22%3A%22Year%22%2C%22type%22%3A%22date_histogram%22%2C%22count%22%3A5%2C%22field%22%3A%22post_date%22%2C%22interval%22%3A%22year%22%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%2C%22filter_id%22%3A%22date_histogram_4%22%7D%5D%2C%22widget_id%22%3A%22jetpack-search-filters-2%22%7D%5D%2C%22widgetsOutsideOverlay%22%3A%5B%5D%2C%22hasNonSearchWidgets%22%3Afalse%7D"));
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??-eJx9jUESgjAMRS+kRHBkcOF4FKe0GWgpaW0T5Ph2AY7jwl1+3k8evOJRB2IkBpfB4GI1xrVy+QBfaJZj9DJYyuDthBmegoKjIuMx/Zb35iAl9piGQhLCUl+qtmqgF+sNSPJgyeBazZb+6BxyVHraMsQUjGi2gXbyWJBMSKCEw6yYrf7cZFRJj5uwPGNFvC9d3Kbivs+3uu2a07Xr2rN7A5qnZfo='></script>
+<script crossorigin='anonymous' src='//stats.wp.com/w.js?ver=202318' id='jp-tracks-js'></script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s2.wp.com/wp-content/plugins/wp-parsely/build/loader.js?m=1651502011h'></script>
+<script data-parsely-site="lobby.vip.wordpress.com" src='https://cdn.parsely.com/keys/lobby.vip.wordpress.com/p.js?ver=3.3.2' id="parsely-cfg"></script>
+<script id='coblocks-loader-js-extra'>
+var wpcom_coblocks_js = {"coblocks_masonry_js":"https:\/\/s2.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-masonry.min.js","coblocks_lightbox_js":"https:\/\/s2.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-lightbox.min.js","jquery_core_js":"\/wp-includes\/js\/jquery\/jquery.min.js","jquery_migrate_js":"\/wp-includes\/js\/jquery\/jquery-migrate.min.js","masonry_js":"\/wp-includes\/js\/masonry.min.js","imagesloaded_js":"\/wp-includes\/js\/imagesloaded.min.js"};
+var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
+</script>
+<script id='jetpack-carousel-js-extra'>
+var jetpackSwiperLibraryPath = {"url":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-plugin\/production\/_inc\/build\/carousel\/swiper-bundle.min.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/lobby.vip.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"b593e15ff8","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"1","require_name_email":"1","login_url":"https:\/\/wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Flobby.vip.wordpress.com%2F2023%2F04%2F17%2Fnew-in-beta-block-data-api%2F","blog_id":"12269838","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=12269838&v=wpcom&tz=0&user_id=0&subd=lobby.vip","is_public":"0"};
+</script>
+<script id='sharing-js-js-extra'>
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??-eJylj81uwkAMhF+oXitp1YYD4lHQZtcCh/3T2tuItyeqSEEcQGpvHmv8zRjnAi4npaRYQjtwEnR5DNmdBHvTDaYD4VgCQaVv84GeRXG6mSBk66mayMlM8oZ3vNhgRU6kxbrTVWOp2TennBPuOTnUmVWpgnKkwImekKxfkmC0FaOV5WaZQOvClr/Hj42DR2drbkLh170uXvy22mAuLscH+d9ScrSVvPX+/DNyOlzb7OK2+xy64b3vN1/TBcYpqic='></script>
+<script type='text/javascript'>
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=20230309#ver=20230309&amp;origin=https://lobby.vip.wordpress.com' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'>
+		<div class="likes-text">
+			<span>%d</span> bloggers like this:		</div>
+		<ul class="wpl-avatars sd-like-gravatars"></ul>
+	</div>
+
+		<script src="//stats.wp.com/w.js?63" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'12269838','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'12269838','v':'wpcom','tz':'0','user_id':'0','post':'23316','subd':'lobby.vip'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1lSiYrZXhzUkM5fD1uTDNLUGt6QzVbd3FKb3Q4aWxfXVA/NnV6U0c1UVcubHRwRitlOE9WMFhQbnFZVFUwUi43MWJRPUpLJXIuaC96JStVWXwxb2ZZUTUsV3osLldYfk0ySkpSVHc4Z04zeFB4RXIyQlB+JU9fWjlBeC1bZiYxNnUmLFkrYWpJZ2xOdF18cGFmVTlvQ3RIQiw0X3FoXTM3TllzbFJMJkt1TE5qSGJFSFJUcUxlaSUsN3MxMGhZeCtPL3dtdm9aOW9YYU1jcnZsdTIsYSZsMGZ8eFZjX1hsRjJOP2pXUEYucVQ0TDF1Vi9EcURdPy9dbWs1dzFlQ1FxTCxQdCZmRWk0VkUvY35NLytuW112d3ZxcVA1LTdQclZCM2ZLSjU/ZDB3VUhlLDZkRT1IUUtEejM/P2VYejcxRXBCRSZyazNzZFhQNw=='}]);
+_stq.push([ 'clickTrackerInit', '12269838', '23316' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script defer id="bilmur" data-customproperties="{&quot;enq_jquery&quot;:&quot;1&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;a8c\/wpcomvip3-lobby&quot;,&quot;wptheme_is_block&quot;:&quot;0&quot;}" data-provider="wordpress.com" data-service="simple"  src="/wp-content/js/bilmur.min.js?i=7&m=202318"></script><script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

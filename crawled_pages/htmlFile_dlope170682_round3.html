@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<script type='text/javascript' integrity='sha384-Ozn/K6T6aiuLQvl3oPnyFPAbQbp9HfwljVgfqLR7TiqvJGY0qO6NTV9swVvvXJlQ' src='https://humanmade.com/content/plugins/altis-accelerate/assets/polyfill-ie11-es6.min.js?ver=3' id='altis-accelerate-polyfill.io-js' nomodule></script>
+<script type='text/javascript' id='altis-accelerate-accelerate-js-before'>
+var Altis = Altis || {}; Altis.Analytics = {"Ready":false,"Loaded":false,"Consent":{"CookiePrefix":"_altis_consent","Enabled":true,"Allowed":["functional","statistics-anonymous"]},"Config":{"PinpointId":"d7dbd539edb34cdfb9d99e58f89f8d55","PinpointRegion":"eu-central-1","PinpointEndpoint":"https:\/\/eu.accelerate.altis.cloud\/log","ExcludeBots":true},"Noop":false,"Data":{"Endpoint":{},"AppPackageName":"humanmade","AppVersion":"","SiteName":"Human Made","Attributes":{"postType":"post","postId":19659,"author":"joehoyle","authorId":"12","blog":"https:\/\/humanmade.com","network":"https:\/\/humanmade.com\/","blogId":1,"networkId":1},"Metrics":{}},"Audiences":[]};Altis.Analytics.onReady = function ( callback ) {if ( Altis.Analytics.Ready ) {callback();} else {window.addEventListener( 'altis.analytics.ready', callback );}};Altis.Analytics.onLoad = function ( callback ) {if ( Altis.Analytics.Loaded ) {callback();} else {window.addEventListener( 'altis.analytics.loaded', callback );}};
+</script>
+<script type='text/javascript' src='https://eu.accelerate.altis.cloud/accelerate.2.0.4.js?ver=cb6f52ea29b5d5e998ee6b2192eeeb9c' id='altis-accelerate-accelerate-js' async></script>
+<script type='text/javascript' id='altis-accelerate-experiments-js-before'>
+window.Altis = window.Altis || {};window.Altis.Analytics = window.Altis.Analytics || {};window.Altis.Analytics.Experiments = window.Altis.Analytics.Experiments || {};window.Altis.Analytics.Experiments.BuildURL = "https:\/\/humanmade.com\/content\/plugins\/altis-accelerate\/build";window.Altis.Analytics.Experiments.Goals = {"engagement":{"name":"engagement","event":"click","label":"Engagement (Default)","selector":"a,input[type=\"button\"],input[type=\"submit\"],input[type=\"image\"],button,area","closest":null,"args":{"validation_message":"You need to add at least one clickable element or a form to track conversions."}},"click_any_link":{"name":"click_any_link","event":"click","label":"Click on any link","selector":"a","closest":null,"args":{"validation_message":"You need to add at least one link to this content to track conversions."}},"submit_form":{"name":"submit_form","event":"submit","label":"Submit a form","selector":"form","closest":null,"args":{"validation_message":"You need to add a form to this content to track conversions."}}};
+</script>
+<script type='text/javascript' integrity='sha384-JPAiEiCc5BBV3bbvoJuFQkq4KcQX4f7u6AsMgNIfpWDzxkrJ2vhVJsgGbvQHFMHy' src='https://humanmade.com/content/plugins/altis-accelerate/build/experiments.61bb0719.js?ver=cb6f52ea29b5d5e998ee6b2192eeeb9c' id='altis-accelerate-experiments-js' async></script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script>window.dataLayer = window.dataLayer || []; window.dataLayer.push( {"type":"post","subtype":"post","context":{"is_front_page":false,"is_singular":true,"is_archive":false,"is_home":false,"is_search":false,"is_404":false,"is_post_type_archive":false,"is_tax":false},"user":{"role":[]},"blog":{"url":"https:\/\/humanmade.com","id":1},"network":{"url":"https:\/\/humanmade.com","id":1},"post":{"ID":19659,"slug":"progress-on-generative-content-and-blocks-wordpress-ai-pt-2","published":"2023-04-17 08:28:19","modified":"2023-04-17 10:29:26","comments":0,"template":"","thumbnail":"https:\/\/humanmade.com\/tachyon\/2023\/04\/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg","author_ID":12,"author_slug":"joehoyle","category":["engineering"]}} );</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MVDCPRB');</script>
+		<!-- End Google Tag Manager -->
+		
+	<!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>WordPress AI: Generative content &amp; blocks pt. 2 &ndash; Human Made</title>
+	<meta name="description" content="What&#039;s the latest on integrating generative AI within WordPress? Here&#039;s what we&#039;ve been working on behind the scenes." />
+	<link rel="canonical" href="https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="WordPress AI: Generative content &amp; blocks pt. 2 &ndash; Human Made" />
+	<meta property="og:description" content="What&#039;s the latest on integrating generative AI within WordPress? Here&#039;s what we&#039;ve been working on behind the scenes." />
+	<meta property="og:url" content="https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/" />
+	<meta property="og:site_name" content="Human Made" />
+	<meta property="article:publisher" content="https://www.facebook.com/humanmadeltd" />
+	<meta property="article:published_time" content="2023-04-17T08:28:19+00:00" />
+	<meta property="article:modified_time" content="2023-04-17T10:29:26+00:00" />
+	<meta property="og:image" content="https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg" />
+	<meta property="og:image:width" content="1800" />
+	<meta property="og:image:height" content="942" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Joe Hoyle" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@joe_hoyle" />
+	<meta name="twitter:site" content="@humanmadeltd" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Joe Hoyle" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#article","isPartOf":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/"},"author":{"name":"Joe Hoyle","@id":"https://humanmade.com/#/schema/person/fc38d8ffb7cfd9b39d2d18f2d2578c63"},"headline":"WordPress AI: Generative content &#038; blocks pt. 2","datePublished":"2023-04-17T08:28:19+00:00","dateModified":"2023-04-17T10:29:26+00:00","mainEntityOfPage":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/"},"wordCount":360,"publisher":{"@id":"https://humanmade.com/#organization"},"image":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#primaryimage"},"thumbnailUrl":"https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg","articleSection":["Engineering"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/","url":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/","name":"WordPress AI: Generative content & blocks pt. 2 &ndash; Human Made","isPartOf":{"@id":"https://humanmade.com/#website"},"primaryImageOfPage":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#primaryimage"},"image":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#primaryimage"},"thumbnailUrl":"https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg","datePublished":"2023-04-17T08:28:19+00:00","dateModified":"2023-04-17T10:29:26+00:00","description":"What's the latest on integrating generative AI within WordPress? Here's what we've been working on behind the scenes.","breadcrumb":{"@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#primaryimage","url":"https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg","contentUrl":"https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg","width":1800,"height":942,"caption":"Accessories, Sunglasses, Adult"},{"@type":"BreadcrumbList","@id":"https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://humanmade.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://humanmade.com/blog/"},{"@type":"ListItem","position":3,"name":"Engineering","item":"https://humanmade.com/category/engineering/"},{"@type":"ListItem","position":4,"name":"WordPress AI: Generative content &#038; blocks pt. 2"}]},{"@type":"WebSite","@id":"https://humanmade.com/#website","url":"https://humanmade.com/","name":"Human Made","description":"The technology partner of choice for the world’s leading brands","publisher":{"@id":"https://humanmade.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://humanmade.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://humanmade.com/#organization","name":"Human Made","url":"https://humanmade.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://humanmade.com/#/schema/logo/image/","url":"https://humanmade.com/tachyon/2022/11/OpenGraph-Banner.png","contentUrl":"https://humanmade.com/tachyon/2022/11/OpenGraph-Banner.png","width":2400,"height":1260,"caption":"Human Made"},"image":{"@id":"https://humanmade.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/humanmadeltd","https://twitter.com/humanmadeltd","https://www.instagram.com/humanmadeltd","https://www.linkedin.com/company/human-made-limited","https://www.youtube.com/channel/UCZJ0t4IuF2Kyq2jXNC-BAmw"]},{"@type":"Person","@id":"https://humanmade.com/#/schema/person/fc38d8ffb7cfd9b39d2d18f2d2578c63","name":"Joe Hoyle","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://humanmade.com/#/schema/person/image/","url":"https://humanmade.com/tachyon/2023/03/bob-avatar-12.jpg?resize=96%2C96&crop_strategy=smart","contentUrl":"https://humanmade.com/tachyon/2023/03/bob-avatar-12.jpg?resize=96%2C96&crop_strategy=smart","caption":"Joe Hoyle"},"description":"Joe is the co-founder and CTO of Human Made. He leads overall technical direction of the company, and general company leadership. Joe lives between Montreal, Canada and Berlin, Germany with his family.","sameAs":["https://twitter.com/joe_hoyle"],"url":"https://humanmade.com/who-we-are/joehoyle/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//humanmade.com' />
+<link rel='dns-prefetch' href='//eu.accelerate.altis.cloud' />
+<link rel='dns-prefetch' href='//js-eu1.hs-scripts.com' />
+<link rel='dns-prefetch' href='//hm-marketing-prod.altis.cloud' />
+<link rel="preload" href="https://humanmade.com/content/themes/humanmade/build/aef4735c37fe5b3a2977.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="https://humanmade.com/content/themes/humanmade/build/37949ce5c0c8c58d5bba.woff2" as="font" type="font/woff2" crossorigin />
+<link rel='stylesheet' id='wp-components-css' href='https://humanmade.com/wp-includes/css/dist/components/style.min.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://humanmade.com/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #131313;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue-400: #819DFF;--wp--preset--color--blue: #4668df;--wp--preset--color--navy-100: #f7faff;--wp--preset--color--navy-300: #D2E4FF;--wp--preset--color--navy-700: #698BBD;--wp--preset--color--navy: #203657;--wp--preset--color--red: #FF424A;--wp--preset--color--red-600: #DD2E36;--wp--preset--color--green: #00D2B7;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--size-1: 0.75rem;--wp--preset--font-size--size-2: 0.875rem;--wp--preset--font-size--size-3: 1.125rem;--wp--preset--font-size--size-4: 1.438rem;--wp--preset--font-size--size-5: 1.75rem;--wp--preset--font-size--size-6: 2.188rem;--wp--preset--font-size--size-7: 2.75rem;--wp--preset--font-size--size-8: 3.438rem;--wp--preset--font-size--size-9: 4.313rem;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}body { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }.wp-site-blocks > * { margin-block-start: 0; margin-block-end: 0; }.wp-site-blocks > * + * { margin-block-start: 24px; }body { --wp--style--block-gap: 24px; }body .is-layout-flow > *{margin-block-start: 0;margin-block-end: 0;}body .is-layout-flow > * + *{margin-block-start: 24px;margin-block-end: 0;}body .is-layout-constrained > *{margin-block-start: 0;margin-block-end: 0;}body .is-layout-constrained > * + *{margin-block-start: 24px;margin-block-end: 0;}body .is-layout-flex{gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-blue-400-color{color: var(--wp--preset--color--blue-400) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-navy-100-color{color: var(--wp--preset--color--navy-100) !important;}.has-navy-300-color{color: var(--wp--preset--color--navy-300) !important;}.has-navy-700-color{color: var(--wp--preset--color--navy-700) !important;}.has-navy-color{color: var(--wp--preset--color--navy) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-red-600-color{color: var(--wp--preset--color--red-600) !important;}.has-green-color{color: var(--wp--preset--color--green) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-blue-400-background-color{background-color: var(--wp--preset--color--blue-400) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-navy-100-background-color{background-color: var(--wp--preset--color--navy-100) !important;}.has-navy-300-background-color{background-color: var(--wp--preset--color--navy-300) !important;}.has-navy-700-background-color{background-color: var(--wp--preset--color--navy-700) !important;}.has-navy-background-color{background-color: var(--wp--preset--color--navy) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-red-600-background-color{background-color: var(--wp--preset--color--red-600) !important;}.has-green-background-color{background-color: var(--wp--preset--color--green) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-blue-400-border-color{border-color: var(--wp--preset--color--blue-400) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-navy-100-border-color{border-color: var(--wp--preset--color--navy-100) !important;}.has-navy-300-border-color{border-color: var(--wp--preset--color--navy-300) !important;}.has-navy-700-border-color{border-color: var(--wp--preset--color--navy-700) !important;}.has-navy-border-color{border-color: var(--wp--preset--color--navy) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-red-600-border-color{border-color: var(--wp--preset--color--red-600) !important;}.has-green-border-color{border-color: var(--wp--preset--color--green) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-size-1-font-size{font-size: var(--wp--preset--font-size--size-1) !important;}.has-size-2-font-size{font-size: var(--wp--preset--font-size--size-2) !important;}.has-size-3-font-size{font-size: var(--wp--preset--font-size--size-3) !important;}.has-size-4-font-size{font-size: var(--wp--preset--font-size--size-4) !important;}.has-size-5-font-size{font-size: var(--wp--preset--font-size--size-5) !important;}.has-size-6-font-size{font-size: var(--wp--preset--font-size--size-6) !important;}.has-size-7-font-size{font-size: var(--wp--preset--font-size--size-7) !important;}.has-size-8-font-size{font-size: var(--wp--preset--font-size--size-8) !important;}.has-size-9-font-size{font-size: var(--wp--preset--font-size--size-9) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='hmagency-button-styles-css' integrity='sha384-LSe30hFYtnZLdSIJSN39fNBB++gmbc52a6R0JUvqiBqpkDyYtWN9ZPs69X2uoW12' href='https://humanmade.com/content/mu-plugins/hmagency-blocks/build/button_stylesheet.ceecff9127c6b5eb3650.css?ver=ceecff9127c6b5eb3650' type='text/css' media='all' />
+<link rel='stylesheet' id='hmagency-heading-underlined-styles-css' integrity='sha384-xzX7W+2sqsEx311Tg9YBZHgEkXfa+fVHKdjsVhzTEqjMjr5bsZCCzuWPh9Oc1YDn' href='https://humanmade.com/content/mu-plugins/hmagency-blocks/build/heading_underlined_stylesheet.1120b7a3a52bf2fa2913.css?ver=1120b7a3a52bf2fa2913' type='text/css' media='all' />
+<link rel='stylesheet' id='hmagency-taxonomy-terms-nav-styles-css' integrity='sha384-0zuQNII6wo/wscEMltfTGqeANQr0Kk8f34IBkzjwrDt1ZURHvWhA4Hlr8QHvVgOk' href='https://humanmade.com/content/mu-plugins/hmagency-blocks/build/taxonomy_terms_nav_stylesheet.8cccb8f67661cc7e283d.css?ver=8cccb8f67661cc7e283d' type='text/css' media='all' />
+<link rel='stylesheet' id='altis-consent-css' integrity='sha384-sUU+Svq12n8yy6B64MMe1+OaI/rLuoMdC/T1qgSKx90LtgG7Qhl4BWVUGftha/B2' href='https://humanmade.com/vendor/altis/consent/dist/css/styles.css?ver=1.0.15' type='text/css' media='screen' />
+<link rel='stylesheet' id='hmagency-theme-styles-css' integrity='sha384-mm0L5CNnPzknbTWbdvdT2whxY3h5WRcL9A4wiGiyzZ4Z8n2XmRmGzfqukjL2F5bU' href='https://humanmade.com/content/themes/humanmade/build/theme_style.67a4a5c0f193df6d19c8.css?ver=67a4a5c0f193df6d19c8' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://humanmade.com/wp-json/" /><link rel="alternate" type="application/json" href="https://humanmade.com/wp-json/wp/v2/posts/19659" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://humanmade.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://humanmade.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="Altis (WordPress 6.1.1)" />
+<link rel='shortlink' href='https://humanmade.com/?p=19659' />
+<link rel="alternate" type="application/json+oembed" href="https://humanmade.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhumanmade.com%2F2023%2F04%2F17%2Fprogress-on-generative-content-and-blocks-wordpress-ai-pt-2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://humanmade.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhumanmade.com%2F2023%2F04%2F17%2Fprogress-on-generative-content-and-blocks-wordpress-ai-pt-2%2F&#038;format=xml" />
+<!-- Stream WordPress user activity plugin v3.9.2 -->
+<link rel="icon" href="https://humanmade.com/tachyon/2022/08/cropped-hm-favicon-1.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="https://humanmade.com/tachyon/2022/08/cropped-hm-favicon-1.png?fit=192%2C192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://humanmade.com/tachyon/2022/08/cropped-hm-favicon-1.png?fit=180%2C180" />
+<meta name="msapplication-TileImage" content="https://humanmade.com/tachyon/2022/08/cropped-hm-favicon-1.png?fit=270%2C270" />
+</head>
+
+<body class="post-template-default single single-post postid-19659 single-format-standard">
+	<a class="skip-link screen-reader-text" href="#skip-to-content">
+		Skip to content	</a>
+
+	
+<header class="site-header container">
+	<div class="site-header__logo">
+		<a href="https://humanmade.com">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598 115">
+  <title>Human Made</title>
+  <g fill="#FF424A">
+    <path d="M443.321 92.52c-3.14 1.367-4.544 1.926-8.717 1.955-7.083.05-11.27-5.8-12.638-10.198-3.065-9.858-.611-26.866.37-38.35 1.267-14.822 1.871-20.64 2.112-23.74.565-7.236-2.15-14.707-10.399-14.65-7.666.053-17.666 8.644-22.084 17.875 1.077-11.823-2.223-21.265-11.249-21.202-9.026.06-18.27 12.86-21.09 18.618.57-5.38.883-7.635 1.127-10.541.246-2.908.148-5.01-2.896-5.307-1.849-.18-5.335.455-7.416.808-2.667.453-3.532 2.351-4.024 6.467-.515 4.314-2.243 27.18-3.395 40.36-1.154 13.178-2.676 33.274-2.613 37.34.049 3.1 1.62 4.348 3.951 4.332 2.328-.017 6.373-.823 7.82-1.317 1.188-.407 2.137-.947 2.784-1.956.585-.913.893-2.28 1.004-4.075.297-4.846 1.097-16.414 1.852-23.97.755-7.56 1.505-14.141 2.87-19.972 2.752-11.74 8.401-24.462 13.545-24.497 3.3-.023 3.407 6.177 2.473 14.706-.934 8.529-3.454 39.73-3.396 43.507.052 3.293 1.026 5.029 3.864 5.01 2.328-.017 6.613-.346 8.349-1.038 1.092-.434 1.903-.837 2.463-1.812.492-.858.789-2.158.91-4.312.279-4.95 2.082-24.94 3.658-31.257 3.011-12.048 9.306-20.105 12.8-20.129 3.493-.024 2.405 8.555 1.49 18.344-1.814 19.428-3.968 36.8 1.609 49.29 4.226 9.464 13.103 13.514 22.201 13.514 7.086 0 11.72-2.038 14.558-4.506 1.292-1.123 1.818-2.801 1.767-3.89-.105-2.25-1.757-4.168-3.66-5.408m-190.19-33.542c-1.164 5.713-2.746 10.942-6.483 10.942-3.59 0-5.279-3.584-5.279-10.846 0-9.393 3.513-20.505 9.734-20.505 2.014 0 3.086.872 4.532 2.204-.34 5.06-1.34 12.491-2.504 18.205ZM20.572 101.526c-3.785 0-6.988-3.922-6.988-10.75 0-12.45 9.891-21.48 20.386-26.648-.661 7.301-1.683 14.36-2.401 19.178-1.304 8.74-4.737 18.22-10.997 18.22Zm306.694-31.781c-1.214.63-2.767 1.163-4.077 1.163-2.125 0-2.912-1.913-2.912-4.43 0-2.804.467-6.799 1.048-11.665.652-6.15 1.335-12.62 1.335-16.656 0-6.1-4.043-11.039-9.938-11.039-5.823 0-12.49 4.308-17.295 10.264.194-1.743.29-3.196.388-4.551.126-1.752-.681-3.196-2.427-3.196-1.747 0-5.258.147-7.91.702-1.844.387-3.202 1.454-3.494 4.067-.837 7.517-2.422 23.161-3.168 31.38-2.156 2.09-4.762 4.135-6.856 4.135-2.232 0-3.566-1.598-3.566-4.648 0-5.326 2.751-25.614 3.042-30.117.118-1.81-.873-3.63-3.057-3.63-1.893 0-4.3.92-7.309 1.792-2.718-2.325-6.464-5.327-12.287-5.327-14.34 0-22.923 14.429-22.923 31.665 0 3.444.335 6.548.967 9.297-2.318 1.753-4.52 2.971-6.053 2.971-2.183 0-3.785-1.695-3.785-4.695 0-2.484.825-8.752 1.31-13.025.583-5.132 1.407-10.31 1.407-13.024 0-5.81-3.746-9.993-8.93-9.993-6.453 0-12.634 4.52-17.283 9.218-1.068-5.229-4.125-8.618-8.784-8.618-5.824 0-12.616 4.744-16.887 10.458.195-1.743.3-3.244.446-5.325.122-1.753-.68-3.196-2.427-3.196-1.747 0-5.812.8-8.462 1.355-1.845.388-3.203 1.453-3.494 4.068-.774 6.95-2.46 21.53-3.387 30.403-2.68 3.786-5.03 6.268-7.26 6.268-2.475 0-3.058-2.567-3.058-6.342 0-3.777 2.815-26.05 3.106-29.052.337-3.47-1.31-4.337-3.348-4.26-2.572.096-7.182.774-9.706 1.259-2.395.459-2.587 3.204-2.814 5.809-.291 3.342-1.61 16.681-2.378 21.595-1.164 7.455-4.561 11.862-8.007 11.862-3.445 0-3.843-4.068-3.843-7.843 0-3.776 2.3-21.644 2.3-24.985 0-3.34-.462-5.613-4.368-6.052-3.97-.446-13.376-.361-24.23.79 1.196-11.961 3.395-27.833 4.042-33.06.39-3.142.088-5.114-3.173-5.5-1.854-.22-7.583.584-9.33.87-2.874.47-3.967 2.913-4.33 4.817-1.499 7.837-2.923 21.27-3.865 35.393a284.84 284.84 0 0 0-18.785 4.338c.626-11.135 1.05-23.76.664-29.919-.545-8.698-5.533-14.409-13.2-14.409-8.168 0-17.596 4.381-23.511 9.369-3.868 3.26-6.044 7.035-6.044 10.022 0 3.05 1.53 5.812 5.574 5.812 3.129-4.268 11.316-11.754 15.888-11.754 4.114 0 5.163 3.562 5.163 7.193 0 2.968-.596 17.411-1.178 29.032C18.827 57.237 0 69.458 0 91.413c0 13.507 9.314 22.954 21.158 22.954 15.495 0 23.968-14.585 26.505-29.893 1.277-7.708 2.263-17.664 2.942-26.362 5.98-1.821 12.75-3.68 18.944-5.06-.922 17.613-1.38 33.568 3.35 45.147 4.013 9.819 12.523 16.899 25.862 16.8 9.171-.07 17.72-3.744 21.547-7.203 1.276-1.153 1.805-2.747 1.764-3.835-.088-2.25-1.518-4.084-3.41-5.321-3.793 2.152-7.995 3.964-13.958 4.193-5.964.229-14.067-3.018-17.397-13.889-2.762-9.016-2.025-26.653-1.319-38.552 5.727-.612 9.738-.693 13.585-.692-1.163 12.055-1.792 24.439-.99 30.542.777 5.906 3.98 11.552 11.696 11.552 7.133 0 13.063-5.956 16.653-10.894 2.04 4.551 4.805 7.553 9.852 7.553 4.215 0 9.096-2.888 12.706-6.826-.096 1.797-.086 3.017.125 3.805.4 1.496 1.455 2.033 3.202 2.033 1.675 0 6.915-.945 9.609-1.743 1.883-.558 2.037-1.952 2.256-5.156.219-3.197 1.006-14.695 1.976-21.183.913-6.11 6.031-12.685 9.05-12.685 1.586 0 2.557 1.525 2.557 3.487 0 2.517-2.839 26.894-2.839 30.961 0 2.906 1.082 3.631 3.217 3.631 2.136 0 6.333-.289 9.245-.87.931-.186 1.6-.62 1.965-1.405.473-1.015.512-2.551.703-4.163.4-3.365 1.369-17.724 2.209-21.813 1.203-5.86 5.712-10.481 8.405-10.481 1.794 0 2.748 2.26 2.532 4.648-.242 2.687-2.048 17.55-2.048 22.634 0 7.021 4.175 11.234 11.04 11.234 6.896 0 13.002-4.333 17.134-8.085 2.842 4.49 7.088 6.902 12.337 6.902 6.114 0 10.55-4.454 13.935-10.941.875 5.035 4.62 9.587 10.347 9.587 4.1 0 8.423-2.685 11.62-5.51-.038 1.322-.007 2.284.114 3.015.251 1.528 1.456 2.036 3.203 2.036 1.747 0 7.04-.025 9.55-.873 1.86-.63 2.036-1.952 2.256-5.156.218-3.195 1.131-15.689 2.1-22.176.916-6.11 5.689-11.717 9.183-11.717 1.97 0 2.823 1.84 2.823 3.802 0 1.232-.552 5.784-1.076 11.027-.522 5.243-1.026 10.324-1.026 12.837 0 8.135 3.33 13.316 11.7 13.316 5.219 0 10.166-2.965 11.74-5.007.729-.944 1.092-1.889 1.092-2.98 0-2.25-.946-3.701-2.46-4.893"/>
+    <path d="M558.126 49.249c2.475 0 3.965 1.961 3.965 4.14 0 5.94-3.98 10.858-11.444 10.858a17.33 17.33 0 0 1-3.102-.256c1.14-7.615 5.194-14.742 10.58-14.742Zm-49.438 16.34c-1.032 5.298-3.29 8.78-6.806 8.78-4.174 0-5.578-3.596-5.502-10.059.114-9.658 3.892-20.95 10.953-20.95 1.748 0 3.277.95 4.478 2.354-.757 6.757-2.09 14.579-3.123 19.875Zm-51.35-2.991c-.934 5.326-3.72 8.91-7.044 8.91-4.172 0-5.656-3.9-5.7-10.363-.067-9.66 3.915-21.885 11.194-21.885 2.038 0 3.426 1.066 4.483 2.227-.63 6.779-2 15.784-2.933 21.11Zm128.92 14.37c-7.96 0-20.324 6.332-29.738 6.332-6.37 0-9.519-5.64-9.473-11.215 2.367.45 4.94.66 7.765.66 10.093 0 20.477-6.525 20.477-18.147 0-8.036-6.017-15.88-17.47-15.88-16.886 0-26.513 16.946-26.513 32.828 0 1.368.067 2.689.2 3.965-1.49.94-3.177 1.7-4.455 1.663-2.765-.081-3.544-1.993-3.508-4.897.035-2.904 2.94-21.214 3.932-27.846 1.101-7.36 4.447-26.8 4.447-29.607 0-1.597-.757-2.518-2.7-2.905-1.947-.386-6.714-.726-8.072-.726-2.136 0-3.5.904-4.064 3.946-.56 2.989-1.891 12.71-3.274 21.037-2.403-2.106-5.46-3.994-9.755-3.994-14.193 0-23.32 14.742-23.32 33.511 0 1.777.108 3.47.314 5.079-1.7 1.24-3.748 2.429-5.088 2.429-2.767 0-3.58-1.889-3.6-4.793-.022-2.904 3.014-23.105 3.776-29.778.196-1.708.28-2.936-.074-3.728-.56-1.252-1.922-1.488-3.407-1.355-1.596.144-3.295.483-5.815 1.065-2.91-3.244-6.792-6.44-12.614-6.44-15.578 0-25.386 15.18-25.25 34.814.091 12.975 5.686 21.788 15.295 21.788 7.472 0 10.254-3.947 14.22-9.249.846 6.39 5.25 9.588 10.2 9.588 4.34 0 9.597-2.681 14.512-6.424 2.523 5.493 6.894 8.766 12.757 8.766 6.596 0 10.133-3.922 14.36-8.958 1.51 6.392 4.31 10.37 10.594 10.37 4.837 0 8.445-2.061 12.664-5.182 3.104 7.036 9.41 11.295 19.057 11.295 10.87 0 22.167-3.39 27.504-3.39 6.018 0 10.288 1.259 14.85 3.292 1.455-1.16 3.008-4.165 3.008-7.94 0-5.035-3.785-9.973-11.743-9.973"/>
+  </g>
+</svg>
+		</a>
+	</div>
+
+	
+<button class="burger-menu" aria-expanded="false" aria-controls="main-menu">
+	<span class="screen-reader-text">Open menu</span>
+	<span class="burger-menu__icon"></span>
+</button>
+
+<div id="main-menu" class="main-menu" aria-hidden="true">
+	<ul id="menu-main-menu" class="menu"><li id="menu-item-16036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-16036"><a href="https://humanmade.com/">Home</a></li>
+<li id="menu-item-16100" class="menu-item menu-item-type-post_type_archive menu-item-object-case-study menu-item-16100"><a href="https://humanmade.com/work/">Work</a></li>
+<li id="menu-item-16101" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-16101"><a href="https://humanmade.com/blog/">Blog</a></li>
+<li id="menu-item-15550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15550"><a href="https://humanmade.com/services/">Services</a></li>
+<li id="menu-item-15552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15552"><a href="https://humanmade.com/about/">About us</a></li>
+<li id="menu-item-15605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15605"><a href="https://humanmade.com/careers/">Careers</a></li>
+</ul>
+	<div class="wp-block-hmagency-button hm-button hm-button--with-border hm-button--with-arrow is-style-blue site-header__cta">
+		<a href=" https://humanmade.com/contact/" class="hm-button__link">Get in touch</a>
+	</div>
+</div>
+</header>
+
+<div class="yoast-breadcrumbs"><span><span><a href="https://humanmade.com/">Home</a></span> <span class="separator">»</span> <span><a href="https://humanmade.com/blog/">Blog</a></span> <span class="separator">»</span> <span><a href="https://humanmade.com/category/engineering/">Engineering</a></span> <span class="separator">»</span> <span class="breadcrumb_last" aria-current="page">WordPress AI: Generative content &#038; blocks pt. 2</span></span></div>
+	<main class="wrapper" id="skip-to-content">
+
+<article id="article-19659" class="container article post post-19659 type-post status-publish format-standard has-post-thumbnail hentry category-engineering">
+
+	
+<div class="article__header">
+		<div class="article__date">
+		17th Apr, 2023	</div>
+	
+	<h1 class="article__title">WordPress AI: Generative content &#038; blocks pt. 2</h1>
+
+	
+<div class="user-cards">
+	
+	<a
+		rel="author"
+		href="https://humanmade.com/who-we-are/joehoyle/"
+		class="user-card"
+	>
+	<img alt='Joe Hoyle' src='https://humanmade.com/tachyon/2023/03/bob-avatar-12.jpg?resize=45%2C45&#038;crop_strategy=smart' srcset='https://humanmade.com/tachyon/2023/03/bob-avatar-12.jpg?resize=90%2C90&#038;crop_strategy=smart 2x' class='avatar avatar-45 photo avatar-default user-card__avatar' height='45' width='45' loading='lazy' decoding='async'/>
+	<span class="user-card__name">
+		Joe Hoyle	</span>
+	</a>
+</div><!-- user-cards-->
+</div>
+
+	<div class="article__main">
+
+		
+<div class="article__socials">
+
+	<ul class="socials">
+
+		<li class="social">
+			<a class="social__link social__link--twitter js-share-popup" target="_blank" rel="noopener noreferrer" title="Twitter" href="https://twitter.com/intent/tweet?text=WordPress AI: Generative content &#038; blocks pt. 2&url=https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/"></a>
+		</li>
+
+		<li class="social">
+			<a class="social__link social__link--linkedin js-share-popup" target="_blank" rel="noopener noreferrer" title="LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/&title=WordPress AI: Generative content &#038; blocks pt. 2"></a>
+		</li>
+
+		<li class="social">
+			<a class="social__link social__link--facebook js-share-popup" target="_blank" rel="noopener noreferrer" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://humanmade.com/2023/04/17/progress-on-generative-content-and-blocks-wordpress-ai-pt-2/&t=WordPress AI: Generative content &#038; blocks pt. 2"></a>
+		</li>
+
+		<li class="social">
+			<a class="social__link social__link--copy js-share-copy" target="_blank" rel="noopener noreferrer" title="Copy URL"></a>
+		</li>
+
+	</ul>
+
+</div>
+
+		<div class="article__content">
+
+			
+<figure class="wp-block-image size-full"><img width="1800" height="942" src="https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg" alt="" class="wp-image-19678" srcset="https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg?resize=1800%2C942&amp;zoom=1 1800w, https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg?resize=1800%2C942&amp;zoom=0.5 900w, https://humanmade.com/tachyon/2023/04/Progress-on-Generative-Content-and-Blocks_-WordPress-AI.jpg?resize=1800%2C942&amp;zoom=0.25 450w" sizes="(max-width: 1800px) 100vw, 1800px" /></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Last week <a href="https://humanmade.com/2023/04/06/wordpress-ai-generative-content-and-blocks/">I talked</a> about how we&#8217;re exploring generative content in WordPress. Like all things in the AI field, things have already progressed! I thought I&#8217;d share some incremental progress and improvements to the WordPress Block Editor assistant to provide some details on the challenges and improvements.</p>
+
+
+
+<p>It&#8217;s striking to me that small incremental improvements make a large difference to productivity and quality of life. This week we&#8217;ve focused on the user experience in using the generate assistant.</p>
+
+
+
+<h2>Content streaming</h2>
+
+
+
+<p>We&#8217;ve overhauled how data is sent to the copilot assistant, so content, blocks and layout are streamed out in real time. Any user of <a href="https://openai.com/blog/chatgpt" target="_blank" rel="noreferrer noopener">ChatGPT</a> will be familiar with this concept.</p>
+
+
+
+<p>Given that Gutenberg blocks and layouts are significantly more complex that the text stream that ChatGPT provides, it took a lot of work to partially parse content as it&#8217;s being updated. The Gutenberg block parser is not built for streaming updates, so we implemented a progressive streaming parser for blocks to achieve this:</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-video"><video autoplay loop muted src="https://humanmade.com/uploads/2023/04/stream-table.mov" playsinline></video></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>As we now stream the response to the prompt, not only does the user get immediate feedback on what they&#8217;re likely to get, it&#8217;s also now possible to cancel the in-progress writing to correct/provide further guidance to the WordPress AI. You can press <code>ESCAPE</code> to halt the output and provide a new prompt.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-video"><video autoplay loop muted src="https://humanmade.com/uploads/2023/04/stream-text.mov" playsinline></video></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Context aware editing</h2>
+
+
+
+<p>We&#8217;ve also improved the context of the assistant considerably. The AI will now understand the data and content elsewhere in the post to provide more accurate and contextual information. For example, in the video shown above for the prompt <strong>&#8220;make a league table&#8221;</strong>, we got a soccer team table. We will now provide a contextual answer depending on the post content and title:</p>
+
+
+
+<p></p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-video"><video autoplay loop muted src="https://humanmade.com/uploads/2023/04/context-1.mov" playsinline></video></figure>
+
+
+
+<p>This also applies to content throughout the post, and the AI has an understanding of what content came before and what content follows. This lets the user speak more naturally and briefly to LLM.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-video"><video autoplay loop muted src="https://humanmade.com/uploads/2023/04/context-2.mov" playsinline></video></figure>
+
+
+
+<p></p>
+
+
+
+<p>So, that&#8217;s a quick look behind the scenes on what were working on and how things are progressing with WordPress AI. You can also check out <a href="https://humanmade.com/2023/04/06/wordpress-ai-generative-content-and-blocks/" target="_blank" rel="noreferrer noopener">part one here</a> if you missed it. Stay tuned for more!</p>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<noscript>
+<h3 class="has-text-align-center has-size-5-font-size">Want to be the first to find out more?</h3>
+
+
+
+<p class="has-text-align-center has-size-3-font-size">Subscribe to Word on the Future, the newsletter for the those on the leading edge of WordPress development.</p>
+
+
+
+<div class="is-layout-flex wp-container-4 wp-block-columns">
+<div class="is-layout-flow wp-block-column"></div>
+
+
+
+<div class="is-layout-flow wp-block-column" style="flex-basis:500px">	<div class="block-hubspot-form" id="js-form-645093056f7cf">
+		<script>
+			window.addEventListener( 'DOMContentLoaded', function() {
+				var formArgs = {
+					portalId: '25686187',
+					formId: 'c65ff34a-a075-41da-8eb0-0b60cfb42e6c',
+					divID: '645093056f7cf',
+				};
+
+				
+				formArgs.css = '';
+				formArgs.cssRequired = '';
+				formArgs.cssClass = 'hm-form';
+
+				window.hubspot.initHubspotForm( formArgs );
+			});
+		</script>
+	</div>
+	
+
+
+<p class="has-text-align-left has-blue-color has-text-color has-size-2-font-size">For info on how Human Made responsibly handles your personal data, please see our <a href="https://humanmade.com/privacy/">Privacy Policy</a>.</p>
+</div>
+
+
+
+<div class="is-layout-flow wp-block-column"></div>
+</div>
+</noscript><global-block block-id="19685" goal="engagement" attributes="{&quot;blockAuthorID&quot;:&quot;8&quot;,&quot;blockAuthor&quot;:&quot;coreybrown&quot;}" metrics="{}" class="wp-core-block altis-global-block">
+<h3 class="has-text-align-center has-size-5-font-size">Want to be the first to find out more?</h3>
+
+
+
+<p class="has-text-align-center has-size-3-font-size">Subscribe to Word on the Future, the newsletter for the those on the leading edge of WordPress development.</p>
+
+
+
+<div class="is-layout-flex wp-container-4 wp-block-columns">
+<div class="is-layout-flow wp-block-column"></div>
+
+
+
+<div class="is-layout-flow wp-block-column" style="flex-basis:500px">	<div class="block-hubspot-form" id="js-form-645093056f7cf">
+		<script>
+			window.addEventListener( 'DOMContentLoaded', function() {
+				var formArgs = {
+					portalId: '25686187',
+					formId: 'c65ff34a-a075-41da-8eb0-0b60cfb42e6c',
+					divID: '645093056f7cf',
+				};
+
+				
+				formArgs.css = '';
+				formArgs.cssRequired = '';
+				formArgs.cssClass = 'hm-form';
+
+				window.hubspot.initHubspotForm( formArgs );
+			});
+		</script>
+	</div>
+	
+
+
+<p class="has-text-align-left has-blue-color has-text-color has-size-2-font-size">For info on how Human Made responsibly handles your personal data, please see our <a href="https://humanmade.com/privacy/">Privacy Policy</a>.</p>
+</div>
+
+
+
+<div class="is-layout-flow wp-block-column"></div>
+</div>
+</global-block>
+		</div>
+
+	</div>
+
+</article>
+	</main>
+	
+<footer class="site-footer">
+	<div class="container">
+		<svg class="site-footer__squiggle" width="1844" height="1439" xmlns="http://www.w3.org/2000/svg">
+			<path d="M708.446 241.45C483.144 337.84 44.153 572.433 77.832 613.08c33.68 40.648 757.2-427.377 800.17-399.504 42.97 27.872-715.391 504.026-682.873 549.319 32.517 45.292 913.983-513.317 940.694-480.8 26.71 32.518-673.584 585.321-629.452 628.291C550.5 953.357 1582.943 31.245 1688.626 77.7c105.683 46.454-974.374 793.202-916.306 859.4 58.067 66.196 911.66-745.588 990.632-707.263 78.972 38.324-795.525 761.846-747.91 818.752 47.616 56.906 655.002-509.833 703.779-474.992 48.777 34.84-373.955 531.898-572.546 789.718" stroke="#F7F7F7" fill="none" fill-rule="evenodd" stroke-linecap="round" />
+		</svg>
+
+		<ul id="menu-footer-pages" class="menu"><li id="menu-item-15692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15692"><a href="https://humanmade.com/about/">About</a></li>
+<li id="menu-item-15693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15693"><a href="https://humanmade.com/services/">Services</a></li>
+<li id="menu-item-15697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15697"><a href="https://humanmade.com/careers/">Careers</a></li>
+<li id="menu-item-15702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15702"><a href="https://www.altis-dxp.com/">Altis DXP</a></li>
+</ul><ul id="menu-footer-social" class="menu"><li id="menu-item-15689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15689"><a target="_blank" rel="noopener" href="https://wordpress.org/five-for-the-future/pledge/human-made/">WordPress</a></li>
+<li id="menu-item-15684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15684"><a target="_blank" rel="noopener" href="https://twitter.com/humanmadeltd">Twitter</a></li>
+<li id="menu-item-15688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15688"><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/human-made-limited/">LinkedIn</a></li>
+<li id="menu-item-15690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15690"><a target="_blank" rel="noopener" href="https://github.com/humanmade">GitHub</a></li>
+</ul>
+		<div class="site-footer__cta">
+			<svg class="site-footer__logo" width="90" height="53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<defs>
+					<path id="a" d="M0 0h90v53H0z" />
+				</defs>
+				<g fill="none" fill-rule="evenodd">
+					<mask id="b" fill="#fff">
+						<use xlink:href="#a" />
+					</mask>
+					<path d="M88.606 38.169c-.993.565-2.05.914-3.155.914-2.512 0-3.962-1.271-4.563-3.327-1.22-4.17-.082-11.728.337-16.672.567-6.687.838-9.312.946-10.711.254-3.265-1.015-6.898-4.711-6.872-3.435.024-7.915 4.162-9.894 8.327.482-5.334-1.049-9.856-5.092-9.828-4.044.028-8.186 6.065-9.45 8.662.257-2.427.396-3.444.506-4.756.11-1.311.066-2.26-1.298-2.394-.828-.081-2.442.205-3.375.364-1.195.205-1.582 1.061-1.802 2.918-.16 1.342-.576 6.656-.99 11.777-.936.075-2.47.374-3.389.502a107.37 107.37 0 0 0-4.513.734c.57-5.986 1.404-12.375 1.692-14.718.174-1.417.04-2.307-1.422-2.481-.83-.099-3.346.263-4.128.392-1.287.213-1.778 1.315-1.94 2.174-.66 3.473-1.287 9.753-1.709 16.118a108.12 108.12 0 0 0-8.213 2.363c.27-4.945.449-10.462.28-13.183-.245-3.924-2.48-6.5-5.914-6.5-3.66 0-7.884 1.976-10.534 4.226-1.733 1.471-2.708 3.174-2.708 4.522 0 1.376.686 2.622 2.497 2.622 1.402-1.925 5.07-5.303 7.119-5.303 1.843 0 2.313 1.607 2.313 3.246 0 1.347-.27 7.571-.533 12.831C7.933 27.272 0 33.29 0 42.706 0 48.8 3.703 52.8 9.01 52.8c6.942 0 10.581-6.318 11.718-13.225.582-3.538 1.03-8.13 1.334-12.103l.095-.032c2.698-.9 5.423-1.735 8.173-2.479-.416 7.982-.63 15.216 1.497 20.46 1.797 4.43 5.61 7.624 11.586 7.579 4.11-.031 7.94-1.69 9.654-3.25.572-.52.809-1.24.79-1.73-.039-1.015-.68-1.843-1.528-2.4-1.699.97-3.581 1.788-6.253 1.891-2.672.103-6.303-1.361-7.794-6.266-1.287-4.23-.913-12.565-.561-17.92 2.59-.515 5.2-1.034 7.826-1.32l.083-.125-.097 1.123c-.516 5.946-1.199 15.17-1.17 17.005.022 1.398.726 1.962 1.77 1.954 1.043-.007 2.907-.37 3.556-.594.532-.183.957-.427 1.247-.883.262-.411.4-1.028.45-1.838.133-2.186.491-7.562.83-10.972.338-3.41.673-6.38 1.286-9.01 1.232-5.298 3.763-11.037 6.068-11.053 1.478-.01 1.526 2.787 1.108 6.635-.419 3.848-1.548 17.925-1.522 19.63.024 1.484.46 2.268 1.731 2.259 1.044-.007 3.015-.156 3.793-.468.49-.195.853-.377 1.104-.817.22-.387.354-.974.408-1.945.125-2.235.933-11.253 1.64-14.103 1.347-5.436 4.168-9.07 5.733-9.082 1.565-.01 1.078 3.86.669 8.276-.792 8.527-1.6 17.423.525 21.773 1.256 2.574 3.518 4.99 8.881 4.99 2.01 0 4.323-.813 5.56-2.035.559-.553.822-1.52.799-2.03-.048-1.05-.531-1.948-1.393-2.526M8.747 47.006c-1.696 0-2.922-1.507-2.922-4.587 0-5.215 4.242-9.65 8.75-12.198a175.224 175.224 0 0 1-1.058 8.828c-.584 3.942-1.965 7.957-4.77 7.957" fill="#FF424A" mask="url(#b)" />
+				</g>
+			</svg>
+			<p>Technology consultancy and bespoke development</p>
+			<div class="wp-block-hmagency-button hm-button hm-button--with-border hm-button--with-arrow is-style-blue">
+				<a href=" https://humanmade.com/contact/" class="hm-button__link">Get in touch!</a>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<span>
+				© 2010–2023 Human Made Limited			</span>
+			<ul id="menu-footer-copyright" class="menu"><li id="menu-item-11021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11021"><a href="https://humanmade.com/accessibility/">Accessibility</a></li>
+<li id="menu-item-15683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15683"><a href="https://humanmade.com/human-rights/">Human Rights</a></li>
+<li id="menu-item-15892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-15892"><a href="https://humanmade.com/privacy/">Privacy</a></li>
+</ul>		</div>
+	</div>
+</footer>
+	
+<div id="cookie-consent-banner">
+	<div class="consent-updated-message">
+	<p class="message">
+		<span class="preferences-updated-message">
+			Cookie preferences updated.		</span>
+		<button class="close-message" id="consent-close-updated-message">Close</button>
+	</p>
+</div>
+	<div class="consent-banner">
+		
+<div class="button-row">
+	<div class="cookie-consent-message">
+		This site <a href="https://humanmade.com/privacy/">uses cookies</a> to provide a better user experience.			</div>
+
+	<button class="give-consent">
+		Accept all cookies	</button>
+
+	<button class="revoke-consent">
+		Accept only functional cookies	</button>
+
+	</div>
+	</div>
+</div>
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-block-columns.wp-container-4{flex-wrap:nowrap;}
+</style>
+<script type='text/javascript' integrity='sha384-TCsjLsXHp8iuU/U0yvNBQptaNPjxJ68g/yN7Jbloxcuf69M/tgYcKyph4SitQP5c' src='https://humanmade.com/vendor/humanmade/hm-gtm/assets/events.js?ver=2.0.2' id='hm-gtm-js'></script>
+<script type='text/javascript' id='altis-consent-api-js-extra'>
+/* <![CDATA[ */
+var consent_api = {"consent_type":"optin","waitfor_consent_hook":"","cookie_expiration":"30","cookie_prefix":"_altis_consent"};
+/* ]]> */
+</script>
+<script type='text/javascript' integrity='sha384-fQFYxzRcH+4fHMvmT/1adKFwr6cUkpU9xth0Z7xdHLfNZNXh3p5L5W8Db5S7wpkR' src='https://humanmade.com/vendor/altis/consent-api/src/wp-consent-api.min.js?ver=6.1.1' id='altis-consent-api-js'></script>
+<script type='text/javascript' id='altis-consent-js-extra'>
+/* <![CDATA[ */
+var altisConsent = {"alwaysAllowCategories":["functional","statistics-anonymous"],"cookiePrefix":"_altis_consent","types":["optin","optout"],"categories":["functional","preferences","statistics","statistics-anonymous","marketing"],"values":["allow","deny"],"shouldDisplayBanner":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' integrity='sha384-JNtZqQ1IAjpEK4rhBzHNr8L8Uz1ez/TddMaVU7XRY3aRUxH3PQkfriXtoQOPooMD' src='https://humanmade.com/vendor/altis/consent/dist/js/main.js?ver=1.0.15' id='altis-consent-js'></script>
+<script type='text/javascript' id='altis-consent-js-after'>
+var dataLayer = window.dataLayer || [];dataLayer.push( { event: 'altis-consent-changed', altisConsent: Altis.Consent.getCategories().join( ', ' ) + ',' } );document.addEventListener( 'wp_listen_for_consent_change', function () { dataLayer.push( { event: 'altis-consent-changed', altisConsent: Altis.Consent.getCategories().join( ', ' ) + ',' } ) } );
+</script>
+<script type='text/javascript' integrity='sha384-wroqCDTBBY2KnM2jqYOjzK7E4xBiD2qu7ykM0WXfWl8IEIXJSMeG2JuwislsGo1h' src='https://humanmade.com/content/themes/humanmade/build/theme_script.f1031d16a3b0d42deec8.js?ver=f1031d16a3b0d42deec8' id='hmagency-theme-scripts-js'></script>
+<script type='text/javascript' src='https://js-eu1.hs-scripts.com/25686187.js?businessUnitId=15517982&#038;ver=1.0.0' id='hs-script-loader-js' async></script>
+<script type='text/javascript' src='https://js.hsforms.net/forms/v2.js?ver=1.0.0' id='hubspot-form-js' defer></script>
+<script type='text/javascript' integrity='sha384-8MoX94Y0YbRIrPTuHjiMCC3TGqEmV48PTBHkvMLeIKN7LclBT0IDe6djZ7+uWpBC' src='https://humanmade.com/content/mu-plugins/hmagency-blocks/build/hubspot_form_frontend.372526cf2fd839d0e509.js?ver=372526cf2fd839d0e509' id='hmagency-hubspot-form-frontend-js' defer></script>
+</body>
+</html>
+<!--
+	generated in 0.364 seconds
+	59456 bytes batcached for 300 seconds
+-->
