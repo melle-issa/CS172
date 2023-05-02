@@ -1,0 +1,204 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- end doctype_global_head_include.jsp -->
+
+
+
+
+<!-- begin product_detail.jsp -->
+    
+
+    <!-- begin header_js.jsp -->
+
+
+  <script type="text/javascript" src="&#x2f;C27377_ustores/web/js/ustores-legacy-8.6.0.min.js" ></script>
+
+
+    <script type="text/javascript">
+    
+    
+    $(document).ready(function() {
+      var opts;
+      
+      //This call will associate a datepicker with each recurring donation and date
+      //modifier text field that is on the page. If none exist, this doesn't do anything.
+      TN.ustores.addDatePickers();
+      var token = "tapp-stoken=null";
+      token = token.substring(token.indexOf("=") + 1);
+      TN.url.token = token;
+      if( $('#PMT_METH_TYPE').length > 0 ){
+      	TN.addApplePayPaymentMethod(false, $('#PMT_METH_TYPE'), 'billingInformationSingleApplePay');
+      }
+    });
+
+    </script>
+    <!-- end header_js.jsp -->
+
+    <!-- Begin style_include.jsp -->
+    <link rel="stylesheet" type="text/css" href="&#x2f;C27377_ustores/web/styles/ustores-legacy-8.6.0.css">
+    
+        <link rel="stylesheet" type="text/css" href="&#x2f;C27377_ustores/web/styles/ustores_store_default-8.6.0.css">
+  
+
+   <!-- load the custom stylesheet -->
+   
+   <link rel="stylesheet" type="text/css" href="&#x2f;C27377_ustores/css?CssName=ustores_custom.css&amp;StoreId&#x3d;1&amp;SingleStore&#x3d;Y" media="all">
+
+
+    <link rel="stylesheet" type="text/css" href="&#x2f;C27377_ustores/web/styles/ustores_main_control-8.6.0.css">
+<!-- End style_include.jsp -->
+
+    <title>Chapman Fund for immediate, unrestricted needs</title>
+
+    <meta property="og:url" content="https://secure.touchnet.com:443/C27377_ustores/web/product_detail.jsp?PRODUCTID=1&SINGLESTORE=true"/>
+    <meta property="og:title" content="Chapman&#x20;Fund&#x20;for&#x20;immediate,&#x20;unrestricted&#x20;needs"/>
+    <meta property="og:description" content="&lt;p&gt;Thank&#x20;you&#x20;for&#x20;supporting&#x20;the&#x20;Chapman&#x20;Fund&#x21;&#x20;&lt;&#x2f;p&gt;&#x20;&#xd;&#xa;&lt;p&gt;Donations&#x20;are&#x20;used&#x20;immediately,&#x20;allowing&#x20;us&#x20;to&#x20;meet&#x20;challenges&#x20;and&#x20;opportunities,&#x20;including&#x20;scholarship&#x20;and&#x20;financial&#x20;aid&#x20;for&#x20;students.&lt;&#x2f;p&gt;&#xd;&#xa;&lt;p&gt;Gifts&#x20;of&#x20;all&#x20;sizes&#x20;are&#x20;truly&#x20;appreciated.&lt;&#x2f;p&gt;&#x20;&lt;p&gt;&#x20;&lt;b&gt;Donors&#x20;contributing&#x20;&#x24;1,000&#x20;or&#x20;more&#x20;annually&#x20;become&#x20;President&amp;&#x23;39&#x3b;s&#x20;Circle&#x20;Leadership&#x20;members.&lt;b&gt;&lt;&#x2f;b&gt;&lt;&#x2f;b&gt;&lt;&#x2f;p&gt;" />
+    <meta property="og:type" content="product"/>
+    <meta property="og:image" content="https://secure.touchnet.com:443/C27377_ustores/web/uploaded_images/store_1&#x2f;prod-04.png"/>
+    <meta property="og:site_name" content="The&#x20;Chapman&#x20;University&#x20;Marketplace"/>
+
+    <script type="text/javascript" src="&#x2f;C27377_ustores/web/js/quantity_prompt.js"></script>
+    <script type="text/javascript">
+      function submitProductDetailForm()
+      {
+        var viewAttendeeListElements = new Array();
+        var allElements = document.getElementsByTagName("*");
+        for (i = 0; i < allElements.length; i++)
+        {
+          if(allElements[i].id.lastIndexOf("VIEW_ATTENDEE_LIST", 0) === 0) 
+          {
+            viewAttendeeListElements.push(allElements[i]);
+          }
+        }
+        for (i = 0; i < viewAttendeeListElements.length; i++)
+        {
+          $("#" + viewAttendeeListElements[i].id).remove();
+        }
+        TN.ustores.submitForm(TN.selectors.ProductDetail);
+      }
+
+      function viewAttendeeList(productId, navigateUrl)
+      {
+        var e = document.getElementById("attendeeList" + productId);
+        var itemId = e.options[e.selectedIndex].value;
+        if (itemId == '-1')
+        {
+          var opt = {
+              title: TN.i18n.prop('attendeeListAttendeeList'),
+              message: TN.i18n.prop('productDetailPleaseSelectOptionForAttendeeList') 
+          };
+          TN.ustores.displayMessage(opt);
+          return;
+        }
+        var viewAttListEl = document.getElementById("VIEW_ATTENDEE_LIST" + productId); 
+        viewAttListEl.value = "true";
+        var itemIdEl = document.getElementById("ATT_LIST_ITEMID" + productId); 
+        itemIdEl.value = itemId;
+                      
+        document.getElementById("product_detail_form").Navigate.value = navigateUrl;
+        TN.ustores.submitForm(TN.selectors.ProductDetail);
+      }
+    </script>
+  </head>
+
+  <body onload="TN.ustores.submitForm(TN.selectors.LoadApp);">
+    <form id="load_app_form" name="load_app_form" action="&#x2f;C27377_ustores/rsbuyer" method="post">
+      <input type="hidden" name="tapp-stoken" value="null" />
+      <input type="hidden" id="deliveryMethodNavigationFormNavigate" name="Navigate" value="product_detail.jsp?PRODUCTID=1&SINGLESTORE=true"/>
+      <input type="hidden" id="deliveryMethodNavigationFormOnError" name="OnError" value="product_detail.jsp?PRODUCTID=1&SINGLESTORE=true" />
+      <input type="hidden" id="LOAD_APP" name="LOAD_APP" value="ActionKey" />
+      <input type="hidden" name="START_APP" value="true" />
+      <input type="hidden" name="JSP_TYPE" value="web" />
+      <input type="hidden" id="deliveryMethodNavigationFormRedirect" name="REDIRECT" value="true" />
+    </form>
+  </body>
+
+</html>
+
+<!-- end product_detail.jsp -->
