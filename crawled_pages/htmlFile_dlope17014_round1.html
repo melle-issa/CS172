@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-19c8bff672cd7222f20",applicationID:"747715640"};;(()=>{"use strict";var e,t,n={8768:(e,t,n)=>{n.d(t,{T:()=>r,p:()=>i});const r=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),i=r&&Boolean("undefined"==typeof SharedWorker)},27:(e,t,n)=>{n.d(t,{P_:()=>h,Mt:()=>p,C5:()=>d,DL:()=>w,OP:()=>O,lF:()=>R,Yu:()=>A,Dg:()=>v,CX:()=>f,GE:()=>y,sU:()=>C});var r={};n.r(r),n.d(r,{agent:()=>x,match:()=>k,version:()=>_});var i=n(6797),o=n(909),a=n(8610);class s{constructor(e,t){try{if(!e||"object"!=typeof e)return(0,a.Z)("New setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,a.Z)("Setting a Configurable requires a model to set its initial properties");Object.assign(this,t),Object.entries(e).forEach((e=>{let[t,n]=e;const r=(0,o.q)(t);r.length&&n&&"object"==typeof n&&r.forEach((e=>{e in n&&((0,a.Z)('"'.concat(e,'" is a protected attribute and can not be changed in feature ').concat(t,".  It will have no effect.")),delete n[e])})),this[t]=n}))}catch(e){(0,a.Z)("An error occured while setting a Configurable",e)}}}const c={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},u={};function d(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!u[e])throw new Error("Info for ".concat(e," was never set"));return u[e]}function f(e,t){if(!e)throw new Error("All info objects require an agent identifier!");u[e]=new s(t,c),(0,i.Qy)(e,u[e],"info")}const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}function v(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new s(t,l),(0,i.Qy)(e,g[e],"config")}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var n=h(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return b[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new s(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var x=null,_=null;const j=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var D=navigator.userAgent,E=D.match(j);E&&-1===D.indexOf("Chrome")&&-1===D.indexOf("Chromium")&&(x="Safari",_=E[1])}function k(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!_)return!1;for(var n=_.split("."),r=t.split("."),i=0;i<r.length;i++)if(r[i]!==n[i])return!1;return!0}var S=n(2400),T=n(2374),N=n(1651);const I=e=>({buildEnv:N.Re,bytesSent:{},customTransaction:void 0,disabled:!1,distMethod:N.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(T._A?.performance?.timeOrigin||T._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+T._A.location,ptid:void 0,releaseIds:{},sessionId:1==p(e,"privacy.cookies_enabled")?(0,S.Bj)():null,xhrWrappable:"function"==typeof T._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:r,version:N.q4}),P={};function O(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!P[e])throw new Error("Runtime for ".concat(e," was never set"));return P[e]}function C(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");P[e]=new s(t,I(e)),(0,i.Qy)(e,P[e],"runtime")}function R(e){return function(e){try{const t=d(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},1651:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.231.0",i="PROD",o="CDN"},9557:(e,t,n)=>{n.d(t,{w:()=>o});var r=n(8610);const i={agentIdentifier:""};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,n)=>{n.d(t,{L:()=>d,R:()=>c});var r=n(3752),i=n(7022),o=n(4045),a=n(2325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const n=Array.from(s[e]);function a(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,n)=>{n.d(t,{ee:()=>u});var r=n(6797),i=n(3916),o=n(7022),a=n(27),s="nr@context";let c=(0,r.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,n){var r={},c={},g={},h=!1;try{h=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var v={on:b,addEventListener:b,removeEventListener:w,emit:m,get:A,listeners:y,context:p,buffer:x,abort:l,aborted:!1,isBuffering:_,debugId:n,backlog:h?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return v;function p(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,n,r,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,n,r);for(var a=p(r),s=y(e),d=s.length,f=0;f<d;f++)s[f].apply(a,n);var l=j()[c[e]];return l&&l.push([v,e,n,a]),a}}function b(e,t){r[e]=y(e).concat(t)}function w(e,t){var n=r[e];if(n)for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)}function y(e){return r[e]||[]}function A(t){return g[t]=g[t]||e(v,t)}function x(e,t){var n=j();v.aborted||(0,o.D)(e,(function(e,r){t=t||"feature",c[r]=t,t in n||(n[t]=[])}))}function _(e){return!!j()[c[e]]}function j(){return v.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(3752).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4045:(e,t,n)=>{n.d(t,{X:()=>o});var r=n(9252);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},8544:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(n))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(n))}},5526:(e,t,n)=>{n.d(t,{Rl:()=>a,ky:()=>s});var r=n(2374);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split("").map((e=>"x"===e?o(t,++n).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const a=[];for(var s=0;s<e;s++)a.push(o(n,++i).toString(16));return a.join("")}},2053:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},8610:(e,t,n)=>{function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},3916:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,n)=>{n.d(t,{_A:()=>o,il:()=>r,v6:()=>i});const r=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(r)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')})()},7022:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},2438:(e,t,n)=>{n.d(t,{P:()=>o});var r=n(3752);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},2650:(e,t,n)=>{n.d(t,{K:()=>a,b:()=>o});var r=n(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},6797:(e,t,n)=>{n.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var r=n(2053),i=n(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[n]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"==document.visibilityState&&e());e(document.visibilityState)}))}},2400:(e,t,n)=>{n.d(t,{Bj:()=>c,GD:()=>s,J8:()=>u,ju:()=>o});var r=n(5526);const i="NRBA/";function o(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"";try{return window.sessionStorage.setItem(i+n+e,t),!0}catch(e){return!1}}function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return window.sessionStorage.getItem(i+t+e)}function s(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";try{window.sessionStorage.removeItem(i+t+e)}catch(e){}}function c(){try{let e;return null===(e=a("SESSION_ID"))&&(e=(0,r.ky)(16),o("SESSION_ID",e)),e}catch(e){return null}}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";const t=i+e,n={};try{for(let r=0;r<window.sessionStorage.length;r++){let i=window.sessionStorage.key(r);i.startsWith(t)&&(i=i.slice(t.length),n[i]=a(i,e))}}catch(e){}return n}},6034:(e,t,n)=>{n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(2325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},2484:(e,t,n)=>{n.d(t,{Dz:()=>i,OJ:()=>a,qw:()=>o,t9:()=>r});const r=n(2325).D.pageViewEvent,i="firstbyte",o="domcontent",a="windowload"},6382:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(2325).D.pageViewTiming},1509:(e,t,n)=>{n.d(t,{W:()=>s});var r=n(27),i=n(3752),o=n(2384),a=n(6797);class s{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,r.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,r.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,n)=>{n.d(t,{j:()=>y});var r=n(2325),i=n(27),o=n(9252),a=n(3752),s=n(2053),c=n(4329),u=n(2650),d=n(2374),f=n(8610),l=n(6034),g=n(6797),h=n(2400);const v="CUSTOM/";function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var m=n(7022);const b={stn:[r.D.sessionTrace],err:[r.D.jserrors,r.D.metrics],ins:[r.D.pageAction],spa:[r.D.spa]};const w={};function y(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},y=arguments.length>2?arguments[2]:void 0,A=arguments.length>3?arguments[3]:void 0,{init:x,info:_,loader_config:j,runtime:D={loaderType:y},exposed:E=!0}=t;const k=(0,g.gG)();if(_||(x=k.init,_=k.info,j=k.loader_config),_.jsAttributes??={},d.v6&&(_.jsAttributes.isWorker=!0),d.il){let e=(0,h.J8)(v);Object.assign(_.jsAttributes,e)}(0,i.CX)(e,_),(0,i.Dg)(e,x||{}),(0,i.GE)(e,j||{}),(0,i.sU)(e,D),p();const S=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),m=p.get("tracer"),b="api-",w=b+"ixn-";function y(t,n,r,o){const a=(0,i.C5)(e);return null===n?(delete a.jsAttributes[t],d.il&&(0,h.GD)(t,v)):((0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),d.il&&o&&(0,h.ju)(t,n,v)),_(b,r,!0)()}function A(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>g[e]=_(b,e,!0,"api"))),g.addPageAction=_(b,"addPageAction",!0,r.D.pageAction),g.setCurrentRouteName=_(b,"routeName",!0,r.D.spa),g.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,_(b,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return y(e,t,"setCustomAttribute",n);(0,f.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,f.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return y("enduser.id",e,"setUserId",!0);(0,f.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.interaction=function(){return(new A).get()};var x=A.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(w+"tracer",[(0,s.z)(),e,n],i,r.D.spa,p),function(){if(m.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw m.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],n),e}finally{m.emit("fn-end",[(0,s.z)()],n)}}}};function _(e,t,n,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,r.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,p),n?void 0:this}}function j(){n.e(439).then(n.bind(n,5692)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>(0,f.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{x[e]=_(w,e,void 0,r.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,r.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,p)},d.v6?j():(0,u.b)((()=>j()),!0),g}(e,A);return(0,g.Qy)(e,S,"api"),(0,g.Qy)(e,E,"exposed"),(0,g.EZ)("activatedFeatures",w),(0,g.EZ)("setToken",(t=>function(e,t){var n=a.ee.get(t);e&&"object"==typeof e&&((0,m.D)(e,(function(e,t){if(!t)return(b[e]||[]).forEach((t=>{(0,o.p)("block-"+e,[],void 0,t,n)}));w[e]||((0,o.p)("feat-"+e,[],void 0,b[e],n),w[e]=!0)})),(0,c.L)(t,r.D.pageViewEvent))}(t,e))),S}},909:(e,t,n)=>{n.d(t,{Z:()=>i,q:()=>o});var r=n(2325);function i(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}function o(e){return e===r.D.jserrors?[]:["auto"]}},2325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>(({78:"page_action-aggregate",147:"metrics-aggregate",193:"session_trace-aggregate",317:"jserrors-aggregate",348:"page_view_timing-aggregate",439:"async-api",729:"lazy-loader",786:"page_view_event-aggregate",873:"spa-aggregate",898:"ajax-aggregate"}[e]||e)+"."+{78:"42c392aa",147:"78efb4d5",193:"0938abd3",317:"0b4d6623",348:"a30a53ff",439:"8f89c105",729:"67423d16",786:"8cf0450e",862:"04af29e3",873:"19ebdf8d",898:"b0da4738"}[e]+"-1.231.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute("src")==n||f.getAttribute("data-webpack")==t+o){s=f;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n),e[n]=[r];var l=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(l.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={155:0,591:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=window.webpackChunkNRBA=window.webpackChunkNRBA||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})();var o={};(()=>{i.r(o);var e=i(2325),t=i(27);const n=Object.values(e.D);function r(e){const r={};return n.forEach((n=>{r[n]=function(e,n){return!1!==(0,t.Mt)(n,"".concat(e,".enabled"))}(n,e)})),r}var a=i(2384),s=i(909),c=i(9252),u=i(8768),d=i(4329),f=i(1509),l=i(2650),g=i(2374),h=i(8610);class v extends f.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.hasAggregator=!1,this.auto=r,this.abortHandler,r&&(0,d.R)(e,n)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{lazyLoader:e}=await i.e(729).then(i.bind(i,8110)),{Aggregate:t}=await e(this.featureName,"aggregate");new t(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)("Downloading ".concat(this.featureName," failed...")),this.abortHandler?.()}};g.v6?e():(0,l.b)((()=>e()),!0)}}var p=i(2484),m=i(2053);class b extends v{static featureName=p.t9;constructor(n,r){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(n,r,p.t9,i),("undefined"==typeof PerformanceNavigationTiming||u.T)&&"undefined"!=typeof PerformanceTiming){const r=(0,t.OP)(n);r[p.Dz]=Math.max(Date.now()-r.offset,0),(0,l.K)((()=>r[p.qw]=Math.max((0,m.z)()-r[p.Dz],0))),(0,l.b)((()=>{const t=(0,m.z)();r[p.OJ]=Math.max(t-r[p.Dz],0),(0,c.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var w=i(9557),y=i(7022);class A extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,y.D)(e,(function(e,n){t[e]=x(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,y.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=x(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=_(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=x(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=j(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=_(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function _(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function j(e){return"object"!=typeof e?[]:(0,y.D)(e,D)}function D(e,t){return t}var E=i(6797),k=i(5526),S=i(2438);var T=i(6998),N=i(8544),I=i(6382);class P extends v{static featureName=I.t;constructor(e,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,n,I.t,r),g.il&&((0,t.OP)(e).initHidden=Boolean("hidden"===document.visibilityState),(0,T.N)((()=>(0,c.p)("docHidden",[(0,m.z)()],void 0,I.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,m.z)()],void 0,I.t,this.ee))),this.importAggregator())}}const O=Boolean(g._A?.Worker),C=Boolean(g._A?.SharedWorker),R=Boolean(g._A?.navigator?.serviceWorker);let B,M,z;var q=i(6034);class W extends v{static featureName=q.t9;constructor(t,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,n,q.t9,r),function(e){if(!B){if(O){B=Worker;try{g._A.Worker=n(B,"Dedicated")}catch(e){o(e,"Dedicated")}if(C){M=SharedWorker;try{g._A.SharedWorker=n(M,"Shared")}catch(e){o(e,"Shared")}}else r("Shared");if(R){z=navigator.serviceWorker.register;try{g._A.navigator.serviceWorker.register=(t=z,function(){for(var e=arguments.length,n=new Array(e),r=0;r<e;r++)n[r]=arguments[r];return i("Service",n[1]?.type),t.apply(navigator.serviceWorker,n)})}catch(e){o(e,"Service")}}else r("Service");var t;return}r("All")}function n(e,t){return"undefined"==typeof Proxy?e:new Proxy(e,{construct:(e,n)=>(i(t,n[1]?.type),new e(...n))})}function r(t){g.v6||e("Workers/".concat(t,"/Unavailable"))}function i(t,n){e("Workers/".concat(t,"module"===n?"/Module":"/Classic"))}function o(t,n){e("Workers/".concat(n,"/SM/Unsupported")),(0,h.Z)("NR Agent: Unable to capture ".concat(n," workers."),t)}}((t=>(0,c.p)(q.xS,[t],void 0,e.D.metrics,this.ee))),this.importAggregator()}}new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,k.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(b),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t="features";try{const n=r(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,n)=>e.p[t.featureName]-e.p[n.featureName])),i.forEach((t=>{if(n[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName);e.every((e=>n[e]))||(0,h.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,S.P)(e),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",e);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,E.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[b,P,W],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.president.usc.edu/wp/xmlrpc.php" />
+<link rel="shortcut icon" href="https://www.president.usc.edu/wp-content/themes/usc-gateway-2018/assets/images/favicon.ico?ver=1.2.1" />
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v18.2.1 (Yoast SEO v20.4) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Office of the President</title>
+	<meta name="description" content="The official website for Carol L. Folt, University of Southern California&#039;s 12th President." />
+	<link rel="canonical" href="https://www.president.usc.edu/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="USC Office of the President" />
+	<meta property="og:description" content="The official website for Carol L. Folt, University of Southern California&#039;s 12th President." />
+	<meta property="og:url" content="https://www.president.usc.edu/" />
+	<meta property="og:site_name" content="Office of the President" />
+	<meta property="article:modified_time" content="2023-04-20T17:10:36+00:00" />
+	<meta property="og:image" content="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead-1024x560.jpg" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="560" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="USC Office of the President" />
+	<meta name="twitter:image" content="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg" />
+	<meta name="twitter:site" content="@presidentfolt" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="3 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.president.usc.edu/","url":"https://www.president.usc.edu/","name":"Home - Office of the President","isPartOf":{"@id":"https://www.president.usc.edu/#website"},"about":{"@id":"https://www.president.usc.edu/#organization"},"primaryImageOfPage":{"@id":"https://www.president.usc.edu/#primaryimage"},"image":{"@id":"https://www.president.usc.edu/#primaryimage"},"thumbnailUrl":"https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg","datePublished":"2019-08-16T17:12:46+00:00","dateModified":"2023-04-20T17:10:36+00:00","description":"The official website for Carol L. Folt, University of Southern California's 12th President.","breadcrumb":{"@id":"https://www.president.usc.edu/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.president.usc.edu/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.president.usc.edu/#primaryimage","url":"https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg","contentUrl":"https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg","width":2560,"height":1400,"caption":"President Folt poses with USC students after her inauguration"},{"@type":"BreadcrumbList","@id":"https://www.president.usc.edu/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.president.usc.edu/#website","url":"https://www.president.usc.edu/","name":"Office of the President","description":"","publisher":{"@id":"https://www.president.usc.edu/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.president.usc.edu/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.president.usc.edu/#organization","name":"USC Office of the President","url":"https://www.president.usc.edu/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.president.usc.edu/#/schema/logo/image/","url":"https://live-usc-president.pantheonsite.io/wp-content/uploads/2020/07/usc-logo-sm1.png","contentUrl":"https://live-usc-president.pantheonsite.io/wp-content/uploads/2020/07/usc-logo-sm1.png","width":2400,"height":1260,"caption":"USC Office of the President"},"image":{"@id":"https://www.president.usc.edu/#/schema/logo/image/"},"sameAs":["https://twitter.com/presidentfolt","https://www.instagram.com/presidentfolt/"]}]}</script>
+	<meta name="msvalidate.01" content="08F25FB5AA398292D388AD382F94EECA" />
+	<meta name="google-site-verification" content="TUyl87e5Lo8Fwk0nfQrvbow0bX2LEQN1-VuRnQ0zwDI" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.president.usc.edu' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='stylesheet' id='usc-new-royalslider-options-css-css' href='https://www.president.usc.edu/wp-content/plugins/usc-gateway-2018-new-royalslider-options/public/css/rs-universal-gateway.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sbi_styles-css' href='https://www.president.usc.edu/wp-content/plugins/instagram-feed-pro/css/sbi-styles.min.css?ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.president.usc.edu/wp-content/plugins/gutenberg/build/block-library/style.css?ver=15.5.0' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='usc_rss_block_plus-style-css-css' href='https://www.president.usc.edu/wp-content/plugins/usc-rss-block-plus/dist/blocks.style.build.css?ver=1682882076' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://c0.wp.com/c/6.2/wp-includes/css/classic-themes.min.css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--usc-cardinal: #990000;--wp--preset--color--cardinal-60: #880000;--wp--preset--color--cardinal-70: #6b0200;--wp--preset--color--cardinal-80: #471f13;--wp--preset--color--usc-gold: #ffcc00;--wp--preset--color--gold-60: #c79200;--wp--preset--color--base-70: #1c1c19;--wp--preset--color--base-60: #2b2a23;--wp--preset--color--base-50: #44433c;--wp--preset--color--base-40: #5e5d56;--wp--preset--color--base-30: #77766f;--wp--preset--color--base-20: #c3c2bb;--wp--preset--color--off-white: #fafafa;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--black-to-transparent: linear-gradient(176deg, rgba(84,84,84,0) 41%, rgba(0,0,0,1) 98%);--wp--preset--font-size--small: 16px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 32px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 20px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link rel='stylesheet' id='usc-gateway-2018-style-css' href='https://www.president.usc.edu/wp-content/themes/usc-gateway-2018/assets/css/usc-gateway-2018.css?ver=1.2.1' type='text/css' media='screen,print' />
+<link rel='stylesheet' id='new-royalslider-core-css-css' href='https://www.president.usc.edu/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='rsUni-css-css' href='https://www.president.usc.edu/wp-content/plugins/new-royalslider/lib/royalslider/skins/universal/rs-universal.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://c0.wp.com/p/jetpack/12.0/css/jetpack.css' type='text/css' media='all' />
+<!--[if lte IE 9]>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/themes/usc-gateway-2018/assets/js/vendor/html5shiv.min.js?ver=1.2.1' id='html5-shiv-js'></script>
+<![endif]-->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-11572718-17' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["www.president.usc.edu"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-11572718-17", {"anonymize_ip":true});
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.president.usc.edu/wp-json/" /><link rel="alternate" type="application/json" href="https://www.president.usc.edu/wp-json/wp/v2/pages/2" /><link rel='shortlink' href='https://www.president.usc.edu/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.president.usc.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.president.usc.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.president.usc.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.president.usc.edu%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.96.0" />	<style>img#wpstats{display:none}</style>
+					<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<style type="text/css" id="wp-custom-css">/*HOMEPAGE ROYAL SLIDER GRADIENT ADJUSTMENT - DO NOT DELETE*/
+.rs-default-template .rsContent .rsOverlay {
+background: linear-gradient(176deg, rgba(84,84,84,0.00) 60%, #000000 98%) !important;
+	}
+
+/* BIOGRAPHY PAGE DO NOT DELETE */
+
+.page-id-11 p.is-style-lead-paragraph,.chair.is-style-lead-paragraph.has-normal-font-size {
+ margin: 0 auto .1rem;
+}
+
+
+/*FOOTER ADJUSTMENTS GITHUB ISSUE */
+
+.site-footer a {
+    color: #fff;
+    font-size: .9rem;
+	  font-weight:100;
+    line-height: 1.25rem;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.theme-credit {
+	font-size: .9rem;
+	font-weight:100;
+}
+
+
+.site-credit {
+	font-size: .9rem;
+	font-weight:100;
+}
+
+/* FIX FOR LONG PAGE/POST TITLES */
+.post-template-default .site-content .entry-title, .single .site-content .entry-title,
+.page-template-default .site-content .entry-title {
+	white-space: unset;
+}
+
+.site-header .site-header-wrapper {
+	z-index: 99;
+}</style></head>
+<body class="home page-template page-template-page-templates page-template-tpl-full-width page-template-page-templatestpl-full-width-php page page-id-2 wp-embed-responsive usc-gateway-2018-light">
+<div class="site">	<a class="skip-link screen-reader-text" aria-label="Skip to main content" href="#main">Skip to main content</a>	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-wrapper">
+		
+<div class="site-branding-usc">
+	<a class="site-branding-usc-logo" href="http://www.usc.edu">University of Southern California</a>
+</div>
+<div class="site-branding-unique">
+	<h1 class="site-branding-title"><a href="https://www.president.usc.edu/" rel="home">Office of the President</a></h1>
+	</div>
+
+
+<nav id="site-navigation" class="site-navigation" role="navigation" aria-label="Primary">
+	<div class="site-navigation-wrapper">
+		<h2 class="site-navigation-title screen-reader-text">Primary Menu</h2>
+		<div class="site-menu-toggle-wrapper">
+			<button class="site-menu-toggle" aria-label="Toggle Primary Menu" aria-controls="site-navigation"><svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" aria-describedby="icon_desc_menu" aria-labelledby="icon_title_menu" viewBox="0 0 24 24"><title id="icon_title_menu">Menu</title><desc id="icon_desc_menu">An icon that consists of three parallel horizontal lines suggestive of a list.</desc><path d="M0 0h24v24H0z" fill="none" /><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg></button>
+		</div>
+		<div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="site-navigation-menu" role="menu" ><li role="menuitem"  id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-10"><span><a  href="https://www.president.usc.edu/" aria-current="page">Home</a></span></li>
+<li role="menuitem"  id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><span><a  href="https://www.president.usc.edu/biography/">Biography</a></span></li>
+<li role="menuitem"  id="menu-item-2832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2832"><span><a  href="https://www.president.usc.edu/from-the-president/">From the President</a><button class="submenu-toggle"><span class="visually-hidden">Show submenu for From the President</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2344433C" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></button></span>
+<ul class="sub-menu">
+	<li role="menuitem"  id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><span><a  href="https://www.president.usc.edu/from-the-president/messages/">Community Messages</a></span></li>
+	<li role="menuitem"  id="menu-item-2837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2837"><span><a  href="https://www.president.usc.edu/from-the-president/president-speeches/">Speeches</a></span></li>
+</ul>
+</li>
+<li role="menuitem"  id="menu-item-982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-982"><span><a  href="https://www.president.usc.edu/conversations/">Conversations</a></span></li>
+<li role="menuitem"  id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><span><a  href="https://www.president.usc.edu/contact/">Contact</a></span></li>
+<li role="menuitem"  id="menu-item-2687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2687"><span><a  href="https://www.president.usc.edu/presidential-working-groups/">Presidential Working Groups</a><button class="submenu-toggle"><span class="visually-hidden">Show submenu for Presidential Working Groups</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2344433C" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></button></span>
+<ul class="sub-menu">
+	<li role="menuitem"  id="menu-item-2689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2689"><span><a  href="https://diversity.usc.edu/diversity-leadership/presidents-and-provosts-task-force-redi/">Racial Equity, Diversity, and Inclusion (REDI)</a></span></li>
+	<li role="menuitem"  id="menu-item-2688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2688"><span><a  href="https://www.president.usc.edu/sustainability-pwg/">Presidential Working Group on Sustainability in Education, Research, and Operations</a></span></li>
+	<li role="menuitem"  id="menu-item-2686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2686"><span><a  href="https://www.president.usc.edu/student-athlete-task-force/">Student-Athlete Experience Task Force</a></span></li>
+	<li role="menuitem"  id="menu-item-2690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2690"><span><a  href="https://dpscab.usc.edu/">Department of Public Safety Community Advisory Board (CAB)</a></span></li>
+	<li role="menuitem"  id="menu-item-2691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2691"><span><a  href="https://we-are.usc.edu/working-group-on-interfraternity-council-culture-prevention-and-accountability/">Interfraternity Council Culture, Prevention, and Accountability</a></span></li>
+</ul>
+</li>
+</ul></div><div class="site-navigation-menu-more"><ul class="site-navigation-menu nav-menu"><li class="menu-item menu-item-has-children"><span class="site-navigation-menu-more-toggle is-empty"><span>More&hellip;</span><button class="submenu-toggle" aria-label="More" aria-haspopup="true" aria-expanded="false"><span class="visually-hidden">Show More Menu</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2344433C" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path><path fill="none" d="M0 0h24v24H0V0z"></path></svg></button></span><ul class="sub-menu hidden-links"></ul></li></ul></div>		<div class="site-search-toggle-wrapper">
+			<button class="site-search-toggle" aria-label="Open Search" aria-controls="search-form" aria-expanded="false"><svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" aria-describedby="icon_desc_search" aria-labelledby="icon_title_search" viewBox="0 0 24 24"><title id="icon_title_search">Search</title><desc id="icon_desc_search">An icon of a magnifying glass.</desc><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /><path d="M0 0h24v24H0z" fill="none" /></svg></button>
+		</div>
+	</div>
+</nav>
+		</div>
+		<div class="site-search-wrapper">
+			<div class="site-search">
+<form id="search-form" role="search" method="get" class="search-form" action="https://www.president.usc.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="text" class="search-field" name="s" placeholder="Search..." title="search" />
+		<input type="submit" class="search-submit" aria-hidden="true" value="Submit">
+	</label>
+	<button type="button" class="search-icon-close" aria-label="Close Search" aria-controls="search-form"><svg class="svg-icon" width="20" height="20" aria-hidden="true" role="img" aria-describedby="icon_desc_close" aria-labelledby="icon_title_close" viewBox="0 0 24 24"><title id="icon_title_close">Close</title><desc id="icon_desc_close">An icon of a letter X.</desc><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /><path d="M0 0h24v24H0z" fill="none" /></svg></button>
+</form>
+</div>
+		</div>
+	</header><!-- #masthead -->
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-2" class="post-2 page type-page status-publish has-post-thumbnail hentry">
+
+	<header class="entry-header">
+	<h1 class="entry-title screen-reader-text">Home</h1>	</header>
+
+	<div class="entry-content">
+	
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container"><div id="new-royalslider-2" class="royalSlider new-royalslider-2 rsUni rs-default-template" style="width:100%;height:500px;;" data-rs-options='{&quot;template&quot;:&quot;default&quot;,&quot;image_generation&quot;:{&quot;imageWidth&quot;:3000,&quot;imageHeight&quot;:2000,&quot;thumbImageWidth&quot;:&quot;&quot;,&quot;thumbImageHeight&quot;:&quot;&quot;},&quot;thumbs&quot;:{&quot;thumbWidth&quot;:96,&quot;thumbHeight&quot;:72},&quot;autoPlay&quot;:{&quot;enabled&quot;:&quot;true&quot;,&quot;pauseOnHover&quot;:&quot;false&quot;},&quot;video&quot;:[],&quot;block&quot;:{&quot;moveOffset&quot;:20,&quot;speed&quot;:400,&quot;delay&quot;:200},&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:500,&quot;autoScaleSlider&quot;:&quot;true&quot;,&quot;autoScaleSliderWidth&quot;:960,&quot;autoScaleSliderHeight&quot;:750,&quot;imageScaleMode&quot;:&quot;none&quot;,&quot;arrowsNavAutoHide&quot;:&quot;false&quot;,&quot;transitionType&quot;:&quot;fade&quot;,&quot;transitionSpeed&quot;:500,&quot;loop&quot;:&quot;true&quot;}'>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-Class-of-2022.jpg" alt="President Folt and Class of 2022" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-Class-of-2022.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-Class-of-2022.jpg" alt="President Folt and Class of 2022" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Commencement-Speakers-scaled.jpg" alt="Folt with Class of 2022 Speakers" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Commencement-Speakers-scaled.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Commencement-Speakers-scaled.jpg" alt="Folt with Class of 2022 Speakers" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2022/06/smiling-grads-2022.jpg" alt="Smiling Graduates - Class of 2022" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2022/06/smiling-grads-2022.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2022/06/smiling-grads-2022.jpg" alt="Smiling Graduates - Class of 2022" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Presidential-Awardees-scaled.jpg" alt="Folt and 2022 Presidential Awardees" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Presidential-Awardees-scaled.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2022/06/Folt-with-2022-Presidential-Awardees-scaled.jpg" alt="Folt and 2022 Presidential Awardees" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg" alt="Hero Lead v2" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-Lead.jpg" alt="Hero Lead v2" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49080-scaled.jpg" alt="Folt and CBCSA" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49080-scaled.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49080-scaled.jpg" alt="Folt and CBCSA" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2023/05/president-folt-hike.jpeg" alt="Folt and CBCSA" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/05/president-folt-hike.jpeg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2023/05/president-folt-hike.jpeg" alt="Folt and CBCSA" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2019/09/hero-hi-crowd-001.jpg" alt="hero-hi-crowd-001" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2019/09/hero-hi-crowd-001.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2019/09/hero-hi-crowd-001.jpg" alt="hero-hi-crowd-001" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2021/10/51184450734_c3ae81e806_o-scaled.jpg" alt="USC COMMENCEMENT CEREMONY" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2021/10/51184450734_c3ae81e806_o-scaled.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2021/10/51184450734_c3ae81e806_o-scaled.jpg" alt="USC COMMENCEMENT CEREMONY" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2021/10/51398799170_8a9a950704_k-_ret_V3_crop.jpg" alt="Carol Folt shows the victory sign to the crowd during commencement" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2021/10/51398799170_8a9a950704_k-_ret_V3_crop.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2021/10/51398799170_8a9a950704_k-_ret_V3_crop.jpg" alt="Carol Folt shows the victory sign to the crowd during commencement" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49352-scaled-e1633980146442.jpg" alt="Quincy Watts, Carl L. Folt and Anna Cockrell" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49352-scaled-e1633980146442.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2021/10/GR49352-scaled-e1633980146442.jpg" alt="Quincy Watts, Carl L. Folt and Anna Cockrell" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-5.jpg" alt="Hero 5 v2" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-5.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-5.jpg" alt="Hero 5 v2" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-4.1.jpg" alt="Hero 4 v2.1" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-4.1.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-4.1.jpg" alt="Hero 4 v2.1" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-3.jpg" alt="Hero 3 v2" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-3.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2020/01/Image-3.jpg" alt="Hero 3 v2" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  <img class="rsImg jetpack-lazy-image" src="https://www.president.usc.edu/wp-content/uploads/2021/10/49299503318_9cb48f3e2c_k.jpg" alt="Carol Folt with the USC Helenes" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2021/10/49299503318_9cb48f3e2c_k.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" class="rsImg" src="https://www.president.usc.edu/wp-content/uploads/2021/10/49299503318_9cb48f3e2c_k.jpg" alt="Carol Folt with the USC Helenes" /></noscript>
+	  
+	  <div class="rsOverlay">
+  <div class="rsOverlayContainer">
+    <h1>Carol L. Folt</h1>
+    <p>University of Southern California’s 12th president</p>
+  </div>
+</div>
+	  
+	</div>
+<div class="rsContent">
+	  
+	  
+	  
+	  
+	</div>
+
+</div>
+
+</div></div>
+
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group is-style-usc-group-content-width is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<blockquote class="wp-block-quote has-text-align-center is-style-caslon">
+<p>“The path to advancing human understanding never stops. And USC is a fantastic learning sandbox – a wonderful place for you to learn and discover who you are now, who you’re going to become, and the ways you’ll make your mark on the future.”</p>
+<cite>– Carol L. Folt, from her <a href="https://www.president.usc.edu/2023/01/10/convocation-spring-2023/">2023 Spring Convocation Address</a></cite></blockquote>
+</div></div>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-5 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading is-style-cardinal-bar">State of the University 2023</h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="400" src="https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1024x400.jpg" alt="President Folt addresses the Bovard Auditorium crowd during her State of the University Address" class="wp-image-3638 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1024x400.jpg 1024w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-300x117.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-768x300.jpg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1536x600.jpg 1536w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423.jpg 1920w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1024x400.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" width="1024" height="400" src="https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1024x400.jpg" alt="President Folt addresses the Bovard Auditorium crowd during her State of the University Address" class="wp-image-3638" srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1024x400.jpg 1024w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-300x117.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-768x300.jpg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423-1536x600.jpg 1536w, https://www.president.usc.edu/wp-content/uploads/2023/04/Folt_SOTU_040423.jpg 1920w" sizes="(max-width: 1024px) 100vw, 1024px"  /></noscript></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p><a href="https://youtu.be/xVNPyXY_Iio">Watch the State of the University Address 2023 </a></p>
+
+
+
+<p class="has-text-align-left"><a href="https://www.president.usc.edu/2023/04/04/state-of-the-university-address-2023-university-park-campus/">Read President Folt&#8217;s speech</a></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading is-style-cardinal-bar">Title IX Celebration</h2>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="1000" height="391" src="https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner.jpg" alt="Title IX Banner" class="wp-image-2991 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner.jpg 1000w, https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner-300x117.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner-768x300.jpg 768w" data-lazy-sizes="(max-width: 1000px) 100vw, 1000px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" loading="lazy" width="1000" height="391" src="https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner.jpg" alt="Title IX Banner" class="wp-image-2991" srcset="https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner.jpg 1000w, https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner-300x117.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2022/06/TitleIX-banner-768x300.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"  /></noscript></figure>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p><a href="https://usctrojans.com/feature/usc-title-ix-celebration-50-years-2022" target="_blank" rel="noreferrer noopener">Watch the video</a></p>
+
+
+
+<p class="has-text-align-left"><a href="https://www.president.usc.edu/2022/06/23/titleix/">Read President Folt&#8217;s message</a></p>
+</div>
+</div>
+</div></div>
+
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+</div></div>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-heading is-style-cardinal-bar" id="news">News</h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-12 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-large"><a href="https://news.usc.edu/207021/usc-allyson-felix-field-naming-ceremony/"><img decoding="async" width="1024" height="683" src="https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-1024x683.jpeg" alt class="wp-image-3679 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-1024x683.jpeg 1024w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-480x320.jpeg 480w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field.jpeg 1536w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-1024x683.jpeg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" loading="lazy" width="1024" height="683" src="https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-1024x683.jpeg" alt="" class="wp-image-3679" srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-1024x683.jpeg 1024w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field-480x320.jpeg 480w, https://www.president.usc.edu/wp-content/uploads/2023/04/allyson-felix-field.jpeg 1536w" sizes="(max-width: 1024px) 100vw, 1024px"  /></noscript></a></figure>
+
+
+
+<h4 class="wp-block-heading" id="statement-from-usc-president-carol-l-folt-regarding-antisemitic-behavior">Home of USC track and field team renamed Allyson Felix Field</h4>
+
+
+
+<p class="has-normal-font-size">“We are here to celebrate an incredible Trojan. We’re here to mark a new day for this incredible field and for the legendary USC track and field teams and the student-athletes and coaches who use this field each day.” &#8211; President Folt</p>
+
+
+
+<p><a href="https://news.usc.edu/207021/usc-allyson-felix-field-naming-ceremony/">Read more</a></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full"><a href="https://news.usc.edu/206745/usc-provost-andrew-guzman/"><img decoding="async" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1.jpeg" alt="Andrew Guzman talking to USC law students" class="wp-image-3656 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1.jpeg 824w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-480x320.jpeg 480w" data-lazy-sizes="(max-width: 824px) 100vw, 824px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1.jpeg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" loading="lazy" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1.jpeg" alt="Andrew Guzman talking to USC law students" class="wp-image-3656" srcset="https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1.jpeg 824w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/04/Guzman-students-orientation-2017-2-824x549-1-480x320.jpeg 480w" sizes="(max-width: 824px) 100vw, 824px"  /></noscript></a></figure>
+
+
+
+<h4 class="wp-block-heading" id="statement-from-usc-president-carol-l-folt-regarding-antisemitic-behavior">Andrew T. Guzman named USC provost and senior vice president for academic affairs</h4>
+
+
+
+<p class="has-normal-font-size">The international law and economics expert and dean of the USC Gould School of Law will assume his new duties on July 1, 2023.</p>
+
+
+
+<p><a href="https://news.usc.edu/206745/usc-provost-andrew-guzman/">Read more</a></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full"><a href="https://news.usc.edu/206521/state-of-the-university-2023-usc-president-carol-l-folt/"><img decoding="async" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1.jpeg" alt="President Folt on the podium at Bovard during the state of the university address in 2023" class="wp-image-3588 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1.jpeg 824w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-480x320.jpeg 480w" data-lazy-sizes="(max-width: 824px) 100vw, 824px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1.jpeg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" loading="lazy" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1.jpeg" alt="President Folt on the podium at Bovard during the state of the university address in 2023" class="wp-image-3588" srcset="https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1.jpeg 824w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-300x200.jpeg 300w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-768x512.jpeg 768w, https://www.president.usc.edu/wp-content/uploads/2023/03/folt_bovard_03282023-824x549-1-480x320.jpeg 480w" sizes="(max-width: 824px) 100vw, 824px"  /></noscript></a></figure>
+
+
+
+<h4 class="wp-block-heading" id="statement-from-usc-president-carol-l-folt-regarding-antisemitic-behavior">State of the University: President Carol L. Folt extols the breadth of USC’s excellence</h4>
+
+
+
+<p class="has-normal-font-size">“Our work together matters more than it ever has, and I’m honored to be your president,” she says in the first of her two State of the University addresses.</p>
+
+
+
+<p><a href="https://news.usc.edu/206521/state-of-the-university-2023-usc-president-carol-l-folt/">Read more</a></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full"><a href="https://news.usc.edu/206002/new-usc-center-for-generative-ai-and-society-artificial-intelligence/"><img decoding="async" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1.jpg" alt="USC Bovard Building." class="wp-image-3566 jetpack-lazy-image" data-lazy-srcset="https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1.jpg 824w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-300x200.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-768x512.jpg 768w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-480x320.jpg 480w" data-lazy-sizes="(max-width: 824px) 100vw, 824px" data-lazy-src="https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1.jpg?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" loading="lazy" width="824" height="549" src="https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1.jpg" alt="USC Bovard Building." class="wp-image-3566" srcset="https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1.jpg 824w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-300x200.jpg 300w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-768x512.jpg 768w, https://www.president.usc.edu/wp-content/uploads/2023/03/dall_e_USC_impressionist_web-824x549-1-480x320.jpg 480w" sizes="(max-width: 824px) 100vw, 824px"  /></noscript></a></figure>
+
+
+
+<h4 class="wp-block-heading" id="statement-from-usc-president-carol-l-folt-regarding-antisemitic-behavior">USC dives into AI research, education with new Center for Generative AI and Society</h4>
+
+
+
+<p class="has-normal-font-size">“USC is uniquely positioned to understand and influence how this emerging technology is changing the ways we live, work and play.” &#8211; President Folt</p>
+
+
+
+<p><a href="https://news.usc.edu/206002/new-usc-center-for-generative-ai-and-society-artificial-intelligence/">Read more</a></p>
+</div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull is-style-usc-group-border-top is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<div class="wp-block-group is-style-usc-group-content-width is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading is-style-cardinal-bar" id="instagram">Instagram</h2>
+
+
+
+<p class="has-normal-font-size">Follow us <a href="https://www.instagram.com/presidentfolt/" target="_blank" rel="noreferrer noopener" aria-label="@presidentfolt (opens in a new tab)">@presidentfolt</a></p>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p></p>
+</div></div>
+</div></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- .site-content -->
+	<footer id="colophon" class="site-footer " role="contentinfo">
+		<div class="site-footer-wrapper">
+			<div class="site-footer-columns site-info columns-1"><div class="footer-column"><aside id="text-2" class="widget widget_text"><h2 class="widget-title">USC Office of the President</h2>			<div class="textwidget"><p lang="en-US">
+Los Angeles, CA 90089-0012<br />
+<a href="tel:(213)740-2111">(213) 740-2111</a><br />
+<a href="mailto:president@usc.edu">president@usc.edu</a></p>
+</div>
+		</aside></div></div>		</div>
+		<div class="site-footer-strip-wrapper"><div class="site-footer-strip"><div class="site-footer-strip-left"><div class="site-footer-credits"><span class="theme-credit">University of Southern California</span><span class="site-credit">Content managed by <a class="site-credit-link" href="mailto:ucomm@usc.edu">USC Communications</a></span></div><div class="site-footer-strip-left-widgets"><aside id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-footer-strip-left-container"><ul id="menu-footer-strip-left" class="menu"><li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="http://usc.edu/privacy-notice">Privacy Notice</a></li>
+<li id="menu-item-1062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1062"><a href="https://eeotix.usc.edu/notice-of-non-discrimination/">Notice of Non-Discrimination</a></li>
+</ul></div></aside></div></div><div class="site-footer-strip-right"><div class="menu-footer-social-media-menu-container"><ul id="menu-footer-social-media-menu" class="social-media-menu"><li id="menu-item-41" class="icon-only-instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a target="_blank" rel="noopener" href="https://instagram.com/presidentfolt"><span class="screen-reader-text">Instagram</span><svg class="svg-icon" width="26" height="26" aria-hidden="true" role="img" aria-describedby="icon_desc_instagram" aria-labelledby="icon_title_instagram" viewBox="0 0 24 24" width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title id="icon_title_instagram">Instagram</title><desc id="icon_desc_instagram">The logo for the social media platform Instagram.</desc><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"/></svg></a></li>
+<li id="menu-item-42" class="icon-only-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a target="_blank" rel="noopener" href="https://twitter.com/presidentfolt"><span class="screen-reader-text">Twitter</span><svg class="svg-icon" width="26" height="26" aria-hidden="true" role="img" aria-describedby="icon_desc_twitter" aria-labelledby="icon_title_twitter" viewBox="0 0 24 24" width="24" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title id="icon_title_twitter">Twitter</title><desc id="icon_desc_twitter">The logo for the social media platform Twitter.</desc><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"/></svg></a></li>
+</ul></div></div></div></div>	</footer><!-- .site-footer -->
+<!-- Custom Feeds for Instagram JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.president.usc.edu/wp/wp-admin/admin-ajax.php";
+
+</script>
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-5.wp-container-5,.wp-container-12.wp-container-12{flex-wrap:nowrap;}
+</style>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/themes/usc-gateway-2018/assets/js/vendor/modernizr.js?ver=1.2.1' id='modernizr-js'></script>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/themes/usc-gateway-2018/assets/js/lib/usc-gateway-2018.min.js?ver=1.2.1' id='theme-scripts-js'></script>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/intersection-observer.js?minify=false&#038;ver=83ec8aa758f883d6da14' id='jetpack-lazy-images-polyfill-intersectionobserver-js'></script>
+<script type='text/javascript' id='jetpack-lazy-images-js-extra'>
+/* <![CDATA[ */
+var jetpackLazyImagesL10n = {"loading_warning":"Images are still loading. Please cancel your print and try again."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/lazy-images.js?minify=false&#038;ver=de7a5ed9424adbf44f32' id='jetpack-lazy-images-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/6.2/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/6.2/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.president.usc.edu/wp-content/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js?ver=3.4.2' id='new-royalslider-main-js-js'></script>
+<script id="new-royalslider-init-code" type="text/javascript">
+jQuery(document).ready(function($) {
+	$('.new-royalslider-2').royalSlider({template:'default',image_generation:{imageWidth:3000,imageHeight:2000,thumbImageWidth:'',thumbImageHeight:''},thumbs:{thumbWidth:96,thumbHeight:72},autoPlay:{enabled:!0,pauseOnHover:!1},video:[],block:{moveOffset:20,speed:400,delay:200},width:'100%',height:500,autoScaleSlider:!0,autoScaleSliderWidth:960,autoScaleSliderHeight:750,imageScaleMode:'none',arrowsNavAutoHide:!1,transitionType:'fade',transitionSpeed:500,loop:!0});
+});
+</script>
+	<script src='https://stats.wp.com/e-202318.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'167180870',post:'2',tz:'-7',srv:'www.president.usc.edu',j:'1:12.0'} ]);
+		_stq.push([ 'clickTrackerInit', '167180870', '2' ]);
+	</script></div><!-- .site -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-19c8bff672cd7222f20","applicationID":"747715640","transactionName":"b1ZQMBRUXktTWkVdV1YccwcSXF9WHU1BWBVeRl4IS0JZXEZR","queueTime":0,"applicationTime":341,"atts":"QxFTRlxOTUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
