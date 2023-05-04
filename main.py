@@ -11,6 +11,7 @@ def crawl(seedFileName, levels, keyword):
     # reads the seed file
     with open(seedFileName, 'r') as seed:
         urls = seed.readlines()
+ 
 
     # opens the text file where we output the crawled links to ensure we didn't 
     # crawl the same page twice
@@ -39,7 +40,7 @@ def crawl(seedFileName, levels, keyword):
                 # get the html contents of the website
                 html_frontier = requests.get(link).text
                 # open the html file where we'll store the website
-                outputName = "crawled_pages/htmlFile_mhida010" + str(count) + "_round1.html"
+                outputName = "crawled_pages/htmlFile_Rpate161" + str(count) + "_round1.html"
                 output = open(outputName, "w")
                 output.write(html_frontier)
                 output.close()
@@ -66,4 +67,4 @@ def crawl(seedFileName, levels, keyword):
             print(len(frontier), len(visited))
         clicks_away += 1 # update how far away from the seed links we've gone
 
-crawl("seed.txt", 5, "university")
+crawl("seed.txt", 5, "university") 
