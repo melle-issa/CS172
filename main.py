@@ -5,8 +5,9 @@
 
 from bs4 import BeautifulSoup
 import requests
+import sys
 
-def crawl(seedFileName, levels, keyword, max_pages):
+def crawl(seedFileName, max_pages, levels, output_dir):
 
     # reads the seed file
     with open(seedFileName, 'r') as seed:
@@ -17,7 +18,7 @@ def crawl(seedFileName, levels, keyword, max_pages):
     textFile = open("links.txt", "w")
         
     clicks_away = 0
-    limit = levels
+    limit = int(levels)
     count = 0
     frontier = [] # queue of pages to crawl
     visited = set() # queue of pages we've already crawled
@@ -38,7 +39,7 @@ def crawl(seedFileName, levels, keyword, max_pages):
                 # get the html contents of the website
                 html_frontier = requests.get(link).text
                 # open the html file where we'll store the website
-                outputName = "crawled_pages/htmlFile_mhida010" + str(count) + "_round4.html"
+                outputName = output_dir + "_" + str(count) + ".html"
                 output = open(outputName, "w")
                 output.write(html_frontier)
                 output.close()
@@ -50,7 +51,7 @@ def crawl(seedFileName, levels, keyword, max_pages):
                 # implement Beautiful Soup
                 soup = BeautifulSoup(html_frontier, 'lxml')
                 # check if the website contains the keyword (pruning)
-                if keyword in soup.get_text():
+                if "university" in soup.get_text():
                     links = soup.find_all('a') # get all links
                     for website in links:
                         url = website.get('href')
@@ -59,17 +60,18 @@ def crawl(seedFileName, levels, keyword, max_pages):
                             if url not in visited and url not in frontier:
                                 frontier.append(url)
                     # checks to make sure we haven't exceeded the desired page count
-                    if len(visited) > max_pages:
+                    if len(visited) > int(max_pages):
                         break
                 i += 1
             if len(visited) %5 == 0:
                 print("visited ", len(visited), " pages so far...")
-            if len(visited) > max_pages:
+            if len(visited) > int(max_pages):
                         break
         clicks_away += 1 # update how far away from the seed links we've gone
 
-input1 = input("Please input the name of your seed file: ")
-input2 = input("How many levels do you want? ")
-input3 = input("How many pages do you want to crawl? ")
+# input1 = input("Please input the name of your seed file: ")
+# input2 = input("How many levels do you want? ")
+# input3 = input("How many pages do you want to crawl? ")
+# input4 = input("Where do you want to save these pages? ")
 
-crawl(input1, int(input2), "university", int(input3))
+crawl(*sys.argv[1:])
