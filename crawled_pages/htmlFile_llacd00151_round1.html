@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://faculty.uci.edu/css/header.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://faculty.uci.edu/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="https://faculty.uci.edu/css/additional.css"/>
+    
+    <script type="text/javascript">
+        function clearBox( box )
+        {
+            if ( box.value == box.defaultValue )
+            {
+                box.value = "";
+            }
+        }
+    </script>
+    <script>
+        var _global_search_last_value = '';
+        window.setInterval(function()
+        {
+            var _search_input = document.getElementById('search_term');
+            var _search_type = document.getElementById('search_type');
+
+            if ( _global_search_last_value != _search_input.value )
+            {
+                _global_search_last_value = _search_input.value;
+
+                if ( _global_search_last_value.length > 2 )
+                {
+                    var _search_preview = new XMLHttpRequest();
+
+                    var _searchpreviewchildren = document.getElementById('searchforprofilepreviewchildren');
+                    _searchpreviewchildren.innerHTML = '<div>Searching...</div>';
+
+                    _search_preview.addEventListener('load', function(){
+                        var _search_response = this.responseText;
+                        var _search_response_topfew_begin = _search_response.indexOf('data-topfew') + "data-topfew='".length;
+                        var _search_response_topfew_end = _search_response.indexOf('></div>', _search_response_topfew_begin) - 1;
+                        var _search_response_topfew = _search_response.substring(_search_response_topfew_begin, _search_response_topfew_end);
+
+                        _searchpreviewchildren = document.getElementById('searchforprofilepreviewchildren');
+
+                        try
+                        {
+                            _search_response_topfew = JSON.parse(_search_response_topfew);
+                            var _search_response_topfew_keys = _search_response_topfew['keys'];
+
+                            _searchpreviewchildren.innerHTML = '<div>' + _search_response_topfew['total'].toString() + ' result(s)</div>';
+
+                            for (var i = 0; i < _search_response_topfew_keys.length; i++)
+                            {
+                                var _search_response_topfew_key = _search_response_topfew_keys[i];
+                                var _searchpreviewchild = document.createElement('div');
+                                var _searchpreviewchild_style = 'padding: 2px 4px; border-bottom: 1px solid #d7d7d7;';
+
+                                if ( i % 2 == 0 )
+                                {
+                                    _searchpreviewchild_style += ' background: #EBEBEB;';
+                                }
+                                else
+                                {
+                                    _searchpreviewchild_style += ' background: #F5F5F5;';
+                                }
+
+                                _searchpreviewchild.style = _searchpreviewchild_style;
+
+                                _searchpreviewchild.innerHTML = '<span><a href="profile/?facultyId=' + _search_response_topfew_key['key'] + '" title="View Profile For: ' + _search_response_topfew_key['name'] + '">' + _search_response_topfew_key['name'] + '</a> ' + _search_response_topfew_key['desc'] + '</span>';
+                                _searchpreviewchildren.appendChild(_searchpreviewchild);
+                            }
+                        } catch ( _jsone )
+                        {
+                            console.log('Exception parsing search results');
+                            console.log(_jsone);
+                            _searchpreviewchildren.innerHTML = '<div>0 result(s)</div>';
+                        }
+                    });
+
+                    _search_preview.open('GET', 'search?search_type=' + _search_type.value + '&search_term=' + _global_search_last_value);
+                    _search_preview.send();
+                }
+            }
+        }, 1000);
+        </script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+	    <meta charset="utf-8">
+	    <meta name="description" content="fps">
+	    <meta name="viewport" content="width=device-width">
+	    <title>UC Irvine - Faculty Profile System</title>
+       <a href="https://faculty.uci.edu/">
+            <img src="https://faculty.uci.edu/images/sitelogo.svg" alt="UCI Faculty Profile System">
+        </a>
+        <div class="topnav" id="myTopnav">
+            <a title="For Faculty" href="https://faculty.uci.edu/forFaculty">For Faculty</a>
+            <a title="Help" href="https://faculty.uci.edu/help">Search Tips</a>
+            <a title="About" href="https://faculty.uci.edu/about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div id="content">
+        <h1>Discover UCI Faculty</h1>
+        <div id="facultyImageBanner">
+            <div id="facultyImage">
+                    <div id="imagelink">
+                        <a href="profile/?facultyId=6906">
+                            <img src="get_image?facultyId=6906" alt="Profile for Dmitry Portnoy" title="View the profile of Dmitry Portnoy" border="0" style="height: 81px; max-width: 180px;">
+                        </a>
+                    </div>
+                    <div id="imagelink">
+                        <a href="profile/?facultyId=5528">
+                            <img src="get_image?facultyId=5528" alt="Profile for  " title="View the profile of  " border="0" style="height: 81px; max-width: 180px;">
+                        </a>
+                    </div>
+                    <div id="imagelink">
+                        <a href="profile/?facultyId=6943">
+                            <img src="get_image?facultyId=6943" alt="Profile for Jefferson W Chen" title="View the profile of Jefferson W Chen" border="0" style="height: 81px; max-width: 180px;">
+                        </a>
+                    </div>
+                    <div id="imagelink">
+                        <a href="profile/?facultyId=5547">
+                            <img src="get_image?facultyId=5547" alt="Profile for Lyle Massey" title="View the profile of Lyle Massey" border="0" style="height: 81px; max-width: 180px;">
+                        </a>
+                    </div>
+                    <div id="imagelink">
+                        <a href="profile/?facultyId=6206">
+                            <img src="get_image?facultyId=6206" alt="Profile for LAURA FITZMAURICE" title="View the profile of LAURA FITZMAURICE" border="0" style="height: 81px; max-width: 180px;">
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <br>
+        <div id="searchcontainer" style="overflow:hidden;">
+            <div id="searchforprofile" style="width: 50%; float: left;">
+                <form style="padding: 20px 0px 0px 0px;" method="get" action="search">
+                    <h3 style="display: inline-block;"><span>Search for Faculty by</span></h3>
+                    <select id="search_type" name="search_type" tabindex="1" style="height: auto; padding: 0px;">
+                        <option value="nameorucinetid">Name or UCINetID</option>
+                        <option value="department">Department or School or Research Center</option>
+                        <option value="research" selected="selected">Discipline or Research Topic</option>
+                    </select>
+                    <input onfocus="clearBox(this)" tabindex="1" size="40" value="" placeholder="Enter search term(s) here" id="search_term" name="search_term" type="text" style="margin-top: 0px;"><br>
+                    <input title="search" tabindex="1" class="searchButton" value="Search" id="fullTermSearch" type="submit" style="padding-left: 20px; padding-right: 20px; border: 1px solid #0064a4; border-radius: 2px;">
+                </form>
+            </div>
+            <div id="searchforprofilepreview" style="width: 50%; float: left;">
+                <div style="padding: 20px 0px 0px 0px;">
+                    <h3><span>Search Preview</span></h3>
+                    <div id="searchforprofilepreviewchildren"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div id="footer">
+        <ul class="footer-links">
+            <li>
+                <a href="https://uci.edu/copyright/">&copy; 2023 The Regents of the University of California</a> |
+            </li>
+            <li>
+                <a href="https://research.uci.edu/privacy-policy-2/" target="_blank" title="Privacy Policy">Privacy &amp; Legal Notice</a> |
+            </li>
+            <li>
+                <a href="mailto:or-web-support@uci.edu">Email FPS Support</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <script src="https://faculty.uci.edu/js/jquery-3.6.0.min.js"></script>
+    <script src="https://faculty.uci.edu/js/header.js"></script>
+</body>
+</html>

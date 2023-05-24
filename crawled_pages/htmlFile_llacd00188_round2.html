@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEE91P32P1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-EEE91P32P1');
+        </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Directory | SDSU</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ou-resources.sdsu.edu/crimson/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ou-resources.sdsu.edu/crimson/icons/favicon-16x16.png" />
+
+    
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="'+c[e]+'" '+d+"/>")}("position","absolute",["/css/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 integrity=\u0022sha512-MoRNloxbStBcD8z3M/2BmnT\u002Brg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==\u0022 crossorigin=\u0022anonymous\u0022 ");</script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/rowGroup.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=aUR_Fu28Fh9dtmQz-tGNqPs4YavtZNZSzhc0okTPLkg" />
+    <link rel="stylesheet" href="/css/app-styles.css?v=57f-O3XkcilWpqQJJtqkgegUJl8Z9V3fXHS8r3BSTdg" />
+
+</head>
+<body>
+    <header>
+        <div class="sr-only" id="skiptocontent">
+            <a href="#Main-Body">
+                Skip to main content
+            </a>
+        </div>
+        <div class="title-bar-container">
+            <div class="title-bar-left">
+                <h1 class="logo"><a href="https://www.sdsu.edu/">San Diego State University</a></h1>
+            </div>
+            <div class="title-bar-right">
+                <div class="title-site-name">
+                    <a href="/">Campus Directory</a>
+                </div>
+                <div class="title-site-search">
+                    <form class="form-inline my-2 my-lg-0" role="search" method="get" action="https://search.sdsu.edu/">
+                        <div class="form-group">
+                            <input name="query" role="searchbox" type="text" class="form-control" aria-label="search SDSU" placeholder="Search" id="search">
+                            <button type="submit" class="btn btn-search"><span class="fa fa-search"><span class="sr-only">Search</span></span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md mb-3" id="App-Nav">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse">
+
+                    <ul class="navbar-nav mr-auto app-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+
+                        <li class="navbar-text hide-sm" aria-hidden="True">|&nbsp;</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Help">Help</a>
+                        </li>
+                    </ul>
+                    
+<ul class="navbar-nav app-nav">
+
+        <li class="nav-item">
+            <a class="nav-link" href="/AzureAD/Account/SignIn">Sign In</a>
+        </li>
+
+</ul>
+
+                </div>
+            </div>
+        </nav>
+        </nav>
+        <div class="title-bar-mobile-container show-sm">
+            <div class="title-bar-left">
+                <div class="logo"><a href="https://www.sdsu.edu">San Diego State University</a></div>
+            </div>
+            <div class="title-bar-right"><a href="/">Campus Directory</a></div>
+        </div>
+        <br />
+    </header>
+    <div id="Main-Body" class="container">
+        <main class="pb-3">
+            
+
+<h2 class="mb-3 text-color-dark-red">SDSU Campus Directory</h2>
+
+<div class="row">
+    <div id="Search-Page" class="col-sm-12 mb-2">
+
+        <form id="Form-Search" class="mt-3" method="get" action="/">
+            <div class="input-group mb-3">
+                <label class="sr-only" for="Main-Search-Input">Search:</label>
+                <input id="Main-Search-Input" type="text" name="query" class="form-control" aria-label="Search the directory" aria-describedby="Search query text box">
+                <div class="input-group-append">
+                    <button title="Search" aria-label="Search" class="btn btn-outline-secondary" type="submit"><span class="fa fa-search text-color-dark-red"></span><span class="sr-only">&nbsp;Search</span></button>
+                </div>
+            </div>
+            <span id="Searching-Message" style="display: none;">Searching...</span>
+        </form>
+    </div>
+</div>
+
+<div style="border-top: lightgrey solid 5px; display: block;width: 100%">&nbsp;</div>
+
+
+<div id="Search-Table-Container" class="row">
+    <div class="col-md-12">
+
+        <table id="Table-Search" class="table table-bordered table-striped dt-responsive nowrap" style="width: 100%">
+            <thead>
+                <tr>
+                    <th data-priority="1">Name</th>
+                    <th data-priority="2">Department</th>
+                    <th data-priority="5">Title</th>
+                    <th data-priority="6">Office</th>
+                    <th data-priority="3">Phone</th>
+                    <th data-priority="4">E-mail</th>
+                    <th class="none">Fax</th>
+                    <th class="none">Mail Code</th>
+                    <th class="none">Website</th>
+                    <th class="none">rIdx</th>
+                    <th class="none">LastName</th>
+                    <th class="none">RecordType</th>
+                    <th class="none">DepartmentLevel</th>
+                    <th class="none">Division</th>
+                    <th class="none">College</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<p id="more-help-link" style="display: none;"> <a target="_blank" href="/Help"><i>Not what you are looking for? Information incorrect? Click here for more help.</i></a></p>
+
+<h3 class="mb-3 mt-5 text-color-grey">Building Abbreviations Used In This Directory</h3>
+<div id="Building-Abbr">
+    <table width="100%" class="table table-striped table-bordered buildings mt-2">
+
+        <thead>
+            <tr>
+                <th>Building Abbreviation</th>
+                <th>Building Name </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AD</td>
+                <td><a title="Map to Administration" href="https://map.concept3d.com/?id=801#!m/147058">Administration</a></td>
+            </tr>
+            <tr>
+                <td>ADM</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Administration (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>AH</td>
+                <td><a title="Map to Adams Humanities" href="https://map.concept3d.com/?id=801#!m/146395">Adams Humanities</a></td>
+            </tr>
+            <tr>
+                <td>AL</td>
+                <td><a title="Map to Arts and Letters" href="https://map.concept3d.com/?id=801#!m/147060">Arts and Letters</a></td>
+            </tr>
+            <tr>
+                <td>ALUM</td>
+                <td><a title="Map to Parma Payne Goodall Alumni Center" href="https://map.concept3d.com/?id=801#!m/152642">Parma Payne Goodall Alumni Center</a></td>
+            </tr>
+            <tr>
+                <td>ARC</td>
+                <td><a title="Map to Aztec Recreation Center" href="https://map.concept3d.com/?id=801#!m/152644">Aztec Recreation Center</a></td>
+            </tr>
+            <tr>
+                <td>ARTN</td>
+                <td><a title="Map to Art North" href="https://map.concept3d.com/?id=801#!m/146396">Art North</a></td>
+            </tr>
+            <tr>
+                <td>ARTS</td>
+                <td><a title="Map to Art South" href="https://map.concept3d.com/?id=801#!m/146397">Art South</a></td>
+            </tr>
+            <tr>
+                <td>ASU</td>
+                <td><a title="Map to Conrad Prebys Aztec Student Union" href="https://map.concept3d.com/?id=801#!m/152636">Conrad Prebys Aztec Student Union</a></td>
+            </tr>
+            <tr>
+                <td>ATH</td>
+                <td><a title="Map to Atkinson Hall" href="https://map.concept3d.com/?id=801#!m/147063">Atkinson Hall</a></td>
+            </tr>
+            <tr>
+                <td>BOOK</td>
+                <td><a title="Map to SDSU Bookstore" href="https://map.concept3d.com/?id=801#!m/169023">SDSU Bookstore</a></td>
+            </tr>
+            <tr>
+                <td>BS</td>
+                <td><a title="Map to Business Services" href="https://map.concept3d.com/?id=801#!m/147067">Business Services</a></td>
+            </tr>
+            <tr>
+                <td>BSCI</td>
+                <td><a title="Map to Donald P. Shiley BioScience Center" href="https://map.concept3d.com/?id=801#!m/147074">Donald P. Shiley BioScience Center</a></td>
+            </tr>
+            <tr>
+                <td>CHAP</td>
+                <td><a title="Map to Chapultepec Residence Hall" href="https://map.concept3d.com/?id=801#!m/195505">Chapultepec Residence Hall</a></td>
+            </tr>
+            <tr>
+                <td>CLP</td>
+                <td><a title="Map to Calpulli Center" href="https://map.concept3d.com/?id=801#!m/152630">Calpulli Center</a></td>
+            </tr>
+            <tr>
+                <td>COBL</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Computer Building/Campus Store (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>COM</td>
+                <td><a title="Map to Communication" href="https://map.concept3d.com/?id=801#!m/147073">Communication</a></td>
+            </tr>
+            <tr>
+                <td>COSQ</td>
+                <td><a title="Map to College Square" href="https://map.concept3d.com/?id=801#!m/152632">College Square</a></td>
+            </tr>
+            <tr>
+                <td>CSL</td>
+                <td><a title="Map to Chemical Sciences Laboratory" href="https://map.concept3d.com/?id=801#!m/147070">Chemical Sciences Laboratory</a></td>
+            </tr>
+            <tr>
+                <td>CUIC</td>
+                <td><a title="Map to Cuicacalli Suites" href="https://map.concept3d.com/?id=801#!m/195506">Cuicacalli Suites</a></td>
+            </tr>
+            <tr>
+                <td>DA</td>
+                <td><a title="Map to Dramatic Arts" href="https://map.concept3d.com/?id=801#!m/152619">Dramatic Arts</a></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td><a title="Map to Engineering" href="https://map.concept3d.com/?id=801#!m/147076">Engineering</a></td>
+            </tr>
+
+            <tr>
+                <td>EC</td>
+                <td><a title="Map to East Commons" href="https://map.concept3d.com/?id=801#!m/152646">East Commons</a></td>
+            </tr>
+            <tr>
+                <td>ED</td>
+                <td><a title="Map to Education" href="https://map.concept3d.com/?id=801#!m/147087">Education</a></td>
+            </tr>
+            <tr>
+                <td>EIS</td>
+                <td><a title="Map to Engineering and Interdisciplinary Sciences Complex" href="https://map.concept3d.com/?id=801#!m/156408">Engineering and Interdisciplinary Sciences Complex</a></td>
+            </tr>
+            <tr>
+                <td>ENS</td>
+                <td><a title="Map to Exercise and Nutritional Science" href="https://map.concept3d.com/?id=801#!m/147077">Exercise and Nutritional Science</a></td>
+            </tr>
+            <tr>
+                <td>ESC</td>
+                <td><a title="Map to Extended Studies Center" href="https://map.concept3d.com/?id=801#!m/152633">Extended Studies Center</a></td>
+            </tr>
+            <tr>
+                <td>FAC</td>
+                <td><a title="Map to Fowler Athletics Center" href="https://map.concept3d.com/?id=801#!m/150396">Fowler Athletics Center</a></td>
+            </tr>
+            <tr>
+                <td>FOBE</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Faculty Office Building East (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>FOBW</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Faculty Office Building West (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>FS</td>
+                <td><a title="Map to Facilities Services" href="https://map.concept3d.com/?id=801#!m/147079">Facilities Services</a></td>
+            </tr>
+            <tr>
+                <td>GC</td>
+                <td><a title="Map to Gateway Center" href="https://map.concept3d.com/?id=801#!m/147081">Gateway Center</a></td>
+            </tr>
+            <tr>
+                <td>GMCS</td>
+                <td><a title="Map to Geology Mathematics Computer Science" href="https://map.concept3d.com/?id=801#!m/147082">Geology Mathematics Computer Science</a></td>
+            </tr>
+            <tr>
+                <td>GOH</td>
+                <td><a title="Map to Granada Apartments" href="https://map.concept3d.com/?id=801#!m/195567">Granada Apartments</a></td>
+            </tr>
+            <tr>
+                <td>HA</td>
+                <td><a title="Map to Housing Administration &amp; Residential Education" href="https://map.concept3d.com/?id=801#!m/195507">Housing Administration &amp; Residential Education</a></td>
+            </tr>
+            <tr>
+                <td>HH</td>
+                <td><a title="Map to Hepner Hall" href="https://map.concept3d.com/?id=801#!m/147084">Hepner Hall</a></td>
+            </tr>
+            <tr>
+                <td>HT</td>
+                <td><a title="Map to Hardy Memorial Tower" href="https://map.concept3d.com/?id=801#!m/147083">Hardy Memorial Tower</a></td>
+            </tr>
+            <tr>
+                <td>ISC</td>
+                <td><a title="Map to International Student Center" href="https://map.concept3d.com/?id=801#!m/152627">International Student Center</a></td>
+            </tr>
+            <tr>
+                <td>ISCT</td>
+                <td><a title="Map to SDSU Passport Office" href="https://map.concept3d.com/?id=801#!m/152626">SDSU Passport Office</a></td>
+            </tr>
+            <tr>
+                <td>KPBS</td>
+                <td><a title="Map to KPBS Radio/TV" href="https://map.concept3d.com/?id=801#!m/152634">KPBS Radio/TV</a></td>
+            </tr>
+            <tr>
+                <td>LH</td>
+                <td><a title="Map to Lamden Hall" href="https://map.concept3d.com/?id=801#!m/147075">Lamden Hall</a></td>
+            </tr>
+            <tr>
+                <td>LIB</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Library (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>LL</td>
+                <td><a title="Map to Malcom A. Love Library" href="https://map.concept3d.com/?id=801#!m/147086">Malcom A. Love Library</a></td>
+            </tr>
+            <tr>
+                <td>LLA</td>
+                <td><a title="Map to Love Library Addition" href="https://map.concept3d.com/?id=801#!m/147090">Love Library Addition</a></td>
+            </tr>
+            <tr>
+                <td>LSN</td>
+                <td><a title="Map to Life Science North" href="https://map.concept3d.com/?id=801#!m/147088">Life Science North</a></td>
+            </tr>
+            <tr>
+                <td>LSS</td>
+                <td><a title="Map to Life Science South" href="https://map.concept3d.com/?id=801#!m/147089">Life Science South</a></td>
+            </tr>
+            <tr>
+                <td>LT</td>
+                <td><a title="Map to Little Theatre" href="https://map.concept3d.com/?id=801#!m/152620">Little Theatre</a></td>
+            </tr>
+            <tr>
+                <td>MAYA</td>
+                <td><a title="Map to Maya Hall" href="https://map.concept3d.com/?id=801#!m/195508">Maya Hall</a></td>
+            </tr>
+            <tr>
+                <td>MBAC</td>
+                <td><a title="Map to Mission Bay Aquatic Center" href="https://www.mbaquaticcenter.com/hours-directions.php">Mission Bay Aquatic Center</a></td>
+            </tr>
+            <tr>
+                <td>MH</td>
+                <td><a title="Map to Manchester Hall" href="https://map.concept3d.com/?id=801#!m/147090">Manchester Hall</a></td>
+            </tr>
+            <tr>
+                <td>MU</td>
+                <td><a title="Map to Music" href="https://map.concept3d.com/?id=801#!m/152621">Music</a></td>
+            </tr>
+            <tr>
+                <td>NCB</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">North Classrooms (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>NE</td>
+                <td><a title="Map to North Education" href="https://map.concept3d.com/?id=801#!m/147093">North Education</a></td>
+            </tr>
+            <tr>
+                <td>NH</td>
+                <td><a title="Map to Nasatir Hall" href="https://map.concept3d.com/?id=801#!m/147092">Nasatir Hall</a></td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td><a title="Map to Physics" href="https://map.concept3d.com/?id=801#!m/147095">Physics</a></td>
+            </tr>
+            <tr>
+                <td>PA</td>
+                <td><a title="Map to Physics Astronomy" href="https://map.concept3d.com/?id=801#!m/147096">Physics Astronomy</a></td>
+            </tr>
+            <tr>
+                <td>PDS</td>
+                <td><a title="Map to Piedra Del Sol Apartments" href="https://map.concept3d.com/?id=801#!m/195517">Piedra Del Sol Apartments</a></td>
+            </tr>
+            <tr>
+                <td>PG</td>
+                <td><a title="Map to Aztec Court at Peterson Gym" href="https://map.concept3d.com/?id=801#!m/150392">Aztec Court at Peterson Gym</a></td>
+            </tr>
+            <tr>
+                <td>PHPL</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Physical Plant (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>POOL</td>
+                <td><a title="Map to Aztec Aquaplex" href="https://map.concept3d.com/?id=801#!m/150391">Aztec Aquaplex</a></td>
+            </tr>
+            <tr>
+                <td>PS</td>
+                <td><a title="Map to Physical Sciences" href="https://map.concept3d.com/?id=801#!m/147094">Physical Sciences</a></td>
+            </tr>
+            <tr>
+                <td>PSFA</td>
+                <td><a title="Map to Professional Studies and Fine Arts" href="https://map.concept3d.com/?id=801#!m/147097">Professional Studies and Fine Arts</a></td>
+            </tr>
+            <tr>
+                <td>SCP</td>
+                <td><a title="Map to South Campus Plaza" href="http://www.myatlascms.com/map/?id=801&amp;mrkIid=195558">South Campus Plaza</a></td>
+            </tr>
+            <tr>
+                <td>SH</td>
+                <td><a title="Map to Storm Hall" href="https://map.concept3d.com/?id=801#!m/147099">Storm Hall</a></td>
+            </tr>
+            <tr>
+                <td>SHW</td>
+                <td><a title="Map to Storm Hall West" href="https://map.concept3d.com/?id=801#!m/147100">Storm Hall West</a></td>
+            </tr>
+            <tr>
+                <td>SLHS</td>
+                <td><a title="Map to Speech, Language, and Hearing Sciences" href="https://map.concept3d.com/?id=801#!m/147098">Speech, Language, and Hearing Sciences</a></td>
+            </tr>
+            <tr>
+                <td>SSE</td>
+                <td><a title="Map to Student Services East" href="https://map.concept3d.com/?id=801#!m/152629">Student Services East</a></td>
+            </tr>
+            <tr>
+                <td>SSW</td>
+                <td><a title="Map to Student Services West" href="https://map.concept3d.com/?id=801#!m/152628">Student Services West</a></td>
+            </tr>
+            <tr>
+                <td>STAT</td>
+                <td><a href="https://ivcampus.sdsu.edu/_resources/files/calexico_classrooms.pdf" title="Imperial Valley Campus Map">Student Affairs (Imperial Valley)</a></td>
+            </tr>
+            <tr>
+                <td>TENO</td>
+                <td><a title="Map to Tenochca Hall" href="https://map.concept3d.com/?id=801#!m/195566">Tenochca Hall</a></td>
+            </tr>
+            <tr>
+                <td>UCC</td>
+                <td><a title="Map to Children's Center" href="https://map.concept3d.com/?id=801#!m/152635">Children's Center</a></td>
+            </tr>
+            <tr>
+                <td>UT</td>
+                <td><a title="Map to University Towers" href="https://map.concept3d.com/?id=801#!m/195569">University Towers</a></td>
+            </tr>
+            <tr>
+                <td>VAA</td>
+                <td><a title="Map to Villa Alvarado Apartments" href="https://map.concept3d.com/?id=801#!m/195570">Villa Alvarado Apartments</a></td>
+            </tr>
+            <tr>
+                <td>WC</td>
+                <td><a title="Map to West Commons" href="https://map.concept3d.com/?id=801#!m/162351">West Commons</a></td>
+            </tr>
+            <tr>
+                <td>WRCT</td>
+                <td><a title="Map to Women's Resource Center" href="https://map.concept3d.com/?id=801#!m/152623">Women's Resource Center</a></td>
+            </tr>
+            <tr>
+                <td>ZURA</td>
+                <td><a title="Map to Zura Hall" href="https://map.concept3d.com/?id=801#!m/195572">Zura Hall</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+        </main>
+    </div>
+    <footer id="Main-Footer">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-sm-3">
+                    <div class="row">
+                        <div>
+                            <div class="footer-logo">
+                                <a href="https://www.sdsu.edu/">
+                                    <img src="https://ou-resources.sdsu.edu/images/_sdsu/logo-2022/logo.png" class="img-responsive" alt="San Diego State University">
+                                </a>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.youtube.com/user/SDSUVideo" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/sdsu" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/SanDiegoState" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://instagram.com/sandiegostateuniversity" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 footer-address">
+                    <p>
+                        <a class="phone" href="tel:1-619-594-5200">619-594-5200</a><br>
+                        5500 Campanile Drive<br>
+                        San Diego, CA 92182<br>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="https://map.concept3d.com/?id=801">Maps</a>
+                        </li>
+                        <li> | </li>
+                        <li>
+                            <a href="https://bfa.sdsu.edu/campus/parkingtrans/permits">Parking</a>
+                        </li>
+                    </ul>                        
+                </div>
+                <div class="col-sm-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://directory.sdsu.edu/">Campus Directory</a>
+                        </li>
+                        <li>
+                            <a href="https://bfa.sdsu.edu/hr/jobs">Employment</a>
+                        </li>
+                        <li>
+                            <a href="https://brand.sdsu.edu/stratcomm/media-relations">Media Relations</a>
+                        </li>
+                        <li>
+                            <a href="https://canvas.sdsu.edu/">Canvas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.sdsu.edu/contact/">General Contact</a>
+                        </li>
+                        <li>
+                            <a href="https://status.sdsu.edu/">Network Status</a>
+                        </li>
+                        <li>
+                            <a href="https://www.sdsu.edu/strategic-plan">Strategic Plan</a>
+                        </li>
+                        <li>
+                            <a href="https://cloud.comms.sdsu.edu/newscenter-subscribe">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row footer-bottom">
+                <div class="col-sm-7 col-md-5 col-lg-9">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="https://accessibility.sdsu.edu/">Accessibility</a>
+                        </li>
+                        <li>
+                            <a href="https://www.sdsu.edu/document-readers">Document Readers</a>
+                        </li>
+                        <li>
+                            <a href="https://sdsu.edu/digital-privacy">SDSU Digital Privacy Statement</a>
+                        </li>
+                        <li>
+                            <a href="https://police.sdsu.edu/public-information/safety-and-security-reports">Campus Safety Reports</a>
+                        </li>
+                        <li>
+                            <a href="https://www.sdsu.edu/feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled list-inline copyright">
+                        <li>©&nbsp;2023 San Diego State University</li>
+                        <li> | </li>
+                        <li>All Rights Reserved</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5 col-md-7"></div>
+
+            </div>
+        </div>
+
+        <!-- release version  1.0.0.0 -->
+    </footer>
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous">
+
+        </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/js/jquery.min.js\u0022 integrity=\u0022sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo\u002Bfjqhx/qtq/1itJ0C2ejDxltZVFg==\u0022 crossorigin=\u0022anonymous\u0022\u003E\u003C/script\u003E"));</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw==" crossorigin="anonymous">
+
+        </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022/js/bootstrap.bundle.min.js\u0022 integrity=\u0022sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw==\u0022 crossorigin=\u0022anonymous\u0022\u003E\u003C/script\u003E"));</script>
+    
+
+    <script src="/js/site.js?v=EWGsCGXC0h4sIm7YCuQMcA20xZPXJCfdptipmJVF2I0"></script>
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/js/dt.min.js"></script>
+    
+
+    
+
+    
+        <script type="text/javascript" src="/js/search.min.js?v=ne0_xh_P_8e-tPJqbUxcqwx-s1WWWjuQ_R56xlX0MIw"></script>
+    
+
+
+        <script type="text/javascript">
+            gtag('event', 'page_view', {
+                'load_h': "13"
+            });
+        </script>
+
+
+
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            document.getElementById("Main-Search-Input").focus();
+        })
+    </script>
+
+
+
+
+
+</body>
+</html>

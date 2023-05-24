@@ -1,0 +1,642 @@
+<!doctype html>
+<html xml:lang="en" lang="en" dir="ltr">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://www.brown.edu/media/jwplayer-5.8/jwplayer.js"></script>
+<link rel="shortcut icon" href="/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/ursa_tabula_favicon.ico" type="image/x-icon" />
+
+    <link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/modules/node/node.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/modules/system/defaults.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/modules/system/system.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/modules/system/system-menus.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/modules/user/user.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/cck/theme/content-module.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/ctools/css/ctools.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/brown_google_cse/brown_google_cse.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/brown_printshare/theme/printshare.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/brown_video/themes/brown_video.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/brown_video_assist/video_assist.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/livewhale-calendar-d6/css/events.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/date/date.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/filefield/filefield.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/img_assist/img_assist.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/shib_auth/shib_auth.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/css_injector_10.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/css_injector_11.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/cck/modules/fieldgroup/fieldgroup.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/views/css/views.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/modules/custom/cap_user_management/css/cap.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/all/themes/ursa-minor/s/style.css?y" />
+<link type="text/css" rel="stylesheet" media="all" href="/about/administration/registrar/sites/brown.edu.about.administration.registrar/themes/ursa_tabula/ursa_tabula.css?y" />
+<link type="text/css" rel="stylesheet" media="screen" href="/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/render/sifr3-screen.css?y" />
+<link type="text/css" rel="stylesheet" media="print" href="/about/administration/registrar/sites/all/themes/ursa-minor/s/print.css?y" />
+
+    <script type="text/javascript" src="/about/administration/registrar/misc/jquery.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/misc/jquery-extend-3.4.0.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/misc/jquery-html-prefilter-3.5.0-backport.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/misc/drupal.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/all/modules/custom/brown_video_assist/video_assist.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/all/modules/google_analytics/googleanalytics.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/all/modules/img_assist/img_assist.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/all/modules/poormanscron/poormanscron.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/all/modules/render/plugins/sifr/sifr.js?y"></script>
+<script type="text/javascript" src="/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/render/sifr3-rules.js?y"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "\u002Fabout\u002Fadministration\u002Fregistrar\u002F", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "cron": { "basePath": "\u002Fabout\u002Fadministration\u002Fregistrar\u002Fpoormanscron", "runNext": 1682973637 } });
+//--><!]]>
+</script>
+
+		<title>Welcome | Office of the Registrar</title>
+		
+		<!--[if IE]>
+      <link rel="stylesheet" type="text/css" href="/about/administration/registrar/sites/all/themes/ursa-minor/s/ie.css" media="all" />
+<script src="/about/administration/registrar/sites/all/themes/ursa-minor/j/ie-html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+	</head>
+  <body class="sidebars">
+
+		<ul class="access">
+			<li><a href="#body-content" accesskey="s" tabindex="1">Skip navigation</a></li>
+		</ul>
+		<div id="home-wrapper" class="wrapper">
+		
+			<header id="header-region">
+				<nav id="audience-gateways">
+					<div class="marginator">
+						<h6>Information For:</h6> 
+						<ul> 
+							<li id="gateway-current-students" class="first"><a href="/gateway/current-students">Current Students</a></li> 
+							<li id="gateway-faculty"><a href="/gateway/faculty">Faculty</a></li> 
+							<li id="gateway-staff"><a href="/gateway/staff">Staff</a></li> 
+							<li id="gateway-families"><a href="/gateway/families">Families</a></li> 
+							<li id="gateway-alumni"><a href="/gateway/alumni">Alumni</a></li> 
+							<li id="gateway-friends-and-neighbors" class="last"><a href="/gateway/friends-and-neighbors">Friends &amp; Neighbors</a></li> 
+						</ul> 
+					</div>
+				</nav>
+				
+				<div id="brown-masthead">
+				
+					<div id="brown-brand">
+						<div class="marginator">
+							<h1><a href="http://www.brown.edu" accesskey="1" title="Brown University Homepage"><img src="/about/administration/registrar/sites/brown.edu.about.administration.registrar/themes/ursa_tabula/img/brown-logo.png" alt="" /><span>Brown University</span></a></h1>
+							
+								<div id="search-theme-form" class="clear-block block block-google_cse ">
+										<form action="/about/administration/registrar/search/google" accept-charset="UTF-8" method="get" id="google-cse-searchbox-form">
+											<input type="hidden" name="cx" id="edit-cx" value="001311030293454891064:lwlrsw9qt3o"  />
+											<input type="hidden" name="cof" id="edit-cof" value="FORID:11"  />
+											<div class="form-item" id="edit-query-wrapper">
+												<input type="text" maxlength="128" name="query" id="edit-query" size="40" value="" title="Enter the terms you wish to search for." class="form-text search-field" />
+											</div>
+											<input type="image" name="sa" id="edit-sa"  alt="Search" class="form-submit form-submit search-submit" src="/about/administration/registrar/sites/brown.edu.about.administration.registrar/themes/ursa_tabula/img/search-button.png" />
+
+											<input type="hidden" name="form_id" id="edit-brown-google-cse-searchbox-form" value="brown_google_cse_searchbox_form"  />
+									</form>
+								</div>
+													</div>
+					</div>
+					
+
+					<div class="marginator">
+						<nav>
+
+																<ul id="topical-navigation">
+					<li id="topical-about-brown" class="first active-trail"><a href="/about" class="active">About Brown</a></li> 
+							<li id="topical-academics"><a href="/academics">Academics</a></li> 
+							<li id="topical-admission"><a href="/admission">Admission</a></li> 
+							<li id="topical-research"><a href="/research">Research</a></li> 
+							<li id="topical-campus-life" class="last"><a href="/campus-life">Campus Life</a></li> 
+			</ul>
+
+														<div id="tactical-navigation">
+								<ul>
+									<li id="tactical-atoz" class="first"><a href="http://www.brown.edu/a-to-z" tabindex="2">A to Z Index</a></li>
+									<li id="tactical-people" class="last"><a href="http://directory.brown.edu" tabindex="3">People Directory</a></li>
+								</ul>
+							</div>
+							
+												</nav>
+				</div>
+					
+
+				</div><!-- end #brown-masthead -->
+				
+                          
+			</header>
+
+
+		
+					<div id="banner" class="marginator robust-banner" style="background-image:url(/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/ursa_minor_robust_banner_image.jpg); height:200px;">
+				<div class="banner-text">
+					<a href="/about/administration/registrar/" title="Office of the Registrar" style="height:252px;" class="bare-banner-link"><span class="site-title">Office of the Registrar</span></a>				</div>
+			</div>
+
+		
+<!-- Layout -->
+
+				<div id="content">
+					<div class="marginator">
+					
+					
+
+					
+													<div class="reminder">
+							
+	
+	<div id="block-views-news-block_1" class="clear-block block block-views ">
+	
+		
+		<div class="content"><div class="view view-news view-id-news view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+            
+  <div class="views-field-title">
+                <span class="field-content">Undergraduates Pre-Registration for Fall 2023</span>
+  </div>
+  
+  <div class="views-field-teaser">
+                <div class="field-content"><div><span><span>&nbsp;</span></span></div>
+<p style="padding-left:30px"><span><strong><span style="color:#ff0000">Notice to Students in The College for Pre-Registration for Fall 2023</span></strong></span></p>
+ <a href="/about/administration/registrar/news/2023-03/undergraduates-pre-registration-fall-2023">Read more.</a></div>
+  </div>
+      
+  <div class="views-field-title">
+                <span class="field-content">Graduate students Pre-Registration for Fall 2023</span>
+  </div>
+  
+  <div class="views-field-teaser">
+                <div class="field-content"><p><span><span>&nbsp;</span></span></p>
+<p style="padding-left:30px"><span><strong><span style="color:#ff0000">Notice to Graduate Students for Pre-Registration for Fall 2023</span></strong></span></p>
+ <a href="/about/administration/registrar/news/2023-03/graduate-students-pre-registration-fall-2023">Read more.</a></div>
+  </div>
+      
+  <div class="views-field-title">
+                <span class="field-content">Important Graduation Related Deadlines</span>
+  </div>
+  
+  <div class="views-field-teaser">
+                <div class="field-content"><h3 style="padding-left:90px"></h3>
+<h3 style="padding-left:90px"><strong>****ATTENTION GRADUATING SENIORS****</strong></h3>
+<p align="center"><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/jww%20commencement%20deadline%20flyer%202023.pdf" target="_blank" title="Graduation Deadlines"><strong><em>Important Spring 2023 Graduation Related Deadlines</em></strong></a></p>
+ <a href="/about/administration/registrar/news/2023-01/important-graduation-related-deadlines">Read more.</a></div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+			
+				
+	</div>
+
+							</div>
+						
+					<div class="columns main-columns">
+
+						<h1 class="article-title  with-tabs">Welcome</h1>
+						
+
+						<div id="body-content" class="second-column column main-column">
+
+																																			<section class="clear-block, main-content">
+								
+<article id="node-1" class="main-article node">
+
+
+
+
+
+
+
+
+  <div class="content">
+        <p><span>The Office of the Registrar is dedicated to providing service of the highest caliber to all of our <span>constituents</span> - current and former students, faculty, administrative staff, and the general public.&nbsp;</span></p>
+<p>The mission of the Office of the Registrar is to support the instructional activities of Brown University by providing essential enrollment, curricular, and student record services to the entire campus community with the highest degree of accuracy. We accomplish this by serving as custodian of all student records in accordance with university policies and government statutes as well as managing the student information system for all areas related to enrollment/registration, course information and scheduling, grading/transcript production, and ultimately degree clearance and certification. The Office of the Registrar strives to utilize technology-based solutions when possible to increase efficiencies and data integrity in these critical areas as well as support the overall needs of the academic community.</p>
+<p>The Registrar's Office is located on the third floor of Page-Robinson Hall, 69 Brown Street (on the corner of Brown and Waterman streets across from the Faunce House Arch).</p>
+<p><a href="https://www.brown.edu/about/administration/registrar/annual-report-2021-2022">2021-2022 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/annual-report-2020-2021" target="_blank">2020-2021 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/annual-report-2019-2020" target="_blank">2019-2020 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2018-2019%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" target="_blank" title="2018-2019 Office of the Registrar Annual Report">2018-2019 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2017-2018%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" target="_blank" title="2017-2018 Office of the Registrar Annual Report">2017-2018 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2016-2017%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" target="_blank" title="2016-2017 Office of the Registrar Annual Report">2016-2017 Office of the Registrar Annual Report</a></p>
+<p><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2015-2016%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" target="_blank" title="2015-2016 Office of the Registrar Annual Report">2015-2016 Office of the Registrar Annual Report</a></p>
+<h2></h2>
+<fieldset class="fieldgroup group-related-files"><legend>Related Files</legend><div class="field field-type-filefield field-field-related-files">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="filefield-file"><img class="filefield-icon field-icon-application-pdf"  alt="application/pdf icon" src="https://www.brown.edu/about/administration/registrar/sites/all/modules/filefield/icons/application-pdf.png" /><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2018-2019%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" type="application/pdf; length=936346" title="2018-2019 Office of the Registrar Annual Report.pdf">2018-2019 Office of the Registrar Annual Report</a></div>        </div>
+              <div class="field-item even">
+                    <div class="filefield-file"><img class="filefield-icon field-icon-application-pdf"  alt="application/pdf icon" src="https://www.brown.edu/about/administration/registrar/sites/all/modules/filefield/icons/application-pdf.png" /><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2017-2018%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" type="application/pdf; length=925039" title="2017-2018 Office of the Registrar Annual Report.pdf">2017-2018 Office of the Registrar Annual Report</a></div>        </div>
+              <div class="field-item odd">
+                    <div class="filefield-file"><img class="filefield-icon field-icon-application-pdf"  alt="application/pdf icon" src="https://www.brown.edu/about/administration/registrar/sites/all/modules/filefield/icons/application-pdf.png" /><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2016-2017%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" type="application/pdf; length=641031" title="2016-2017 Office of the Registrar Annual Report.pdf">2016-2017 Office of the Registrar Annual Report</a></div>        </div>
+              <div class="field-item even">
+                    <div class="filefield-file"><img class="filefield-icon field-icon-application-pdf"  alt="application/pdf icon" src="https://www.brown.edu/about/administration/registrar/sites/all/modules/filefield/icons/application-pdf.png" /><a href="https://www.brown.edu/about/administration/registrar/sites/brown.edu.about.administration.registrar/files/uploads/2015-2016%20Office%20of%20the%20Registrar%20Annual%20Report.pdf" type="application/pdf; length=3634808" title="2015-2016 Office of the Registrar Annual Report.pdf">2015-2016 Office of the Registrar Annual Report</a></div>        </div>
+        </div>
+</div>
+</fieldset>
+  </div>
+
+	
+
+
+
+  <div class="clear-block">
+    <div class="meta">
+
+			
+	    
+		</div><!-- end .meta -->
+	</div>
+
+</article>
+							</section>
+																				</div><!-- end .second-column -->
+						
+													<div id="sidebar-left" class="sidebar first-column column">
+								
+	
+	<div id="block-menu-primary-links" class="clear-block block block-menu ">
+	
+		
+		<div class="content"><ul class="menu"><li class="leaf first menu-academiccalendar"><a href="/about/administration/registrar/academic-calendar" title="Academic Calendar">Academic Calendar</a></li>
+<li class="collapsed menu-academicrecords"><a href="/about/administration/registrar/academic-records" title="Academic Records">Academic Records</a></li>
+<li class="leaf menu-universitybulletin"><a href="/about/administration/registrar/university-bulletin" title="University Bulletin">University Bulletin</a></li>
+<li class="collapsed menu-courseenrollment"><a href="/about/administration/registrar/course-enrollment" title="Course Enrollment">Course Enrollment</a></li>
+<li class="collapsed menu-degreeguidelines"><a href="/about/administration/registrar/degree-guidelines-0" title="Degree Guidelines">Degree Guidelines</a></li>
+<li class="leaf menu-finalexams"><a href="/about/administration/registrar/final-exams" title="Final Exams">Final Exams</a></li>
+<li class="collapsed menu-facultystaffresources"><a href="/about/administration/registrar/facultystaff-resources" title="Faculty/Staff Resources">Faculty/Staff Resources</a></li>
+<li class="collapsed menu-universityschedulingoffice"><a href="/about/administration/registrar/university-scheduling-office" title="University Scheduling Office">University Scheduling Office</a></li>
+<li class="collapsed menu-classroomassignmentsamplocations"><a href="/about/administration/registrar/classroom-assignments-locations" title="Classroom Assignments &amp; Locations">Classroom Assignments &amp; Locations</a></li>
+<li class="collapsed last menu-contactus"><a href="/about/administration/registrar/contact-us" title="Contact Us">Contact Us</a></li>
+</ul></div>
+			
+				
+	</div>
+
+
+	
+	<div id="gateways" class="clear-block block block-brown_gateway ">
+	
+	<h2>Gateways</h2>	
+		<div class="content">
+<ul class='gateway gateway-links'>
+<li class='gateway-link'><a href='/about/administration/registrar/gateway/for-students'>For Students</a></li><li class='gateway-link'><a href='/about/administration/registrar/gateway/for-faculty'>For Faculty</a></li><li class='gateway-link'><a href='/about/administration/registrar/gateway/for-staff'>For Staff</a></li></ul></div>
+			
+				
+	</div>
+
+
+	
+	<div id="block-printshare-0" class="clear-block block block-printshare ">
+	
+		
+		<div class="content">
+<div id="print-share-png" class="page-tools-png">
+	<a class="print-this-page" href="javascript:if(window.print)window.print()">Print this Page</a>
+	<!-- AddThis Button BEGIN -->
+	<a class="share-this-page addthis_button" href="//www.addthis.com/bookmark.php?v=300&amp;pubid=xa-4f73121e798f85c1">Share this Page</a>
+	<script>
+		var addthis_config = { ui_508_compliant: true, ui_click: true }
+	</script>
+	<script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4f73121e798f85c1"></script>
+	<!-- AddThis Button END -->
+</div><!-- end #print-share --></div>
+			
+				
+	</div>
+
+
+	
+	<div id="block-views-contact_information-block_1" class="clear-block block block-views ">
+	
+		
+		<div class="content"><div class="view view-contact-information view-id-contact_information view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div class="vcard">
+	<div class="adr">
+		<div class="org">
+			<div class="organization-unit">Office of the Registrar</div>
+ <div class="organization-name">Brown University</div>
+		</div>
+			<div class="post-office-box">Box K</div>
+<div class="street-address">69 Brown Street
+		<br />Page-Robinson Hall, 3rd floor</div>
+		<span class="locality">Providence</span>, <abbr class="region" title="Rhode Island">RI</abbr> <span class="postal-code">02912</span>
+	</div>
+	<div class="tel"><span class="type">Phone</span> <span class="value">401-863-2500</span></div>
+	<div class="tel"><span class="type">Fax</span> <span class="value">401-863-7542</span></div>
+	<div><a class="email" href="/cdn-cgi/l/email-protection#f5a790929c8681879487b597879a829bdb909180"><span class="__cf_email__" data-cfemail="ecbe898b859f989e8d9eac8e9e839b82c2898899">[email&#160;protected]</span></a></div>
+</div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+			
+				
+	</div>
+
+							</div>
+						
+					</div><!-- end .columns -->
+
+											<div id="sidebar-right" class="sidebar third-column column">
+							
+	
+	<div id="block-brown_livewhale_events-eventblock-161" class="clear-block block block-brown_livewhale_events ">
+	
+		
+		<div class="content"><section>
+
+<div id="lw_widget_41bcacd5" class="lw_widget lw_widget_type_events lw_widget_events lw_widget_id_161 lw_widget_academic_calendar lw_compact bg-gray" data-rss-title="Events: Academic Calendar" data-rss-url="https://events.brown.edu/live/rss/events/is_remote/true/header/Academic%20Calendar/max/10/group/Academic%20Calendar/hide_repeats/true/hide_date_headers/true/show_calendar_link/academic-calendarviewall/class/lw_compact%20bg-gray">
+  <h3>Academic Calendar</h3>
+  <ul class="lw_widget_results lw_widget_results_events"><li class="lw_item_1">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">1</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216183-deadline-for-undergraduates-to-request-a-personal" target="_blank">Deadline for undergraduates to request a personal leave (including employment and military leave) or to request Full-time Study Away status for Fall. Any Full-time Study Away approved by the Study Away Review Committee for which the Registrar does not rec</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_2">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">1</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/245721-theses-of-candidates-for-masters-and-phd-degrees" target="_blank">Theses of candidates for Masters and Ph.D. degrees in May due.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_3">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">2</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/236727-registration-period-for-summer-courses-for-brown" target="_blank">Registration period for Summer courses for Brown undergraduates re-opens at 9:00 a.m.EDT and remains open until Wednesday June 21 at 5:00 p.m. EDT.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_4">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">5</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/246728-seniors-honors-recommendations-from-academic" target="_blank">Seniors: Honors Recommendations from academic departments due to the Office of the Registrar. Please have your work in your committee&rsquo;s hands well before this date in accordance with their guidelines (5:00 p.m. EDT deadline).</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_5">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">9</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216166-classes-end-for-courses-not-observing-the-reading" target="_blank">Classes end for courses not observing the Reading Period. Last day to drop a course (5:00 p.m. EDT deadline) or to request an incomplete from an instructor.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_6">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">9</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/244724-last-day-to-initiate-a-course-performance-report" target="_blank">Last day to initiate a Course Performance Report via ASK.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_7">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">9</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216167-reading-period-ends" target="_blank">Reading Period ends.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_8">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">9</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216168-ug-certificates-last-day-for-students-in-their" target="_blank">UG CERTIFICATES: Last day for students in their ante-penultimate (typically 6th) semester to declare an undergraduate certificate in ASK.</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_9">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">9</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216169-ug-concentrations-last-day-for-students-to-declare" target="_blank">UG CONCENTRATIONS: Last day for students to declare second or third concentrations in ASK for students in their penultimate semester (typically the 7th semester) who are declaring a second/third concentration (5:00 p.m. EDT deadline).</a></h5>
+        </div>
+      </div>
+    </li>
+    <li class="lw_item_10">
+      <div class="lw_compact_content">
+        <div class="lw_calendar_date">
+          <div class="cal_date">
+            <div class="cal_date_month">May</div>
+            <div class="cal_date_day">10</div>
+          </div>
+        </div>
+        <div class="lw_compact_info">
+          <div class="lw_events_time">
+            <span class="lw_time_allday">All Day</span>
+          </div>
+          <h5 class="lw_events_title">
+            <a href="http://events.brown.edu/academic-calendar/event/216170-last-day-for-approved-7th-or-penultimate-semester" target="_blank">Last day for approved 7th (or penultimate) semester undergraduates in eligible concentrations to submit writing completed in the concentration in ASK to complete part II of the writing requirement. Concentration advisors must approve submitted writing in </a></h5>
+        </div>
+      </div>
+    </li>
+  </ul><div class="lw_calendar_link">
+    <a href="https://events.brown.edu/academic-calendar/view/all/" rel="nofollow" target="_blank">View full calendar &gt;</a>
+  </div>
+  <span title='&lt;widget type="events"&gt;&lt;arg id="is_remote"&gt;true&lt;/arg&gt;&lt;arg id="header"&gt;Academic Calendar&lt;/arg&gt;&lt;arg id="max"&gt;10&lt;/arg&gt;&lt;arg id="group"&gt;Academic Calendar&lt;/arg&gt;&lt;arg id="hide_repeats"&gt;true&lt;/arg&gt;&lt;arg id="hide_date_headers"&gt;true&lt;/arg&gt;&lt;arg id="format" encoded="true"&gt;s0nJLFNIzkksLrZVyimPT87PLUhMLgHSeSWpeSVKdlwKCjZoShJzUvNSEoviUxJLUpXsqoF8MLPWRh+oEJsGqJmZeWn52AxMLQPaVBxfkpkLMg5EIRmVYYpNZUkORCmQBqrNMAUrheqB0AA=&lt;/arg&gt;&lt;arg id="show_calendar_link"&gt;/academic-calendar/view/all&lt;/arg&gt;&lt;arg id="class"&gt;lw_compact bg-gray&lt;/arg&gt;&lt;/widget&gt;' class="lw_widget_syntax lw_hidden" data-widget-id="161"></span>
+</div>
+</section></div>
+			
+				
+	</div>
+
+						</div><!-- end .third-column -->
+							
+				</div><!-- end .marginator -->
+			</div><!-- end #content -->
+
+
+	
+
+		</div><!-- End #wrapper -->
+	
+		<footer id="footer">
+			<div class="marginator">
+				<div id="brown-footer" class="clear-block block block-block ">
+					<h4>Brown University</h4>
+					<div class="content">
+						<p><span class="city-state-country">Providence, Rhode Island 02912, USA</span><br />
+						<span class="telephone">Phone: 401-863-1000</span><br />
+						<span class="maps-contact"><a href="http://www.brown.edu/Facilities/Facilities_Management/maps/#building/">Maps</a> &amp; <a href="http://www.brown.edu/about/visit/driving-directions">Directions</a> / <a href="http://www.brown.edu/contact">Contact Us</a>
+								/ <a href="https://www.brown.edu/website-accessibility/">Accessibility</a>
+							</span><br />
+						<span class="copyright">© 2023 Brown University</span></p>
+						
+						<p class="social-links">Connect: <a href="http://www.brown.edu/about/social-media/" title="Get Connected to the Brown Community"><span class="__cf_email__" data-cfemail="84d7ebe7ede5e8c4c6f6ebf3ea">[email&#160;protected]</span></a></p>
+					</div>
+				</div>
+
+				<div id="brown-resources" class="clear-block block block-menu ">
+					<h5>Resources</h5>	
+					<div class="content">
+						<ul class="menu">
+							<li class="leaf first dhtml-menu "><a href="/a-to-z" title="" id="dhtml_menu-672">A to Z Index</a></li>
+							<li class="leaf  dhtml-menu "><a href="http://careers.brown.edu" title="" id="dhtml_menu-670">Career Opportunities</a></li>
+							<li class="leaf  dhtml-menu "><a href="http://www.gifts.brown.edu/" title="" id="dhtml_menu-669">Make a Gift</a></li>
+							<li class="leaf last dhtml-menu "><a href="http://directory.brown.edu" title="" id="dhtml_menu-671">People Directory</a></li>
+						</ul>
+					</div>
+				</div>
+
+				
+	
+	<div id="related-offices" class="clear-block block block-menu ">
+	
+	<h5>Related Offices</h5>	
+		<div class="content"><ul class="menu"><li class="leaf first menu-admission"><a href="http://www.brown.edu/admission/undergraduate/" title="Admission">Admission</a></li>
+<li class="leaf menu-deanofthecollege"><a href="http://www.brown.edu/academics/college/" title="">Dean of the College</a></li>
+<li class="leaf menu-alpertmedicalschool"><a href="http://brown.edu/academics/medical/" title="Alpert Medical School">Alpert Medical School</a></li>
+<li class="leaf menu-bulletinoftheuniversity"><a href="https://bulletin.brown.edu" title="Bulletin of the University">Bulletin of the University</a></li>
+<li class="leaf menu-bursar"><a href="http://www.brown.edu/about/administration/bursar/" title="Bursar">Bursar</a></li>
+<li class="leaf menu-financialaid"><a href="http://www.brown.edu/about/administration/financial-aid/" title="Financial Aid">Financial Aid</a></li>
+<li class="leaf menu-graduateschool"><a href="http://www.brown.edu/academics/gradschool/" title="Graduate School">Graduate School</a></li>
+<li class="leaf last menu-schoolofprofessionalstudies"><a href="http://www.brown.edu/professional/" title="School of Professional Studies">School of Professional Studies</a></li>
+</ul></div>
+			
+				
+	</div>
+
+
+	
+	<div id="student-links" class="clear-block block block-menu ">
+	
+	<h5>Student Links</h5>	
+		<div class="content"><ul class="menu"><li class="leaf first menu-coursesbrown"><a href="https://cab.brown.edu" title="Courses@Brown"><span class="__cf_email__" data-cfemail="adeec2d8dfdec8deedefdfc2dac3">[email&#160;protected]</span></a></li>
+<li class="leaf menu-bannervideotutorials"><a href="http://brown.edu/go/bannerhelp" title="Banner Video Tutorials">Banner Video Tutorials</a></li>
+<li class="leaf menu-bannerweb"><a href="https://selfservice.brown.edu/ss/twbkwbis.P_GenMenu?name=homepage" title="Banner Web">Banner Web</a></li>
+<li class="leaf menu-studentinformationrightsferpa"><a href="http://brown.edu/about/administration/registrar/student-information-rightsferpa" title="Student Information Rights - FERPA">Student Information Rights - FERPA</a></li>
+<li class="leaf menu-voterregistration"><a href="http://libguides.brown.edu/brownvotes" title="Voter Registration">Voter Registration</a></li>
+<li class="leaf last menu-askadvisingsidekick"><a href="https://ask.brown.edu/home/" title="ASK - Advising Sidekick">ASK - Advising Sidekick</a></li>
+</ul></div>
+			
+				
+	</div>
+
+			</div>
+		</footer>
+
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="/about/administration/registrar/sites/brown.edu.about.administration.registrar/themes/ursa_tabula/j/ursa-minor.js"></script>
+
+  <script type="text/javascript" src="/about/administration/registrar/sites/all/modules/custom/brown_google_cse/brown_google_cse.js?y"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-34495025-1"]);_gaq.push(['othertracker._setAccount', 'UA-69450-1']);_gaq.push(['othertracker._trackPageview']);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+	
+  </body>
+</html>
