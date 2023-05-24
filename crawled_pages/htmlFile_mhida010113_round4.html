@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+<title>Annual Report | Extension and International Programs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Matthew Howell" />
+<meta name="description" content="fullPage continuous scrolling demo." />
+<meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+<meta name="Resource-type" content="Document" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124036737-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124036737-8');
+</script>
+	
+<link rel="stylesheet" href="https://extension.fullerton.edu/_resources/css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="https://ueestatic.fullerton.edu/static/assets/css/bootstrap4-carousel.css" type="text/css"/>
+<link rel="stylesheet" href="https://ueestatic.fullerton.edu/static/assets/css/eip-marcom.css?v=3" type="text/css"/>
+<link rel="stylesheet" href="https://ueestatic.fullerton.edu/static/assets/css/eip-custom.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="fullpage.css" />
+<link rel="stylesheet" type="text/css" href="examples.css" />
+
+<!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,600&display=swap');
+#de { display: none; }
+.text-center {
+	text-align: center !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.title img { margin-bottom: 60px; }
+.title h1 {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 10px;
+	color: #00274c !important;
+	line-height: 1.4;
+}
+.title h1 span {
+	font-size: 130px;
+	line-height: 1;
+	font-weight: 600 !important;
+	margin-top: 4px;
+}
+.font-bungee, h2.section-title { font-weight: normal !important; }
+h1 span, .h1 span {
+	font-size: 22px;
+	letter-spacing: 1px;
+	display: block;
+	margin-left: 3px;
+}
+.thumbnails { margin-top: 0px; }
+.thumbnails [class^="col-"], .thumbnails > [class^=" col-"] { padding:30px; }
+.thumbnails [class^="col-"] a, .thumbnails > [class^=" col-"] a { position:relative; display: block; }
+.thumbnails h2 {
+	color: #333;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.thumbnails span {
+	    position: absolute;
+    bottom: 1rem;
+    font-size: 4.1rem;
+    color: #fff;
+    /* font-family: georgia, times, cursive !important; */
+    font-family: 'Besley', serif !important;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+    font-weight: 200 !important;
+    z-index: 1;
+    background: url(https://ueestatic.fullerton.edu/static/assets/images/bg-ribbon-navy-550.png) no-repeat;
+    background-size: contain;
+    width: 330px;
+    height: 102px;
+    text-indent: 2.6rem;
+    left: 0rem;
+    line-height: 1.53;
+}
+html body {
+	padding: 70px !important;
+	background: #fff !important;
+}
+.title h1 { /*font-family: 'Crimson Text' !important;*/ }
+.title h1 span, .title h2, .title h2 span, .thumbnails h2 { font-family: proxima-nova, Arial, serif !important }
+.row img {
+	height: 450px;
+	object-fit: cover;
+	/*border-radius: 14px;*/
+}
+.fp-tableCell { vertical-align: top; }
+.fp-section.fp-table, .fp-slide.fp-table {
+	display: /*table;*/ block;
+	/*table-layout: fixed;*/
+	width: 46%;
+	float: left;
+	margin: 2%;
+	height: 46% !important;
+}
+.section {
+	background-size: cover;
+	text-align: right;
+}
+.section fp-tableCell {
+	margin: 4%;
+	padding: 4%;
+}
+h2 {
+	font-size: 1.8rem;
+	margin: 20px 0;
+	text-align: center;
+}
+#slide-01 { background-image: url("https://ueestatic.fullerton.edu/static/assets/images/campus-02.jpg"); }
+#slide-02 { background-image: url("https://ueestatic.fullerton.edu/static/assets/images/degree-bg.jpg"); }
+
+@media screen and (max-width: 768px) {
+html body { padding: 20px !important; }
+.row img { height: auto; }
+.title img {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.title h1 {
+	font-size: 18px !important;
+	letter-spacing: 7px;
+}
+.title h1 span {
+	margin-top: 20px;
+	font-size: 70px;
+	line-height: 0.8;
+	font-weight: 600 !important;
+}
+.thumbnails span {
+    font-size: 2.7rem; 
+    width: 164px;
+    height: 74px;
+    text-indent: -12px;
+    left: 0rem;
+}
+</style>
+</head>
+<body><div class="title text-center"><img class="img-eip-logo mtop20" src="https://ueestatic.fullerton.edu/static/assets/images/logo-calstatefullerton.png" alt="Cal State Fullerton Logo" width="470px" />
+<h1 class="mtop30">Extension and International Programs <span class="font-bungee">Annual Impact Reports</span></h1>
+</div>
+<div class="thumbnails row">
+<div class="col-md-4"><a class="img-tint" href="https://extension.fullerton.edu/annual-impact-report/2022/" target="_blank" rel="noopener"><img src="https://extension.fullerton.edu/annual-impact-report/2022/images/tuffy-holding-hand.jpg" alt="Tuffy giving high five to a student" /><span>2022</span></a></div>
+<div class="col-md-4"><a class="img-tint" href="https://extension.fullerton.edu/annual-impact-report/2021/" target="_blank" rel="noopener"><img src="https://ueestatic.fullerton.edu/static/assets/images/commencement-02.jpg" alt="a happy grad with her daughter" /><span>2021</span></a></div>
+<div class="col-md-4"><a class="img-tint" href="https://extension.fullerton.edu/annual-impact-report/2020/" target="_blank" rel="noopener"><img src="https://ueestatic.fullerton.edu/static/assets/images/campus-02.jpg" alt="a student wearing mask under a tree" /><span>2020</span></a></div>
+</div>
+<p>
+<script src="https://ueestatic.fullerton.edu/static/assets/js/jquery-1.10.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://extension.fullerton.edu/_resources/js/bootstrap.min.js"></script>
+<script src="https://ueestatic.fullerton.edu/static/assets/js/bootstrap3-carousel.js"></script>
+<script type="text/javascript" src="/annual-impact-report/fullpage.js"></script>
+<script type="text/javascript" src="/annual-impact-report/examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        lazyLoad: true
+    });
+</script>
+</p><a id="de" rel="nofollow" href="https://a.cms.omniupdate.com/11/?skin=csufullerton&amp;account=EIP&amp;site=eip&amp;action=de&amp;path=/annual-impact-report/index.html">Â©</a></body>
+</html>
