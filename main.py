@@ -12,6 +12,7 @@ def crawl(seedFileName, max_pages, levels, output_dir):
     # reads the seed file
     with open(seedFileName, 'r') as seed:
         urls = seed.readlines()
+ 
 
     # opens the text file where we output the crawled links to ensure we didn't 
     # crawl the same page twice
