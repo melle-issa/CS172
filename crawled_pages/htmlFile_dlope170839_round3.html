@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Developing with user roles and capabilities | Learn WordPress </title>
+<link rel='preload' href='https://learn.wordpress.org/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2' as='font' crossorigin='crossorigin' type='font/woff2' />
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Learn WordPress &raquo; Feed" href="https://learn.wordpress.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Learn WordPress &raquo; Comments Feed" href="https://learn.wordpress.org/comments/feed/" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/learn.wordpress.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3-alpha-55700"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css' href='https://s.w.org/wp-includes/css/dashicons.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://learn.wordpress.org/wp-includes/css/admin-bar.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<style id='admin-bar-inline-css' type='text/css'>
+
+			.admin-bar {
+				position: inherit !important;
+				top: auto !important;
+			}
+			.admin-bar .goog-te-banner-frame {
+				top: 32px !important
+			}
+			@media screen and (max-width: 782px) {
+				.admin-bar .goog-te-banner-frame {
+					top: 46px !important;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.admin-bar .goog-te-banner-frame {
+					position: absolute;
+				}
+			}
+		
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/block-library/style.css?ver=15.4.0' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='sensei-pro-shared-module-sensei-fontawesome-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-pro/assets/dist/shared-module/sensei-fontawesome.css?ver=5dec0aae88900d842d47' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/components/style.css?ver=15.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='sensei-interactive-blocks-styles-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-pro/assets/dist/interactive-blocks/interactive-blocks-styles.css?ver=1b5d6845bde5a4627a75' type='text/css' media='all' />
+<style id='wporg-language-suggest-style-inline-css' type='text/css'>
+.wp-block-wporg-language-suggest{background-color:#eff2ff;color:#1e1e1e;font-size:12px;line-height:1;text-align:center}.wp-block-wporg-language-suggest>*{padding:10px 4px}
+</style>
+<style id='wporg-latest-news-style-inline-css' type='text/css'>
+.wporg-latest-news{list-style:none;margin:0;padding:0}.wporg-latest-news li:not(:last-child){padding-bottom:var(--wp--custom--latest-news--spacing,16px)}.wporg-latest-news li a{text-decoration:none}.wporg-latest-news li a:hover{text-decoration:underline}.wporg-latest-news li>a{color:var(--wp--custom--latest-news--link--color);display:block;font-family:var(--wp--custom--latest-news--title--font-family);font-size:var(--wp--custom--latest-news--title--font-size,24px);line-height:var(--wp--custom--latest-news--title--line-height);margin-bottom:var(--wp--custom--latest-news--link--spacing,4px)}.wporg-latest-news__details{font-size:var(--wp--custom--latest-news--link--details-font-size,14px)}.wporg-latest-news__details>:not(:last-child){margin-right:4px}.wporg-latest-news__category{text-transform:uppercase}
+</style>
+<style id='wporg-notice-style-inline-css' type='text/css'>
+.wp-block-wporg-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--acid-green-3);--wp--custom--wporg-notice--color--text:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-notice.is-info-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--blueberry-4)}.wp-block-wporg-notice.is-alert-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--lemon-3)}.wp-block-wporg-notice.is-warning-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--pomegrade-3)}.wp-block-wporg-notice{background-color:var(--wp--custom--wporg-notice--color--background);color:var(--wp--custom--wporg-notice--color--text);display:grid;gap:.5em;grid-template-columns:auto 1fr;padding:1.25em}.wp-block-wporg-notice>*{align-self:start}.wp-block-wporg-notice p:first-child{margin-block-start:0}.wp-block-wporg-notice p:last-child{margin-block-end:0}.wp-block-wporg-notice a:active,.wp-block-wporg-notice a:focus,.wp-block-wporg-notice a:hover,.wp-block-wporg-notice a:link,.wp-block-wporg-notice a:visited{color:var(--wp--custom--wporg-notice--color--text)}.wp-block-wporg-notice.alignleft,.wp-block-wporg-notice.alignright{max-width:calc(var(--wp--style--global--content-size)*.66)}.wp-block-wporg-notice__icon{align-self:flex-start;background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/tip.svg);background-position:50%;background-repeat:no-repeat;background-size:24px 24px;display:flex;height:1.875em;width:24px}.is-info-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/info.svg)}.is-alert-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/alert.svg)}.is-warning-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/warning.svg)}.wp-block-wporg-notice__content{align-self:center}
+</style>
+<style id='wporg-site-breadcrumbs-style-inline-css' type='text/css'>
+.wp-block-wporg-site-breadcrumbs{align-items:center;display:flex}.wp-block-wporg-site-breadcrumbs a{color:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-site-breadcrumbs a:hover{text-decoration-line:underline}.wp-block-wporg-site-breadcrumbs>span:not(:first-child){align-items:center;display:flex;margin-top:0}.wp-block-wporg-site-breadcrumbs>span:not(:first-child):before{content:"/";display:inline-block;font-weight:400;margin:0 .5rem}.wp-block-wporg-site-breadcrumbs .is-current-page{font-weight:700}
+</style>
+<style id='wporg-table-of-contents-style-inline-css' type='text/css'>
+@media (min-width:890px){#wp--skip-link--target,.is-toc-heading{scroll-margin-top:var(--wp-local-header-offset,0)}}.is-toc-heading a{--local--icon-size:24px;color:inherit;display:inline-block;padding-right:calc(var(--local--icon-size) + .1em)}.is-toc-heading a,.is-toc-heading a:after{text-decoration:none!important}.is-toc-heading a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.083 17.639H8.444a5.194 5.194 0 1 1 0-10.389h1.64v1.5H8.443a3.694 3.694 0 0 0 0 7.389h1.641v1.5ZM13.917 7.25h1.639a5.194 5.194 0 0 1 0 10.39h-1.641v-1.5h1.642a3.694 3.694 0 0 0 0-7.39h-1.642v-1.5Zm-4.584 6.084h5.334v-1.5H9.333v1.5Z' fill='%233858E9'/%3E%3C/svg%3E");background-position:100%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;height:var(--local--icon-size);margin-right:calc(var(--local--icon-size)*-1 - .1em);opacity:0;vertical-align:baseline;width:calc(var(--local--icon-size) + .1em)}.is-toc-heading a:focus:after,.is-toc-heading a:hover:after,.is-toc-heading:focus a:after{opacity:1}.is-toc-heading:focus,.is-toc-heading:focus-visible{outline:none}.is-toc-heading:target{border-left:2px solid var(--wp--preset--color--blueberry-1);padding-left:8px}
+</style>
+<style id='wporg-two-factor-settings-style-inline-css' type='text/css'>
+#main{margin-bottom:2rem}.wp-block-wporg-two-factor-settings{position:relative}.wp-block-wporg-two-factor-settings h3{clear:none;font-size:14px}.bbp-single-user .wp-block-wporg-two-factor-settings input[type=email],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=number],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=password],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=search],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=text]{font-family:Open Sans,sans-serif;font-size:14px;padding:6px 10px}.wp-block-wporg-two-factor-settings .components-button{margin-right:20px}.wporg-2fa__navigation{justify-content:center!important;padding:24px 0!important;position:relative}.wporg-2fa__navigation a{align-items:center;display:flex;left:24px;position:absolute}.wporg-2fa__navigation svg{fill:#4ca6cf}.wporg-2fa__navigation h3{margin:unset;text-transform:capitalize}.wporg-2fa__token{letter-spacing:.3em}.components-notice{margin-left:0;margin-right:0}.components-notice.is-error,.components-notice.is-success{margin:0}.components-notice .components-notice__content{align-items:center;display:flex;gap:8px}.components-notice .components-notice__content svg{flex-shrink:0}.wporg-2fa__account-status .wporg-2fa__status-card:focus-within,.wporg-2fa__account-status .wporg-2fa__status-card:hover{z-index:1}.wporg-2fa__account-status .wporg-2fa__status-card a{display:block;text-decoration:none}.wporg-2fa__account-status .wporg-2fa__status-card a:focus,.wporg-2fa__account-status .wporg-2fa__status-card a:hover{outline:var(--wp-admin-border-width-focus) solid var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline-offset:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body{grid-column-gap:10px;display:grid;grid-template-areas:"status header      open" "status description open";grid-template-columns:min-content auto min-content;padding:18px 14px}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-icon{-ms-grid-row-span:2;align-self:center;grid-area:status;-ms-grid-column:1;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body h3{align-self:end;color:#1a1a1a;font-size:1.1em;grid-area:header;-ms-grid-column:3;-ms-grid-row:1;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body p{align-self:start;color:#757575;grid-area:description;-ms-grid-column:3;-ms-grid-row:2;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-card-open{-ms-grid-row-span:2;align-self:center;grid-area:open;-ms-grid-column:5;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-icon.is-enabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-ok{fill:#4ab866}.wporg-2fa__account-status .wporg-2fa__status-icon.is-pending{fill:#f0b849}.wporg-2fa__account-status .wporg-2fa__status-icon.is-disabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-error{fill:#d94f4f}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container,.wporg-2fa__password .wporg-2fa__password_container{align-items:flex-start;justify-content:flex-start;position:relative;width:-moz-fit-content;width:fit-content}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container input,.wporg-2fa__password .wporg-2fa__password_container input{padding-right:35px}.bbp-single-user .wporg-2fa__password .wporg-2fa__show-password,.wporg-2fa__password .wporg-2fa__show-password{height:31px;margin:0;padding:0 5px;position:absolute;right:1px;top:24px}.wporg-2fa__email .components-notice.actions-on-right>div{display:flex}.wporg-2fa__email .components-notice.actions-on-right>div>p{flex-grow:1;margin:initial}.wporg-2fa__totp_setup-container{position:relative}.wporg-2fa__totp_setup-container p{margin-top:unset}.wporg-2fa__totp_setup-container>.components-button{bottom:-10px;position:absolute;right:0;text-decoration:none!important}.wporg-2fa__totp_setup-container>.components-notice{width:100%}.wporg-2fa__totp_setup-container .wporg-2fa__totp_setup-instruction{align-self:center;margin-bottom:32px;margin-top:revert;max-width:550px}.wporg-2fa__totp_setup-method-container{align-self:center;max-width:360px}.wporg-2fa__totp_setup-method-container .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__totp_setup-method-container p{margin:0}@media screen and (max-width:480px){.wporg-2fa__totp_setup-method-container{max-width:unset;width:100%}}.wporg-2fa__setup-form-container{align-self:center;text-align:center;width:-moz-fit-content;width:fit-content}.wporg-2fa__setup-form-container>.components-notice.is-error{height:0;margin-bottom:-32px;opacity:0}.wporg-2fa__setup-form-container>.components-notice.is-error.is-shown{height:auto;margin-bottom:16px;opacity:1;transition:opacity .5s ease}@media screen and (max-width:480px){.wporg-2fa__setup-form-container{width:100%}}.wporg-2fa__qr-code{height:225px;text-align:center}#bbpress-forums .wporg-2fa__qr-code>a{display:inline-block}#bbpress-forums .wporg-2fa__qr-code>a:focus,#bbpress-forums .wporg-2fa__qr-code>a:hover{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__manual{align-self:center;display:flex;flex-direction:column;margin-bottom:16px;max-width:360px}.wporg-2fa__manual,.wporg-2fa__manual .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__manual code{font-family:IBM Plex Mono;font-size:15px;font-style:normal;font-weight:400;line-height:20px;margin-top:32px}.wporg-2fa__submit-btn-container{display:flex;justify-content:space-between;width:100%}.wporg-2fa__submit-btn-container *{flex:1;justify-content:center}.wporg-2fa__submit-btn-container button+button{margin-right:0!important}.wporg-2fa__enabled-status{color:#4ab866;text-transform:uppercase}.wporg-2fa__setup-form{align-self:center;display:flex;flex-direction:column;justify-content:center;text-align:left}.wporg-2fa__setup-form>*{margin-bottom:16px}@media screen and (max-width:480px){.wporg-2fa__setup-form{width:100%}}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list{background-color:#ddd;margin:1em 0;padding:15px 20px}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list ol{-moz-column-count:2;-moz-column-width:110px;columns:110px 2;margin:0}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li::marker{color:#757575}.wporg-2fa__backup-codes .components-notice{margin:0 0 1em}#bbpress-forums .wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li{list-style-position:inside;list-style-type:decimal}#bbpress-forums .wporg-2fa__progress-bar,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar,.wporg-2fa__progress-bar{--color-enabled:#0475c4;--color-disabled:#ccc;--color-disabled-text:#757575;margin:0 -24px;position:relative}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps,.wporg-2fa__progress-bar .wporg-2fa__setup-steps{display:flex;justify-content:space-evenly;position:relative;z-index:2}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li{text-align:center}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps svg{border:1px solid;border-radius:30px;box-sizing:content-box;padding:15px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled{color:var(--color-enabled);font-weight:700}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg{fill:#fff;background-color:var(--color-enabled);border-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled{color:var(--color-disabled-text)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg{fill:var(--color-disabled);background-color:#fff;border-color:var(--color-disabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators{display:flex;justify-content:space-between;position:absolute;top:27px;width:100%;z-index:1}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li{flex-basis:33%;flex-grow:1;flex-shrink:1;height:3px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled{background-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled{background-color:var(--color-disabled)}.wporg-2fa__global-notice{position:absolute;right:0;top:-60px;z-index:2}.wporg-2fa__global-notice .components-snackbar__content,.wporg-2fa__global-notice.components-snackbar{cursor:auto}.wporg-2fa__global-notice .components-snackbar__content{position:relative}.wporg-2fa__global-notice .components-snackbar .components-snackbar__icon,.wporg-2fa__global-notice .components-snackbar__icon{fill:#4ab866;left:-34px!important;position:absolute;top:-6px!important;width:30px}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary{box-shadow:inset 0 0 0 1px var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));text-decoration:none}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary:not(:disabled):focus{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__auto-tabbing-input{display:flex}.wporg-2fa__auto-tabbing-input input{border:1px solid #949494;border-radius:2px;height:40px;padding:0!important;text-align:center;width:40px!important}.wporg-2fa__auto-tabbing-input input:focus{outline-color:#2271b1}.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:24px}@media screen and (max-width:767px){.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:auto}}.wporg-2fa__auto-tabbing-input.is-error input{border:1px solid #d94f4f!important;box-shadow:unset!important}.wporg-2fa__auto-tabbing-input.is-error input:focus{outline:unset}
+
+</style>
+<link rel='stylesheet' id='details-summary-block-styles-css' href='https://learn.wordpress.org/wp-content/plugins/details-summary-block/src/editor.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://learn.wordpress.org/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://learn.wordpress.org/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='lesson-plan-actions-style-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/style-lesson-plan-actions.css?ver=1665974830' type='text/css' media='all' />
+<link rel='stylesheet' id='lesson-plan-details-style-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/style-lesson-plan-details.css?ver=1665974830' type='text/css' media='all' />
+<link rel='stylesheet' id='course-data-style-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/style-course-data.css?ver=1669945924' type='text/css' media='all' />
+<link rel='stylesheet' id='workshop-details-style-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/style-workshop-details.css?ver=1665974830' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/3rd-party/selectWoo/css/selectWoo.min.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sensei-theme-blocks-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/css/sensei-theme-blocks.css?ver=55e839e2eb0d94b6648a' type='text/css' media='all' />
+<link rel='stylesheet' id='sensei-sidebar-mobile-menu-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/css/sensei-course-theme/sidebar-mobile-menu.css?ver=3cd8985f0f22d55cf5f0' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://learn.wordpress.org/wp-includes/css/classic-themes.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link rel='stylesheet' id='mkaz-code-syntax-prism-css-css' href='https://learn.wordpress.org/wp-content/themes/pub/wporg-learn-2020?ver=1678937475' type='text/css' media='all' />
+<link rel='stylesheet' id='module-frontend-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/css/modules-frontend.css?ver=cca6dcd88abe8edd7799' type='text/css' media='all' />
+<link rel='stylesheet' id='pages-frontend-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/css/pages-frontend.css?ver=72db4891489e493cca34' type='text/css' media='all' />
+<link rel='stylesheet' id='sensei-frontend-css' href='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/css/frontend.css?ver=e5783435ca8a17993542' type='text/css' media='screen' />
+<link rel='stylesheet' id='wporg-learn-block-styles-css' href='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/style-block-styles.css?ver=1665974830' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-locale-switcher-css' href='https://learn.wordpress.org/wp-content/mu-plugins/pub/locale-switcher/build/style-index.css?ver=c8505bd3f3f0056808121052a9fbcc6e' type='text/css' media='screen' />
+<link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css2?family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B1%2C300%3B1%2C400%3B1%2C600&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-style-css' href='https://s.w.org/wp-content/themes/pub/wporg-learn-2020/css/style.css?ver=1680140798' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-print-style-css' href='https://learn.wordpress.org/wp-content/themes/pub/wporg-learn-2020/css/print.css?ver=1665974831' type='text/css' media='print' />
+<link rel='stylesheet' id='wporg-handbook-css-css' href='https://learn.wordpress.org/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20200121' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-fonts-css' href='https://learn.wordpress.org/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1675219972' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-header-footer-css' href='https://learn.wordpress.org/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1682524912' type='text/css' media='all' />
+<script type='text/javascript' id='media-video-jwt-bridge-js-extra'>
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/learn.wordpress.org\/wp-admin\/admin-ajax.php","bridgeUrl":"https:\/\/learn.wordpress.org\/wp-content\/plugins\/jetpack\/jetpack_vendor\/automattic\/jetpack-videopress\/src\/..\/build\/lib\/token-bridge.js","post_id":"34151"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"0","time":"1683002216","secure":"1"};/* ]]> */
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-admin/load-scripts.php?c=0&amp;load%5Bchunk_0%5D=jquery-core,jquery-migrate,wp-polyfill-inert,regenerator-runtime,wp-polyfill,utils&amp;ver=6.3-alpha-55700'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view.min.js?ver=aa58d4d058136adf2722' id='wp-block-navigation-view-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view-modal.min.js?ver=774770b5630ff20f41e1' id='wp-block-navigation-view-modal-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/src/../build/lib/token-bridge.js?ver=0.13.4' id='media-video-jwt-bridge-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/wporg-learn/3rd-party/selectWoo/js/selectWoo.min.js?ver=1.0.8' id='select2-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/vendors/inert-polyfill.min.js?ver=6.3-alpha-55700' id='wp-inert-polyfill-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/hooks/index.min.js?ver=b68e9bf6562f8d63a320' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/i18n/index.min.js?ver=3d2aeabd3f84698c0e2c' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/vendors/react.min.js?ver=18' id='react-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/vendors/react-dom.min.js?ver=18' id='react-dom-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930' id='wporg-handbook-js'></script>
+<link rel="https://api.w.org/" href="https://learn.wordpress.org/wp-json/" /><link rel="alternate" type="application/json" href="https://learn.wordpress.org/wp-json/wp/v2/wporg_workshop/34151" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://learn.wordpress.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3-alpha-55700" />
+<link rel='shortlink' href='https://learn.wordpress.org/?p=34151' />
+<link rel="alternate" type="application/json+oembed" href="https://learn.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flearn.wordpress.org%2Ftutorial%2Fdeveloping-with-user-roles-and-capabilities%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://learn.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flearn.wordpress.org%2Ftutorial%2Fdeveloping-with-user-roles-and-capabilities%2F&#038;format=xml" />
+<link rel="canonical" href="https://learn.wordpress.org/tutorial/developing-with-user-roles-and-capabilities/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Stream WordPress user activity plugin v3.9.0 -->
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+		<style>
+			:root {
+			--sensei-course-theme-primary-color: #399648;
+--sensei-course-theme-foreground-color: #555555;
+			}
+		</style>
+			<style>img#wpstats{display:none}</style>
+		<meta name="description" content="In this tutorial, you will learn how to develop with the built-in WordPress Roles and Capabilities system. You will learn how the user roles and capabilities are set up, how to create and apply user roles, and how to add or remove capabilities from a user role. Learning outcomes Explain the WordPress user roles and&hellip;" />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Developing with user roles and capabilities | Learn WordPress " />
+<meta property="og:url" content="https://learn.wordpress.org/tutorial/developing-with-user-roles-and-capabilities/" />
+<meta property="og:description" content="In this tutorial, you will learn how to develop with the built-in WordPress Roles and Capabilities system. You will learn how the user roles and capabilities are set up, how to create and apply use…" />
+<meta property="article:published_time" content="2023-04-21T13:29:40+00:00" />
+<meta property="article:modified_time" content="2023-04-21T13:44:19+00:00" />
+<meta property="og:site_name" content="Learn WordPress" />
+<meta property="og:image" content="https://s.w.org/images/learn-thumbnail-fallback.jpg?v=3" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@WordPress" />
+<meta name="twitter:text:title" content="Developing with user roles and capabilities" />
+<meta name="twitter:image" content="https://s.w.org/images/backgrounds/wordpress-bg-medblue-square.png" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://s.w.org/favicon.ico?2" sizes="32x32" />
+<link rel="icon" href="https://s.w.org/images/wmark.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://s.w.org/images/wmark.png" />
+<meta name="msapplication-TileImage" content="https://s.w.org/images/wmark.png" />
+		<style type="text/css" id="wp-custom-css">
+			/* Block Development Course START */
+.block-dev-course-activity {
+	padding: 20px;
+	margin: 16px 0;
+}
+
+.block-dev-course-activity h4 {
+	padding-bottom: 8px;
+}
+
+.block-dev-course-activity p {
+	padding: 8px 0;
+}
+
+.block-dev-course-activity ol, .block-dev-course-activity ul {
+	list-style-position: inside;
+}
+
+/* Block Development Course END */
+/* Borderd image for course lessons start */
+.sensei-course-theme .wp-block-image.bordered-image {
+	border: 1px solid #ddd;
+}		</style>
+			</head>
+
+	<body class="wporg_workshop-template-default single single-wporg_workshop postid-34151 admin-bar no-customize-support is-classic-theme">
+		<a id="wporg-skip-link"  class="skip-link screen-reader-text" href="#main" data-selector="#main">Skip to content</a>
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-log-in'><a class='ab-item' href='https://login.wordpress.org/?redirect_to=https%3A%2F%2Flearn.wordpress.org%2Ftutorial%2Fdeveloping-with-user-roles-and-capabilities%2F&#038;locale=en_US'>Log In</a></li><li id='wp-admin-bar-register'><a class='ab-item' href='https://login.wordpress.org/register?locale=en_US'>Register</a></li></ul>			</div>
+					</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<header class="global-header wp-block-group wp-block-wporg-global-header">
+
+<figure class="wp-block-image global-header__wporg-logo-mark">
+	<a href="https://wordpress.org/">
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>	</a>
+</figure>
+
+
+
+<nav class="is-responsive global-header__navigation wp-block-navigation is-horizontal is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open " data-micromodal-trigger="modal-1"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container  " style="" id="modal-1">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+							<ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/download/">Download &amp; Extend</a><button aria-label="Download &amp; Extend submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/mobile/"><span class="wp-block-navigation-item__label">Mobile</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://openverse.org/"><span class="wp-block-navigation-item__label">Openverse ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://learn.wordpress.org/">Learn</a><button aria-label="Learn submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/support/forums/"><span class="wp-block-navigation-item__label">Forums</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.tv ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://make.wordpress.org/">Community</a><button aria-label="Community submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Make WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/photos/"><span class="wp-block-navigation-item__label">Photo Directory</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/five-for-the-future/"><span class="wp-block-navigation-item__label">Five for the Future</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://www.meetup.com/pro/wordpress/"><span class="wp-block-navigation-item__label">Meetups ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://jobs.wordpress.net/"><span class="wp-block-navigation-item__label">Job Board ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/about/">About</a><button aria-label="About submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/enterprise/"><span class="wp-block-navigation-item__label">Enterprise</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/gutenberg/"><span class="wp-block-navigation-item__label">Gutenberg ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">WordPress Swag Store ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item global-header__mobile-get-wordpress global-header__get-wordpress wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li></ul>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!--
+	The search block is inside a navigation menu because that provides the exact functionality the design
+	calls for. It also provides a consistent experience with the primary navigation menu, with respect to
+	keyboard navigation, ARIA states, etc. It also saves having to write custom code for all the interactions.
+-->
+<nav class="is-responsive  is-vertical global-header__search wp-block-navigation is-layout-flex wp-container-6 wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open always-shown" data-micromodal-trigger="modal-5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container hidden-by-default " style="" id="modal-5">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-5-content">
+							<form role="search" method="get" action="https://wordpress.org/search/do-search.php" class="wp-block-search__button-inside wp-block-search__icon-button wp-block-search"><label for="wp-block-search__input-4" class="wp-block-search__label" >Search in WordPress.org</label><div class="wp-block-search__inside-wrapper " ><input type="search" id="wp-block-search__input-4" class="wp-block-search__input" name="s" value="" placeholder="Type to search…"  required /><button type="submit" class="wp-block-search__button has-icon wp-element-button"  aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path>
+				</svg></button></div></form>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!-- This is the first of two Get WordPress buttons; the other is in the navigation menu.
+	Two are needed because they have different DOM hierarchies at different breakpoints. -->
+
+<div class="global-header__desktop-get-wordpress-container is-layout-flow wp-block-group-is-layout-flow">
+	<a href="https://wordpress.org/download/" class="global-header__desktop-get-wordpress global-header__get-wordpress">
+		Get WordPress	</a>
+</div> 
+</header>
+<div id="page" class="site">
+	<div id="content">
+		<header id="masthead" class="site-header " role="banner">
+			<div class="site-branding">
+							<p class="site-title">
+					<a href="https://learn.wordpress.org/" rel="home">
+						Learn						<span class="site-title--no-mobile">WordPress</span>
+					</a>
+				</p>
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button
+						class="menu-toggle dashicons dashicons-arrow-down-alt2"
+						aria-controls="primary-menu"
+						aria-expanded="false"
+						aria-label="Primary Menu"
+					>
+					</button>
+					<div id="primary-menu" class="menu">
+						<ul>
+														<li class="page_item">
+								<a class="" href="https://learn.wordpress.org/tutorials/">
+									Tutorials								</a>
+							</li>
+														<li class="page_item">
+								<a class="" href="https://learn.wordpress.org/online-workshops/">
+									Online Workshops								</a>
+							</li>
+														<li class="page_item">
+								<a class="" href="https://learn.wordpress.org/courses/">
+									Courses								</a>
+							</li>
+														<li class="page_item">
+								<a class="" href="https://learn.wordpress.org/lesson-plans/">
+									Lesson Plans								</a>
+							</li>
+														<li class="page_item">
+								<a class="" href="https://learn.wordpress.org/contribute/">
+									Contribute								</a>
+							</li>
+														<li><form role="search" method="get" class="search-form" action="https://learn.wordpress.org/">
+	<label for="s" class="screen-reader-text">Search for:</label>
+	<input
+		type="search"
+		id="s"
+		class="search-field"
+		placeholder="Search for a resource"
+		value=""
+		name="s"
+	/>
+	<button class="button button-primary button-search">
+		<i class="dashicons dashicons-search"></i>
+		<span class="screen-reader-text">
+			Search		</span>
+	</button>
+</form>
+</li>
+						</ul>
+					</div>
+				</nav><!-- #site-navigation -->
+				
+			</div><!-- .site-branding -->
+		</header><!-- #masthead -->
+		
+		
+<div role="navigation" aria-label="Breadcrumbs" class="clearfix site-breadcrumbs">
+	<div class="bbp-breadcrumb">
+	<a href="https://learn.wordpress.org" class="bbp-breadcrumb-home">Learn Home</a><span class="screen-reader-text">, </span><span aria-hidden="true" class="bbp-breadcrumb-sep"> » </span><a href="https://learn.wordpress.org/tutorials" class="bbp-breadcrumb-home">Tutorials</a><span class="screen-reader-text">, </span><span aria-hidden="true" class="bbp-breadcrumb-sep"> » </span><span class="bbp-breadcrumb-current">Developing with user roles and capabilities</span>	</div>
+</div>
+
+	<main id="main" class="site-main page-full-width">
+
+		<article id="post-34151" class="post-34151 wporg_workshop type-wporg_workshop status-publish hentry topic-extending-wordpress topic-plugin-development">
+	<section>
+		<div class="row align-middle between section-heading section-heading--with-space">
+			<h1 class="section-heading_title h2">Developing with user roles and capabilities</h1>
+		</div>
+
+		<hr>
+
+		<div class="workshop-page">
+							<figure class="workshop-page_video">
+					<iframe title="VideoPress Video Player" aria-label='VideoPress Video Player' width='612' height='344' src='https://video.wordpress.com/embed/RnuDqu3o?hd=1&amp;cover=1' frameborder='0' allowfullscreen allow='clipboard-write'></iframe><script src='https://v0.wordpress.com/js/next/videopress-iframe.js?m=1674852142'></script>				</figure>
+			
+			<div class="wp-block-columns workshop-page_content">
+				<div class="wp-block-column" style="flex-basis:66.66%">
+					
+<p>In this tutorial, you will learn how to develop with the built-in WordPress Roles and Capabilities system. You will learn how the user roles and capabilities are set up, how to create and apply user roles, and how to add or remove capabilities from a user role.</p>
+
+
+
+<h2 class="wp-block-heading">Learning outcomes</h2>
+
+
+
+<ol class="workshop-page_list">
+<li>Explain the WordPress user roles and capabilities system </li>
+
+
+
+<li>Assign capabilities to an existing role </li>
+
+
+
+<li>Create a new User Role and assign capabilities to it</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">Comprehension questions</h2>
+
+
+
+<ol class="workshop-page_list">
+<li>What is the name of the option which stores the default user roles and capabilities in the database?</li>
+
+
+
+<li>What is the name of the method on the Role class that you can use to add capacities to a role?</li>
+
+
+
+<li>Which function can be used to create a new custom role, and assign capabilities to it?</li>
+
+
+
+<li>How should you register new roles or assign new capabilities?</li>
+</ol>
+
+
+
+<details><summary>View video transcript</summary><div>
+<p>Hey there, and welcome to Learn WordPress.</p>
+
+
+
+<p>In this tutorial, you&#8217;ll be learning how to leverage the WordPress user roles and capabilities system. After a brief introduction to the default WordPress roles and capabilities, how they are created and managed and how to assign them to users, you will learn how to add capabilities to an existing role, and also how to create a new user role and add capabilities to it.</p>
+
+
+
+<p>The WordPress user roles and capabilities system is a powerful tool for managing access to your site. It allows for user roles with specific capabilities, and you can then assign those roles to users. This allows you to create a hierarchy of users with some users having more access than others.</p>
+
+
+
+<p>WordPress comes with several default user roles, namely administrator, editor, author, contributor and subscriber. There is one additional role but this is only available in multisite installations, and that&#8217;s the Super Admin role. Each of these roles has a default set of capabilities, which are the things that the user can do in a WordPress site. For example, the administrator role has the capability to activate plugins while the subscriber role does not.</p>
+
+
+
+<p>When a new user is created in the WordPress dashboard, they are assigned the subscriber role by default. You can change this by assigning a different role. Once assigned to that role, the user will have the capabilities that are associated with that role.</p>
+
+
+
+<p>You can read up on the full list of default user roles and capabilities in the official WordPress documentation.</p>
+
+
+
+<p>The WordPress user roles and capabilities system is stored in the database during the WordPress installation process. The roles and capabilities are stored as a serialised array as site options in the options table in the user roles option. The prefix for this option will depend on the table prefix configured in WP config, or if this is a multisite installation.</p>
+
+
+
+<p>By default on a single site installation this prefix will be wp_.</p>
+
+
+
+<p>So the option will be wp_user_roles.</p>
+
+
+
+<p>If you extract the value of the user roles option and unserialize the array, you will see that the array keys are the role names and the values are arrays of capabilities. Whenever an authenticated user is attempting to do something, this action is checked against the users role capabilities using the current_user_can function. If the user has the capability to perform the action, they will be allowed to do so. If they do not have the capability, they will be denied access.</p>
+
+
+
+<p>If you take a look at line 270 of the wp-admin/includes/post.php file, you will see that the edit_post capability is checked before a post is edited or updated. If the user does not have the edit_post capability for this post, they will be informed that they do not have the required access to edit it.</p>
+
+
+
+<p>Let&#8217;s say that you want to allow your editors to be able to do something that only admins can do, maybe install and update plugins. By default, the editor role does not have the activate_plugins or update_plugins capability. You can add this capability to the editor role by using the add_cap method of the WP_Role class. However, doing so will add this capability to the user roles stored in the database. So it&#8217;s recommended to run this on something like plugin activation using the register_activation_hook function.</p>
+
+
+
+<p>The register_activation_hook requires the path of the file that contains the hook callback and the hook callback function name, you can then add the capabilities to the editor role by using the get_role function to get the role object and then using the add_cap method to add the capabilities.</p>
+
+
+
+<p>So what that would look like is you could say editor, get role editor. So that&#8217;s the role that exists in the database. And then we could say editor add_cap and we want to allow the editor to activate plugins and we want to allow the editor to update plugins.</p>
+
+
+
+<p>Adding this code to a plugin and activating the plugin will trigger the activation hook and will update the editor role with a new plugin capabilities.</p>
+
+
+
+<p>Let us activate this plugin which will now add those capabilities to the editor role. Let&#8217;s create a new editor user, just give it some random details, gonna keep the passwords simple for testing purposes and make it an editor. And if we log out and log in as the editor user, we are able to install, activate and update plugins.</p>
+
+
+
+<p>Note that because adding capabilities to a role is a permanent change, you should only do this when the plugin is activated and not on every page load. Additionally, if you want to remove a custom role, it&#8217;s a good idea to do so on plugin deactivation using the register_deactivation_hook function.</p>
+
+
+
+<p>So let&#8217;s look at what that could look like. So the activation deactivation hook function and callback could look like that. And then we would say, get the role. And then we would remove capabilities by saying remove cap and the same capability. And copy paste the update plugins capability. And there&#8217;s our plugin deactivation.</p>
+
+
+
+<p>This is useful for two reasons. Firstly, you can add and remove capabilities when the plugin is activated and deactivated, which is useful when testing whether the capabilities you&#8217;ve set or what you need. Secondly, if the user deactivates your plugin, the capabilities will be removed cleaning up any changes your plugin has made.</p>
+
+
+
+<p>Just as it is possible to assign existing capabilities to roles, you can also create your own custom roles and assign capabilities to them. This is useful if you want to create a role that has a specific set of capabilities and you don&#8217;t want to use an existing role. For example, let&#8217;s say you want to use a role which can only activate an update plugins, say an assistant to the administrator, you can create a new role using the add_role function and assign the activate_plugins and update_plugins capabilities to it.</p>
+
+
+
+<p>So what that would look like in the code, let&#8217;s grab the activation hook registration and update the callback to custom role. Let&#8217;s create the function. And then we will use the role function which requires the role name. all lowercase a human readable string, which should be translated, but we won&#8217;t worry about that now. And then an array of capabilities, which are passed in as key value pairs the key being the capability being set and the value being true or false. That then we&#8217;ll set activate plugins to true and we will set update plugins to true.</p>
+
+
+
+<p>Again, because the new role will be stored in the database, you should only run this code when the plug in is activated and not on every page load. Notice how the array of capabilities includes the read capability. This is because the read capability is required for a user attach to that role to be able to access the dashboard. Regardless of any other capabilities a user has, if they do not have the read capability, they will not be able to access the Dashboard menu in order to perform the specific task that they should be able to. You can also include a deactivation hook to remove the role when the plugin is deactivated, using the Remove role function.</p>
+
+
+
+<p>So let&#8217;s just steal the deactivation code here. I&#8217;ll say remove custom role.</p>
+
+
+
+<p>And then we can simply say remove role and pass in the role now.</p>
+
+
+
+<p>Because it made some changes to the activation and deactivation hooks now would be a good idea to deactivate and then reactivate the plugin for the role functionality to be updated.</p>
+
+
+
+<p>So in our plugins, let&#8217;s deactivate this plugin. And then let&#8217;s activate.</p>
+
+
+
+<p>You can now create a new user with the assistant capability. Then switch users and notice how that all that user can do is manage plugins.</p>
+
+
+
+<p>So we&#8217;re logged in as admin, go to the users, create a new user and give them the assistant capability And then fill in all the details of the most simple password for testing purposes and create the user and then log out and login as that user. And all we can really manage are the plugins.</p>
+
+
+
+<p>For more information on developing user roles and capabilities, see the Roles and Capabilities section of the Plugin developer handbook at developer.wordpress.org.</p>
+
+
+
+<p>Happy Coding</p>
+</div></details>
+
+
+
+<h2 class="wp-block-heading">Introduction</h2>
+
+
+
+<p>Hey there, and welcome to Learn WordPress!</p>
+
+
+
+<p>In this tutorial, you&#8217;ll be learning how to leverage the WordPress user roles and capabilities system.</p>
+
+
+
+<p>After a brief introduction to the default WordPress roles and capabilities, how they are created and managed, and how to assign them to users, you will learn how to add capabilities to an existing role, and how to create a new user role and add capabilities to it.</p>
+
+
+
+<h2 class="wp-block-heading">WordPress User Roles and Capabilities</h2>
+
+
+
+<p>The WordPress user roles and capabilities system is a powerful tool for managing access to your site. It allows for user roles with specific capabilities, and you can then assign those roles to users. This allows you to create a hierarchy of users, with some users having more access than others.</p>
+
+
+
+<p>WordPress comes with several default user roles, namely Administrator, Editor, Author, Contributor, and Subscriber.</p>
+
+
+
+<p>There is also one additional role, but this is only available in multisite installations, and that&#8217;s the Super Admin role.</p>
+
+
+
+<p>Each of these roles has a set of capabilities, which are the things that the user can do in a WordPress site. For example, the Administrator role has the capability to manage users, while the Subscriber role does not.</p>
+
+
+
+<p>When a new user is created in the WordPress dashboard, they are assigned the Subscriber role by default. You can change this by assigning a different role. Once assigned to a role, the user will have the capabilities that are associated with that role.</p>
+
+
+
+<p>You can read up on the full list of default user roles and capabilities in the official WordPress Documentation on <a href="https://wordpress.org/documentation/article/roles-and-capabilities/">Roles and Capabilities</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Roles and Capabilities under the hood</h2>
+
+
+
+<p>The WordPress user roles and capabilities system is stored in the database during the WordPress installation process. The roles and capabilities are stored as a serialized array as site options the <code>options</code> table, in the <code>user_roles</code> option. The prefix for this option will depend on the table prefix configured in wp-config.php, or if this is a multisite installation. By default, on a single site installation, the prefix will be <code>wp_</code>, so the option name will be <code>wp_user_roles</code>.</p>
+
+
+
+<p>If you extract the value of the <code>user_roles</code> option, and unserialize the array, you will see that the array keys are the role names, and the values are arrays of capabilities.</p>
+
+
+
+<p>Whenever an authenticated user is attempting to do something, this action is checked against the user&#8217;s role capabilities, using the <a href="https://developer.wordpress.org/reference/functions/current_user_can/">current_user_can</a> function. If the user has the capability to perform the action, they will be allowed to do so. If they do not have the capability, they will be denied access.</p>
+
+
+
+<p>Take a look at line 270 of the wp-admin/includes/post.php file. Here you will see that the <code>edit_post</code> capability is checked before a post is edited/update. If the user does not have the <code>edit_post</code> capability for this post, they will be informed that they do not have the required access to edit it.</p>
+
+
+
+<h2 class="wp-block-heading">Assign capabilities to an existing role</h2>
+
+
+
+<p>Let&#8217;s say that you want to allow your editors to be able to do something that only admins can do, maybe install and update plugins. By default, the Editor role does not have the <code>activate_plugins</code> or <code>update_plugins</code> capability.</p>
+
+
+
+<p>[Create editor user]</p>
+
+
+
+<p>You can add this capability to the Editor role by using the <a href="https://developer.wordpress.org/reference/classes/wp_role/add_cap/">add_cap</a> method of the WP_Role class.</p>
+
+
+
+<p>However, doing so will add this capability to the user_roles stored in the database, so it&#8217;s recommend to run this on something like plugin activation using the <a href="https://developer.wordpress.org/reference/functions/register_activation_hook/">register_activation_hook</a> function.</p>
+
+
+
+<pre class="wp-block-code"><code lang="php" class="language-php">register_activation_hook( __FILE__, 'wp_learn_add_custom_caps' );
+function wp_learn_add_custom_caps() {
+    // do something
+}</code></pre>
+
+
+
+<p>The register_activation_hook requires the path to the file that contains the hook callback, and the hook callback function name.</p>
+
+
+
+<p>Then you can add the capabilities to the Editor role by using the <a href="https://developer.wordpress.org/reference/functions/get_role/">get_role</a> function to get the role object, and then using the <a href="https://developer.wordpress.org/reference/classes/wp_role/add_cap/">add_cap</a> method to add the capabilities.</p>
+
+
+
+<pre class="wp-block-code"><code lang="php" class="language-php">register_activation_hook( __FILE__, 'wp_learn_add_custom_caps' );
+function wp_learn_add_custom_caps() {
+    // gets the author role
+    $role = get_role( 'editor' );
+    $role-&gt;add_cap( 'activate_plugins' );
+    $role-&gt;add_cap( 'update_plugins' );
+}</code></pre>
+
+
+
+<ol>
+<li>First, you should hook into the <code>register_activation_hook</code> action, so that the code is only executed when the WP dashboard is loaded.</li>
+
+
+
+<li>Then, you get the role object by using the <a href="https://developer.wordpress.org/reference/functions/get_role/">get_role</a> function. The <code>get_role</code> function takes the role name as a parameter, and returns the role object.</li>
+
+
+
+<li>Finally, you use the role&#8217;s <a href="https://developer.wordpress.org/reference/classes/wp_role/add_cap/">add_cap</a> method to add the <code>activate_plugins</code> and <code>update_plugins</code> capabilities to the role object.</li>
+</ol>
+
+
+
+<p>Adding this code to a plugin, and activating the plugin, triggering the activation hook, will update the Editor role with the new plugin capabilities.</p>
+
+
+
+<p>If you switch to an editor user, you will see that the editor user can now update plugins.</p>
+
+
+
+<p>[Show how editor can active plugins]</p>
+
+
+
+<p>Note that because adding capabilities to a role is a permanent change, you should only do this when the plugin is activated, and not on every page load. Also, if you want to remove a custom role, it&#8217;s a good idea to do so on plugin deactivation, using the <a href="https://developer.wordpress.org/reference/functions/register_deactivation_hook/">register_deactivation_hook</a> function.</p>
+
+
+
+<pre class="wp-block-code"><code lang="php" class="language-php">register_deactivation_hook( __FILE__, 'wp_learn_remove_custom_caps' );
+function wp_learn_remove_custom_caps() {
+    $role = get_role( 'editor' );
+    $role-&gt;remove_cap( 'activate_plugins' );
+    $role-&gt;remove_cap( 'update_plugins' );
+}</code></pre>
+
+
+
+<p>This is useful for two reasons. Firstly, you can add and remove the capabilities when the plugin is activated and deactivated, which is useful when testing whether the capabilities you&#8217;ve set are what you need. Secondly, if the user deactivates your plugin, the capabilities will be removed, cleaning up the changes your plugin has made.</p>
+
+
+
+<h2 class="wp-block-heading">Create a new User Role and assign capabilities to it</h2>
+
+
+
+<p>Just as it is possible to assign existing capabilities to roles, you can also create your own custom roles, and assign capabilities to them. This is useful if you want to create a role that has a specific set of capabilities, and you don&#8217;t want to use an existing role.</p>
+
+
+
+<p>For example, lets say you want a user role who can only activate and update plugins, say an assistant to the administrator. You can create a new role, using the <a href="https://developer.wordpress.org/reference/functions/add_role/">add_role</a> function, and assign the <code>activate_plugins</code> and <code>update_plugins</code> capabilities to it.</p>
+
+
+
+<pre class="wp-block-code"><code lang="php" class="language-php">register_activation_hook( __FILE__, 'wp_learn_add_custom_role' );
+function wp_learn_add_custom_role() {
+    add_role(
+        'assistant',
+        'Assistant',
+        array(
+            'read'         =&gt; true,
+            'activate_plugins'   =&gt; true,
+            'update_plugins' =&gt; true,
+        ),
+    );
+}</code></pre>
+
+
+
+<p>Again, because the new role will be stored in the database, you should only run this code when the plugin is activated, and not on every page load.</p>
+
+
+
+<p>Notice how the array of capabilities includes the <code>read</code> capability. This is because the <code>read</code> capability is required for a user to be able to access the dashboard. Regardless of any other capabilities a user has, if they do not have the <code>read</code> capability, they will not be able to access the dashboard menu, in order to perform a specific task they should be able to.</p>
+
+
+
+<p>You can also include a deactivation hook to remove the role when the plugin is deactivated, using the remove_role function.</p>
+
+
+
+<pre class="wp-block-code"><code lang="php" class="language-php">register_deactivation_hook( __FILE__, 'wp_learn_remove_custom_role' );
+function wp_learn_remove_custom_role() {
+    remove_role( 'assistant' );
+}</code></pre>
+
+
+
+<p>Create a new user, with the Assistant capability. Then switch users, and notice how all that user can do is manage plugins</p>
+
+
+
+<h2 class="wp-block-heading">Summary</h2>
+
+
+
+<p>For more information on developing user roles and capabilities, see the <a href="https://developer.wordpress.org/plugins/users/roles-and-capabilities/">Roles and Capabilities</a> section of the Plugin developer handbook on developer.wordpress.org.</p>
+
+
+
+<p>Happy coding.</p>
+				</div>
+
+				<div class="wp-block-column workshop-page_sidebar" style="flex-basis:33.333%">
+					<div>
+						
+	<div class="wp-block-wporg-learn-workshop-details">
+		<h3 class="screen-reader-text">Workshop Details</h3>
+					<ul class="workshop-details-list">
+									<li>
+						<b>Length</b>
+						<span>
+							10 mins						</span>
+					</li>
+									<li>
+						<b>Topic</b>
+						<span>
+							<a href="https://learn.wordpress.org/tutorials/?topic=38042">Extending WordPress</a>, <a href="https://learn.wordpress.org/tutorials/?topic=38043">Plugin Development</a>						</span>
+					</li>
+									<li>
+						<b>Related Version</b>
+						<span>
+							<a href="https://learn.wordpress.org/tutorials/?wp_version=45610">6.2</a>						</span>
+					</li>
+									<li>
+						<b>Language</b>
+						<span>
+							<a href="https://learn.wordpress.org/tutorials/?language=en_US">English</a>						</span>
+					</li>
+									<li>
+						<b>Subtitles</b>
+						<span>
+							<a href="https://learn.wordpress.org/tutorials/?captions=en_US">English</a>						</span>
+					</li>
+				
+								<li>
+					<b>Print View</b>
+					<span>
+							<a class="components-button is-secondary is-small" href="#" onclick="window.print();" aria-label="Print View">
+								View							</a>
+						</span>
+				</li>
+			</ul>
+		
+				<div class="wp-block-button is-style-secondary-full-width">
+			<a
+				class="wp-block-button__link"
+				href="https://learn.wordpress.org/online-workshops/"
+				style="border-radius:5px"
+			>
+				Join a live Online Workshop			</a>
+		</div>
+	</div>
+					</div>
+
+					<aside class="lp-sidebar">
+	<div class="lp-details">
+		<div id="block-30" class="widget widget_block">
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button aligncenter is-style-secondary-full-width"><a class="wp-block-button__link wp-element-button" href="https://developer.wordpress.org/playground/demo/?step=playground&amp;theme=twentytwentythree" style="border-radius:5px" target="_blank" rel="noreferrer noopener">Practise your skills on a private demo site</a></div>
+</div>
+</div><div id="block-31" class="widget widget_block widget_text">
+<p id="suggestions"><strong>Suggestions</strong></p>
+</div><div id="block-12" class="widget widget_block widget_text">
+<p>Found a typo, grammar error or outdated screenshot?</p>
+</div><div id="block-13" class="widget widget_block">
+<div class="wp-block-buttons is-horizontal is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-secondary"><a class="wp-block-button__link wp-element-button" href="https://learn.wordpress.org/report-content-errors/" style="border-radius:0px">Let us know!</a></div>
+</div>
+</div><div id="block-18" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<hr class="wp-block-separator has-css-opacity" />
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img decoding="async" loading="lazy" src="https://learn.wordpress.org/files/2021/11/CC-BY-SA_icon.png" alt="" class="wp-image-10570" width="115" height="40" srcset="https://learn.wordpress.org/files/2021/11/CC-BY-SA_icon.png 1024w, https://learn.wordpress.org/files/2021/11/CC-BY-SA_icon-300x106.png 300w, https://learn.wordpress.org/files/2021/11/CC-BY-SA_icon-768x271.png 768w, https://learn.wordpress.org/files/2021/11/CC-BY-SA_icon-100x35.png 100w" sizes="(max-width: 115px) 100vw, 115px" /></a></figure></div>
+
+
+<p class="has-text-align-center has-small-font-size"><em>This work is licensed under a <a rel="noreferrer noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</em></p>
+</div></div>
+</div>	</div>
+</aside>
+
+				</div> <!-- end sidebar column -->
+			</div> <!-- end columns -->
+
+			<hr class="wp-block-separator">
+
+			
+			
+					</div> <!-- end workshop-page -->
+	</section>
+</article>
+	</main><!-- #main -->
+
+
+	</div><!-- #content -->
+</div><!-- #page -->
+
+<footer class="global-footer wp-block-group wp-block-wporg-global-footer">
+
+<div class="wp-block-group global-footer__navigation-container is-layout-flow wp-block-group-is-layout-flow">
+	<nav class="global-footer__navigation-important wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpressfoundation.org/donate/"><span class="wp-block-navigation-item__label">Donate</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">Swag</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-information wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Get Involved</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-resources wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-community wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.TV</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://buddypress.org/"><span class="wp-block-navigation-item__label">BuddyPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://bbpress.org/"><span class="wp-block-navigation-item__label">bbPress</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-external wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.com/?ref=wporg-footer"><span class="wp-block-navigation-item__label">WordPress.com</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://ma.tt/"><span class="wp-block-navigation-item__label">Matt</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/privacy/"><span class="wp-block-navigation-item__label">Privacy</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://publiccode.eu/"><span class="wp-block-navigation-item__label">Public Code</span></a></li></ul></nav>
+</div> 
+
+
+<div class="wp-block-group global-footer__logos-container is-layout-flow wp-block-group-is-layout-flow">
+	
+	<div class="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-22 wp-block-group-is-layout-flex">
+		
+		<!-- The design calls for two logos, a small "mark" on mobile/tablet, and the full logo for desktops. -->
+			<figure class="wp-block-image global-footer__wporg-logo-mark">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>				</a>
+			</figure>
+
+			<figure class="wp-block-image global-footer__wporg-logo-full">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="329" height="52" viewBox="0 0 329 52">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M4.33 26a21.68 21.68 0 0 0 12.22 19.5L6.21 17.18A21.66 21.66 0 0 0 4.33 26ZM26.38 27.89l-6.5 18.89a21.31 21.31 0 0 0 6.12.89 21.77 21.77 0 0 0 7.2-1.23 1.429 1.429 0 0 1-.16-.3l-6.66-18.25Z"/>
+	<path fill="currentColor" d="M26 0a26 26 0 1 0 0 52 26 26 0 0 0 0-52Zm20.27 39.66a24.47 24.47 0 0 1-29.78 8.86 24.49 24.49 0 0 1-13-13 24.4 24.4 0 0 1 5.23-26.8 24.46 24.46 0 0 1 26.79-5.24 24.49 24.49 0 0 1 13 13 24.42 24.42 0 0 1-2.25 23.17l.01.01Z"/>
+	<path fill="currentColor" d="M45 15.61c.103.736.153 1.477.15 2.22a20.38 20.38 0 0 1-1.65 7.76l-6.61 19.14A21.65 21.65 0 0 0 45 15.61ZM40.63 24.91a11.45 11.45 0 0 0-1.79-6c-1.1-1.78-2.13-3.29-2.13-5.08A3.76 3.76 0 0 1 40.35 10h.28A21.65 21.65 0 0 0 7.9 14.1h1.39c2.27 0 5.78-.27 5.78-.27a.9.9 0 0 1 .13 1.79s-1.17.13-2.47.2l7.88 23.47 4.75-14.22L22 15.84c-1.17-.07-2.27-.2-2.27-.2a.9.9 0 0 1 .14-1.79s3.57.27 5.7.27c2.13 0 5.78-.27 5.78-.27a.9.9 0 0 1 .14 1.79s-1.18.13-2.48.2l7.83 23.29 2.23-7.08a25.171 25.171 0 0 0 1.56-7.14ZM145.83 19.3h-10.34v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85-2.48-.35-4.16-1.68-6.47-4.22l-2.66-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.24 0 3.76.69 3.76 4.79v7.4c0 4.1-.52 4.85-3.76 4.85v1.1h11.5v-1.1c-3.24 0-3.76-.75-3.76-4.85v-2.08h1l6.42 8h16.81c8.26 0 11.85-4.39 11.85-9.65 0-5.26-3.61-9.56-11.87-9.56Zm-24.21 9.42V21H124a3.551 3.551 0 0 1 3.76 3.87 3.536 3.536 0 0 1-3.76 3.85h-2.38Zm24.38 8h-.4c-2.08 0-2.37-.52-2.37-3.18V21H146c6 0 7.11 4.39 7.11 7.8S152 36.75 146 36.75v-.03ZM93.49 13.52H82.62v1.16c3.7 0 4.22 1 3.07 4.39l-4 11.78L76 13.52h-1.1l-5.85 17.33-3.87-11.78c-1.22-3.59-.29-4.39 3.12-4.39v-1.16H55.47v1.16c3.35 0 4.28.86 5.66 5.08l6.42 19.76h.75l6-18.08 5.9 18.08h.8l6.59-19.76c1.44-4.22 2.31-5.08 5.95-5.08l-.05-1.16ZM101.34 18.55c-6.35 0-11.55 4.68-11.55 10.34s5.2 10.4 11.55 10.4c6.35 0 11.56-4.68 11.56-10.4 0-5.72-5.2-10.34-11.56-10.34Zm0 18.89c-5.31 0-7.16-4.74-7.16-8.55 0-3.81 1.85-8.55 7.16-8.55 5.31 0 7.23 4.79 7.23 8.55 0 3.76-1.85 8.55-7.23 8.55ZM170.67 13.52h-12v1.16c3.88 0 4.57.92 4.57 6.7v9.24c0 5.78-.69 6.76-4.57 6.76v1.16H172v-1.16c-3.88 0-4.57-1-4.57-6.76v-2.83h3.29c6 0 9.25-3.12 9.25-7.11s-3.35-7.16-9.3-7.16Zm0 12.13h-3.29v-10h3.29c3.24 0 4.74 2.31 4.74 5.08s-1.5 4.92-4.74 4.92ZM219.32 34.15c-.52 1.9-1.15 2.6-5.26 2.6h-.81c-3 0-3.52-.7-3.52-4.8v-2.66c4.51 0 4.85.41 4.85 3.41h1.1v-8.61h-1.1c0 3-.34 3.41-4.85 3.41V21h3.18c4.1 0 4.74.69 5.26 2.6l.28 1.1h.93l-.38-5.4h-17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 3.75-.44 4.69-3 4.83-2.42-.37-4.09-1.69-6.37-4.2l-2.65-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85v1.1h11.49v-1.1c-3.23 0-3.75-.75-3.75-4.85v-2.08h1l6.41 8h23.75l.35-5.43h-.87l-.31 1.07ZM189 28.72V21h2.37a3.542 3.542 0 0 1 3.75 3.87 3.532 3.532 0 0 1-.998 2.77 3.532 3.532 0 0 1-2.752 1.05l-2.37.03ZM234.52 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85h-1.09a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7-2.54 7-6.18.07-1.77-1.03-3.9-3.8-5.23ZM252 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85H253a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7.05-2.54 7.05-6.18.07-1.77-1.03-3.9-3.79-5.23ZM277.56 18.75a10.481 10.481 0 0 0-10.68 10.17 10.47 10.47 0 0 0 10.68 10.16c5.9 0 10.71-4.58 10.71-10.16s-4.81-10.17-10.71-10.17Zm0 19c-5.52 0-7.63-4.91-7.63-8.88 0-3.97 2.07-8.87 7.63-8.87 5.56 0 7.66 4.94 7.66 8.92 0 3.98-2.11 8.88-7.66 8.88v-.05ZM301.71 33.79l-3.14-3.69c3.63-.38 5.71-2.59 5.71-5.38 0-3-2.44-5.42-6.89-5.42h-8.47v.7c2.66 0 3.05.51 3.05 3.72v10.39c0 3.21-.39 3.76-3.05 3.76v.67h8.66v-.67c-2.66 0-3.05-.55-3.05-3.76v-4H296l6.35 8.44h5.29v-.67c-1.88-.24-4.03-1.88-5.93-4.09ZM294.53 29v-8.52h2.82c2.79 0 4.08 1.93 4.08 4.24 0 2.31-1.29 4.28-4.08 4.28h-2.82ZM319.6 30.59v.64c2.21 0 3 .7 3 2.08 0 2.89-2.5 4.39-5.29 4.39-5.93 0-7.6-4.81-7.6-8.78 0-3.97 1.86-8.92 7-8.92 3.59 0 6.09 2.54 7 6.7h.64v-7h-.64a3.281 3.281 0 0 1-1.09 1.83 8.203 8.203 0 0 0-6-2.73 10.167 10.167 0 0 0-9.851 10.165 10.169 10.169 0 0 0 9.851 10.165c3.34 0 4.78-1.66 8.34-1.66V35c0-3.21.39-3.75 3.05-3.75v-.64l-8.41-.02ZM261.9 34.77a2.061 2.061 0 1 0 .288 4.112 2.061 2.061 0 0 0-.288-4.112Z"/>
+</svg>				</a>
+			</figure>
+		
+
+			</div>
+	
+
+	
+	<ul class="wp-block-social-links is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex">
+		<li class="wp-social-link wp-social-link-facebook wp-block-social-link"><a href="https://www.facebook.com/WordPress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Facebook page</span></a></li>
+		<li class="wp-social-link wp-social-link-twitter wp-block-social-link"><a href="https://twitter.com/WordPress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Twitter account</span></a></li>
+		<li class="wp-social-link wp-social-link-instagram wp-block-social-link"><a href="https://www.instagram.com/wordpress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Instagram account</span></a></li>
+		<li class="wp-social-link wp-social-link-linkedin wp-block-social-link"><a href="https://www.linkedin.com/company/wordpress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our LinkedIn account</span></a></li>
+	</ul> 
+
+			<!-- Use an image so it can have the MrsEaves font. -->
+		
+		<figure class="wp-block-image is-resized global-footer__code_is_poetry">
+			<img
+				src=https://s.w.org/style/images/code-is-poetry-for-dark-bg.svg				alt="Code is Poetry"
+				width="188"
+				height="13"
+			/>
+		</figure> 
+
+	</div> 
+</footer><style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-6.wp-container-6{flex-direction:column;align-items:flex-start;}.wp-container-22.wp-container-22{flex-wrap:nowrap;justify-content:flex-start;}
+</style>
+<script type='text/javascript' id='mkaz-code-syntax-prism-js-js-extra'>
+/* <![CDATA[ */
+var prism_settings = {"pluginUrl":"https:\/\/learn.wordpress.org\/wp-content\/plugins\/code-syntax-block\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='locale-notice-js-extra'>
+/* <![CDATA[ */
+var WPOrgLearnLocaleNotice = {"cookie":{"expires":31536000,"cpath":"\/","domain":"","secure":true}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-admin/load-scripts.php?c=0&amp;load%5Bchunk_0%5D=hoverintent-js,admin-bar&amp;ver=6.3-alpha-55700'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build/form.js?ver=990922767b16b5cabdbb' id='workshop-application-form-script-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/sensei-lms/assets/dist/blocks/frontend.js?ver=5cbb590a66bd20fbf949' id='sensei-blocks-frontend-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/code-syntax-block/assets/prism/prism.js?ver=1656011581' id='mkaz-code-syntax-prism-js-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/wporg-learn/build//locale-notice.js?ver=1665974830' id='locale-notice-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/dom-ready/index.min.js?ver=8ef91b5d96d5175674de' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/a11y/index.min.js?ver=1aab97509efa281a9d62' id='wp-a11y-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/deprecated/index.min.js?ver=1527f08b1d0357a0cf50' id='wp-deprecated-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/dom/index.min.js?ver=50fb92f5fe305036faea' id='wp-dom-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/escape-html/index.min.js?ver=8514c67d158be39ab130' id='wp-escape-html-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/element/index.min.js?ver=4ff9ba19d5e52ccd0f8d' id='wp-element-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/is-shallow-equal/index.min.js?ver=83d1da2d013996a24adb' id='wp-is-shallow-equal-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/keycodes/index.min.js?ver=6bec21f8c071ba852022' id='wp-keycodes-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/priority-queue/index.min.js?ver=973d01b458326bc1f15d' id='wp-priority-queue-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/compose/index.min.js?ver=89372c5b92052129b24b' id='wp-compose-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4' id='moment-js'></script>
+<script type='text/javascript' id='moment-js-after'>
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"j F Y","LLL":"F j, Y g:i a","LLLL":null}} );
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/date/index.min.js?ver=ef66f117ae3993aac629' id='wp-date-js'></script>
+<script type='text/javascript' id='wp-date-js-after'>
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago"},"startOfWeek":1},"formats":{"time":"g:i a","date":"j F Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":"0","string":"","abbr":""}} );
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/html-entities/index.min.js?ver=383cd3aba26890f99378' id='wp-html-entities-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/primitives/index.min.js?ver=429e034fccf5dcdbe23a' id='wp-primitives-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/private-apis/index.min.js?ver=da4e28290eb340fb61e4' id='wp-private-apis-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/redux-routine/index.min.js?ver=a4f02cded081b94dc342' id='wp-redux-routine-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/data/index.min.js?ver=9e50a7f17b56a1df58a0' id='wp-data-js'></script>
+<script type='text/javascript' id='wp-data-js-after'>
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/rich-text/index.min.js?ver=5b4a4251ed2578b8cbe7' id='wp-rich-text-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/warning/index.min.js?ver=540340af4e1d7b0c3986' id='wp-warning-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/components/index.min.js?ver=4a6ffc879a2ecd1b8f71' id='wp-components-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/plugins/gutenberg/build/url/index.min.js?ver=d1bc9dac737c2ffafdb4' id='wp-url-js'></script>
+<script type='text/javascript' id='wporg-locale-switcher-js-before'>
+var wporgLocaleSwitcherConfig = {"initialValue":"en_US","options":[{"label":"Afrikaans [af]","value":"af"},{"label":"\u12a0\u121b\u122d\u129b [am]","value":"am"},{"label":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629 [ar]","value":"ar"},{"label":"Aragon\u00e9s [arg]","value":"arg"},{"label":"\u0627\u0644\u062f\u0627\u0631\u062c\u0629 \u0627\u0644\u062c\u0632\u0627\u064a\u0631\u064a\u0629 [arq]","value":"arq"},{"label":"\ud83c\udf0f\ud83c\udf0d\ud83c\udf0e (Emoji) [art_xemoji]","value":"art_xemoji"},{"label":"English (Pirate) [art_xpirate]","value":"art_xpirate"},{"label":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0645\u063a\u0631\u0628\u064a\u0629 [ary]","value":"ary"},{"label":"\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be [as]","value":"as"},{"label":"Asturianu [ast]","value":"ast"},{"label":"Az\u0259rbaycan dili [az]","value":"az"},{"label":"Az\u0259rbaycan T\u00fcrkc\u0259si [az_TR]","value":"az_TR"},{"label":"\u06af\u0624\u0646\u0626\u06cc \u0622\u0630\u0631\u0628\u0627\u06cc\u062c\u0627\u0646 [azb]","value":"azb"},{"label":"Catal\u00e0 (Balear) [bal]","value":"bal"},{"label":"\u0628\u0644\u0648\u0686\u06cc \u0645\u06a9\u0631\u0627\u0646\u06cc [bcc]","value":"bcc"},{"label":"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f \u043c\u043e\u0432\u0430 [bel]","value":"bel"},{"label":"\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 [bg_BG]","value":"bg_BG"},{"label":"\u092d\u094b\u091c\u092a\u0941\u0930\u0940 [bho]","value":"bho"},{"label":"\u09ac\u09be\u0982\u09b2\u09be [bn_BD]","value":"bn_BD"},{"label":"\u09ac\u09be\u0982\u09b2\u09be (\u09ad\u09be\u09b0\u09a4) [bn_IN]","value":"bn_IN"},{"label":"\u0f56\u0f7c\u0f51\u0f0b\u0f61\u0f72\u0f42 [bo]","value":"bo"},{"label":"Brezhoneg [bre]","value":"bre"},{"label":"\u092c\u094b\u0921\u094b\u200e [brx]","value":"brx"},{"label":"Bosanski [bs_BA]","value":"bs_BA"},{"label":"Catal\u00e0 [ca]","value":"ca"},{"label":"Catal\u00e0 (Valenci\u00e0) [ca_valencia]","value":"ca_valencia"},{"label":"Cebuano [ceb]","value":"ceb"},{"label":"\u0643\u0648\u0631\u062f\u06cc\u200e [ckb]","value":"ckb"},{"label":"Corsu [co]","value":"co"},{"label":"Kernewek [cor]","value":"cor"},{"label":"\u010ce\u0161tina [cs_CZ]","value":"cs_CZ"},{"label":"Cymraeg [cy]","value":"cy"},{"label":"Dansk [da_DK]","value":"da_DK"},{"label":"Deutsch (\u00d6sterreich) [de_AT]","value":"de_AT"},{"label":"Deutsch (Schweiz) [de_CH]","value":"de_CH"},{"label":"Deutsch (Schweiz, Du) [de_CH_informal]","value":"de_CH_informal"},{"label":"Deutsch [de_DE]","value":"de_DE"},{"label":"Deutsch (Sie) [de_DE_formal]","value":"de_DE_formal"},{"label":"Dolnoserb\u0161\u0107ina [dsb]","value":"dsb"},{"label":"\u078b\u07a8\u0788\u07ac\u0780\u07a8 [dv]","value":"dv"},{"label":"\u0f62\u0fab\u0f7c\u0f44\u0f0b\u0f41 [dzo]","value":"dzo"},{"label":"\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac [el]","value":"el"},{"label":"English (Australia) [en_AU]","value":"en_AU"},{"label":"English (Canada) [en_CA]","value":"en_CA"},{"label":"English (UK) [en_GB]","value":"en_GB"},{"label":"English (New Zealand) [en_NZ]","value":"en_NZ"},{"label":"English [en_US]","value":"en_US"},{"label":"English (South Africa) [en_ZA]","value":"en_ZA"},{"label":"Esperanto [eo]","value":"eo"},{"label":"Espa\u00f1ol de Argentina [es_AR]","value":"es_AR"},{"label":"Espa\u00f1ol de Chile [es_CL]","value":"es_CL"},{"label":"Espa\u00f1ol de Colombia [es_CO]","value":"es_CO"},{"label":"Espa\u00f1ol de Costa Rica [es_CR]","value":"es_CR"},{"label":"Espa\u00f1ol de Rep\u00fablica Dominicana [es_DO]","value":"es_DO"},{"label":"Espa\u00f1ol de Ecuador [es_EC]","value":"es_EC"},{"label":"Espa\u00f1ol [es_ES]","value":"es_ES"},{"label":"Espa\u00f1ol de Guatemala [es_GT]","value":"es_GT"},{"label":"Espa\u00f1ol de Honduras [es_HN]","value":"es_HN"},{"label":"Espa\u00f1ol de M\u00e9xico [es_MX]","value":"es_MX"},{"label":"Espa\u00f1ol de Per\u00fa [es_PE]","value":"es_PE"},{"label":"Espa\u00f1ol de Puerto Rico [es_PR]","value":"es_PR"},{"label":"Espa\u00f1ol de Uruguay [es_UY]","value":"es_UY"},{"label":"Espa\u00f1ol de Venezuela [es_VE]","value":"es_VE"},{"label":"Eesti [et]","value":"et"},{"label":"Euskara [eu]","value":"eu"},{"label":"E\u028begbe [ewe]","value":"ewe"},{"label":"(\u0641\u0627\u0631\u0633\u06cc (\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646 [fa_AF]","value":"fa_AF"},{"label":"\u0641\u0627\u0631\u0633\u06cc [fa_IR]","value":"fa_IR"},{"label":"Suomi [fi]","value":"fi"},{"label":"F\u00f8royskt [fo]","value":"fo"},{"label":"f\u0254\u0300ngb\u00e8 [fon]","value":"fon"},{"label":"Fran\u00e7ais de Belgique [fr_BE]","value":"fr_BE"},{"label":"Fran\u00e7ais du Canada [fr_CA]","value":"fr_CA"},{"label":"Fran\u00e7ais [fr_FR]","value":"fr_FR"},{"label":"Arpitan [frp]","value":"frp"},{"label":"Pulaar [fuc]","value":"fuc"},{"label":"Friulian [fur]","value":"fur"},{"label":"Frysk [fy]","value":"fy"},{"label":"Gaelige [ga]","value":"ga"},{"label":"Afaan Oromoo [gax]","value":"gax"},{"label":"G\u00e0idhlig [gd]","value":"gd"},{"label":"Galego [gl_ES]","value":"gl_ES"},{"label":"\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0 [gu]","value":"gu"},{"label":"Kreyol ayisyen [hat]","value":"hat"},{"label":"Harshen Hausa [hau]","value":"hau"},{"label":"\u0647\u0632\u0627\u0631\u0647 \u06af\u06cc [haz]","value":"haz"},{"label":"\u05e2\u05b4\u05d1\u05b0\u05e8\u05b4\u05d9\u05ea [he_IL]","value":"he_IL"},{"label":"\u0939\u093f\u0928\u094d\u0926\u0940 [hi_IN]","value":"hi_IN"},{"label":"Hrvatski [hr]","value":"hr"},{"label":"Hornjoserb\u0161\u0107ina [hsb]","value":"hsb"},{"label":"Magyar [hu_HU]","value":"hu_HU"},{"label":"\u0540\u0561\u0575\u0565\u0580\u0565\u0576 [hy]","value":"hy"},{"label":"As\u1ee5s\u1ee5 Igbo [ibo]","value":"ibo"},{"label":"Bahasa Indonesia [id_ID]","value":"id_ID"},{"label":"Ido [ido]","value":"ido"},{"label":"\u00cdslenska [is_IS]","value":"is_IS"},{"label":"Italiano [it_IT]","value":"it_IT"},{"label":"\u65e5\u672c\u8a9e [ja]","value":"ja"},{"label":"Basa Jawa [jv_ID]","value":"jv_ID"},{"label":"\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8 [ka_GE]","value":"ka_GE"},{"label":"Qaraqalpaq tili [kaa]","value":"kaa"},{"label":"Taqbaylit [kab]","value":"kab"},{"label":"Kalaallisut [kal]","value":"kal"},{"label":"Ikinyarwanda [kin]","value":"kin"},{"label":"\u041a\u044b\u0440\u0433\u044b\u0437\u0447\u0430 [kir]","value":"kir"},{"label":"\u049a\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456 [kk]","value":"kk"},{"label":"\u1797\u17b6\u179f\u17b6\u1781\u17d2\u1798\u17c2\u179a [km]","value":"km"},{"label":"Kurd\u00ee [kmr]","value":"kmr"},{"label":"\u0c95\u0ca8\u0ccd\u0ca8\u0ca1 [kn]","value":"kn"},{"label":"\ud55c\uad6d\uc5b4 [ko_KR]","value":"ko_KR"},{"label":"L\u00ebtzebuergesch [lb_LU]","value":"lb_LU"},{"label":"Limburgs [li]","value":"li"},{"label":"L\u00ecgure [lij]","value":"lij"},{"label":"Ngala [lin]","value":"lin"},{"label":"Lombardo [lmo]","value":"lmo"},{"label":"\u0e9e\u0eb2\u0eaa\u0eb2\u0ea5\u0eb2\u0ea7 [lo]","value":"lo"},{"label":"Lietuvi\u0173 kalba [lt_LT]","value":"lt_LT"},{"label":"Oluganda [lug]","value":"lug"},{"label":"Latvie\u0161u valoda [lv]","value":"lv"},{"label":"\u092e\u0948\u0925\u093f\u0932\u0940 [mai]","value":"mai"},{"label":"Crnogorski jezik [me_ME]","value":"me_ME"},{"label":"Kreol Morisien [mfe]","value":"mfe"},{"label":"Malagasy [mg_MG]","value":"mg_MG"},{"label":"\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438 \u0458\u0430\u0437\u0438\u043a [mk_MK]","value":"mk_MK"},{"label":"\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02 [ml_IN]","value":"ml_IN"},{"label":"Malti [mlt]","value":"mlt"},{"label":"\u041c\u043e\u043d\u0433\u043e\u043b [mn]","value":"mn"},{"label":"\u092e\u0930\u093e\u0920\u0940 [mr]","value":"mr"},{"label":"Te Reo M\u0101ori [mri]","value":"mri"},{"label":"Bahasa Melayu [ms_MY]","value":"ms_MY"},{"label":"\u1017\u1019\u102c\u1005\u102c [my_MM]","value":"my_MM"},{"label":"Norsk bokm\u00e5l [nb_NO]","value":"nb_NO"},{"label":"\u0928\u0947\u092a\u093e\u0932\u0940 [ne_NP]","value":"ne_NP"},{"label":"Nederlands (Belgi\u00eb) [nl_BE]","value":"nl_BE"},{"label":"Nederlands [nl_NL]","value":"nl_NL"},{"label":"Nederlands (Formeel) [nl_NL_formal]","value":"nl_NL_formal"},{"label":"Norsk nynorsk [nn_NO]","value":"nn_NO"},{"label":"\u07d2\u07de\u07cf [nqo]","value":"nqo"},{"label":"Occitan [oci]","value":"oci"},{"label":"\u0b13\u0b21\u0b3c\u0b3f\u0b06 [ory]","value":"ory"},{"label":"\u0418\u0440\u043e\u043d [os]","value":"os"},{"label":"\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40 [pa_IN]","value":"pa_IN"},{"label":"Papiamento [pap_AW]","value":"pap_AW"},{"label":"Papiamentu [pap_CW]","value":"pap_CW"},{"label":"Ch\u2019ti [pcd]","value":"pcd"},{"label":"Nigerian Pidgin [pcm]","value":"pcm"},{"label":"Polski [pl_PL]","value":"pl_PL"},{"label":"\u067e\u069a\u062a\u0648 [ps]","value":"ps"},{"label":"Portugu\u00eas de Angola [pt_AO]","value":"pt_AO"},{"label":"Portugu\u00eas do Brasil [pt_BR]","value":"pt_BR"},{"label":"Portugu\u00eas [pt_PT]","value":"pt_PT"},{"label":"Portugu\u00eas (AO90) [pt_PT_ao90]","value":"pt_PT_ao90"},{"label":"Ru\u00e1inga [rhg]","value":"rhg"},{"label":"Rom\u00e2n\u0103 [ro_RO]","value":"ro_RO"},{"label":"Rumantsch [roh]","value":"roh"},{"label":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 [ru_RU]","value":"ru_RU"},{"label":"\u092d\u093e\u0930\u0924\u092e\u094d [sa_IN]","value":"sa_IN"},{"label":"\u0421\u0430\u0445\u0430\u043b\u044b\u044b [sah]","value":"sah"},{"label":"Sicilianu [scn]","value":"scn"},{"label":"\u0dc3\u0dd2\u0d82\u0dc4\u0dbd [si_LK]","value":"si_LK"},{"label":"Sloven\u010dina [sk_SK]","value":"sk_SK"},{"label":"\u0633\u0631\u0627\u0626\u06cc\u06a9\u06cc [skr]","value":"skr"},{"label":"Sloven\u0161\u010dina [sl_SI]","value":"sl_SI"},{"label":"ChiShona [sna]","value":"sna"},{"label":"\u0633\u0646\u068c\u064a [snd]","value":"snd"},{"label":"Afsoomaali [so_SO]","value":"so_SO"},{"label":"Shqip [sq]","value":"sq"},{"label":"P\u00ebr Kosov\u00ebn Shqip [sq_XK]","value":"sq_XK"},{"label":"\u0421\u0440\u043f\u0441\u043a\u0438 \u0458\u0435\u0437\u0438\u043a [sr_RS]","value":"sr_RS"},{"label":"Sardu [srd]","value":"srd"},{"label":"SiSwati [ssw]","value":"ssw"},{"label":"Basa Sunda [su_ID]","value":"su_ID"},{"label":"Svenska [sv_SE]","value":"sv_SE"},{"label":"Kiswahili [sw]","value":"sw"},{"label":"Syriac [syr]","value":"syr"},{"label":"\u015al\u014dnsk\u014f g\u014fdka [szl]","value":"szl"},{"label":"\u0ba4\u0bae\u0bbf\u0bb4\u0bcd [ta_IN]","value":"ta_IN"},{"label":"\u0ba4\u0bae\u0bbf\u0bb4\u0bcd [ta_LK]","value":"ta_LK"},{"label":"Reo Tahiti [tah]","value":"tah"},{"label":"\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41 [te]","value":"te"},{"label":"\u0422\u043e\u04b7\u0438\u043a\u04e3 [tg]","value":"tg"},{"label":"\u0e44\u0e17\u0e22 [th]","value":"th"},{"label":"\u1275\u130d\u122d\u129b [tir]","value":"tir"},{"label":"Tagalog [tl]","value":"tl"},{"label":"T\u00fcrk\u00e7e [tr_TR]","value":"tr_TR"},{"label":"\u0422\u0430\u0442\u0430\u0440 \u0442\u0435\u043b\u0435 [tt_RU]","value":"tt_RU"},{"label":"T\u00fcrkmen\u00e7e [tuk]","value":"tuk"},{"label":"Twents [twd]","value":"twd"},{"label":"\u2d5c\u2d30\u2d4e\u2d30\u2d63\u2d49\u2d56\u2d5c [tzm]","value":"tzm"},{"label":"\u0626\u06c7\u064a\u063a\u06c7\u0631\u0686\u06d5 [ug_CN]","value":"ug_CN"},{"label":"\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 [uk]","value":"uk"},{"label":"\u0627\u0631\u062f\u0648 [ur]","value":"ur"},{"label":"O\u2018zbekcha [uz_UZ]","value":"uz_UZ"},{"label":"V\u00e8neto [vec]","value":"vec"},{"label":"Ti\u1ebfng Vi\u1ec7t [vi]","value":"vi"},{"label":"Wolof [wol]","value":"wol"},{"label":"isiXhosa [xho]","value":"xho"},{"label":"Yor\u00f9b\u00e1 [yor]","value":"yor"},{"label":"\u2d5c\u2d30\u2d4e\u2d30\u2d63\u2d49\u2d56\u2d5c [zgh]","value":"zgh"},{"label":"\u7b80\u4f53\u4e2d\u6587 [zh_CN]","value":"zh_CN"},{"label":"\u9999\u6e2f\u4e2d\u6587 [zh_HK]","value":"zh_HK"},{"label":"\u4e2d\u6587 [zh_SG]","value":"zh_SG"},{"label":"\u7e41\u9ad4\u4e2d\u6587 [zh_TW]","value":"zh_TW"},{"label":"isiZulu [zul]","value":"zul"}]};
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/mu-plugins/pub/locale-switcher/build/index.js?ver=c8505bd3f3f0056808121052a9fbcc6e' id='wporg-locale-switcher-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/themes/pub/wporg-learn-2020/js/navigation.js?ver=1600294081' id='wporg-navigation-js'></script>
+<script type='text/javascript' id='wporg-developer-function-reference-js-extra'>
+/* <![CDATA[ */
+var wporgFunctionReferenceI18n = {"copy":"Copy","copied":"Code copied","expand":"Expand code","collapse":"Collapse code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/themes/pub/wporg-learn-2020/js/function-reference.js?ver=1662672530' id='wporg-developer-function-reference-js'></script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/themes/pub/wporg/js/skip-link-focus-fix.min.js?ver=20151215' id='wporg-plugins-skip-link-focus-fix-js'></script>
+<script type='text/javascript' id='wporg-global-header-script-js-extra'>
+/* <![CDATA[ */
+var wporgGlobalHeaderI18n = {"openSearchLabel":"Open Search","closeSearchLabel":"Close Search","overflowMenuLabel":"More menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://learn.wordpress.org/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1659374909' id='wporg-global-header-script-js'></script>
+<div id="wporg-locale-switcher-container"></div>	<script src='https://stats.wp.com/e-202318.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'47261184',post:'34151',tz:'0',srv:'learn.wordpress.org',j:'1:12.0'} ]);
+		_stq.push([ 'clickTrackerInit', '47261184', '34151' ]);
+	</script>
+	</body>
+</html>

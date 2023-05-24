@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>School of Dramatic Arts &middot; USC</title>
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://dramaticarts.usc.edu/xmlrpc.php" />
+<script type="text/javascript">
+	base  = 'https://dramaticarts.usc.edu';
+	theme = 'https://dramaticarts.usc.edu/wp-content/themes/drama/';
+	ajax  = 'https://dramaticarts.usc.edu/wp-admin/admin-ajax.php';
+</script>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//dramaticarts.usc.edu' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.9.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=UA-35715541-1"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.9.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-35715541-1',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+							
+														parameters.send_to = monsterinsights_frontend.ua;
+							__gtagDataLayer(type, name, parameters);
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+															__gtagTracker('config', 'UA-35715541-1', {"forceSSL":"true","link_attribution":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='pcp-font-awesome-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/font-awesome.min.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pcp_swiper-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/swiper-bundle.min.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pcp-bxslider-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/jquery.bxslider.min.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pcp-likes-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/pcp-likes-public.min.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pcp-popup-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/magnific-popup.min.css?ver=2.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pcp-style-css' href='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/css/style.min.css?ver=2.5.2' type='text/css' media='all' />
+<style id='pcp-style-inline-css' type='text/css'>
+#pcp_wrapper-36691 .sp-pcp-row{ margin-right: -0px;margin-left: -0px;}#pcp_wrapper-36691 .sp-pcp-row [class*='sp-pcp-col-']{padding-right: 0px;padding-left: 0px;padding-bottom: 0px;}.pcp-wrapper-36691 .sp-pcp-title a,.pcp-modal-36691 .sp-pcp-title, .pcp-wrapper-36691 .pcp-collapse-header a{text-align: left;text-transform: none;font-size: 20px;line-height: 24px;letter-spacing: 0px;color: #ffffff;display: inherit;}.pcp-wrapper-36691 .sp-pcp-title, .pcp-modal-36691 .sp-pcp-title {margin: 0px 0px 9px 0px;}.pcp-wrapper-36691 .pcp-collapse-header a{display: inline-block;}.pcp-modal-36691 .sp-pcp-title{text-align: left;color: #111; display: block;}.pcp-wrapper-36691 .sp-pcp-title a:hover,.pcp-wrapper-36691 .pcp-collapse-header:hover a{color: #ffffff;}#pcp_wrapper-36691 .swiper-container-fade:not(.swiper-container-rtl)  .swiper-slide .sp-smart-pro-item:not(:last-child),  #pcp_wrapper-36691 .swiper-container-cube:not(.swiper-container-rtl)  .swiper-slide [class~='sp-smart-pro-item'], #pcp_wrapper-36691 .swiper-container-flip:not(.swiper-container-rtl)  .swiper-slide [class~='sp-smart-pro-item']{
+			margin-right:0px;
+		}
+		#pcp_wrapper-36691 .swiper-container-fade.swiper-container-rtl  .swiper-slide .sp-smart-pro-item:not(:last-child),  #pcp_wrapper-36691 .swiper-container-cube.swiper-container-rtl  .swiper-slide [class~='sp-smart-pro-item'], #pcp_wrapper-36691 .swiper-container-flip.swiper-container-rtl  .swiper-slide [class~='sp-smart-pro-item']{
+			margin-left:0px;
+		}
+		#pcp_wrapper-36691 .pcp-button-prev, #pcp_wrapper-36691 .pcp-button-next{ background-image: none; background-size: auto; background-color: #fff; font-size: 18px; height: 33px; width: 33px; margin-top: 8px; border: 1px solid #aaa; text-align: center; line-height: 30px; -webkit-transition: 0.3s; border-radius: 0px; }#pcp_wrapper-36691 .pcp-button-prev:hover, #pcp_wrapper-36691 .pcp-button-next:hover{ background-color: #D64224; border-color: #D64224; } #pcp_wrapper-36691 .pcp-button-prev .fa, #pcp_wrapper-36691 .pcp-button-next .fa{ color: #aaa; } #pcp_wrapper-36691 .pcp-button-prev:hover .fa, #pcp_wrapper-36691 .pcp-button-next:hover .fa{ color: #fff; } #pcp_wrapper-36691.pcp-carousel-wrapper .sp-pcp-post{ margin-top: 0; } #pcp_wrapper-36691 .dots .swiper-pagination-bullet{ background: #cccccc; } #pcp_wrapper-36691 .dots .swiper-pagination-bullet-active { background: #990000; } #pcp_wrapper-36691 .number .swiper-pagination-bullet{ color: #ffffff; background: #444444; } #pcp_wrapper-36691 .number .swiper-pagination-bullet-active, #pcp_wrapper-36691 .number .swiper-pagination-bullet:hover{ color: #ffffff; background: #e1624b; }#pcp_wrapper-36691 .pcp-filter-bar ~ .sp-pcp-carousel.top_right, #pcp_wrapper-36691 .pcp-filter-bar ~ .sp-pcp-carousel.top_center, #pcp_wrapper-36691 .pcp-filter-bar ~ .sp-pcp-carousel.top_left {padding-top: 0px;}#pcp_wrapper-36691 .sp-pcp-carousel {padding-bottom: 60px;}.pcp-modal-36691 .sp-pcp-post-content,.pcp-modal-36691 .sp-pcp-post-content p,.pcp-modal-36691 .sp-pcp-post-content * {color: #444;}#pcp_wrapper-36691 .sp-pcp-post  ,#pcp_wrapper-36691 .sp-pcp-post td, #pcp_wrapper-36691 .table-responsive th {border: 0px solid #e2e2e2;}#pcp_wrapper-36691 .sp-pcp-post  {border-radius: 0;}#pcp_wrapper-36691 .sp-pcp-post{background-color: #000000;}#pcp_wrapper-36691 .sp-pcp-post  {padding: 0 0 0 0;}#pcp_wrapper-36691 .sp-pcp-post-details  {padding: 0 10px 0 10px;}#pcp_wrapper-36691 .sp-pcp-post .pcp-post-thumb-wrapper{border-radius: 0px;margin: 0px 0px 11px 0px;}.pcp-modal-36691 .sp-pcp-post .sp-pcp-post-thumb-area {margin: 0px 0px 11px 0px;}#pcp_wrapper-36691 .sp-overlay.sp-pcp-post .pcp-post-thumb-wrapper,#pcp_wrapper-36691 .left-thumb.sp-pcp-post .pcp-post-thumb-wrapper,#pcp_wrapper-36691 .right-thumb.sp-pcp-post .pcp-post-thumb-wrapper,#pcp_wrapper-36691 .sp-pcp-content-box.sp-pcp-post .pcp-post-thumb-wrapper{margin: 0;}#pcp_wrapper-36691 .pcp-post-thumb-wrapper{border: 0px solid #dddddd;}.pcp-wrapper-36691 .sp_pcp_cf_list,.pcp-popup-36691 .sp_pcp_cf_list{text-align: left;text-transform: none;font-size: 14px;line-height: 18px;letter-spacing: 0px;color: #ffffff;margin: 0px 0px 15px 0px;}.pcp-popup-36691 .sp_pcp_cf_list{color: #888;}.pcp-wrapper-36691 .sp-pcp-post .pcp-category a,.pcp-wrapper-36691  .sp-pcp-post .sp-pcp-post-meta ul li{
+		margin: 0px 5px 5px 0px;
+	}.pcp-wrapper-36691 .sp-pcp-post-meta li,.pcp-wrapper-36691 td.sp-pcp-post-meta,.pcp-wrapper-36691 .sp-pcp-post-meta ul,.pcp-wrapper-36691 .sp-pcp-post-meta li a,.pcp-popup-36691 .sp-pcp-post-meta ul,.pcp-popup-36691 .sp-pcp-post-meta li,.pcp-popup-36691 .sp-pcp-post-meta li a{text-transform: none;font-size: 14px;line-height: 16px;letter-spacing: 0px;color: #ffffff;}.pcp-popup-36691 .sp-pcp-post-meta ul,.pcp-popup-36691 .sp-pcp-post-meta li,.pcp-popup-36691 .sp-pcp-post-meta li a {color: #888;}.pcp-modal-36691 .sp-pcp-post-meta,.pcp-wrapper-36691 .sp-pcp-post-meta{margin: 0px 0px 9px 0px;text-align: left;}.pcp-wrapper-36691 .sp-pcp-post-meta li a:hover,.pcp-popup-36691 .sp-pcp-post-meta li a:hover{color: #e1624b;}#pcp_wrapper-36691  .sp-pcp-post .sp-pcp-social-share{text-align: left;}.pcp-popup-36691  .sp-pcp-post .sp-pcp-social-share{text-align: left;}#pcp_wrapper-36691 .sp-pcp-post .sp-pcp-social-share,.pcp-popup-36691 .sp-pcp-post .sp-pcp-social-share{margin: 0px 0px 0px 0px;}.pcp-popup-36691 .sp-pcp-post .sp-pcp-social-share a.icon_only .fa,#pcp_wrapper-36691 .sp-pcp-post .sp-pcp-social-share a.icon_only .fa{background: transparent;border: none;}#pcp_wrapper-36691 .pcp-post-pagination .page-numbers.current, #pcp_wrapper-36691 .pcp-post-pagination a.active , #pcp_wrapper-36691 .pcp-post-pagination a:hover{ color: #ffffff; background: #e1624b; border-color: #e1624b; }#pcp_wrapper-36691 .pcp-post-pagination,#pcp_wrapper-36691 .pcp-load-more,#pcp_wrapper-36691 .pcp-infinite-scroll-loader{ text-align: left; }#pcp_wrapper-36691 .pcp-post-pagination .page-numbers, .pcp-post-pagination a{ background: #ffffff; color:#5e5e5e; border-color: #bbbbbb; }#pcp_wrapper-36691 .pcp-load-more button{ background: #e1624b; color: #ffffff; border:1px solid transparent; }#pcp_wrapper-36691 .pcp-load-more button:hover{ background: #ffffff; color: #5e5e5e; border:1px solid; cursor: pointer; }
+			#pcp_wrapper-36691 .pcp_ex_filter_bar .pcp-order.pcp-bar.fl-btn input~div { background: #ffffff;color:#5e5e5e; border-color: #bbbbbb;font-size:  13px;text-transform: uppercase;letter-spacing: 0px;
+		}#pcp_wrapper-36691 .pcp_ex_filter_bar .pcp-order.pcp-bar.fl-btn input:checked~div{ color: #ffffff; background: #e1624b; border-color: #e1624b; }
+			#pcp_wrapper-36691 .pcp_ex_filter_bar .pcp-order.pcp-bar.fl-btn input:hover~div{ color: #ffffff; background: #e1624b; border-color: #e1624b; }
+		#pcp_wrapper-36691 .pcp-shuffle-filter .taxonomy-group{ margin: 0px 0px 30px 0px; }
+		#pcp_wrapper-36691 .pcp-shuffle-filter .pcp-button{
+			background: transparent;color: #444444;margin: 0px 8px 8px 0px;border: 2px solid #bbbbbb;font-size:  13px;text-transform: uppercase;letter-spacing: 0px;}#pcp_wrapper-36691 .pcp-shuffle-filter .pcp-button:hover, #pcp_wrapper-36691 .pcp-shuffle-filter .pcp-button.is-active { background: #e1624b; color: #ffffff; border: 2px solid #e1624b; } @media (max-width: 768px) {.pcp-wrapper-36691 .sp-pcp-title a{ font-size: 18px; line-height: 22px; }.pcp-wrapper-36691 .sp-pcp-post-meta li, .pcp-wrapper-36691 .sp-pcp-post-meta li a { font-size: 14px; line-height: 16px; } .pcp-wrapper-36691 .sp_pcp_cf_list{ font-size: 14px; line-height: 18px; } }@media (max-width: 420px) {.pcp-wrapper-36691 .sp-pcp-title a{ font-size: 16px; line-height: 20px; }.pcp-wrapper-36691 .sp-pcp-post-meta li, .pcp-wrapper-36691 .sp-pcp-post-meta li a{ font-size: 12px; line-height: 16px; } .pcp-wrapper-36691 .sp_pcp_cf_list{ font-size: 12px; line-height: 16px; } }#pcp_wrapper-36691 .pcp-table-layout table tbody tr.sp-pcp-post:nth-child(even) {
+    background-color: hsl(0deg 0% 60% / 10%);
+}
+@media (min-width: 1200px) {
+  .sp-pcp-row .sp-pcp-col-xl-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-3 {
+    flex: 0 0 33.22222222%;
+    max-width: 33.22222222%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-6 {
+    flex: 0 0 16.66666666666667%;
+    max-width: 16.66666666666667%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-7 {
+    flex: 0 0 14.28571428%;
+    max-width: 14.28571428%;
+  }
+  .sp-pcp-row .sp-pcp-col-xl-8 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sp-pcp-row .sp-pcp-col-lg-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-3 {
+    flex: 0 0 33.22222222%;
+    max-width: 33.22222222%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-6 {
+    flex: 0 0 16.66666666666667%;
+    max-width: 16.66666666666667%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-7 {
+    flex: 0 0 14.28571428%;
+    max-width: 14.28571428%;
+  }
+  .sp-pcp-row .sp-pcp-col-lg-8 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .sp-pcp-row .sp-pcp-col-md-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-2-5 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-3 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-6 {
+    flex: 0 0 16.66666666666667%;
+    max-width: 16.66666666666667%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-7 {
+    flex: 0 0 14.28571428%;
+    max-width: 14.28571428%;
+  }
+  .sp-pcp-row .sp-pcp-col-md-8 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sp-pcp-row .sp-pcp-col-sm-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-2-5 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-3 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-6 {
+    flex: 0 0 16.66666666666667%;
+    max-width: 16.66666666666667%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-7 {
+    flex: 0 0 14.28571428%;
+    max-width: 14.28571428%;
+  }
+  .sp-pcp-row .sp-pcp-col-sm-8 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+.pcp-post-pagination.pcp-on-mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .sp-pcp-row .sp-pcp-col-xs-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-3 {
+    flex: 0 0 33.22222222%;
+    max-width: 33.22222222%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-6 {
+    flex: 0 0 16.66666666666667%;
+    max-width: 16.66666666666667%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-7 {
+    flex: 0 0 14.28571428%;
+    max-width: 14.28571428%;
+  }
+  .sp-pcp-row .sp-pcp-col-xs-8 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .pcp-post-pagination.pcp-on-mobile:not(.pcp-hide) {
+    display: block;
+  }
+  .pcp-post-pagination:not(.pcp-on-mobile) {
+    display: none;
+  }
+}
+
+</style>
+<link rel='stylesheet' id='drama-style-css' href='https://dramaticarts.usc.edu/wp-content/themes/drama/style.css?ver=20220223' type='text/css' media='screen,print' />
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.9.0' id='monsterinsights-frontend-script-js'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/dramaticarts.usc.edu","hash_tracking":"false","ua":"UA-35715541-1","v4_id":""};/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://dramaticarts.usc.edu/wp-json/" /><link rel="icon" href="https://dramaticarts.usc.edu/wp-content/uploads/2021/06/usc-shield-125x125.png" sizes="32x32" />
+<link rel="icon" href="https://dramaticarts.usc.edu/wp-content/uploads/2021/06/usc-shield-250x250.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://dramaticarts.usc.edu/wp-content/uploads/2021/06/usc-shield-250x250.png" />
+<meta name="msapplication-TileImage" content="https://dramaticarts.usc.edu/wp-content/uploads/2021/06/usc-shield-300x300.png" />
+		<style type="text/css" id="wp-custom-css">
+			.category-students h1.entry-title, .grid ul li h3 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+figcaption.boxed {
+    color: #fff;
+    font-size: .85em;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+}
+.events-list .events .item, .events-list .events .item.column {max-width: 400px}
+
+.content-area figcaption p {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 52em) {
+figcaption {
+    border-bottom: 1px solid transparent;
+}
+}
+
+.sp-pcp-post .sp-pcp-title  {
+	margin-bottom:6px;
+}
+
+.sp_pcp_cf_list {
+	font-size:19px !important;
+}
+
+.sp_pcp_ctf-drama_event_start_date {
+	float:left;
+	margin-right: 6px;
+}
+
+.sp_pcp_cf_list div {
+	line-height:22px;
+}		</style>
+		<meta name="google-site-verification" content="CRbys5O2P9HU8v7aHthxZ59lD-TP_VZpTULdPCf3t5A" />
+</head>
+
+<body class="home blog">
+<div class="site-wrapper">
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<header class="site-header" role="banner">
+	<div class="site-branding">
+		<h1 class="brand-title"><a href="//www.usc.edu">University of Southern California</a></h1>
+		<h2 class="site-title"><a href="https://dramaticarts.usc.edu/" rel="home">School of Dramatic Arts</a></h2>
+			</div><!-- .site-branding -->
+
+	<nav id="site-navigation" class="site-navigation" role="navigation">
+		<a class="menu-toggle" href="#menu-primary">Menu</a>
+		<a class="home-link" href="https://dramaticarts.usc.edu/" rel="home">School of Dramatic Arts</a>
+		<ul id="menu-social-media" class="site-social"><li id="menu-item-3155" class="flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-3155"><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/uscschooloftheatre/sets/">Flickr</a></li>
+<li id="menu-item-60" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener" href="https://www.facebook.com/USCSchoolofDramaticArts">Facebook</a></li>
+<li id="menu-item-7629" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-7629"><a target="_blank" rel="noopener" href="https://instagram.com/uscsda/">Instagram</a></li>
+<li id="menu-item-61" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a target="_blank" rel="noopener" href="https://twitter.com/USCSDA">Twitter</a></li>
+<li id="menu-item-15901" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-15901"><a href="https://www.youtube.com/channel/UCfyLvGOv29U790dq05zNVgQ">YouTube</a></li>
+<li id="menu-item-62" class="search menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="#search-form">Search</a></li>
+</ul>	</nav><!-- .site-navigation -->
+</header>
+<div id="content">
+<div id="module-2809" class="block homepage-first photo-block background-white image-horizontal full-width opaque text-bottom-left">
+			<div class="wrapper">
+	<figure class="feature-photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2022/11/52459501608_b09f253457_o-1600x900.jpg 960w,https://dramaticarts.usc.edu/wp-content/uploads/2022/11/52459501608_b09f253457_o-1200x675.jpg 720w,https://dramaticarts.usc.edu/wp-content/uploads/2022/11/52459501608_b09f253457_o-800x450.jpg 480w" src="https://dramaticarts.usc.edu/wp-content/uploads/2022/11/52459501608_b09f253457_o-800x450.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Photo from Wintertime production" /><a href="https://dramaticarts.usc.edu/about/"><figcaption class="labeled text-bottom-left bottom-bottom-left opaque"><h3>Dramatically Different</h3><span class="excerpt"><p>For more than 75 years, we have fostered the talents of artist-scholars who are willing to imagine the future of the entertainment industry and bring it to life. The agile nature of our interdisciplinary and entrepreneurial approach exposes students to diverse styles and multiple mediums, and they graduate prepared with the tools necessary for sustainable and thriving careers. <span class="info">explore sda</span></p>
+</span><!--.excerpt--></figcaption></a></figure>	</div><!--/.wrapper-->
+</div><!--/.block-->
+<div id="module-64" class="block single-row background-white image-horizontal image-medium full-width none header-top carousel has-block-label">
+			<h2 class="block-label"><span><a href="/category/news/">In the News</a></span></h2>
+			<div class="wrapper">
+	<ul class="slider"><li class="column"><a href="https://news.usc.edu/207507/velina-hasu-houston-has-been-carving-out-her-place-since-she-was-a-girl/" target="_blank"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/05/houston_web-1200x675.jpg 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/05/houston_web-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/05/houston_web-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/05/houston_web-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Velina Hasu Houston is USC resident playwright and Distinguished Professor of Theatre in Dramatic Writing at the USC School of Dramatic Arts. (Photo/Monique Yamaguch)" /></figure><span class="padding"><h3>Velina Hasu Houston has been carving out her place since she was a girl</h3><span class="excerpt"><p>TITLE IX: The international acclaimed playwright is a gender equity and racial equity trailblazer in her work at USC and beyond. </p>
+<div class="info">trailblazer</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://news.usc.edu/207526/usc-school-of-dramatic-arts-celebrates-alexandra-billings-first-tenured-transgender-faculty-member/" target="_blank"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/alexandra_billings_event_new_web-824x549-1-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/alexandra_billings_event_new_web-824x549-1-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/alexandra_billings_event_new_web-824x549-1-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="" /></figure><span class="padding"><h3>USC School of Dramatic Arts celebrates its first tenured transgender faculty member</h3><span class="excerpt"><p>“It’s the students and their artistic voice that matter,” says Alexandra Billings.­­ </p>
+<div class="info">faculty</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://news.usc.edu/207540/title-ix-trailblazer-usc-school-of-dramatic-arts-dean-emily-roxworthy/" target="_blank"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/into_the_woods_dean-824x549-1-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/into_the_woods_dean-824x549-1-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/into_the_woods_dean-824x549-1-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="SDA Dean Emily Roxworthy talks with students from local area schools who attend the School of Dramatic Arts' performance of "Into The Woods," Nov. 2, 2022. (Photo/Gus Ruelas)" /></figure><span class="padding"><h3>Trailblazer Emily Roxworthy credits role-model mom for ‘bulletproof’ determination</h3><span class="excerpt"><p>TITLE IX: The USC School of Dramatic Arts dean has thrived despite some people’s outdated attitudes. </p>
+<div class="info">trailblazer</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://dramaticarts.usc.edu/comedy-legend-will-ferrell-brings-wisdom-and-wit-to-sda/"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/will-ferrell-cover-photo-2-1200x675.jpg 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/will-ferrell-cover-photo-2-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/will-ferrell-cover-photo-2-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/will-ferrell-cover-photo-2-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Will Ferrell sits on stage next to Professor Natsuko Ohama, chatting amiably." /></figure><span class="padding"><h3>Comedy legend Will Ferrell brings wisdom and wit to SDA</h3><span class="excerpt"><p>Comedy legend and proud Trojan Will Ferrell spoke with Professor Natsuko Ohama about his career, acting advice, and why studying acting is a great way to spend your college years.</p>
+<div class="info">star power</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://dramaticarts.usc.edu/student-group-spotlight-the-suspenders/"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Suspenders-featured-image-1200x675.jpg 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Suspenders-featured-image-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Suspenders-featured-image-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Suspenders-featured-image-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="A group of students in blue uniforms toss their baseball caps on USC campus." /></figure><span class="padding"><h3>Student Group Spotlight: The Suspenders</h3><span class="excerpt"><p>The Suspenders brings together funny students from all across campus to perform their unique brand of sketch comedy. And yes, there&#8217;s a musical number.</p>
+<div class="info">comedy</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://titleixat50.usc.edu/2023/04/14/usc-trailblazer-tracy-tutor/" target="_blank"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/tracy_tutor_2_web-1536x1024-1-1200x675.jpg 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/tracy_tutor_2_web-1536x1024-1-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/tracy_tutor_2_web-1536x1024-1-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/tracy_tutor_2_web-1536x1024-1-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Powerhouse real estate agent Tracy Tutor is an alumna the USC School of Dramatic Arts and member of the its Board of Councilors. (Photo/Andres Sandoval)" /></figure><span class="padding"><h3>Trojan trailblazer breaks ground for women in real estate</h3><span class="excerpt"><p>TITLE IX: For SDA alumna Tracy Tutor of Million Dollar Listing Los Angeles fame, the landmark legislation can inspire independence and combat entrenched forms of discrimination. </p>
+<div class="info">trailblazer</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://dramaticarts.usc.edu/alumni-qa-pranav-shah-bfa-05/"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/021823-Pranav-Shah-Headshots_062_198-1200x675.jpg 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/021823-Pranav-Shah-Headshots_062_198-800x450.jpg 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/021823-Pranav-Shah-Headshots_062_198-400x225.jpg 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/021823-Pranav-Shah-Headshots_062_198-400x225.jpg" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Headshot of Pranav Shah with blue background" /></figure><span class="padding"><h3>Alumni Q&#038;A: Pranav Shah BFA &#8217;05</h3><span class="excerpt"><p>For our Alumni Q&#038;A series, Pranav Shah BFA &#8217;05 talks about a magical USC summer in Prague, the importance of keeping in touch with your Trojan Family, and receiving the APAA Service Award. </p>
+<div class="info">alumni q&#038;a</div>
+</span><!--.excerpt--></span><!--.padding--></a></li><li class="column"><a href="https://dramaticarts.usc.edu/faculty-qa-finola-hughes/"><figure class="photo"><img class="picturefill" srcset="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Finola-Hughes_horizontal_16_9-1200x675.png 2160w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Finola-Hughes_horizontal_16_9-800x450.png 1440w,https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Finola-Hughes_horizontal_16_9-400x225.png 720w" src="https://dramaticarts.usc.edu/wp-content/uploads/2023/04/Finola-Hughes_horizontal_16_9-400x225.png" sizes="(min-width: 800px) 50vw,(min-width: 640px) 80vw,100vw" alt="Headshot for adjunct lecturer Finola Hughes" /></figure><span class="padding"><h3>Faculty Q&#038;A: Finola Hughes</h3><span class="excerpt"><p>Finola Hughes talks about teaching at SDA, sixty years of General Hospital, and working across different mediums as an actor. </p>
+<div class="info">getting to know</div>
+</span><!--.excerpt--></span><!--.padding--></a></li></ul>	</div><!--/.wrapper-->
+</div><!--/.block-->
+<div id="module-9895" class="lazy" data-key="0" data-permalink="https://dramaticarts.usc.edu/modules/showcase-for-homepage/"></div><!--/.block--><div id="module-162" class="lazy" data-key="1" data-permalink="https://dramaticarts.usc.edu/modules/visiting-experts/"></div><!--/.block--><div id="module-290" class="lazy" data-key="2" data-permalink="https://dramaticarts.usc.edu/modules/featured-faculty/"></div><!--/.block--><div id="module-175" class="lazy" data-key="3" data-permalink="https://dramaticarts.usc.edu/modules/los-angeles/"></div><!--/.block--><div id="module-2877" class="lazy" data-key="4" data-permalink="https://dramaticarts.usc.edu/modules/meet-our-alumni/"></div><!--/.block--></div>
+
+<div class="site-footer-wrapper">
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<ul id="menu-primary" class="site-nav"><li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="https://dramaticarts.usc.edu/apply/">Apply</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="https://dramaticarts.usc.edu/programs/">Programs</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="https://dramaticarts.usc.edu/on-stage/">On Stage</a></li>
+<li id="menu-item-435" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-435"><a href="https://dramaticarts.usc.edu/category/news/">News</a></li>
+<li id="menu-item-37812" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37812"><a href="/faculty-and-staff/">Faculty &#038; Staff</a></li>
+<li id="menu-item-783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-783"><a href="https://dramaticarts.usc.edu/alumni/">Alumni</a></li>
+<li id="menu-item-789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-789"><a href="https://dramaticarts.usc.edu/giving/">Giving</a></li>
+<li id="menu-item-788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-788"><a href="https://dramaticarts.usc.edu/about/">About</a></li>
+</ul><form role="search" method="get" id="search-form" class="site-search" action="https://dramaticarts.usc.edu/"><label for="search-query" class="sr-only">Search</label><input type="text" id="search-query" class="search-field" name="s" title="search" placeholder="search for..." /><button type="submit" class="search-submit">search</button></form>		<div class="social-menu">
+		<ul id="menu-social-media-1" class="social"><li class="flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-3155"><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/uscschooloftheatre/sets/">Flickr</a></li>
+<li class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener" href="https://www.facebook.com/USCSchoolofDramaticArts">Facebook</a></li>
+<li class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-7629"><a target="_blank" rel="noopener" href="https://instagram.com/uscsda/">Instagram</a></li>
+<li class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a target="_blank" rel="noopener" href="https://twitter.com/USCSDA">Twitter</a></li>
+<li class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-15901"><a href="https://www.youtube.com/channel/UCfyLvGOv29U790dq05zNVgQ">YouTube</a></li>
+<li class="search menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="#search-form">Search</a></li>
+</ul>		</div><!--/.social-menu-->
+		<div class="audiences-menu">
+		<ul id="menu-audiences" class="audiences"><li id="menu-item-7702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7702"><a target="_blank" rel="noopener" href="https://sdastudents.usc.edu">For Current Students</a></li>
+<li id="menu-item-1171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1171"><a href="https://dramaticarts.usc.edu/parents/">For Parents</a></li>
+<li id="menu-item-781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a target="_blank" rel="noopener" href="https://sites.usc.edu/sdaemployees">For Faculty &#038; Staff</a></li>
+</ul>		</div><!--/.audiences-menu-->
+		<div class="basics">
+			<h3><a href="https://dramaticarts.usc.edu/">USC School of Dramatic Arts</a></h3>
+			<ul id="menu-miscellaneous-links" class="misc"><li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="https://dramaticarts.usc.edu/contact/">Contact Information</a></li>
+<li id="menu-item-795" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-795"><a href="https://dramaticarts.usc.edu/employment/">Employment</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="https://dramaticarts.usc.edu/emergency/">Emergency Information</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="https://dramaticarts.usc.edu/location/">Location and Directions</a></li>
+</ul>		</div><!--/.basics-->
+	</footer><!--/.site-footer-->
+</div><!--/.site-footer-wrapper-->
+			<ul class="credits">
+				<li class="privacy"><a href="https://www.usc.edu/privacy-notice/">Privacy Notice</a></li>
+				<li class="non-discrimination"><a href="https://www.usc.edu/notice-of-non-discrimination/">Notice of Non-Discrimination</a></li>
+				<li class="site-feedback">Send website feedback to <a href="mailto:sdaweb@usc.edu">sdaweb@usc.edu</a></li>
+			</ul>
+			</div><!--/.site-wrapper -->
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/themes/drama/js/jquery.min.js' id='jquery-js'></script>
+<script type='text/javascript' id='pcp-likes-public-js-js-extra'>
+/* <![CDATA[ */
+var simpleLikes = {"ajaxurl":"https:\/\/dramaticarts.usc.edu\/wp-admin\/admin-ajax.php","like":"Like","unlike":"Unlike"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/plugins/smart-post-show-pro/public/assets/js/pcp-likes-public.js?ver=2.0.0' id='pcp-likes-public-js-js'></script>
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/themes/drama/js/picturefill.min.js' id='picturefill-js'></script>
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js' id='royalslider-js'></script>
+<script type='text/javascript' src='https://dramaticarts.usc.edu/wp-content/themes/drama/js/drama.js?ver=20190719' id='drama-js'></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.csuchico.edu/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" />
+    <title>CSU Connect Federation</title>
+    <link rel="stylesheet" type="text/css" href="https://www.csuchico.edu/_common/auth/css/auth.css">
+    <meta content="1200" http-equiv="refresh">
+</head>
+<body class="shib">
+    <div class="wrapper">
+        <header>
+            <a href="https://www.csuchico.edu/" class="logo">California State University, Chico</a>
+        </header>
+        <main class="container clearfix">
+<h1>Login</h1>
+
+
+
+<div class="action">
+    <form action="/idp/profile/cas/login?execution=e1s1" method="post" id="login-form">
+        <div class="form-field">
+            <label for="username">Username:</label>
+            <input 
+                id="username" 
+                name="j_username" 
+                type="text" 
+                value="" 
+                tabindex="1" 
+                autocomplete="off" />
+        </div>
+        <div class="form-field">
+            <label for="password">Password:</label>
+            <input 
+                id="password" 
+                name="j_password" 
+                type="password" 
+                value="" 
+                tabindex="2" 
+                autocomplete="off"/>
+            <p class="forgot">
+                <a tabindex="4" 
+                    href="https://accountcenter.csuchico.edu/identity/self-service/chi/smsreset.jsf" 
+                    title="Forgot Password">Forgot Password?</a>
+                <br>
+                <a tabindex="5" 
+                    href="https://accountcenter.csuchico.edu/identity/self-service/chi/forgotuserid.jsf" 
+                    title="Forgot Username">Forgot Username?</a>
+          </p>
+        </div>
+
+        <div class="form-field">
+            <input 
+                type="submit" 
+                name="_eventId_proceed" 
+                value="Login" tabindex="3" 
+                autocomplete="off"
+                onClick="this.childNodes[0].nodeValue='Logging in, please wait...'" />
+        </div>
+    </form>
+
+</div>
+
+<div class="help">
+    <div class="notice critical">
+        <h2>Security Notice:</h2>
+        <p>Remember to close your browser window when you are done.</p>
+    </div>
+
+    <div class="notice">
+        <h2>Need Help?</h2>
+        <p>
+            For account support call 
+            <a href="tel:5308984357" class="no-break">
+                530-898-<abbr title="4357">HELP</abbr> (4357)
+            </a>
+        </p>
+    </div>
+</div>
+
+            </div>
+        </main>
+    </div>
+    <script>document.querySelector('#username').focus();</script>
+</body>
+</html>

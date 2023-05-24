@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SYVK3KLT7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+
+		gtag('js', new Date());
+
+		gtag('config', 'G-8SYVK3KLT7');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Crop.express - custom image croppers</title>
+	<link rel="Stylesheet" type="text/css" href="/node_modules/croppie/croppie.css"/>
+	<link rel="Stylesheet" type="text/css" href="/app.css"/>
+</head>
+
+<body class="d-flex flex-column ">
+<p id="ready" class="text-center hide-on-ready mb-0">
+	<span class="scissors-wrapper">
+		<img src="/img/scissors.svg" class="scissors"/>
+	</span>
+	Ready to crop an image? Here is what your image will look like:
+</p>
+
+<p id="settings" class="d-flex flex-gap-1 fs-5 justify-content-center flex-shrink-1 pt-2 px-4">
+	<span>
+		<span class="ws-no-wrap">Aspect ratio:</span>
+		<a href="#modal-options" class="ws-no-wrap">
+			<b>Square</b>
+		</a>
+	</span>
+	<span>
+		<span class="ws-no-wrap">Output size:</span>
+		<a href="#modal-options" class="ws-no-wrap">
+			<b>1000px</b> &times; <b>1000px</b>
+		</a>
+	</span>
+	<span>
+		<span class="ws-no-wrap">Output Format:</span>
+		<a href="#modal-options" class="ws-no-wrap">
+			<b>jpg</b>
+		</a>
+	</span>
+</p>
+
+<p id="actions" class="d-flex flex-gap-3 align-items-center">
+		<label for="upload-file-select" class="btn btn-secondary hide-on-ready">
+		<input type="file" id="upload-file-select" value="Choose a file" accept="image/*" hidden/>
+		Choose your image
+	</label>
+			<a class="btn btn-outline-secondary hide-on-ready" href="#share">Share this cropper</a>
+		<b class="show-on-ready">Finished editing?</b>
+	<button id="download" class="btn btn-secondary show-on-ready">Download</button>
+	<span class="show-on-ready">or</span>
+	<a href="" class="show-on-ready btn btn-outline-secondary">Start over</a>
+
+</p>
+
+<div id="crop" class="d-none flex-column"></div>
+
+<div class="modal fade show" id="share" style="">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLiveLabel">You're ready to go!</h5>
+				<a href="#" class="btn-close"></a>
+			</div>
+			<div class="modal-body">
+				<p class="d-flex flex-gap-1 fs-5 justify-content-center flex-shrink-1 pt-2 px-4">
+					<span>
+						<span class="ws-no-wrap">Aspect ratio:</span>
+						<a href="#modal-options" class="ws-no-wrap">
+							<b>Square</b>
+						</a>
+					</span>
+					<span>
+						<span class="ws-no-wrap">Output size:</span>
+						<a href="#modal-options" class="ws-no-wrap">
+							<b>1000px</b> &times; <b>1000px</b>
+						</a>
+					</span>
+					<span>
+						<span class="ws-no-wrap">Output Format:</span>
+						<a href="#modal-options" class="ws-no-wrap">
+							<b>jpg</b>
+						</a>
+					</span>
+				</p>
+
+											<h3><span class="circled">1</span> Give your cropper a friendly name!</h3>
+						<form method="post" action="friendly-url.php">
+							<p>
+																	<label for="friendly-url" class="form-label">Enter a name you'll remember:</label>
+								
+								<span class="input-group">
+								<span class="input-group-text">https://crop.express/</span>
+								<input type="text"
+								       id="friendly-url"
+								       name="slug"
+								       value=""
+								       placeholder="your-clever-name"
+								       required
+								       onkeydown="friendlyUrlFilter(this)"
+								       onkeyup="friendlyUrlFilter(this)"
+								       onblur="friendlyUrlFilter(this)"
+								       onclick="friendlyUrlFilter(this)"
+								       onpaste="friendlyUrlFilter(this)"
+								       class="form-control form-control-lg"
+								       maxlength="100"
+								>
+								<button type="submit" class="btn btn-outline-secondary">
+									Create it!
+								</button>
+							</span>
+								<span class="form-text">Your cropper will also be saved.</span>
+							</p>
+						</form>
+						
+				
+				<p class="mt-5 fs-4 d-flex flex-gap-1 align-items-center justify-content-center">
+					Then...
+					<a href="" onclick="event.preventDefault(); closeShareModal()" class="btn btn-secondary me-5 fs-3"
+					   id="share-continue">
+						Continue to your cropper!
+					</a>
+				</p>
+
+			</div>
+		</div>
+	</div>
+</div><div class="modal fade show" id="download-success" style="">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLiveLabel">Your image is downloading!</h5>
+				<a href="#" class="btn-close"></a>
+			</div>
+			<div class="modal-body">
+				<p class="d-flex flex-gap-3 justify-content-center">
+					<a class="btn btn-outline-secondary" href="#modal-options">Configure another cropper</a>
+					<a class="btn btn-outline-secondary" href="#share">Share this cropper</a>
+					<a href="" class="btn btn-link">Start over</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div><div class="modal fade show" id="modal-options" style="box-shadow: inset 0px 0px 0px 100vw #0006; display: block">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLiveLabel">Create your own cropper!</h5>
+				<a href="#" class="btn-close"></a>
+			</div>
+			<div class="modal-body">
+				<p class="d-flex flex-gap-3 flex-wrap">
+																<input type="radio" name="crop" value="1:1" id="crop-1:1"
+						       onchange="updateURLParameterBuilder('crop', '1:1'); hideSizes();"
+							checked						>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-1:1">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 5vw;
+									      height: 5vw;
+									      "></span>
+							Square						</label>
+											<input type="radio" name="crop" value="16:9" id="crop-16:9"
+						       onchange="updateURLParameterBuilder('crop', '16:9'); hideSizes();"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-16:9">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 8.890625vw;
+									      height: 5vw;
+									      "></span>
+							16:9						</label>
+											<input type="radio" name="crop" value="9:16" id="crop-9:16"
+						       onchange="updateURLParameterBuilder('crop', '9:16'); hideSizes();"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-9:16">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 5vw;
+									      height: 8.890625vw;
+									      "></span>
+							9:16						</label>
+											<input type="radio" name="crop" value="4:3" id="crop-4:3"
+						       onchange="updateURLParameterBuilder('crop', '4:3'); hideSizes();"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-4:3">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 6.671875vw;
+									      height: 5vw;
+									      "></span>
+							4:3						</label>
+											<input type="radio" name="crop" value="3:4" id="crop-3:4"
+						       onchange="updateURLParameterBuilder('crop', '3:4'); hideSizes();"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-3:4">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 5vw;
+									      height: 6.671875vw;
+									      "></span>
+							3:4						</label>
+											<input type="radio" name="crop" value="1080,1080" id="crop-1080,1080"
+						       onchange="updateURLParameterBuilder('crop', '1080,1080'); hideSizes(1);"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-1080,1080">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 5vw;
+									      height: 5vw;
+									      "></span>
+							Instagram <small>1080 &times; 1080</small>						</label>
+											<input type="radio" name="crop" value="1200,675" id="crop-1200,675"
+						       onchange="updateURLParameterBuilder('crop', '1200,675'); hideSizes(1);"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-1200,675">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 8.890625vw;
+									      height: 5vw;
+									      "></span>
+							Twitter <small>1200 &times; 675</small>						</label>
+											<input type="radio" name="crop" value="1200,630" id="crop-1200,630"
+						       onchange="updateURLParameterBuilder('crop', '1200,630'); hideSizes(1);"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="crop-1200,630">
+														<span class="border border-dark rounded d-block mx-auto"
+							      style=" width: 9.53125vw;
+									      height: 5vw;
+									      "></span>
+							Facebook <small>1200 &times; 630</small>						</label>
+									</p>
+				<h4>The cropped image that will be created</h4>
+				<p id="result-size-wrapper"
+				   class="d-flex flex-gap-3 flex-wrap"
+				   style=""
+				>
+					
+						<input type="radio" name="size" value="250"
+						       id="size-250"
+						       onchange="updateURLParameterBuilder('size', '250')"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50 pt-2 pb-1"
+						       for="size-250">250px</label>
+					
+						<input type="radio" name="size" value="500"
+						       id="size-500"
+						       onchange="updateURLParameterBuilder('size', '500')"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50 pt-2 pb-1"
+						       for="size-500">500px</label>
+					
+						<input type="radio" name="size" value="1000"
+						       id="size-1000"
+						       onchange="updateURLParameterBuilder('size', '1000')"
+							checked						>
+						<label class="btn btn-outline-secondary border border-opacity-50 pt-2 pb-1"
+						       for="size-1000">1000px</label>
+					
+						<input type="radio" name="size" value="2000"
+						       id="size-2000"
+						       onchange="updateURLParameterBuilder('size', '2000')"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50 pt-2 pb-1"
+						       for="size-2000">2000px</label>
+									</p>
+				<p class="d-flex flex-gap-3 flex-wrap">
+											<input type="radio" name="format" value="jpg"
+						       id="format-jpg"
+						       onchange="updateURLParameterBuilder('format', 'jpg')"
+							checked						>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="format-jpg">jpg</label>
+											<input type="radio" name="format" value="png"
+						       id="format-png"
+						       onchange="updateURLParameterBuilder('format', 'png')"
+													>
+						<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1"
+						       for="format-png">png</label>
+									</p>
+
+				<h4>More options</h4>
+				<p class="d-flex flex-gap-3 flex-wrap">
+					<input type="radio" name="welcome" value="" id="welcome-"
+					       onchange="updateURLParameterBuilder('welcome', '')"
+						checked					>
+					<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1" for="welcome-">Show the
+						welcome screen</label>
+					<input type="radio" name="welcome" value="hide" id="welcome-hide"
+					       onchange="updateURLParameterBuilder('welcome', 'hide')"
+											>
+					<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1" for="welcome-hide">Hide
+						the welcome screen</label>
+				</p>
+				<p class="d-flex flex-gap-3 flex-wrap">
+					<input type="radio" name="share" value="" id="share-"
+					       onchange="updateURLParameterBuilder('share', '')"
+						checked					>
+					<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1" for="share-">Show the
+						share button</label>
+					<input type="radio" name="share" value="hide" id="share-hide"
+					       onchange="updateURLParameterBuilder('share', 'hide')"
+											>
+					<label class="btn btn-outline-secondary border border-opacity-50  pt-2 pb-1" for="share-hide">Hide
+						the share button</label>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" type="button" class="btn btn-outline-secondary">Close</a>
+								<a href="https://crop.express?share=show" id="newUrlBuilderButton" class="btn btn-secondary">Update the
+					cropper</a>
+			</div>
+		</div>
+	</div>
+</div><div id="welcome" class="offcanvas offcanvas-start show">
+	<div class="offcanvas-body px-5">
+
+		<h1 class="lh-1 fw-bold">
+			<small>Crop.express for</small>
+			<span>super-fast</span> <span>image cropping</span>
+		</h1>
+
+		<p class="scissors-wrapper">
+			<img src="/img/scissors.svg" class="scissors"/>
+		</p>
+
+		
+					<p class="fs-5">Crop images for socials, publishing, WordPress, and more!
+				<small>No account, email or sign-up required.</small>
+			</p>
+			<p class=" mb-5">
+				<a href="#" class="btn btn-secondary btn-lg d-block">
+					Start cropping!
+				</a>
+			</p>
+			<p class="fs-5">Even better... set the aspect ratio, image size,
+				and more to create a unique cropper preset to bookmark, share with clients,
+				and for daily use.</p>
+			<p class=" mb-5">
+				<a href="#modal-options" class="btn btn-outline-secondary btn-lg d-block">
+					Create and save your own croppers
+				</a>
+			</p>
+
+			<p class="p-3 rounded clearfix" style="border: 3px dashed #CCC;">
+				<img src="/img/corey-cheez-it-150-min.jpeg" class="img-thumbnail float-start me-2 mb-2"
+				     style="max-width: 38.2%"/>
+				<b>Hey, I'm Corey!</b>
+				I'm a <b>freelance <a href="https://gelform.com" target="_blank">web developer</a></b>.
+				My clients are writers who get overwhelmed with anything too techy.
+				Cropping images for stories is too techy, so I created <b>crop.express</b>.
+				Now I send them pre-configured croppers, and they <b>crop images with no problem</b>!
+			</p>
+				</div>
+</div><div class="modal fade show" id="contact" style="box-shadow: inset 0px 0px 0px 100vw #0006; display: block">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLiveLabel">Contact me!</h5>
+				<a href="#" class="btn-close"></a>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-info mx-auto" style="max-width: 50vw; min-width: 320px;">
+					<p><b>Feedback? Question? Comment?</b>
+						I made this little image cropper and would love your feedback.
+						Send me an email below!
+						I look forward to hearing from you!
+					</p>
+					<p class="text-end">- Corey</p>
+				</div>
+				<script src="https://unpkg.com/@botpoison/browser" async></script>
+				<form
+						action="https://submit-form.com/zgt2uVYo"
+						data-botpoison-public-key="pk_4f765c45-91de-43c5-96e5-a14b38a567b6"
+				>
+					<input
+							type="hidden"
+							name="_redirect"
+							value="https://crop.express/#contact-success"
+					/>
+					<input type="hidden" name="_append" value="false" />
+					<p>
+						<label for="email" class="form-label">Email</label>
+						<input type="email" id="email" name="email" placeholder="Email" required=""
+						       class="form-control"/>
+					</p>
+					<p>
+						<label for="message" class="form-label">Message</label>
+						<textarea
+								id="message"
+								name="message"
+								placeholder="Message"
+								required=""
+								class="form-control"
+						></textarea>
+					</p>
+					<p>
+						<button type="submit" class="btn btn-secondary btn-lg">
+							Email away!
+						</button>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+</div><div class="modal fade show" id="contact-success" style="box-shadow: inset 0px 0px 0px 100vw #0006; display: block">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLiveLabel">Message received!</h5>
+				<a href="#" class="btn-close"></a>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-info mx-auto" style="max-width: 50vw; min-width: 320px;">
+					<p><b>Thanks for your message!</b>
+						I'll get back to you as soon as I can.
+					</p>
+					<p class="text-end">- Corey</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="d-xflex flex-gap-1 justify-content-center align-items-center">
+	<span>
+		&copy; <a href="https://gelform.com" target="_blank">Gelform</a>, 2023	</span>
+	<a href="#contact" class="btn btn-outline-secondary btn-sm">Feedback? Question? Comment?</a>
+</footer>
+
+<script>
+	function vars(){return {"crop":"1:1","result":{"format":"jpg","width":"1000","height":"1000","append":""},"viewport":{"width":320,"height":320}};}</script>
+
+<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="/node_modules/croppie/croppie.js"></script>
+<script src="/app.js"></script>
+
+</body>
+
+</html>

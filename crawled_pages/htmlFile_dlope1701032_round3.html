@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Andrew Ozz on WordPress | Just another WordPress.com weblog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="https://s2.wp.com/wp-content/themes/pub/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="https://ozz.blog/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://s2.wp.com/wp-content/themes/pub/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=380'
+					+ '&is_singular=';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9venouYmxvZw%3D%3D"
+		+ "&wpcomid=3380945"
+		+ "&time=1683002364";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//azaozz.wordpress.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Andrew Ozz on WordPress &raquo; Feed" href="https://ozz.blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Andrew Ozz on WordPress &raquo; Comments Feed" href="https://ozz.blog/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1677072837h&ver=6.2-RC2-55570"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJytkttuwjAMhl9oiSliwC6mPcqUJlZnlpPipKhvv1BoVWAbu9hNpD/25zMco9DBZ/QZXBHRlo48wzHq4AQ7sjjcKKmZn2CBTUxXqmwxddWSEPrmWW7lGtpC1kBrg/4Ultqk0gCcB4v/ESh/oLsPtGjkgDmqCpw1xBRM0ZmCnyzvPXoTEqiSg1M5k56ZngyGmJD5KjcayhUYBcPoVF88zmWQ17YYrMkZXPVWaGuVp7oWIlo1YBIWO6UH6cg/xqttqa+gn2d4qXNqqqYNJYsukfnzGm5CJJXJd/wA1+GCrWWzl41gctGiSNjLDRjiPHuI60Bz//UDtFXMpMW4aP625cW2T/dS/11U99P6BTvfd9uOuxb1dVTclLJyb+612e7Xu9XLZrU7fAEReTOG&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue: #1982d1;--wp--preset--color--dark-gray: #373737;--wp--preset--color--medium-gray: #666;--wp--preset--color--light-gray: #e2e2e2;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans';--wp--preset--font-family--alegreya: Alegreya;--wp--preset--font-family--arvo: Arvo;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda';--wp--preset--font-family--cabin: Cabin;--wp--preset--font-family--chivo: Chivo;--wp--preset--font-family--commissioner: Commissioner;--wp--preset--font-family--cormorant: Cormorant;--wp--preset--font-family--courier-prime: 'Courier Prime';--wp--preset--font-family--crimson-pro: 'Crimson Pro';--wp--preset--font-family--dm-mono: 'DM Mono';--wp--preset--font-family--dm-sans: 'DM Sans';--wp--preset--font-family--domine: Domine;--wp--preset--font-family--eb-garamond: 'EB Garamond';--wp--preset--font-family--epilogue: Epilogue;--wp--preset--font-family--figtree: Figtree;--wp--preset--font-family--fira-sans: 'Fira Sans';--wp--preset--font-family--fraunces: Fraunces;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono';--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans';--wp--preset--font-family--inter: Inter;--wp--preset--font-family--josefin-sans: 'Josefin Sans';--wp--preset--font-family--jost: Jost;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville';--wp--preset--font-family--libre-franklin: 'Libre Franklin';--wp--preset--font-family--literata: Literata;--wp--preset--font-family--lora: Lora;--wp--preset--font-family--merriweather: Merriweather;--wp--preset--font-family--montserrat: Montserrat;--wp--preset--font-family--newsreader: Newsreader;--wp--preset--font-family--nunito: Nunito;--wp--preset--font-family--open-sans: 'Open Sans';--wp--preset--font-family--overpass: Overpass;--wp--preset--font-family--petrona: Petrona;--wp--preset--font-family--piazzolla: Piazzolla;--wp--preset--font-family--playfair-display: 'Playfair Display';--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans';--wp--preset--font-family--poppins: Poppins;--wp--preset--font-family--raleway: Raleway;--wp--preset--font-family--roboto-slab: 'Roboto Slab';--wp--preset--font-family--roboto: Roboto;--wp--preset--font-family--rubik: Rubik;--wp--preset--font-family--sora: Sora;--wp--preset--font-family--source-sans-pro: 'Source Sans Pro';--wp--preset--font-family--source-serif-pro: 'Source Serif Pro';--wp--preset--font-family--space-mono: 'Space Mono';--wp--preset--font-family--texturina: Texturina;--wp--preset--font-family--work-sans: 'Work Sans';--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJyNjsEOwjAMQ3+IEjYxBAfEt2xVVgptUi0p1f6ecAMhIW625WcZWnGeSZEU9IoZBUqdQJsFKyZ8IMGU2N9l60U28EdddE3oWvGcv5hcXUk1RBIIyM6GR41MH8bNaYzLL3RBuxRMBrDWm31Bl3zuDn1/3J923XB7ArAMU8s=&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423h&cssminify=yes' type='text/css' media='all' />
+<script id='wpcom-actionbar-placeholder-js-extra'>
+var actionbardata = {"siteID":"3380945","siteURL":"https:\/\/ozz.blog","xhrURL":"https:\/\/ozz.blog\/wp-admin\/admin-ajax.php","nonce":"cfd7ab01b0","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??/wp-content/js/mobile-useragent-info.js,/wp-content/js/rlt-proxy.js?m=1637704497j'></script>
+<script type='text/javascript'>
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://azaozz.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/ebxn' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Andrew Ozz on WordPress" />
+<meta property="og:description" content="Just another WordPress.com weblog" />
+<meta property="og:url" content="https://ozz.blog/" />
+<meta property="og:site_name" content="Andrew Ozz on WordPress" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s2.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://ozz.blog/?openidserver=1' />
+<link rel='openid.delegate' href='https://ozz.blog/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://ozz.blog/osd.xml" title="Andrew Ozz on WordPress" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Andrew Ozz on WordPress" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Just another WordPress.com weblog" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://ozz.blog/feed/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Just another WordPress.com weblog" />
+</head>
+
+<body class="home blog wp-embed-responsive customizer-styles-applied single-author two-column right-sidebar highlander-enabled highlander-light">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding">
+			<hgroup>
+				<h1 id="site-title"><span><a href="https://ozz.blog/" rel="home">Andrew Ozz on WordPress</a></span></h1>
+				<h2 id="site-description">Just another WordPress.com weblog</h2>
+			</hgroup>
+
+						<a href="https://ozz.blog/">
+									<img src="https://defaultcustomheadersdata.files.wordpress.com/2016/07/dch_header31.jpg?resize=1000,288" width="1000" height="288" alt="Andrew Ozz on WordPress" />
+								</a>
+			
+									<form method="get" id="searchform" action="https://ozz.blog/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li class="current_page_item"><a href="https://ozz.blog/">Home</a></li><li class="page_item page-item-77"><a href="https://ozz.blog/contact/">Contact</a></li>
+</ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+				
+				
+					
+	<article id="post-380" class="post-380 post type-post status-publish format-standard hentry category-wordpress tag-tinymce">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2014/04/19/customizing-tinymce-4-0/" rel="bookmark">Customizing TinyMCE 4.0</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2014/04/19/customizing-tinymce-4-0/" title="12:04 am" rel="bookmark"><time class="entry-date" datetime="2014-04-19T00:04:36-07:00">April 19, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Many of the TinyMCE settings have changed in version 4.0. There is a new default theme: Modern, and all the UI settings for the former Advanced theme (<code>theme_advanced...)</code> are deprecated.</p>
+<p>One often used setting was <code>theme_advanced_blockformats</code><strong><code>.</code></strong> It was renamed to <code>block_formats</code> and keeps the same formatting. To specify a different set of elements for the &#8216;blockformats&#8217; drop-down (second toolbar row in the WordPress Visual editor), you can set a string of name=value pairs separated by a semicolon in the initialization object:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">block_formats: &quot;Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3&quot;</pre>
+<p>Another handy setting: <code>theme_advanced_styles</code> doesn&#8217;t exist any more. However there is a more powerful version: <code>style_formats</code>. Now it can replace or add items to the new &#8220;Formats&#8221; menu.The value is an array of objects each containing a name that is displayed as sub-menu and several settings: a CSS class name or an inline style, and optionally the wrapper element where the class or inline style will be set:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+toolbar3: 'styleselect',
+style_formats_merge: true,
+style_formats: { name: 'Custom styles', [
+  {title: 'Red bold text', inline: 'b', styles: {color: '#ff0000'}},
+  {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+  {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+  {title: 'Example 1', inline: 'span', classes: 'example1'},
+  {title: 'Example 2', inline: 'span', classes: 'example2'}
+]}
+</pre>
+<p>The above code will add another sub-menu to &#8220;Formats&#8221; without replacing the default menu items. There is <a href="http://www.tinymce.com/wiki.php/Configuration:style_formats">more information</a> and an <a href="http://www.tinymce.com/tryit/custom_formats.php">example</a> on the TinyMCE website.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/tinymce/" rel="tag">TinyMCE</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-380 -->
+
+				
+					
+	<article id="post-145" class="post-145 post type-post status-publish format-standard hentry category-html-5-0 category-wordpress tag-optimization tag-web-specs tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/" rel="bookmark">Server managed cache in the&nbsp;browser</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/" title="8:32 am" rel="bookmark"><time class="entry-date" datetime="2011-05-11T08:32:57-07:00">May 11, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Imagine browsing to a big web page with lots of images and scripts, and it loads in your browser almost instantly, nearly as fast as loading it from your hard drive. Now imagine you&#8217;re browsing a web site with about 60-70 of these pages and they all load very very fast. Sounds interesting? But how to do that? Prime the browser&#8217;s cache? Preload all components of the web pages somehow? Is that possible?</p>
+<p>Well, yes and no. It is possible by using <a href="http://gears.google.com/">Gears</a>. It can be set to store all &#8220;static&#8221; components (JS, CSS, images, etc.) of a web page or a whole web site and load them from the local storage every time they are requested by the browser. However the Gears team <a href="http://gearsblog.blogspot.com/2010/02/hello-html5.html">shifted their priorities</a> to HTML 5.0 offline storage which was the main idea behind Gears in the first place. Unfortunately the HTML 5.0 specification for offline storage implements only some of the features that were available in Gears, so this type of caching (controlled by the user and managed by the server) is impossible.</p>
+<p><em>But why server managed cache? Isn&#8217;t the standard browser caching good enough?</em> Yes, it is good. It has evolved significantly during the 15 or so years since the beginning of the World Wide Web. However it just can&#8217;t do that.</p>
+<p>Lets take a simplistic look at how the browser cache works:</p>
+<ul>
+<li>We (the users) browse to a web page.</li>
+<li>The Server tells the Browser: &#8220;Hey there, these few files (images, JS, CSS, etc.) are almost never updated, put them in your cache and don&#8217;t ask me to send them again for the next 10 years.&#8221;</li>
+<li>The Browser thinks: &#8220;Hmm, put them in the cache you saying? I&#8217;ll think about it. You know, I&#8217;m a Web Browser. I need to load pages very very fast. I don&#8217;t want a huge cache with millions of files in it. That will slow me down. Lets see if the User would come back to this page ever again.&#8221;</li>
+</ul>
+<p>If we keep going to the same web page eventually the Browser would change his mind: &#8220;Maybe that Server was right and I should put these files in my cache. That would speed up page loading. But what will happen if these files are updated&#8230; I better keep asking the Server to check if they have been updated so my cache is always fresh.&#8221;</p>
+<p>Couple of years ago we implemented Gears as WordPress&#8217; Turbo feature. We didn&#8217;t use it to make WordPress an offline app, we used it to create server managed cache. It worked great. Even the heaviest pages in the WordPress admin were loading considerably faster regardless of how often the users were visiting them.</p>
+<p>The implementation was very simple: we had a manifest that listed all &#8220;static&#8221; files and couple of user options to enable and initialize the &#8220;super cache&#8221;. The rest was handled automatically by Gears. So in reality we discovered the perfect way of browser caching for web apps:</p>
+<ul>
+<li>The User decides which web sites / web apps are cached and can add or remove them.</li>
+<li>The server (i.e. the web app) maintains the cache, updating, adding, deleting files as needed.</li>
+</ul>
+<p>The results were spectacular. We didn&#8217;t need to concatenate and compress scripts and stylesheets. We even stopped compressing TinyMCE which alone can load about 30-40 files on initialization. And page load time was from 0.5 to 1.5 sec. no matter how heavy the page was. For comparison before implementing this &#8220;super caching&#8221; pages were loading in 5 to 9 sec.</p>
+<p><em>Why was it performing that well?</em> Simple: it eliminated all requests to the server for the files that were cached. And that means <strong>all</strong>, even the &#8220;HEAD&#8221; requests. In our implementation the only file that was loaded from the server was the actual HTML. All other components of the web page were stored in Gears&#8217; offline storage.</p>
+<p>That also had the side benefit of eliminating a big chunk of traffic to the server. At first look it doesn&#8217;t seem like a lot, 30-40 requests for the web page components followed by 30-40 of HEAD requests per page every now and then (while the browser cache is hot), but think about it in global scope: several millions of these pages are loaded every hour.</p>
+<p><em>So, why not do the same with HTML 5.0 offline storage?</em> Because it doesn&#8217;t work that way. The HTML 5.0 specification for offline storage is good only for&#8230; Offline storage. It&#8217;s missing a lot of the features Gears has. Yes, there is a workaround. We can &#8220;store offline&#8221; a skeleton of the web page and then load all the dynamic content with XHR (a.k.a. AJAX), but that method has other (quite annoying) limitations. Despite that we will try this method in WordPress for sure, but that discussion is for another post.</p>
+<p><em>In short:</em> the HTML 5.0 offline storage implementation is missing some critical features. For example a file that is stored there <strong>is not</strong> loaded from the storage when the browser goes to another page on the same website. Yes, it&#8217;s sad watching the browser load the same file again and again from the Internet when that file is already on the user&#8217;s hard drive.</p>
+<p><em>What can we do about it?</em> Don&#8217;t think there is anything that can be done short of changing, or rather enhancing the HTML 5.0 specification for offline storage. The XHR &#8220;hack&#8221; that makes this kind of caching possible with the current HTML 5.0 is still just a hack.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/html-5-0/" rel="category tag">HTML 5.0</a>, <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/optimization/" rel="tag">Optimization</a>, <a href="https://ozz.blog/tag/web-specs/" rel="tag">web specs</a>, <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-145 -->
+
+				
+					
+	<article id="post-130" class="post-130 post type-post status-publish format-standard hentry category-wordpress tag-themes tag-tinymce">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/" rel="bookmark">Can themes style the visual&nbsp;editor?</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/" title="8:29 am" rel="bookmark"><time class="entry-date" datetime="2010-01-02T08:29:49-08:00">January 2, 2010</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Short answer: yes. This has been available for quite some time but don&#8217;t think I&#8217;ve seen themes that do it. Things like typefaces, headings, image padding and borders, etc. can easily be set by the current theme making the visual editor&#8230; more WYSIWYG. All it takes is a stylesheet and a small function in the theme&#8217;s functions.php file:</p>
+<pre class="brush: php; title: ; notranslate" title="">
+add_filter('mce_css', 'my_editor_style');
+function my_editor_style($url) {
+
+  if ( !empty($url) )
+    $url .= ',';
+
+  // Change the path here if using sub-directory
+  $url .= trailingslashit( get_stylesheet_directory_uri() ) . 'editor-style.css';
+
+  return $url;
+}
+</pre>
+<p>where editor-style.css will be applied to TinyMCE&#8217;s iframe.</p>
+<p>There is also an option to define CSS classes that can be inserted by the user and to add the &#8220;Styles&#8221; drop-down selector to the editor toolbar. This is probably most useful for developers when creating a custom theme for a client as these classes would stop working if the theme is changed.</p>
+<p>I&#8217;ve put together a small package with examples of how to enable this. If you are creating WordPress themes, <a href="http://plugins.svn.wordpress.org/tinymce-advanced/branches/tinymce-kit/">download it or have a look</a>, it&#8217;s quite simple. If not, perhaps ask the author of your theme to add it to the next update. 🙂</p>
+<p><ins datetime="2010-01-03T20:41:06+00:00">Update:</ins> as Dion points out in the comments, this is not meant for adding the whole &#8220;style.css&#8221; to the editor. That could bring problems and most of the styling won&#8217;t apply there anyways. It works best when a separate stylesheet is made specifically for use in the editor (editor-style.css in the example). It should contain a small subset from style.css, usually the part that is applied to the actual posts.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/themes/" rel="tag">Themes</a>, <a href="https://ozz.blog/tag/tinymce/" rel="tag">TinyMCE</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-130 -->
+
+				
+					
+	<article id="post-125" class="post-125 post type-post status-publish format-standard hentry category-plugins tag-podpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2009/12/31/podpress-8-8-2/" rel="bookmark">PodPress 8.8.2</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2009/12/31/podpress-8-8-2/" title="12:23 pm" rel="bookmark"><time class="entry-date" datetime="2009-12-31T12:23:16-08:00">December 31, 2009</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://wordpress.org/extend/plugins/podpress/">PodPress</a> version 8.8.2 is a maintenance and bugfix release including patches by <a href="http://profiles.wordpress.org/ntm/">Tim Berger</a>. It makes podPress compatible with WordPress 2.9 and fixes several other bugs. If someone has other patches please open tickets on the <a href="http://plugins.trac.wordpress.org/">plugins trac</a> and leave a comment here.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/plugins/" rel="category tag">Plugins</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/podpress/" rel="tag">podPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-125 -->
+
+				
+					
+	<article id="post-76" class="post-76 post type-post status-publish format-standard hentry category-plugins tag-plugins tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2009/03/25/podpress-and-popularity-contest/" rel="bookmark">podPress and Popularity&nbsp;Contest</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2009/03/25/podpress-and-popularity-contest/" title="11:48 pm" rel="bookmark"><time class="entry-date" datetime="2009-03-25T23:48:35-07:00">March 25, 2009</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>There have been couple of patches for the feeds in podPress by Tim Berger, <a href="http://plugins.trac.wordpress.org/ticket/961">Update and bugfix for the atom feed</a> and <a href="http://plugins.trac.wordpress.org/ticket/962">Bypass of the RSS Feed does not work</a>. Currently they are in the <a href="http://downloads.wordpress.org/plugin/podpress.zip">Development Version.</a> If anybody wants to add more, please make a ticket on the <a href="http://plugins.trac.wordpress.org/wiki">plugins trac</a> and drop me an <a href="https://azaozz.wordpress.com/contact/">email</a>.</p>
+<p>Also recently had a look at the <a href="http://wordpress.org/extend/plugins/popularity-contest/">Popularity Contest</a> plugin. It works well in WordPress 2.7 and 2.8-bleeding only the activation fails. To make it compatible a small piece of code has to be added to the beginning: <code>global $wpdb;</code></p>
+<p>This should go just above the first &#8220;if&#8221; statement, so it looks like this:</p>
+<pre class="brush: php; title: ; notranslate" title="">
+// add this 
+global $wpdb;
+
+// existing code
+if (!isset($wpdb)) {
+	require('../../wp-blog-header.php');
+	...
+</pre>
+<p>Tried to contact the author and send him this fix so he can add it to the plugin.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/plugins/" rel="category tag">Plugins</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/plugins/" rel="tag">Plugins</a>, <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-76 -->
+
+				
+					
+	<article id="post-53" class="post-53 post type-post status-publish format-standard hentry category-wordpress tag-tinymce tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/" rel="bookmark">Troubleshooting TinyMCE in WordPress&nbsp;2.7</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/" title="11:01 am" rel="bookmark"><time class="entry-date" datetime="2008-12-11T11:01:18-08:00">December 11, 2008</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>One of the many improvements in WordPress 2.7 is the updated configuration of the visual editor, <a href="http://tinymce.moxiecode.com/">TinyMCE</a>. It was optimized to support caching better  and to load faster.</p>
+<p>The compression whitin WordPress is gone and all editor components are included as standard Javascript, CSS and HTML files. However a lot of servers compress these files automatically. If your server doesn&#8217;t do that, the first loading of the write/edit page will be slower, but after that the editor loads a lot faster than before, as all files are in the browser&#8217;s cache on the hard disk. And if the &#8220;Turbo&#8221; is turned on in WordPress and Gears enabled, the speed increase is even bigger as the browser does not have to check if any file has been updated.</p>
+<p>In my (non-scientific) tests the loading time of the Add New Post screen went from about 5 &#8211; 8 sec. to about 1 &#8211; 2 sec. depending on the Internet connection and the computer speed.</p>
+<p>The removal of the compression whitin WordPress also improves compatibility with some unusual server configurations and fixes some hard to catch errors, for example when there are php errors or output starts in the current theme&#8217;s functions.php file.</p>
+<p>Currently the editor&#8217;s settings together with all Javascript files are included directly in the HTML head section of the page, making it a lot easier to troubleshoot.</p>
+<p>There are a few steps that would help with the troubleshooting if the editor doesn&#8217;t start or work properly:</p>
+<ol>
+<li>Make sure the &#8220;Disable the visual editor when writing&#8221; checkbox in your profile is <strong>not</strong> selected.</li>
+<li>Whitelist or set your blog as &#8220;trusted&#8221; in your firewall and antivirus program.</li>
+<li>Disable Gears, clear your browser&#8217;s cache, quit it, start it again, go back to the write page and force-reload it several times, while holding down Shift (Firefox) or Ctrl (IE). In Safari select Clear Cache (from the Safari menu on Mac).</li>
+<li>Try another browser and/or another computer.</li>
+<li>Disable all plugins, clear the cache, restart the browser and try again.</li>
+<li>Delete both <code>wp-admin</code> and <code>wp-includes</code> directories and upload fresh copies from the WordPress <a href="http://wordpress.org/download/">installation package</a>.</li>
+<li>And finally install <a href="http://www.mozilla.com/">Firefox</a> or <a href="http://www.opera.com/">Opera</a>, note any Javascript errors, especially the first one and try searching on the <a href="http://wordpress.org/support/">support forum</a> for a solution. If no solution exists, open a new thread including the error.</li>
+</ol>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/tinymce/" rel="tag">TinyMCE</a>, <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-53 -->
+
+				
+					
+	<article id="post-43" class="post-43 post type-post status-publish format-standard hentry category-plugins tag-plugins tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2008/07/31/podpress-in-wordpress-26/" rel="bookmark">PodPress in WordPress&nbsp;2.6</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2008/07/31/podpress-in-wordpress-26/" title="7:06 pm" rel="bookmark"><time class="entry-date" datetime="2008-07-31T19:06:26-07:00">July 31, 2008</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Yesterday had a quick look at <a href="http://wordpress.org/extend/plugins/podpress/">podPress,</a> the premier plugin for <a href="http://en.wikipedia.org/wiki/Podcasting">podcasting.</a> It has a small incompatibility with the new Post Revisions feature introduced in WordPress 2.6.</p>
+<p>PodPress seems to be in the middle of a large update. I&#8217;ve used the <a href="http://downloads.wordpress.org/plugin/podpress.experimental.zip">&#8220;experimental&#8221;</a> version (8.9) of the plugin and emailed the proposed fix to the authors, however for the more impatient here is the patch:</p>
+<pre class="brush: php; title: ; notranslate" title="">
+function post_edit($post_id) {
+	GLOBAL $post;
+	if($this-&gt;justposted) {
+		return;
+	}
+	$this-&gt;justposted = true;
+
+	if ( isset($_POST['post_ID']) &amp;&amp; (int) $_POST['post_ID'] )
+		$post_id = (int) $_POST['post_ID'];
+
+	$this-&gt;settings_item_save($post_id, $_POST);
+}
+</pre>
+<p>It goes in <code>podpress/podpress_admin_class.php,</code> around line 51. What it does is to make sure the custom post meta fields used by podPress are attached to the actual Post, not one of the revisions.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/plugins/" rel="category tag">Plugins</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/plugins/" rel="tag">Plugins</a>, <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-43 -->
+
+				
+					
+	<article id="post-32" class="post-32 post type-post status-publish format-standard hentry category-wordpress tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2008/07/16/thank-you/" rel="bookmark">Thank you!</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2008/07/16/thank-you/" title="12:02 am" rel="bookmark"><time class="entry-date" datetime="2008-07-16T00:02:00-07:00">July 16, 2008</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I am deeply honoured to be chosen as WordPress.org core committer. That was a very nice surprise on the eve of the 2.6 release 🙂</p>
+<p>Thanks a lot guys. I&#8217;ll do my best (and try not to mess anything up on trac).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-32 -->
+
+				
+					
+	<article id="post-20" class="post-20 post type-post status-publish format-standard hentry category-wordpress tag-release tag-wordpress">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://ozz.blog/2008/07/15/wordpress-26-quick-tips/" rel="bookmark">WordPress 2.6: quick&nbsp;tips</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://ozz.blog/2008/07/15/wordpress-26-quick-tips/" title="3:59 pm" rel="bookmark"><time class="entry-date" datetime="2008-07-15T15:59:52-07:00">July 15, 2008</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://ozz.blog/author/azaozz/" title="View all posts by Andrew Ozz" rel="author">Andrew Ozz</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The new <a href="http://wordpress.org/development/2008/07/wordpress-26-tyner/">WordPress 2.6</a> perfects most of the features introduced in 2.5 and adds several big enhancements. A nice security enhancement is the full support for <a href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer">SSL</a> in the the admin area, ensuring all data sent from the browser to the server and back is encrypted.</p>
+<p>To take full advantage of it, everybody should enter not one but three &#8220;Secret Keys&#8221; in their <code>wp-config.php</code> file. More details are available on <a href="http://boren.nu/archives/2008/07/14/ssl-and-cookies-in-wordpress-26/">Ryan&#8217;s blog.</a></p>
+<p>Another security improvement is the disabling by default of the <a href="http://en.wikipedia.org/wiki/Atom_(standard)">Atom Publishing</a> and the <a href="http://en.wikipedia.org/wiki/XML-RPC">XML-RPC</a> protocols. This is more of a &#8220;locking of the back door when we know nobody is coming through there&#8221; kind of thing, not a &#8220;security guards with dogs&#8221;. However these protocols are used by the off-line blog editors and by some plugins, so if you have one of these, make sure to enable the protocol you need from the Settings screen.</p>
+<p>A new improvement is the ability to add captions to all images. Just enter some text in the Caption field on the Insert Image dialog and a caption will be added both in the editor and on the blog. To show the captions on the blog correctly, a few CSS styles may need to be added to your current theme&#8217;s style.css file. These styles are in both the Default and Classic themes&#8217; style.css and are as follows:</p>
+<pre class="brush: css; title: ; notranslate" title="">
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 4px;
+    margin: 10px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+</pre>
+<p>Of course these styles can be edited to suit your theme. A nice way of editing CSS styles is to use FireFox with FireBug. When changing styles there, it would show you immediately how the look changes, and when everything looks good, just copy/paste the edited styles to your style.css file (don&#8217;t forget to check them in Internet Explorer, Safari and Opera too).</p>
+<p>Editing image captions should be very intuitive. Clicking on the Edit button that pops up when you click on an image in the editor would open the newly enhanced Edit Image dialog that has the same options as the Insert Image one. It would let you align, resize, change the title, link or caption for the image. There is also an advanced tab that has more options.</p>
+<p>Images with captions can also be aligned with the Align Left, Align Center, Align Right buttons on the editor&#8217;s toolbar. In FireFox and Internet Explorer, the images and the captions can be resized by dragging the corners, however that&#8217;s not recommended since most images don&#8217;t look very well after using this method. Best is to select the right size image when inserting it.</p>
+<p>Trying to move an image that has a caption by dragging it doesn&#8217;t work (yet). Currently there&#8217;s no support for dragging in the editor. Since all modern browsers seem to support dragging better, it won&#8217;t be long before that will work well too.</p>
+<p>Another nice enhancement is the &#8220;Turbo&#8221; (top-right corner on the dashboard). Behind it is a new browser plugin &#8211; Gears. Currently it only works in FireFox and Internet Explorer, soon in Safari.</p>
+<p>In WordPress, Gears captures all &#8220;static&#8221; files (images, css and JavaScript) from the admin area to the computer&#8217;s Hard Disk. This eliminates needless connections to the server when these files are needed. That makes page loading quite &#8220;snappier&#8221; for people with fast connections and much faster when Internet is congested or the connection is slow.</p>
+<p>After enabling Gears it would download about 200 small files (just over 1MB in total) to your Hard Disk. Any errors during the download usually mean that some files in WordPress haven&#8217;t been installed properly. The best way to fix this is to delete the <code>wp-admin</code> and <code>wp-includes</code> directories and upload fresh copies from the installation package.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+									<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://ozz.blog/category/wordpress/" rel="category tag">WordPress</a>			</span>
+							
+									<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://ozz.blog/tag/release/" rel="tag">release</a>, <a href="https://ozz.blog/tag/wordpress/" rel="tag">WordPress</a>			</span>
+							
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-20 -->
+
+				
+				
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+					<aside id="gravatar-2" class="widget widget_gravatar"><p><img alt='' src='https://1.gravatar.com/avatar/4e84843ebff0918d72ade21c6ee7b1e4?s=128&#038;d=identicon&#038;r=G' class='avatar avatar-128 grav-widget-none' height='128' width='128' /></p>
+</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-24041441"><a href="https://ozz.blog/category/html-5-0/">HTML 5.0</a>
+</li>
+	<li class="cat-item cat-item-841"><a href="https://ozz.blog/category/plugins/">Plugins</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://ozz.blog/category/wordpress/">WordPress</a>
+</li>
+			</ul>
+
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>
+		<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://azaozz.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://ozz.blog/feed/">Entries feed</a></li>
+			<li><a href="https://ozz.blog/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>
+		</ul>
+
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon">
+
+			
+
+			<div id="site-generator">
+				 								<a href="https://wordpress.com/?ref=footer_website" rel="nofollow">Create a free website or blog at WordPress.com.</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202318v2' id='grofiles-cards-js'></script>
+<script id='wpgroho-js-extra'>
+var WPGroHo = {"my_hash":""};
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240h'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-4e84843ebff0918d72ade21c6ee7b1e4">
+	</div>
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-twentyeleven actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Follow</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Following</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://ozz.blog">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' />				Andrew Ozz on WordPress			</a>
+		</li>
+										<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 65 other followers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="3380945" />
+										<input type="hidden" name="source" value="https://ozz.blog/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="64d8578f4d" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fozz.blog%252F2014%252F04%252F19%252Fcustomizing-tinymce-4-0%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://ozz.blog">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' />				Andrew Ozz on WordPress			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://azaozz.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fazaozz.wordpress.com%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg><span>Follow</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.89V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.095 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg><span>Following</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fozz.blog%252F2014%252F04%252F19%252Fcustomizing-tinymce-4-0%252F">Log in</a></li>
+																	<li class="flb-report">
+										<a href="http://en.wordpress.com/abuse/?report_url=https://ozz.blog" target="_blank">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/feeds/58335170">
+											View site in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20210915";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20220329";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+	<script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotzvAKBvOpaWRARgE1jXMuLgYaZ59ra2hmaGpibmZpbJQFAHiTf2k='></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://s1.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://s2.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414h&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	document.addEventListener( 'is.post-load', function () {
+		SyntaxHighlighter.highlight();
+	} );
+</script>
+<script crossorigin='anonymous' type='text/javascript' src='https://s1.wp.com/_static/??/wp-content/js/devicepx.js,/wp-content/mu-plugins/admin-bar/masterbar-tracks.js?m=1659339943j'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?63" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'3380945','blog_tz':'-7','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'3380945','v':'wpcom','tz':'-7','user_id':'0','subd':'azaozz'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1oV0pFNEwueXFaVXlyMGwvVFs4ODlRZi15ODdZbV9dUVlqL1VfcEREP1s4TjU5Yn4/Uk5vakJXb2ktQTJ+aE9HSzZDNlhtS1EreGI0NnZuTVltP0lmMi5zWyUtYlM3N1JNc0t3X285b2hNSTFwRG1GLCwyZm15ODFDYVJiQUxdXVYsekQ9TUFaLGc1dXBUfmV1LkhQcy5oOFg5U1IsWnpGaXdIUlRCenlHP09hWHQlPUlaMGYyTGExUkJIQzJEVkNRaVRLWW81PUVoQXBOSnN4bDA1VFYlYVFmZ1VveF8xVXEvei1Fb2F5RnEtL1JCTUxWYkU9V2xZNmldeQ=='}]);
+_stq.push([ 'clickTrackerInit', '3380945', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

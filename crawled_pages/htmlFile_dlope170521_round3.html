@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20230428001110" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.12.1/jquery-ui-1.12.1.custom.timepicker.min.js?v=20230428001110"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.12.1/jquery-ui.compiled.min.css?v=20230428001112" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20230428001112" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20230428001112"></script><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20230428001108" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20230428001108" rel="stylesheet" type="text/css"  /><link href="https://support.csuchico.edu/TDPortal/BE/Style/157/TDClient/1984?v=20210927225815" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/TDJSFramework.compiled.min.js?v=20230428001110"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20230428001110"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20230428001108"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20230428001108"></script>
+<script src="/TDPortal/Content/Scripts/tdx/elasticsearchAutocomplete/elasticsearchAutocomplete.min.js?v=20230428001110"></script>
+<link id="ctl00_lnkFavicon" rel="shortcut icon" href="https://support.csuchico.edu/TDPortal/BE/Icon/157/1984?v=20210927225815" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-942024-22"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-942024-22', { 'cookie_domain': 'support.csuchico.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  <script src="/TDClient/Scripts/DesktopModules.min.js?v=20230428001108"></script>
+
+
+  <script>
+
+    $(function () {
+
+      desktop.serviceUrl('/TDClient/1984/Portal/WebServices/DesktopModuleService.asmx');
+      desktop.applicationName("TDClient");
+      desktop.initialize();
+
+    });
+
+  </script>
+
+  
+    <style>
+    div.ModuleHdr {
+      cursor: auto;
+    }
+  </style>
+  <meta property="og:title" content="IT Support" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://support.csuchico.edu/TDClient/1984/Portal/Home/?DesktopID=cce2daf8-144e-4e47-bf7a-3901b7979602" />
+<meta property="og:image" content="https://support.csuchico.edu/TDPortal/BE/Logo/157/1984" />
+  <meta property="og:site_name" content="California State University, Chico" /><title>
+	Client Portal IT Support
+</title></head>
+<body>
+<form method="post" action="/TDClient/1984/Portal/Home/" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="VxEBWqoEVclrQW/8Ooj0fQjt3mp5z3g9Jt7rDU/obscZtw8gSTDIh/+/Ol6a9UdIlBltkht+lZdzrbe+Twf9pIjhDtZ15aXewbQPeE3JXFdnK/jyTDHux+f3ci5jrAwnbqfCOgH0hqZw8D4OMBVzvGyGJCQao/j4KpBacOvTtON5HgSBmGOVWmrllfmr4zLY9sbGXYEOMWlRcNf9XWYA+c12kq/LzgeMG+jfZ5CQ0BHdB6omLOXop+CeTj50nhxReIiQff503FRMf4gDVdcYrIODCqpFdU91StKSF1uqBRbFaK07OFPAmEKdLmuz3aPcgioE/Q==" />
+
+
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=49337fe8" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E1568E68" />
+
+<div id="ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+
+
+  <header role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.csuchico.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/157/0" alt="California State University, Chico Home Page" class="js-logo img-responsive" />
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-5ad788c1b3434167a4e8d40d04840cd7" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-5ad788c1b3434167a4e8d40d04840cd7" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-5ad788c1b3434167a4e8d40d04840cd7" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all">
+      <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul class="dropdown-menu" >
+      <li>
+        <a href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-globe" title="Search all areas">
+          <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li role="separator" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base">
+            <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-5ad788c1b3434167a4e8d40d04840cd7">Search the client portal</label>
+
+  <input id="SiteSearch-text-5ad788c1b3434167a4e8d40d04840cd7" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text."/>
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-5ad788c1b3434167a4e8d40d04840cd7" class="btn btn-default" type="button" title="Search">
+      <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1984/Portal/Shared/Search",
+      enableAutocompleteSearch: true,
+      autocompleteSearchUrl: '/TDClient/1984/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-5ad788c1b3434167a4e8d40d04840cd7',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-5ad788c1b3434167a4e8d40d04840cd7',
+      searchButtonSelector: '#SiteSearch-button-5ad788c1b3434167a4e8d40d04840cd7',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-5ad788c1b3434167a4e8d40d04840cd7',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+  </script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/1984/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1984%2fPortal%2fHome%2f">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1984/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1984%2fPortal%2fHome%2f">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1984/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopcce2daf8-144e-4e47-bf7a-3901b7979602" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1984/Portal/Home/">IT Support</a>
+              </li>
+            
+
+          
+            <li id="divTDProjects" class="themed tdbar-button-anchored">
+              <a href="/TDClient/1984/Portal/Projects/">Projects</a>
+            </li>
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1984/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1984/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <div class="container gutter-top gutter-bottom-lg">
+
+    <span id="ctl00_cpContent_lblResults" class="red"></span>
+
+    <div class="row"><div id="Column1" class="col-md-6"><div class="desktop-module"><div id="724405" class="desktop-module panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title pull-left">Service Desk Hours</h3><div class="pull-right"><button type="button" class="btn btn-link black" onclick="refreshModule(724405);"><span title="Refresh" class="fa fa-refresh fa-lg" aria-hidden="true"></span><span class="sr-only">Refresh Module</span></button></div></div><div class="ModuleContent panel-body">
+
+<div style="overflow: hidden;">
+
+  <table summary="ITSS Hours" width="400px">
+	<thead>
+		<tr>
+			<th scope="col"><strong>Business Hours</strong></th>
+			<th scope="col">&nbsp;</th>
+		</tr>
+		<tr>
+			<th scope="col"><strong>Days</strong></th>
+			<th scope="col"><strong>Hours</strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Monday-Friday</td>
+			<td>7:30 AM - 5:00 PM</td>
+		</tr>
+		<tr>
+			<td>Weekends &amp; Holidays</td>
+			<td>Closed</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Location: <a href="https://goo.gl/maps/uBH3qiBid7D2">Meriam Library 142</a><br>
+<br>
+To book an ITSS lobby appointment, please <strong><a href="https://outlook.office365.com/owa/calendar/ITSSLobby1@csuchico.onmicrosoft.com/bookings/s/-ys7kxk2hUuDJ8UBbxJivg2" target="_blank">click here</a></strong></p>
+
+<p>Phone support available at <a href="tel:5308984357">(530) 898-HELP (4357)</a></p>
+
+<p>Chat support available during regular business hours:</p>
+
+<p><a class="btn btn-info btn-block" href="https://chat.csuchico.edu/" rel="noopener" target="_blank"><span tabindex="-1"> <span aria-label="span widget" role="region" tabindex="-1"><span aria-label="icon" role="region" tabindex="-1"><span class="fa fa-comments-o fa-lg"></span></span></span> </span> Live Chat <span tabindex="-1"> <span aria-label="span widget" role="region" tabindex="-1"><span aria-label="icon" role="region" tabindex="-1"><span class="fa fa-external-link" title="Opens in New Window"></span></span></span> </span> <span class="sr-only">(opens in new window)</span> </a></p>
+
+  
+
+</div></div></div></div><div class="desktop-module"><div id="1486320" class="desktop-module panel panel-default"><div class="ModuleContent panel-body">
+
+<div style="overflow: hidden;">
+
+  <p><span style="color: #FFFFFF; padding: 15px; background-color: #960000; font-size: 25px; text-align: center; display: block"><a href="../../../Requests/ServiceCatalog" style="color: #FFFFFF"><span style="line-height: 1.6">Request Service</span></a></span></p>
+
+<p><span style="color: #FFFFFF; padding: 15px; background-color: #960000; font-size: 25px; text-align: center; display: block"><a href="../../../Requests/TicketRequests" style="color: #FFFFFF"><span style="line-height: 1.6">Check Status of Existing Ticket</span></a></span></p>
+
+<p><span style="line-height: 1.6">You'll be asked to log into your campus account before you can view or create a new ticket.</span></p>
+
+  
+
+</div></div></div></div><div class="desktop-module"><div id="1398208" class="desktop-module panel panel-default"><div class="ModuleContent panel-body">
+
+<div style="overflow: hidden;">
+
+  <p><span style="font-size: 22px"><a href="https://support.csuchico.edu/TDClient/KB/ArticleDet?ID=9700">Tips to improve your Service Catalog experience</a></span></p>
+
+  
+
+</div></div></div></div></div><div id="Column2" class="col-md-6"><div class="desktop-module"><div id="870707" class="desktop-module panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title pull-left">Requesting Services and Help Online</h3><div class="pull-right"><button type="button" class="btn btn-link black" onclick="refreshModule(870707);"><span title="Refresh" class="fa fa-refresh fa-lg" aria-hidden="true"></span><span class="sr-only">Refresh Module</span></button></div></div><div class="ModuleContent panel-body">
+
+<div style="overflow: hidden;">
+
+  <p>You can easily request services and help online, using the Chico State IT Support website.</p>
+
+<h4><strong>Browsing Services</strong></h4>
+
+<ol>
+	<li>Click on the "<strong>Services</strong>" tab above, or the large red "Request Service" button below "Live Chat"</li>
+	<li>Browse through the service categories until you find the service you want</li>
+	<li>If the service is requestable online, click on the "<strong>Request Service</strong>" button and fill out the form to request service or help. Your request will be immediately routed to the appropriate technicians.</li>
+</ol>
+
+<h4><strong>Searching for Services</strong></h4>
+
+<ol>
+	<li>Click on the "<strong>Services</strong>" tab, above</li>
+	<li>Click on the "<strong>Search</strong>" tab in the secondary navigation bar</li>
+	<li>Enter what you are looking for in the Search field and press Enter</li>
+	<li>Click on the service you want</li>
+	<li>If the service is requestable online, click on the "<strong>Request Service</strong>" button and fill out the form to request service or help. Your request will be immediately routed to the appropriate technicians.</li>
+</ol>
+
+<p>You can also use the general search bar at the top-right corner of the page, but that will include search results for the knowledge base as well as services.<br>
+<br>
+<strong><span style="color: #8B4513">Helpful Hint</span></strong>: Use the dropdown to filter your search:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img alt="image of dropdown search filter" src="https://support.csuchico.edu/TDPortal/Images/Viewer?fileName=a90b4193-d01f-4ef9-8fd1-3098978946a1.png" style="width: 238px; height: 125px"></p>
+
+  
+
+</div></div></div></div><div class="desktop-module"><div id="798534" class="desktop-module panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title pull-left">News &amp; Announcements</h3><div class="pull-right"><button type="button" class="btn btn-link black" onclick="refreshModule(798534);"><span title="Refresh" class="fa fa-refresh fa-lg" aria-hidden="true"></span><span class="sr-only">Refresh Module</span></button></div></div><div class="ModuleContent">
+    <div class="rss-container"><div class="rss-headline"><a href="https://itss.csuchico.edu/phishing/scam-emails-targeting-campus-accounts/" target="_blank" rel="noopener noreferrer">Scam Emails Targeting Campus Accounts</a></div>
+<div class="rss-pubdate">Wed 4/19/23 10:26 AM</div>
+
+<div class="rss-content">Campus accounts have been targeted by a few scam and phishing emails this week. Examples are provided below. Do not reply to these emails or click on the links. Unsolicited job offers are likely to be scams, especially if they’re offering to pay $150+/hour. Do not reply to this email and be cautious of requests […]</div>
+</div>
+
+  
+    <div class="rss-container"><div class="rss-headline"><a href="https://itss.csuchico.edu/network/emergency-network-maintenance/" target="_blank" rel="noopener noreferrer">Emergency Network Maintenance</a></div>
+<div class="rss-pubdate">Fri 3/3/23 3:45 PM</div>
+
+<div class="rss-content">Due to the network outage the campus experienced last Sunday night, emergency network maintenance is required to resume the redundancy for our internet connection from CENIC, our internet service provider. The emergency network maintenance will occur Saturday morning from 3:00 – 4:00 AM. We do not anticipate any interruption of services, but if we do, […]</div>
+</div>
+
+  
+    <div class="rss-container"><div class="rss-headline"><a href="https://itss.csuchico.edu/network/network-refresh-project/" target="_blank" rel="noopener noreferrer">Network Refresh Project</a></div>
+<div class="rss-pubdate">Thu 2/23/23 11:24 AM</div>
+
+<div class="rss-content">The Division of IT will begin upgrading network ports in all state-supported buildings from February 27 – March 17.&nbsp;The crew is working on an overnight schedule in an effort to avoid any network or power outages during normal operating hours.&nbsp; &nbsp; A complete installation schedule for each building can be found here:&nbsp;https://www.csuchico.edu/ccsv/projects/network-projects/network-refresh-project.shtml&nbsp; The campus community […]</div>
+</div>
+
+  
+    <div class="rss-container"><div class="rss-headline"><a href="https://itss.csuchico.edu/lastpass/lastpass-security-incident/" target="_blank" rel="noopener noreferrer">LastPass Security Incident</a></div>
+<div class="rss-pubdate">Fri 12/23/22 11:54 AM</div>
+
+<div class="rss-content">LastPass may have notified you regarding a recent security incident involving unauthorized access to their environment. Please note that campus-managed LastPass accounts are not at risk. However, be very cautious of any phishing email message that asks you to provide information claiming they are from LastPass, especially if you are asked to provide your LastPass […]</div>
+</div>
+
+  
+    <div class="rss-container"><div class="rss-headline"><a href="https://itss.csuchico.edu/voicemail/voicemail-service-interruption/" target="_blank" rel="noopener noreferrer">Voicemail Service Interruption</a></div>
+<div class="rss-pubdate">Wed 12/21/22 9:11 AM</div>
+
+<div class="rss-content">UPDATE: Telecommunication Services has restored voicemail service and we do not anticipate further service interruption. The cause of the outage was an inadvertently disabled network adapter on the new voicemail server. Soon after the migration of the voicemail system was complete, the service became unavailable to users. Technicians are working on the issue with no […]</div>
+</div>
+
+  
+<span id="ctl00_cpContent_ctl06_lblResults" class="red"></span></div></div></div></div></div>
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('Desktopcce2daf8-144e-4e47-bf7a-3901b7979602');window.DesktopModules.setArgs(724405, { projectID: 0, instanceID: 1984});window.DesktopModules.setArgs(1486320, { projectID: 0, instanceID: 1984});window.DesktopModules.setArgs(1398208, { projectID: 0, instanceID: 1984});window.DesktopModules.setArgs(870707, { projectID: 0, instanceID: 1984});window.DesktopModules.setArgs(798534, { projectID: 0, instanceID: 1984});//]]>
+</script>
+</form>
+
+<footer role="contentinfo">
+  
+  
+  
+    <div class="master-footer">
+
+      <div class="container" style="background-color: #D3D1CC; font-size: 12px">
+      <div class="row">
+        <div class="col-md-3">
+          <p>IT Support Services<br>
+            California State University, Chico<br>
+            Chico, CA 95929<br>
+            Phone: 530-898-HELP (4357)</p>
+        </div>
+        <div class="col-md-3 col-md-offset-6">
+          <p>Copyright © 2022<br>
+          All Rights Reserved<br>
+          <a href="http://www.csuchico.edu/arc/accessibility.shtml" title="If you are having difficulty accessing content on this page, " target="_blank">Report an accessibility issue</a><br>
+          <a href="http://get.adobe.com/reader/" target="_blank">Download Adobe Reader</a></p>
+        </div>
+      </div>
+    </div>
+      
+
+    </div>
+  
+</footer>
+
+
+  
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+
+    })(jQuery);
+
+  </script>
+
+</body>
+</html>

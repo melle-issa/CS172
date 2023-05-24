@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://nacin.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://nacin.com/wp-content/themes/twentyfifteen/js/html5.js?ver=3.7.0"></script>
+	<![endif]-->
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Nacin &#8211; WordPress Lead Developer</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Nacin &raquo; Feed" href="https://nacin.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nacin &raquo; Comments Feed" href="https://nacin.com/comments/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/nacin.com\/wp-includes\/js\/wp-emoji.js?ver=6.3-alpha-55700","twemoji":"https:\/\/nacin.com\/wp-includes\/js\/twemoji.js?ver=6.3-alpha-55700"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {string} set1 Set of Emoji to test.
+	 * @param {string} set2 Set of Emoji to test.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set1, 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set2, 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Determines if the browser properly renders Emoji that Twemoji can supplement.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. Added in Unicode 13.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'\uD83C\uDFF3\uFE0F\u200D\u26A7\uFE0F', // as a zero-width joiner sequence
+					'\uD83C\uDFF3\uFE0F\u200B\u26A7\uFE0F'  // separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'\uD83C\uDDFA\uD83C\uDDF3',       // as the sequence of two code points
+					'\uD83C\uDDFA\u200B\uD83C\uDDF3'  // as the two code points separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather a five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					// as the flag sequence
+					'\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F',
+					// with each code point separated by a zero-width space
+					'\uD83C\uDFF4\u200B\uDB40\uDC67\u200B\uDB40\uDC62\u200B\uDB40\uDC65\u200B\uDB40\uDC6E\u200B\uDB40\uDC67\u200B\uDB40\uDC7F'
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'\uD83E\uDEF1\uD83C\uDFFB\u200D\uD83E\uDEF2\uD83C\uDFFF', // as the zero-width joiner sequence
+					'\uD83E\uDEF1\uD83C\uDFFB\u200B\uD83E\uDEF2\uD83C\uDFFF'  // separated by a zero-width space
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://nacin.com/wp-includes/css/dist/block-library/style.css?ver=6.3-alpha-55700' media='all' />
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-audio figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-audio{
+  margin:0 0 1em;
+}
+
+.wp-block-code{
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-family:Menlo,Consolas,monaco,monospace;
+  padding:.8em 1em;
+}
+
+.wp-block-embed figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-embed figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-embed{
+  margin:0 0 1em;
+}
+
+.blocks-gallery-caption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .blocks-gallery-caption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-image figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-image figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-image{
+  margin:0 0 1em;
+}
+
+.wp-block-pullquote{
+  border-bottom:4px solid;
+  border-top:4px solid;
+  color:currentColor;
+  margin-bottom:1.75em;
+}
+.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  text-transform:uppercase;
+}
+
+.wp-block-quote{
+  border-left:.25em solid;
+  margin:0 0 1.75em;
+  padding-left:1em;
+}
+.wp-block-quote cite,.wp-block-quote footer{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  position:relative;
+}
+.wp-block-quote.has-text-align-right{
+  border-left:none;
+  border-right:.25em solid;
+  padding-left:0;
+  padding-right:1em;
+}
+.wp-block-quote.has-text-align-center{
+  border:none;
+  padding-left:0;
+}
+.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{
+  border:none;
+}
+
+.wp-block-search .wp-block-search__label{
+  font-weight:700;
+}
+
+.wp-block-search__button{
+  border:1px solid #ccc;
+  padding:.375em .625em;
+}
+
+:where(.wp-block-group.has-background){
+  padding:1.25em 2.375em;
+}
+
+.wp-block-separator.has-css-opacity{
+  opacity:.4;
+}
+
+.wp-block-separator{
+  border:none;
+  border-bottom:2px solid;
+  margin-left:auto;
+  margin-right:auto;
+}
+.wp-block-separator.has-alpha-channel-opacity{
+  opacity:1;
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+  width:100px;
+}
+.wp-block-separator.has-background:not(.is-style-dots){
+  border-bottom:none;
+  height:1px;
+}
+.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){
+  height:2px;
+}
+
+.wp-block-table{
+  margin:0 0 1em;
+}
+.wp-block-table td,.wp-block-table th{
+  word-break:normal;
+}
+.wp-block-table figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-table figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-video figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-video figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-video{
+  margin:0 0 1em;
+}
+
+.wp-block-template-part.has-background{
+  margin-bottom:0;
+  margin-top:0;
+  padding:1.25em 2.375em;
+}
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://nacin.com/wp-includes/css/classic-themes.css?ver=6.3-alpha-55700' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #111;--wp--preset--color--light-gray: #f1f1f1;--wp--preset--color--yellow: #f4ca16;--wp--preset--color--dark-brown: #352712;--wp--preset--color--medium-pink: #e53b51;--wp--preset--color--light-pink: #ffe5d1;--wp--preset--color--dark-purple: #2e2256;--wp--preset--color--purple: #674970;--wp--preset--color--blue-gray: #22313f;--wp--preset--color--bright-blue: #55c3dc;--wp--preset--color--light-blue: #e9f2f9;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--dark-gray-gradient-gradient: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(42,42,42,1) 100%);--wp--preset--gradient--light-gray-gradient: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(215,215,215,1) 100%);--wp--preset--gradient--white-gradient: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);--wp--preset--gradient--yellow-gradient: linear-gradient(90deg, rgba(244,202,22,1) 0%, rgba(205,168,10,1) 100%);--wp--preset--gradient--dark-brown-gradient: linear-gradient(90deg, rgba(53,39,18,1) 0%, rgba(91,67,31,1) 100%);--wp--preset--gradient--medium-pink-gradient: linear-gradient(90deg, rgba(229,59,81,1) 0%, rgba(209,28,51,1) 100%);--wp--preset--gradient--light-pink-gradient: linear-gradient(90deg, rgba(255,229,209,1) 0%, rgba(255,200,158,1) 100%);--wp--preset--gradient--dark-purple-gradient: linear-gradient(90deg, rgba(46,34,86,1) 0%, rgba(66,48,123,1) 100%);--wp--preset--gradient--purple-gradient: linear-gradient(90deg, rgba(103,73,112,1) 0%, rgba(131,93,143,1) 100%);--wp--preset--gradient--blue-gray-gradient: linear-gradient(90deg, rgba(34,49,63,1) 0%, rgba(52,75,96,1) 100%);--wp--preset--gradient--bright-blue-gradient: linear-gradient(90deg, rgba(85,195,220,1) 0%, rgba(43,180,211,1) 100%);--wp--preset--gradient--light-blue-gradient: linear-gradient(90deg, rgba(233,242,249,1) 0%, rgba(193,218,238,1) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='twentyfifteen-fonts-css' href='https://nacin.com/wp-content/themes/twentyfifteen/assets/fonts/noto-sans-plus-noto-serif-plus-inconsolata.css?ver=20230328' media='all' />
+<link rel='stylesheet' id='genericons-css' href='https://nacin.com/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css' href='https://nacin.com/wp-content/themes/twentyfifteen/style.css?v=20140829&#038;ver=20230328' media='all' />
+<link rel='stylesheet' id='twentyfifteen-block-style-css' href='https://nacin.com/wp-content/themes/twentyfifteen/css/blocks.css?ver=20230122' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css' href='https://nacin.com/wp-content/themes/twentyfifteen/css/ie.css?ver=20220908' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css' href='https://nacin.com/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141210' media='all' />
+<![endif]-->
+<script src='https://nacin.com/wp-includes/js/jquery/jquery.js?ver=3.6.3' id='jquery-core-js'></script>
+<script src='https://nacin.com/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://nacin.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nacin.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3-alpha-55700" />
+<link rel="shortcut icon" href="/favicon.ico?2" />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nacin" />
+<meta property="og:description" content="WordPress Lead Developer" />
+<meta property="og:url" content="https://nacin.com/" />
+<meta property="og:site_name" content="Nacin" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+
+<!-- End Jetpack Open Graph Tags -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="home blog wp-embed-responsive">
+
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-dark-grayscale">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0 0.49803921568627" />
+					<feFuncG type="table" tableValues="0 0.49803921568627" />
+					<feFuncB type="table" tableValues="0 0.49803921568627" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-grayscale">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0 1" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0 1" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-purple-yellow">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-blue-red">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0 1" />
+					<feFuncG type="table" tableValues="0 0.27843137254902" />
+					<feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-midnight">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0 0" />
+					<feFuncG type="table" tableValues="0 0.64705882352941" />
+					<feFuncB type="table" tableValues="0 1" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-magenta-yellow">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0.78039215686275 1" />
+					<feFuncG type="table" tableValues="0 0.94901960784314" />
+					<feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-purple-green">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0.44705882352941 0.4" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 0 0"
+		width="0"
+		height="0"
+		focusable="false"
+		role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"
+	>
+		<defs>
+			<filter id="wp-duotone-blue-orange">
+				<feColorMatrix
+					color-interpolation-filters="sRGB"
+					type="matrix"
+					values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"
+				/>
+				<feComponentTransfer color-interpolation-filters="sRGB" >
+					<feFuncR type="table" tableValues="0.098039215686275 1" />
+					<feFuncG type="table" tableValues="0 0.66274509803922" />
+					<feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+
+	<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">
+		Skip to content	</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header">
+			<div class="site-branding">
+										<h1 class="site-title"><a href="https://nacin.com/" rel="home">Nacin</a></h1>
+											<p class="site-description">WordPress Lead Developer</p>
+										<button class="secondary-toggle">Menu and widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+		
+					<nav id="social-navigation" class="social-navigation">
+							</nav><!-- .social-navigation -->
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="text-3" class="widget widget_text"><h2 class="widget-title">About Me</h2>			<div class="textwidget"><p><img src="https://secure.gravatar.com/avatar/01cfe9feaafb068590891bbd1f6a7f5a?size=75" style="float:right; margin:0 0 7px 7px" /> Hi, I'm Andrew Nacin, a Lead Developer of WordPress, living in Washington, D.C., and previously working for the <a href="https://www.usds.gov/">U.S.&nbsp;Digital Service</a> at the White&nbsp;House. <a href="/about/">More...</a></p>
+</div>
+		</aside><aside id="text-6" class="widget widget_text"><h2 class="widget-title">Find Me</h2>			<div class="textwidget"><ul>
+  <li><a href="http://twitter.com/nacin">@nacin on Twitter</a></li>
+  <li><a href="http://profiles.wordpress.org/nacin">on WordPress.org</a></li>
+</ul></div>
+		</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+			
+			
+<article id="post-4329" class="post-4329 post type-post status-publish format-standard hentry tag-decisions tag-design tag-wordpress">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://nacin.com/2015/05/24/smart-algorithms-defaults/" rel="bookmark">Smarter algorithms, smarter defaults</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<blockquote><p>Instead of showing the user an alert that something might not work, maybe we can build a smarter algorithm. Instead of asking the user to make a choice up front, maybe we can set a smart default and see if there is high demand after launch for more customization.</p></blockquote>
+<p>— <a href="http://www.rebeccarolfe.com/">Rebecca Rolfe</a> on the Google Chrome team, interviewed in <a href="http://www.refinery29.com/female-white-hat-hackers-google-chrome">The Badass Women of Chrome&#8217;s Security Team</a> in Refinery29.</p>
+<p>(More on making <a href="http://nacin.com/2011/12/18/in-open-source-learn-to-decide/">decisions</a>, <a href="http://nacin.com/2013/07/01/firefox-makes-a-decision-removes-an-option/">not options</a>.)</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://nacin.com/2015/05/24/smart-algorithms-defaults/" rel="bookmark"><time class="entry-date published" datetime="2015-05-24T19:11:28-04:00">May 24, 2015</time><time class="updated" datetime="2015-05-24T19:13:15-04:00">May 24, 2015</time></a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://nacin.com/tag/decisions/" rel="tag">decisions</a>, <a href="https://nacin.com/tag/design/" rel="tag">design</a>, <a href="https://nacin.com/tag/wordpress/" rel="tag">WordPress</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-4329 -->
+
+<article id="post-4297" class="post-4297 post type-post status-publish format-standard hentry tag-government tag-u-s-digital-service tag-wordpress">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://nacin.com/2015/03/29/us-digital-service/" rel="bookmark">I&#8217;ve joined the White House&#8217;s U.S. Digital Service</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<blockquote><p>The need for effective government services is rising, while confidence in our ability to deliver them is dropping. More than ever, day-to-day interactions with government are powered by digital systems, and yet far too many Federal IT projects arrive late or over budget. Others are simply abandoned. These failures are often felt by those who count on it most — working class Americans and people who turn to government in a moment of need.<br />
+<cite>The U.S. Digital Service on <a href="https://www.whitehouse.gov/digital/united-states-digital-service/story">whitehouse.gov</a></cite></p></blockquote>
+<p>When you&#8217;re presented with an opportunity to help transform how the federal government works for the American people, it&#8217;s really hard to say no.</p>
+<p>For five years and counting, I&#8217;ve had the honor and privilege as a lead developer of WordPress to play a role in a large, incredible movement to democratize publishing. From my home in D.C., I&#8217;ve closely watched <a href="http://www.data.gov/">open data</a> and <a href="https://m.whitehouse.gov/blog/2014/06/02/ostp-s-own-open-government-plan">open government efforts</a>. <a href="http://nacin.com/2014/03/24/an-hour-to-make-government-better/">I feel very strongly</a> about an open, transparent, and efficient government — boosted in no small part by WordPress and open source.</p>
+<p>I&#8217;ve long admired a number of my new teammates, especially <a href="http://www.nextgov.com/cio-briefing/2015/03/meet-digital-service-guru-whos-helping-new-recruits-navigate-federal-bureaucracy/107148/">Erie Meyer</a>, <a href="http://apieconomist.com/blog/2013/4/10/6h6gntzp6twfuw4zwrzu0j43u0o80p">Gray Brooks</a>, and <a href="http://fcw.com/articles/2014/12/02/getting-started-at-usds.aspx">Haley van Dyck</a>, for years of tenacity and hard work trying to change government from the inside out. <span style="line-height: 1.6471;">I&#8217;ve always felt I could be more effective helping government from the outside, by continuing to work on WordPress. </span><span style="line-height: 1.6471;">After all, we&#8217;ve all heard horror </span><span style="line-height: 1.6471;">stories of all sorts of red tape, from hiring to procurement and everything in between. And we&#8217;ve all heard how difficult government itself makes it to launch good government digital services. While many of us may have have wanted to help, few thought they could. Fewer knew how.</span></p>
+<p>But then the U.S. Digital Service was formed, from <a href="http://wired.com/2014/08/healthcare-gov/">the team that helped rescue healthcare.gov</a>. It&#8217;s dedicated to tackling some of government&#8217;s most pressing problems, ones that directly affect millions of people&#8217;s lives.<strong> </strong>The formula is simple: take what helped turn around healthcare.gov and <a href="http://playbook.cio.gov">apply it</a> to other high priority projects across government.</p>
+<p>In this day and age, public policy must be backed by effective technology to succeed. The American people need our help and our government has asked us to serve, as <a href="https://www.usds.gov/">doers and makers, creative thinkers, and specialized technologists dedicated to untangling, rewiring, and redesigning our government</a>.</p>
+<p>In January, I joined the U.S. Digital Service.</p>
+<p>When I was approached, I have to admit that I was nervous to step back from the day-to-day buzz of WordPress because I&#8217;ve invested so much. But the community stepped up, in most cases not even knowing about my life change. That&#8217;s the beauty of open source, and the fantastic WordPress community in particular. WordPress continues to play an important role in my life. With <a href="http://ma.tt/">Matt Mullenweg</a>’s support and encouragement, I&#8217;m taking time away from Audrey, where I&#8217;ve worked since 2010. I&#8217;m still actively involved in the project, just not full time.</p>
+<p>The U.S. Digital Service is the real deal. I&#8217;ve been astounded by the impact we&#8217;ve already made. We&#8217;ve recruited <a href="https://www.whitehouse.gov/blog/2015/03/19/president-obama-names-david-recordon-director-white-house-information-technology">some</a> <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/09/04/white-house-names-googles-megan-smith-the-next-chief-technology-officer-of-the-united-states/">of</a> <a href="https://www.whitehouse.gov/blog/2014/08/20/day-one-mikey-dickerson-us-digital-service-administrator">the</a> <a href="https://www.whitehouse.gov/blog/2015/02/18/white-house-names-dr-dj-patil-first-us-chief-data-scientist">best</a> <a href="https://www.whitehouse.gov/blog/2015/02/05/next-us-chief-information-officer">and</a> <a href="https://medium.com/@USDigitalService/why-i-joined-the-u-s-digital-service-24c6682afce2?source=latest">brightest</a>. Don&#8217;t just take my word for it — do what you can to <a href="https://medium.com/@USDigitalService/mikey-dickerson-to-sxsw-why-we-need-you-in-government-f31dab3263a0">learn more about this movement</a> and <a href="http://www.usds.gov/">come help us make government better</a>. If you haven&#8217;t seen the video below yet, take a look. (A few of you have noticed me in the background.)</p>
+<p>It&#8217;s my nature to look for the hardest problems to solve. I like to take on big challenges and spend every ounce of energy working to solve them. I believe in what we&#8217;re doing here. The stakes are high. No matter the challenge, I know what we&#8217;re doing will change millions of lives.</p>
+<p>I thought I had made the most of my decade in D.C. I&#8217;ve witnessed a lot of history. I knew I&#8217;d have some great stories to tell my future kids and grandkids. <em>I was there. I saw it.</em> That was only the beginning.</p>
+<p><iframe src="https://www.youtube.com/embed/GMt0wH-twkE" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://nacin.com/2015/03/29/us-digital-service/" rel="bookmark"><time class="entry-date published" datetime="2015-03-29T13:25:02-04:00">March 29, 2015</time><time class="updated" datetime="2016-07-01T01:07:15-04:00">July 1, 2016</time></a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://nacin.com/tag/government/" rel="tag">government</a>, <a href="https://nacin.com/tag/u-s-digital-service/" rel="tag">U.S. Digital Service</a>, <a href="https://nacin.com/tag/wordpress/" rel="tag">WordPress</a></span><span class="comments-link"><a href="https://nacin.com/2015/03/29/us-digital-service/#comments">8 Comments<span class="screen-reader-text"> on I&#8217;ve joined the White House&#8217;s U.S. Digital Service</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-4297 -->
+
+<article id="post-4244" class="post-4244 post type-post status-publish format-standard hentry tag-net-neutrality">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://nacin.com/2014/06/12/comcast/" rel="bookmark">You can call it congestion or throttling. I call it unacceptable.</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><span style="font-size: 22px;">I pay for 105 Mbps of downstream Internet from Comcast, and I get just 6 Mbps every evening.</span></p>
+<p>I&#8217;ve been running speed tests for weeks now. It looks like this every time:</p>
+<div id='gallery-1' class='gallery galleryid-4244 gallery-columns-2 gallery-size-large'><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://nacin.com/2014/06/12/comcast/day/'><img width="300" height="135" src="https://nacin.com/wp-content/uploads/2014/06/day.png" class="attachment-large size-large" alt="" decoding="async" loading="lazy" aria-describedby="gallery-1-4245" /></a>
+			</div>
+				<figcaption class='wp-caption-text gallery-caption' id='gallery-1-4245'>
+				Every day.
+				</figcaption></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://nacin.com/2014/06/12/comcast/night/'><img width="300" height="135" src="https://nacin.com/wp-content/uploads/2014/06/night.png" class="attachment-large size-large" alt="" decoding="async" loading="lazy" aria-describedby="gallery-1-4246" /></a>
+			</div>
+				<figcaption class='wp-caption-text gallery-caption' id='gallery-1-4246'>
+				Every night.
+				</figcaption></figure>
+		</div>
+
+<p>I put a sizable hole in my wallet every month for &#8220;Blast&#8221; internet. Comcast even upgraded &#8220;Blast&#8221; from 50 Mbps to 105 Mbps recently, but each evening, I might as well be using their 6 Mbps &#8220;Performance Starter.&#8221; When I actually want to use anything close to the speeds they charge me for, I can&#8217;t.</p>
+<p>Please, Comcast, tell me how you&#8217;re going to <a href="http://www.vox.com/2014/6/5/5783554/yes-poor-netflix-performance-is-verizons-fault">blame Netflix</a> for this one.</p>
+<p>Please, Comcast, tell me again you can send a technician but only during business hours, when my Internet works fine.</p>
+<p>Please, Comcast, tell me how you&#8217;re going to charge me more.</p>
+<p>Please, Comcast, tell me how net neutrality would stifle &#8220;innovation&#8221; and discourage you from &#8220;investing&#8221; in infrastructure.</p>
+<p>And please, Comcast, tell me how that would be any different from the status quo.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://nacin.com/2014/06/12/comcast/" rel="bookmark"><time class="entry-date published" datetime="2014-06-12T15:40:15-04:00">June 12, 2014</time><time class="updated" datetime="2014-06-12T15:41:09-04:00">June 12, 2014</time></a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://nacin.com/tag/net-neutrality/" rel="tag">net neutrality</a></span><span class="comments-link"><a href="https://nacin.com/2014/06/12/comcast/#comments">3 Comments<span class="screen-reader-text"> on You can call it congestion or throttling. I call it unacceptable.</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-4244 -->
+
+<article id="post-4235" class="post-4235 post type-post status-publish format-standard hentry tag-security tag-wordpress">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://nacin.com/2014/05/30/security-is-nuanced/" rel="bookmark">Security is nuanced</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>As a software vendor, there are many reasons to prefer responsible disclosure of security issues. But the most important reason is also less obvious: vulnerability reports need to be <em>correct</em>.</p>
+<p>I&#8217;ve seen countless &#8220;full disclosure&#8221; reports that are wrong and invalid. Most of these could have been prevented by privately disclosing it to the vendor and allowing them the opportunity to respond.</p>
+<p>Everyone sees WordPress in the headlines, over and over again, but no one ever notices the &#8220;this report is invalid&#8221; response. We&#8217;ve prevented countless invalid reports from being published simply because they were disclosed to us first. This is better for the software&#8217;s users, who are otherwise left to scramble every time they see a report. They are not an expert, and often, neither is the reporter.</p>
+<p>There&#8217;s another angle here, though: sometimes, the vulnerability report is correct, but <em>incomplete</em>. This too can send everyone scrambling, starting with the vendor who was not given the opportunity to straighten things out.</p>
+<p>When responsible disclosure works, it works really well. I offer <a href="http://jetpack.me/2014/04/10/jetpack-security-update/">Jetpack&#8217;s recent vulnerability</a> as a recent case study. While this was discovered internally at Automattic, the effect is the same: they were able to quickly and thoroughly investigate the issues and follow through with a plan of action. During their investigation they learned the problem was far more severe than they originally identified, and that their initial proposed fix was incomplete.</p>
+<p>There will always be individuals who want everything to be fully disclosed, and there are some great arguments for that. I&#8217;m not trying to sway you one way or the other. But if you&#8217;re trying to do the right thing — you&#8217;re doing full disclosure in the interest of users, possibly even providing a patch or steps to mitigate — working with the vendor is a good way to ensure you haven&#8217;t missed anything.</p>
+<p>I&#8217;m not sure how many times now I&#8217;ve responded to a mailing list saying, &#8220;well, this isn&#8217;t a vulnerability,&#8221; or &#8220;your proposed patch is incomplete,&#8221; or &#8220;your patch makes it worse.&#8221; Or when I don&#8217;t respond to the mailing list because my thought is <em>T</em><em>his is worse than the reporter realizes.</em></p>
+<p>Security is nuanced.</p>
+<p>Last week, a security researcher disclosed some issues with WordPress. They stated that WordPress issues a cookie in plain HTTP that identifies the user. Correct. They also stated that this cookie does not expire when the user logs out. Also correct.</p>
+<p>She went on to state that the cookie has a lifetime of 3 years, that it can be used to mess with the account&#8217;s two-factor authentication settings, and change their email and other settings. She followed that up with &#8220;have notified them and waited 24hrs for response, none yet. guessing it&#8217;s a wontfix for now, since their SSL support is patchy.&#8221;</p>
+<p>Yes, absolutely, SSL support in WordPress is patchy. (Coincidentally, fixing all of this was already slated for the next major release.) While you can force SSL for the dashboard, we don&#8217;t have the concept of forcing SSL for the front-end of the site. So, that &#8220;logged in&#8221; cookie is issued over plain HTTP. It&#8217;s trivial in a plugin to force that cookie to be secure, but of course most users aren&#8217;t going to do that. Of course, most users also aren&#8217;t using SSL (sadly).</p>
+<p>WordPress also doesn&#8217;t have any concept of session management. The user is authenticated and a cookie is issued, but there&#8217;s no way for it to be automatically invalidated upon logout (without you changing your password). Changing this is a major architectural change we&#8217;ve been planning for some time. But this is also why cookies are designed with a limited expiration: just 48 hours, or 14 days if you click &#8220;Remember me.&#8221;</p>
+<p>But the report was that it didn&#8217;t expire for three years, right? This is where it gets a bit weird. I&#8217;d love it if &#8220;Remember me&#8221; remembered you for 30, 90, or even 365 days, but WordPress will wait to make any changes until cookies can be invalidated. Some time ago, though, WordPress.com configured this cookie to last for three years.</p>
+<p>Normally, this wouldn&#8217;t be that bad. You see, the &#8220;logged in&#8221; cookie is <em>relatively</em> harmless. It allows presentational things like the toolbar, edit links in your theme, and such. But you can&#8217;t use it to manage your account, change your email, or do anything particularly crazy. In fact, WordPress issues a separate, secure &#8220;auth&#8221; cookie used for the &#8220;wp-admin&#8221; dashboard. It’s like Amazon knowing who you are after six months of not being on the site, but asking you to log in when you start to check out.</p>
+<p>On WordPress.com, however, a lot of settings can be managed outside of the dashboard, on their &#8220;new dashboard,&#8221; at wordpress.com/settings/. As you might have guessed by now, they were not requiring the &#8220;auth&#8221; cookie on this page, only the &#8220;logged in&#8221; cookie. That is the true critical vulnerability here. A number of decisions came together to make a latent issue a very real one. The issue wasn&#8217;t reported like this because the reporter isn&#8217;t familiar with the intricacies of user authentication internals in WordPress, nor should anyone expect them to. Rather, an assumption was made it was a design decision that would probably just be a &#8220;wontfix&#8221; due to &#8220;patchy&#8221; SSL support.</p>
+<p>The disclosure was well-intentioned, but because it happened within just 24 hours, Automattic wasn&#8217;t able to react quickly enough to identify the actual issue and request that it not be disclosed until they got a fix in place.</p>
+<p>I&#8217;m just trying to set the record straight on what happened, since I keep seeing confused tweets, blog posts, comments, and Facebook chatter. (Favorite Facebook comment, after I posted a brief explanation: &#8220;Did we just open all those nesting doll layers to discover the belly was empty?&#8221;) This situation probably could have been handled better by everyone involved, but that&#8217;s not really the point. The primary issue is now handled, and other issues are also being addressed. I don&#8217;t think this requires post-mortem blog posts with a side of FUD. I&#8217;m not looking for a debate on full disclosure versus responsible disclosure. And I certainly don&#8217;t think anyone should be questioning the researcher, who has spent years dedicating herself to making the Internet more secure.</p>
+<p>In this case, WordPress.com the service was able to react quickly to mitigate this issue for all of its users. Of course, with software, holes can&#8217;t be closed so easily, and in this case, the situation was probably exacerbated by confusing WordPress.com the service with WordPress the software. That confusion is easy to understand, especially since some of these issues have roots in the core software.</p>
+<address>Security is nuanced.</address>
+<p><em>I&#8217;ve not linked to any previous posts because I don&#8217;t want this to be a criticism of any researcher or writer, but if you&#8217;re looking for background: <a href="https://zyan.scripts.mit.edu/blog/wordpress-fail/">1</a> <a href="http://arstechnica.com/security/2014/05/unsafe-cookies-leave-wordpress-accounts-open-to-hijacking-2-factor-bypass/">2</a> <a href="http://wptavern.com/wordpress-com-security-vulnerability-stirs-debate-over-responsible-disclosure">3</a>. Also, related work for WordPress 4.0 is happening <a href="https://core.trac.wordpress.org/query?milestone=4.0&amp;component=Security">here</a>.</em></p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://nacin.com/2014/05/30/security-is-nuanced/" rel="bookmark"><time class="entry-date published" datetime="2014-05-30T14:44:41-04:00">May 30, 2014</time><time class="updated" datetime="2014-05-30T14:44:58-04:00">May 30, 2014</time></a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://nacin.com/tag/security/" rel="tag">security</a>, <a href="https://nacin.com/tag/wordpress/" rel="tag">WordPress</a></span><span class="comments-link"><a href="https://nacin.com/2014/05/30/security-is-nuanced/#comments">5 Comments<span class="screen-reader-text"> on Security is nuanced</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-4235 -->
+
+<article id="post-4228" class="post-4228 post type-post status-publish format-standard hentry tag-open-source-bridge tag-speaking tag-wordpress">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://nacin.com/2014/04/15/my-talk-proposals-for-open-source-bridge/" rel="bookmark">My Talk Proposals for Open Source Bridge</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><strong>Update, April 29:</strong><b> I&#8217;m excited to share that <em>both</em> of these proposals were accepted. See you soon, Portland!</b></p>
+<hr />
+<p>&nbsp;</p>
+<p>I submitted two proposals to <a href="http://opensourcebridge.org/">Open Source Bridge</a>, an annual conference in Portland, Oregon, for &#8220;open source citizens.&#8221; The call for papers is now closed, but they let anyone leave comments on proposals that are private to the conference organizers. If you have any feedback on these, or have seen me speak before, it would be awesome if you could leave a comment. Here they are:</p>
+<h2><a href="http://opensourcebridge.org/proposals/1413">Extreme Software Portability as an Art Form</a></h2>
+<p>Writing portable software is hard. Throw in thousands of bad and worse shared hosting configurations, a decade of technical debt, the need to cater to a sprawling ecosystem, and PHP — and you have WordPress. We&#8217;ve found breaking changes harm our community and unfairly punish our users, so we don&#8217;t make them. But that doesn&#8217;t mean we don&#8217;t innovate or evolve — we&#8217;re just forced to get really clever. And it works, with adoption continuing to soar.</p>
+<h2><a href="http://opensourcebridge.org/proposals/1419">Trust, Community, and Automatic Updates</a></h2>
+<p style="font-weight: inherit;">WordPress shipped in October what is perhaps its most polarizing feature ever — automatic updates in the background of self-hosted web software, on by default and no easy way to turn it off. In most open source communities, this would be cause for open revolt. Learn how through trust, communication, and a steadfast commitment to its philosophies, the WordPress core team convinced a skeptical community to go along, even if it meant users giving up some control.</p>
+<p>WordPress contributors Mel Choyce and Aaron Jorbin also both submitted proposals: <a href="http://opensourcebridge.org/proposals/1315">My Journey into Open Source Design</a> and <a href="http://opensourcebridge.org/proposals/1312">Modernizing a Stagnant Toolbox</a>.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://nacin.com/2014/04/15/my-talk-proposals-for-open-source-bridge/" rel="bookmark"><time class="entry-date published" datetime="2014-04-15T17:04:08-04:00">April 15, 2014</time><time class="updated" datetime="2014-04-29T09:26:50-04:00">April 29, 2014</time></a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://nacin.com/tag/open-source-bridge/" rel="tag">Open Source Bridge</a>, <a href="https://nacin.com/tag/speaking/" rel="tag">speaking</a>, <a href="https://nacin.com/tag/wordpress/" rel="tag">WordPress</a></span><span class="comments-link"><a href="https://nacin.com/2014/04/15/my-talk-proposals-for-open-source-bridge/#comments">1 Comment<span class="screen-reader-text"> on My Talk Proposals for Open Source Bridge</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-4228 -->
+
+	<nav class="navigation pagination" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>1</span>
+<a class="page-numbers" href="https://nacin.com/page/2/"><span class="meta-nav screen-reader-text">Page </span>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class="page-numbers" href="https://nacin.com/page/17/"><span class="meta-nav screen-reader-text">Page </span>17</a>
+<a class="next page-numbers" href="https://nacin.com/page/2/">Next page</a></div>
+	</nav>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+<style id='core-block-supports-inline-css'>
+/**
+ * Core styles: block-supports
+ */
+
+</style>
+<script src='https://nacin.com/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141028' id='twentyfifteen-skip-link-focus-fix-js'></script>
+<script id='twentyfifteen-script-js-extra'>
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+</script>
+<script src='https://nacin.com/wp-content/themes/twentyfifteen/js/functions.js?ver=20221101' id='twentyfifteen-script-js'></script>
+
+</body>
+</html>

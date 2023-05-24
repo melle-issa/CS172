@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="USC Chan Division of Occupational Science and Occupational Therapy" />
+<meta name="keywords" content="USC Chan Division of Occupational Science and Occupational Therapy" />
+<meta name="viewport" content="initial-scale=1">
+<title>USC Chan Division of Occupational Science and Occupational Therapy</title>
+
+<script type="text/javascript" src="/js/change_text_size.js"></script>
+<script type="text/javascript" src="/js/toggle_031121.js"></script>
+
+<script type="text/javascript" src="/js/jquery/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery/smartmenus-1.0.0/jquery.smartmenus.min.js"></script>
+<link rel="stylesheet" href="/js/jquery/smartmenus-1.0.0/sm-core-css.css" type="text/css" />
+<link rel="stylesheet" href="/js/jquery/smartmenus-1.0.0/sm-core-showhide.css" type="text/css" />
+<link rel="stylesheet" href="/js/jquery/smartmenus-1.0.0/sm-mint-010322.css" type="text/css" />
+
+<script src="/js/jquery/master-slider-2.81.8/masterslider.min.js"></script>
+<link rel="stylesheet" href="/js/jquery/master-slider-2.81.8/style/masterslider.css" />
+<link rel="stylesheet" href="/js/jquery/master-slider-2.81.8/skins/default/style.css" />
+<link rel="stylesheet" href="/js/jquery/master-slider-2.81.8/skins/metro/style.css" />
+
+<!-- #main-menu config - instance specific stuff not covered in the theme -->
+<!-- Put this in an external stylesheet if you want the media query to work in IE8 (e.g. where the rest of your page styles are) -->
+<style type="text/css">
+	@media (min-width: 768px) {
+		#main-nav { line-height: 0; text-align: left; }
+		#main-menu { display: inline-block; }
+	}
+</style>
+
+<link rel="stylesheet" href="https://use.typekit.net/pnr8rrp.css">
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/webfonts-css.v.1660358611" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/identity-css.v.1662757246" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/identity-css-print.v.1660358611" type="text/css" media="print" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/main-menu-css.v.1682069850" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=home/home-css.v.1660358612" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/footer-css.v.1660358610" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/footer-css-print.v.1660358610" type="text/css" media="print" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/general-css.v.1682986962" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://chan.usc.edu/?css=general/general-css-print.v.1660358610" type="text/css" media="print" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+
+<script type="text/javascript">
+
+   $(function() {
+      $('#main-menu').smartmenus({ subMenusSubOffsetX: 0, subMenusSubOffsetY: 0,
+                                   subMenusMinWidth: "10em", subMenusMaxWidth: "18em",
+                                   showFunction: function($ul, complete) { $ul.fadeIn(200, complete); },
+                                   hideFunction: function($ul, complete) { $ul.fadeOut(50, complete); },
+                                   hideTimeout: 100, showTimeout: 100 });
+   });
+
+   $(function() {
+      var $mainMenuState = $('#main-menu-state');
+      if ($mainMenuState.length) {
+         // animate mobile menu
+         $mainMenuState.change(function(e) {
+            var $menu = $('#main-menu');
+            if (this.checked) { $menu.hide().slideDown(250, function() { $menu.css('display', ''); }); }
+            else { $menu.show().slideUp(250, function() { $menu.css('display', ''); }); }
+         });
+         // hide mobile menu beforeunload
+         $(window).bind('beforeunload unload', function() {
+            if ($mainMenuState[0].checked) {$mainMenuState[0].click();}
+         });
+      }
+   });
+
+</script>
+</head>
+
+<body>
+
+<div id="container" style="font-size: 100%;">
+<script type="text/javascript">set_font_size();</script>
+
+<div id="internal">
+<a href="/resources">Faculty / Staff Resources</a>
+<a href="/students">Student Resources</a>
+</div>
+<div id="identity">
+
+<div id="usc-identity-mobile">
+<a href="https://mobile.usc.edu"><img alt="University of Southern California" src="/assets/chan/identity/usc-identity-mobile.png" /></a>
+</div>
+
+<div id="usc-identity">
+<a href="https://usc.edu"><img alt="University of Southern California" src="/assets/chan/identity/usc-identity-desktop.png" /></a>
+</div>
+
+<div id="chan-identity-3line">
+<a href="/"><img alt="USC Chan Division of Occupational Science and Occupational Therapy" src="/assets/chan/identity/chan80th-identity-3line.png" /></a>
+</div>
+
+<div id="chan-identity-2line">
+<a href="/"><img alt="USC Chan Division of Occupational Science and Occupational Therapy" src="/assets/chan/identity/chan80th-identity-2line.png" /></a>
+</div>
+
+<div id="social-identity">
+<a href="https://twitter.com/USCChanOSOT" title="USC Chan OS/OT on Twitter" target="_blank"><img alt="Twitter" src="/assets/chan/icons/social/twitter.png" /></a>
+<a href="https://facebook.com/USCChanOSOT" title="USC Chan OS/OT on Facebook" target="_blank"><img alt="Facebook" src="/assets/chan/icons/social/facebook.png" /></a>
+<a href="https://instagram.com/USCChanOSOT" title="USC Chan OS/OT on Instagram" target="_blank"><img alt="Instagram" src="/assets/chan/icons/social/instagram.png" /></a>
+<a href="/linkedin" title="USC Chan OS/OT on LinkedIn" target="_blank"><img alt="LinkedIn" src="/assets/chan/icons/social/linkedin.png" /></a>
+<a href="https://youtube.com/@USCChanOSOT" title="USC Chan OS/OT on YouTube" target="_blank"><img alt="YouTube" src="/assets/chan/icons/social/youtube.png" /></a>
+</div>
+
+<div id="search-form">
+<form method="post" action="https://chan.usc.edu/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="/pkjj+xSIbDgWKaNeBykpmcBaLFJ7b+UFUM0B0x5de3uaWmimcGdt3kGKc2NUDrCssrdYawbBWd2PI6pbmWpMYvRam/lc7FVDAlz3fOWyMymsBNV69MtVsECnZ/H64OYLeM3VtSHifsj7NqXzkFesDPPBYCoPWgb6YjjNe5+iJTbqn8d86fN6SPw1pMHex5256O+RC3mp87fg/f4+rl04Zadg0BPT6c44QS1Pi3+JHNvstqkdpDv0+n4d+J4Vs2KcUtSud3pB+hJKsN1FzKvY5GBwmRDLBXvFcbvJqNlv4OmxM0YFg/bcf6x3a8hc/jyN4yP5NPhspkmhwh8R8ftL3K5xt7VAD+Zp04nbLXqyqD0mo+NIn11BL+h4HiYrhjl3nAWYkeQ+YnY2x1HaKLvVxb3PYOemAa8W4parfBhnklXJeIBTaMFzdDclovTeVLutnKiRjW0p8fpap6ahA6rCsUyjUHni6pzXkgjxAZQQPDycRjhGRZzCOpLRzvwz2G8wG/MMOvmwo2fiIctIPKj3heIdoyWMB1o7y6Ftt90CkFihPy867g+gSxFCcjevjEACp5LRBMRfpC+RmA8VCtmhWMxhYoc/Q2DRThVmUO3EmPrrAkUVLBUlhJm92pLqBM1deORs02NT29RiLcP0pst4wOdTicsgONcwO7wFZykRY7qgopMzZgXAUKHPTiokDOoUHRbKEkzkrD/0p2kbh2CX4U+1GeJ+iQy87rVd1GaDvLOUEZhzsbBrZRaKNy3yAjyzsDvyIWyOJYSmQm9sJ9NSluZcWaoyrzg1WS5xQvV2xmB1yyukKsC3TbVkmy8zLof" />
+<input type="hidden" name="site_id" value="1" />
+<input type="hidden" name="csrf_token" value="" />
+</div>
+
+
+<label for="keywords">Search</label>
+<input type="text" name="keywords" id="keywords" maxlength="100" value=""
+onfocus="if (this.value=='search') {this.value='';} this.style.color='black';"
+onblur="if (this.value=='') {this.value='search';} this.style.color='#cccccc';" />
+<script>if (document.getElementById('keywords').value=='') document.getElementById('keywords').value='search';</script>
+<input type="image" src="/assets/chan/icons/search.png" alt="submit" id="submit" />
+</form>
+</div>
+</div>
+
+<nav id="main-nav" role="navigation">
+
+<!-- Mobile menu control (hamburger/x icon) -->
+<input id="main-menu-state" type="checkbox" />
+<label class="main-menu-btn" for="main-menu-state">
+  <span class="main-menu-btn-icon"></span>
+  <span class="main-menu-btn-text">menu</span>
+</label>
+
+<ul id="main-menu" class="sm sm-mint">
+   <li id="aboutus"><a class="aboutus" href="/about-us">About Us</a>
+       <ul><li class="section"><a class="title" href="#">About Us</a></li>
+<li><a href="/about-us">About the USC Chan Division</a></li>
+<li><a href="/about-us/at-a-glance">At a Glance</a></li>
+<li><a href="/about-us/mission-vision-values">Mission, Vision, and Core Values</a></li>
+<li><a href="/about-us/strategic-plan">USC Chan Strategic Plan</a></li>
+<li><a href="/about-us/dae">Diversity, Access, and Equity (DAE)</a>
+<ul>
+<li><a href="/about-us/dae">Overview</a></li>
+<li><a href="/about-us/dae/committee">DAE Committee</a></li>
+<li><a href="/about-us/dae/mentorship-program">Diversity Mentorship Program</a>
+<ul>
+<li><a href="/about-us/dae/mentorship-program">About the Program</a></li>
+<li><a href="/about-us/dae/mentorship-program/application">Application</a></li>
+</ul>
+</li>
+<li><a href="/about-us/dae/anti-racism-communities">Anti-Racism Communities of Practice</a></li>
+<li><a href="/about-us/dae/summer-institute">OT/PT Summer Institute</a></li>
+<li><a href="/about-us/dae/resources">Resources</a>
+<ul>
+<li><a href="/about-us/dae/resources">General Resources</a></li>
+<li><a href="/about-us/dae/resources/racial-justice">Resources for Racial Justice</a></li>
+</ul>
+</li>
+<li><a href="/about-us/dae/affinity-spaces">Affinity Spaces</a></li>
+</ul>
+</li>
+<li><a href="/about-us/history">History</a></li>
+<li class="section"><a class="title" href="#">What We Do</a></li>
+<li><a href="/about-us/occupational-science">Occupational Science</a></li>
+<li><a href="/about-us/occupational-therapy">Occupational Therapy</a>
+<ul>
+<li><a href="/about-us/occupational-therapy">About Occupational Therapy</a></li>
+<li><a href="/about-us/occupational-therapy/ot-in-action">Occupational Therapy in Action</a></li>
+</ul>
+</li>
+<li><a href="/about-us/lifestyle-redesign">Lifestyle Redesign®</a>
+<ul>
+<li><a href="/about-us/lifestyle-redesign">About Lifestyle Redesign®</a></li>
+<li><a href="/about-us/lifestyle-redesign/contact">Contact Us</a></li>
+</ul>
+</li>
+<li><a href="/about-us/sensory-integration">Sensory Integration</a></li>
+<li><a href="/about-us/global-initiatives">Global Initiatives</a>
+<ul>
+<li><a href="/about-us/global-initiatives">About USC Chan Global Initiatives</a></li>
+<li><a href="/about-us/global-initiatives/strategic-planning">Strategic Planning</a></li>
+<li><a href="/about-us/global-initiatives/soti">Summer Occupational Therapy Immersion (SOTI)</a></li>
+<li><a href="/about-us/global-initiatives/projects">Current Projects</a></li>
+<li><a href="/about-us/global-initiatives/student-exchange">Student Exchange Programs</a></li>
+<li><a href="/about-us/global-initiatives/student-resources">International Student Resources</a></li>
+<li><a href="/about-us/global-initiatives/meet-the-team">Meet the Team</a></li>
+<li><a href="/about-us/global-initiatives/videos">Videos</a></li>
+<li><a href="/about-us/global-initiatives/photos">Photo Galleries</a></li>
+</ul>
+</li>
+<li><a href="/about-us/china-initiative">China Initiative</a>
+<ul>
+<li><a href="/about-us/china-initiative">About the China Initiative</a></li>
+<li><a href="/about-us/china-initiative/meet-the-team">Meet the Team</a></li>
+<li><a href="/about-us/china-initiative/usc-pkuhsc-students">USC-PKUHSC Students</a></li>
+<li><a href="/about-us/china-initiative/contact">Contact Us</a></li>
+</ul>
+</li>
+<li><a href="/about-us/respons">ReSPONs Initiative</a></li>
+<li><a href="/about-us/center">Center for Occupation and Lifestyle Redesign®</a></li>
+<li><a href="/about-us/archive">USC Chan Archive</a></li>
+<li class="section"><a class="title" href="#">Contact</a></li>
+<li><a href="/about-us/contact-us">Contact Us</a></li>
+<li><a href="/about-us/visit-us">Visit Us</a></li>
+<li><a href="/about-us/virtual-tour">Virtual Tour</a></li>
+<li><a href="/about-us/careers">Careers at USC Chan</a></li>
+<li><a href="/about-us/give">Give to USC Chan</a></li>
+</ul>
+   </li>
+   <li id="newsandevents"><a class="newsandevents" href="/news">News / Events</a>
+       <ul><li class="section"><a class="title" href="#">News</a></li>
+<li><a href="/news">Overview</a></li>
+<li><a href="/news/latest">Latest Chan Division News</a></li>
+<li><a href="/news/newsletter">Chan eNewsletter</a></li>
+<li><a href="/news/magazine">USC Chan Magazine</a>
+<ul>
+<li><a href="/news/magazine">About the Magazine</a></li>
+<li><a href="/news/magazine/fall2022winter2023">Fall 2022 / Winter 2023</a></li>
+<li><a href="/news/magazine/springsummer2021">Spring / Summer 2021</a></li>
+<li><a href="/news/magazine/fall2020winter2021">Fall 2020 / Winter 2021</a></li>
+<li><a href="/news/magazine/fall2019winter2020">Fall 2019 / Winter 2020</a></li>
+<li><a href="/news/magazine/spring2019">Spring 2019</a></li>
+<li><a href="/news/magazine/springsummer2018">Spring / Summer 2018</a></li>
+<li><a href="/news/magazine/winter2018">Winter 2018</a></li>
+<li><a href="/news/magazine/spring2017">Spring 2017</a></li>
+<li><a href="/news/magazine/summer2016">Summer 2016</a></li>
+<li><a href="/news/magazine/winter2015">Winter 2015</a></li>
+<li><a href="/news/magazine/spring2015">Spring 2015</a></li>
+<li><a href="/news/magazine/fall2014">Fall 2014</a></li>
+<li><a href="/news/magazine/spring2014">Spring 2014</a></li>
+<li><a href="/news/magazine/fall2013">Fall 2013</a></li>
+<li><a href="/news/magazine/spring2013">Spring 2013</a></li>
+<li><a href="/news/magazine/fall2012">Fall 2012</a></li>
+<li><a href="/news/magazine/spring2012">Spring 2012</a></li>
+<li><a href="/news/magazine/fall2011">Fall 2011</a></li>
+<li><a href="/news/magazine/spring2011">Spring 2011</a></li>
+<li><a href="/news/magazine/fall2010">Fall 2010</a></li>
+</ul>
+</li>
+<li><a href="/news/in-the-media">Chan in the Media</a></li>
+<li><a href="/news/faqs">FAQs</a></li>
+<li class="section"><a class="title" href="#">Events</a></li>
+<li><a href="/events">Overview</a></li>
+<li><a href="/events/upcoming">Upcoming Events</a></li>
+<li><a href="/events/restorative">Restorative Occupations</a>
+<ul>
+<li><a href="/events/restorative">Events and Calendar</a></li>
+<li><a href="/events/restorative/resources">General Resources</a></li>
+</ul>
+</li>
+<li><a href="/events/symposium">Occupational Science Symposium</a>
+<ul>
+<li><a href="/events/symposium">About the Symposium</a></li>
+<li><a href="/events/symposium/2021">2021 | 27th Symposium</a></li>
+<li><a href="/events/symposium/2019">2019 | 26th Symposium</a></li>
+<li><a href="/events/symposium/2016">2016 | 25th Symposium</a></li>
+<li><a href="/events/symposium/previous">Pre-2016 Symposia</a></li>
+</ul>
+</li>
+<li><a href="/events/conference">Chan at Conference</a>
+<ul>
+<li><a href="/events/conference">Overview</a></li>
+<li><a href="/events/conference/wfot">WFOT Congress</a></li>
+<li><a href="/events/conference/aota">AOTA Conference</a></li>
+<li><a href="/events/conference/otac">OTAC Conference</a></li>
+<li><a href="/events/conference/faculty-webinars">Faculty Webinars</a></li>
+</ul>
+</li>
+<li><a href="/events/white-coat-ceremony">White Coat Ceremony</a>
+<ul>
+<li><a href="/events/white-coat-ceremony">2022 White Coat Ceremony</a></li>
+<li><a href="/events/white-coat-ceremony/2021">2021 White Coat Ceremony</a></li>
+</ul>
+</li>
+<li><a href="/events/commencement">Commencement</a>
+<ul>
+<li><a href="/events/commencement">2023 Commencement</a></li>
+<li><a href="/events/commencement/2022">2022 Commencement</a></li>
+<li><a href="/events/commencement/2021">2021 Commencement</a></li>
+<li><a href="/events/commencement/2020">2020 Commencement</a></li>
+</ul>
+</li>
+<li><a href="/events/festival-of-books">LA Times Festival of Books</a></li>
+<li><a href="/events/gamechanger">gamechanger KMb Team Challenge</a></li>
+<li><a href="/events/career-fair">Career Fair</a></li>
+<li class="section"><a class="title" href="#">Media</a></li>
+<li><a href="/media">Overview</a></li>
+<li><a href="/media/photos">Photo Galleries</a></li>
+<li><a href="/media/videos">Videos</a></li>
+<li><a href="/media/trojanstalkot">Trojans Talk OT Podcast</a></li>
+</ul>
+   </li>
+   <li id="people"><a class="people" href="/people">People</a>
+       <ul><li class="section"><a class="title" href="#">People</a></li>
+<li><a href="/people">The People of USC Chan</a></li>
+<li><a href="/people/family">Meet Our Trojan Family</a>
+<ul>
+<li><a href="/people/family">All Programs</a></li>
+<li><a href="/people/family/phd">PhD in Occupational Science</a></li>
+<li><a href="/people/family/minor-in-os">Minor in Occupational Science</a></li>
+<li><a href="/people/family/entry-level-otd">Entry-Level Doctorate (OTD)</a></li>
+<li><a href="/people/family/bs-to-otd">Bachelor’s to Doctorate</a></li>
+<li><a href="/people/family/post-professional-otd">Post-Professional OTD</a></li>
+<li><a href="/people/family/post-professional-ma">Post-Professional Master’s</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Faculty</a></li>
+<li><a href="/people/faculty">Faculty Directory</a>
+<ul>
+<li><a href="/people/faculty">All Faculty</a></li>
+<li><a href="/people/faculty/Grace_Baranek">Grace Baranek</a></li>
+<li><a href="/people/faculty/Joy_Agner">Joy Agner</a></li>
+<li><a href="/people/faculty/Aimee_Aguillon">Aimee Aguillon</a></li>
+<li><a href="/people/faculty/Rebecca_Aldrich">Rebecca Aldrich</a></li>
+<li><a href="/people/faculty/Melina_Allahverdian">Melina Allahverdian</a></li>
+<li><a href="/people/faculty/Yasi_Amanat">Yasi Amanat</a></li>
+<li><a href="/people/faculty/Julianne_Angel">Julianne Angel</a></li>
+<li><a href="/people/faculty/Amber_Angell">Amber Angell</a></li>
+<li><a href="/people/faculty/Arameh_Anvarizadeh">Arameh Anvarizadeh</a></li>
+<li><a href="/people/faculty/Lisa_Aziz-Zadeh">Lisa Aziz-Zadeh</a></li>
+<li><a href="/people/faculty/Jane_Baumgarten">Jane Baumgarten</a></li>
+<li><a href="/people/faculty/Amber_Bennett">Amber Bennett</a></li>
+<li><a href="/people/faculty/Erna_Blanche">Erna Blanche</a></li>
+<li><a href="/people/faculty/Tara_Blumstein">Tara Blumstein</a></li>
+<li><a href="/people/faculty/Sue_Bowles">Sue Bowles</a></li>
+<li><a href="/people/faculty/Sarah_Bream">Sarah Bream</a></li>
+<li><a href="/people/faculty/Erin_Bussell">Erin Bussell</a></li>
+<li><a href="/people/faculty/Michael_Carlson">Michael Carlson</a></li>
+<li><a href="/people/faculty/Sharon_Cermak">Sharon Cermak</a></li>
+<li><a href="/people/faculty/Candace_Chatman">Candace Chatman</a></li>
+<li><a href="/people/faculty/Allison_Chu">Allison Chu</a></li>
+<li><a href="/people/faculty/Remy_Chu">Remy Chu Jr.</a></li>
+<li><a href="/people/faculty/Mona_Chung">Mona Chung</a></li>
+<li><a href="/people/faculty/Florence_Clark">Florence Clark</a></li>
+<li><a href="/people/faculty/Ellie_Clark">Ellie Clark</a></li>
+<li><a href="/people/faculty/Alison_Cogan">Alison Cogan</a></li>
+<li><a href="/people/faculty/Laura_Cox">Laura Cox</a></li>
+<li><a href="/people/faculty/Gabriel_Cravens">Gabriel Cravens</a></li>
+<li><a href="/people/faculty/Catherine_Crowley">Catherine Crowley</a></li>
+<li><a href="/people/faculty/Rebecca_Cunningham">Rebecca Cunningham</a></li>
+<li><a href="/people/faculty/Celso_Delgado">Celso Delgado</a></li>
+<li><a href="/people/faculty/Lisa_Deshaies">Lisa Deshaies</a></li>
+<li><a href="/people/faculty/Jesus_Diaz">Jesús Díaz</a></li>
+<li><a href="/people/faculty/Camille_Dieterle">Camille Dieterle</a></li>
+<li><a href="/people/faculty/Nora_Dixon">Nora Dixon</a></li>
+<li><a href="/people/faculty/Heidi_Dombish">Heidi Dombish</a></li>
+<li><a href="/people/faculty/Leah_Stein_Duker">Leah Stein Duker</a></li>
+<li><a href="/people/faculty/Linda_Fazio">Linda Fazio</a></li>
+<li><a href="/people/faculty/Gelya_Frank">Gelya Frank</a></li>
+<li><a href="/people/faculty/Heather_Gates">Heather Gates</a></li>
+<li><a href="/people/faculty/Stephani_Gharehptian">Stephani Gharehptian</a></li>
+<li><a href="/people/faculty/Don_Gordon">Don Gordon</a></li>
+<li><a href="/people/faculty/Linsey_Grunes">Linsey Grunes</a></li>
+<li><a href="/people/faculty/Janet_Gunter">Janet Gunter</a></li>
+<li><a href="/people/faculty/Juliana_Gutierrez">Juliana Gutiérrez</a></li>
+<li><a href="/people/faculty/Ashley_Halle">Ashley Halle</a></li>
+<li><a href="/people/faculty/Caroline_Hardin">Caroline Hardin</a></li>
+<li><a href="/people/faculty/Marisa_Hernandez">Marisa Hernandez</a></li>
+<li><a href="/people/faculty/Jess_Holguin">Jess Holguin</a></li>
+<li><a href="/people/faculty/Lucy_Hosoda">Lucy Hosoda</a></li>
+<li><a href="/people/faculty/Tracy_Jalaba">Tracy Jalaba</a></li>
+<li><a href="/people/faculty/Jennifer_Jones">Jennifer Jones</a></li>
+<li><a href="/people/faculty/Katie_Jordan">Katie Jordan</a></li>
+<li><a href="/people/faculty/Dominique_Blanche_Kiefer">Dominique Blanche Kiefer</a></li>
+<li><a href="/people/faculty/Karrie_Kingsley">Karrie Kingsley</a></li>
+<li><a href="/people/faculty/Jenna_Kobara">Jenna Kobara</a></li>
+<li><a href="/people/faculty/Joshua_Kotler">Joshua Kotler</a></li>
+<li><a href="/people/faculty/Mary_Lawlor">Mary Lawlor</a></li>
+<li><a href="/people/faculty/Merry_Lee">Merry Lee</a></li>
+<li><a href="/people/faculty/James_Lee">James Lee</a></li>
+<li><a href="/people/faculty/Miri_Lee">Miri Lee</a></li>
+<li><a href="/people/faculty/Kimberly_Perring_Lenington">Kimberly Perring Lenington</a></li>
+<li><a href="/people/faculty/Colin_Lenington">Colin Lenington</a></li>
+<li><a href="/people/faculty/Carnie_Lewis">Carnie Lewis</a></li>
+<li><a href="/people/faculty/Sook-Lei_Liew">Sook-Lei Liew</a></li>
+<li><a href="/people/faculty/Julia_Lisle">Julia Lisle</a></li>
+<li><a href="/people/faculty/Diego_Lopez">Diego Lopez</a></li>
+<li><a href="/people/faculty/Cindy_Luff">Cindy Luff</a></li>
+<li><a href="/people/faculty/Deanna_Mannarelli">Deanna Mannarelli</a></li>
+<li><a href="/people/faculty/Marissa_Marchioni">Marissa Marchioni</a></li>
+<li><a href="/people/faculty/John_Margetis">John Margetis</a></li>
+<li><a href="/people/faculty/Julie_McLaughlin_Gray">Julie McLaughlin Gray</a></li>
+<li><a href="/people/faculty/Mike_McNulty">Mike McNulty</a></li>
+<li><a href="/people/faculty/Elena_Meng">Ling Yu (Elena) Meng</a></li>
+<li><a href="/people/faculty/Stephanie_Mielke">Stephanie Mielke</a></li>
+<li><a href="/people/faculty/Tessa_Milman">Tessa Milman</a></li>
+<li><a href="/people/faculty/William_Morgan">William Morgan</a></li>
+<li><a href="/people/faculty/Stacey_Morikawa">Stacey Morikawa</a></li>
+<li><a href="/people/faculty/Kimberly_Morris-Eggleston">Kimberly Morris-Eggleston</a></li>
+<li><a href="/people/faculty/Bonnie_Nakasuji">Bonnie Nakasuji</a></li>
+<li><a href="/people/faculty/Emily_Ochi">Emily Ochi</a></li>
+<li><a href="/people/faculty/Daniel_Park">Daniel Park</a></li>
+<li><a href="/people/faculty/Kristy_Payne">Kristy Payne</a></li>
+<li><a href="/people/faculty/Elyse_Peterson">Elyse Peterson</a></li>
+<li><a href="/people/faculty/Kelsey_Peterson">Kelsey Peterson</a></li>
+<li><a href="/people/faculty/Allison_Phillips">Allison Phillips</a></li>
+<li><a href="/people/faculty/Bobbi_Pineda">Bobbi Pineda</a></li>
+<li><a href="/people/faculty/Deborah_Pitts">Deborah Pitts</a></li>
+<li><a href="/people/faculty/Beth_Pyatak">Beth Pyatak</a></li>
+<li><a href="/people/faculty/Samia_Rafeedie">Samia Rafeedie</a></li>
+<li><a href="/people/faculty/Chantelle_Rice_Collins">Chantelle Rice Collins</a></li>
+<li><a href="/people/faculty/Pamela_Roberts">Pamela Roberts</a></li>
+<li><a href="/people/faculty/Mireya_Rodriguez">Mireya Rodriguez</a></li>
+<li><a href="/people/faculty/Shawn_Roll">Shawn Roll</a></li>
+<li><a href="/people/faculty/Rob_Russow">Rob Russow</a></li>
+<li><a href="/people/faculty/Malia_Sako">Malia Sako</a></li>
+<li><a href="/people/faculty/Trevor_San_Antonio">Trevor San Antonio</a></li>
+<li><a href="/people/faculty/Clarissa_Saunders-Newton">Clarissa Saunders-Newton</a></li>
+<li><a href="/people/faculty/Stacey_Schepens_Niemiec">Stacey Schepens Niemiec</a></li>
+<li><a href="/people/faculty/Emma_Schiewe">Emma Schiewe</a></li>
+<li><a href="/people/faculty/Lisa_Semro">Lisa Semro</a></li>
+<li><a href="/people/faculty/Catherine_Shin">Hyon Min (Catherine) Shin</a></li>
+<li><a href="/people/faculty/Lindsey_Shomer">Lindsey Shomer</a></li>
+<li><a href="/people/faculty/John_Sideris">John Sideris</a></li>
+<li><a href="/people/faculty/Winny_Soenaryo">Winny Soenaryo</a></li>
+<li><a href="/people/faculty/Emily_Sopkin">Emily Sopkin</a></li>
+<li><a href="/people/faculty/Amanda_Speights">Amanda Speights</a></li>
+<li><a href="/people/faculty/Lawrence_Stevenson">Lawrence Stevenson</a></li>
+<li><a href="/people/faculty/Shelby_Surfas">Shelby Surfas</a></li>
+<li><a href="/people/faculty/Joan_Surfus">Joan Surfus</a></li>
+<li><a href="/people/faculty/Marilyn_Thompson">Marilyn Thompson</a></li>
+<li><a href="/people/faculty/Sonia_Trejo">Sonia Trejo</a></li>
+<li><a href="/people/faculty/Stephanie_Tsai">Stephanie Tsai</a></li>
+<li><a href="/people/faculty/Bari_Turetzky">Bari Turetzky</a></li>
+<li><a href="/people/faculty/Christine_Turnbull">Christine Turnbull</a></li>
+<li><a href="/people/faculty/Ashley_Uyeshiro_Simon">Ashley Uyeshiro Simon</a></li>
+<li><a href="/people/faculty/Douglas_Vanderbilt">Douglas Vanderbilt</a></li>
+<li><a href="/people/faculty/Joan_Vartanian">Joan Vartanian</a></li>
+<li><a href="/people/faculty/Kati_Wechsler">Katherine (Kati) Wechsler</a></li>
+<li><a href="/people/faculty/Jamie_Wilcox">Jamie Wilcox</a></li>
+<li><a href="/people/faculty/Elizabeth_June_Yerxa">Elizabeth June Yerxa</a></li>
+<li><a href="/people/faculty/Larry_Yin">Larry Yin</a></li>
+<li><a href="/people/faculty/Janis_Yue">Janis Yue</a></li>
+<li><a href="/people/faculty/Ruth_Zemke">Ruth Zemke</a></li>
+<li><a href="/people/faculty/Elizabeth_Zepeda">Elizabeth Zepeda</a></li>
+</ul>
+</li>
+<li><a href="/people/faculty-excellence">Faculty Excellence</a></li>
+<li><a href="/people/faculty-expertise">Faculty Expertise</a></li>
+<li class="section"><a class="title" href="#">Post-Doctoral</a></li>
+<li><a href="/people/post-docs">Post-Doctoral Scholars</a>
+<ul>
+<li><a href="/people/post-docs">All Post-Doctoral Scholars</a></li>
+<li><a href="/people/post-docs/Stephanie_Lefebvre">Stéphanie Lefebvre</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Staff</a></li>
+<li><a href="/people/staff">Staff Directory</a>
+<ul>
+<li><a href="/people/staff">All Staff</a></li>
+<li><a href="/people/staff/Andrea_Abad">Andrea Abad</a></li>
+<li><a href="/people/staff/Christina_Abundis">Christina Abundis</a></li>
+<li><a href="/people/staff/Aina_Ali">Aina Ali</a></li>
+<li><a href="/people/staff/Maribell_Amador">Maribell Amador</a></li>
+<li><a href="/people/staff/Martha_Amarillas">Martha Amarillas</a></li>
+<li><a href="/people/staff/Rubina_Azaryan">Rubina Azaryan</a></li>
+<li><a href="/people/staff/Paul_Bailey">Paul Bailey</a></li>
+<li><a href="/people/staff/Jeanine_Blanchard">Jeanine Blanchard</a></li>
+<li><a href="/people/staff/Carol_Canedo">Carol Cañedo</a></li>
+<li><a href="/people/staff/Denise_Carmona">Denise Carmona</a></li>
+<li><a href="/people/staff/Ann_Cassar">Ann Cassar</a></li>
+<li><a href="/people/staff/Sonia_De_Mesa">Sonia De Mesa</a></li>
+<li><a href="/people/staff/Joseph_Gonzales">Joseph Gonzales</a></li>
+<li><a href="/people/staff/Gabby_Granados">Gabby Granados</a></li>
+<li><a href="/people/staff/Patty_Huezo_Gutierrez">Patty Huezo Gutierrez</a></li>
+<li><a href="/people/staff/Katherine_Hayes">Katherine Hayes</a></li>
+<li><a href="/people/staff/Melina_Hernandez">Melina Hernandez</a></li>
+<li><a href="/people/staff/Natalie_Hernandez">Natalie Hernandez</a></li>
+<li><a href="/people/staff/Polly_Kellner">Polly Kellner</a></li>
+<li><a href="/people/staff/Kimberly_Kho">Kimberly Kho</a></li>
+<li><a href="/people/staff/Stephanie_Lee">Stephanie Lee</a></li>
+<li><a href="/people/staff/Lucy_Lin">Lucy Lin</a></li>
+<li><a href="/people/staff/Jackie_Mardirossian">Jackie Mardirossian</a></li>
+<li><a href="/people/staff/Riley_McGuire">Riley McGuire</a></li>
+<li><a href="/people/staff/Emily_Mielke">Emily Mielke</a></li>
+<li><a href="/people/staff/Roxana_Munoz">Roxana Muñoz</a></li>
+<li><a href="/people/staff/Bianca_Ojeda">Bianca Ojeda</a></li>
+<li><a href="/people/staff/Christopher_Patocka">Christopher Patocka</a></li>
+<li><a href="/people/staff/Ryan_Pineda">Ryan Pineda</a></li>
+<li><a href="/people/staff/Brandon_Rudd">Brandon Rudd</a></li>
+<li><a href="/people/staff/Mingqing_Irene_Sun">Mingqing Irene Sun</a></li>
+<li><a href="/people/staff/Quan_Vu">Quan Vu</a></li>
+<li><a href="/people/staff/Janis_Wise">Janis Wise</a></li>
+<li><a href="/people/staff/Peter_Wittrock">Peter Wittrock</a></li>
+<li><a href="/people/staff/David_Xie">David Xie</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Students</a></li>
+<li><a href="/people/phd-students">PhD Students</a>
+<ul>
+<li><a href="/people/phd-students">All PhD Students</a></li>
+<li><a href="/people/phd-students/Elisa_Apra">Elisa Apra</a></li>
+<li><a href="/people/phd-students/Emily_Campi">Emily Campi</a></li>
+<li><a href="/people/phd-students/Stuti_Chakraborty">Stuti Chakraborty</a></li>
+<li><a href="/people/phd-students/Elizabeth_Choi-Tucci">Elizabeth Choi-Tucci</a></li>
+<li><a href="/people/phd-students/Miranda_Donnelly">Miranda Donnelly</a></li>
+<li><a href="/people/phd-students/Yiyang_Fang">Yiyang (Sunny) Fang</a></li>
+<li><a href="/people/phd-students/Marshae_Franklin">Marshae Franklin</a></li>
+<li><a href="/people/phd-students/Yoko_Ellie_Fukumura">Yoko Ellie Fukumura</a></li>
+<li><a href="/people/phd-students/Savannah_Gluck">Savannah Gluck</a></li>
+<li><a href="/people/phd-students/Bethany_Gruskin">Bethany Gruskin</a></li>
+<li><a href="/people/phd-students/Elizabeth_Isralowitz">Elizabeth Isralowitz</a></li>
+<li><a href="/people/phd-students/Aditya_Jayashankar">Aditya Jayashankar</a></li>
+<li><a href="/people/phd-students/Katie_Loomis">Katie Loomis</a></li>
+<li><a href="/people/phd-students/Yujia_Mo">Yujia (Mona) Mo</a></li>
+<li><a href="/people/phd-students/Ngozi_Nnoli">Ngozi “NG” Nnoli</a></li>
+<li><a href="/people/phd-students/Camille_Parchment">Camille Parchment</a></li>
+<li><a href="/people/phd-students/Madeline_Parga">Madeline Parga</a></li>
+<li><a href="/people/phd-students/Loree_Pham">Loree Pham</a></li>
+<li><a href="/people/phd-students/Marinthea_Richter">Marinthea Richter</a></li>
+<li><a href="/people/phd-students/Sofronia_Ringold">Sofronia Ringold</a></li>
+<li><a href="/people/phd-students/Svitlana_Stremousova">Svitlana Stremousova</a></li>
+<li><a href="/people/phd-students/Valerie_Angel_Tapia">Valerie Angel Tapia</a></li>
+<li><a href="/people/phd-students/Ellie_Taylor">Ellie Taylor</a></li>
+<li><a href="/people/phd-students/David_Turnbull">David Turnbull</a></li>
+</ul>
+</li>
+<li><a href="/people/ambassadors">Student Ambassadors</a></li>
+<li><a href="/people/student-blog">Student Blog</a>
+<ul>
+<li><a href="/people/student-blog">All posts</a></li>
+<li><a class="submenuhead">2022–2023 Ambassadors</a>
+<ul>
+<li><a href="/people/student-blog/aisha">Aisha</a></li>
+<li><a href="/people/student-blog/bryanm">Bryan</a></li>
+<li><a href="/people/student-blog/leah">Leah</a></li>
+<li><a href="/people/student-blog/leahmary">Leah Mary</a></li>
+<li><a href="/people/student-blog/mika">Mika</a></li>
+<li><a href="/people/student-blog/tania">Tania</a></li>
+<li><a href="/people/student-blog/yoojin">Yoojin</a></li>
+</ul>
+</li>
+<li><a class="submenuhead">Organizations</a>
+<ul>
+<li><a href="/people/student-blog/global-initiatives">Global Initiatives Team</a></li>
+<li><a href="/people/student-blog/pre-ot-club">The Pre-OT Club</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/people/student-organizations">Student Organizations</a>
+<ul>
+<li><a href="/people/student-organizations">Overview</a></li>
+<li><a href="/people/student-organizations/ahto">Asociación Hispanohablante de Terapia Ocupacional (AHTO)</a></li>
+<li><a href="/people/student-organizations/cotad">Coalition of Occupational Therapy Advocates for Diversity (COTAD)</a></li>
+<li><a href="/people/student-organizations/engage">Engage: Trojan Neighbors</a></li>
+<li><a href="/people/student-organizations/otsc">USC Occupational Therapy and Science Council (OTSC)</a></li>
+<li><a href="/people/student-organizations/ots-for-outreach">OTs for OuTreach</a></li>
+<li><a href="/people/student-organizations/pi-theta-epsilon">Pi Theta Epsilon</a></li>
+<li><a href="/people/student-organizations/pre-ot-club">Pre-Occupational Therapy Club</a></li>
+<li><a href="/people/student-organizations/student-run-clinic">USC Student-Run Clinic</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Alumni</a></li>
+<li><a href="/people/alumni">Chan Alumni Association</a></li>
+<li><a href="/people/alumni-connect">Chan Alumni Connect</a></li>
+<li><a href="/people/job-resources">Job Resources</a></li>
+<li><a href="/people/external-jobs">External OS/OT Jobs</a>
+<ul>
+<li><a href="/people/external-jobs">Current Vacancies</a></li>
+<li><a href="/people/external-jobs/new">Post a New Vacancy</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Council</a></li>
+<li><a href="/people/board-of-councilors">Board of Councilors</a></li>
+</ul>
+   </li>
+   <li id="education"><a class="education" href="/education">Education</a>
+       <ul><li class="section"><a class="title" href="#">Education at USC Chan</a></li>
+<li><a href="/education">Overview of Our Programs</a></li>
+<li><a href="/education/admissions-team">Admissions Team</a>
+<ul>
+<li><a href="/education/admissions-team">Meet the Admissions Team</a></li>
+<li><a href="/education/admissions-team/contact">Contact the Admissions Team</a></li>
+<li><a href="/education/admissions-team/blog">Admissions Blog</a></li>
+</ul>
+</li>
+<li><a href="/education/financial-aid">Scholarships and Financial Aid</a>
+<ul>
+<li><a href="/education/financial-aid">Overview</a></li>
+<li><a href="/education/financial-aid/chan-scholarships">Chan Division Scholarships and Awards</a></li>
+<li><a href="/education/financial-aid/other-scholarships">USC and Other Scholarships and Awards</a></li>
+<li><a href="/education/financial-aid/other-resources">Other Resources</a></li>
+</ul>
+</li>
+<li><a href="/education/international">Information for International Students</a></li>
+<li><a href="/education/undocumented">Information for Undocumented and DACA Students</a></li>
+<li class="section"><a class="title" href="#">Get More Information</a></li>
+<li><a href="/education/request-information">Request Program Information</a></li>
+<li><a href="/education/information-sessions">Information Sessions</a></li>
+<li><a href="/education/faqs">Frequently Asked Questions</a></li>
+<li><a href="/education/what-kind-of-ot-would-you-be">What Kind of OT Would You Be?</a></li>
+<li class="section"><a class="title" href="#">Occupational Science Programs</a></li>
+<li><a href="/education/phd">PhD in Occupational Science</a>
+<ul>
+<li><a href="/education/phd">About the Program</a></li>
+<li><a href="/education/phd/admissions">Admissions</a></li>
+<li><a href="/education/phd/interest">Interest Form</a></li>
+<li><a href="/education/phd/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li><a href="/education/otd-to-phd">OTD to PhD Pathway</a>
+<ul>
+<li><a href="/education/otd-to-phd">About the Program</a></li>
+</ul>
+</li>
+<li><a href="/education/minor-in-os">Minor in Occupational Science</a>
+<ul>
+<li><a href="/education/minor-in-os">About the Program</a></li>
+<li><a href="/education/minor-in-os/minor-courses">Fall 2023 Courses</a></li>
+<li><a href="/education/minor-in-os/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Entry-Level Programs to Become an OT</a></li>
+<li><a href="/education/entry-level-otd">Entry-Level Doctorate (OTD)</a>
+<ul>
+<li><a href="/education/entry-level-otd">About the Program</a></li>
+<li><a href="/education/entry-level-otd/admissions">Admissions</a>
+<ul>
+<li><a href="/education/entry-level-otd/admissions">Admissions Process</a></li>
+<li><a href="/education/entry-level-otd/admissions/prerequisite-inquiry">Prerequisite Inquiry</a></li>
+</ul>
+</li>
+<li><a href="/education/entry-level-otd/cost-of-attendance">Cost of Attendance</a></li>
+<li><a href="/education/entry-level-otd/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li><a href="/education/entry-level-ma">Entry-Level Master’s (not accepting applicants)</a>
+<ul>
+<li><a href="/education/entry-level-ma">About the Program</a></li>
+<li><a href="/education/entry-level-ma/cost-of-attendance">Cost of Attendance</a></li>
+</ul>
+</li>
+<li><a href="/education/bs-to-otd">Bachelor’s to Doctorate</a>
+<ul>
+<li><a href="/education/bs-to-otd">About the Program</a></li>
+<li><a href="/education/bs-to-otd/admissions">Admissions</a></li>
+<li><a href="/education/bs-to-otd/cost-of-attendance">Cost of Attendance</a></li>
+<li><a href="/education/bs-to-otd/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Post-Professional Programs for OT Graduates/Practitioners</a></li>
+<li><a href="/education/post-professional-otd">Post-Professional OTD</a>
+<ul>
+<li><a href="/education/post-professional-otd">About the Program</a></li>
+<li><a href="/education/post-professional-otd/current">Current USC Chan MA Students</a>
+<ul>
+<li><a href="/education/post-professional-otd/current">About the Program</a></li>
+<li><a href="/education/post-professional-otd/current/admissions">Admissions</a></li>
+</ul>
+</li>
+<li><a href="/education/post-professional-otd/graduates">OT Graduates and Practitioners</a>
+<ul>
+<li><a href="/education/post-professional-otd/graduates">About the Program</a></li>
+<li><a href="/education/post-professional-otd/graduates/admissions">Admissions</a></li>
+</ul>
+</li>
+<li><a href="/education/post-professional-otd/cost-of-attendance">Cost of Attendance</a></li>
+<li><a href="/education/post-professional-otd/residencies">Residencies</a></li>
+<li><a href="/education/post-professional-otd/presentations">Previous OTD Leadership Presentations</a></li>
+<li><a href="/education/post-professional-otd/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li><a href="/education/post-professional-ma">Post-Professional Master’s</a>
+<ul>
+<li><a href="/education/post-professional-ma">About the Program</a></li>
+<li><a href="/education/post-professional-ma/admissions">Admissions</a></li>
+<li><a href="/education/post-professional-ma/cost-of-attendance">Cost of Attendance</a></li>
+<li><a href="/education/post-professional-ma/profiles">Meet the Students</a></li>
+</ul>
+</li>
+<li><a href="/education/ce">Continuing Education</a>
+<ul>
+<li><a href="/education/ce">Continuing Education at USC Chan</a></li>
+<li><a href="/education/ce/sensory-integration">Sensory Integration Continuing Education (CE) Certificate Program</a>
+<ul>
+<li><a href="/education/ce/sensory-integration">Overview</a></li>
+<li><a href="/education/ce/sensory-integration/schedule">Course Descriptions, Schedule, and Registration</a></li>
+<li><a href="/education/ce/sensory-integration/international">International Courses</a></li>
+<li><a href="/education/ce/sensory-integration/faqs">FAQs</a></li>
+<li><a href="/education/ce/sensory-integration/search">Search for Therapists</a></li>
+<li><a href="/education/ce/sensory-integration/submit">Submit Therapist to the Database</a></li>
+</ul>
+</li>
+<li><a href="/education/ce/life-management">Life Management Series</a>
+<ul>
+<li><a href="/education/ce/life-management">Overview</a></li>
+<li><a href="/education/ce/life-management/intro-to-lifestyle-redesign">Introduction to Lifestyle Redesign®</a></li>
+<li><a href="/education/ce/life-management/lifestyle-redesign-for-weight-management">Lifestyle Redesign® for Weight Management, Diabetes and Related Co-morbid Conditions</a></li>
+<li><a href="/education/ce/life-management/lifestyle-redesign-for-chronic-pain">Lifestyle Redesign® for Chronic Pain and Headache Management</a></li>
+<li><a href="/education/ce/life-management/sleep">Sleep Deficits and Disorders</a></li>
+<li><a href="/education/ce/life-management/lifestyle-redesign-for-mental-health">Lifestyle Redesign® for Mental Health</a></li>
+<li><a href="/education/ce/life-management/lifestyle-redesign-for-ms">Lifestyle Redesign® for Individuals with Multiple Sclerosis</a></li>
+<li><a href="/education/ce/life-management/lifestyle-redesign-for-asd">Lifestyle Redesign® for Individuals with Autism Spectrum Disorders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="section"><a class="title" href="#">Graduate Certificates</a></li>
+<li><a href="/education/lifestyle-redesign-graduate-certificate">Foundations of Lifestyle Redesign® Graduate Certificate</a></li>
+<li><a href="/education/sp-si-graduate-certificate">Sensory Processing and Sensory Integration Graduate Certificate</a></li>
+<li class="section"><a class="title" href="#">Summer Programs</a></li>
+<li><a href="/education/soti">Global Initiatives Summer Occupational Therapy Immersion Program (SOTI)</a>
+<ul>
+<li><a href="/education/soti">About SOTI</a></li>
+<li><a href="/education/soti/application">Application</a></li>
+<li><a href="/education/soti/media">Media</a></li>
+</ul>
+</li>
+<li><a href="/education/summer-institute">USC OT/PT Summer Institute Diversity Recruitment Program</a></li>
+<li class="section"><a class="title" href="#">Additional Resources</a></li>
+<li><a href="/education/videos">Academic and Student Videos</a></li>
+<li><a href="/education/volunteer-opportunities">OS/OT Volunteer Opportunities</a></li>
+<li><a href="/education/research-opportunities">Research Opportunities</a></li>
+<li><a href="/education/fieldwork-educators">Information for Fieldwork Educators</a></li>
+<li><a href="/education/course-descriptions">Course Descriptions</a></li>
+<li><a href="/education/accreditation">Accreditation</a></li>
+</ul>
+   </li>
+   <li id="research"><a class="research" href="/research">Research</a>
+       <ul><li class="section"><a class="title" href="#">Research</a></li>
+<li><a href="/research">About Our Research</a></li>
+<li><a href="/research/faculty">Research Faculty</a></li>
+<li><a href="/research/cores">Research Cores</a></li>
+<li><a href="/research/labs">Research Labs</a>
+<ul>
+<li><a href="/research/labs">Overview</a></li>
+<li><a href="/research/labs/boundary-crossings">Boundary Crossings</a></li>
+<li><a href="/research/labs/cenec">Center for the Neuroscience of Embodied Cognition (CeNEC)</a></li>
+<li><a href="/research/labs/dreams">Disparity Reduction and Equity in Autism Services (DREAmS)</a></li>
+<li><a href="/research/labs/heal">Health and Empowerment Action (HEAL)</a></li>
+<li><a href="/research/labs/hart">Healthy Aging Research &amp; Technology (HART)</a></li>
+<li><a href="/research/labs/hope">Human Occupation, Precarity, and Employment (HOPE)</a></li>
+<li><a href="/research/labs/inspire">Innovations in Neurodevelopmental Sensory Processing Research (insp!re)</a></li>
+<li><a href="/research/labs/lifestyle-interventions-for-health-promotion-and-prevention">Lifestyle Interventions for Health Promotion and Prevention</a></li>
+<li><a href="/research/labs/lrcc">Lifestyle Redesign for Chronic Conditions (LRCC)</a></li>
+<li><a href="/research/labs/msop">Musculoskeletal Sonography and Occupational Performance (MSOP)</a></li>
+<li><a href="/research/labs/npnl">Neural Plasticity and Neurorehabilitation (NPNL)</a></li>
+<li><a href="/research/labs/nicu">NICU Therapy</a></li>
+<li><a href="/research/labs/sade">Sensory Adaptations in Dental Environments (SADE)</a></li>
+<li><a href="/research/labs/tem">Tailored Environmental Modifications (TEM)</a></li>
+</ul>
+</li>
+<li><a href="/research/projects">Active Projects</a>
+<ul>
+<li><a href="/research/projects">Overview</a></li>
+<li><a href="/research/projects/assessing-heterogeneity-of-treatment-response-with-diffusion-mri-tractography-in-children-with-autism-spectrum-disorder">Assessing Heterogeneity of Treatment Response with Diffusion MRI Tractography in Children with Autism Spectrum Disorder</a></li>
+<li><a href="/research/projects/beyond-coyot1-expansion-of-patient-centered-virtual-care">Beyond CoYoT1: Expansion of Patient-Centered Virtual Care</a></li>
+<li><a href="/research/projects/providing-multi-sensory-capabilities-for-effective-remote-work">Demolishing Barriers to Democratize Future Construction Operations by Providing Multi-sensory Capabilities for Effective Remote Work</a></li>
+<li><a href="/research/projects/detecting-and-mapping-stress-patterns-across-space-and-time">Detecting and mapping stress patterns across space and time: Multimodal modeling of individuals in real-world physical and social work environments</a></li>
+<li><a href="/research/projects/documenting-progression-of-acute-to-chronic-musculoskeletal-injuries">Documenting Progression of Acute to Chronic Musculoskeletal Injuries: A National Survey of Ultrasound Users</a></li>
+<li><a href="/research/projects/effects-of-global-brain-health-on-sensorimotor-recovery-after-stroke">Effects of Global Brain Health on Sensorimotor Recovery After Stroke</a></li>
+<li><a href="/research/projects/evaluation-of-a-complex-behavioral-intervention-for-young-adults-with-diabetes-the-resilient-empowered-active-living-telehealth-real-t-study">Evaluation of a Complex Behavioral Intervention for Young Adults with Diabetes: The Resilient, Empowered, Active Living-Telehealth (REAL-T) Study</a></li>
+<li><a href="/research/projects/facilitating-post-covid-return-to-work">Facilitating post-COVID return-to-work: Triangulating patient, provider, and employer perspectives</a></li>
+<li><a href="/research/projects/function-and-emotion-in-everyday-life-with-type-1-diabetes-feel-t1d">Function and Emotion in Everyday Life with Type 1 Diabetes (FEEL-T1D)</a></li>
+<li><a href="/research/projects/geriatric-workforce-enhancement-program">Geriatric Workforce Enhancement Program</a></li>
+<li><a href="/research/projects/implementation-of-the-baby-bridge-program">Implementation of the Baby Bridge program via Telehealth to enhance access to early intervention services in Los Angeles</a></li>
+<li><a href="/research/projects/mechanism-to-promote-safe-and-efficient-oral-feeding-in-preterm-infants">Mechanism to Promote Safe and Efficient Oral Feeding in Preterm Infants</a></li>
+<li><a href="/research/projects/safety-and-health-when-developing-and-integrating-ai-in-the-workplace">Mitigating Risk and Promoting Occupational Safety and Health When Developing and Integrating AI in the Workplace</a></li>
+<li><a href="/research/projects/multisensory-interventions-to-improve-neurodevelopmental-outcomes-of-preterm-infants-hospitalized-in-the-neonatal-intensive-care-unit">Multisensory Interventions to Improve Neurodevelopmental Outcomes of Preterm Infants Hospitalized in the Neonatal Intensive Care Unit</a></li>
+<li><a href="/research/projects/occupation-and-society-global-to-local-perspectives-for-the-future">Occupation and society: Global to local perspectives for the future</a></li>
+<li><a href="/research/projects/reconceptualizing-third-places-countering-social-isolation-in-lives-without-workplaces">Reconceptualizing third places: Countering social isolation in lives without workplaces</a></li>
+<li><a href="/research/projects/sensory-adapted-dental-environments-to-enhance-oral-care-for-children-with-and-without-dental-fear-and-anxiety">Sensory Adapted Dental Environments to Enhance Oral Care for Children with and without Dental Fear and Anxiety</a></li>
+<li><a href="/research/projects/sasi">Sensory and Social Development in Infants and Toddlers (SASI)</a></li>
+<li><a href="/research/projects/sep">Sensory Experiences Project (SEP)</a></li>
+<li><a href="/research/projects/social-isolation-third-places-and-precarious-employment-circumstances">Social isolation, third places, and precarious employment circumstances: A scoping review</a></li>
+<li><a href="/research/projects/socal-cds">Southern California Child Development Survey (SoCal CDS)</a></li>
+<li><a href="/research/projects/toward-development-of-a-comprehensive-in-home-active-seating-system-to-lessen-sedentariness-and-improve-health-and-wellness-in-older-adults">Toward Development of a Comprehensive, In-Home, Active Seating System to Lessen Sedentariness and Improve Health and Wellness in Older Adults</a></li>
+<li><a href="/research/projects/trust">Transforming Research: Understanding Sensory Experiences in ASD, Stakeholders Working Together — TRUST</a></li>
+<li><a href="/research/projects/usc-center-for-mindfulness-science">USC Center for Mindfulness Science</a></li>
+<li><a href="/research/projects/usc-sensorimotor-assessment-and-rehabilitation-training-in-virtual-reality-center">USC SensoriMotor Assessment and Rehabilitation Training in Virtual Reality Center</a></li>
+<li><a href="/research/projects/using-machine-learning-with-real-world-data-to-identify-autism-risk-in-children">Using Machine Learning with Real-World Data to Identify Autism Risk in Children</a></li>
+</ul>
+</li>
+<li><a href="/research/completed-projects">Completed Projects</a></li>
+<li class="section"><a class="title" href="#">Publications</a></li>
+<li><a href="/research/recent-publications">Recent Publications</a></li>
+<li><a href="/research/books-and-media">Books and Media</a></li>
+<li><a href="/research/clinical-tools">Clinical Tools</a></li>
+<li><a href="/research/phd-dissertations">PhD Dissertations</a></li>
+<li class="section"><a class="title" href="#">Opportunities</a></li>
+<li><a href="/research/training">Training Opportunities</a></li>
+<li><a href="/research/volunteer-opportunities">Volunteer Opportunities</a></li>
+<li><a href="/research/participants">Research Participant Opportunities</a></li>
+</ul>
+   </li>
+   <li id="patientcare"><a class="patientcare" href="/patient-care">Patient Care</a>
+       <ul><li class="section"><a class="title" href="#">Patient Care</a></li>
+<li><a href="/patient-care">USC Occupational Therapy Patient Care</a></li>
+<li class="section"><a class="title" href="#">Occupational Therapy Faculty Practice</a></li>
+<li><a href="/patient-care/faculty-practice">Faculty Practice</a>
+<ul>
+<li><a href="/patient-care/faculty-practice">About the Practice</a></li>
+<li><a href="/patient-care/faculty-practice/about">About Lifestyle Redesign®</a></li>
+<li><a href="/patient-care/faculty-practice/team">Our Team</a></li>
+<li><a href="/patient-care/faculty-practice/virtual-tour">Virtual Tour</a></li>
+<li><a href="/patient-care/faculty-practice/videos">Videos</a></li>
+</ul>
+</li>
+<li><a class="submenuhead">Programs</a>
+<ul>
+<li><a href="/patient-care/faculty-practice/autism-spectrum-disorder">Autism Spectrum Disorder</a></li>
+<li><a href="/patient-care/faculty-practice/chronic-headaches">Chronic Headaches</a></li>
+<li><a href="/patient-care/faculty-practice/college-students">College Students</a></li>
+<li><a href="/patient-care/faculty-practice/diabetes">Diabetes Management</a></li>
+<li><a href="/patient-care/faculty-practice/epilepsy">Epilepsy</a></li>
+<li><a href="/patient-care/faculty-practice/ergonomics">Ergonomics</a></li>
+<li><a href="/patient-care/faculty-practice/gender-affirmation">Gender Affirmation</a></li>
+<li><a href="/patient-care/faculty-practice/hand-upper-extremity">Hand and Upper Extremity</a></li>
+<li><a href="/patient-care/faculty-practice/health-coaching">Health Coaching</a></li>
+<li><a href="/patient-care/faculty-practice/hypertension">Hypertension</a></li>
+<li><a href="/patient-care/faculty-practice/mcas-dysautonomia">MCAS and Dysautonomia</a></li>
+<li><a href="/patient-care/faculty-practice/mental-health">Mental Health</a></li>
+<li><a href="/patient-care/faculty-practice/multiple-sclerosis">Multiple Sclerosis</a></li>
+<li><a href="/patient-care/faculty-practice/neurological-conditions">Neurological Conditions</a></li>
+<li><a href="/patient-care/faculty-practice/oncology">Oncology</a></li>
+<li><a href="/patient-care/faculty-practice/pain-management">Pain Management</a></li>
+<li><a href="/patient-care/faculty-practice/parkinsons-disease">Parkinson’s Disease</a></li>
+<li><a href="/patient-care/faculty-practice/smoking-cessation">Smoking Cessation</a></li>
+<li><a href="/patient-care/faculty-practice/weight-management">Weight Management</a></li>
+</ul>
+</li>
+<li><a href="/patient-care/faculty-practice/contact-us">Contact Us</a></li>
+<li><a href="/patient-care/faculty-practice/telehealth">Telehealth Resources</a></li>
+<li><a href="/patient-care/faculty-practice/billing">Billing Information</a></li>
+<li class="section"><a class="title" href="#">Keck Hospital of USC and USC Norris Cancer Hospital</a></li>
+<li><a href="/patient-care/usc-hospitals">Clinical Care and Education</a></li>
+<li><a href="/patient-care/usc-hospitals/programs">Hospital-Based Programs</a></li>
+<li><a href="/patient-care/usc-hospitals/evidence">Evidence for OT</a></li>
+<li><a href="/patient-care/usc-hospitals/aota-fellowship">AOTA Fellowship Program</a></li>
+</ul>
+   </li>
+   <li id="community"><a class="community" href="/community">Community</a>
+       <ul><li class="section"><a class="title" href="#">Community</a></li>
+<li><a href="/community">Overview</a></li>
+<li class="section"><a class="title" href="#">TRUST</a></li>
+<li><a href="/community/trust">About the TRUST Project</a></li>
+<li><a href="/community/trust/priorities">Research Priorities</a></li>
+<li><a href="/community/trust/deliverables">Project Deliverables</a></li>
+<li><a href="/community/trust/lessons-learned">Lessons Learned</a></li>
+<li><a href="/community/trust/conference">2022 TRUST Conference</a></li>
+<li><a href="/community/trust/stories">Stories</a></li>
+<li class="section"><a class="title" href="#">Sensory Processing and Autism Network (SPAN)</a></li>
+<li><a href="/community/span">About SPAN</a></li>
+<li class="section"><a class="title" href="#">USC Peace Garden</a></li>
+<li><a href="/community/usc-peace-garden">About the Garden</a></li>
+<li><a href="/community/usc-peace-garden/in-the-garden">In the Garden</a></li>
+<li><a href="/community/usc-peace-garden/events">Events in the Garden</a></li>
+<li><a href="/community/usc-peace-garden/contact">Contact Us</a></li>
+</ul>
+   </li>
+</ul>
+</nav>
+<div id="colour-banner">
+</div>
+
+
+<!-- Showcase for DESKTOP layout. -->
+
+<div class="showcase" id="showcase-desktop">
+<div class="master-slider ms-skin-metro" id="masterslider-desktop">
+
+   <div class="ms-slide" data-delay="8" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/lawlor-slagle-desktop.jpg" />
+
+      <div class="ms-layer" data-type="text" data-delay="1800" data-duration="500" style="left: 90px; width: 280px; height: 350px; background: rgba(255,255,255,0.8);">
+         <p class="title">2023 Slagle Lecture Award</p>
+         <p class="description darkonlight">The American Occupational Therapy Association’s annual Inspire conference in Kansas City featured more than 100 USC-affiliated speakers and recognized nine award winners, including this year’s Eleanor Clarke Slagle Lecturer Dr. Mary Lawlor. <a href="/events/conference/aota">Learn more</a></p>
+      </div>
+   </div>
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Occupational-Science-Baranek-2019-Symposium-desktop.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-duration="500" style="left: 80px; width: 320px; height: 350px; background: rgba(255,255,255,0.8);">
+         <p class="title">Occupational Science</p>
+         <p class="description darkonlight">USC Chan founded the first <a href="/about-us/occupational-science">occupational science</a> (OS) <a href="/education/phd">PhD program</a>, <a href="/education/minor-in-os">Undergraduate Minor</a> and academic department. OS content is woven throughout all of the academic curricula, studied in our <a href="/research/cores">interdisciplinary research programs</a> and disseminated through <a href="/research/recent-publications">publications</a> and the <a href="/events/symposium">USC Occupational Science Symposium</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Lifestyle-Redesign-IMG-6266-desktop.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-duration="500" style="left: 350px; width: 320px; height: 350px; background: rgba(255,255,255,0.8);">
+         <p class="title">Lifestyle Redesign®</p>
+         <p class="description darkonlight"><a href="/about-us/lifestyle-redesign">Lifestyle Redesign®</a> is an intervention approach pioneered at USC Chan that continues to be taught in undergraduate, graduate, and <a href="/education/ce/life-management">continuing education</a> courses, utilized by our occupational therapists at the <a href="/patient-care/faculty-practice">USC Occupational Therapy Faculty Practice</a> and advanced through our <a href="/research/cores#health">research studies</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/sensory-integration-desktop.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-duration="500" style="left: 660px; width: 300px; height: 350px; background: rgba(255,255,255,0.8);">
+         <p class="title">Sensory Integration</p>
+         <p class="description darkonlight"><a href="/about-us/sensory-integration">Sensory integration theory, assessment and intervention</a> were developed at USC Chan by Faculty Emeritus A. Jean Ayres PhD, OTR and continue to be taught today in our academic degree and <a href="/education/ce/sensory-integration">continuing education</a> programs and furthered through our <a href="/research/cores#siefl">research studies</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Trojan-Family-Emily-Sopkin-MA16-OTD17-desktop.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-duration="500" style="left: 650px; width: 285px; height: 350px; background: rgba(255,255,255,0.8);">
+         <p class="title">Trojan Family</p>
+         <p class="description darkonlight">The <a href="/people/alumni">Trojan Family</a> is USC’s lifelong <a href="https://alumni.usc.edu" target="_blank">worldwide network</a> of esteemed alumni and USC Chan’s alumni total over 3,000 and hail from 48 of the 50 states and more than 60 different countries. Keep up with USC Chan by browsing the latest issue of <a href="/news/magazine"><em>USC Chan Magazine</em></a> and joining the <a href="/people/alumni-connect">Alumni Association</a>.</p>
+      </div>
+   </div>
+
+
+</div>
+</div>
+
+
+<!-- Showcase for MOBILE layout. -->
+
+<div class="showcase" id="showcase-mobile">
+<div class="master-slider ms-skin-default" id="masterslider-mobile">
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/lawlor-slagle-mobile.jpg" />
+
+      <div class="ms-layer" data-type="text" data-position="static">
+         <p class="title">2023 Slagle Lecture Award</p>
+         <p class="description darkonlight">The American Occupational Therapy Association’s annual Inspire conference in Kansas City featured more than 100 USC-affiliated speakers and recognized nine award winners, including this year’s Eleanor Clarke Slagle Lecturer Dr. Mary Lawlor. <a href="/events/conference/aota">Learn more</a></p>
+      </div>
+   </div>
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Occupational-Science-Baranek-2019-Symposium-mobile.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-position="static">
+         <p class="title">Occupational Science</p>
+         <p class="description">USC Chan founded the first <a href="/about-us/occupational-science">occupational science</a> (OS) <a href="/education/phd">PhD program</a>, <a href="/education/minor-in-os">Undergraduate Minor</a> and academic department. OS content is woven throughout all of the academic curricula, studied in our <a href="/research/cores">interdisciplinary research programs</a> and disseminated through <a href="/research/recent-publications">publications</a> and the <a href="/events/symposium">USC Occupational Science Symposium</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Lifestyle-Redesign-IMG-6266-mobile.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-position="static">
+         <p class="title">Lifestyle Redesign®</p>
+         <p class="description"><a href="/about-us/lifestyle-redesign">Lifestyle Redesign®</a> is an intervention approach pioneered at USC Chan that continues to be taught in undergraduate, graduate, and <a href="/education/ce/life-management">continuing education</a> courses, utilized by our occupational therapists at the <a href="/patient-care/faculty-practice">USC Occupational Therapy Faculty Practice</a> and advanced through our <a href="/research/cores#health">research studies</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/sensory-integration-mobile.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-position="static">
+         <p class="title">Sensory Integration</p>
+         <p class="description"><a href="/about-us/sensory-integration">Sensory integration theory, assessment and intervention</a> were developed at USC Chan by Faculty Emeritus A. Jean Ayres PhD, OTR and continue to be taught today in our academic degree and <a href="/education/ce/sensory-integration">continuing education</a> programs and furthered through our <a href="/research/cores#siefl">research studies</a>.</p>
+      </div>
+   </div>
+
+
+   <div class="ms-slide" data-delay="6" data-fill-mode="none">
+      <img data-src="/assets/chan/showcase/Trojan-Family-50297136-00701-0057-mobile.jpg" />     
+
+      <div class="ms-layer" data-type="text" data-position="static">
+         <p class="title">Trojan Family</p>
+         <p class="description">The <a href="/people/alumni">Trojan Family</a> is USC’s lifelong <a href="https://alumni.usc.edu" target="_blank">worldwide network</a> of esteemed alumni and USC Chan’s alumni total over 3,000 and hail from 48 of the 50 states and more than 60 different countries. Keep up with USC Chan by browsing the latest issue of <a href="/news/magazine"><em>USC Chan Magazine</em></a> and joining the <a href="/people/alumni-connect">Alumni Association</a>.</p>
+      </div>
+   </div>
+
+
+</div>
+</div>
+
+
+<div id="shortcuts">
+
+<div class="shortcut">
+   <img class="desktop" src="/assets/chan/short-cuts/research-expertise-desktop.jpg" alt="Research Expertise" />
+   <img class="mobile" src="/assets/chan/short-cuts/research-expertise-mobile.jpg" alt="Research Expertise" />
+   <div class="shortcutcaption lightondark">
+   <p class="title">Research Expertise</p>
+   <p class="description"><a href="/people/faculty">Our faculty</a> have $22.5M in active, federally funded <a href="/research/projects">research projects</a>.</p>
+   </div>
+</div>
+
+<div class="shortcut">
+   <img class="desktop" src="/assets/chan/short-cuts/request-information-desktop.jpg" alt="Request Program Info" />
+   <img class="mobile" src="/assets/chan/short-cuts/request-information-mobile.jpg" alt="Request Program Info" />
+   <div class="shortcutcaption darkonlight">
+   <p class="title">Request Program Info</p>
+   <p class="description">Prospective student? <a href="/education/request-information">Request information</a> about our programs.</p>
+   </div>
+</div>
+
+<div class="shortcut">
+   <img class="desktop" src="/assets/chan/short-cuts/see-a-clinician-desktop.jpg" alt="See a USC Clinician" />
+   <img class="mobile" src="/assets/chan/short-cuts/see-a-clinician-mobile.jpg" alt="See a USC Clinician" />
+   <div class="shortcutcaption darkonlight">
+   <p class="title">See a USC Clinician</p>
+   <p class="description">Learn more about USC <a href="/patient-care">occupational therapy services</a>.</p>
+   </div>
+</div>
+
+<div class="shortcut">
+   <img class="desktop" src="/assets/chan/short-cuts/commencement-desktop.jpg" alt="2023 Commencement"/>
+   <img class="mobile" src="/assets/chan/short-cuts/commencement-mobile.jpg" alt="2023 Commencement"/>
+   <div class="shortcutcaption lightondark">
+   <p class="title">2023 Commencement</p>
+   <p class="description">Information and details about this year's <a href="/events/commencement">Commencement ceremonies</a>.</p>
+   </div>
+</div>
+
+</div>
+
+<div id="content">
+
+<div class="newsbar newsandevents">
+<div class="allnews"><a href="/news/latest">See all news&nbsp;></a></div>
+<h1 class="newsheader">Latest News</h1>
+
+<div class="newssummaries three">
+<div class="newssummary left">
+
+
+<p class="newstitle"><a href="https://chan.usc.edu/news/latest/growing-by-design">Growing by design&nbsp;></a></p>
+<p class="newsinfo"><span class="newsdate">April 21, 2023</span></p>
+<p class="newstext">When designing the USC Peace Garden, student landscape architect Daniela Velazco prioritized people and planting.</p>
+</div>
+<div class="newssummary middle">
+
+<p class="newstitle"><a href="https://chan.usc.edu/news/latest/anne-henderson-bs-46-98">Anne Henderson BS ’46, 98&nbsp;></a></p>
+<p class="newsinfo"><span class="newsdate">April 20, 2023</span></p>
+<p class="newstext">Henderson was an alumna of the Class of 1946 and the recipient of the 1988 American Occupational Therapy Association's Eleanor Clarke Slagle Lectureship Award.</p>
+</div>
+
+<div class="newssummary right">
+<p class="newstitle"><a href="https://chan.usc.edu/news/latest/erna-blanche-to-keynote-divisions-2023-commencement">Erna Blanche to keynote division’s 2023 commencement&nbsp;></a></p>
+<p class="newsinfo"><span class="newsdate">April 10, 2023</span></p>
+<p class="newstext">USC alumna and current faculty member is a renowned expert in pediatric occupational therapy and therapeutic interventions based on occupational science.</p>
+</div>
+</div>
+</div>
+
+<div class="newsbar one admissions">
+<h1 class="newsheader">Student Vlog<br /><span class="headergrey">Earl at Chan</span></h1>
+<div class="newssummaries one" style="width: 100%;">
+<div class="newssummary" style="width: 100%;">
+<div class="video-container"><iframe src="https://youtube.com/embed/videoseries?list=PLYYUCmdmGs9kRHP_Re0EUPgR-Zo4nP-Vc&rel=0&modestbranding=1&cc_load_policy=1&autoplay=0&controls=1&showinfo=1" width="640" height="360" frameborder="0" allowfullscreen></iframe></div>
+</div>
+</div>
+</div>
+
+<div class="newsbar two admissions" style="clear: none;">
+<div class="allnews"><a href="/people/student-blog">See all posts&nbsp;></a></div>
+<h1 class="newsheader">Student Blog</h1>
+
+<div class="newssummaries two">
+<div class="newssummary left">
+
+<a href="/people/student-blog/mika"><img class="newsimage" src="/uploads/student-blogs/mika-headshot-thumb.jpg" alt="Mika" /></a>
+<p class="newstitle"><a href="/people/student-blog/mika/a-tribute-to-open-mic-bbqs-swiftie-listening-parties-mid-class-gi-snack-runs">A Tribute to Open Mic BBQs, Swiftie Listening Parties, &amp; Mid-Class G.I. Snack Runs&nbsp;></a></p>
+<p class="newsinfo"><span class="newsdate">May 1, 2023</span><br />by <a href="/people/student-blog/mika">Mika</a></p>
+<p class="newstext">Hello everyone! It’s been a while since I last wrote a blog and I can’t believe it’s my last one! Bittersweet as it is, I want to dedicate this post to my classmates in the Post-Professional&#8230;</p>
+</div>
+<div class="newssummary middle">
+
+<p class="newstitle"><a href="/people/student-blog/pre-ot-club/the-pre-ot-club-gets-crafty">The Pre-OT Club Gets Crafty&nbsp;></a></p>
+<p class="newsinfo"><span class="newsdate">April 3, 2023</span><br />by <a href="/people/student-blog/pre-ot-club">The Pre-OT Club</a></p>
+<p class="newstext">Hello world! Taylor Kamemoto My name is Taylor Kamemoto. I am a current pre-OT student and a senior at USC majoring in Psychology and the Health & Human Sciences. I also have minors in Occupational&#8230;</p>
+</div>
+</div>
+</div>
+
+<div class="newsbar newsandevents">
+<div class="allnews"><a href="/events/upcoming">See all events&nbsp;></a></div>
+<h1 class="newsheader">Upcoming Events</h1>
+
+<div class="newssummaries three" id="eventscontainer">
+</div>
+<script type="text/javascript">
+$(window).load(function(){
+   $.ajax
+   ({
+      url: '/php/webservices/get-localist-events-for-home-page.php',
+      type: 'GET',
+      dataType: 'html',
+      timeout: 10000,
+      beforeSend: function() { $('#eventscontainer').html('<div class="newssummary"><p class="newstitle">Loading events...</p></div>'); },
+      success: function(data, textStatus, xhr) {$('#eventscontainer').html(data);},
+      error: function(xhr, textStatus, errorThrown) { $('#eventscontainer').html('<div class="newssummary"><p class="newstitle">Events are unavailable at the moment</p></div>'); }
+   });
+});
+</script>
+</div>
+
+<div class="newsbar alumni">
+<div class="allnews"><a href="/news/magazine">See all issues&nbsp;></a></div>
+<h1 class="newsheader">USC Chan Magazine</h1>
+
+<div class="newssummaries two">
+<div class="newssummary left">
+
+
+<a href="/news/magazine/fall2022winter2023"><img class="newsimage" src="https://chan.usc.edu/uploads/magazine/USC-Chan-Magazine-fall22winter23-cover.jpg" alt="USC Chan Magazine, Fall 2022 / Winter 2023" /></a>
+<p class="newstitle"><a href="/news/magazine/fall2022winter2023">Fall 2022 / Winter 2023&nbsp;></a></p>
+
+
+<p class="newstext"><a href="/news/magazine/fall2022winter2023/daily-affirmations">Daily Affirmations&nbsp;></a>
+<br />Occupational therapist <a href="/people/faculty/Nora_Dixon">Nora Dixon</a> leads new Lifestyle Redesign® program for supporting transgender and gender expansive clients.</p>
+
+<p class="newstext"><a href="/news/magazine/fall2022winter2023/doing-decolonization">Doing Decolonization&nbsp;></a>
+<br />Faculty members <a href="/people/faculty/Tessa_Milman">Tessa Milman</a>, <a href="/people/faculty/Janet_Gunter">Janet Gunter</a> and <a href="/people/faculty/Jennifer_Jones">Jennifer Jones</a> in conversation with USC Chan Magazine editor Mike McNulty about dismantling occupational therapy’s colonial ideologies and practices.</p>
+
+<p class="newstext"><a href="/news/magazine/fall2022winter2023/usc-ot-pt-summer-institute">USC OT/PT Summer Institute is Diversifying Tomorrow’s Workforce Today&nbsp;></a>
+<br />How a six-week undergraduate pathway program empowers future occupational, physical therapists from underrepresented minority backgrounds.</p>
+
+<p class="newstext">View/download the <a href="https://chan.usc.edu/uploads/magazine/USC-Chan-Magazine-fall22winter23.pdf" target="_blank">Fall 2022 / Winter 2023 issue</a> (2.2<abbr title="Megabytes">MB</abbr>)</p>
+</div><div class="newssummary right">
+
+
+<a href="/news/magazine/springsummer2021"><img class="newsimage" src="https://chan.usc.edu/uploads/magazine/USC-Chan-Magazine-springsummer2021-cover.jpg" alt="USC Chan Magazine, Spring / Summer 2021" /></a>
+<p class="newstitle"><a href="/news/magazine/springsummer2021">Spring / Summer 2021&nbsp;></a></p>
+
+
+<p class="newstext"><a href="/news/magazine/springsummer2021/dps-autism-training">How a student project led to autism training at USC’s Department of Public Safety&nbsp;></a>
+<br />USC Chan students <strong>Monica Caris MA ’21, OTD ’22</strong> and <strong>Riley McGuire MA ’21, OTD ’22</strong> just wanted to educate people about autism, but already their capstone project has become part of yearly officer training.</p>
+
+<p class="newstext"><a href="/news/magazine/springsummer2021/let-there-be-peace">Let There Be Peace&nbsp;></a>
+<br /><em>How my pandemic fieldwork experience made me an occupational and social justice practitioner.</em></p>
+
+<p class="newstext"><a href="/news/magazine/springsummer2021/madam-veep">Madam Veep&nbsp;></a>
+<br />In July, Director of Admissions and Associate Clinical Professor <a href="/people/faculty/Arameh_Anvarizadeh">Arameh Anvarizadeh ’05, MA ’06, OTD ’07</a> made history as the youngest and first African American-Iranian woman to become vice president of the American Occupational Therapy Association. She recently sat down with the <em>USC Chan Magazine</em> to talk about her action-packed agenda as Vice President, her hopes for the association and where she sees the next generation taking occupational therapy.</p>
+
+<p class="newstext">View/download the <a href="https://chan.usc.edu/uploads/magazine/USC-Chan-Magazine-springsummer2021.pdf" target="_blank">Spring / Summer 2021 issue</a> (5.4<abbr title="Megabytes">MB</abbr>)</p>
+</div>
+</div>
+</div>
+
+<script>
+    var sliderDesktop = new MasterSlider();
+    sliderDesktop.setup('masterslider-desktop', { width: 1024, height: 350, view: 'fade', loop: true, autoplay: true });
+    sliderDesktop.control('arrows');
+    sliderDesktop.control('bullets', { autohide: false, align: 'bottom' });
+
+    var sliderMobile = new MasterSlider();
+    sliderMobile.setup('masterslider-mobile', { width: 768, height: 960, view: 'fade', loop: true, autoplay: true });
+    sliderMobile.control('bullets', { autohide: false, align: 'bottom', margin: 5 });
+</script>
+
+<div id="footer">
+
+<div id="footer-cells">
+
+<div id="contactinfo">
+<p class="footertitle">Contact</p>
+
+<table>
+<tr>
+<td><span class="footericon"><a href="/about-us/contact-us"><img class="contact" alt="Contact us" src="/assets/chan/icons/mail-white.png" /></a></span></td>
+<td><a href="/about-us/contact-us">Who to contact</a></td>
+</tr><tr>
+<td><span class="footericon"><a href="https://google.com/maps/preview?hl=en-GB#!q=USC+Division+of+Occupational+Science+and+Occupational+Therapy%2C+Los+Angeles%2C+CA&amp;data=!4m10!1m9!4m8!1m3!1d368169!2d-118.4117325!3d34.020479!3m2!1i1237!2i668!4f13.1" target="_blank"><img class="googlemaps" alt="Google Maps" src="/assets/chan/icons/map-pin-white.png" /></a></span></td>
+<td><a href="https://google.com/maps/preview?hl=en-GB#!q=USC+Division+of+Occupational+Science+and+Occupational+Therapy%2C+Los+Angeles%2C+CA&amp;data=!4m10!1m9!4m8!1m3!1d368169!2d-118.4117325!3d34.020479!3m2!1i1237!2i668!4f13.1" target="_blank">Find Us</a></td>
+</tr><tr>
+<td><span class="footericon"><img class="phone" alt="Call us" src="/assets/chan/icons/phone-white.png" /></span></td>
+<td>+1 (323) 442-2850<br />
++1 (866) 385-4250 (toll-free in the US)<br />
++1 (323) 442-1540 (fax)</td>
+</tr><tr>
+<td><span class="footericon"><a href="/education/request-information"><img class="information" alt="Request program information" src="/assets/chan/icons/information.png" /></a></span></td>
+<td><a href="/education/request-information">Request program information</a><br />
+<a href="/about-us/careers">Careers at USC Chan</a><br />
+<a href="/privacy" target="_blank">Read our Privacy Policy</a><br />
+<a href="https://eeotix.usc.edu/notice-of-non-discrimination" target="_blank">Notice of Non-Discrimination</a></td>
+</tr>
+</table>
+
+</div>
+
+<div id="social">
+<p class="footertitle">Social</p>
+<a href="https://twitter.com/USCChanOSOT" title="USC Chan OS/OT on Twitter" target="_blank"><img alt="Twitter" src="/assets/chan/icons/social/twitter-white.png" /></a>
+<a href="https://facebook.com/USCChanOSOT" title="USC Chan OS/OT on Facebook" target="_blank"><img alt="Facebook" src="/assets/chan/icons/social/facebook-white.png" /></a>
+<a href="https://instagram.com/USCChanOSOT" title="USC Chan OS/OT on Instagram" target="_blank"><img alt="Instagram" src="/assets/chan/icons/social/instagram-white.png" /></a>
+<a href="/linkedin" title="USC Chan OS/OT on LinkedIn" target="_blank"><img alt="LinkedIn" src="/assets/chan/icons/social/linkedin-white.png" /></a>
+<a href="https://youtube.com/uscosot" title="USC Chan OS/OT on YouTube" target="_blank"><img alt="YouTube" src="/assets/chan/icons/social/youtube-white.png" /></a>
+</div>
+
+<div id="feeds">
+<p class="footertitle"><img class="rss" alt="RSS feed" src="/assets/chan/icons/rss.png" /> Subscribe | RSS</p>
+<p>
+<a href="/news/news-atom">Chan News</a><br />
+<a href="/people/student-blog-atom">Chan Student Blog</a><br />
+<a href="/education/admissions-blog-atom">Chan Admissions Blog</a><br />
+<a href="/about-us/careers-atom">Careers at Chan</a><br />
+<a href="/people/external-jobs-atom">External OS/OT Jobs</a>
+</p>
+<p style="margin-top: 0.75em;"><a href="https://google.com/search?as_oq=%22what+is+rss%3f%22" target="_blank">What is RSS?</a></p>
+</div>
+
+<div id="tools">
+
+<p class="footertitle">Tools</p>
+<p>
+<a href="#" onclick="bigger_text(); return false;">Bigger text</a><br />
+<a href="#" onclick="smaller_text(); return false;">Smaller text</a><br />
+</p>
+
+</div>
+</div>
+
+<div id="footer-sig">
+<span class="footertitle">USC Chan Division of Occupational Science and Occupational Therapy</span><br />
+1540 Alcazar Street, CHP 133, Los Angeles, CA 90089-9003<br />
+</div>
+
+<div id="legal-stuff">
+
+
+<p id="acote" >The USC entry-level master’s degree program (<a href="/education/entry-level-ma/cost-of-attendance">cost of attendance</a>) is fully accredited by the Accreditation Council for Occupational Therapy Education® (ACOTE). The USC entry-level OTD degree program (<a href="/education/entry-level-otd/cost-of-attendance">cost of attendance</a>) has been granted Candidacy Status by ACOTE. <a href="/education/accreditation">View our program’s ACOTE standards public data</a>. ACOTE c/o Accreditation Department, American Occupational Therapy Association, Inc.®, 6116 Executive Boulevard, Suite 200, North Bethesda, MD 20852-4929, (301) 652-6611 x2914, <a href="https://acoteonline.org" target="_blank">acoteonline.org</a></p>
+
+<p id="nbcot" >Professional program graduates are eligible to apply for certification by National Board for Certification in Occupational Therapy, Inc.® (NBCOT), <a href="https://nbcot.org">nbcot.org</a>. Program results from the NBCOT can be found online at <a href="https://secure.nbcot.org/data/schoolstats.aspx" target="_blank">secure.nbcot.org/data/schoolstats.aspx</a>.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12028591-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="CSU, Chico" name="apple-mobile-web-app-title" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="#9D2235" name="msapplication-TileColor"/>
+    <meta content="https://assets.csuchico.edu/global/fav/browserconfig.xml?v=xQdo6782N3" name="msapplication-config"/>
+    <meta content="#9D2235" name="theme-color"/>
+    <link href="https://assets.csuchico.edu/global/fav/apple-touch-icon.png?v=xQdo6782N3" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="https://assets.csuchico.edu/global/fav/favicon-32x32.png?v=xQdo6782N3" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="https://assets.csuchico.edu/global/fav/favicon-16x16.png?v=xQdo6782N3" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="https://assets.csuchico.edu/global/fav/site.webmanifest?v=xQdo6782N3" rel="manifest"/>
+    <link color="#9D2235" href="https://assets.csuchico.edu/global/fav/safari-pinned-tab.svg?v=xQdo6782N3" rel="mask-icon"/>
+    <link href="https://assets.csuchico.edu/global/fav/favicon.ico?v=xQdo6782N3" rel="shortcut icon"/>
+    <title>
+        Campus Map - CSU, Chico
+    </title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .show-for-sr,
+        .show-on-focus {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            border: 0
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="show-for-sr">Campus Map</h1>
+    <iframe src="https://map.concept3d.com/?id=1193" title="CSU, Chico Map" width="100%" height="100%" id="map_frame" frameBorder="0" scrolling="no" border="0" style="display: block; border:0px solid #fff; margin:0; padding:0;" allow="geolocation">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var mrkIid = window.location.hash;
+            if (mrkIid === undefined) {
+                //do nothing
+            } else {
+                //append url parameter to iframe
+                $("#map_frame").attr("src", $("#map_frame").attr("src") + mrkIid);
+            }
+        });
+        (function () {
+            var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+            sz.src = '//siteimproveanalytics.com/js/siteanalyze_66356487.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

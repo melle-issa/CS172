@@ -1,0 +1,1112 @@
+
+<!DOCTYPE html>
+
+<html class="no-js has-aside" lang="en-US">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="profile" href="//gmpg.org/xfn/11">
+
+				<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+				<noscript>
+			<style>
+				.spot-fade-in-scale, .no-js .spot-fade-up { 
+					opacity: 1.0 !important; 
+					transform: none !important;
+				}
+			</style>
+		</noscript>
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="tG67YS9I2dd7ZM0nS0JQFEHYOgvC0yv8ZfzJEt9G4AU" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Tooling: Using Create-Block Scaffolding and 3rd Party Templates - Gutenberg Times</title>
+	<link rel="canonical" href="https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tooling: Using Create-Block Scaffolding and 3rd Party Templates - Gutenberg Times" />
+	<meta property="og:description" content="On May 21, Greg Ziolkowski and Fabian Kägy demonstrated in this Live Q &amp; A on YouTube how to use create-block tool that comes with Gutenberg plugin and how to custom templates for creating blocks and share them on npm. You can reach Greg in WP Slack and on Twitter @gziolo and Fabian on Slack&hellip;" />
+	<meta property="og:url" content="https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/" />
+	<meta property="og:site_name" content="Gutenberg Times" />
+	<meta property="article:author" content="http://facebook.com/birgit.paulihaack" />
+	<meta property="article:published_time" content="2020-06-20T14:39:26+00:00" />
+	<meta property="article:modified_time" content="2021-09-04T14:09:42+00:00" />
+	<meta property="og:image" content="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&ssl=1" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="689" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Birgit Pauli-Haack" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@bph" />
+	<meta name="twitter:site" content="@gutenbergtimes" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Birgit Pauli-Haack" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="36 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/","url":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/","name":"Tooling: Using Create-Block Scaffolding and 3rd Party Templates - Gutenberg Times","isPartOf":{"@id":"https://gutenbergtimes.com/#website"},"primaryImageOfPage":{"@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/#primaryimage"},"image":{"@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/#primaryimage"},"thumbnailUrl":"https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&ssl=1","datePublished":"2020-06-20T14:39:26+00:00","dateModified":"2021-09-04T14:09:42+00:00","author":{"@id":"https://gutenbergtimes.com/#/schema/person/c2cfa63ffe335f159a0f067043dc5ab2"},"breadcrumb":{"@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/#primaryimage","url":"https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&ssl=1","contentUrl":"https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&ssl=1","width":1200,"height":689,"caption":"Birgit Pauli-Haack, Fabian Kägy and Greg Ziolkowski"},{"@type":"BreadcrumbList","@id":"https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gutenbergtimes.com/"},{"@type":"ListItem","position":2,"name":"News on WordPress Block Editor","item":"https://gutenbergtimes.com/news/"},{"@type":"ListItem","position":3,"name":"Tooling: Using Create-Block Scaffolding and 3rd Party Templates"}]},{"@type":"WebSite","@id":"https://gutenbergtimes.com/#website","url":"https://gutenbergtimes.com/","name":"Gutenberg Times","description":"Curating news and community voices about the WordPress Block Editor, codenamed Gutenberg","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://gutenbergtimes.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://gutenbergtimes.com/#/schema/person/c2cfa63ffe335f159a0f067043dc5ab2","name":"Birgit Pauli-Haack","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://gutenbergtimes.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/050e54a57a6e3ad0ff5897b867e983cb?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/050e54a57a6e3ad0ff5897b867e983cb?s=96&d=mm&r=g","caption":"Birgit Pauli-Haack"},"description":"Curating Gutenberg News since June 2017, WordPress Developer Advocate Learn more","sameAs":["http://facebook.com/birgit.paulihaack","https://twitter.com/bph"],"url":"https://gutenbergtimes.com/author/admin/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//gutenbergtimes.com' />
+<link rel='dns-prefetch' href='//player.twitch.tv' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel='dns-prefetch' href='//jetpack.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//public-api.wordpress.com' />
+<link rel='dns-prefetch' href='//0.gravatar.com' />
+<link rel='dns-prefetch' href='//1.gravatar.com' />
+<link rel='dns-prefetch' href='//2.gravatar.com' />
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Gutenberg Times &raquo; Feed" href="https://gutenbergtimes.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gutenberg Times &raquo; Comments Feed" href="https://gutenbergtimes.com/comments/feed/" />
+<style name="toolbelt-global-style-columns">[class*=toolbelt-cols]{display:flex;flex-wrap:wrap;margin:var(--toolbelt-spacing) calc(var(--toolbelt-spacing) * -1)}[class*=toolbelt-cols]>*{flex-grow:1;width:100%;box-sizing:border-box}.toolbelt-cols-2>*{width:50%}.toolbelt-cols-3>*{width:33.3333%}.toolbelt-cols-4>*{width:25%}.toolbelt-cols-5>*{width:20%}</style><style name="toolbelt-global-style-featured-images">.toolbelt-featured-image{width:100%;padding-bottom:65%;position:relative;margin-bottom:calc(var(--toolbelt-spacing)/ 4)}.toolbelt-featured-image img{position:absolute;top:0;left:0;right:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.toolbelt-featured-image:empty{box-shadow:inset 0 0 var(--toolbelt-border-width) 0 var(--toolbelt-color-dark)}</style><style name="toolbelt-style-related-posts">.toolbelt-related-posts{clear:both}.toolbelt-related-posts article{padding:0 var(--toolbelt-spacing);margin-bottom:calc(var(--toolbelt-spacing) * 1.5)}.toolbelt-related-posts h3{width:100%;margin-bottom:0}.toolbelt-related-posts h4{margin:0;word-wrap:break-word}.toolbelt-related-posts a{display:block}.toolbelt-related-posts img{display:block;text-decoration:none}.toolbelt-related-posts .wp-caption{display:block}</style><style name="toolbelt-properties">:root { --toolbelt-spacing:1rem; --toolbelt-scroll-margin-top:45px; --toolbelt-border-width:0.25rem; --toolbelt-border-radius:0.1rem; --toolbelt-color-dark:black; --toolbelt-color-mid:lightgrey; --toolbelt-color-light:white;}</style><link rel='stylesheet' id='genesis-blocks-style-css-css' href='https://gutenbergtimes.com/wp-content/plugins/genesis-blocks/dist/style-blocks.build.css?ver=1682878245' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://gutenbergtimes.com/wp-content/plugins/gutenberg/build/block-library/style.css?ver=15.8.20230429' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='charlie-dev-wptb-style-inline-css' type='text/css'>
+.wp-block-charlie-dev-wptb{max-width:1000px}.wp-block-charlie-dev-wptb .wptb-content-container div[id*=twitch-wptb] iframe{width:100%}.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container{display:flex;flex-wrap:wrap;max-width:100%;padding:1rem 0}.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container .wptb-cta{background-color:rgba(0,0,0,.459);border:none;color:#fff;cursor:pointer;display:inline-block;flex:1 0 23%;font-family:inherit;font-size:1rem;font-weight:inherit;margin:1%;max-width:23%;min-width:214px;outline:none;padding:1.5rem 1rem;text-align:center}.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container .wptb-cta[data-active=true]{background-color:#000;cursor:auto;font-weight:600}@media screen and (max-width:1380px){.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container .wptb-cta{flex:1 0 31%;max-width:31%}}@media screen and (max-width:900px){.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container .wptb-cta{flex:1 0 48%;max-width:48%;min-width:0}}@media screen and (max-width:768px){.wp-block-charlie-dev-wptb .wptb-content-container .wptb-streamer-cta-container .wptb-cta{flex:1 0 100%;max-width:100%;min-width:0}}
+
+</style>
+<link rel='stylesheet' id='guidepost-frontend-css' href='https://gutenbergtimes.com/wp-content/plugins/guidepost/build/guidepost-style.css?ver=32d6cdc2675636dbb932515b0217774e' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://c0.wp.com/c/6.2/wp-includes/css/classic-themes.min.css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--accent: #4c38c1;--wp--preset--color--primary: #1e2d32;--wp--preset--color--secondary: #000000;--wp--preset--color--border: #d6d5d4;--wp--preset--color--light-background: #f3efe9;--wp--preset--color--body-background: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 16px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 18px;--wp--preset--font-size--larger: 32px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link rel='stylesheet' id='wp-sponsors-css' href='https://gutenbergtimes.com/wp-content/plugins/wp-sponsors/assets/dist/css/public.css?ver=3.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='eksell-google-fonts-css' href='https://gutenbergtimes.com/wp-content/themes/eksell/assets/css/fonts.css?ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='eksell-style-css' href='https://gutenbergtimes.com/wp-content/themes/eksell/style.css?ver=1.9.5' type='text/css' media='all' />
+<style id='eksell-style-inline-css' type='text/css'>
+:root {--eksell-accent-color: #4c38c1;--eksell-secondary-color: #000000;}@supports ( color: color( display-p3 0 0 0 / 1 ) ) {:root {--eksell-accent-color: color( display-p3 0.298 0.22 0.757 / 1 );--eksell-secondary-color: color( display-p3 0 0 0 / 1 );}}
+</style>
+<link rel='stylesheet' id='eksell-print-styles-css' href='https://gutenbergtimes.com/wp-content/themes/eksell/assets/css/print.css?ver=1.9.5' type='text/css' media='print' />
+<!-- `jetpack-top-posts-widget` is included in the concatenated jetpack.css -->
+<link rel='stylesheet' id='tablepress-default-css' href='https://gutenbergtimes.com/wp-content/plugins/tablepress/css/build/default.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;display=fallback&#038;ver=6.2' type='text/css' media='all' />
+<!-- `jetpack_likes` is included in the concatenated jetpack.css -->
+<style id='block-visibility-screen-size-styles-inline-css' type='text/css'>
+/* Large screens (desktops, 992px and up) */
+@media ( min-width: 992px ) {
+	.block-visibility-hide-large-screen {
+		display: none !important;
+	}
+}
+
+/* Medium screens (tablets, between 768px and 992px) */
+@media ( min-width: 768px ) and ( max-width: 991.98px ) {
+	.block-visibility-hide-medium-screen {
+		display: none !important;
+	}
+}
+
+/* Small screens (mobile devices, less than 768px) */
+@media ( max-width: 767.98px ) {
+	.block-visibility-hide-small-screen {
+		display: none !important;
+	}
+}
+</style>
+<link rel='stylesheet' id='jetpack_css-css' href='https://c0.wp.com/p/jetpack/12.0/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://c0.wp.com/c/6.2/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/plugins/wp-sponsors/assets/dist/js/public.js?ver=3.5.0' id='wp-sponsors-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/6.2/wp-includes/js/imagesloaded.min.js' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/6.2/wp-includes/js/masonry.min.js' id='masonry-js'></script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/themes/eksell/assets/js/css-vars-ponyfill.min.js?ver=3.6.0' id='eksell-css-vars-ponyfill-js'></script>
+<script type='text/javascript' id='eksell-construct-js-extra'>
+/* <![CDATA[ */
+var eksell_ajax_load_more = {"ajaxurl":"https:\/\/gutenbergtimes.com\/wp-admin\/admin-ajax.php"};
+var eksell_ajax_filters = {"ajaxurl":"https:\/\/gutenbergtimes.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/themes/eksell/assets/js/construct.js?ver=1.9.5' id='eksell-construct-js'></script>
+<link rel="https://api.w.org/" href="https://gutenbergtimes.com/wp-json/" /><link rel="alternate" type="application/json" href="https://gutenbergtimes.com/wp-json/wp/v2/posts/14260" /><link rel="alternate" type="application/json+oembed" href="https://gutenbergtimes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgutenbergtimes.com%2Ftooling-using-create-block-scaffolding-and-3rd-party-templates%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://gutenbergtimes.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgutenbergtimes.com%2Ftooling-using-create-block-scaffolding-and-3rd-party-templates%2F&#038;format=xml" />
+
+<link rel="alternate" type="application/rss+xml" title="Podcast RSS feed" href="https://gutenbergtimes.com/feed/podcast" />
+
+<!-- this comes from the WPBeginners plugin Insert Headers and Footers -->
+<!-- SpeedCurve -->
+<script>LUX=(function(){var a=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMarks)?LUX.gaMarks:[]);var d=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMeasures)?LUX.gaMeasures:[]);var j="LUX_start";var k=window.performance;var l=("undefined"!==typeof(LUX)&&LUX.ns?LUX.ns:(Date.now?Date.now():+(new Date())));if(k&&k.timing&&k.timing.navigationStart){l=k.timing.navigationStart}function f(){if(k&&k.now){return k.now()}var o=Date.now?Date.now():+(new Date());return o-l}function b(n){if(k){if(k.mark){return k.mark(n)}else{if(k.webkitMark){return k.webkitMark(n)}}}a.push({name:n,entryType:"mark",startTime:f(),duration:0});return}function m(p,t,n){if("undefined"===typeof(t)&&h(j)){t=j}if(k){if(k.measure){if(t){if(n){return k.measure(p,t,n)}else{return k.measure(p,t)}}else{return k.measure(p)}}else{if(k.webkitMeasure){return k.webkitMeasure(p,t,n)}}}var r=0,o=f();if(t){var s=h(t);if(s){r=s.startTime}else{if(k&&k.timing&&k.timing[t]){r=k.timing[t]-k.timing.navigationStart}else{return}}}if(n){var q=h(n);if(q){o=q.startTime}else{if(k&&k.timing&&k.timing[n]){o=k.timing[n]-k.timing.navigationStart}else{return}}}d.push({name:p,entryType:"measure",startTime:r,duration:(o-r)});return}function h(n){return c(n,g())}function c(p,o){for(i=o.length-1;i>=0;i--){var n=o[i];if(p===n.name){return n}}return undefined}function g(){if(k){if(k.getEntriesByType){return k.getEntriesByType("mark")}else{if(k.webkitGetEntriesByType){return k.webkitGetEntriesByType("mark")}}}return a}return{mark:b,measure:m,gaMarks:a,gaMeasures:d}})();LUX.ns=(Date.now?Date.now():+(new Date()));LUX.ac=[];LUX.cmd=function(a){LUX.ac.push(a)};LUX.init=function(){LUX.cmd(["init"])};LUX.send=function(){LUX.cmd(["send"])};LUX.addData=function(a,b){LUX.cmd(["addData",a,b])};LUX_ae=[];window.addEventListener("error",function(a){LUX_ae.push(a)});LUX_al=[];if("function"===typeof(PerformanceObserver)&&"function"===typeof(PerformanceLongTaskTiming)){var LongTaskObserver=new PerformanceObserver(function(c){var b=c.getEntries();for(var a=0;a<b.length;a++){var d=b[a];LUX_al.push(d)}});try{LongTaskObserver.observe({type:["longtask"]})}catch(e){}};</script><script src="https://cdn.speedcurve.com/js/lux.js?id=2701649346" async defer crossorigin="anonymous"></script>
+<!--	End of Speedcurve -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112603176-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112603176-2');
+</script>	<style>img#wpstats{display:none}</style>
+		<meta name="theme-color" content="#1e2d32"><style name="toolbelt-style-responsive-videos">.wp-block-embed:not(.wp-has-aspect-ratio) .toolbelt-video-wrapper{position:relative;max-width:100%;padding-bottom:56.25%}.wp-block-embed:not(.wp-has-aspect-ratio) .toolbelt-video-wrapper>*{position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0}</style>			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<link rel="icon" href="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2022/04/cropped-gutenberg-times.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2022/04/cropped-gutenberg-times.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2022/04/cropped-gutenberg-times.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2022/04/cropped-gutenberg-times.png?fit=270%2C270&#038;ssl=1" />
+<style type="text/css" id="wp-custom-css">.gb-block-post-grid-image img { border: 1px solid #f0f0f0;
+}
+.wp-block-code {
+ font-size: large;
+}</style>
+	</head>
+
+	<body class="post-template-default single single-post postid-14260 single-format-standard multi-author-true pagination-type-button has-social-menu no-anim has-post-thumbnail not-showing-comments">
+
+		
+		<a class="skip-link faux-button" href="#site-content">Skip to the content</a>
+
+		<aside id="site-aside">
+
+	
+	<a href="#" class="toggle nav-toggle has-bars" data-toggle-target=".menu-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-menu-modal" aria-pressed="false" role="button" data-set-focus=".menu-modal .main-menu">
+		<div class="nav-toggle-inner">
+			<div class="bars">
+
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+
+									<span class="nav-toggle-text">
+						<span class="inactive">Menu</span>
+						<span class="active">Close</span>
+					</span>
+				
+			</div><!-- .bars -->
+		</div><!-- .nav-toggle-inner -->
+	</a><!-- .nav-toggle -->
+
+	
+</aside><!-- #site-aside --><div class="menu-modal cover-modal" data-modal-target-string=".menu-modal" aria-expanded="false">
+
+	<div class="menu-modal-cover-untoggle" data-toggle-target=".menu-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-menu-modal" data-set-focus="#site-aside .nav-toggle"></div>
+
+	<div class="menu-modal-inner modal-inner bg-menu-modal-background color-menu-modal-text">
+
+		<div class="modal-menu-wrapper">
+
+			<div class="menu-modal-toggles">
+
+				<a href="#" class="toggle nav-untoggle" data-toggle-target=".menu-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-menu-modal" aria-pressed="false" role="button" data-set-focus="#site-aside .nav-toggle">
+					
+											<span class="nav-untoggle-text">Close</span>
+					
+					<svg class="svg-icon icon-close" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L19 19" stroke-width="2"></path><path d="M1 19L19 1.00003" stroke-width="2"></path></svg>
+				</a><!-- .nav-untoggle -->
+
+			</div><!-- .menu-modal-toggles -->
+
+			<div class="menu-top">
+
+				
+				<ul class="main-menu reset-list-style">
+					<li id="menu-item-439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-439"><div class="ancestor-wrapper"><a href="/">Home</a></div><!-- .ancestor-wrapper --></li>
+<li id="menu-item-8968" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-8968"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/news/">News</a></div><!-- .ancestor-wrapper --></li>
+<li id="menu-item-11775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11775"><div class="ancestor-wrapper"><a href="/podcast">Podcast: Gutenberg Changelog</a></div><!-- .ancestor-wrapper --></li>
+<li id="menu-item-10661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10661"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/live-q-a-archive/">Live Q &#038; A Archive</a></div><!-- .ancestor-wrapper --></li>
+<li id="menu-item-3810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3810"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/testimonials/">Testimonials</a></div><!-- .ancestor-wrapper --></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/about-us/">About Us</a><div class="sub-menu-toggle-wrapper"><a href="#" class="toggle sub-menu-toggle stroke-cc" data-toggle-target=".menu-modal .menu-item-12 &gt; .sub-menu" data-toggle-type="slidetoggle" data-toggle-duration="250"><span class="screen-reader-text">Show sub menu</span><svg class="svg-icon icon-chevron-down" width="18" height="10" aria-hidden="true" role="img" focusable="false" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 1L9 9L1 1" stroke-width="2"></path></svg></a></div></div><!-- .ancestor-wrapper -->
+<ul class="sub-menu">
+	<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/contact-us/">Contact Us</a></div><!-- .ancestor-wrapper --></li>
+	<li id="menu-item-3979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3979"><div class="ancestor-wrapper"><a href="https://gutenbergtimes.com/category/sponsors/">Sponsors</a></div><!-- .ancestor-wrapper --></li>
+</ul>
+</li>
+				</ul><!-- .main-menu -->
+
+									<div class="menu-modal-search">
+						<form role="search"  method="get" class="search-form" action="https://gutenbergtimes.com/">
+	<label class="screen-reader-text" for="search-form-1">Search For&hellip;</label>
+	<input placeholder="Search For&hellip;" type="search" id="search-form-1" class="search-field" value="" name="s" />
+	<button type="submit" class="search-submit reset stroke-cc">
+		<span class="screen-reader-text">Search</span>
+		<svg class="svg-icon icon-search" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke-width="2"></circle><path d="M18 18L12.5 12.5" stroke-width="2"></path></svg>	</button>
+</form>
+					</div><!-- .menu-modal-search -->
+					
+			</div><!-- .menu-top -->
+
+			<div class="menu-bottom">
+
+				<ul id="menu-social" class="social-menu reset-list-style social-icons circular"><li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="http://twitter.com/gutenbergtimes"><svg class="svg-icon icon-twitter" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="screen-reader-text">Twitter</span></a></li>
+<li id="menu-item-8805" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8805"><a href="https://www.youtube.com/channel/UCSD3LG2kSHdr7llRSHaylxw"><svg class="svg-icon icon-youtube" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="screen-reader-text">YouTube</span></a></li>
+<li id="menu-item-23067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23067"><a href="https://twit.social/@gutenbergtimes"><svg class="svg-icon icon-link" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7.88225 10.6274-2.74517 2.7452c-1.51611 1.5161-1.51611 3.9742 0 5.4903 1.51612 1.5161 3.97422 1.5161 5.49032 0l2.7452-2.7452m-2.7452-8.23545 2.7452-2.74517c1.5161-1.51611 3.9742-1.51611 5.4903 0 1.5161 1.51612 1.5161 3.97422 0 5.49032l-2.7452 2.7452m-6.86287 1.3726 5.49037-5.49037" stroke-width="2"/></svg><span class="screen-reader-text">mastodon</span></a></li>
+</ul>
+			</div><!-- .menu-bottom -->
+
+		</div><!-- .menu-wrapper -->
+
+	</div><!-- .menu-modal-inner -->
+
+</div><!-- .menu-modal -->
+
+		<header id="site-header">
+
+			
+			<div class="header-inner section-inner">
+
+				<div class="header-titles">
+
+											<div class="site-title"><a href="https://gutenbergtimes.com/" rel="home">Gutenberg Times</a></div>
+					
+					
+						<div class="site-description color-secondary">Curating news and community voices about the WordPress Block Editor, codenamed Gutenberg</div>
+
+					
+				</div><!-- .header-titles -->
+
+				<div class="header-toggles">
+
+					<ul id="menu-social-1" class="social-menu reset-list-style social-icons"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="http://twitter.com/gutenbergtimes"><svg class="svg-icon icon-twitter" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="screen-reader-text">Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8805"><a href="https://www.youtube.com/channel/UCSD3LG2kSHdr7llRSHaylxw"><svg class="svg-icon icon-youtube" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="screen-reader-text">YouTube</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23067"><a href="https://twit.social/@gutenbergtimes"><svg class="svg-icon icon-link" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7.88225 10.6274-2.74517 2.7452c-1.51611 1.5161-1.51611 3.9742 0 5.4903 1.51612 1.5161 3.97422 1.5161 5.49032 0l2.7452-2.7452m-2.7452-8.23545 2.7452-2.74517c1.5161-1.51611 3.9742-1.51611 5.4903 0 1.5161 1.51612 1.5161 3.97422 0 5.49032l-2.7452 2.7452m-6.86287 1.3726 5.49037-5.49037" stroke-width="2"/></svg><span class="screen-reader-text">mastodon</span></a></li>
+</ul>
+						<a href="#" class="search-toggle toggle" data-toggle-target=".search-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-pressed="false" role="button" role="button" data-untoggle-below="700">
+							<span class="screen-reader-text">Search</span>
+							<svg class="svg-icon icon-search" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke-width="2"></circle><path d="M18 18L12.5 12.5" stroke-width="2"></path></svg>						</a>
+
+						
+					<a href="#" class="nav-toggle mobile-nav-toggle toggle icon-menu-search" data-toggle-target=".menu-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-menu-modal" data-set-focus=".menu-modal .nav-untoggle" aria-pressed="false" role="button">
+
+													<span class="mobile-nav-toggle-text">Menu</span>
+						
+						<svg class="svg-icon icon-menu-search" width="26" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 18H24" stroke-width="2"></path><path d="M0 10H10" stroke-width="2"></path><path d="M0 2H10" stroke-width="2"></path><circle cx="19" cy="6" r="5" stroke-width="2"></circle><path d="M26.0001 13.0001L22.0278 9.02783" stroke-width="2"></path></svg>						
+					</a>
+
+					
+				</div><!-- .header-toggles -->
+
+			</div><!-- .header-inner -->
+
+			
+		</header><!-- #site-header -->
+		
+		<div class="search-modal cover-modal" data-modal-target-string=".search-modal" aria-expanded="false">
+
+	<div class="search-modal-inner modal-inner bg-body-background">
+
+		<div class="section-inner">
+
+			
+			<form role="search" method="get" class="modal-search-form" action="https://gutenbergtimes.com/">
+				<input type="search" id="search-form-645093b0f28d7" class="search-field" placeholder="Search For&hellip;" value="" name="s" />
+				<label class="search-label stroke-cc" for="search-form-645093b0f28d7">
+					<span class="screen-reader-text">Search For&hellip;</span>
+					<svg class="svg-icon icon-search" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke-width="2"></circle><path d="M18 18L12.5 12.5" stroke-width="2"></path></svg>				</label>
+				<button type="submit" class="search-submit">Search</button>
+			</form><!-- .modal-search-form -->
+
+			<a href="#" class="toggle search-untoggle fill-cc-primary" data-toggle-target=".search-modal" data-toggle-screen-lock="true" data-toggle-body-class="showing-search-modal" data-set-focus="#site-header .search-toggle">
+				<span class="screen-reader-text">Close</span>
+				<div class="search-untoggle-inner">
+					<svg class="svg-icon icon-close" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L19 19" stroke-width="2"></path><path d="M1 19L19 1.00003" stroke-width="2"></path></svg>				</div><!-- .search-untoggle-inner -->
+			</a><!-- .search-untoggle -->
+
+		</div><!-- .section-inner -->
+
+	</div><!-- .search-modal-inner -->
+
+</div><!-- .search-modal -->
+
+<main id="site-content" role="main">
+
+	<div class="site-content-inner">
+
+		<article class="post-14260 post type-post status-publish format-standard has-post-thumbnail hentry category-for-developers category-how-to category-live-q-as-on-youtube category-news" id="post-14260">
+
+	
+	<header class="entry-header section-inner mw-thin i-a a-fade-up">
+
+		
+		<hr class="color-accent" aria-hidden="true" />
+
+		<h1 class="entry-title">Tooling: Using Create-Block Scaffolding and 3rd Party Templates</h1>
+	</header><!-- .entry-header -->
+
+	
+		<figure class="featured-media section-inner i-a a-fade-up a-del-200">
+
+			
+			<div class="media-wrapper">
+				<img width="1200" height="689" src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&amp;ssl=1" class="attachment-post-thumbnail size-post-thumbnail wp-post-image jetpack-lazy-image" alt="Birgit Pauli-Haack, Fabian Kägy and Greg Ziolkowski" decoding="async" data-attachment-id="14449" data-permalink="https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/liveqa-create-block-templating/" data-orig-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&amp;ssl=1" data-orig-size="1200,689" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="LiveQA-Create-Block-Templating" data-image-description data-image-caption data-medium-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=300%2C172&amp;ssl=1" data-large-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=652%2C374&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?resize=300%2C172&amp;ssl=1 300w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?resize=1024%2C588&amp;ssl=1 1024w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?resize=768%2C441&amp;ssl=1 768w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/LiveQA-Create-Block-Templating.jpg?fit=1200%2C689&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">			</div><!-- .media-wrapper -->
+
+			
+		</figure><!-- .featured-media -->
+
+		
+	<div class="post-inner section-inner mw-thin do-spot spot-fade-up a-del-200">
+
+		<div class="entry-content">
+
+			<style name="toolbelt-style-social-sharing">.toolbelt-social-share{clear:both;font-size:1rem;display:grid;gap:calc(var(--toolbelt-spacing)/ 4);grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));margin-bottom:calc(var(--toolbelt-spacing) * 2);margin-top:calc(var(--toolbelt-spacing) * 2)}.toolbelt-social-share .toolbelt_share-api{display:none}.toolbelt-social-share a{padding:calc(var(--toolbelt-spacing)/ 4) var(--toolbelt-spacing);color:var(--toolbelt-color-light);align-items:center;display:flex;text-decoration:none}.toolbelt-social-share a:hover{color:var(--toolbelt-color-light)}.toolbelt-social-share a:hover span{text-decoration:underline}.toolbelt-social-share-api-enabled .toolbelt-social-share .toolbelt_share-api{display:inline}.toolbelt-social-share-api-enabled .toolbelt-social-share a{display:none}.toolbelt-social-share svg{-webkit-margin-end:calc(var(--toolbelt-spacing)/ 2);margin-inline-end:calc(var(--toolbelt-spacing)/ 2);height:1.5rem;width:1.5rem;vertical-align:middle}.toolbelt-social-share svg *{stroke:none;fill:currentColor}@media (min-width:500px){.toolbelt-social-share .toolbelt_whatsapp{display:none}}</style>
+<p>On May 21, Greg Ziolkowski and Fabian Kägy demonstrated in this Live Q &amp; A on YouTube how to use create-block tool that comes with Gutenberg plugin and how to custom templates for creating blocks and share them on npm. </p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<div class="toolbelt-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe loading="lazy" class="youtube-player" width="652" height="367" src="https://www.youtube.com/embed/NbrME0UlYbQ?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent" allowfullscreen="true" style="border:0;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"></iframe></span></div>
+</div></figure>
+
+
+
+<p>You can reach Greg in WP Slack and on Twitter <a href="https://twitter.com/gziolo">@gziolo</a> and Fabian on Slack and Twitter <a href="https://twitter.com/fabiankaegy">@fabiankaegy</a></p>
+
+
+
+<h2 class="wp-block-heading">Resources </h2>
+
+
+
+<ul><li><a href="https://github.com/WordPress/gutenberg/pull/22175">Discussion: Next Steps for Block Creation Documentation</a></li><li>GitHub PR: <a href="https://github.com/WordPress/gutenberg/pull/22175">Create block: Add support for external templates hosted on npm</a> </li><li><a href="https://www.npmjs.com/package/gutenberg-esnext-template">Experimental npm package from demo</a></li><li><a href="https://github.com/WordPress/gutenberg-examples/">WordPress/Gutenberg Examples</a></li><li><a href="https://www.npmjs.com/package/@wordpress/scripts">WordPress Script at npm</a></li><li><a href="https://www.npmjs.com/org/wordpress">74 WordPress packages at npm</a></li></ul>
+
+
+
+<h2 class="wp-block-heading">Transcript</h2>
+
+
+
+<p class="has-text-align-right">Sponsored by <a href="https://www.paulisystems.net/">Pauli Systems</a></p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: So, hi there! We are here on the Gutenberg Live channel, and have with us Greg Ziolkowski and Fabian Kägy and both will show us how the future vision of the Create-Block scaffolding tool, that comes with Gutenberg, and Fabian is going to show us also how to extend it and make it your own to have more productive block development. So, I&#8217;ll take myself out of it and I&#8217;ll turn it over to Greg!</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Okay, let me share my screen first. I just want to show some background, present some background on what we are trying to do here. We are aware that everyone&#8217;s trying to create their own blocks, and so far, it was quite hard to do it because of all the requirements like using JavaScript tuning around that and everything else. So, we started this process a long time ago because we use a very advanced JavaScript tool inside Gutenberg Project, but we figured out that it would be great if you could share that with the community. This is how we created <em>npm</em> packages.</p>
+
+
+
+<h2 class="wp-block-heading">WordPress on npm: Create-Block and WordPress Scripts</h2>
+
+
+
+<p>If you go to <em>npm</em> and find there is an organization called WordPress, and there are as of <a href="https://www.npmjs.com/org/wordpress">today 73 packages</a>. There are two of them that we want to cover today. The most important one is <a href="https://www.npmjs.com/package/@wordpress/create-block">Create-Block</a> as you can see on this demonstration. It&#8217;s just a way to create your block with one line of code. There are a few ways of doing that and at the moment it supports two code templates, so it&#8217;s like the way in how the block will look like after the scaffolding ends. One of them is using ES5, which is the standard of JavaScript that is very old, it&#8217;s 10 years, and it&#8217;s also something that WordPress developers in the past used for jQuery, so we wanted to bridge that and provide this template.&nbsp; However, we will focus today on ESNext and JSX based template that is contained, so they build tools, linters, formatters, stuff like this.</p>
+
+
+
+<p>Behind the scenes, this solution, the second one I mentioned, it contains also another package which is called <a href="https://www.npmjs.com/package/@wordpress/scripts">WordPress Script.</a> WordPress Script it&#8217;s a collection of different scripts as outlined in here for working with JavaScript, CSS, there is unit testing, end-to-end tests, and so on and so on. It&#8217;s not that important here. The idea is that once you run the script block, it creates an environment that is ready to work. So, you don&#8217;t have to worry about finding what tool you need to you use, what kind of language features you want to use. Everything is ready for use.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">First magical Steps</h2>
+
+
+
+<p>Maybe let me show an example how that could work. So let&#8217;s say, I&#8217;m running <code>npm init @wordpress/block</code> and this is, something happens, code is downloaded from npm, which is registered for packages and then you have CLI prompt that asks you to customize your block. So, this is a way to make it simple for everyone to create their first block, but also at first it allows you to change some default settings to avoid the stretch when you have to go through the code and do a search and replace, techniques and stuff like this. So, let&#8217;s say we can create, we can provide&#8230;it&#8217;s not that important what kind of things we are providing here. The whole idea is that those are things if you ever build a block, you should be familiar with that. So, this is something that allows you to create your block like category, title, description. It&#8217;s everything that&#8217;s visible in the UI.&nbsp;</p>
+
+
+
+<p>There is also this part related to the client. So, Birgit mentioned to me once that it would be cool if this block here that they could be also a plugin at the same time, so we have this supported now. So, we could provide everything that you require if you want to publish your blogging to the WordPress repository. So, license and the version.&nbsp;</p>
+
+
+
+<p>Once that starts, then there is the process in between. So, the folder is scaffolded and also, what&#8217;s important here, the dependencies for the  core scripts are behind the scene installed for you. So, this will end in half a minute or something like that and you will have everything that is ready to work with. What we are trying to do now is, Fabian, he proposed this approach that rather than using only those recommended templates for how block definition will look like, we want to allow also third-party packages, hosted on npm that would allow you to create, be customized experience.</p>
+
+
+
+<h2 class="wp-block-heading">Block Directory</h2>
+
+
+
+<p>However, we want to have this baseline. I think you could see now how the CLI looks like, how it works, that should be quite close at least for now. However, using all the values that users entered during this process, we can provide quite a nice experience. Also, I want to highlight this effort that <a href="https://github.com/WordPress/gutenberg/pull/22175" data-type="https://github.com/WordPress/gutenberg/pull/22175">Anne recently posted in this issue on GitHub</a> in the Gutenberg repository, so that the whole point from my perspective that we are trying to do is to make the first step magical. So, we envision the future when there is also this <a href="https://gutenbergtimes.com/block-directory-a-new-way-of-extending-wordpress/" data-type="11982">huge project blog directory</a> that allows to install blocks directly from the inserter. So, rather than going to the plugin repository and starting your plugin as before, you would just type inside the inserter and the QRQ type doesn&#8217;t have any matches inside your editor, then it will just go to the new block directory which is specific for blogs that are JavaScript based, initial approach and with that, you would be able to install your block.</p>
+
+
+
+<p>So we want to bridge that, that tool concept at some point. So we want to have this component so that you could quickly craft your own block, publish it to this block repository and the end user could install it while working. It&#8217;s like, there are a few things that we want to converge into one coherent experience. To make this step magical, we also want to simplify the way you manage, you use documentation for WordPress. So today, if you go to <a href="https://developer.wordpress.org/block-editor/">developer.wordpress.org</a> docs, no, there is this. There is this handbook and if you <a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/">go to &#8220;Tutorials&#8221; and go to &#8220;Blocks&#8221;,</a> you see that there are lots of examples that you need to copy over. There is a way to make it simpler by copying from the <a href="https://github.com/WordPress/gutenberg-examples/">Gutenberg examples repository</a> that we also maintain, so you have those examples in here.</p>
+
+
+
+<p><em>The transcript is still work in progress. Pardon the dust.   (bph 6/20/)</em></p>
+
+
+
+<p>The idea is that thanks to what Fabian is working on, we would be able to add in copy just around the same comment by putting the name of the template, like this, so let&#8217;s say at the moment we support also ES5. So we will just create something different so ES5 has also different defaults and things like that. So, now let me maybe show what I just created. So ES5, for example, you see right now it contains only five files and it&#8217;s pretty basic. He&#8217;s using ES5 in here. If I would open another scaffolded project, what was the name, demo today. It&#8217;s much more complex. It contains several things that were created behind the scenes like back end JSON file and there is a source folder, because we are using ES Next we can use ES model so you can split files into smaller chunks and things like this.&nbsp;</p>
+
+
+
+<p>So, the idea is that instead of going to this Gutenberg examples and going in here, downloading material or cloning this repository and copying it over to your WordPress installation, you could just go and run this one line and that would drive you through the whole process and allow you to make this blog. So once that&#8217;s ready, then you can just go to your WordPress and activate this plugin and it&#8217;s ready to work. And also, because this is ES5, so when I open the terminal and I run MPM start, it will just start all the building and once you start the development process, behind the scenes everything is covered for you. So you can see right now, if I would go here and say import, and bring the _______________ when I save it, it triggers refresh. So every time I change something here, maybe let me show it this way because it&#8217;s quite fast. It rebuilds.&nbsp;</p>
+
+
+
+<p>So, those are tools that are included in this set up and that&#8217;s something that&#8217;s quite exciting. Fabian, can you explain what was the whole idea from your side to get into this idea with hosted on MPM?</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. So, what I think in order for me to appear on screen, you need to stop sharing for a second. Yeah, this seems to work, cool. The problem in mind was that there are these two templates that you can start with the ES Next or ES5 template, but several times when you&#8217;re working in a company, when you&#8217;re building multiple plugins, they&#8217;re just different approaches, just different ways that you like to structure your code, different things, like for example, the new way that the block repository has different ways to structure the actual plugin, then for example a normal Gutenberg plugin. It would be cool to make that a bit easier to just have anybody be able to contribute a template and then being able to use the same scaffolding tool that&#8217;s already there to use your template or use the template that somebody else created and go from there. Just have a magical experience with your own template or with the template that somebody else built.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, that&#8217;s cool. So I guess I covered all that we wanted. So just to recap. Our goal is when you go to this tutorial inside the block editor handbook, the first thing you would have is just this comment, that one line comment that we provide a template name the same way as I did it for ES5. So, that would be that. So calling this template name, so for every step you would have a different template provided and this way, someone who wants to build a blog, they could just start and go run all those comments and build up on that their own experience, or just go the last step and just build the most complex and start from this stage to building their own code. Oh, I&#8217;m not sharing the screen so you can&#8217;t see that.&nbsp;</p>
+
+
+
+<p>Anyway, I think that could be much more powerful rather than copying over code from those tutorials. There are often mistakes that people catch after time, but I&#8217;m sure that some people they don&#8217;t have this opportunity to go to the Gutenberg repository and find an issue of all the PR, so that&#8217;s why we want to make it much easier. So maybe now, should I do some tour of our code? Fabian maybe you could do that because you are new to it, but that would show us the experience that someone could have if they would like to contribute to this because we see this opportunity to bring more people to get interested in improving those tools that we have already.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. So, should we just take one of the Gutenberg examples? Just pick one out and try to make that a new template for it?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Then once we build that in just the template folder inside what&#8217;s currently there, we can take a look at the PR they created and show how it will work once that is merged.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, we could also start with the higher level thing. How the packages, where you can find the package, how it&#8217;s structured, so also those extension points because what you are describing now is something that would be external. Today we will just show how you can build inside the project, your own template. However, it will be as simple as breaking out those folders that you will create and publishing it to MPM with some additional meta data.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. Then let me share my screen. There. So, I have cloned the full Gutenberg repository. Let me start by just, if I got to GitHub and search for WordPress Gutenberg, I can find the actual Gutenberg repository where all the development happens and the different packages like the Create-Block package that we&#8217;re working on today, are all inside the packages folder. There&#8217;s, like you showed earlier, loads of them that are published to MPM.&nbsp; They are all the sources coming from within this packages folder. I have cloned this whole repository onto my local machine and I&#8217;m just opening that up.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Could you show this button, clone or download, so people know how to do it?</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. Just on the top right here, you have the opportunity to clone or download and if there are, you can either use the actual command to do it in your terminal, or there is a tool that&#8217;s maintained from GitHub desktop that when you click the Open on Desktop button, it clones it that way as well.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, I think there, you also are using a fork, so there is on the top right this fork button that you need to click if you want to do something. It might be even more automated in the States, I don&#8217;t remember.&nbsp;&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: When you click on the fork button, you&#8217;ve seen that I&#8217;ve already created a fork. You can basically select one of your organizations or your private account and create a fork, and then it creates a copy of the repository and then you can work on your local copy, and when you then are happy with the changes that you&#8217;ve made, you can submit a pull request, but we can look at that later.&nbsp;</p>
+
+
+
+<p>Cool. So with that cloned I can open it up and again, I have the same folder structure that you can see on MPM where at the packages folder with all of the different packages in here. Greg, do you want to walk through any others, or should we just jump into&#8230;?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I don&#8217;t think it&#8217;s relevant at this stage. Of course, the other thing that I showed you on MPM website, there is 73 packages so all of them are in this same folder. So, maybe not all of them because some of them are private.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool. Yeah.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: It makes it easier to discover if you want just to contribute to the one of the packages you are using. You will go to this folder and you will quickly based on the name, find it in this folder.</p>
+
+
+
+<p><em>Fabian Kägy</em>: And when you&#8217;re only working, yep, what I sometimes like to do because it sometimes feels a little bit overwhelming when you have so much stuff going on here, so in some of the packages I just navigate to it in my finder, just open up for example the great block, just open that up directly and then I have only the files that I&#8217;m looking at. When I want to actually commit something, I can go back and do stuff in the actual Gutenberg repository, but for now I just have the files open that we are actually working on. So this is the actual Create-Block package that Greg showed earlier. This is where the magic is happening and you can see there is a templates folder inside of here that has the two templates that Greg showed. There is the ES5 one and then there&#8217;s ES Next one.&nbsp;</p>
+
+
+
+<p>When I look into these folders, they&#8217;re these dot mustache files. So for each file that gets created, that gets scaffolded out, there is this mustache file that already has everything that we&#8217;ve seen earlier in it. Just with the addition of some of just some variables. So, basically under the hood, it&#8217;s taking these files, replacing the variables with whatever you put into the prompt that you&#8217;ll get asked and then removing the dot mustache at the end and creating the scaffold plugin for you. With that, the idea is to add another template to it and then that can be used that way.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So just to recap or remind what I said earlier. We will want to provide a few more templates that would align with the tutorials that we will have, we will update for block creation. So then we be step one, step two, step three and so on to make it all easier. So they will be quite similar, but they will build up on each other this way.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool. Do you have a preference of which of the Gutenberg samples we should take? Or should we just start from the beginning to convert one of those?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: We can just copy ES Next and just go to the basic one and you just probably have to remove some code at first, that will be much easier to follow.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: You have to find the Gutenberg example. Once you are looking for that, I just wanted to say that the choice for mustache, that wasn&#8217;t made based on my previous contribution to WPCLI. That also has a very basic support for creating blocks. It creates the ES5 version. So it&#8217;s nearly the same as the one that you can find in this templates folder and the one I showed you also when I ran the comment. So WPCLI has a lot of history, so I&#8217;m sure that choice is the right one. I didn&#8217;t want to brag that, because although this tool, those tools are Java Script based, they use the note JS and WPCLI is PHP based, however, those libraries are universal and work across. Also, that could be a way for, in the future, if WPCLI would like to align in some way, they could just take all those templates and use inside their project as well.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. Then, one more thing about the structure. We have the templates folder where just the different template files are located and then we also have this templates.js file where the preview finds block templates, the ones that ship with the Create-Block package, they have some options, default values. They have an option whether WP Script is enabled or disabled and by default it is enabled. We will also need to add our new example to that list for now, until it will be possible to pull it from external link. Cool. Greg do you want to?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, you also could scroll down in this file because there is a larger list of values that we probably will have to modify. So in here, those are the defaults for every template that would be ever created. But, the idea is that every template can override the defaults, so this is the value that is presented when you are using&#8230;when the prompt shows up on the screen. What was your question?</p>
+
+
+
+<p><em>Fabian Kägy</em>: I wanted to ask whether you wanted to start with just duplicating the ES Next, or just start by copying over?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: If I would have to create another template, I would probably do that this way.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: The same as when someone starts their journey with blocks, they will probably use one of the scaffolded blocks then try to tweak some values just to see what happens. So that could be in your experience.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Then we will just….</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: You can copy and paste.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Just paste it and rename it into the, what should we call it for this?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: You can use the same name. It doesn&#8217;t matter.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Basic ES Next. Cool. Then I will just open this on the side so we can just copy our stuff over. Sure. So, I have this open on the side. And we can probably, the editor config we can ignore. Those two are the same.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So let me explain. This editor config is a special file. It&#8217;s copied from the WordPress repository. It&#8217;s just the setup for the IDs, just to make sure that all the files are formatted in the same way. GitIgnore is for usage with Git. It ensures that some of the most popular folders aren&#8217;t comment like node modules which we don&#8217;t want to store in the repository because it sometimes takes hundreds of megabytes. What else do we have? We have CSS, PHP and JS, Java Script five and also there is Read Me text, which is also, it&#8217;s something based on some recommendation from the WordPress documentation.&nbsp;<em>Fabian Kägy</em>: Sure. Awesome. I think we can leave the editor config, the GitIgnore and these cells, we might have to look whether there are cells in there, but leave them for now. Same for the Read Me and I don&#8217;t think there is anything we need to change in the PHP file as well, is there?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Depends. Because I think BASIC doesn&#8217;t contain CSS tags. So then you have to remove some. Just need to open that and we will see.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool. Yeah, over here it doesn&#8217;t look like there are any CSS files. So we can go in here and where we registered the script and then registering the CSS, and I&#8217;m just taking those out for now and seeing what the block style and block editor style, so we can remove that and just have the registered block type function and cue the editor script. Then I can also delete the two files from here. Then we can go into the actual source folder and in here, there is currently only one file. Should we split, yeah we can also move the edit and save files from our copied folder and just put everything to one file. Or do you want us to split it up?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Oh, yeah, you can do it. It&#8217;s up to you.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: For the initial experience, that might be easier to not bother with importing files.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sounds right. We are importing the same two dependencies, register block type and then the underscore, underscore for initialization. We can read the comments for that. We don&#8217;t need internal dependencies since we&#8217;re only doing it in one file. Yeah, we can leave the name space and the slug for currently&#8230;we will just change the icon in the default values in a minute when we register it. So, I think the only thing we need to really change here is the actual set and save.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, and also we don&#8217;t need support in here.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Correct. Move that.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I mean, I would argue we need it, but that&#8217;s not so important.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Then we can just basically copy over into our edit block and put it in here. And the same goes for the save slot. Put that in and with the block style it&#8217;s used that, again that would also need to be added to the top and then we can add another comment just to let everyone know what&#8217;s happening.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: It seems like a lot of repetition to have all those comments, however, depending on the stage people who would start, etc., I think it&#8217;s still valuable to have those in line things that you can always disable. Also, we might provide the flag for the CLI tool just to disable all comments if someone doesn&#8217;t want to have them. Something to think about for the future.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: That sounds like a good idea. Cool. So I&#8217;ve added the block styles and the change the edit and save method. And I think that&#8217;s everything we need to change in here. The only thing we need to add now is add it to the templates JAS file and add the default values up top there. Then we can give it a try whether it works.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Looks like a super simple task to do.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: First problem, we had hyphen in, or, just sorry, dash in our name and would that be supported?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: No. No.</p>
+
+
+
+<p><em>Fabian Kägy</em>: We need to&#8230;.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: You will have just to rapid test, like a string. You don&#8217;t have to rename it.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Okay. So this, will the scaffolding find the….</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: No, no. What you need to do here is, you just need to use string like rapid.</p>
+
+
+
+<p><em>Fabian Kägy</em>: But can we do that inside the object?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yes.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Okay. Yeah, then. My mistake.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: No worries.</p>
+
+
+
+<p><em>Fabian Kägy</em>: BASIC ES Next and here. And we currently don&#8217;t have, we can copy over the icon. I think when I will check&#8230;these are again, all the available options and it&#8217;s named dash icon. So, we will also provide the default for that. And the default category will be laid out. That is that category. Besides that, I think we can leave the rest as is.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I guess so.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Actually give it a try. So I&#8217;ve just opened up the terminal and in order, because I&#8217;m not pulling the tool from MPM, I&#8217;m just testing it out locally, so what I want to do is, I want to run this index.js file using node or do you have a better way of testing it locally?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So there are a few ways to do that. One of them is using NPX which is a way to execute binaries from the node model folder. So there is a binary defined for this file that is called wp-create-block. You can just go and run NPX wp-create-block.</p>
+
+
+
+<p><em>Fabian Kägy</em>: SWP or just wp?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: No, no, wp create, block. Create-block and you provide the name of the template.</p>
+
+
+
+<p><em>Fabian Kägy</em>: And that was ES Next. For me, it&#8217;s trying to….</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I know why. Because you are in the Create-Block sub-folder. So we just need to go up. So we tried to install it from MPM.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Yep. So now I&#8217;ve changed my directory to actually the Gutenberg directory and just clear that, and now I&#8217;m trying the same thing again. NPX wp-create-block and specifying the template. Let&#8217;s see, so now that works. So now we can, yeah. It&#8217;s giving us the default options that we put in. The default title. The description. It has the correct icon in here. The layout is the default category and we just go through here and then you will see that once it installs everything.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Should be somewhere up in the folder structure because you are now in Gutenberg.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Yes. Doesn&#8217;t it place it within the same folder the Create-Block is? Or does it create it where it is happening?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: No, no. It&#8217;s from the folder you executed the command, which was the Gutenberg.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Correct, yeah. Then let&#8217;s go into the Gutenberg folder. There it is. The Basic ES Next. Open that as well. Even though it&#8217;s still executing, something it is already here, but we should wait for this to finish running. Cool. So now you can see just the build folder also appeared and it has everything in here. When we open it up, you can see what we just did. It has the block styles in here. It has all of the scaffolded comments. I should also remove the comment here because it&#8217;s not correct anymore. But, this is our scaffolded out.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Are you able to run that inside your WordPress by copying to the WordPress instance and trying if that actually works? That would be nice.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. Let me just quickly get the site up and running.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So in the meantime, there was this comment from Jessica. “I wonder if it would be good to set up some best practices for these templates that could be contributed, which might include that style should be set up in your block ID. So, especially continuing on that in the Gutenberg examples, it makes sense not to have them for aligning purposes, but for the scaffold it seems like a bit of a nuance.”I totally agree. So we are just showing how that might work, in existing templates that we already have inside tutorials, but outside of tutorials this example is super simple. It&#8217;s we removed more than we added. So the idea would be that we&#8217;d rather provide more advanced examples. In those examples for tutorials, the example five or six that are quite advanced, and they seemed like a very good way to experiment with your own block template.</p>
+
+
+
+<p>Also, I see that Fabian mentioned that some teams that work among blocks, they just want to have something more customized, like having their own sub-name for sub-folders, they are maybe using different to link. Maybe they are not using Git or they just rely on SVN as a default approach and there might be some integration with some people, I know they are using GitHub work flows so once they commit to GitHub it just deploys the code somewhere. There are many things that people might find useful, but the default one is something that would be always optimized towards the best experience for someone who wants to create a block.</p>
+
+
+
+<p>So I envision that once the block directory is up live, with WordPress 5.5, I hope it happens, then the example, the default one, when you don&#8217;t specify any template name at all, it would be something that creates a block that you just scoot into, publish right away to the block directory. How is it going in the meantime?</p>
+
+
+
+<p><em>Fabian Kägy</em>: I just started, created a new local site and I&#8217;m just, I copied the folder over and it&#8217;s in here. I&#8217;ll just spin up the site here real quick. Now just start a new site here. Just to scrap a WordPress site. Example, I&#8217;m just adding into our plugins folder.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Another way of doing that would be, you just could go, once that tool is published to MPM, another way for usage if you want to consume that is that you go to the same folder as Fabian is going now, and just run this comment inside this folder. Just another idea I have is that maybe we could have a way to specify paths, just to make it easier for people. So they don&#8217;t need to go directly to the folder.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Or if the Create-Block thing, scaffold is used when you&#8217;re working on just an actual block plugin that doesn&#8217;t need to be integrated into a site right away, you could use the dev environment that&#8217;s included in the WP scripts.<em>Greg Ziolkowski</em>: Yeah. This is what I&#8217;ve been doing when I&#8217;m playing around. So there is another package called N??___ and it has this binary name, WP-N. It just helps you to use Docker and all the already auto developed provided instance in WordPress that is tailored specifically to implement, to the development of blocks or plugins that are based on Java Script.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool. So I have, inside the plugins folder here, I have the BASIC next example. I&#8217;ve just activated that and want to create a new block. Should be able to Basic ES Next, and I can insert this and it shows me hello step one from the editor and when I want to publish that site, see from the front end, this is what we set up. There is no interactivity, just the Basic ES Next example from the Gutenberg examples that we just ported over to one of the templates.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Great job. You did it. So now, you know, having that tool, that should really make it much simpler for people. I think that it would be valuable to show one day also a seminar, do a seminar stream and show how to do the WPF you mentioned, because if you combine those two, then it&#8217;s really powerful. It makes everything so much easier.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Yep. That&#8217;s also something with the external templates, you could just, in the package or also with the internal templates, just in different templates you could have a WPN already set up in one of the templates that, or you just have everything already inside of the one template, and use that to start with. Depends on what you want your projects to be.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So you are saying that this WPN allows you to specify multiple plugins? In the configuration you can provide multiple paths to plugins?</p>
+
+
+
+<p><em>Fabian Kägy</em>: What I meant was that currently in the ES Next template for the Create-Block, all of the WPN isn&#8217;t configured, but for the WPN as part of the WordPress Scripts isn&#8217;t configured, but one of templates could of course just configure that and add that to it.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, actually that one is something I would consider as one of the options that is, will be behind the flag, an advanced one. So someone wants to use it, that could be, but because many people, I believe they have their own tools that allow them to develop with WordPress or even test with WordPress, like Flywheel or whatever, there are so many tools.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Yeah.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: So it all depends on your use case. So maybe now you could present your proof of concept for the same thing, but working for something that&#8217;s external. Like a remark from start, in the meantime while you are working, I just provided some changes to the code base just to make it easier to integrate that, so they way how it&#8217;s structured it differs a bit, however, the whole idea just as the most important thing that we have here. If you could continue.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Sure. I&#8217;m sharing my screen again. Then, I&#8217;ve just switched to the branch that I&#8217;ve been working on and let me clean up.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yes, I guess that is the easiest way.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Then I can go from here. Again, I&#8217;m just opening up the actual Gutenberg development folder and the actual Create-Block folder in my code editor and here, I need to close down the terminal.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: While you are doing that, there was another question from Jessica. “So, if you want to continue with templates through the Create-Block products, should we push them to MPM or to the templates folder in Create-Block?” Yeah, we haven&#8217;t settled on that yet. So it&#8217;s still in discussion. In the issue I also posted in the chat on YouTube. It&#8217;s hard to tell probably we will start with having them locally. Because they don&#8217;t take so much space so that shouldn&#8217;t be a constraint in terms of the amount of download size you would have for the package, but that would make that easier. However, I anticipate that we would move that to separate packages on MPM. Ones that work on the feature that Fabian will show soon will be done. So, definitely for now, for providing, I mean, just to be clear. The whole concept is to have as little template as possible inside the Create-Block package. So the ES Next and ES Five that would be probably in the&#8230;that’s what we need to support and the tutorials, they would exist outside of that.&nbsp;</p>
+
+
+
+<p>Also, third party, that should be, that I think is something for MPM. Also, just to explain that, that once we discuss with Fabian how it could be implemented, we were looking at Create React Up because they also support templates and what they do, they also have this way of providing local paths. So we could have copy templates from someone, put it inside your folder on the disk and just whoever has that. That would be another way of doing so. It&#8217;s something that we should definitely discuss and find the best solution. Okay, sorry Fabian, you can continue.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: No problem. So what I did to be able to actually test this out, I just took the ES Next example that is currently located in the templates and folder and pulled it out into its own folder and its own project. As you can see, it has the source folders, it has the editor config like earlier. We can ignore all of the files. In addition to that, it also has three files that are not mustache files. It has a package JSON in order for me to be able to publish it to MPM. It has a Read Me file just to give some basic information, and it has the most important thing here, a template.json file where again we are specifying the default values the same way that we did in the templates folder earlier. With this, I&#8217;ve added the default, I can category those things. Then, I just published this to MPM. So this Basic ES Next example currently is available on MPM under the name Gutenberg-ESNext-Example.&nbsp;</p>
+
+
+
+<p>This is just to test out the scaffolding tool. So when I copy over that file and, or that name, and again open up my terminal and clear that and run the create-block command again, but instead of passing it the local template name of one of the local templates, so I could either have ES Five or ES Next for local ones, I&#8217;m passing it the name of the MPM repository and with this, it will, I&#8217;m still in the same folder. Let&#8217;s also add the my block, that was, I added that before the flag, also specifying the name in here. This should, yeah, it&#8217;s creating the new block. It&#8217;s basically doing the same exact process then what we saw earlier, but while installing packages and while doing all of this, it is not pulling from these two, it is actually downloading the package from MPM and using that to scaffold it out, and I&#8217;m opening up the finder again just to go to the correct folder because it should show up here under the name my block in a minute. It&#8217;s already here, but it&#8217;s still pulling stuff down.&nbsp;</p>
+
+
+
+<p>So, for you, it doesn&#8217;t really look, or for any of us, it doesn&#8217;t really look much different, but these files were not coming from the templates folder, they were actually pulled from MPM.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, what could help is, just you can show change something inside your repository comment it, publish to MPM and just try the process again just to show that it&#8217;s coming from there. It shouldn&#8217;t be that hard to do it right?</p>
+
+
+
+<p><em>Fabian Kägy</em>: Yeah.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: But it also would be great to show the process for publishing to MPM. So one thing that you need to go to MPM.org and create an account there. It&#8217;s for free. Once you have that, you need to probably do MPM log in just to provide your credentials. Is there anything else required?</p>
+
+
+
+<p><em>Fabian Kägy</em>: I think when you, inside of the folder where you want to publish it, when you run MPM published, it will prompt you to log in to do everything that you need. So you can just open up the folder and then it will prompt you for everything to get you up and running.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, you are right. Also, there is this MPM who I am comment, which allow you to check whether you are logged in or out.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Cool. So I will just, to quickly have something here, add the comment at the top of the file saying I was here.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah. So what&#8217;s the URL? What&#8217;s the name of the package? Gutenberg.</p>
+
+
+
+<p><em>Fabian Kägy</em>: It&#8217;s Gutenberg ES Next example, template, correct. I&#8217;m just adding, I was here and then I&#8217;m running MPM version minor just to bump the version number up and then I&#8217;m running MPM publish. It will ask me for one time passwords. So just quickly grab that. That should be, that. Now it&#8217;s uploading into MPM and on the website you should be able to see that version number, well it was still 0.3.0, it should now be 0.4.0, and when I run the same exact command again, it will take a minute again and let&#8217;s hope that it&#8217;s not cached anywhere in between.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah, sometimes it takes a few minutes. Sometimes even a few hours. So, it depends.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Let&#8217;s see. Under my block, I can already open that up and it’s already in there. So it already ruled the correct version. This is using the other version from MPM. This is pretty cool. It&#8217;s just downloading the external package like this. Cool. Did you share the link of the actual request for that so that people can try it?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I was just finding, it looks like Birgit needs to do all the URL sharing because of some security reasons. Okay, I&#8217;ll find that. I&#8217;m really excited about that because as you can see, it&#8217;s quite easy to build your own template and also is that it&#8217;s maybe not so straightforward for testing, however, if you will do this trick, that you will use Create-Block and develop the template inside there and copy over there, that would be much simpler. Also, I believe that once you have some sort of packages, you could just install it inside your node modules folder and just edit it directly. There are some people that use that. There are even tools that allow that but I don&#8217;t know the names, so I won&#8217;t share them. And the PR from Fabian.&nbsp;</p>
+
+
+
+<p>I think we will shortly wrap it up. I think we covered a lot today, and it&#8217;s really exciting to see the progress on your PR and so, let me check again on YouTube. Thank you, Birgit, for posting the URL for the MPM package. And there is another question from Jessica, nice. “Can you explain why you type in my block before the to name the folder instead of going into interactive mode?” Do you want to take that Fabian?</p>
+
+
+
+<p><em>Fabian Kägy</em>: I wasn&#8217;t sure whether the interactive modes left the template under or whether, the reasoning why I switched it up is because I wasn&#8217;t sure whether the interactive mode had the template wired up yet or not. So it was just the current state of the development.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Yeah. Just to expand on that. By default, if you don&#8217;t provide any parameters or options, then it launches interactive mode. That asked you about all the values and you need to enter them. However, there is also a way to provide the name of the folder that you want to scaffold, which also becomes the name of the plugin and the name of the blog. This way, you don&#8217;t have to provide any values. It assumes that you are happy with the default. So this is also the way if someone is thinking that I have no idea what that means on the CLI, I just want to start away, that&#8217;s the best way to do it. Then, once you discover I would like to change this particular thing, then you, okay this is a description or let&#8217;s go and run that again and provide a different value.</p>
+
+
+
+<p>Also, there are a few more options. Can you, Fabian, you are not sharing the screen. If you run, that&#8217;s complex because the way node works, by default you install your bracket as using MPM install in the name of the package. If you want to use a package that can be run from CLI right away, that means it has an executable file defined, then you can use this MPX shortcut. It&#8217;s something the same as you would write MPM east on my package and then do execute that binary. So it just combines it to one comment.&nbsp;</p>
+
+
+
+<p>The third one is MPM in it. So this is on top of those two ideas and just a shortcut of installing locally with MPM install then running MPX with create prefix. So it&#8217;s just a nicer way. It also provides the intent that you are using that here. So, to continue on that, yes interactive mode should work with MPM test templates and without, I mean, general interactive mode and quick mode, they should work the same, regardless if you are using templates that are local or from MPM. There is no difference. I hope that clears a bit of the situation.&nbsp;</p>
+
+
+
+<p>Okay. Are there any other questions? I see that Birgit, she is sharing more links. There is a bit of delay.&nbsp;</p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: Well, that was fabulous. I really like what you did there. Thank you so much. We are still entertaining some questions. So if you want to, I&#8217;m also sharing some more links that I shared at the beginning, but now that you all know what those links are, I&#8217;m sharing them again.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Also, this PR from Fabian if someone wants to help to shape that and also play in the current state. We need definitely need to work more on the structure of the config file for the templates. So the one that Fabian shared, it&#8217;s an old one and based on that I applied some changes. So one of them is that you will be able to provide the folder name, where those template files including mustache will be located. So by doing that, you don&#8217;t need to specify all those largely. Some templates could provide 25, so it would counter-productive to list them all and so it just will scan the folder and find all of those.</p>
+
+
+
+<p>We are also thinking about providing more general control over WordPress scripts so this is the tool that we are using behind the scenes to do the building, formatting of the files, linking. It&#8217;s growing. So, but also what Fabian mentioned is that some projects, they have their own workflows. They might be needing to use something else. So they could define dependencies and install them. Everything is still being discussed and improved.&nbsp;</p>
+
+
+
+<p><em>Fabian Kägy</em>: Very cool.</p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: Super cool, yes. All right. I think that concludes it. Is there anything else that you wanted the people to know?</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Just thank you, Birgit, for doing all the technical aspects. Because it was last minute. I don&#8217;t even figure out you are doing it live. The screen sharing, it looks like a lot of work. It&#8217;s hard to set up.</p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: Yeah, but I like those pick up live streams. So, cue me up, you stall, I only needed about 10 minutes to set it up.</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: There&#8217;s one more question, so maybe, “What process should we follow when we want to contribute a template to avoid doubling up work and having people work on very similar block template?” So we share this, we share PR, so we should coordinate there. I don&#8217;t think there are other places where we can, discount that maybe in on WordPress Slack. It&#8217;s hard to tell. So definitely you can reach out to me on WordPress Slack and I can help to find a good place. But I believe that there&#8217;s discussion on next step for blog directories, very related to the work we are doing here. I know that Marcus on GitHub, he has some great ideas. He&#8217;s willing to use his own tutorial for creating blogs, just like a baseline so we provide the to port all those templates he has there. Also, this is discussing the issue I mentioned.&nbsp;</p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: All right. Go ahead, sorry.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: I mean, just, thank you everyone for watching and for the great questions and especially to Fabian for showing around in the code.</p>
+
+
+
+<p><em>Birgit Pauli-Haack</em>: All right. Great job everybody. Thank you. Bye-bye.&nbsp;</p>
+
+
+
+<p><em>Greg Ziolkowski</em>: Thank you, bye bye.</p>
+
+
+
+<p><em>Fabian Kägy</em>: Bye.&nbsp;</p>
+<section class="toolbelt-related-posts"><h3 class="toolbelt-heading toolbelt-heading-related-posts">Related Posts</h3><div class="toolbelt-cols-2"><article>
+				<div class="toolbelt-featured-image">
+					<a itemprop="relatedLink" aria-hidden="true" href="https://gutenbergtimes.com/all-women-release-squad-for-6-4-grid-layout-pattern-for-front-page-designs-and-more-weekend-edition-250/"><img width="300" height="225" src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?fit=300%2C225&amp;ssl=1" class="attachment-medium size-medium wp-post-image jetpack-lazy-image" alt="Photo: Moveable Type by L.M. Bernhardt" decoding="async" data-attachment-id="23879" data-permalink="https://gutenbergtimes.com/all-women-release-squad-for-6-4-grid-layout-pattern-for-front-page-designs-and-more-weekend-edition-250/moveable-type-by-l-m-bernhardt-web/" data-orig-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?fit=1200%2C900&amp;ssl=1" data-orig-size="1200,900" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1681584404&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Moveable Type by L. M. Bernhardt-web" data-image-description data-image-caption data-medium-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?fit=300%2C225&amp;ssl=1" data-large-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?fit=652%2C489&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?resize=1080%2C810&amp;ssl=1 1080w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/04/Moveable-Type-by-L.-M.-Bernhardt-web.jpg?fit=300%2C225&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a>
+				</div>
+				<h4 class="toolbelt-skip-anchor"><a itemprop="relatedLink" href="https://gutenbergtimes.com/all-women-release-squad-for-6-4-grid-layout-pattern-for-front-page-designs-and-more-weekend-edition-250/">All Women-release squad for 6.4 , Grid Layout , Pattern for front-page designs and more – Weekend edition #250</a></h4>
+			</article><article>
+				<div class="toolbelt-featured-image">
+					<a itemprop="relatedLink" aria-hidden="true" href="https://gutenbergtimes.com/openai-block-woocommerce-7-5-patterns-and-flexible-table-block-weekend-edition-247/"><img width="300" height="204" src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?fit=300%2C204&amp;ssl=1" class="attachment-medium size-medium wp-post-image jetpack-lazy-image" alt="&quot;Container&quot; by Izabella.Reimers is licensed under CC BY-NC-SA 2.0." decoding="async" data-attachment-id="23614" data-permalink="https://gutenbergtimes.com/openai-block-woocommerce-7-5-patterns-and-flexible-table-block-weekend-edition-247/container-by-izabela-reimers/" data-orig-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?fit=1044%2C710&amp;ssl=1" data-orig-size="1044,710" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Container-by-Izabela-Reimers" data-image-description="&lt;p&gt;&#8220;Container&#8221; by Izabella.Reimers is licensed under CC BY-NC-SA 2.0.&lt;/p&gt;
+" data-image-caption data-medium-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?fit=300%2C204&amp;ssl=1" data-large-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?fit=652%2C443&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?w=1044&amp;ssl=1 1044w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?resize=300%2C204&amp;ssl=1 300w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?resize=1024%2C696&amp;ssl=1 1024w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?resize=768%2C522&amp;ssl=1 768w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2023/03/Container-by-Izabela-Reimers.jpeg?fit=300%2C204&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a>
+				</div>
+				<h4 class="toolbelt-skip-anchor"><a itemprop="relatedLink" href="https://gutenbergtimes.com/openai-block-woocommerce-7-5-patterns-and-flexible-table-block-weekend-edition-247/">OpenAI Block, WooCommerce 7.5, Patterns and Flexible Table Block —Weekend Edition #247</a></h4>
+			</article></div></section><section class="toolbelt_social_share toolbelt-social-share"><script>var toolbelt_social_share_description = "On May 21, Greg Ziolkowski and Fabian Kägy demonstrated in this Live Q &amp; A on YouTube how to use create-block tool that comes with...";</script><button class="toolbelt_share-api">Share</button></section>
+		</div><!-- .entry-content -->
+
+		
+			<footer class="entry-footer color-secondary">
+
+				
+		<div class="post-meta-wrapper">
+			<ul class="post-meta">
+
+											<li class="date">
+								Published <time><a href="https://gutenbergtimes.com/tooling-using-create-block-scaffolding-and-3rd-party-templates/">June 20, 2020</a></time>							</li>
+														<li class="author">
+								By <a href="https://gutenbergtimes.com/author/admin/">Birgit Pauli-Haack</a>							</li>
+														<li class="categories">
+								Posted in <a href="https://gutenbergtimes.com/category/for-developers/" rel="tag">For Developers</a>, <a href="https://gutenbergtimes.com/category/how-to/" rel="tag">How-to</a>, <a href="https://gutenbergtimes.com/category/live-q-as-on-youtube/" rel="tag">Live Q &amp; As on YouTube</a>, <a href="https://gutenbergtimes.com/category/news/" rel="tag">News</a>							</li>
+							
+			</ul>
+		</div>
+
+		
+			</footer><!-- .entry-footer -->
+
+			
+	</div><!-- .post-inner -->
+
+	
+<nav class="single-nav section-inner has-both">
+
+	<div class="single-nav-grid grid no-v-gutter cols-t-6 cols-tl-4">
+
+		
+			<div class="col">
+
+				<a class="single-nav-item do-spot spot-fade-up prev-post has-media" href="https://gutenbergtimes.com/virtual-wordcamp-santa-clarita-block-editor-talks-wcscv-on-april-18th-2020/">
+
+					
+					<figure class="single-nav-item-media">
+
+						<img width="1080" height="500" src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?fit=1080%2C500&amp;ssl=1" class="attachment-eksell_preview_image size-eksell_preview_image wp-post-image jetpack-lazy-image" alt="Header: WordCamp Santa Clarita 2020" decoding="async" data-attachment-id="13925" data-permalink="https://gutenbergtimes.com/virtual-wordcamp-santa-clarita-block-editor-talks-wcscv-on-april-18th-2020/wordcamp-santa-clarita-2020/" data-orig-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?fit=1200%2C556&amp;ssl=1" data-orig-size="1200,556" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="WordCamp-Santa-Clarita-2020" data-image-description data-image-caption data-medium-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?fit=300%2C139&amp;ssl=1" data-large-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?fit=652%2C302&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?resize=300%2C139&amp;ssl=1 300w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?resize=1024%2C474&amp;ssl=1 1024w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?resize=768%2C356&amp;ssl=1 768w" data-lazy-sizes="(max-width: 1080px) 100vw, 1080px" data-lazy-src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/04/WordCamp-Santa-Clarita-2020.jpg?fit=1080%2C500&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						<div class="arrow stroke-cc">
+							<svg class="svg-icon icon-arrow-left" width="96" height="49" aria-hidden="true" role="img" focusable="false" viewBox="0 0 98 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 1L2 25L26 49" stroke-width="2"></path><path d="M2 25H98" stroke-width="2"></path></svg>						</div><!-- .arrow -->
+
+					</figure><!-- .single-nav-item-media -->
+
+					
+						<header class="single-nav-item-header contain-margins">
+
+							
+							<h3 class="single-nav-item-title h4">
+								Videos: WordCamp Santa Clarita: Block Editor and Gutenberg Talks #WCSCV April 2020							</h3><!-- .single-nav-item-title -->
+
+							
+						</header><!-- .single-nav-item-header -->
+
+						
+				</a>
+
+			</div><!-- .col -->
+
+			
+			<div class="col">
+
+				<a class="single-nav-item do-spot spot-fade-up next-post has-media" href="https://gutenbergtimes.com/live-q-a-block-based-themes-for-full-site-editing-feature-in-wordpress/">
+
+					
+					<figure class="single-nav-item-media">
+
+						<img width="842" height="475" src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?fit=842%2C475&amp;ssl=1" class="attachment-eksell_preview_image size-eksell_preview_image wp-post-image jetpack-lazy-image" alt decoding="async" data-attachment-id="14457" data-permalink="https://gutenbergtimes.com/block-editor-for-wordpress/gutenbergtmes-reigstad-nymark-violini-2020-26-06/" data-orig-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?fit=842%2C475&amp;ssl=1" data-orig-size="842,475" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GutenbergTmes-reigstad-nymark-violini-2020-26-06" data-image-description data-image-caption data-medium-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?fit=652%2C368&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?w=842&amp;ssl=1 842w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?resize=768%2C433&amp;ssl=1 768w" data-lazy-sizes="(max-width: 842px) 100vw, 842px" data-lazy-src="https://i0.wp.com/gutenbergtimes.com/wp-content/uploads/2020/06/GutenbergTmes-reigstad-nymark-violini-2020-26-06.png?fit=842%2C475&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						<div class="arrow stroke-cc">
+							<svg class="svg-icon icon-arrow-right" width="96" height="49" aria-hidden="true" role="img" focusable="false" viewBox="0 0 98 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M72 1L96 25L72 49" stroke-width="2"></path><path d="M96 25H0" stroke-width="2"></path></svg>						</div><!-- .arrow -->
+
+					</figure><!-- .single-nav-item-media -->
+
+					
+						<header class="single-nav-item-header contain-margins">
+
+							
+							<h3 class="single-nav-item-title h4">
+								Live Q &#038; A: Block-based Themes for Full-site editing feature in WordPress							</h3><!-- .single-nav-item-title -->
+
+							
+						</header><!-- .single-nav-item-header -->
+
+						
+				</a>
+
+			</div><!-- .col -->
+
+			
+	</div><!-- .single-nav-grid -->
+	
+</nav><!-- .single-nav -->
+</article><!-- .post -->
+
+	</div><!-- .site-content-inner -->
+
+</main><!-- #site-content -->
+
+		
+			<footer id="site-footer">
+
+								
+				<div class="footer-inner section-inner">
+
+					
+					<div class="footer-credits">
+
+						<p class="footer-copyright">&copy; 2023 <a href="https://gutenbergtimes.com" rel="home">Gutenberg Times</a></p>
+
+						<p class="theme-credits color-secondary">
+							Theme by <a href="https://www.andersnoren.se">Anders Nor&eacute;n</a>						</p><!-- .theme-credits -->
+
+					</div><!-- .footer-credits -->
+
+					<ul id="menu-social-2" class="social-menu reset-list-style social-icons"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="http://twitter.com/gutenbergtimes"><svg class="svg-icon icon-twitter" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="screen-reader-text">Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8805"><a href="https://www.youtube.com/channel/UCSD3LG2kSHdr7llRSHaylxw"><svg class="svg-icon icon-youtube" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="screen-reader-text">YouTube</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23067"><a href="https://twit.social/@gutenbergtimes"><svg class="svg-icon icon-link" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7.88225 10.6274-2.74517 2.7452c-1.51611 1.5161-1.51611 3.9742 0 5.4903 1.51612 1.5161 3.97422 1.5161 5.49032 0l2.7452-2.7452m-2.7452-8.23545 2.7452-2.74517c1.5161-1.51611 3.9742-1.51611 5.4903 0 1.5161 1.51612 1.5161 3.97422 0 5.49032l-2.7452 2.7452m-6.86287 1.3726 5.49037-5.49037" stroke-width="2"/></svg><span class="screen-reader-text">mastodon</span></a></li>
+</ul>
+				</div><!-- .footer-inner -->
+
+				
+			</footer><!-- #site-footer -->
+
+			<style name="toolbelt-style-cookie-banner">.toolbelt_cookie_wrapper{display:none;position:fixed;bottom:0;left:0;right:0;justify-content:center;padding:calc(var(--toolbelt-spacing)/ 2);z-index:999;font-size:1rem}.toolbelt_cookie_wrapper button,.toolbelt_cookie_wrapper strong{padding:calc(var(--toolbelt-spacing)/ 2) var(--toolbelt-spacing);line-height:1rem;font-size:inherit;margin:0;border:none;outline:0}.toolbelt_cookie_wrapper strong{background:var(--toolbelt-color-light);color:var(--toolbelt-color-dark)}.toolbelt_cookie_wrapper a{color:#07c}.toolbelt_cookie_wrapper button{background:var(--toolbelt-color-dark);color:var(--toolbelt-color-light)}.toolbelt_cookie_wrapper button:hover{text-decoration:none}.toolbelt_cookie_wrapper .toolbelt_cookie_close{font-size:1.5rem}</style><section class="toolbelt_cookie_wrapper"><strong>By using this website, you agree to our <a href="https://gutenbergtimes.com/privacy-policy/">Privacy Policy</a></strong><button class="toolbelt_cookie_accept toolbelt_cookie_close">&times;</button></section><script>function toolbelt_cookies_accepted() {}</script><script name="toolbelt-script-cookie-banner">"use strict";var toolbelt_cookie_bar=function(){function e(e,o,t){var c,l="";t&&((c=new Date).setTime(c.getTime()+24*t*60*60*1e3),l="; expires="+c.toGMTString()),document.cookie=e+"="+o+l+"; path=/"}return{init:function(){var e,o=function(e){for(var o,t=e+"=",c=document.cookie.split(";"),l=0,n=c.length;l<n;l++){for(o=c[l];" "==o.charAt(0);)o=o.substring(1,o.length);if(0==o.indexOf(t))return o.substring(t.length,o.length)}return null}("toolbelt_accepted_cookies");document.querySelector(".toolbelt_cookie_wrapper").style.display="none",o||(document.querySelector(".toolbelt_cookie_wrapper").style.display="flex",null!==(e=document.querySelector(".toolbelt_cookie_wrapper .toolbelt_cookie_accept"))&&e.addEventListener("click",toolbelt_cookie_bar.accept,!1),null!==(e=document.querySelector(".toolbelt_cookie_wrapper .toolbelt_cookie_decline"))&&e.addEventListener("click",toolbelt_cookie_bar.decline,!1)),"accepted"!==o&&"yes"!==o||(toolbelt_cookies_accepted(),document.body.dispatchEvent(new Event("toolbelt-cookie-accepted"))),"declined"===o&&document.body.dispatchEvent(new Event("toolbelt-cookie-declined"))},accept:function(){e("toolbelt_accepted_cookies","accepted",365),document.querySelector(".toolbelt_cookie_wrapper").style.display="none",toolbelt_cookies_accepted(),document.body.dispatchEvent(new Event("toolbelt-cookie-accepted"))},decline:function(){e("toolbelt_accepted_cookies","declined",365),document.querySelector(".toolbelt_cookie_wrapper").style.display="none",document.body.dispatchEvent(new Event("toolbelt-cookie-declined"))}}}();toolbelt_cookie_bar.init();</script><script name="toolbelt-script-social-sharing">"use strict";navigator.share&&(document.addEventListener("DOMContentLoaded",function(){document.body.classList.add("toolbelt-social-share-api-enabled")}),document.querySelector(".toolbelt_share-api").addEventListener("click",function(){var t=document.querySelector("title").textContent,e=document.querySelector('link[rel="canonical"]').getAttribute("href"),o={title:t,text:toolbelt_social_share_description,url:e};try{navigator.share(o)}catch(t){}}));</script>	<script type="text/javascript">
+		function genesisBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+	<script type='text/javascript' src='https://c0.wp.com/p/jetpack/12.0/_inc/build/photon/photon.min.js' id='jetpack-photon-js'></script>
+<script type='text/javascript' src='https://player.twitch.tv/js/embed/v1.js?ver=1.0.0' id='wptb_twitch_embed_js-js'></script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js?ver=1682878245' id='genesis-blocks-dismiss-js-js'></script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/intersection-observer.js?minify=false&#038;ver=83ec8aa758f883d6da14' id='jetpack-lazy-images-polyfill-intersectionobserver-js'></script>
+<script type='text/javascript' id='jetpack-lazy-images-js-extra'>
+/* <![CDATA[ */
+var jetpackLazyImagesL10n = {"loading_warning":"Images are still loading. Please cancel your print and try again."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://gutenbergtimes.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/lazy-images.js?minify=false&#038;ver=de7a5ed9424adbf44f32' id='jetpack-lazy-images-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/12.0/modules/likes/queuehandler.js' id='jetpack_likes_queuehandler-js'></script>
+	<script src='https://stats.wp.com/e-202318.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'141878496',post:'14260',tz:'-4',srv:'gutenbergtimes.com',j:'1:12.0'} ]);
+		_stq.push([ 'clickTrackerInit', '141878496', '14260' ]);
+	</script>
+    </body>
+</html>

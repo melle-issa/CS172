@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>@wordpress/create-block | Block Editor Handbook | WordPress Developer Resources</title>
+<link rel='preload' href='https://developer.wordpress.org/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2' as='font' crossorigin='crossorigin' type='font/woff2' />
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources &raquo; Feed" href="https://developer.wordpress.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources &raquo; Comments Feed" href="https://developer.wordpress.org/comments/feed/" />
+<meta property="og:title" content="@wordpress/create-block | Block Editor Handbook | WordPress Developer Resources" />
+<meta property="og:site_name" content="WordPress Developer Resources" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://developer.wordpress.org/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@WordPress" />
+<meta name="description" content="Create Block is an officially supported tool for scaffolding a WordPress plugin that registers a block. It generates PHP, JS, CSS code, and&hellip;" />
+<meta property="og:description" content="Create Block is an officially supported tool for scaffolding a WordPress plugin that registers a block. It generates PHP, JS, CSS code, and&hellip;" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/developer.wordpress.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3-alpha-55700"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css' href='https://developer.wordpress.org/wp-includes/css/dashicons.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://developer.wordpress.org/wp-includes/css/admin-bar.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='wp4-styles-css' href='https://s.w.org/style/wp4.css?ver=1645139188' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/block-library/style.css?ver=15.4.0' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='wporg-language-suggest-style-inline-css' type='text/css'>
+.wp-block-wporg-language-suggest{background-color:#eff2ff;color:#1e1e1e;font-size:12px;line-height:1;text-align:center}.wp-block-wporg-language-suggest>*{padding:10px 4px}
+</style>
+<style id='wporg-latest-news-style-inline-css' type='text/css'>
+.wporg-latest-news{list-style:none;margin:0;padding:0}.wporg-latest-news li:not(:last-child){padding-bottom:var(--wp--custom--latest-news--spacing,16px)}.wporg-latest-news li a{text-decoration:none}.wporg-latest-news li a:hover{text-decoration:underline}.wporg-latest-news li>a{color:var(--wp--custom--latest-news--link--color);display:block;font-family:var(--wp--custom--latest-news--title--font-family);font-size:var(--wp--custom--latest-news--title--font-size,24px);line-height:var(--wp--custom--latest-news--title--line-height);margin-bottom:var(--wp--custom--latest-news--link--spacing,4px)}.wporg-latest-news__details{font-size:var(--wp--custom--latest-news--link--details-font-size,14px)}.wporg-latest-news__details>:not(:last-child){margin-right:4px}.wporg-latest-news__category{text-transform:uppercase}
+</style>
+<style id='wporg-notice-style-inline-css' type='text/css'>
+.wp-block-wporg-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--acid-green-3);--wp--custom--wporg-notice--color--text:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-notice.is-info-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--blueberry-4)}.wp-block-wporg-notice.is-alert-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--lemon-3)}.wp-block-wporg-notice.is-warning-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--pomegrade-3)}.wp-block-wporg-notice{background-color:var(--wp--custom--wporg-notice--color--background);color:var(--wp--custom--wporg-notice--color--text);display:grid;gap:.5em;grid-template-columns:auto 1fr;padding:1.25em}.wp-block-wporg-notice>*{align-self:start}.wp-block-wporg-notice p:first-child{margin-block-start:0}.wp-block-wporg-notice p:last-child{margin-block-end:0}.wp-block-wporg-notice a:active,.wp-block-wporg-notice a:focus,.wp-block-wporg-notice a:hover,.wp-block-wporg-notice a:link,.wp-block-wporg-notice a:visited{color:var(--wp--custom--wporg-notice--color--text)}.wp-block-wporg-notice.alignleft,.wp-block-wporg-notice.alignright{max-width:calc(var(--wp--style--global--content-size)*.66)}.wp-block-wporg-notice__icon{align-self:flex-start;background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/tip.svg);background-position:50%;background-repeat:no-repeat;background-size:24px 24px;display:flex;height:1.875em;width:24px}.is-info-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/info.svg)}.is-alert-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/alert.svg)}.is-warning-notice .wp-block-wporg-notice__icon{background-image:url(/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/warning.svg)}.wp-block-wporg-notice__content{align-self:center}
+</style>
+<style id='wporg-site-breadcrumbs-style-inline-css' type='text/css'>
+.wp-block-wporg-site-breadcrumbs{align-items:center;display:flex}.wp-block-wporg-site-breadcrumbs a{color:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-site-breadcrumbs a:hover{text-decoration-line:underline}.wp-block-wporg-site-breadcrumbs>span:not(:first-child){align-items:center;display:flex;margin-top:0}.wp-block-wporg-site-breadcrumbs>span:not(:first-child):before{content:"/";display:inline-block;font-weight:400;margin:0 .5rem}.wp-block-wporg-site-breadcrumbs .is-current-page{font-weight:700}
+</style>
+<style id='wporg-table-of-contents-style-inline-css' type='text/css'>
+@media (min-width:890px){#wp--skip-link--target,.is-toc-heading{scroll-margin-top:var(--wp-local-header-offset,0)}}.is-toc-heading a{--local--icon-size:24px;color:inherit;display:inline-block;padding-right:calc(var(--local--icon-size) + .1em)}.is-toc-heading a,.is-toc-heading a:after{text-decoration:none!important}.is-toc-heading a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.083 17.639H8.444a5.194 5.194 0 1 1 0-10.389h1.64v1.5H8.443a3.694 3.694 0 0 0 0 7.389h1.641v1.5ZM13.917 7.25h1.639a5.194 5.194 0 0 1 0 10.39h-1.641v-1.5h1.642a3.694 3.694 0 0 0 0-7.39h-1.642v-1.5Zm-4.584 6.084h5.334v-1.5H9.333v1.5Z' fill='%233858E9'/%3E%3C/svg%3E");background-position:100%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;height:var(--local--icon-size);margin-right:calc(var(--local--icon-size)*-1 - .1em);opacity:0;vertical-align:baseline;width:calc(var(--local--icon-size) + .1em)}.is-toc-heading a:focus:after,.is-toc-heading a:hover:after,.is-toc-heading:focus a:after{opacity:1}.is-toc-heading:focus,.is-toc-heading:focus-visible{outline:none}.is-toc-heading:target{border-left:2px solid var(--wp--preset--color--blueberry-1);padding-left:8px}
+</style>
+<style id='wporg-two-factor-settings-style-inline-css' type='text/css'>
+#main{margin-bottom:2rem}.wp-block-wporg-two-factor-settings{position:relative}.wp-block-wporg-two-factor-settings h3{clear:none;font-size:14px}.bbp-single-user .wp-block-wporg-two-factor-settings input[type=email],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=number],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=password],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=search],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=text]{font-family:Open Sans,sans-serif;font-size:14px;padding:6px 10px}.wp-block-wporg-two-factor-settings .components-button{margin-right:20px}.wporg-2fa__navigation{justify-content:center!important;padding:24px 0!important;position:relative}.wporg-2fa__navigation a{align-items:center;display:flex;left:24px;position:absolute}.wporg-2fa__navigation svg{fill:#4ca6cf}.wporg-2fa__navigation h3{margin:unset;text-transform:capitalize}.wporg-2fa__token{letter-spacing:.3em}.components-notice{margin-left:0;margin-right:0}.components-notice.is-error,.components-notice.is-success{margin:0}.components-notice .components-notice__content{align-items:center;display:flex;gap:8px}.components-notice .components-notice__content svg{flex-shrink:0}.wporg-2fa__account-status .wporg-2fa__status-card:focus-within,.wporg-2fa__account-status .wporg-2fa__status-card:hover{z-index:1}.wporg-2fa__account-status .wporg-2fa__status-card a{display:block;text-decoration:none}.wporg-2fa__account-status .wporg-2fa__status-card a:focus,.wporg-2fa__account-status .wporg-2fa__status-card a:hover{outline:var(--wp-admin-border-width-focus) solid var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline-offset:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body{grid-column-gap:10px;display:grid;grid-template-areas:"status header      open" "status description open";grid-template-columns:min-content auto min-content;padding:18px 14px}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-icon{-ms-grid-row-span:2;align-self:center;grid-area:status;-ms-grid-column:1;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body h3{align-self:end;color:#1a1a1a;font-size:1.1em;grid-area:header;-ms-grid-column:3;-ms-grid-row:1;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body p{align-self:start;color:#757575;grid-area:description;-ms-grid-column:3;-ms-grid-row:2;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-card-open{-ms-grid-row-span:2;align-self:center;grid-area:open;-ms-grid-column:5;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-icon.is-enabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-ok{fill:#4ab866}.wporg-2fa__account-status .wporg-2fa__status-icon.is-pending{fill:#f0b849}.wporg-2fa__account-status .wporg-2fa__status-icon.is-disabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-error{fill:#d94f4f}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container,.wporg-2fa__password .wporg-2fa__password_container{align-items:flex-start;justify-content:flex-start;position:relative;width:-moz-fit-content;width:fit-content}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container input,.wporg-2fa__password .wporg-2fa__password_container input{padding-right:35px}.bbp-single-user .wporg-2fa__password .wporg-2fa__show-password,.wporg-2fa__password .wporg-2fa__show-password{height:31px;margin:0;padding:0 5px;position:absolute;right:1px;top:24px}.wporg-2fa__email .components-notice.actions-on-right>div{display:flex}.wporg-2fa__email .components-notice.actions-on-right>div>p{flex-grow:1;margin:initial}.wporg-2fa__totp_setup-container{position:relative}.wporg-2fa__totp_setup-container p{margin-top:unset}.wporg-2fa__totp_setup-container>.components-button{bottom:-10px;position:absolute;right:0;text-decoration:none!important}.wporg-2fa__totp_setup-container>.components-notice{width:100%}.wporg-2fa__totp_setup-container .wporg-2fa__totp_setup-instruction{align-self:center;margin-bottom:32px;margin-top:revert;max-width:550px}.wporg-2fa__totp_setup-method-container{align-self:center;max-width:360px}.wporg-2fa__totp_setup-method-container .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__totp_setup-method-container p{margin:0}@media screen and (max-width:480px){.wporg-2fa__totp_setup-method-container{max-width:unset;width:100%}}.wporg-2fa__setup-form-container{align-self:center;text-align:center;width:-moz-fit-content;width:fit-content}.wporg-2fa__setup-form-container>.components-notice.is-error{height:0;margin-bottom:-32px;opacity:0}.wporg-2fa__setup-form-container>.components-notice.is-error.is-shown{height:auto;margin-bottom:16px;opacity:1;transition:opacity .5s ease}@media screen and (max-width:480px){.wporg-2fa__setup-form-container{width:100%}}.wporg-2fa__qr-code{height:225px;text-align:center}#bbpress-forums .wporg-2fa__qr-code>a{display:inline-block}#bbpress-forums .wporg-2fa__qr-code>a:focus,#bbpress-forums .wporg-2fa__qr-code>a:hover{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__manual{align-self:center;display:flex;flex-direction:column;margin-bottom:16px;max-width:360px}.wporg-2fa__manual,.wporg-2fa__manual .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__manual code{font-family:IBM Plex Mono;font-size:15px;font-style:normal;font-weight:400;line-height:20px;margin-top:32px}.wporg-2fa__submit-btn-container{display:flex;justify-content:space-between;width:100%}.wporg-2fa__submit-btn-container *{flex:1;justify-content:center}.wporg-2fa__submit-btn-container button+button{margin-right:0!important}.wporg-2fa__enabled-status{color:#4ab866;text-transform:uppercase}.wporg-2fa__setup-form{align-self:center;display:flex;flex-direction:column;justify-content:center;text-align:left}.wporg-2fa__setup-form>*{margin-bottom:16px}@media screen and (max-width:480px){.wporg-2fa__setup-form{width:100%}}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list{background-color:#ddd;margin:1em 0;padding:15px 20px}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list ol{-moz-column-count:2;-moz-column-width:110px;columns:110px 2;margin:0}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li::marker{color:#757575}.wporg-2fa__backup-codes .components-notice{margin:0 0 1em}#bbpress-forums .wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li{list-style-position:inside;list-style-type:decimal}#bbpress-forums .wporg-2fa__progress-bar,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar,.wporg-2fa__progress-bar{--color-enabled:#0475c4;--color-disabled:#ccc;--color-disabled-text:#757575;margin:0 -24px;position:relative}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps,.wporg-2fa__progress-bar .wporg-2fa__setup-steps{display:flex;justify-content:space-evenly;position:relative;z-index:2}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li{text-align:center}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps svg{border:1px solid;border-radius:30px;box-sizing:content-box;padding:15px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled{color:var(--color-enabled);font-weight:700}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg{fill:#fff;background-color:var(--color-enabled);border-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled{color:var(--color-disabled-text)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg{fill:var(--color-disabled);background-color:#fff;border-color:var(--color-disabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators{display:flex;justify-content:space-between;position:absolute;top:27px;width:100%;z-index:1}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li{flex-basis:33%;flex-grow:1;flex-shrink:1;height:3px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled{background-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled{background-color:var(--color-disabled)}.wporg-2fa__global-notice{position:absolute;right:0;top:-60px;z-index:2}.wporg-2fa__global-notice .components-snackbar__content,.wporg-2fa__global-notice.components-snackbar{cursor:auto}.wporg-2fa__global-notice .components-snackbar__content{position:relative}.wporg-2fa__global-notice .components-snackbar .components-snackbar__icon,.wporg-2fa__global-notice .components-snackbar__icon{fill:#4ab866;left:-34px!important;position:absolute;top:-6px!important;width:30px}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary{box-shadow:inset 0 0 0 1px var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));text-decoration:none}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary:not(:disabled):focus{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__auto-tabbing-input{display:flex}.wporg-2fa__auto-tabbing-input input{border:1px solid #949494;border-radius:2px;height:40px;padding:0!important;text-align:center;width:40px!important}.wporg-2fa__auto-tabbing-input input:focus{outline-color:#2271b1}.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:24px}@media screen and (max-width:767px){.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:auto}}.wporg-2fa__auto-tabbing-input.is-error input{border:1px solid #d94f4f!important;box-shadow:unset!important}.wporg-2fa__auto-tabbing-input.is-error input:focus{outline:unset}
+
+</style>
+<link rel='stylesheet' id='wp-components-css' href='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/components/style.css?ver=15.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://developer.wordpress.org/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://developer.wordpress.org/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://developer.wordpress.org/wp-includes/css/classic-themes.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link rel='stylesheet' id='mkaz-code-syntax-prism-css-css' href='https://developer.wordpress.org/wp-content/themes/wporg-developer/stylesheets/prism.css?ver=1666645610' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-handbook-css-css' href='https://developer.wordpress.org/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20200121' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-developer-style-css' href='https://developer.wordpress.org/wp-content/themes/wporg-developer/style.css?ver=1662513949' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-dev-sass-compiled-css' href='https://developer.wordpress.org/wp-content/themes/wporg-developer/stylesheets/main.css?ver=1680794476' type='text/css' media='all' />
+<link rel='stylesheet' id='awesomplete-css-css' href='https://developer.wordpress.org/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=1662513949' type='text/css' media='all' />
+<link rel='stylesheet' id='autocomplete-css-css' href='https://developer.wordpress.org/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=1662513949' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-fonts-css' href='https://developer.wordpress.org/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1675220034' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-header-footer-css' href='https://developer.wordpress.org/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1682525036' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://developer.wordpress.org/wp-content/plugins/jetpack/css/jetpack.css?ver=12.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view.min.js?ver=aa58d4d058136adf2722' id='wp-block-navigation-view-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view-modal.min.js?ver=774770b5630ff20f41e1' id='wp-block-navigation-view-modal-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/jquery/jquery.min.js?ver=3.6.3' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930' id='wporg-handbook-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/chapters.js?ver=1662513949' id='wporg-developer-chapters-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/vendors/inert-polyfill.min.js?ver=6.3-alpha-55700' id='wp-inert-polyfill-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/hooks/index.min.js?ver=b68e9bf6562f8d63a320' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/i18n/index.min.js?ver=3d2aeabd3f84698c0e2c' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<link rel="https://api.w.org/" href="https://developer.wordpress.org/wp-json/" /><link rel="alternate" type="application/json" href="https://developer.wordpress.org/wp-json/wp/v2/blocks-handbook/134542" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.wordpress.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3-alpha-55700" />
+<link rel='shortlink' href='https://developer.wordpress.org/?p=134542' />
+<link rel="alternate" type="application/json+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fblock-editor%2Freference-guides%2Fpackages%2Fpackages-create-block%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fblock-editor%2Freference-guides%2Fpackages%2Fpackages-create-block%2F&#038;format=xml" />
+<link rel="canonical" href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Stream WordPress user activity plugin v3.9.0 -->
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+	<style>img#wpstats{display:none}</style>
+				<style>
+			a.github-edit {
+				margin-left: .5em;
+				font-size: .5em;
+				vertical-align: top;
+				display: inline-block;
+				border: 1px solid #eeeeee;
+				border-radius: 2px;
+				background: #eeeeee;
+				padding: .5em .6em .4em;
+				color: black;
+				margin-top: 0.1em;
+			}
+			a.github-edit > * {
+				opacity: 0.6;
+			}
+			a.github-edit:hover > * {
+				opacity: 1;
+				color: black;
+			}
+			a.github-edit img {
+				height: .8em;
+			}
+		</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<link rel="icon" href="https://s.w.org/favicon.ico?2" sizes="32x32" />
+<link rel="icon" href="https://s.w.org/images/wmark.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://s.w.org/images/wmark.png" />
+<meta name="msapplication-TileImage" content="https://s.w.org/images/wmark.png" />
+	</head>
+
+	<body class="blocks-handbook-template-default single single-blocks-handbook postid-134542 admin-bar no-customize-support is-classic-theme single-handbook">
+		<a id="wporg-skip-link"  class="skip-link screen-reader-text" href="#content" data-selector="#content">Skip to content</a>
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-log-in'><a class='ab-item' href='https://login.wordpress.org/?redirect_to=https%3A%2F%2Fdeveloper.wordpress.org%2Fblock-editor%2Freference-guides%2Fpackages%2Fpackages-create-block%2F&#038;locale=en_US'>Log In</a></li><li id='wp-admin-bar-register'><a class='ab-item' href='https://login.wordpress.org/register?locale=en_US'>Register</a></li></ul>			</div>
+					</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<header class="global-header wp-block-group wp-block-wporg-global-header">
+
+<figure class="wp-block-image global-header__wporg-logo-mark">
+	<a href="https://wordpress.org/">
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>	</a>
+</figure>
+
+
+
+<nav class="is-responsive global-header__navigation wp-block-navigation is-horizontal is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open " data-micromodal-trigger="modal-1"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container  " style="" id="modal-1">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+							<ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/download/">Download &amp; Extend</a><button aria-label="Download &amp; Extend submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/mobile/"><span class="wp-block-navigation-item__label">Mobile</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://openverse.org/"><span class="wp-block-navigation-item__label">Openverse ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://learn.wordpress.org/">Learn</a><button aria-label="Learn submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/support/forums/"><span class="wp-block-navigation-item__label">Forums</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.tv ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://make.wordpress.org/">Community</a><button aria-label="Community submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Make WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/photos/"><span class="wp-block-navigation-item__label">Photo Directory</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/five-for-the-future/"><span class="wp-block-navigation-item__label">Five for the Future</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://www.meetup.com/pro/wordpress/"><span class="wp-block-navigation-item__label">Meetups ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://jobs.wordpress.net/"><span class="wp-block-navigation-item__label">Job Board ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/about/">About</a><button aria-label="About submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/enterprise/"><span class="wp-block-navigation-item__label">Enterprise</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/gutenberg/"><span class="wp-block-navigation-item__label">Gutenberg ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">WordPress Swag Store ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item global-header__mobile-get-wordpress global-header__get-wordpress wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li></ul>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!--
+	The search block is inside a navigation menu because that provides the exact functionality the design
+	calls for. It also provides a consistent experience with the primary navigation menu, with respect to
+	keyboard navigation, ARIA states, etc. It also saves having to write custom code for all the interactions.
+-->
+<nav class="is-responsive  is-vertical global-header__search wp-block-navigation is-layout-flex wp-container-6 wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open always-shown" data-micromodal-trigger="modal-5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container hidden-by-default " style="" id="modal-5">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-5-content">
+							<form role="search" method="get" action="https://wordpress.org/search/do-search.php" class="wp-block-search__button-inside wp-block-search__icon-button wp-block-search"><label for="wp-block-search__input-4" class="wp-block-search__label" >Search in WordPress.org</label><div class="wp-block-search__inside-wrapper " ><input type="search" id="wp-block-search__input-4" class="wp-block-search__input" name="s" value="" placeholder="Type to search…"  required /><button type="submit" class="wp-block-search__button has-icon wp-element-button"  aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path>
+				</svg></button></div></form>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!-- This is the first of two Get WordPress buttons; the other is in the navigation menu.
+	Two are needed because they have different DOM hierarchies at different breakpoints. -->
+
+<div class="global-header__desktop-get-wordpress-container is-layout-flow wp-block-group-is-layout-flow">
+	<a href="https://wordpress.org/download/" class="global-header__desktop-get-wordpress global-header__get-wordpress">
+		Get WordPress	</a>
+</div> 
+</header>
+<header id="masthead" class="site-header" role="banner">
+			<a href="#" id="secondary-toggle" onclick="return false;"><strong>Menu</strong></a>
+		<div class="site-branding">
+
+		<h1 class="site-title">
+			<a href="https://developer.wordpress.org/" rel="home">Developer Resources</a>
+		</h1>
+
+		
+		<div>
+			
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+							</nav>
+					</div>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+		<div id="content" class="site-content">
+
+
+	<div id="secondary" class="widget-area" role="complementary">
+		<a href="#" id="secondary-toggle"></a>
+		<div id="secondary-content">
+						<aside id="search-7" class="widget widget_search"><div class="search-wrap ">
+	<form role="search" method="get" class="searchform searchform-handbook" action="https://developer.wordpress.org/block-editor/">
+		<div class="search-field">
+			<input type="search" id="search-field" placeholder="Search Block Editor" value="" name="s">
+			<button class="button-search" aria-label="Search">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true" focusable="false"><path d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path></svg>	
+			</button>
+		</div>
+	
+	</form>
+</div>
+</aside><aside id="handbook_pages-3" class="widget widget_wporg_handbook_pages"><h2 class="widget-title">Chapters</h2>
+<div class="menu-table-of-contents-container">
+
+			<ul>
+				<li class="page_item page-item-122779 menu-item"><a href="https://developer.wordpress.org/block-editor/">Block Editor Handbook</a></li>
+<li class="page_item page-item-137157 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/getting-started/">Getting Started</a>
+<ul class='children'>
+	<li class="page_item page-item-134336 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/getting-started/devenv/">Development Environment</a>
+	<ul class='children'>
+		<li class="page_item page-item-134337 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/devenv/docker-ubuntu/">How to setup local WordPress environment on Ubuntu</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134338 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/">Create a Block Tutorial</a>
+	<ul class='children'>
+		<li class="page_item page-item-134339 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/wp-plugin/">WordPress Plugin</a></li>
+		<li class="page_item page-item-134340 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/block-anatomy/">Anatomy of a Block</a></li>
+		<li class="page_item page-item-134341 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/attributes/">Block Attributes</a></li>
+		<li class="page_item page-item-134342 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/block-code/">Code Implementation</a></li>
+		<li class="page_item page-item-134343 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/author-experience/">Authoring Experience</a></li>
+		<li class="page_item page-item-134344 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/finishing/">Finishing Touches</a></li>
+		<li class="page_item page-item-134345 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/create-block/submitting-to-block-directory/">Share your Block with the World</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-135656 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/full-site-editing/">Full Site Editing</a></li>
+	<li class="page_item page-item-135088 menu-item"><a href="https://developer.wordpress.org/block-editor/getting-started/outreach/">Outreach</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134350 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/">How-to Guides</a>
+<ul class='children'>
+	<li class="page_item page-item-134403 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/accessibility/">Accessibility</a></li>
+	<li class="page_item page-item-134374 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/">Blocks</a>
+	<ul class='children'>
+		<li class="page_item page-item-134375 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/">Create a basic block</a></li>
+		<li class="page_item page-item-134376 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/applying-styles-with-stylesheets/">Use styles and stylesheets</a></li>
+		<li class="page_item page-item-134377 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/introducing-attributes-and-editable-fields/">Introducing Attributes and Editable Fields</a></li>
+		<li class="page_item page-item-134378 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-controls-toolbar-and-sidebar/">Block Controls: Block Toolbar and Settings Sidebar</a></li>
+		<li class="page_item page-item-139820 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-supports-in-static-blocks/">Block Supports</a></li>
+		<li class="page_item page-item-134379 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/creating-dynamic-blocks/">Creating dynamic blocks</a></li>
+		<li class="page_item page-item-139805 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-supports-in-dynamic-blocks/">Block Supports in dynamic blocks</a></li>
+		<li class="page_item page-item-134380 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/generate-blocks-with-wp-cli/">Generate Blocks with WP-CLI</a></li>
+		<li class="page_item page-item-134381 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/">Nested Blocks: Using InnerBlocks</a></li>
+		<li class="page_item page-item-143065 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/extending-the-query-loop-block/">Extending the Query Loop block</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134395 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/platform/">Development Platform</a>
+	<ul class='children'>
+		<li class="page_item page-item-134396 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/platform/custom-block-editor/">Building a custom block editor</a>
+		<ul class='children'>
+			<li class="page_item page-item-134397 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/platform/custom-block-editor/tutorial/">Tutorial: building a custom block editor</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="page_item page-item-140129 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/">Create your First App with Gutenberg Data</a>
+	<ul class='children'>
+		<li class="page_item page-item-140130 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/1-data-basics-setup/">Setup</a></li>
+		<li class="page_item page-item-140131 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/2-building-a-list-of-pages/">Building a list of pages</a></li>
+		<li class="page_item page-item-140326 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/3-building-an-edit-form/">Building an edit form</a></li>
+		<li class="page_item page-item-140593 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/4-building-a-create-page-form/">Part 4: Building a Create page form</a></li>
+		<li class="page_item page-item-141549 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/data-basics/5-adding-a-delete-button/">Adding a delete button</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-141559 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/">Curating the Editor Experience</a></li>
+	<li class="page_item page-item-134382 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/feature-flags/">Feature Flags</a></li>
+	<li class="page_item page-item-137802 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/format-api/">Formatting Toolbar API</a></li>
+	<li class="page_item page-item-134351 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/">How to use JavaScript with the Block Editor</a>
+	<ul class='children'>
+		<li class="page_item page-item-134352 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/plugins-background/">Plugins Background</a></li>
+		<li class="page_item page-item-134353 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/loading-javascript/">Loading JavaScript</a></li>
+		<li class="page_item page-item-134354 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/extending-the-block-editor/">Extending the Block Editor</a></li>
+		<li class="page_item page-item-134355 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/troubleshooting/">Troubleshooting</a></li>
+		<li class="page_item page-item-134356 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/versions-and-building/">JavaScript Versions and Build Step</a></li>
+		<li class="page_item page-item-134357 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/scope-your-code/">Scope Your Code</a></li>
+		<li class="page_item page-item-134358 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/js-build-setup/">JavaScript Build Setup</a></li>
+		<li class="page_item page-item-134359 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/javascript/esnext-js/">ESNext Syntax</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134404 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/internationalization/">Internationalization</a></li>
+	<li class="page_item page-item-138642 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/metabox/">Meta Boxes</a></li>
+	<li class="page_item page-item-134366 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/notices/">Notices</a></li>
+	<li class="page_item page-item-138617 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/plugin-sidebar-0/">Plugin Sidebar</a></li>
+	<li class="page_item page-item-142888 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/propagating-updates/">Propagating updates for block types</a></li>
+	<li class="page_item page-item-135662 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/">Themes</a>
+	<ul class='children'>
+		<li class="page_item page-item-135664 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/create-block-theme/">Create a block theme</a></li>
+		<li class="page_item page-item-135663 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/block-theme-overview/">Block Theme</a></li>
+		<li class="page_item page-item-135665 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Global Settings &amp; Styles (theme.json)</a></li>
+		<li class="page_item page-item-135666 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/">Theme Support</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-137190 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/thunks/">Thunks in Core-Data</a></li>
+	<li class="page_item page-item-135818 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/how-to-guides/widgets/">Widgets</a>
+	<ul class='children'>
+		<li class="page_item page-item-135819 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/widgets/overview/">Widgets Block Editor overview</a></li>
+		<li class="page_item page-item-135820 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/widgets/opting-out/">Restoring the classic Widgets Editor</a></li>
+		<li class="page_item page-item-135821 menu-item"><a href="https://developer.wordpress.org/block-editor/how-to-guides/widgets/legacy-widget-block/">About the Legacy Widget block</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-134405 page_item_has_children current_page_ancestor current-menu-ancestor menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/">Reference Guides</a>
+<ul class='children'>
+	<li class="page_item page-item-134406 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/">Block API Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-134417 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-annotations/">Annotations</a></li>
+		<li class="page_item page-item-135620 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-api-versions/">API Versions</a></li>
+		<li class="page_item page-item-134409 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/">Attributes</a></li>
+		<li class="page_item page-item-135621 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-context/">Context</a></li>
+		<li class="page_item page-item-135622 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-deprecation/">Deprecation</a></li>
+		<li class="page_item page-item-134408 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/">Edit and Save</a></li>
+		<li class="page_item page-item-135623 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/">Metadata in block.json</a></li>
+		<li class="page_item page-item-135624 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/">Patterns</a></li>
+		<li class="page_item page-item-135625 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/">Registration</a></li>
+		<li class="page_item page-item-147262 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/">Selectors</a></li>
+		<li class="page_item page-item-135827 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/">Styles</a></li>
+		<li class="page_item page-item-135626 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/">Supports</a></li>
+		<li class="page_item page-item-134414 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-templates/">Templates</a></li>
+		<li class="page_item page-item-135627 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-transforms/">Transforms</a></li>
+		<li class="page_item page-item-135628 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/">Variations</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-138619 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/core-blocks/">Core Blocks Reference</a></li>
+	<li class="page_item page-item-134419 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/">Hooks Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-134420 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/">Block Hooks</a></li>
+		<li class="page_item page-item-134421 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/editor-filters/">Editor Hooks</a></li>
+		<li class="page_item page-item-136823 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/i18n-filters/">i18n Filters</a></li>
+		<li class="page_item page-item-134422 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/parser-filters/">Parser Filters</a></li>
+		<li class="page_item page-item-134423 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/autocomplete-filters/">Autocomplete</a></li>
+		<li class="page_item page-item-142935 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/filters/global-styles-filters/">Global Styles Filters</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134424 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/">SlotFills Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-134425 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/main-dashboard-button/">MainDashboardButton</a></li>
+		<li class="page_item page-item-134426 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-block-settings-menu-item/">PluginBlockSettingsMenuItem</a></li>
+		<li class="page_item page-item-134427 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-document-setting-panel/">PluginDocumentSettingPanel</a></li>
+		<li class="page_item page-item-134428 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-more-menu-item/">PluginMoreMenuItem</a></li>
+		<li class="page_item page-item-134429 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-post-publish-panel/">PluginPostPublishPanel</a></li>
+		<li class="page_item page-item-134430 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-post-status-info/">PluginPostStatusInfo</a></li>
+		<li class="page_item page-item-134431 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-pre-publish-panel/">PluginPrePublishPanel</a></li>
+		<li class="page_item page-item-134432 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar/">PluginSidebar</a></li>
+		<li class="page_item page-item-134433 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar-more-menu-item/">PluginSidebarMoreMenuItem</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134434 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/richtext/">RichText Reference</a></li>
+	<li class="page_item page-item-138654 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/">Theme.json Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-138991 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/theme-json-living/">Version 2 (living reference)</a></li>
+		<li class="page_item page-item-138992 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/theme-json-v1/">Version 1 Reference</a></li>
+		<li class="page_item page-item-138993 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/theme-json-migrations/">Migrating to Newer Versions</a></li>
+		<li class="page_item page-item-145060 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/styles-versions/">Available Styles Options</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134435 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/">Component Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-134436 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/alignment-matrix-control/">AlignmentMatrixControl</a></li>
+		<li class="page_item page-item-134437 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/angle-picker-control/">AnglePickerControl</a></li>
+		<li class="page_item page-item-134438 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/animate/">Animate</a></li>
+		<li class="page_item page-item-134439 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/autocomplete/">Autocomplete</a></li>
+		<li class="page_item page-item-136286 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/base-field/">BaseField</a></li>
+		<li class="page_item page-item-134440 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/base-control/">BaseControl</a></li>
+		<li class="page_item page-item-140373 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/border-box-control/">BorderBoxControl</a></li>
+		<li class="page_item page-item-140371 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/border-control/">BorderControl</a></li>
+		<li class="page_item page-item-134441 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/box-control/">BoxControl</a></li>
+		<li class="page_item page-item-134442 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/button-group/">ButtonGroup</a></li>
+		<li class="page_item page-item-134443 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/button/">Button</a></li>
+		<li class="page_item page-item-136324 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card-body/">CardBody</a></li>
+		<li class="page_item page-item-136325 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card-divider/">CardDivider</a></li>
+		<li class="page_item page-item-136326 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card-footer/">CardFooter</a></li>
+		<li class="page_item page-item-136327 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card-header/">CardHeader</a></li>
+		<li class="page_item page-item-136328 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card-media/">CardMedia</a></li>
+		<li class="page_item page-item-134444 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/card/">Card</a></li>
+		<li class="page_item page-item-134445 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/checkbox-control/">CheckboxControl</a></li>
+		<li class="page_item page-item-144986 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/circular-option-picker/">CircularOptionPicker</a></li>
+		<li class="page_item page-item-134446 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/clipboard-button/">ClipboardButton</a></li>
+		<li class="page_item page-item-134447 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/color-indicator/">ColorIndicator</a></li>
+		<li class="page_item page-item-134448 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/color-palette/">ColorPalette</a></li>
+		<li class="page_item page-item-134449 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/color-picker/">ColorPicker</a></li>
+		<li class="page_item page-item-134450 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/combobox-control/">ComboboxControl</a></li>
+		<li class="page_item page-item-137752 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/confirm-dialog/">ConfirmDialog</a></li>
+		<li class="page_item page-item-134451 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/custom-select-control/">CustomSelectControl</a></li>
+		<li class="page_item page-item-134452 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/dashicon/">Dashicon</a></li>
+		<li class="page_item page-item-134453 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/date-time/">DateTime</a></li>
+		<li class="page_item page-item-134454 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/dimension-control/">DimensionControl</a></li>
+		<li class="page_item page-item-134455 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/disabled/">Disabled</a></li>
+		<li class="page_item page-item-135813 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/divider/">Divider</a></li>
+		<li class="page_item page-item-134456 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/draggable/">Draggable</a></li>
+		<li class="page_item page-item-134457 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/drop-zone/">DropZone</a></li>
+		<li class="page_item page-item-134458 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/dropdown-menu/">DropdownMenu</a></li>
+		<li class="page_item page-item-136416 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/flyout/">Flyout</a></li>
+		<li class="page_item page-item-134459 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/dropdown/">Dropdown</a></li>
+		<li class="page_item page-item-135646 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/duotone-picker/">DuotonePicker</a></li>
+		<li class="page_item page-item-136231 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/elevation/">Elevation</a></li>
+		<li class="page_item page-item-134460 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/external-link/">ExternalLink</a></li>
+		<li class="page_item page-item-135760 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/flex-block/">FlexBlock</a></li>
+		<li class="page_item page-item-135761 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/flex-item/">FlexItem</a></li>
+		<li class="page_item page-item-134461 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/flex/">Flex</a></li>
+		<li class="page_item page-item-134462 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/focal-point-picker/">FocalPointPicker</a></li>
+		<li class="page_item page-item-134463 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/focusable-iframe/">FocusableIframe</a></li>
+		<li class="page_item page-item-134464 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/font-size-picker/">FontSizePicker</a></li>
+		<li class="page_item page-item-134465 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/form-file-upload/">FormFileUpload</a></li>
+		<li class="page_item page-item-134466 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/form-toggle/">FormToggle</a></li>
+		<li class="page_item page-item-134467 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/form-token-field/">FormTokenField</a></li>
+		<li class="page_item page-item-138647 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/gradient-picker/">GradientPicker</a></li>
+		<li class="page_item page-item-135809 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/grid/">Grid</a></li>
+		<li class="page_item page-item-134468 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/guide/">Guide</a></li>
+		<li class="page_item page-item-135796 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/h-stack/">HStack</a></li>
+		<li class="page_item page-item-135770 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/heading/">Heading</a></li>
+		<li class="page_item page-item-134469 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigate-regions/">NavigateRegions</a></li>
+		<li class="page_item page-item-134470 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/higher-order/">HigherOrder</a></li>
+		<li class="page_item page-item-134471 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-constrained-tabbing/">WithConstrainedTabbing</a></li>
+		<li class="page_item page-item-134472 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-fallback-styles/">WithFallbackStyles</a></li>
+		<li class="page_item page-item-134473 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-filters/">WithFilters</a></li>
+		<li class="page_item page-item-134474 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-focus-outside/">WithFocusOutside</a></li>
+		<li class="page_item page-item-134475 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-focus-return/">WithFocusReturn</a></li>
+		<li class="page_item page-item-134476 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-notices/">WithNotices</a></li>
+		<li class="page_item page-item-134477 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/with-spoken-messages/">WithSpokenMessages</a></li>
+		<li class="page_item page-item-134478 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/icon/">Icon</a></li>
+		<li class="page_item page-item-134479 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/input-control/">InputControl</a></li>
+		<li class="page_item page-item-134480 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/isolated-event-container/">IsolatedEventContainer</a></li>
+		<li class="page_item page-item-136845 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/item-group/">ItemGroup</a></li>
+		<li class="page_item page-item-136846 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/item/">Item</a></li>
+		<li class="page_item page-item-134481 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/keyboard-shortcuts/">KeyboardShortcuts</a></li>
+		<li class="page_item page-item-134482 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/menu-group/">MenuGroup</a></li>
+		<li class="page_item page-item-134483 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/menu-item/">MenuItem</a></li>
+		<li class="page_item page-item-134484 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/menu-items-choice/">MenuItemsChoice</a></li>
+		<li class="page_item page-item-134485 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/modal/">Modal</a></li>
+		<li class="page_item page-item-134486 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigable-container/">NavigableContainer</a></li>
+		<li class="page_item page-item-134487 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigation/">Navigation</a></li>
+		<li class="page_item page-item-140215 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator-back-button/">NavigatorBackButton</a></li>
+		<li class="page_item page-item-140216 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator-button/">NavigatorButton</a></li>
+		<li class="page_item page-item-137067 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator/">Navigator</a></li>
+		<li class="page_item page-item-137078 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator-provider/">NavigatorProvider</a></li>
+		<li class="page_item page-item-137079 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator-screen/">NavigatorScreen</a></li>
+		<li class="page_item page-item-144943 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/navigator-to-parent-button/">NavigatorToParentButton</a></li>
+		<li class="page_item page-item-134488 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/notice/">Notice</a></li>
+		<li class="page_item page-item-134489 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/number-control/">NumberControl</a></li>
+		<li class="page_item page-item-134490 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/panel/">Panel</a></li>
+		<li class="page_item page-item-134491 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/placeholder/">Placeholder</a></li>
+		<li class="page_item page-item-134492 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/popover/">Popover</a></li>
+		<li class="page_item page-item-134493 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/query-controls/">QueryControls</a></li>
+		<li class="page_item page-item-134494 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/">RadioControl</a></li>
+		<li class="page_item page-item-134495 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/radio-group/">RadioGroup</a></li>
+		<li class="page_item page-item-134496 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/range-control/">RangeControl</a></li>
+		<li class="page_item page-item-134497 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/resizable-box/">ResizableBox</a></li>
+		<li class="page_item page-item-134498 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/resize-tooltip/">ResizeTooltip</a></li>
+		<li class="page_item page-item-134499 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/responsive-wrapper/">ResponsiveWrapper</a></li>
+		<li class="page_item page-item-134500 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/sandbox/">Sandbox</a></li>
+		<li class="page_item page-item-134501 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/scroll-lock/">ScrollLock</a></li>
+		<li class="page_item page-item-136311 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/scrollable/">Scrollable</a></li>
+		<li class="page_item page-item-136420 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/search-control/">SearchControl</a></li>
+		<li class="page_item page-item-134502 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/select-control/">SelectControl</a></li>
+		<li class="page_item page-item-134503 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/slot-fill/">SlotFill</a></li>
+		<li class="page_item page-item-134504 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/snackbar/">Snackbar</a></li>
+		<li class="page_item page-item-135803 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/spacer/">Spacer</a></li>
+		<li class="page_item page-item-134505 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/spinner/">Spinner</a></li>
+		<li class="page_item page-item-136315 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/surface/">Surface</a></li>
+		<li class="page_item page-item-134506 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tab-panel/">TabPanel</a></li>
+		<li class="page_item page-item-134507 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/text-control/">TextControl</a></li>
+		<li class="page_item page-item-134508 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/text-highlight/">TextHighlight</a></li>
+		<li class="page_item page-item-143456 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/theme/">Theme</a></li>
+		<li class="page_item page-item-134509 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/text/">Text</a></li>
+		<li class="page_item page-item-134510 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/textarea-control/">TextareaControl</a></li>
+		<li class="page_item page-item-134511 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/">ToggleControl</a></li>
+		<li class="page_item page-item-140417 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toggle-group-control-option-base/">ToggleGroupControlOptionBase</a></li>
+		<li class="page_item page-item-140418 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toggle-group-control-option-icon/">ToggleGroupControlOptionIcon</a></li>
+		<li class="page_item page-item-137112 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toggle-group-control-option/">ToggleGroupControlOption</a></li>
+		<li class="page_item page-item-136900 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toggle-group-control/">ToggleGroupControl</a></li>
+		<li class="page_item page-item-134512 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-button/">ToolbarButton</a></li>
+		<li class="page_item page-item-135800 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-dropdown-menu/">ToolbarDropdownMenu</a></li>
+		<li class="page_item page-item-134513 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-group/">ToolbarGroup</a></li>
+		<li class="page_item page-item-134514 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-item/">ToolbarItem</a></li>
+		<li class="page_item page-item-134515 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/toolbar/">Toolbar</a></li>
+		<li class="page_item page-item-136876 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tools-panel-header/">ToolsPanelHeader</a></li>
+		<li class="page_item page-item-136877 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tools-panel-item/">ToolsPanelItem</a></li>
+		<li class="page_item page-item-136878 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tools-panel/">ToolsPanel</a></li>
+		<li class="page_item page-item-134516 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tooltip/">Tooltip</a></li>
+		<li class="page_item page-item-134517 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tree-grid/">TreeGrid</a></li>
+		<li class="page_item page-item-134518 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/tree-select/">TreeSelect</a></li>
+		<li class="page_item page-item-135766 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/truncate/">Truncate</a></li>
+		<li class="page_item page-item-134519 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/unit-control/">UnitControl</a></li>
+		<li class="page_item page-item-135797 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/v-stack/">VStack</a></li>
+		<li class="page_item page-item-134520 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/visually-hidden/">VisuallyHidden</a></li>
+		<li class="page_item page-item-136221 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/components/z-stack/">ZStack</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134521 page_item_has_children current_page_ancestor current_page_parent current-menu-ancestor current-menu-parent menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/">Package Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-136401 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-admin-manifest/">@wordpress/admin-manifest</a></li>
+		<li class="page_item page-item-134522 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-a11y/">@wordpress/a11y</a></li>
+		<li class="page_item page-item-134523 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-annotations/">@wordpress/annotations</a></li>
+		<li class="page_item page-item-134524 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-api-fetch/">@wordpress/api-fetch</a></li>
+		<li class="page_item page-item-134525 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-autop/">@wordpress/autop</a></li>
+		<li class="page_item page-item-134526 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-babel-plugin-import-jsx-pragma/">@wordpress/babel-plugin-import-jsx-pragma</a></li>
+		<li class="page_item page-item-134527 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-babel-plugin-makepot/">@wordpress/babel-plugin-makepot</a></li>
+		<li class="page_item page-item-134528 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-babel-preset-default/">@wordpress/babel-preset-default</a></li>
+		<li class="page_item page-item-134529 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-base-styles/">@wordpress/base-styles</a></li>
+		<li class="page_item page-item-134530 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-blob/">@wordpress/blob</a></li>
+		<li class="page_item page-item-134531 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-directory/">@wordpress/block-directory</a></li>
+		<li class="page_item page-item-134532 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/">@wordpress/block-editor</a></li>
+		<li class="page_item page-item-134533 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-library/">@wordpress/block-library</a></li>
+		<li class="page_item page-item-134534 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-serialization-default-parser/">@wordpress/block-serialization-default-parser</a></li>
+		<li class="page_item page-item-134535 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-serialization-spec-parser/">@wordpress/block-serialization-spec-parser</a></li>
+		<li class="page_item page-item-134536 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-blocks/">@wordpress/blocks</a></li>
+		<li class="page_item page-item-134537 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-browserslist-config/">@wordpress/browserslist-config</a></li>
+		<li class="page_item page-item-147194 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-commands/">@wordpress/commands</a></li>
+		<li class="page_item page-item-134538 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/">@wordpress/components</a></li>
+		<li class="page_item page-item-134539 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-compose/">@wordpress/compose</a></li>
+		<li class="page_item page-item-147439 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-commands/">@wordpress/core-commands</a></li>
+		<li class="page_item page-item-134540 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/">@wordpress/core-data</a></li>
+		<li class="page_item page-item-134543 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-custom-templated-path-webpack-plugin/">@wordpress/custom-templated-path-webpack-plugin</a></li>
+		<li class="page_item page-item-134541 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block-tutorial-template/">@wordpress/create-block-tutorial-template</a></li>
+		<li class="page_item page-item-134555 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-navigation/">@wordpress/edit-navigation</a></li>
+		<li class="page_item page-item-134542 page_item_has_children current_page_item current-menu-item menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/" aria-current="page">@wordpress/create-block</a>
+		<ul class='children'>
+			<li class="page_item page-item-142028 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/packages-create-block-external-template/">External Project Templates</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-134544 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-customize-widgets/">@wordpress/customize-widgets</a></li>
+		<li class="page_item page-item-134545 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data-controls/">@wordpress/data-controls</a></li>
+		<li class="page_item page-item-134546 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/">@wordpress/data</a></li>
+		<li class="page_item page-item-134547 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-date/">@wordpress/date</a></li>
+		<li class="page_item page-item-134548 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dependency-extraction-webpack-plugin/">@wordpress/dependency-extraction-webpack-plugin</a></li>
+		<li class="page_item page-item-134549 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-deprecated/">@wordpress/deprecated</a></li>
+		<li class="page_item page-item-134550 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-docgen/">@wordpress/docgen</a></li>
+		<li class="page_item page-item-134551 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dom-ready/">@wordpress/dom-ready</a></li>
+		<li class="page_item page-item-134552 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dom/">@wordpress/dom</a></li>
+		<li class="page_item page-item-134553 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-e2e-test-utils/">@wordpress/e2e-test-utils</a></li>
+		<li class="page_item page-item-134554 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-e2e-tests/">@wordpress/e2e-tests</a></li>
+		<li class="page_item page-item-134556 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-post/">@wordpress/edit-post</a></li>
+		<li class="page_item page-item-134557 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-site/">@wordpress/edit-site</a></li>
+		<li class="page_item page-item-134558 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-widgets/">@wordpress/edit-widgets</a></li>
+		<li class="page_item page-item-134559 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-editor/">@wordpress/editor</a></li>
+		<li class="page_item page-item-143014 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-experiments/">@wordpress/experiments</a></li>
+		<li class="page_item page-item-134560 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-element/">@wordpress/element</a></li>
+		<li class="page_item page-item-134561 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/">@wordpress/env</a></li>
+		<li class="page_item page-item-134562 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-escape-html/">@wordpress/escape-html</a></li>
+		<li class="page_item page-item-134563 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-eslint-plugin/">@wordpress/eslint-plugin</a></li>
+		<li class="page_item page-item-134564 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-format-library/">@wordpress/format-library</a></li>
+		<li class="page_item page-item-134565 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-hooks/">@wordpress/hooks</a></li>
+		<li class="page_item page-item-134566 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-html-entities/">@wordpress/html-entities</a></li>
+		<li class="page_item page-item-134567 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/">@wordpress/i18n</a></li>
+		<li class="page_item page-item-134568 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-icons/">@wordpress/icons</a></li>
+		<li class="page_item page-item-134569 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-interface/">@wordpress/interface</a></li>
+		<li class="page_item page-item-134570 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-is-shallow-equal/">@wordpress/is-shallow-equal</a></li>
+		<li class="page_item page-item-134571 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-jest-console/">@wordpress/jest-console</a></li>
+		<li class="page_item page-item-134572 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-jest-preset-default/">@wordpress/jest-preset-default</a></li>
+		<li class="page_item page-item-134573 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-jest-puppeteer-axe/">@wordpress/jest-puppeteer-axe</a></li>
+		<li class="page_item page-item-134574 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-keyboard-shortcuts/">@wordpress/keyboard-shortcuts</a></li>
+		<li class="page_item page-item-134577 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-library-export-default-webpack-plugin/">@wordpress/library-export-default-webpack-plugin</a></li>
+		<li class="page_item page-item-134575 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-keycodes/">@wordpress/keycodes</a></li>
+		<li class="page_item page-item-134576 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-lazy-import/">@wordpress/lazy-import</a></li>
+		<li class="page_item page-item-134578 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-list-reusable-blocks/">@wordpress/list-reusable-blocks</a></li>
+		<li class="page_item page-item-134579 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-media-utils/">@wordpress/media-utils</a></li>
+		<li class="page_item page-item-134591 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-react-native-aztec/">@wordpress/react-native-aztec</a></li>
+		<li class="page_item page-item-134580 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-notices/">@wordpress/notices</a></li>
+		<li class="page_item page-item-134592 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-react-native-bridge/">@wordpress/react-native-bridge</a></li>
+		<li class="page_item page-item-134581 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-npm-package-json-lint-config/">@wordpress/npm-package-json-lint-config</a></li>
+		<li class="page_item page-item-134582 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-nux/">@wordpress/nux</a></li>
+		<li class="page_item page-item-134593 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-react-native-editor/">@wordpress/react-native-editor</a></li>
+		<li class="page_item page-item-134583 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-plugins/">@wordpress/plugins</a></li>
+		<li class="page_item page-item-134584 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-postcss-plugins-preset/">@wordpress/postcss-plugins-preset</a></li>
+		<li class="page_item page-item-134585 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-postcss-themes/">@wordpress/postcss-themes</a></li>
+		<li class="page_item page-item-140504 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-preferences-persistence/">@wordpress/preferences-persistence</a></li>
+		<li class="page_item page-item-140283 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-preferences/">@wordpress/preferences</a></li>
+		<li class="page_item page-item-134586 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-prettier-config/">@wordpress/prettier-config</a></li>
+		<li class="page_item page-item-134587 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-primitives/">@wordpress/primitives</a></li>
+		<li class="page_item page-item-134588 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-priority-queue/">@wordpress/priority-queue</a></li>
+		<li class="page_item page-item-144923 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-private-apis/">@wordpress/private-apis</a></li>
+		<li class="page_item page-item-134589 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-project-management-automation/">@wordpress/project-management-automation</a></li>
+		<li class="page_item page-item-134590 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-react-i18n/">@wordpress/react-i18n</a></li>
+		<li class="page_item page-item-136338 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-readable-js-assets-webpack-plugin/">@wordpress/readable-js-assets-webpack-plugin</a></li>
+		<li class="page_item page-item-134594 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-redux-routine/">@wordpress/redux-routine</a></li>
+		<li class="page_item page-item-134595 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-reusable-blocks/">@wordpress/reusable-blocks</a></li>
+		<li class="page_item page-item-134596 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-rich-text/">@wordpress/rich-text</a></li>
+		<li class="page_item page-item-147436 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-router/">@wordpress/router</a></li>
+		<li class="page_item page-item-134597 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/">@wordpress/scripts</a></li>
+		<li class="page_item page-item-134598 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-server-side-render/">@wordpress/server-side-render</a></li>
+		<li class="page_item page-item-134599 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-shortcode/">@wordpress/shortcode</a></li>
+		<li class="page_item page-item-140166 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-style-engine/">@wordpress/style-engine</a>
+		<ul class='children'>
+			<li class="page_item page-item-143027 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-style-engine/using-the-style-engine-with-block-supports/">@wordpress/style-engine Using the Style Engine to generate block supports styles</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-134600 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-stylelint-config/">@wordpress/stylelint-config</a></li>
+		<li class="page_item page-item-134601 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-token-list/">@wordpress/token-list</a></li>
+		<li class="page_item page-item-134602 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-url/">@wordpress/url</a></li>
+		<li class="page_item page-item-134603 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-viewport/">@wordpress/viewport</a></li>
+		<li class="page_item page-item-134604 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-warning/">@wordpress/warning</a></li>
+		<li class="page_item page-item-135780 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-widgets/">@wordpress/widgets</a></li>
+		<li class="page_item page-item-134605 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-wordcount/">@wordpress/wordcount</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134606 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/">Data Module Reference</a>
+	<ul class='children'>
+		<li class="page_item page-item-134607 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core/">WordPress Core Data</a></li>
+		<li class="page_item page-item-134608 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-annotations/">Annotations</a></li>
+		<li class="page_item page-item-141744 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-directory/">Block directory</a></li>
+		<li class="page_item page-item-134610 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/">The Block Editor’s Data</a></li>
+		<li class="page_item page-item-134609 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-blocks/">Block Types Data</a></li>
+		<li class="page_item page-item-141745 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-customize-widgets/">Customize Widgets</a></li>
+		<li class="page_item page-item-134612 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-edit-post/">The Editor’s UI Data</a></li>
+		<li class="page_item page-item-141746 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-edit-site/">Edit Site</a></li>
+		<li class="page_item page-item-141747 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-edit-widgets/">Edit Widgets</a></li>
+		<li class="page_item page-item-134611 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-editor/">The Post Editor’s Data</a></li>
+		<li class="page_item page-item-141748 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-keyboard-shortcuts/">The Keyboard Shortcuts Data</a></li>
+		<li class="page_item page-item-134614 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-nux/">The NUX (New User Experience) Data</a></li>
+		<li class="page_item page-item-134613 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/">Notices Data</a></li>
+		<li class="page_item page-item-141749 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-preferences/">Preferences</a></li>
+		<li class="page_item page-item-141750 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-reusable-blocks/">Reusable blocks</a></li>
+		<li class="page_item page-item-141751 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-rich-text/">Rich Text</a></li>
+		<li class="page_item page-item-134615 menu-item"><a href="https://developer.wordpress.org/block-editor/reference-guides/data/data-core-viewport/">The Viewport Data</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-134616 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/explanations/">Explanations</a>
+<ul class='children'>
+	<li class="page_item page-item-134617 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/">Architecture</a>
+	<ul class='children'>
+		<li class="page_item page-item-134618 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/key-concepts/">Key Concepts</a></li>
+		<li class="page_item page-item-134619 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/data-flow/">Data Flow and Data Format</a></li>
+		<li class="page_item page-item-134620 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/modularity/">Modularity</a></li>
+		<li class="page_item page-item-134621 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/performance/">Performance</a></li>
+		<li class="page_item page-item-134622 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/automated-testing/">Automated Testing</a></li>
+		<li class="page_item page-item-134623 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/full-site-editing-templates/">Site Editing Templates</a></li>
+		<li class="page_item page-item-139822 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/architecture/styles/">Styles</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134400 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/explanations/user-interface/">User Interface</a>
+	<ul class='children'>
+		<li class="page_item page-item-140085 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/user-interface/block-design/">Block Design</a></li>
+		<li class="page_item page-item-140086 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/user-interface/animation/">Animation</a></li>
+		<li class="page_item page-item-140087 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/user-interface/design-resources/">Resources</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-135086 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/faq/">Frequently Asked Questions</a></li>
+	<li class="page_item page-item-135085 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/glossary/">Glossary</a></li>
+	<li class="page_item page-item-135087 menu-item"><a href="https://developer.wordpress.org/block-editor/explanations/history/">History</a></li>
+</ul>
+</li>
+<li class="page_item page-item-135089 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/">Contributor Guide</a>
+<ul class='children'>
+	<li class="page_item page-item-135090 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/code/">Code Contributions</a>
+	<ul class='children'>
+		<li class="page_item page-item-135097 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/getting-started-with-code-contribution/">Getting Started With Code Contribution</a></li>
+		<li class="page_item page-item-135098 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/git-workflow/">Git Workflow</a></li>
+		<li class="page_item page-item-135099 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/coding-guidelines/">Coding Guidelines</a></li>
+		<li class="page_item page-item-135100 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/code/testing-overview/">Testing Overview</a>
+		<ul class='children'>
+			<li class="page_item page-item-145014 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/code/testing-overview/e2e/">End-to-End Testing</a>
+			<ul class='children'>
+				<li class="page_item page-item-145015 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/testing-overview/e2e/migration/">Migration guide</a></li>
+				<li class="page_item page-item-145016 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/testing-overview/e2e/overusing-snapshots/">Overusing snapshots</a></li>
+			</ul>
+</li>
+		</ul>
+</li>
+		<li class="page_item page-item-135101 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/grammar/">Block Grammar</a></li>
+		<li class="page_item page-item-135102 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/scripts/">Scripts</a></li>
+		<li class="page_item page-item-135103 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/managing-packages/">Managing Packages</a></li>
+		<li class="page_item page-item-135104 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/code/release/">Gutenberg Release Process</a>
+		<ul class='children'>
+			<li class="page_item page-item-141834 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/release/auto-cherry-picking/">Cherry-picking automation</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-137772 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/code/react-native/">React Native mobile editor</a>
+		<ul class='children'>
+			<li class="page_item page-item-137773 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/react-native/getting-started-react-native/">Getting Started for the React Native based Mobile Gutenberg</a></li>
+			<li class="page_item page-item-137796 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/react-native/osx-setup-guide/">Setup guide for React Native development (macOS)</a></li>
+			<li class="page_item page-item-137774 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/react-native/integration-test-guide/">React Native Integration Test Guide</a></li>
+			<li class="page_item page-item-139019 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/react-native/internationalization-guide/">React Native Internationalization Guide</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-140088 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/backward-compatibility/">Backward Compatibility</a></li>
+		<li class="page_item page-item-140089 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/deprecations/">Deprecations</a></li>
+		<li class="page_item page-item-140530 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/code/how-to-get-your-pull-request-reviewed/">How To Get Your Pull Request Reviewed?</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134990 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/design/">Design Contributions</a>
+	<ul class='children'>
+		<li class="page_item page-item-135107 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/design/the-block/">Blocks are the Interface</a></li>
+		<li class="page_item page-item-135108 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/design/reference/">Reference</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-134991 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/documentation/">Documentation Contributions</a>
+	<ul class='children'>
+		<li class="page_item page-item-134637 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/documentation/copy-guide/">Copy Guidelines</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-129316 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/triage/">Triage</a></li>
+	<li class="page_item page-item-41897 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/localizing/">Localizing Gutenberg</a></li>
+	<li class="page_item page-item-134638 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/accessibility-testing/">Accessibility Testing</a></li>
+	<li class="page_item page-item-41530 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/repository-management/">Repository Management</a></li>
+	<li class="page_item page-item-134639 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/folder-structure/">Folder Structure</a></li>
+	<li class="page_item page-item-134640 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/versions-in-wordpress/">Versions in WordPress</a></li>
+	<li class="page_item page-item-134641 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/roadmap/">Upcoming Projects &amp; Roadmap</a></li>
+</ul>
+</li>
+			</ul>
+
+			</div>		</div>
+	</div><!-- #secondary -->
+
+
+		<main id="primary" class="site-main post-134542 blocks-handbook type-blocks-handbook status-publish hentry type-handbook" role="main">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.wordpress.org" title="WordPress Developer Resources" rel="home">Home</a></span> <span class="sep">&#47;</span> 
+			<span class="trail-inner"><a href="https://developer.wordpress.org/block-editor/">Block Editor Handbook</a></span> <span class="sep">&#47;</span> 
+			<span class="trail-inner"><a href="https://developer.wordpress.org/block-editor/reference-guides/" title="Reference Guides">Reference Guides</a></span> <span class="sep">&#47;</span> 
+			<span class="trail-inner"><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/" title="Package Reference">Package Reference</a></span> <span class="sep">&#47;</span> <span class="trail-end">@wordpress/create-block</span>
+		</div>
+		
+			
+<h1>@wordpress/create-block <a class="github-edit" href="https://github.com/WordPress/gutenberg/edit/trunk/packages/create-block/README.md"><img src="https://developer.wordpress.org/wp-content/plugins/wporg-cli/assets/images/github-mark.svg"> <span>Edit</span></a></h1>
+
+
+<p>Create Block is an <strong>officially supported tool for scaffolding a WordPress plugin that registers a block</strong>. It generates PHP, JS, CSS code, and everything you need to start the project. It also integrates a modern build setup with no configuration.</p>
+<p><em>It is largely inspired by <a href="https://create-react-app.dev/docs/getting-started">create-react-app</a>. Major kudos to <a href="https://github.com/gaearon">@gaearon</a>, the whole Facebook team, and the React community.</em></p>
+<blockquote><p>
+  <strong>Blocks are the fundamental elements of modern WordPress sites</strong>. Introduced in <a href="https://wordpress.org/news/2018/12/bebo/">WordPress 5.0</a>, they allow <a href="https://wordpress.org/gutenberg/">page and post builder-like functionality</a> to every up-to-date WordPress website.</p>
+<p>  <em>Learn more about the <a href="https://developer.wordpress.org/block-editor/developers/block-api/block-registration/">Block API at the Gutenberg HandBook</a>.</em>
+</p></blockquote>
+<header class="toc-header"><h2 id="table-of-contents" class="toc-heading" tabindex="-1" ><a href="#table-of-contents" class="dashicons-before dashicons-admin-links">Table of Contents</a></h2></header>
+<ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#interactive-mode">Interactive Mode</a></li>
+<li><a href="#slug"><code>slug</code></a></li>
+<li><a href="#options"><code>options</code></a></li>
+</ul>
+</li>
+<li><a href="#available-commands">Available Commands</a></li>
+<li><a href="#external-project-templates">External Project Templates</a></li>
+<li><a href="#contributing-to-this-package">Contributing to this package</a></li>
+</ul>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 id="quick-start" class="toc-heading" tabindex="-1" ><a href="#quick-start" class="dashicons-before dashicons-admin-links">Quick start</a></h2></header>
+<pre><code class="language-bash">$ npx @wordpress/create-block todo-list
+$ cd todo-list
+$ npm start
+</code></pre>
+<p>The <code>slug</code> provided (<code>todo-list</code> in the example) defines the folder name for the scaffolded plugin and the internal block name. The WordPress plugin generated must <a href="https://wordpress.org/documentation/article/manage-plugins/#manual-plugin-installation">be installed manually</a>.</p>
+<p><em>(requires <code>node</code> version <code>14.0.0</code> or above, and <code>npm</code> version <code>6.14.4</code> or above)</em></p>
+<blockquote><p>
+  <a href="https://learn.wordpress.org/tutorial/using-the-create-block-tool/">Watch a video introduction to create-block on Learn.wordpress.org</a>
+</p></blockquote>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 id="usage" class="toc-heading" tabindex="-1" ><a href="#usage" class="dashicons-before dashicons-admin-links">Usage</a></h2></header>
+<p>The <code>create-block</code> command generates a project with PHP, JS, and CSS code for registering a block with a WordPress plugin.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block [options] [slug]
+</code></pre>
+<p><img decoding="async" src="https://user-images.githubusercontent.com/699132/103872910-4de15f00-50cf-11eb-8c74-67ca91a8c1a4.gif" alt="Demo" /></p>
+<blockquote><p>
+  The name for a block is a unique string that identifies a block. Block Names are structured as <code>namespace</code>/<code>slug</code>, where namespace is the name of your plugin or theme.</p>
+<p>  In most cases, we recommended pairing blocks with WordPress plugins rather than themes, because only using plugin ensures that all blocks still work when your theme changes.
+</p></blockquote>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 id="interactive-mode" class="toc-heading" tabindex="-1" ><a href="#interactive-mode" class="dashicons-before dashicons-admin-links">Interactive Mode</a></h3></header>
+<p>When no <code>slug</code> is provided, the script will run in interactive mode and will start prompting for the input required (<code>slug</code>, title, namespace&#8230;) to scaffold the project.</p>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 id="slug" class="toc-heading" tabindex="-1" ><a href="#slug" class="dashicons-before dashicons-admin-links"><code>slug</code></a></h3></header>
+<p>The use of <code>slug</code> is optional.</p>
+<p>When provided it triggers the <em>quick mode</em>, where this <code>slug</code> is used:<br />
+&#8211; as the block slug (required for its identification)<br />
+&#8211; as the output location (folder name) for scaffolded files<br />
+&#8211; as the name of the WordPress plugin.</p>
+<p>The rest of the configuration is set to all default values unless overridden with some options listed below.</p>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 id="options" class="toc-heading" tabindex="-1" ><a href="#options" class="dashicons-before dashicons-admin-links"><code>options</code></a></h3></header>
+<pre><code class="language-bash">-V, --version                output the version number
+-t, --template &lt;name&gt;        project template type name; allowed values: "static" (default), "es5", the name of an external npm package, or the path to a local directory
+--no-plugin                  scaffold block files only
+--namespace &lt;value&gt;          internal namespace for the block name
+--title &lt;value&gt;              display title for the block and the WordPress plugin
+--short-description &lt;value&gt;  short description for the block and the WordPress plugin
+--category &lt;name&gt;            category name for the block
+--wp-scripts                 enable integration with `@wordpress/scripts` package
+--no-wp-scripts              disable integration with `@wordpress/scripts` package
+--wp-env                     enable integration with `@wordpress/env` package
+-h, --help                   output usage information
+--variant                    choose a block variant as defined by the template
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h4 id="template" class="toc-heading" tabindex="-1" ><a href="#template" class="dashicons-before dashicons-admin-links"><code>--template</code></a></h4></header>
+<p>This argument specifies an <em>external npm package</em> as a template.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --template my-template-package
+</code></pre>
+<p>This argument also allows to pick a <em>local directory</em> as a template.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --template ./path/to/template-directory
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h4 id="variant" class="toc-heading" tabindex="-1" ><a href="#variant" class="dashicons-before dashicons-admin-links"><code>--variant</code></a></h4></header>
+<p>With this argument, <code>create-block</code> will generate a <a href="https://developer.wordpress.org/block-editor/explanations/glossary/#dynamic-block">dynamic block</a> based on the built-in template.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --variant dynamic
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h4 id="help" class="toc-heading" tabindex="-1" ><a href="#help" class="dashicons-before dashicons-admin-links"><code>--help</code></a></h4></header>
+<p>With this argument, the <code>create-block</code> package outputs usage information.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --help
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h4 id="no-plugin" class="toc-heading" tabindex="-1" ><a href="#no-plugin" class="dashicons-before dashicons-admin-links"><code>--no-plugin</code></a></h4></header>
+<p>With this argument, the <code>create-block</code> package runs in <em>No plugin mode</em> which only scaffolds block files into the current directory.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --no-plugin
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h4 id="wp-env" class="toc-heading" tabindex="-1" ><a href="#wp-env" class="dashicons-before dashicons-admin-links"><code>--wp-env</code></a></h4></header>
+<p>With this argument, the <code>create-block</code> package will add to the generated plugin the configuration and the script to run <a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/"><code>wp-env</code> package</a> within the plugin. This will allow you to easily set up a local WordPress environment (via Docker) for building and testing the generated plugin.</p>
+<pre><code class="language-bash">$ npx @wordpress/create-block --wp-env
+</code></pre>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 id="available-commands-in-the-scaffolded-project" class="toc-heading" tabindex="-1" ><a href="#available-commands-in-the-scaffolded-project" class="dashicons-before dashicons-admin-links">Available commands in the scaffolded project</a></h2></header>
+<p>The plugin folder created when executing this command, is a node package with a modern build setup that requires no configuration.</p>
+<p>A set of scripts is available from inside that folder (provided by the <code>scripts</code> package) to make your work easier. <a href="https://github.com/WordPress/gutenberg/tree/HEAD/packages/scripts#available-scripts">Click here</a> for a full description of these commands.</p>
+<p><em>Note: You don’t need to install or configure tools like <a href="https://webpack.js.org">webpack</a>, <a href="https://babeljs.io">Babel</a> or <a href="https://eslint.org">ESLint</a> yourself. They are preconfigured and hidden so that you can focus on coding.</em></p>
+<p>For example, running the <code>start</code> script from inside the generated folder (<code>npm start</code>) would automatically start the build for development.</p>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 id="external-project-templates" class="toc-heading" tabindex="-1" ><a href="#external-project-templates" class="dashicons-before dashicons-admin-links">External Project Templates</a></h2></header>
+<p><a href="https://github.com/WordPress/gutenberg/tree/HEAD/packages/create-block/docs/external-template.md">Click here</a> for information on External Project Templates</p>
+<header class="toc-header"><p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 id="contributing-to-this-package" class="toc-heading" tabindex="-1" ><a href="#contributing-to-this-package" class="dashicons-before dashicons-admin-links">Contributing to this package</a></h2></header>
+<p>This is an individual package that&#8217;s part of the Gutenberg project. The project is organized as a monorepo. It&#8217;s made up of multiple self-contained software packages, each with a specific purpose. The packages in this monorepo are published to <a href="https://www.npmjs.com/">npm</a> and used by <a href="https://make.wordpress.org/core/">WordPress</a> as well as other software projects.</p>
+<p>To find out more about contributing to this package or Gutenberg as a whole, please read the project&#8217;s main <a href="https://github.com/WordPress/gutenberg/tree/HEAD/CONTRIBUTING.md">contributor guide</a>.</p>
+<style>
+		.toc-header {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 48px !important;
+		}
+		.toc-jump {
+			text-align: right;
+			font-size: 0.75em;
+			order: 2;
+		}
+		.rtl .toc-jump {
+			text-align: left;
+		}
+		.toc-heading a:first-of-type {
+			color: inherit;
+			font-weight: inherit;
+			margin-left: -32px;
+			text-decoration: none !important;
+		}
+		.rtl .toc-heading a:first-of-type {
+			margin-left: inherit;
+			margin-right: -32px;
+		}
+		.toc-heading a:before {
+			vertical-align: middle;
+			/* icon is 20px wide in a 32px space, so add 12px horizontal margin. */
+			margin: -4px 8px 0 4px;
+		}
+		.rtl .toc-heading a:before {
+			margin-left: 8px;
+			margin-right: 4px;
+		}
+		@media (max-width: 876px) {
+			.toc-heading a {
+				margin-left: -20px;
+			}
+			.rtl .toc-heading a {
+				margin-left: inherit;
+				margin-right: -20px;
+			}
+			.toc-heading a:before {
+				/* icon is 14px wide in a 20px space, so add 6px horizontal margin. */
+				margin: -2px 4px 0 2px;
+				width: 14px;
+				height: 14px;
+				font-size: 14px;
+			}
+			.rtl .toc-heading a:before {
+				margin-left: 4px;
+				margin-right: 2px;
+			}
+			.toc-heading a:first-of-type {
+				margin-left: 0;
+			}
+			.rtl .toc-heading a:first-of-type {
+				margin-left: inherit;
+				margin-right: 0;
+			}
+		}
+	</style>
+
+
+<div class="bottom-of-entry">&nbsp;</div>
+
+			
+		<nav class="handbook-navigation" role="navigation">
+			<h1 class="screen-reader-text">Handbook navigation</h1>
+			<div class="nav-links">
+
+			<a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-navigation/" rel="previous"><span class="meta-nav">&larr;</span> @wordpress/edit-navigation</a><a href="https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/packages-create-block-external-template/" rel="next">External Project Templates <span class="meta-nav">&rarr;</span></a>
+			</div>
+			<!-- .nav-links -->
+		</nav><!-- .navigation -->
+	
+		
+		</main><!-- #main -->
+
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+<footer class="global-footer wp-block-group wp-block-wporg-global-footer">
+
+<div class="wp-block-group global-footer__navigation-container is-layout-flow wp-block-group-is-layout-flow">
+	<nav class="global-footer__navigation-important wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpressfoundation.org/donate/"><span class="wp-block-navigation-item__label">Donate</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">Swag</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-information wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Get Involved</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-resources wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-community wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.TV</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://buddypress.org/"><span class="wp-block-navigation-item__label">BuddyPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://bbpress.org/"><span class="wp-block-navigation-item__label">bbPress</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-external wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.com/?ref=wporg-footer"><span class="wp-block-navigation-item__label">WordPress.com</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://ma.tt/"><span class="wp-block-navigation-item__label">Matt</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/privacy/"><span class="wp-block-navigation-item__label">Privacy</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://publiccode.eu/"><span class="wp-block-navigation-item__label">Public Code</span></a></li></ul></nav>
+</div> 
+
+
+<div class="wp-block-group global-footer__logos-container is-layout-flow wp-block-group-is-layout-flow">
+	
+	<div class="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-19 wp-block-group-is-layout-flex">
+		
+		<!-- The design calls for two logos, a small "mark" on mobile/tablet, and the full logo for desktops. -->
+			<figure class="wp-block-image global-footer__wporg-logo-mark">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>				</a>
+			</figure>
+
+			<figure class="wp-block-image global-footer__wporg-logo-full">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="329" height="52" viewBox="0 0 329 52">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M4.33 26a21.68 21.68 0 0 0 12.22 19.5L6.21 17.18A21.66 21.66 0 0 0 4.33 26ZM26.38 27.89l-6.5 18.89a21.31 21.31 0 0 0 6.12.89 21.77 21.77 0 0 0 7.2-1.23 1.429 1.429 0 0 1-.16-.3l-6.66-18.25Z"/>
+	<path fill="currentColor" d="M26 0a26 26 0 1 0 0 52 26 26 0 0 0 0-52Zm20.27 39.66a24.47 24.47 0 0 1-29.78 8.86 24.49 24.49 0 0 1-13-13 24.4 24.4 0 0 1 5.23-26.8 24.46 24.46 0 0 1 26.79-5.24 24.49 24.49 0 0 1 13 13 24.42 24.42 0 0 1-2.25 23.17l.01.01Z"/>
+	<path fill="currentColor" d="M45 15.61c.103.736.153 1.477.15 2.22a20.38 20.38 0 0 1-1.65 7.76l-6.61 19.14A21.65 21.65 0 0 0 45 15.61ZM40.63 24.91a11.45 11.45 0 0 0-1.79-6c-1.1-1.78-2.13-3.29-2.13-5.08A3.76 3.76 0 0 1 40.35 10h.28A21.65 21.65 0 0 0 7.9 14.1h1.39c2.27 0 5.78-.27 5.78-.27a.9.9 0 0 1 .13 1.79s-1.17.13-2.47.2l7.88 23.47 4.75-14.22L22 15.84c-1.17-.07-2.27-.2-2.27-.2a.9.9 0 0 1 .14-1.79s3.57.27 5.7.27c2.13 0 5.78-.27 5.78-.27a.9.9 0 0 1 .14 1.79s-1.18.13-2.48.2l7.83 23.29 2.23-7.08a25.171 25.171 0 0 0 1.56-7.14ZM145.83 19.3h-10.34v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85-2.48-.35-4.16-1.68-6.47-4.22l-2.66-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.24 0 3.76.69 3.76 4.79v7.4c0 4.1-.52 4.85-3.76 4.85v1.1h11.5v-1.1c-3.24 0-3.76-.75-3.76-4.85v-2.08h1l6.42 8h16.81c8.26 0 11.85-4.39 11.85-9.65 0-5.26-3.61-9.56-11.87-9.56Zm-24.21 9.42V21H124a3.551 3.551 0 0 1 3.76 3.87 3.536 3.536 0 0 1-3.76 3.85h-2.38Zm24.38 8h-.4c-2.08 0-2.37-.52-2.37-3.18V21H146c6 0 7.11 4.39 7.11 7.8S152 36.75 146 36.75v-.03ZM93.49 13.52H82.62v1.16c3.7 0 4.22 1 3.07 4.39l-4 11.78L76 13.52h-1.1l-5.85 17.33-3.87-11.78c-1.22-3.59-.29-4.39 3.12-4.39v-1.16H55.47v1.16c3.35 0 4.28.86 5.66 5.08l6.42 19.76h.75l6-18.08 5.9 18.08h.8l6.59-19.76c1.44-4.22 2.31-5.08 5.95-5.08l-.05-1.16ZM101.34 18.55c-6.35 0-11.55 4.68-11.55 10.34s5.2 10.4 11.55 10.4c6.35 0 11.56-4.68 11.56-10.4 0-5.72-5.2-10.34-11.56-10.34Zm0 18.89c-5.31 0-7.16-4.74-7.16-8.55 0-3.81 1.85-8.55 7.16-8.55 5.31 0 7.23 4.79 7.23 8.55 0 3.76-1.85 8.55-7.23 8.55ZM170.67 13.52h-12v1.16c3.88 0 4.57.92 4.57 6.7v9.24c0 5.78-.69 6.76-4.57 6.76v1.16H172v-1.16c-3.88 0-4.57-1-4.57-6.76v-2.83h3.29c6 0 9.25-3.12 9.25-7.11s-3.35-7.16-9.3-7.16Zm0 12.13h-3.29v-10h3.29c3.24 0 4.74 2.31 4.74 5.08s-1.5 4.92-4.74 4.92ZM219.32 34.15c-.52 1.9-1.15 2.6-5.26 2.6h-.81c-3 0-3.52-.7-3.52-4.8v-2.66c4.51 0 4.85.41 4.85 3.41h1.1v-8.61h-1.1c0 3-.34 3.41-4.85 3.41V21h3.18c4.1 0 4.74.69 5.26 2.6l.28 1.1h.93l-.38-5.4h-17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 3.75-.44 4.69-3 4.83-2.42-.37-4.09-1.69-6.37-4.2l-2.65-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85v1.1h11.49v-1.1c-3.23 0-3.75-.75-3.75-4.85v-2.08h1l6.41 8h23.75l.35-5.43h-.87l-.31 1.07ZM189 28.72V21h2.37a3.542 3.542 0 0 1 3.75 3.87 3.532 3.532 0 0 1-.998 2.77 3.532 3.532 0 0 1-2.752 1.05l-2.37.03ZM234.52 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85h-1.09a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7-2.54 7-6.18.07-1.77-1.03-3.9-3.8-5.23ZM252 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85H253a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7.05-2.54 7.05-6.18.07-1.77-1.03-3.9-3.79-5.23ZM277.56 18.75a10.481 10.481 0 0 0-10.68 10.17 10.47 10.47 0 0 0 10.68 10.16c5.9 0 10.71-4.58 10.71-10.16s-4.81-10.17-10.71-10.17Zm0 19c-5.52 0-7.63-4.91-7.63-8.88 0-3.97 2.07-8.87 7.63-8.87 5.56 0 7.66 4.94 7.66 8.92 0 3.98-2.11 8.88-7.66 8.88v-.05ZM301.71 33.79l-3.14-3.69c3.63-.38 5.71-2.59 5.71-5.38 0-3-2.44-5.42-6.89-5.42h-8.47v.7c2.66 0 3.05.51 3.05 3.72v10.39c0 3.21-.39 3.76-3.05 3.76v.67h8.66v-.67c-2.66 0-3.05-.55-3.05-3.76v-4H296l6.35 8.44h5.29v-.67c-1.88-.24-4.03-1.88-5.93-4.09ZM294.53 29v-8.52h2.82c2.79 0 4.08 1.93 4.08 4.24 0 2.31-1.29 4.28-4.08 4.28h-2.82ZM319.6 30.59v.64c2.21 0 3 .7 3 2.08 0 2.89-2.5 4.39-5.29 4.39-5.93 0-7.6-4.81-7.6-8.78 0-3.97 1.86-8.92 7-8.92 3.59 0 6.09 2.54 7 6.7h.64v-7h-.64a3.281 3.281 0 0 1-1.09 1.83 8.203 8.203 0 0 0-6-2.73 10.167 10.167 0 0 0-9.851 10.165 10.169 10.169 0 0 0 9.851 10.165c3.34 0 4.78-1.66 8.34-1.66V35c0-3.21.39-3.75 3.05-3.75v-.64l-8.41-.02ZM261.9 34.77a2.061 2.061 0 1 0 .288 4.112 2.061 2.061 0 0 0-.288-4.112Z"/>
+</svg>				</a>
+			</figure>
+		
+
+			</div>
+	
+
+	
+	<ul class="wp-block-social-links is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex">
+		<li class="wp-social-link wp-social-link-facebook wp-block-social-link"><a href="https://www.facebook.com/WordPress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Facebook page</span></a></li>
+		<li class="wp-social-link wp-social-link-twitter wp-block-social-link"><a href="https://twitter.com/WordPress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Twitter account</span></a></li>
+		<li class="wp-social-link wp-social-link-instagram wp-block-social-link"><a href="https://www.instagram.com/wordpress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Instagram account</span></a></li>
+		<li class="wp-social-link wp-social-link-linkedin wp-block-social-link"><a href="https://www.linkedin.com/company/wordpress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our LinkedIn account</span></a></li>
+	</ul> 
+
+			<!-- Use an image so it can have the MrsEaves font. -->
+		
+		<figure class="wp-block-image is-resized global-footer__code_is_poetry">
+			<img
+				src=https://s.w.org/style/images/code-is-poetry-for-dark-bg.svg				alt="Code is Poetry"
+				width="188"
+				height="13"
+			/>
+		</figure> 
+
+	</div> 
+</footer><style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-6.wp-container-6{flex-direction:column;align-items:flex-start;}.wp-container-19.wp-container-19{flex-wrap:nowrap;justify-content:flex-start;}
+</style>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/admin-bar.min.js?ver=6.3-alpha-55700' id='admin-bar-js'></script>
+<script type='text/javascript' id='mkaz-code-syntax-prism-js-js-extra'>
+/* <![CDATA[ */
+var prism_settings = {"pluginUrl":"https:\/\/developer.wordpress.org\/wp-content\/plugins\/code-syntax-block\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/code-syntax-block/assets/prism/prism.js?ver=1656011776' id='mkaz-code-syntax-prism-js-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/navigation.js?ver=1662513949' id='wporg-developer-navigation-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/menu.js?ver=1662513949' id='wporg-developer-menu-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=1662513949' id='awesomplete-js'></script>
+<script type='text/javascript' id='autocomplete-js-extra'>
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"05b907aa38"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/autocomplete.js?ver=1662513949' id='autocomplete-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/dom-ready/index.min.js?ver=8ef91b5d96d5175674de' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/plugins/gutenberg/build/a11y/index.min.js?ver=1aab97509efa281a9d62' id='wp-a11y-js'></script>
+<script type='text/javascript' id='wporg-developer-function-reference-js-extra'>
+/* <![CDATA[ */
+var wporgFunctionReferenceI18n = {"copy":"Copy","copied":"Code copied","expand":"Expand code","collapse":"Collapse code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/function-reference.js?ver=1666283308' id='wporg-developer-function-reference-js'></script>
+<script type='text/javascript' id='quicktags-js-extra'>
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-includes/js/quicktags.min.js?ver=6.3-alpha-55700' id='quicktags-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/user-notes.js?ver=1662513949' id='wporg-developer-user-notes-js'></script>
+<script type='text/javascript' id='wporg-developer-user-notes-feedback-js-extra'>
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=1662513949' id='wporg-developer-user-notes-feedback-js'></script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/tabs.js?ver=1662513949' id='wporg-developer-tabs-js'></script>
+<script type='text/javascript' id='wporg-developer-preview-js-extra'>
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"20a644e181","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=1662513949' id='wporg-developer-preview-js'></script>
+<script type='text/javascript' id='wporg-global-header-script-js-extra'>
+/* <![CDATA[ */
+var wporgGlobalHeaderI18n = {"openSearchLabel":"Open Search","closeSearchLabel":"Close Search","overflowMenuLabel":"More menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developer.wordpress.org/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1659374994' id='wporg-global-header-script-js'></script>
+	<script src='https://stats.wp.com/e-202318.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'209306761',post:'134542',tz:'0',srv:'developer.wordpress.org',j:'1:12.0'} ]);
+		_stq.push([ 'clickTrackerInit', '209306761', '134542' ]);
+	</script>
+	</body>
+</html>

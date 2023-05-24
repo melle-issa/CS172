@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dateful Time Zone Converter</title>
+    <meta name="description" content="Dateful Time Zone Converter converts times instantly as you type. Convert between major world cities, countries and timezones in both directions." />
+
+    <!-- Browser meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="google" content="notranslate" />
+
+
+    <link rel="icon"                           href="/assets/img/blue-calendar-favicon/blue-calendar.svg" />
+    <link rel="shortcut icon" type="image/png" href="/assets/img/blue-calendar-favicon/blue-calendar-300.png"/>
+    <link rel="apple-touch-icon"               href="/assets/img/blue-calendar-favicon/square-calendar-300.png" />
+
+    <!-- CSS Includes -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" type='text/css' rel='stylesheet' >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"    type='text/css' rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <!-- Google Analytics - with 'google_analytics_id' as variable -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12539927-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-12539927-1');
+    </script>
+    
+
+    <script type="text/javascript">
+        window.lstrings = {
+            "LOCAL_TIME":"Local time",
+            "YOUR_LOCAL_TIME":"Your local time",
+            "NEXT_DAY":"next day",
+            "LOCALE":"en",
+            "HTTP_ACCEPT_LANGUAGE":'(none)',
+        }
+        var loc_strings = {}
+
+        
+            var SERVER_URL = window.location.origin;
+            var TYPESENSE_URL = 'https://dateful.com/app2';
+            var TYPESENSE_API_KEY = 'ywkaaYXX39trymoVSUgMNeLFGnbE4Kae';
+        
+        window.AUTOCOMPLETE_URL = SERVER_URL + '/app/';
+        window.GET_CO_URL       = SERVER_URL + '/app/item/';
+        window.GET_OLDTTZC_URL  = SERVER_URL + '/app/oldttzc/';
+        window.TYPESENSE        = TYPESENSE_URL + '/collections/timezones-' + window.lstrings['LOCALE'] + '/documents/search';
+        window.TYPESENSE_API_KEY = TYPESENSE_API_KEY;
+    </script>
+
+    <!-- CSS -->
+    
+    <link href="/assets/css/main.css" rel="stylesheet">
+    
+    
+    <style type="text/css">
+        .clock:not(:last-child) {
+            /* clock dividing border */
+            border-right:solid #CCE6FA 2px;
+        }
+    @media (max-width: 768px) {
+        .clock:not(:last-child) {
+            /* clock dividing border */
+            border-right:none;
+        }
+    }
+    </style>
+
+
+    <!--My includes-->
+    <script src="/assets/js/main.js" type="text/javascript"></script>
+
+    <!--Library Includes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="/assets/js/luxon.min.js"></script>
+    
+    
+    
+    
+    
+    
+    
+
+</head>
+<body class="">
+    
+        <section></section>
+
+        
+    <div class="container">
+        <h1 class="text-center mb-4 title">Dateful Time Zone Converter</h1>
+        <div id="clock_holder" class="row justify-content-center">
+
+            
+            <!-- clock -->
+            <!-- On large screens, each "clock" gets its own column.
+                 On medium screens, each clock takes up twice as many columns, so they
+                 will intentionally overflow resulting in two clocks per row. -->
+            <div id="clock0"
+
+                
+                
+                style="display:none;"
+                
+
+                class="clock
+                       col-lg-4 col-md-5 col-12
+                       mt-4 mt-md-5
+                       px-md-4
+                       ">
+
+                <!-- time and timezone input row -->
+                <!-- We use Bootstrap "Nesting" (a row within an existing column).
+                     On medium (and up) screens, both time and timezone occupy the entire width of this
+                     nested row (which is inside a column itself).
+
+                     However, when screens are smaller than medium, time and timezone occupy only
+                     half the space. And as a result appear side-by-side.
+
+                     When time and timezone took up the entire row, 'flex-row-reverse' causes
+                     no noticeable difference. But at the smaller size, when time and timezone
+                     only occupy part of the row this class swaps their position for a better
+                     mobile UI.
+                     -->
+                <div class="row flex-row-reverse">
+
+                    <!-- Date input -->
+                    <div class="d-none col-1 pl-1">
+                        <label for="date0" class="visuallyhidden">Date 0</label>
+                        <input id="date0" class="date-input" type="search" spellcheck="false" tabindex="2" />
+                    </div>
+
+                    <!-- time input -->
+                    <!-- Bootstrap automatically includes a gutter (of size 3) that gets in the way at the small size.
+                         A gutter is padding inbetween columns.
+                         We want smaller padding like pl-1 on narrow screens, and more padding (px-md-3) on larger screens. -->
+                    <div class="col-md-12 col-6
+                                pl-1 pl-sm-3"
+                         style="position:relative;">
+                        <div class="timeinfo" id="time0i" onclick="document.getElementById('time0').focus();"></div>
+                        <label for="time0" class="visuallyhidden">Time 0</label>
+                        <input id="time0" class="time-input" type="search" tabindex="1" />
+                    </div>
+
+                    <!-- timezone input -->
+                    <!-- We shrink down padding-right due to gutters. See comments in "Time input" -->
+                    <div class="col-md-12 col-6
+                                mt-md-2
+                                pr-1 pr-sm-3"
+                         style="position:relative;">
+                        <div class="abbrev-div" id="abbrev0"
+                            style="color:#72B6EC; font-variant:small-caps; width:auto;
+                            text-align:right; float:right; z-index:1; position:absolute;"></div>
+                        <label id="c0label" for="c0" class="visuallyhidden">Timezone 0</label>
+                        <select id="c0" tabindex="3" aria-labelledby="instructions c0label"></select>
+                        
+                    </div>
+
+                </div><!-- time and timezone input row -->
+            </div><!-- clock -->
+        
+            <!-- clock -->
+            <!-- On large screens, each "clock" gets its own column.
+                 On medium screens, each clock takes up twice as many columns, so they
+                 will intentionally overflow resulting in two clocks per row. -->
+            <div id="clock1"
+
+                
+                
+
+                class="clock
+                       col-lg-4 col-md-5 col-12
+                       mt-4 mt-md-5
+                       px-md-4
+                       ">
+
+                <!-- time and timezone input row -->
+                <!-- We use Bootstrap "Nesting" (a row within an existing column).
+                     On medium (and up) screens, both time and timezone occupy the entire width of this
+                     nested row (which is inside a column itself).
+
+                     However, when screens are smaller than medium, time and timezone occupy only
+                     half the space. And as a result appear side-by-side.
+
+                     When time and timezone took up the entire row, 'flex-row-reverse' causes
+                     no noticeable difference. But at the smaller size, when time and timezone
+                     only occupy part of the row this class swaps their position for a better
+                     mobile UI.
+                     -->
+                <div class="row flex-row-reverse">
+
+                    <!-- Date input -->
+                    <div class="d-none col-1 pl-1">
+                        <label for="date1" class="visuallyhidden">Date 1</label>
+                        <input id="date1" class="date-input" type="search" spellcheck="false" tabindex="5" />
+                    </div>
+
+                    <!-- time input -->
+                    <!-- Bootstrap automatically includes a gutter (of size 3) that gets in the way at the small size.
+                         A gutter is padding inbetween columns.
+                         We want smaller padding like pl-1 on narrow screens, and more padding (px-md-3) on larger screens. -->
+                    <div class="col-md-12 col-6
+                                pl-1 pl-sm-3"
+                         style="position:relative;">
+                        <div class="timeinfo" id="time1i" onclick="document.getElementById('time1').focus();"></div>
+                        <label for="time1" class="visuallyhidden">Time 1</label>
+                        <input id="time1" class="time-input" type="search" tabindex="4" />
+                    </div>
+
+                    <!-- timezone input -->
+                    <!-- We shrink down padding-right due to gutters. See comments in "Time input" -->
+                    <div class="col-md-12 col-6
+                                mt-md-2
+                                pr-1 pr-sm-3"
+                         style="position:relative;">
+                        <div class="abbrev-div" id="abbrev1"
+                            style="color:#72B6EC; font-variant:small-caps; width:auto;
+                            text-align:right; float:right; z-index:1; position:absolute;"></div>
+                        <label id="c1label" for="c1" class="visuallyhidden">Timezone 1</label>
+                        <select id="c1" tabindex="6" aria-labelledby="instructions c1label"></select>
+                        
+                    </div>
+
+                </div><!-- time and timezone input row -->
+            </div><!-- clock -->
+        
+            <!-- clock -->
+            <!-- On large screens, each "clock" gets its own column.
+                 On medium screens, each clock takes up twice as many columns, so they
+                 will intentionally overflow resulting in two clocks per row. -->
+            <div id="clock2"
+
+                
+                
+
+                class="clock
+                       col-lg-4 col-md-5 col-12
+                       mt-4 mt-md-5
+                       px-md-4
+                       ">
+
+                <!-- time and timezone input row -->
+                <!-- We use Bootstrap "Nesting" (a row within an existing column).
+                     On medium (and up) screens, both time and timezone occupy the entire width of this
+                     nested row (which is inside a column itself).
+
+                     However, when screens are smaller than medium, time and timezone occupy only
+                     half the space. And as a result appear side-by-side.
+
+                     When time and timezone took up the entire row, 'flex-row-reverse' causes
+                     no noticeable difference. But at the smaller size, when time and timezone
+                     only occupy part of the row this class swaps their position for a better
+                     mobile UI.
+                     -->
+                <div class="row flex-row-reverse">
+
+                    <!-- Date input -->
+                    <div class="d-none col-1 pl-1">
+                        <label for="date2" class="visuallyhidden">Date 2</label>
+                        <input id="date2" class="date-input" type="search" spellcheck="false" tabindex="8" />
+                    </div>
+
+                    <!-- time input -->
+                    <!-- Bootstrap automatically includes a gutter (of size 3) that gets in the way at the small size.
+                         A gutter is padding inbetween columns.
+                         We want smaller padding like pl-1 on narrow screens, and more padding (px-md-3) on larger screens. -->
+                    <div class="col-md-12 col-6
+                                pl-1 pl-sm-3"
+                         style="position:relative;">
+                        <div class="timeinfo" id="time2i" onclick="document.getElementById('time2').focus();"></div>
+                        <label for="time2" class="visuallyhidden">Time 2</label>
+                        <input id="time2" class="time-input" type="search" tabindex="7" />
+                    </div>
+
+                    <!-- timezone input -->
+                    <!-- We shrink down padding-right due to gutters. See comments in "Time input" -->
+                    <div class="col-md-12 col-6
+                                mt-md-2
+                                pr-1 pr-sm-3"
+                         style="position:relative;">
+                        <div class="abbrev-div" id="abbrev2"
+                            style="color:#72B6EC; font-variant:small-caps; width:auto;
+                            text-align:right; float:right; z-index:1; position:absolute;"></div>
+                        <label id="c2label" for="c2" class="visuallyhidden">Timezone 2</label>
+                        <select id="c2" tabindex="9" aria-labelledby="instructions c2label"></select>
+                        
+                        <div id="instructions" style="font-size:11px; color:#72B6EC; margin-top:5px;">Try: New York, Japan, or Pacific Time</div>
+                        
+                    </div>
+
+                </div><!-- time and timezone input row -->
+            </div><!-- clock -->
+        
+        </div><!-- clock_holder -->
+
+        <div id="warning" class="mt-md-5 mt-3" style="text-align:center; font-size:13px;">
+        </div>
+
+        <!-- Widget holder -->
+        <div class="row justify-content-center mt-md-5 mt-3">
+
+            <!-- 24h Widget -->
+            <div class="col-4 col-md-2  text-center">
+                <label for="widget-1224" class="visuallyhidden">12 hour 24 hour toggle</label>
+<div id="widget-1224" class="widget" style="display:inline-block; position:relative;">
+    <div id="bg1224" class="widget-bg rounded"
+         style="display:table-cell; position:absolute; width:60%; right: 48%; z-index:-1;">&nbsp;</div>
+    <div id="w12" style="display:table-cell; width:45%;">12</div>
+    <div style="display:table-cell; width:10%;">&nbsp;</div>
+    <div id="w24" style="display:table-cell; width:45%">24</div>
+</div>
+
+            </div>
+
+            <!-- Time/Date Widget -->
+            <div class="col-4 col-md-2">
+                <label for="td-widget" class="visuallyhidden">Time Date toggle</label>
+<div id="td-widget" class="widget" style="display:table; position:relative;">
+    <div id="timedate-bg" class="widget-bg rounded" style="display:table-cell; position:absolute; width:55%; right:52%; top:0px; z-index:-1;">&nbsp;</div>
+    <div id="widget-time" class="sm-font align-middle w-selected" style="display:table-cell; width:45%;">TIME</div>
+    <div style="display:table-cell; width:10%;">&nbsp;</div>
+    <div id="widget-date" class="sm-font align-middle" style="display:table-cell; width:45%;">DATE</div>
+</div>
+
+            </div>
+
+            <!-- Copy Link Widget -->
+            <div class="col-4 col-md-2">
+                <label for="copylink-widget" class="visuallyhidden">Copy Link</label>
+<div id="copylink-widget" class="widget mx-auto rounded" style="display:table; background:#72B6EC;" onclick="app.copyWidgetClick();">
+    <div class="" style="display:table-cell;">&nbsp;</div>
+    <div id="widget-copy" class="sm-font align-middle text-center text-uppercase" style="display:table-cell; color:white;">Copy Link</div>
+    <div class="" style="display:table-cell;">&nbsp;</div>
+</div>
+
+            </div>
+
+        </div>
+
+    </div><!-- container -->
+
+
+        <section class="flex">
+            <section></section>
+            <section>
+                <div class="mx-auto" style="width:320px;">
+                
+    
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- AdUnit1 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:100px"
+             data-ad-client="ca-pub-4202061871638144"
+             data-ad-slot="6705044779"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    
+
+                </div>
+            </section>
+            <section></section>
+            
+                <footer class="mt-3 pb-sm-3 pb-1 mx-3">
+                    <div style="text-transform: uppercase;">
+                                                         <a href="https://dateful.com/about.html">About</a>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp; <a href="mailto:jonathan@dateful.com">Feedback</a>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp; <a href="https://dateful.com/eventlink">Eventlink</a>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp; <a href="https://dateful.com/time-calculator">Time&nbsp;Calculator</a>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp; <a href="https://dateful.com/world-clock">World&nbsp;Clock</a>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp; <a href="https://dateful.com/schedule">Schedule <sup class="homepage">New</sup></a>
+                    </div>
+                </footer>
+            
+        </section>
+    
+
+    
+    <script>
+        var app = new main.Dateful.TimeZoneConverter(lstrings);
+    </script>
+
+
+    
+</body>
+</html>
+

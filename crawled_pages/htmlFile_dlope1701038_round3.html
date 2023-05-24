@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BuddyPress.org</title>
+	<atom:link href="https://buddypress.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://buddypress.org</link>
+	<description>Fun &#38; flexible software for online communities, teams, and groups</description>
+	<lastBuildDate>Thu, 27 Apr 2023 20:46:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3-alpha-55700</generator>
+
+<image>
+	<url>https://buddypress.org/wp-content/uploads/1/2016/06/cropped-disc-1-32x32.png</url>
+	<title>BuddyPress.org</title>
+	<link>https://buddypress.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>BuddyPress has a new purpose</title>
+		<link>https://buddypress.org/2023/04/buddypress-has-a-new-purpose/</link>
+					<comments>https://buddypress.org/2023/04/buddypress-has-a-new-purpose/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Thu, 27 Apr 2023 20:37:01 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[feedback]]></category>
+		<category><![CDATA[rewrites]]></category>
+		<category><![CDATA[roadmap]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=329306</guid>
+
+					<description><![CDATA[Hello! This post is the first in a series of five posts in which we’ll outline the new direction we plan to take regarding plugin maintenance and evolutions. After some introductory words, we‘ll focus on the new BuddyPress purpose that I believe we should adopt for years to come. We haven‘t forgotten that, at the [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Hello! This post is the first in a series of five posts in which we’ll outline the new direction we plan to take regarding plugin maintenance and evolutions. After some introductory words, we‘ll focus on the new BuddyPress purpose that I believe we should adopt for years to come.</p>
+
+
+
+<p>We haven‘t forgotten that, at the end of 2021, we had some conversations (<a href="https://buddypress.org/support/topic/what-is-the-most-important-thing-buddypress-is-missing/">here</a> &amp; <a href="https://wptavern.com/buddypress-plugin-usage-declining-remaining-contributors-discuss-path-forward" target="_blank" rel="noreferrer noopener">here</a>) about this « difficult to answer with a few words » question. These happened once the <a href="https://buddypress.org/2022/09/lets-talk-about-us-buddypress/">plugin’s active installs statistics went a bit under 200.000</a>. Our WordPress plugin directory page’s “active installations” value suddenly changed from “200,000+” to “100,000+”—though the actual number only changed from just over 200.000 to about 190.000 active installation&#8211;making this decline seem pretty spectacular <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4c9.png" alt="📉" class="wp-smiley" style="height: 1em; max-height: 1em;" />. It was nevertheless a great opportunity to think together about how the plugin should evolve now that <a href="https://buddypress.org/2023/03/lets-celebrate-buddypress-15th-anniversary-welcome-the-first-attachments-add-on-features/" data-type="post" data-id="328812">15 years</a> have passed since its birth.</p>
+
+
+
+<span id="more-329306"></span>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div style="width: 150px;height: 150px;margin: 0 auto"><span class="dashicons dashicons-buddicons-buddypress-logo" style="color: #c1403b;font-size: 150px"></span></div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>First, let me offer some thanks on behalf of the BuddyPress development team:</p>
+
+
+
+<ul>
+<li>Thanks a lot to the women &amp; men who are trusting the plugin to power their community WordPress sites <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f60d.png" alt="😍" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+
+
+
+<li>Thanks a million to the contributors who share some of their free time, energy or resources with us to maintain the plugin <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f91d.png" alt="🤝" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+
+
+
+<li>Warm gratitude to <a rel="noreferrer noopener" href="https://automattic.com" target="_blank">Automattic</a> for providing BuddyPress’s web site, our <a rel="noreferrer noopener" href="https://bpdevel.wordpress.com/" target="_blank">dev’updates</a> blog as well as our <a rel="noreferrer noopener" href="https://buddypress.trac.wordpress.org/" target="_blank">Trac environment</a>, these tools are essential to BuddyPress &amp; its community <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1faf6.png" alt="🫶" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+
+
+
+<li>Finally huge thanks to everyone of us, members of the team; for 15 years we’ve been working together to maintain &amp; improve this free and open-source plugin <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4aa.png" alt="💪" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ul>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Your feedback: the main points</h2>
+
+
+
+<p>I believe we can organize your ideas in 5 categories:</p>
+
+
+
+<ul>
+<li><strong>What should be our main purpose(s)?</strong></li>
+
+
+
+<li>How should the plugin be organized?</li>
+
+
+
+<li>What features should BuddyPress include?</li>
+
+
+
+<li>What improvements does the plugin UI need?</li>
+
+
+
+<li>How can we attract and keep new contributors?</li>
+</ul>
+
+
+
+<p>As introduced earlier into this post, let‘s wrap up your feedback about the first topic and explain how they contributed to what I think should be our new main purpose.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading">Key feedback about BuddyPress’s purpose</h3>
+
+
+
+<ul>
+<li>« Communities organized around a product »</li>
+
+
+
+<li>« It is the perfect choice for <strong>company intranets</strong> »</li>
+
+
+
+<li>« <strong>Private</strong>, <strong>secure</strong> social network just for your friends/family »</li>
+
+
+
+<li>« Sites for educational courses, coaching »</li>
+
+
+
+<li>&nbsp;« It would have been the collaboration platform of choice over the pandemic had the <strong>privacy</strong> and <strong>security</strong> been there »</li>
+
+
+
+<li>« <strong>Needs a more specific mission</strong> and purpose: BuddyVerse »</li>
+
+
+
+<li>« <strong>Too </strong><strong>Developer-focused</strong> »</li>
+</ul>
+
+
+
+<p>As a reminder, here’s our site’s tagline about BuddyPress’s purpose: « <em>Fun &amp; flexible software for online communities, teams, and groups. BuddyPress helps you build any kind of community website using WordPress, with member profiles, activity streams, user groups, messaging, and more</em>. »</p>
+
+
+
+<p>Let’s start with the last point as it contains negative implications: « <strong>too developer-focused</strong> » <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2699.png" alt="⚙" class="wp-smiley" style="height: 1em; max-height: 1em;" />. </p>
+
+
+
+<p>Yes, we have third party plugins or themes in mind at some point during our coding process: our main concern about these is potential compatibility issues. That’s why when we have a doubt, we put backward compatibility code into the plugin. It’s also true we used to primarily think about BuddyPress as a plugin you can build great things on top of it; that’s reflected in the « helps you build » part of our tagline.</p>
+
+
+
+<p>This model is interesting as long as third-party plugin authors are very involved with contributing to BuddyPress. However, they do not share their energy &amp; time with us as often as was common in BuddyPress’s early years.</p>
+
+
+
+<p>I believe <strong>we now need to satisfy end-users first</strong> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png" alt="👨‍👩‍👧‍👦" class="wp-smiley" style="height: 1em; max-height: 1em;" />. A reproach I often read in reviews posted about the plugin on <a rel="noreferrer noopener" href="https://wordpress.org/support/plugin/buddypress/reviews/" target="_blank">WordPress.org</a> is: « BuddyPress is not including the basic features any end-user would expect so that it&#8217;s needed to install other third party plugins ». And a majority of reviewers are then regularly complaining: « a lot of these plugins have not been updated for a while or worse are no longer maintained ». <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/26a0.png" alt="⚠" class="wp-smiley" style="height: 1em; max-height: 1em;" /> The problem then is that using these plugins can increase WordPress sites security threats even if BuddyPress benefits from the WP hacker1 program. Being able to <strong>run a safe community</strong> is very important: we don&#8217;t settle in a neighborhood when our security is at risk.</p>
+
+
+
+<p><strong>Privacy</strong> is a basic need we absolutely have to satisfy <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f510.png" alt="🔐" class="wp-smiley" style="height: 1em; max-height: 1em;" />. Yes, BuddyPress can be an interesting choice for company intranets, social stores, family circles or social learning platforms as soon as we can <strong>easily lock some areas of the community pages</strong>.</p>
+
+
+
+<p>About federating WordPress site owners updates into a BuddyVerse <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f30d.png" alt="🌍" class="wp-smiley" style="height: 1em; max-height: 1em;" />, it&#8217;s an amazing idea I already heard of 5 years ago during the WordCamp Europe 2017. As WordPress is powering around 40% of Internet sites, I guess there&#8217;s an interesting potential, but I believe<strong> we need a lot more contributors</strong> to master the <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/ActivityPub" target="_blank">ActivityPub protocol</a> (extending the <a rel="noreferrer noopener" href="https://wordpress.org/plugins/activitypub/" target="_blank">ActivityPub WordPress plugin</a>?) or the <a rel="noreferrer noopener" href="https://matrix.org" target="_blank">Matrix standard</a> and required developments to allow 2 or more WordPress instances to follow each others or more globally to achieve a <strong>distributed BuddyPress network</strong>. To avoid missing the « <em>we figured out being chained into social media owned by capricious billionaires was masochist</em>ic » opportunity, maybe we can make a first step into this direction and reach something approaching improving how we deal with RSS feeds &amp; implementing <a rel="noreferrer noopener" href="https://www.w3.org/TR/webmention/" target="_blank">Webmentions</a>.</p>
+
+
+
+<p>To conclude this part of your feedbacks review, I think we need to work in directions so that you can use BuddyPress to:&nbsp;</p>
+
+
+
+<p class="has-text-align-center">« Get together safely, <strong>in </strong><strong>your own way</strong>, in WordPress ».</p>
+
+
+
+<p>I think the « <strong>own</strong> » word is fundamental: compared to social media <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4b8.png" alt="💸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> where you lose ownership over your data, where this information is used to earn money off your content. <strong>With BuddyPress, you control every aspect of your community</strong>.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">The first two concrete steps</h2>
+
+
+
+<p>BuddyPress 12.0, our next major version, will introduce a huge, necessary improvement to make many other improvements possible. We are replacing our Legacy URL parser with a new BP Rewrites API (which is based on the WordPress Rewrite API). We are completely restructuring the way BuddyPress analyzes URLs to decide whether to load community content and what is being requested. The benefits for you:</p>
+
+
+
+<ul>
+<li>Every BuddyPress URL will be customizable into your language (I heard it was important for SEO).</li>
+
+
+
+<li>BuddyPress will finally support plain permalinks.</li>
+
+
+
+<li>BP URL parsing will be more reliable &amp; fully compliant with WordPress best practices.</li>
+</ul>
+
+
+
+<p>Because this change is potentially a breaking one for plugins that won‘t be updated, we‘ll also build a BP Classic plugin, so you‘ll be able to continue enjoying these slow-to-update plugins.</p>
+
+
+
+<p>Secondly, <strong>12.0 will also include a new community visibility feature giving you the ability to use BuddyPress to power your private communities</strong>.</p>
+
+
+
+<p>We‘ll take more time than usual to reach this 12th milestone. We need to <a href="https://developer.buddypress.org/plugins/">document the needed changes plugin authors</a> will need to perform as well as inform our users what they should do if something goes wrong with the 12.0 upgrade process.</p>
+
+
+
+<p><strong>12.0 final release is slated for October 30, and we welcome everyone wishing to <a href="https://codex.buddypress.org/participate-and-contribute/">get involved</a></strong>.</p>
+
+
+
+<p><strong>How should we organize the plugin?</strong> That’s the second category of your feedback, and we’ll talk about it in the next post of this series.</p>
+
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p><strong>Props</strong>: many thanks to <a class='bp-suggestions-mention' href='https://buddypress.org/members/dcavins/' rel='nofollow'>@dcavins</a> for his review <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f970.png" alt="🥰" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2023/04/buddypress-has-a-new-purpose/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Let&#8217;s meet in Paris during the french community contributor day</title>
+		<link>https://buddypress.org/2023/04/lets-meet-in-paris-during-the-french-community-contributor-day/</link>
+					<comments>https://buddypress.org/2023/04/lets-meet-in-paris-during-the-french-community-contributor-day/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2023 05:49:41 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[Contributor Day]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=329085</guid>
+
+					<description><![CDATA[The BuddyPress Core Team is very happy to be represented at the Contributor Day the french WordPress community is organizing in Paris on April 20, 2023. Here&#8217;s a link to a translated page of the event schedule (Hours are in Central European Summer time). @imath will be there to lead the BuddyPress contributing squad and [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>The BuddyPress Core Team is very happy to be represented at the Contributor Day the french WordPress community is organizing in Paris on April 20, 2023. Here&#8217;s a link to a <a href="https://wpfr-net.translate.goog/programme-de-la-journee-de-contribution-organisee-a-paris-le-20-04-2023/?_x_tr_sl=fr&amp;_x_tr_tl=en&amp;_x_tr_hl=fr&amp;_x_tr_pto=wapp" target="_blank" rel="noreferrer noopener">translated page of the event schedule</a> (Hours are in Central European Summer time).</p>
+
+
+
+<figure class="wp-block-image size-full"><a href="https://buddypress.org/wp-content/uploads/1/2023/04/48766199826_c0187b9999_c.jpg"><img decoding="async" width="800" height="533" src="https://buddypress.org/wp-content/uploads/1/2023/04/48766199826_c0187b9999_c.jpg" alt="" class="wp-image-329088" srcset="https://buddypress.org/wp-content/uploads/1/2023/04/48766199826_c0187b9999_c.jpg 800w, https://buddypress.org/wp-content/uploads/1/2023/04/48766199826_c0187b9999_c-300x200.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/04/48766199826_c0187b9999_c-768x512.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption class="wp-element-caption">Mathieu Viet (@imath / me!) explaining BP contribution during <a href="https://paris.wordcamp.org/2019/contributor-day/" target="_blank" rel="noreferrer noopener">WC Paris Contributor day in 2019</a></figcaption></figure>
+
+
+
+<span id="more-329085"></span>
+
+
+
+<p><a class='bp-suggestions-mention' href='https://buddypress.org/members/imath/' rel='nofollow'>@imath</a> will be there to lead the BuddyPress contributing squad and we&#8217;ll have a lot of work! As we&#8217;re currently working on a very ambitious 12.0 release which main goal is to migrate from our Legacy URL parser to using the WordPress Rewrite API, there are many areas getting your contributions would really help us &amp; make a huge difference! Below are the most important tasks we need to accomplish:</p>
+
+
+
+<ul>
+<li>Code: the <a href="https://buddypress.trac.wordpress.org/ticket/4954">BP Rewrites merge process</a> is still in progress</li>
+
+
+
+<li>Code: we need to build a <a href="https://github.com/buddypress/bp-classic" target="_blank" rel="noreferrer noopener">BP Classic back compatibility plugin</a> to give end users a plan B if some of their plugins are not ready yet when 12.0 will be released.</li>
+
+
+
+<li>Documentation: we need to <a href="https://developer.buddypress.org/plugins/">explain</a> third party Plugin/Theme developers what they need to do to make their work progressively &#8220;BP Rewrites&#8221; ready.</li>
+
+
+
+<li>Documentation: we need to <a href="https://codex.buddypress.org/">explain</a> end-users how the switch we&#8217;re performing will improve their BuddyPress experience (customizable slugs, plain text link compatibility&#8230;).</li>
+
+
+
+<li>Support: we need to have some most common troubleshoot replies ready in order to face the questions or requests for help we&#8217;ll probably receive into our <a href="https://buddypress.org/support/">support forum</a>.</li>
+</ul>
+
+
+
+<p>If you do not have a chance to attend IRL to this contributor day, no worries: you can virtually join us to get involved into these tasks going into our <a href="https://wordpress.slack.com/messages/buddypress" target="_blank" rel="noreferrer noopener">Slack channel</a> on April 20, 2023 from <a rel="noreferrer noopener" href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20230420T0815" target="_blank">08:15 UTC</a> to <a rel="noreferrer noopener" href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20230420T1530" target="_blank">15:30 UTC</a>.</p>
+
+
+
+<p><strong>Let&#8217;s contribute to BuddyPress!</strong></p>
+
+
+
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f91d.png" alt="🤝" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2665.png" alt="♥" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2023/04/lets-meet-in-paris-during-the-french-community-contributor-day/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Let’s celebrate BuddyPress 15th anniversary &#038; welcome the first Attachments Add-on features</title>
+		<link>https://buddypress.org/2023/03/lets-celebrate-buddypress-15th-anniversary-welcome-the-first-attachments-add-on-features/</link>
+					<comments>https://buddypress.org/2023/03/lets-celebrate-buddypress-15th-anniversary-welcome-the-first-attachments-add-on-features/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Sat, 25 Mar 2023 20:16:50 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[anniversary]]></category>
+		<category><![CDATA[attachments]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=328812</guid>
+
+					<description><![CDATA[Today is a very special day for the BuddyPress open source project: 15 years ago, Andy pushed the first code commit on BP Trac. To remember the &#8220;whys&#8221; &#38; the important &#8220;whos&#8221; of our early days, I advise you to read (again) the great post John wrote when we reached 10. Let’s talk about the [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Today is a very special day for the BuddyPress open source project: <strong>15 years</strong> ago, <a rel="noreferrer noopener" href="https://buddypress.org/members/apeatling/" target="_blank">Andy</a> pushed the <a rel="noreferrer noopener" href="https://buddypress.trac.wordpress.org/changeset/1" target="_blank">first code commit</a> on BP Trac. To remember the &#8220;whys&#8221; &amp; the important &#8220;whos&#8221; of our early days, I advise you to read (again) the <a rel="noreferrer noopener" href="https://buddypress.org/2018/03/10-years/" target="_blank">great post</a> <a rel="noreferrer noopener" href="https://buddypress.org/members/johnjamesjacoby/" target="_blank">John</a> wrote when we reached 10.</p>
+
+
+
+<span id="more-328812"></span>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink.jpg"><img decoding="async" loading="lazy" width="1024" height="825" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink-1024x825.jpg" alt="" class="wp-image-328800" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink-1024x825.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink-300x242.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink-768x618.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink-1536x1237.jpg 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-permalink.jpg 1684w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Let’s talk about the next 15 years!</h2>
+
+
+
+<p><strong>It’s starting today</strong> with the <a href="https://downloads.wordpress.org/plugin/bp-attachments.1.0.0.zip">first BP Attachments Add-on version</a>. The screenshot above shows you an image attached to an activity update: you may say &#8220;OK, great, but it’s a basic feature every social network software include, what’s your point?&#8221;&nbsp;</p>
+
+
+
+<p>Our point is: this long awaited feature is finally available in BuddyPress <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f38a.png" alt="🎊" class="wp-smiley" style="height: 1em; max-height: 1em;" />, you simply need to install &amp; activate it from the <a rel="noreferrer noopener" href="https://wordpress.org/plugins/bp-attachments/" target="_blank">WordPress.org plugin directory</a> or directly from your dashboard using the BuddyPress Add-ons tab of the Plugins/Add new WP Admin screen <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f447.png" alt="👇" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen.png"><img decoding="async" loading="lazy" width="1024" height="475" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-1024x475.png" alt="" class="wp-image-328809" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-1024x475.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-300x139.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-768x356.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-1536x713.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-bp-addons-screen-2048x950.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>We’ve been talking about Media in BuddyPress for a long while, we know there are a lot of expectations about it: these are probably the reasons why adding the feature was an intimidating task for the development team. We’ve put ourselves under a lot of pressure to satisfy some of your expectations as a <strong>very humble</strong> start and we thought it could be a nice gift <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f381.png" alt="🎁" class="wp-smiley" style="height: 1em; max-height: 1em;" /> to offer the community for our 15th birthday <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f382.png" alt="🎂" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading"><strong>BP Attachments 1.0.0</strong></h3>
+
+
+
+<p>It’s not perfect! (Does anyone reach perfection anyway? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> ) Some of you will probably tell us &#8220;Hey, the plugin is lacking support for this and that, etc&#8230;&#8221;: yes, you’re absolutely right, but let’s remember BuddyPress is free &amp; open source software and keep in mind we, as code contributors, first need a bit of cheers to keep the will to progress. Let me remind you &#8220;free &amp; open source&#8221; is demanding a lot more to users: telling what’s wrong is not enough, you need to contribute to how to fix it.</p>
+
+
+
+<p>This primary statement made, let’s talk about what’s inside this Attachments BuddyPress Add-on first version.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form.png"><img decoding="async" loading="lazy" width="1024" height="480" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form-1024x480.png" alt="" class="wp-image-328801" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form-1024x480.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form-300x141.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form-768x360.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form-1536x720.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-activity-post-form.png 1694w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h4 class="wp-block-heading"><strong>Attach rich media to your Activity updates</strong></h4>
+
+
+
+<p>Can you see the camera with the music symbol behind in the above screenshot? Great! That’s the button you need to click on to browse your device media and attach one to your activity. Once done you’ll get a small preview of it and information about it. You only want to share a media without any text inside your update? You can do it!</p>
+
+
+
+<p><strong>Media shared inside activities are public</strong>, every member of the community can view it and download it. Of course, you need the Activity component to be active to attach media to its items!</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h4 class="wp-block-heading">Two<strong> central places to manage your private or public media.</strong></h4>
+
+
+
+<p>BP Attachments comes with a ReactJS UI built thanks to the many WordPress React components available since it uses Blocks. This personal Media Library can be reached from your front-end profile. Once you’ve reached it, you’ll see a Public directory (and a Private one if the site administrator configured it &amp; made it available). Open this directory to be able to share public media, folders, photo albums, music or movie playlists.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library.png"><img decoding="async" loading="lazy" width="1024" height="731" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library-1024x731.png" alt="" class="wp-image-328805" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library-1024x731.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library-300x214.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library-768x548.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library-1536x1097.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-front-end-personal-media-library.png 1714w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>That’s the first place where you can add, delete, edit and organize all your media. The second one is located inside the WordPress dashboard. If you have a subscriber or a contributor role, you’ll notice the WordPress Media menu will bring you to your personal Media library.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library.png"><img decoding="async" loading="lazy" width="1024" height="334" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-1024x334.png" alt="" class="wp-image-328803" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-1024x334.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-300x98.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-768x251.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-1536x501.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-library-2048x668.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>If you have an author or editor role, your personal media library will be available from a sub menu of the WordPress Media menu. In this place you can do exactly the same thing you are able to do from the front-end interface; it can act as a fallback if the active theme or other plugins are not playing nicely with the Media library page of your front-end profile.</p>
+
+
+
+<p>Both locations are only accessible to the Member who created the media (or the Media owner), site administrators also own a front-end Media library, but in the WordPress dashboard, they get something more powerful: a <strong>moderating</strong> tool.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries.png"><img decoding="async" loading="lazy" width="1024" height="287" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-1024x287.png" alt="" class="wp-image-328802" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-1024x287.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-300x84.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-768x215.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-1536x430.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-back-end-personal-media-libraries-2048x574.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>As you can see, the site administrator can access the Media Library belonging to <a href="https://buddypress.org/members/dcavins/">@dcavins</a> or <a href="https://buddypress.org/members/imath/">@imath</a> to remove some &#8220;spammy&#8221; media if necessary. Using the &#8220;My Media&#8221; directory drives the administrator to his or her personal Media library.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-scaled.jpg"><img decoding="async" loading="lazy" width="1024" height="583" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-1024x583.jpg" alt="" class="wp-image-328810" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-1024x583.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-300x171.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-768x437.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-1536x875.jpg 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-attachments-settings-2048x1166.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h4 class="wp-block-heading"><strong>Attach rich media to your private conversations</strong></h4>
+
+
+
+<p>If the Messages component is active &amp; Private media is allowed by the administrator from the BuddyPress options screen as shown above, then community members can share media within their private conversations. Unlike Activity Attachments, Messages Attachments <strong>are always private</strong> and can only be viewed or downloaded by the Media owner and the private conversation participants.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment.png"><img decoding="async" loading="lazy" width="1024" height="747" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment-1024x747.png" alt="" class="wp-image-328811" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment-1024x747.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment-300x219.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment-768x560.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment-1536x1120.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-messages-attachment.png 1772w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h4 class="wp-block-heading"><strong>Community Media directory</strong></h4>
+
+
+
+<p>All public media can be browsed from the Community Media directory. Depending on the allowed media types the administrator chose, this directory can contain one or more navigation items to filter the displayed layout : one for all media, one for images, one for movies, one for sounds and  one for all other file types.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory.jpg"><img decoding="async" loading="lazy" width="1024" height="590" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-1024x590.jpg" alt="" class="wp-image-328804" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-1024x590.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-300x173.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-768x443.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-1536x886.jpg 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-community-media-directory-2048x1181.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>When you click on one of the displayed media items, you reach its single view where you can download it, and where you’ll be able to comment, like, share etc.. in future releases of the BuddyPress Add-on.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media.jpg"><img decoding="async" loading="lazy" width="1024" height="878" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media-1024x878.jpg" alt="" class="wp-image-328806" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media-1024x878.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media-300x257.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media-768x658.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media-1536x1317.jpg 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-single-media.jpg 1822w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>PS: you can already share an embedded version of the media copying &amp; pasting its link into a WordPress embed block.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments.png"><img decoding="async" loading="lazy" width="1024" height="492" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-1024x492.png" alt="" class="wp-image-328807" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-1024x492.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-300x144.png 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-768x369.png 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-1536x739.png 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-upload-bp-attachments-2048x985.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h4 class="wp-block-heading"><strong>Attach rich media to WordPress posts</strong></h4>
+
+
+
+<p>Finally, the BP Attachments Add-on comes with image, video, sound and file blocks. Unlike regular WordPress media, your contributors will be able to use their personal Media Library when writing their content.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-scaled.jpg"><img decoding="async" loading="lazy" width="1024" height="507" src="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-1024x507.jpg" alt="" class="wp-image-328808" srcset="https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-1024x507.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-300x148.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-768x380.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-1536x760.jpg 1536w, https://buddypress.org/wp-content/uploads/1/2023/03/bp-15-wp-editor-use-bp-attachments-2048x1013.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></div>
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>That’s all for this first version! Expect some Groups and Friends component-related features to land in the next major version of the BP Attachments Add-on. If you’re wondering when this next version will be published: it’s up to you! If you <a rel="noreferrer noopener" href="https://github.com/buddypress/bp-attachments" target="_blank">contribute</a> to the Add-on and if it’s becoming popular, it can happen very quickly.</p>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-6">
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+
+
+
+<div class="wp-block-column is-layout-flow">
+<figure class="wp-block-embed aligncenter is-type-wp-embed is-provider-plugin-directory wp-block-embed-plugin-directory"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="7yqFO3mQVE"><a href="https://wordpress.org/plugins/bp-attachments/">BP Attachments</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="&#8220;BP Attachments&#8221; &#8212; Plugin Directory" src="https://wordpress.org/plugins/bp-attachments/embed/#?secret=JNRGVdrsW4#?secret=7yqFO3mQVE" data-secret="7yqFO3mQVE" width="515" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+</div>
+
+
+
+<p>We hope you’ll have great times playing with these new features, don’t forget to <strong>celebrate BuddyPress&#8217;s 15th year before the end of the day</strong> &amp; most importantly let’s have some fun and be kind to each other <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f91d.png" alt="🤝" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2023/03/lets-celebrate-buddypress-15th-anniversary-welcome-the-first-attachments-add-on-features/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.1.0 Maintenance Release</title>
+		<link>https://buddypress.org/2023/02/buddypress-11-1-0-maintenance-release/</link>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Thu, 16 Feb 2023 06:39:20 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.1.0]]></category>
+		<category><![CDATA[maintenance]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=328434</guid>
+
+					<description><![CDATA[Immediately available is&#160;BuddyPress 11.1.0. This maintenance release fixes 3 bugs. For details on the changes, please read the&#160;11.1.0 release notes. Update to BuddyPress 11.1.0 today in your WordPress Dashboard, or by&#160;downloading from the WordPress.org plugin repository. Many thanks to 11.1.0 contributors&#160; 1benk1, webmasterfreya, casper99 &#38;&#160;imath.]]></description>
+										<content:encoded><![CDATA[
+<p>Immediately available is&nbsp;<a href="https://downloads.wordpress.org/plugin/buddypress.11.1.0.zip">BuddyPress 11.1.0</a>. This maintenance release fixes 3 bugs. For details on the changes, please read the&nbsp;<a href="https://codex.buddypress.org/releases/version-11-1-0/">11.1.0 release notes</a>.</p>
+
+
+
+<p>Update to BuddyPress 11.1.0 today in your WordPress Dashboard, or by&nbsp;<a href="https://wordpress.org/plugins/buddypress/">downloading from the WordPress.org plugin repository</a>.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading" id="many-thanks-to-11-1-0-contributors">Many thanks to 11.1.0 contributors&nbsp;<span class="dashicons dashicons-heart" style="color: #c1403b"></span></h2>
+
+
+
+<p><a href="https://profiles.wordpress.org/1benk1">1benk1</a>, <a href="https://profiles.wordpress.org/webmasterfreya">webmasterfreya</a>, <a href="https://profiles.wordpress.org/casper99">casper99</a> &amp;&nbsp;<a href="https://profiles.wordpress.org/imath/">imath</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.0.0 &#8220;La Scala&#8221;</title>
+		<link>https://buddypress.org/2023/01/buddypress-11-0-0-la-scala/</link>
+					<comments>https://buddypress.org/2023/01/buddypress-11-0-0-la-scala/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Thu, 05 Jan 2023 22:18:01 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.0.0]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=327885</guid>
+
+					<description><![CDATA[Happy new year &#38; best wishes for Twenty Twenty-Three 🥳 The BuddyPress Core Team BuddyPress 11.0.0 “La Scala” is now available for download from the WordPress.org plugin repository, or right from your WordPress Dashboard. This new major version of your site’s community engine introduces around 50 changes mostly acting under the hood to improve performance, [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<blockquote class="wp-block-quote">
+<p>Happy new year &amp; best wishes for Twenty Twenty-Three <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f973.png" alt="🥳" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<cite>The BuddyPress Core Team</cite></blockquote>
+
+
+
+<p>BuddyPress 11.0.0 “La Scala” is now <a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0.zip">available for download</a> from the <a href="https://wordpress.org/plugins/buddypress/">WordPress.org plugin repository</a>, or right from your WordPress Dashboard.</p>
+
+
+
+<span id="more-327885"></span>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-14">
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+
+
+
+<div class="wp-block-column is-layout-flow">
+<figure class="wp-block-embed aligncenter is-type-wp-embed is-provider-plugin-directory wp-block-embed-plugin-directory"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="Z2dim4NX0s"><a href="https://wordpress.org/plugins/buddypress/">BuddyPress</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="&#8220;BuddyPress&#8221; &#8212; Plugin Directory" src="https://wordpress.org/plugins/buddypress/embed/#?secret=vtMc5zxStt#?secret=Z2dim4NX0s" data-secret="Z2dim4NX0s" width="515" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+</div>
+
+
+
+<p>This new major version of your site’s community engine introduces around 50 changes mostly acting under the hood to improve performance, consistency and the stability of the plugin. Here are five important changes we would like to highlight:</p>
+
+
+
+<ul>
+<li>You may now use&nbsp;<a href="https://bpdevel.wordpress.com/2022/11/24/webp-support-is-arriving-in-buddypress-11-0-0/">.webp</a>&nbsp;images for your profile and cover images (requires WordPress 5.8 or newer).</li>
+
+
+
+<li>A&nbsp;<a href="https://bpdevel.wordpress.com/2022/11/21/buddypress-will-soon-only-load-its-javascript-and-style-assets-into-the-community-area-of-your-site/">new filter</a>&nbsp;was introduced to only load BuddyPress JavaScript &amp; CSS assets on BuddyPress-generated pages.</li>
+
+
+
+<li>The way BuddyPress loads its&nbsp;<a href="https://bpdevel.wordpress.com/2022/11/20/the-way-buddypress-loads-deprecated-code-will-change-in-version-11-0-0/">deprecated code</a>&nbsp;has been improved.</li>
+
+
+
+<li>Advanced users or developers can now extend the Activity loop to&nbsp;<a href="https://bpdevel.wordpress.com/2022/12/01/bp-11-fetch-activities-for-or-excluding-a-group-of-users/">include or exclude a list of users</a>.</li>
+
+
+
+<li>Advanced users or developers can now build custom xProfile loops&nbsp;<a href="https://bpdevel.wordpress.com/2022/12/06/bp-11-bp_has_profile-now-accepts-an-array-of-profile-group-ids/">including a specific set of profile field groups</a>.</li>
+</ul>
+
+
+
+<p>Please note BuddyPress 11.0.0&nbsp;<strong><a href="https://bpdevel.wordpress.com/2022/07/12/wordpress-required-version-update-4/">will require at least WordPress 5.7</a></strong> &amp; take a few minutes to discover all changes reading this <a href="https://codex.buddypress.org/releases/version-11-0-0/">release note</a>.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">11.0.0 also marks the beginning of a transitional year for BuddyPress: get ready for great features and changes.</h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="1024" height="285" src="https://buddypress.org/wp-content/uploads/1/2023/01/hello-bp-addons-1024x285.png" alt="" class="wp-image-327887" srcset="https://buddypress.org/wp-content/uploads/1/2023/01/hello-bp-addons-1024x285.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/01/hello-bp-addons-300x84.png 300w, https://buddypress.org/wp-content/uploads/1/2023/01/hello-bp-addons-768x214.png 768w, https://buddypress.org/wp-content/uploads/1/2023/01/hello-bp-addons.png 1217w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>In 10.0.0, we’ve introduced a&nbsp;new area in the Plugin Administration screen&nbsp;to easily find BuddyPress Add-ons maintained by the BuddyPress Core Team. Check this list often as we will soon publish the following add-ons:</p>
+
+
+
+<ul>
+<li>&#8220;THE&#8221; long-awaited feature: Community Media Attachments.</li>
+
+
+
+<li>A revolutionary Block-based Activity Post Form to standardize the way to extend activity updates with richer &amp; more engaging content.</li>
+</ul>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-18">
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+
+
+
+<div class="wp-block-column is-layout-flow">
+<figure class="wp-block-embed aligncenter is-type-wp-embed is-provider-plugin-directory wp-block-embed-plugin-directory"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="7Rz8NLBhUJ"><a href="https://wordpress.org/plugins/bp-rewrites/">BP Rewrites</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="&#8220;BP Rewrites&#8221; &#8212; Plugin Directory" src="https://wordpress.org/plugins/bp-rewrites/embed/#?secret=p5bFlWsKyW#?secret=7Rz8NLBhUJ" data-secret="7Rz8NLBhUJ" width="515" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow" style="flex-basis:100px"></div>
+</div>
+
+
+
+<p>An example about this new way to keep moving forward is the&nbsp;<a href="https://wordpress.org/plugins/bp-rewrites/">BP Rewrites</a>&nbsp;Add-on. You can already test this breaking change, which uses the WordPress way to parse URLs (thanks to the WP Rewrites API), and report issues to us or to the third-party plugin authors. Once BP Rewrites are merged into BuddyPress 12.0.0 (our next major release), we’ll make sure to build a backward-compatibility add-on so that you can still use plugins that do not work with &#8220;BP Rewrites&#8221;.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="1024" height="521" src="https://buddypress.org/wp-content/uploads/1/2023/01/bp-rewrites-visibility-1024x521.png" alt="" class="wp-image-327895" srcset="https://buddypress.org/wp-content/uploads/1/2023/01/bp-rewrites-visibility-1024x521.png 1024w, https://buddypress.org/wp-content/uploads/1/2023/01/bp-rewrites-visibility-300x153.png 300w, https://buddypress.org/wp-content/uploads/1/2023/01/bp-rewrites-visibility-768x391.png 768w, https://buddypress.org/wp-content/uploads/1/2023/01/bp-rewrites-visibility.png 1046w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><strong>BP Rewrites </strong>now brings a community visibility option to BuddyPress</figcaption></figure></div>
+
+
+<p>By the way, the latest version of BP Rewrites also includes a feature to restrict the community area to your site members only.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Many thanks to 11.0.0 contributors&nbsp;<span class="dashicons dashicons-heart" style="color: #c1403b"></span></h2>
+
+
+
+<p><a href="https://profiles.wordpress.org/oztaser/">Adil Öztaşer (oztaser)</a>,&nbsp;<a href="https://profiles.wordpress.org/alexmangini/">Alex Mangini (alexmangini)</a>,&nbsp;<a href="https://profiles.wordpress.org/baasui/">baasui</a>,&nbsp;<a href="https://profiles.wordpress.org/bouncingsprout/">Ben Roberts (bouncingsprout)</a>,&nbsp;<a href="https://profiles.wordpress.org/boonebgorges/">Boone B Gorges (boonebgorges)</a>,&nbsp;<a href="https://profiles.wordpress.org/sbrajesh/">Brajesh Singh (sbrajesh)</a>,&nbsp;<a href="https://profiles.wordpress.org/dancaragea/">Dan Caragea (dancaragea)</a>,&nbsp;<a href="https://profiles.wordpress.org/dcavins/">David Cavins (dcavins)</a>,&nbsp;<a href="https://profiles.wordpress.org/devutpol/">Deb Nath Utpol (devutpol)</a>,&nbsp;<a href="https://profiles.wordpress.org/fawp/">fawp</a>,&nbsp;<a href="https://profiles.wordpress.org/fernandot/">Fernando Tellado (fernandot)</a>,&nbsp;<a href="https://profiles.wordpress.org/hnla/">Hugo Ashmore (hnla)</a>,&nbsp;<a href="https://profiles.wordpress.org/nobnob/">Javier Esteban (nobnob)</a>,&nbsp;<a href="https://profiles.wordpress.org/johnjamesjacoby/">John James Jacoby (johnjamesjacoby)</a>,&nbsp;<a href="https://profiles.wordpress.org/jtymann/">jtymann</a>,&nbsp;<a href="https://profiles.wordpress.org/rudlinkon/">Linkon Miyan (rudlinkon)</a>,&nbsp;<a href="https://profiles.wordpress.org/martinutopia/">martinutopia</a>,&nbsp;<a href="https://profiles.wordpress.org/imath/">Mathieu Viet (imath)</a>,&nbsp;<a href="https://profiles.wordpress.org/nickchomey/">Nick (nickchomey)</a>,&nbsp;<a href="https://profiles.wordpress.org/niftythree/">Nifty (niftythree)</a>,&nbsp;<a href="https://profiles.wordpress.org/DJPaul/">Paul Gibbs (DJPaul)</a>,&nbsp;<a href="https://profiles.wordpress.org/nekojonez/">Pieterjan Deneys (nekojonez)</a>,&nbsp;<a href="https://profiles.wordpress.org/r-a-y/">r-a-y</a>,&nbsp;<a href="https://profiles.wordpress.org/rafiahmedd/">Rafi Ahmed (rafiahmedd)</a>,&nbsp;<a href="https://github.com/ranfen/">ranfen</a>,&nbsp;<a href="https://profiles.wordpress.org/espellcaste/">Renato Alves (espellcaste)</a>,&nbsp;<a href="https://profiles.wordpress.org/robinwpdeveloper/">Robin (robinwpdeveloper)</a>,&nbsp;<a href="https://profiles.wordpress.org/shawfactor/">shawfactor</a>,&nbsp;<a href="https://profiles.wordpress.org/slaffik/">Slava Abakumov (slaffik)</a>,&nbsp;<a href="https://profiles.wordpress.org/sjregan/">sjregan</a>,&nbsp;<a href="https://profiles.wordpress.org/tahmidulkarim/">Tahmid ul Karim (tahmidulkarim)</a>,&nbsp;<a href="https://profiles.wordpress.org/teeboy4real/">teeboy4real</a>,&nbsp;<a href="https://profiles.wordpress.org/thomaslhotta/">thomaslhotta</a>,&nbsp;<a href="https://profiles.wordpress.org/username_/">username_</a>,&nbsp;<a href="https://profiles.wordpress.org/venutius/">Venutius</a>.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img decoding="async" loading="lazy" width="2000" height="1247" class="wp-block-cover__image-background wp-image-327909" alt="" src="https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van.jpg" data-object-fit="cover" srcset="https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van.jpg 2000w, https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van-300x187.jpg 300w, https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van-1024x638.jpg 1024w, https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van-768x479.jpg 768w, https://buddypress.org/wp-content/uploads/1/2023/01/la-scala-van-1536x958.jpg 1536w" sizes="(max-width: 2000px) 100vw, 2000px" /><div class="wp-block-cover__inner-container">
+<p class="has-text-align-right has-large-font-size">Welcome to &#8220;La Scala&#8221;</p>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-21">
+<div class="wp-block-column is-layout-flow" style="flex-basis:60%"></div>
+
+
+
+<div class="wp-block-column is-layout-flow" style="flex-basis:40%">
+<p class="has-small-font-size"><em>As soon as you enter the pasta and pizza restaurant, you are transported to Italy a few years ago. On your right, hung on the wall, in the middle of drawings of hearts and the inscriptions &#8220;Ti amo&#8221; (I love you in Italian), an old coin-operated telephone creates a retro atmosphere. Further on, you come face to face with a rustic van that survived the 70s and which secretly houses the oven and the pizza workshop! &#8220;La Scala&#8221; (stairs in Italian) certainly owes its name to the two magnificent spiral staircases that allow guests to climb to the upper level. On the ceiling, an old map allows you to familiarize yourself with the names of the most important cities in Italy, while your pizza is cooking. When it arrives, it&#8217;s an explosion of authentic flavors and if you have the good idea to have chosen the &#8220;capricciosa&#8221;, the spicy Italian sausages will delight your taste buds.</em></p>
+
+
+
+<p>Yum, good treat!</p>
+</div>
+</div>
+</div></div>
+
+
+
+<p class="has-text-align-right"><em>&#8220;La Scala&#8221; is located in Issy-Les-Moulineaux, a french city of the Paris suburbs.</em></p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading" id="your-feedback"><span class="dashicons dashicons-format-chat" style="color: #c1403b;font-size: 30px;margin-right: 20px;vertical-align: sub"></span>  Your feedback</h2>
+
+
+
+<p>Receiving your feedback and suggestions for future versions of BuddyPress genuinely motivates and encourages our contributors. Please&nbsp;<a href="https://buddypress.org/support/">share it</a>&nbsp;<img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f64f.png" alt="🙏" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>Thanks a lot for using BuddyPress <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f60d.png" alt="😍" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2023/01/buddypress-11-0-0-la-scala/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.0.0 Release Candidate</title>
+		<link>https://buddypress.org/2022/12/buddypress-11-0-0-release-candidate/</link>
+					<comments>https://buddypress.org/2022/12/buddypress-11-0-0-release-candidate/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Fri, 16 Dec 2022 05:51:33 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.0.0-RC1]]></category>
+		<category><![CDATA[release candidate]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=327475</guid>
+
+					<description><![CDATA[The first release candidate for BuddyPress 11.0.0 is now available! &#8220;Release Candidate&#8221; means that we think the new version is ready for release, but with a bit less than 200,000 active installs, hundreds of BuddyPress plugins and Thousands of WordPress themes, it’s possible something was missed. BuddyPress 11.0.0 is slated for release&#160;on&#160;January 5, 2023, but&#160;your&#160;help [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>The first release candidate for BuddyPress 11.0.0 is now available!</p>
+
+
+
+<div class="wp-block-buttons is-horizontal is-content-justification-center is-layout-flex wp-container-22">
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-RC1.zip" style="background-color:#c1403b">Let&#8217;s test it!</a></div>
+</div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>&#8220;Release Candidate&#8221; means that we think the new version is ready for release, but with a bit less than 200,000 active installs, hundreds of BuddyPress plugins and Thousands of WordPress themes, it’s possible something was missed. BuddyPress 11.0.0 is slated for release&nbsp;on&nbsp;<strong>January 5, 2023</strong>, but&nbsp;<em>your</em>&nbsp;help is needed to get there — if you haven’t tried 11.0.0 yet,&nbsp;doing it now is a great idea!</p>
+
+
+
+<p>You can test the&nbsp;<a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-RC1.zip">11.0.0-RC</a>&nbsp;pre-release in 4 ways :</p>
+
+
+
+<ul>
+<li>Try the&nbsp;<a href="https://wordpress.org/plugins/bp-beta-tester/">BP Beta Tester</a>&nbsp;plugin.</li>
+
+
+
+<li><a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-RC1.zip">Download the release candidate here (zip file)</a>.</li>
+
+
+
+<li>Check out our SVN repository:&nbsp;<code>svn co https://buddypress.svn.wordpress.org/trunk/</code></li>
+
+
+
+<li>Clone our read-only Git repository:&nbsp;<code>git clone git://buddypress.git.wordpress.org/</code></li>
+</ul>
+
+
+
+<p>A detailed changelog will be part of our official release note, but&nbsp;you can get a quick overview by reading the post about the&nbsp;<a href="https://buddypress.org/2022/11/buddypress-11-0-0-beta1/" data-type="post" data-id="318272">11.0.0 Beta1</a>&nbsp;release.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Plugin and Theme Developers</h2>
+
+
+
+<p>Please test your plugins and themes against BuddyPress 11.0.0. If you find compatibility problems, please be sure to post to this specific&nbsp;<a href="https://buddypress.org/support/topic/buddypress-11-0-0-release-candidate/">support topic</a>&nbsp;so we can figure those out before the final release. We strongly advise you to have a look at the&nbsp;<a href="https://bpdevel.wordpress.com/category/development-notes/11-0/">11.0.0 developer notes</a>&nbsp;to figure out what to focus on during your testing.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">How you can help</h2>
+
+
+
+<p>Do you speak a language other than English?&nbsp;<a href="https://translate.wordpress.org/projects/wp-plugins/buddypress/">Help us translate BuddyPress into as many languages as possible!</a>&nbsp;This release also marks the&nbsp;<a href="https://make.wordpress.org/polyglots/handbook/glossary/#string-freeze">string freeze</a>&nbsp;point of the 11.0.0 release schedule.</p>
+
+
+
+<p><em><strong>If you think you’ve found a bug</strong>, you can share it with us replying to this <a href="https://buddypress.org/support/topic/buddypress-11-0-0-release-candidate/">support topic</a> or if you’re comfortable writing a reproducible bug report,&nbsp;<a href="https://buddypress.trac.wordpress.org/">file one on BuddyPress Trac</a></em>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2022/12/buddypress-11-0-0-release-candidate/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.0.0-beta3</title>
+		<link>https://buddypress.org/2022/12/buddypress-11-0-0-beta3/</link>
+					<comments>https://buddypress.org/2022/12/buddypress-11-0-0-beta3/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Fri, 09 Dec 2022 07:58:12 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.0.0-beta3]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=327432</guid>
+
+					<description><![CDATA[Hello BuddyPress contributors! If you haven’t tested our two first&#160;11.0.0 beta releases, here’s a last opportunity to help us give the final touches to our next major release so that we make sure it will fit perfectly into your WordPress / BuddyPress specific configuration. Beta testing is very important and we need you all, whether [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Hello BuddyPress contributors!</p>
+
+
+
+<p>If you haven’t tested our two first&nbsp;11.0.0 beta releases, here’s a last opportunity to help us give the final touches to our next major release so that we make sure it will fit perfectly into your WordPress / BuddyPress specific configuration. Beta testing is very important and we need you all, whether you’re a regular or advanced user, a theme designer or a plugin author: <strong>please contribute</strong>!</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-23">
+<div class="wp-block-button aligncenter has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta3.zip" style="background-color:#c1403b">Download &amp; Test BuddyPress 11.0.0-beta3</a></div>
+</div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Please note the plugin is&nbsp;<strong>still in development</strong>, so we recommend running this beta release on a&nbsp;<strong>testing site</strong>.</p>
+
+
+
+<p>You can test&nbsp;<a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta3.zip">BuddyPress 11.0.0-beta3</a>&nbsp;in 4 ways :</p>
+
+
+
+<ul>
+<li>Try the&nbsp;<a href="https://wordpress.org/plugins/bp-beta-tester/">BP Beta Tester</a>&nbsp;plugin.</li>
+
+
+
+<li><a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta3.zip">Download the beta here (zip file)</a>.</li>
+
+
+
+<li>Check out our SVN repository:&nbsp;<code>svn co https://buddypress.svn.wordpress.org/trunk/</code></li>
+
+
+
+<li>Clone our read-only Git repository:&nbsp;<code>git clone git://buddypress.git.wordpress.org/</code></li>
+</ul>
+
+
+
+<p>We&#8217;ve <a href="https://bpdevel.wordpress.com/2022/12/07/bp-dev-chat-summary-december-7-2022/">lately decided to postpone</a> the final release date to <strong>January 5, 2023</strong> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f448.png" alt="👈" class="wp-smiley" style="height: 1em; max-height: 1em;" />. We would greatly appreciate your help making sure this next major version of your community engine is as good as it can be.</p>
+
+
+
+<p>Since beta2, we&#8217;ve fixed <a href="https://buddypress.trac.wordpress.org/query?changetime=11%2F26%2F2022..12%2F09%2F2022&amp;resolution=fixed&amp;milestone=11.0.0&amp;or&amp;changetime=11%2F26%2F2022..12%2F09%2F2022&amp;resolution=fixed&amp;milestone=10.7.0&amp;group=status&amp;col=id&amp;col=summary&amp;col=owner&amp;col=type&amp;col=priority&amp;col=component&amp;col=version&amp;order=priority">7 tickets</a> and documented two changes BP developers should love:</p>
+
+
+
+<ul>
+<li><a href="https://bpdevel.wordpress.com/2022/12/01/bp-11-fetch-activities-for-or-excluding-a-group-of-users/">Fetch Activities for or Excluding a Group of&nbsp;Users</a></li>
+
+
+
+<li><a href="https://bpdevel.wordpress.com/2022/12/06/bp-11-bp_has_profile-now-accepts-an-array-of-profile-group-ids/">bp_has_profile() Now Accepts an Array of Profile Group&nbsp;IDs</a></li>
+</ul>
+
+
+
+<p><strong>beta3 particularly targets installs where the BP Default theme is active. If you are using this theme, we&#8217;d be very happy if you could make sure everything is fine for you. If you are not using this theme and wish to give us a hand, add the following line to your <a href="https://codex.buddypress.org/themes/bp-custom-php/">bp-custom.php</a> file so that you bring it back into your available themes and activate it:</strong></p>
+
+
+
+<p><code>add_filter( 'bp_do_register_theme_directory', '__return_true' );</code></p>
+
+
+
+<p>If you find something weird testing this beta, please report it on&nbsp;<a href="https://buddypress.trac.wordpress.org/newticket">BuddyPress Trac</a>&nbsp;or post a reply to&nbsp;<a href="https://buddypress.org/support/topic/buddypress-11-0-0-beta3/">this support topic</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2022/12/buddypress-11-0-0-beta3/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.0.0-beta2</title>
+		<link>https://buddypress.org/2022/11/buddypress-11-0-0-beta2/</link>
+					<comments>https://buddypress.org/2022/11/buddypress-11-0-0-beta2/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Fri, 25 Nov 2022 22:28:29 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.0.0-beta2]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=327306</guid>
+
+					<description><![CDATA[Hello BuddyPress contributors! If you haven’t tested our first&#160;11.0.0 beta release, here’s another opportunity to help us give the final touches to our next major release so that we make sure it will fit perfectly into your WordPress / BuddyPress specific configuration. Beta testing is very important and we need you all, whether you’re a [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Hello BuddyPress contributors!</p>
+
+
+
+<p>If you haven’t tested our first&nbsp;<a href="https://buddypress.org/2022/11/buddypress-11-0-0-beta1/" data-type="post" data-id="327062">11.0.0 beta release</a>, here’s another opportunity to help us give the final touches to our next major release so that we make sure it will fit perfectly into your WordPress / BuddyPress specific configuration. Beta testing is very important and we need you all, whether you’re a regular or advanced user, a theme designer or a plugin author: <strong>please contribute</strong>!</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-24">
+<div class="wp-block-button aligncenter has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta2.zip" style="background-color:#c1403b">Download &amp; Test BuddyPress 11.0.0-beta2</a></div>
+</div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Please note the plugin is&nbsp;<strong>still in development</strong>, so we recommend running this beta release on a&nbsp;<strong>testing site</strong>.</p>
+
+
+
+<p>You can test&nbsp;<a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta2.zip">BuddyPress 11.0.0-beta2</a>&nbsp;in 4 ways :</p>
+
+
+
+<ul>
+<li>Try the&nbsp;<a href="https://wordpress.org/plugins/bp-beta-tester/">BP Beta Tester</a>&nbsp;plugin.</li>
+
+
+
+<li><a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta2.zip">Download the beta here (zip file)</a>.</li>
+
+
+
+<li>Check out our SVN repository:&nbsp;<code>svn co https://buddypress.svn.wordpress.org/trunk/</code></li>
+
+
+
+<li>Clone our read-only Git repository:&nbsp;<code>git clone git://buddypress.git.wordpress.org/</code></li>
+</ul>
+
+
+
+<p>The current target for final release is <strong>December 14, 2022</strong> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f448.png" alt="👈" class="wp-smiley" style="height: 1em; max-height: 1em;" />. We would greatly appreciate your help making sure this next major version of your community engine is as good as it can be.</p>
+
+
+
+<p>Since beta1, we&#8217;ve fixed <a href="https://buddypress.trac.wordpress.org/query?changetime=11%2F10%2F2022..11%2F26%2F2022&amp;resolution=fixed&amp;milestone=11.0.0&amp;or&amp;resolution=fixed&amp;milestone=10.7.0&amp;group=status&amp;col=id&amp;col=summary&amp;col=owner&amp;col=type&amp;col=priority&amp;col=component&amp;col=version&amp;order=priority">12 new tickets</a> and documented some important changes BP Themes or Plugins authors should definitely read:</p>
+
+
+
+<ul>
+<li><a href="https://bpdevel.wordpress.com/2022/11/24/webp-support-is-arriving-in-buddypress-11-0-0/">.webp support is arriving in BuddyPress&nbsp;11.0.0</a></li>
+
+
+
+<li><a href="https://bpdevel.wordpress.com/2022/11/21/buddypress-will-soon-only-load-its-javascript-and-style-assets-into-the-community-area-of-your-site/">BuddyPress will soon only load its JavaScript and Style assets into the community area of your&nbsp;site</a></li>
+
+
+
+<li><a href="https://bpdevel.wordpress.com/2022/11/20/the-way-buddypress-loads-deprecated-code-will-change-in-version-11-0-0/">The way BuddyPress loads deprecated code will change in version&nbsp;11.0.0</a></li>
+</ul>
+
+
+
+<p>If you find something weird testing this beta, please report it on&nbsp;<a href="https://buddypress.trac.wordpress.org/newticket">BuddyPress Trac</a>&nbsp;or post a reply to&nbsp;<a href="https://buddypress.org/support/topic/buddypress-11-0-0-beta2/">this support topic</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2022/11/buddypress-11-0-0-beta2/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 11.0.0-beta1</title>
+		<link>https://buddypress.org/2022/11/buddypress-11-0-0-beta1/</link>
+					<comments>https://buddypress.org/2022/11/buddypress-11-0-0-beta1/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Tue, 08 Nov 2022 20:30:16 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[11.0.0-beta1]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=327062</guid>
+
+					<description><![CDATA[BuddyPress 11.0.0-beta1 is available for testing! Please note the plugin is still in development, so we recommend running this beta release on a testing site. You can test BuddyPress 11.0.0-beta1 in 4 ways : The current target for final release is December 14, 2022. We would greatly appreciate your help making sure this next major [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><strong>BuddyPress 11.0.0-beta1</strong> is available for testing!</p>
+
+
+
+<p>Please note the plugin is <strong>still in development</strong>, so we recommend running this beta release on a <strong>testing site</strong>.</p>
+
+
+
+<p>You can test <a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta1.zip">BuddyPress 11.0.0-beta1</a> in 4 ways :</p>
+
+
+
+<ul>
+<li>Try the <a href="https://wordpress.org/plugins/bp-beta-tester/">BP Beta Tester</a> plugin.</li>
+
+
+
+<li><a href="https://downloads.wordpress.org/plugin/buddypress.11.0.0-beta1.zip">Download the beta here (zip file)</a>.</li>
+
+
+
+<li>Check out our SVN repository: <code>svn co https://buddypress.svn.wordpress.org/trunk/</code></li>
+
+
+
+<li>Clone our read-only Git repository: <code>git clone git://buddypress.git.wordpress.org/</code></li>
+</ul>
+
+
+
+<p>The current target for final release is December 14, 2022. We would greatly appreciate your help making sure this next major version of your community engine is as good as it can be.</p>
+
+
+
+<p>Please note BuddyPress 11.0.0 <strong><a href="https://bpdevel.wordpress.com/2022/07/12/wordpress-required-version-update-4/">will require at least WordPress 5.7</a></strong>.</p>
+
+
+
+<p>As usual, <strong>testing for bugs is the key to a safe upgrade</strong> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f449.png" alt="👉" class="wp-smiley" style="height: 1em; max-height: 1em;" />  so please give us a few minutes of your time to make sure this pre-release behaves the right way with your specific WordPress configuration, your theme, and the other WordPress plugins you are using. Try to use a testing site which is very close to the one you are using in production. If you find something weird, please report it on <a href="https://buddypress.trac.wordpress.org/newticket">BuddyPress Trac</a> or post a reply to <a href="https://buddypress.org/support/topic/buddypress-11-0-0-beta1/">this support topic</a>.</p>
+
+
+
+<p>If you&#8217;re a BuddyPress plugin developer or a BuddyPress theme developer, please make sure to test this 11.0.0-beta1 release as <strong>we&#8217;re now only loading BuddyPress assets (JavaScripts and styles) inside BuddyPress pages</strong>.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading" id="around-70-changes-to-expect-in-10-0-0">Around 40 changes to expect in 11.0.0</h2>
+
+
+
+<p>You can check out <a href="https://buddypress.trac.wordpress.org/query?status=closed&amp;group=resolution&amp;milestone=11.0.0">this report</a> on Trac for the full list of them. We only planned to ship one long awaited feature as a BuddyPress Add-on. At this stage, we&#8217;re staying silent about it to keep the surprise effect intact (truth is we are still not sure it&#8217;ll be ready for December 14 <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f92b.png" alt="🤫" class="wp-smiley" style="height: 1em; max-height: 1em;" />).</p>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <em>Happy testing!</em></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2022/11/buddypress-11-0-0-beta1/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>BuddyPress 10.6.0 Maintenance Release</title>
+		<link>https://buddypress.org/2022/10/buddypress-10-6-0-maintenance-release/</link>
+					<comments>https://buddypress.org/2022/10/buddypress-10-6-0-maintenance-release/#comments</comments>
+		
+		<dc:creator><![CDATA[Mathieu Viet]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2022 17:23:51 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[10.6.0]]></category>
+		<category><![CDATA[maintenance]]></category>
+		<category><![CDATA[releases]]></category>
+		<guid isPermaLink="false">https://buddypress.org/?p=326961</guid>
+
+					<description><![CDATA[BuddyPress 10.6.0 is a new maintenance release fixing 1 ugly bug with themes using block templates although there are not Block Based themes. For details on the change, please read the&#160;10.6.0 release notes. Many thanks to the users who quickly reported this issue into our previous maintenance release forum topic. Update to BuddyPress 10.6.0 today [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://downloads.wordpress.org/plugin/buddypress.10.6.0.zip">BuddyPress 10.6.0</a> is a new maintenance release fixing 1 ugly bug with themes using block templates although there are not Block Based themes. For details on the change, please read the&nbsp;<a href="https://codex.buddypress.org/releases/version-10-6-0/">10.6.0 release notes</a>.</p>
+
+
+
+<p>Many thanks to the users who quickly reported this issue into our previous <a href="https://buddypress.org/support/topic/buddypress-10-5-0-maintenance-release/">maintenance release forum topic</a>.</p>
+
+
+
+<p>Update to BuddyPress 10.6.0 today in your WordPress Dashboard, or by&nbsp;<a href="https://wordpress.org/plugins/buddypress/">downloading it from the WordPress.org plugin repository</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://buddypress.org/2022/10/buddypress-10-6-0-maintenance-release/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

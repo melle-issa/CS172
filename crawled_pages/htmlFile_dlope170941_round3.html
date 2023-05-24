@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Stackable &#8211; Page Builder Gutenberg Blocks &#8211; WordPress plugin &#124; WordPress.org</title>
+<link rel='preload' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2' as='font' crossorigin='crossorigin' type='font/woff2' />
+<meta name='robots' content='max-image-preview:large' />
+
+<script type="application/ld+json">
+[
+    {
+        "@context": "http://schema.org",
+        "@type": [
+            "SoftwareApplication",
+            "Product"
+        ],
+        "applicationCategory": "Plugin",
+        "operatingSystem": "WordPress",
+        "name": "Stackable &#8211; Page Builder Gutenberg Blocks",
+        "url": "https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/",
+        "description": "Custom Blocks that transform your WordPress Block Editor into a page builder",
+        "softwareVersion": "3.7.2",
+        "fileFormat": "application/zip",
+        "downloadUrl": "https://downloads.wordpress.org/plugin/stackable-ultimate-gutenberg-blocks.3.7.2.zip",
+        "dateModified": "2023-03-27T03:27:12+00:00",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "worstRating": 1,
+            "bestRating": 5,
+            "ratingValue": 4.9,
+            "ratingCount": 380,
+            "reviewCount": 380
+        },
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/DownloadAction",
+            "userInteractionCount": 1990898
+        },
+        "image": [
+            "https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/icon-256x256.png?rev=2749547",
+            "https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/banner-1544x500.png?rev=2749547"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "url": "https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "seller": {
+                "@type": "Organization",
+                "name": "WordPress.org",
+                "url": "https://wordpress.org"
+            }
+        }
+    }
+]
+</script>
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel="alternate" href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="en" />
+<link rel="alternate" href="https://fr.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="fr-fr" />
+<link rel="alternate" href="https://it.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="it-it" />
+<link rel="alternate" href="https://nb.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="nb-no" />
+<link rel="alternate" href="https://ru.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="ru-ru" />
+<link rel="alternate" href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" hreflang="x-default" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script>
+	<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/wordpress.org\/plugins\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3-alpha-55700"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css' href='https://s.w.org/wp-includes/css/dashicons.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://wordpress.org/plugins/wp-includes/css/admin-bar.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/block-library/style.css?ver=15.4.0' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='wporg-language-suggest-style-inline-css' type='text/css'>
+.wp-block-wporg-language-suggest{background-color:#eff2ff;color:#1e1e1e;font-size:12px;line-height:1;text-align:center}.wp-block-wporg-language-suggest>*{padding:10px 4px}
+</style>
+<style id='wporg-latest-news-style-inline-css' type='text/css'>
+.wporg-latest-news{list-style:none;margin:0;padding:0}.wporg-latest-news li:not(:last-child){padding-bottom:var(--wp--custom--latest-news--spacing,16px)}.wporg-latest-news li a{text-decoration:none}.wporg-latest-news li a:hover{text-decoration:underline}.wporg-latest-news li>a{color:var(--wp--custom--latest-news--link--color);display:block;font-family:var(--wp--custom--latest-news--title--font-family);font-size:var(--wp--custom--latest-news--title--font-size,24px);line-height:var(--wp--custom--latest-news--title--line-height);margin-bottom:var(--wp--custom--latest-news--link--spacing,4px)}.wporg-latest-news__details{font-size:var(--wp--custom--latest-news--link--details-font-size,14px)}.wporg-latest-news__details>:not(:last-child){margin-right:4px}.wporg-latest-news__category{text-transform:uppercase}
+</style>
+<style id='wporg-notice-style-inline-css' type='text/css'>
+.wp-block-wporg-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--acid-green-3);--wp--custom--wporg-notice--color--text:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-notice.is-info-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--blueberry-4)}.wp-block-wporg-notice.is-alert-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--lemon-3)}.wp-block-wporg-notice.is-warning-notice{--wp--custom--wporg-notice--color--background:var(--wp--preset--color--pomegrade-3)}.wp-block-wporg-notice{background-color:var(--wp--custom--wporg-notice--color--background);color:var(--wp--custom--wporg-notice--color--text);display:grid;gap:.5em;grid-template-columns:auto 1fr;padding:1.25em}.wp-block-wporg-notice>*{align-self:start}.wp-block-wporg-notice p:first-child{margin-block-start:0}.wp-block-wporg-notice p:last-child{margin-block-end:0}.wp-block-wporg-notice a:active,.wp-block-wporg-notice a:focus,.wp-block-wporg-notice a:hover,.wp-block-wporg-notice a:link,.wp-block-wporg-notice a:visited{color:var(--wp--custom--wporg-notice--color--text)}.wp-block-wporg-notice.alignleft,.wp-block-wporg-notice.alignright{max-width:calc(var(--wp--style--global--content-size)*.66)}.wp-block-wporg-notice__icon{align-self:flex-start;background-image:url(/plugins/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/tip.svg);background-position:50%;background-repeat:no-repeat;background-size:24px 24px;display:flex;height:1.875em;width:24px}.is-info-notice .wp-block-wporg-notice__icon{background-image:url(/plugins/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/info.svg)}.is-alert-notice .wp-block-wporg-notice__icon{background-image:url(/plugins/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/alert.svg)}.is-warning-notice .wp-block-wporg-notice__icon{background-image:url(/plugins/wp-content/mu-plugins/pub-sync/blocks/notice/build/../src/icon/library/warning.svg)}.wp-block-wporg-notice__content{align-self:center}
+</style>
+<style id='wporg-site-breadcrumbs-style-inline-css' type='text/css'>
+.wp-block-wporg-site-breadcrumbs{align-items:center;display:flex}.wp-block-wporg-site-breadcrumbs a{color:var(--wp--preset--color--charcoal-1)}.wp-block-wporg-site-breadcrumbs a:hover{text-decoration-line:underline}.wp-block-wporg-site-breadcrumbs>span:not(:first-child){align-items:center;display:flex;margin-top:0}.wp-block-wporg-site-breadcrumbs>span:not(:first-child):before{content:"/";display:inline-block;font-weight:400;margin:0 .5rem}.wp-block-wporg-site-breadcrumbs .is-current-page{font-weight:700}
+</style>
+<style id='wporg-table-of-contents-style-inline-css' type='text/css'>
+@media (min-width:890px){#wp--skip-link--target,.is-toc-heading{scroll-margin-top:var(--wp-local-header-offset,0)}}.is-toc-heading a{--local--icon-size:24px;color:inherit;display:inline-block;padding-right:calc(var(--local--icon-size) + .1em)}.is-toc-heading a,.is-toc-heading a:after{text-decoration:none!important}.is-toc-heading a:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.083 17.639H8.444a5.194 5.194 0 1 1 0-10.389h1.64v1.5H8.443a3.694 3.694 0 0 0 0 7.389h1.641v1.5ZM13.917 7.25h1.639a5.194 5.194 0 0 1 0 10.39h-1.641v-1.5h1.642a3.694 3.694 0 0 0 0-7.39h-1.642v-1.5Zm-4.584 6.084h5.334v-1.5H9.333v1.5Z' fill='%233858E9'/%3E%3C/svg%3E");background-position:100%;background-repeat:no-repeat;background-size:contain;content:"";display:inline-block;height:var(--local--icon-size);margin-right:calc(var(--local--icon-size)*-1 - .1em);opacity:0;vertical-align:baseline;width:calc(var(--local--icon-size) + .1em)}.is-toc-heading a:focus:after,.is-toc-heading a:hover:after,.is-toc-heading:focus a:after{opacity:1}.is-toc-heading:focus,.is-toc-heading:focus-visible{outline:none}.is-toc-heading:target{border-left:2px solid var(--wp--preset--color--blueberry-1);padding-left:8px}
+</style>
+<style id='wporg-two-factor-settings-style-inline-css' type='text/css'>
+#main{margin-bottom:2rem}.wp-block-wporg-two-factor-settings{position:relative}.wp-block-wporg-two-factor-settings h3{clear:none;font-size:14px}.bbp-single-user .wp-block-wporg-two-factor-settings input[type=email],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=number],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=password],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=search],.bbp-single-user .wp-block-wporg-two-factor-settings input[type=text]{font-family:Open Sans,sans-serif;font-size:14px;padding:6px 10px}.wp-block-wporg-two-factor-settings .components-button{margin-right:20px}.wporg-2fa__navigation{justify-content:center!important;padding:24px 0!important;position:relative}.wporg-2fa__navigation a{align-items:center;display:flex;left:24px;position:absolute}.wporg-2fa__navigation svg{fill:#4ca6cf}.wporg-2fa__navigation h3{margin:unset;text-transform:capitalize}.wporg-2fa__token{letter-spacing:.3em}.components-notice{margin-left:0;margin-right:0}.components-notice.is-error,.components-notice.is-success{margin:0}.components-notice .components-notice__content{align-items:center;display:flex;gap:8px}.components-notice .components-notice__content svg{flex-shrink:0}.wporg-2fa__account-status .wporg-2fa__status-card:focus-within,.wporg-2fa__account-status .wporg-2fa__status-card:hover{z-index:1}.wporg-2fa__account-status .wporg-2fa__status-card a{display:block;text-decoration:none}.wporg-2fa__account-status .wporg-2fa__status-card a:focus,.wporg-2fa__account-status .wporg-2fa__status-card a:hover{outline:var(--wp-admin-border-width-focus) solid var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline-offset:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body{grid-column-gap:10px;display:grid;grid-template-areas:"status header      open" "status description open";grid-template-columns:min-content auto min-content;padding:18px 14px}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-icon{-ms-grid-row-span:2;align-self:center;grid-area:status;-ms-grid-column:1;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body h3{align-self:end;color:#1a1a1a;font-size:1.1em;grid-area:header;-ms-grid-column:3;-ms-grid-row:1;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body p{align-self:start;color:#757575;grid-area:description;-ms-grid-column:3;-ms-grid-row:2;margin:0}.wporg-2fa__account-status .wporg-2fa__status-card .components-card__body .wporg-2fa__status-card-open{-ms-grid-row-span:2;align-self:center;grid-area:open;-ms-grid-column:5;-ms-grid-row:1}.wporg-2fa__account-status .wporg-2fa__status-icon.is-enabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-ok{fill:#4ab866}.wporg-2fa__account-status .wporg-2fa__status-icon.is-pending{fill:#f0b849}.wporg-2fa__account-status .wporg-2fa__status-icon.is-disabled,.wporg-2fa__account-status .wporg-2fa__status-icon.is-error{fill:#d94f4f}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container,.wporg-2fa__password .wporg-2fa__password_container{align-items:flex-start;justify-content:flex-start;position:relative;width:-moz-fit-content;width:fit-content}.bbp-single-user .wporg-2fa__password .wporg-2fa__password_container input,.wporg-2fa__password .wporg-2fa__password_container input{padding-right:35px}.bbp-single-user .wporg-2fa__password .wporg-2fa__show-password,.wporg-2fa__password .wporg-2fa__show-password{height:31px;margin:0;padding:0 5px;position:absolute;right:1px;top:24px}.wporg-2fa__email .components-notice.actions-on-right>div{display:flex}.wporg-2fa__email .components-notice.actions-on-right>div>p{flex-grow:1;margin:initial}.wporg-2fa__totp_setup-container{position:relative}.wporg-2fa__totp_setup-container p{margin-top:unset}.wporg-2fa__totp_setup-container>.components-button{bottom:-10px;position:absolute;right:0;text-decoration:none!important}.wporg-2fa__totp_setup-container>.components-notice{width:100%}.wporg-2fa__totp_setup-container .wporg-2fa__totp_setup-instruction{align-self:center;margin-bottom:32px;margin-top:revert;max-width:550px}.wporg-2fa__totp_setup-method-container{align-self:center;max-width:360px}.wporg-2fa__totp_setup-method-container .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__totp_setup-method-container p{margin:0}@media screen and (max-width:480px){.wporg-2fa__totp_setup-method-container{max-width:unset;width:100%}}.wporg-2fa__setup-form-container{align-self:center;text-align:center;width:-moz-fit-content;width:fit-content}.wporg-2fa__setup-form-container>.components-notice.is-error{height:0;margin-bottom:-32px;opacity:0}.wporg-2fa__setup-form-container>.components-notice.is-error.is-shown{height:auto;margin-bottom:16px;opacity:1;transition:opacity .5s ease}@media screen and (max-width:480px){.wporg-2fa__setup-form-container{width:100%}}.wporg-2fa__qr-code{height:225px;text-align:center}#bbpress-forums .wporg-2fa__qr-code>a{display:inline-block}#bbpress-forums .wporg-2fa__qr-code>a:focus,#bbpress-forums .wporg-2fa__qr-code>a:hover{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__manual{align-self:center;display:flex;flex-direction:column;margin-bottom:16px;max-width:360px}.wporg-2fa__manual,.wporg-2fa__manual .components-button{width:-moz-fit-content;width:fit-content}.wporg-2fa__manual code{font-family:IBM Plex Mono;font-size:15px;font-style:normal;font-weight:400;line-height:20px;margin-top:32px}.wporg-2fa__submit-btn-container{display:flex;justify-content:space-between;width:100%}.wporg-2fa__submit-btn-container *{flex:1;justify-content:center}.wporg-2fa__submit-btn-container button+button{margin-right:0!important}.wporg-2fa__enabled-status{color:#4ab866;text-transform:uppercase}.wporg-2fa__setup-form{align-self:center;display:flex;flex-direction:column;justify-content:center;text-align:left}.wporg-2fa__setup-form>*{margin-bottom:16px}@media screen and (max-width:480px){.wporg-2fa__setup-form{width:100%}}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list{background-color:#ddd;margin:1em 0;padding:15px 20px}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list ol{-moz-column-count:2;-moz-column-width:110px;columns:110px 2;margin:0}.wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li::marker{color:#757575}.wporg-2fa__backup-codes .components-notice{margin:0 0 1em}#bbpress-forums .wporg-2fa__backup-codes .wporg-2fa__backup-codes-list li{list-style-position:inside;list-style-type:decimal}#bbpress-forums .wporg-2fa__progress-bar,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar,.wporg-2fa__progress-bar{--color-enabled:#0475c4;--color-disabled:#ccc;--color-disabled-text:#757575;margin:0 -24px;position:relative}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps,.wporg-2fa__progress-bar .wporg-2fa__setup-steps{display:flex;justify-content:space-evenly;position:relative;z-index:2}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li{text-align:center}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps svg{border:1px solid;border-radius:30px;box-sizing:content-box;padding:15px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled{color:var(--color-enabled);font-weight:700}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-enabled svg{fill:#fff;background-color:var(--color-enabled);border-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled{color:var(--color-disabled-text)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg,.wporg-2fa__progress-bar .wporg-2fa__setup-steps li.is-disabled svg{fill:var(--color-disabled);background-color:#fff;border-color:var(--color-disabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators{display:flex;justify-content:space-between;position:absolute;top:27px;width:100%;z-index:1}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li{flex-basis:33%;flex-grow:1;flex-shrink:1;height:3px}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-enabled{background-color:var(--color-enabled)}#bbpress-forums .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,#bbpress-forums.bbpress-wrapper .wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled,.wporg-2fa__progress-bar .wporg-2fa__setup-step-separators li.is-disabled{background-color:var(--color-disabled)}.wporg-2fa__global-notice{position:absolute;right:0;top:-60px;z-index:2}.wporg-2fa__global-notice .components-snackbar__content,.wporg-2fa__global-notice.components-snackbar{cursor:auto}.wporg-2fa__global-notice .components-snackbar__content{position:relative}.wporg-2fa__global-notice .components-snackbar .components-snackbar__icon,.wporg-2fa__global-notice .components-snackbar__icon{fill:#4ab866;left:-34px!important;position:absolute;top:-6px!important;width:30px}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary{box-shadow:inset 0 0 0 1px var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));text-decoration:none}#bbpress-forums .wp-block-wporg-two-factor-settings a.components-button.is-secondary:not(:disabled):focus{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba));outline:3px solid transparent}.wporg-2fa__auto-tabbing-input{display:flex}.wporg-2fa__auto-tabbing-input input{border:1px solid #949494;border-radius:2px;height:40px;padding:0!important;text-align:center;width:40px!important}.wporg-2fa__auto-tabbing-input input:focus{outline-color:#2271b1}.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:24px}@media screen and (max-width:767px){.wporg-2fa__auto-tabbing-input input:not(:last-child){margin-right:auto}}.wporg-2fa__auto-tabbing-input.is-error input{border:1px solid #d94f4f!important;box-shadow:unset!important}.wporg-2fa__auto-tabbing-input.is-error input:focus{outline:unset}
+
+</style>
+<link rel='stylesheet' id='wp-components-css' href='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/components/style.css?ver=15.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://wordpress.org/plugins/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://wordpress.org/plugins/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://wordpress.org/plugins/wp-includes/css/classic-themes.min.css?ver=6.3-alpha-55700' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css2?family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B1%2C300%3B1%2C400%3B1%2C600&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-style-css' href='https://s.w.org/wp-content/themes/pub/wporg-plugins/css/style.css?ver=1671127092' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-fonts-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1675219891' type='text/css' media='all' />
+<link rel='stylesheet' id='wporg-global-header-footer-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1682524769' type='text/css' media='all' />
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view.min.js?ver=aa58d4d058136adf2722' id='wp-block-navigation-view-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/block-library/blocks/navigation/view-modal.min.js?ver=774770b5630ff20f41e1' id='wp-block-navigation-view-modal-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/vendors/inert-polyfill.min.js?ver=6.3-alpha-55700' id='wp-inert-polyfill-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/hooks/index.min.js?ver=b68e9bf6562f8d63a320' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/i18n/index.min.js?ver=3d2aeabd3f84698c0e2c' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/vendors/react.min.js?ver=18' id='react-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/vendors/react-dom.min.js?ver=18' id='react-dom-js'></script>
+<link rel="https://api.w.org/" href="https://wordpress.org/plugins/wp-json/" /><link rel="alternate" type="application/json" href="https://wordpress.org/plugins/wp-json/wp/v2/plugin/81770" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wordpress.org/plugins/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3-alpha-55700" />
+<link rel='shortlink' href='https://wordpress.org/plugins/?p=81770' />
+<link rel="alternate" type="application/json+oembed" href="https://wordpress.org/plugins/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fplugins%2Fstackable-ultimate-gutenberg-blocks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://wordpress.org/plugins/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fplugins%2Fstackable-ultimate-gutenberg-blocks%2F&#038;format=xml" />
+<link rel="canonical" href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Stream WordPress user activity plugin v3.9.0 -->
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+	<style>img#wpstats{display:none}</style>
+		<meta property="og:title" content="Stackable &#8211; Page Builder Gutenberg Blocks" />
+<meta property="og:description" content="Custom Blocks that transform your WordPress Block Editor into a page builder" />
+<meta name="description" content="Custom Blocks that transform your WordPress Block Editor into a page builder" />
+<meta property="og:site_name" content="WordPress.org" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@WordPress">
+<meta name="twitter:image" content="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/banner-1544x500.png?rev=2749547" />
+<meta property="og:image" content="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/banner-772x250.png?rev=2749547" />
+<meta name="thumbnail" content="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/icon-256x256.png?rev=2749547" />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<link rel="icon" href="https://s.w.org/favicon.ico?2" sizes="32x32" />
+<link rel="icon" href="https://s.w.org/images/wmark.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://s.w.org/images/wmark.png" />
+<meta name="msapplication-TileImage" content="https://s.w.org/images/wmark.png" />
+	</head>
+
+	<body class="plugin-template-default single single-plugin postid-81770 admin-bar no-customize-support is-classic-theme no-js">
+		<a id="wporg-skip-link"  class="skip-link screen-reader-text" href="#main" data-selector="#main">Skip to content</a>
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-log-in'><a class='ab-item' href='https://login.wordpress.org/?redirect_to=https%3A%2F%2Fwordpress.org%2Fplugins%2Fstackable-ultimate-gutenberg-blocks%2F&#038;locale=en_US'>Log In</a></li><li id='wp-admin-bar-register'><a class='ab-item' href='https://login.wordpress.org/register?locale=en_US'>Register</a></li></ul>			</div>
+					</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>document.body.className = document.body.className.replace('no-js','js');</script>
+<header class="global-header wp-block-group wp-block-wporg-global-header">
+
+<figure class="wp-block-image global-header__wporg-logo-mark">
+	<a href="https://wordpress.org/">
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>	</a>
+</figure>
+
+
+
+<nav class="is-responsive global-header__navigation wp-block-navigation is-horizontal is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open " data-micromodal-trigger="modal-1"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container  " style="" id="modal-1">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+							<ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/download/">Download &amp; Extend</a><button aria-label="Download &amp; Extend submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/mobile/"><span class="wp-block-navigation-item__label">Mobile</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://openverse.org/"><span class="wp-block-navigation-item__label">Openverse ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://learn.wordpress.org/">Learn</a><button aria-label="Learn submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/support/forums/"><span class="wp-block-navigation-item__label">Forums</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.tv ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://make.wordpress.org/">Community</a><button aria-label="Community submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Make WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/photos/"><span class="wp-block-navigation-item__label">Photo Directory</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/five-for-the-future/"><span class="wp-block-navigation-item__label">Five for the Future</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://www.meetup.com/pro/wordpress/"><span class="wp-block-navigation-item__label">Meetups ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://jobs.wordpress.net/"><span class="wp-block-navigation-item__label">Job Board ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="https://wordpress.org/about/">About</a><button aria-label="About submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About WordPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/enterprise/"><span class="wp-block-navigation-item__label">Enterprise</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/gutenberg/"><span class="wp-block-navigation-item__label">Gutenberg ↗︎</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">WordPress Swag Store ↗︎</span></a></li></ul></li><li class=" wp-block-navigation-item global-header__mobile-get-wordpress global-header__get-wordpress wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/download/"><span class="wp-block-navigation-item__label">Get WordPress</span></a></li></ul>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!--
+	The search block is inside a navigation menu because that provides the exact functionality the design
+	calls for. It also provides a consistent experience with the primary navigation menu, with respect to
+	keyboard navigation, ARIA states, etc. It also saves having to write custom code for all the interactions.
+-->
+<nav class="is-responsive  is-vertical global-header__search wp-block-navigation is-layout-flex wp-container-6 wp-block-navigation-is-layout-flex" aria-label=""><button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open always-shown" data-micromodal-trigger="modal-5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+			<div class="wp-block-navigation__responsive-container hidden-by-default " style="" id="modal-5">
+				<div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+					<div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+							<button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+						<div class="wp-block-navigation__responsive-container-content" id="modal-5-content">
+							<form role="search" method="get" action="https://wordpress.org/search/do-search.php" class="wp-block-search__button-inside wp-block-search__icon-button wp-block-search"><label for="wp-block-search__input-4" class="wp-block-search__label" >Search in WordPress.org</label><div class="wp-block-search__inside-wrapper " ><input type="search" id="wp-block-search__input-4" class="wp-block-search__input" name="s" value="" placeholder="Type to search…"  required /><button type="submit" class="wp-block-search__button has-icon wp-element-button"  aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path>
+				</svg></button></div></form>
+						</div>
+					</div>
+				</div>
+			</div></nav>
+
+<!-- This is the first of two Get WordPress buttons; the other is in the navigation menu.
+	Two are needed because they have different DOM hierarchies at different breakpoints. -->
+
+<div class="global-header__desktop-get-wordpress-container is-layout-flow wp-block-group-is-layout-flow">
+	<a href="https://wordpress.org/download/" class="global-header__desktop-get-wordpress global-header__get-wordpress">
+		Get WordPress	</a>
+</div> 
+</header><div id="page" class="site">
+	<div id="content" class="site-content">
+		<header id="masthead" class="site-header " role="banner">
+			<div class="site-branding">
+									<p class="site-title"><a href="https://wordpress.org/plugins/" rel="home">Plugins</a></p>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+						<div id="primary-menu" class="menu">
+							<ul>
+																<li class="page_item"><a class="" href="https://wordpress.org/plugins/browse/favorites/">My Favorites</a></li>
+																<li class="page_item"><a class="" href="https://wordpress.org/plugins/browse/beta/">Beta Testing</a></li>
+																<li class="page_item"><a class="" href="https://wordpress.org/plugins/developers/">Developers</a></li>
+																<li><form role="search" method="get" class="search-form" action="https://wordpress.org/plugins/">
+	<label for="s" class="screen-reader-text">Search for:</label>
+	<input type="search" id="s" class="search-field" placeholder="Search plugins" value="" name="s" />
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+</form>
+</li>
+							</ul>
+						</div>
+					</nav><!-- #site-navigation -->
+							</div><!-- .site-branding -->
+		</header><!-- #masthead -->
+
+	<main id="main" class="site-main" role="main">
+
+		
+<article id="post-81770" class="post-81770 plugin type-plugin status-publish hentry plugin_category-editor-and-writing plugin_contributors-bfintal plugin_contributors-freemius plugin_contributors-gambitph plugin_committers-bfintal plugin_support_reps-bernicechua plugin_support_reps-bfintal plugin_support_reps-gambitph plugin_support_reps-karahonasan plugin_tags-blocks plugin_tags-gutenberg plugin_tags-gutenberg-blocks plugin_tags-page-builder plugin_tags-wordpress-blocks">
+	<style type='text/css'>#plugin-banner-stackable-ultimate-gutenberg-blocks { background-image: url('https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/banner-772x250.png?rev=2749547'); }@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 120dpi) { #plugin-banner-stackable-ultimate-gutenberg-blocks { background-image: url('https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/banner-1544x500.png?rev=2749547'); } }</style><div class='plugin-banner' id='plugin-banner-stackable-ultimate-gutenberg-blocks'></div>
+	<header class="plugin-header">
+						
+		<div class="entry-thumbnail">
+			<img class='plugin-icon' srcset='https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/icon-128x128.png?rev=2749547, https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/icon-256x256.png?rev=2749547 2x' src='https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/icon-256x256.png?rev=2749547'>		</div>
+
+		<div class="plugin-actions">
+			
+							<a class="plugin-download button download-button button-large" href="https://downloads.wordpress.org/plugin/stackable-ultimate-gutenberg-blocks.3.7.2.zip">Download</a>
+					</div>
+
+				<h1 class="plugin-title">Stackable &#8211; Page Builder Gutenberg Blocks</h1>
+		
+		<span class="byline">By <span class="author vcard"><a class="url fn n" rel="nofollow" href="http://gambit.ph">Gambit Technologies, Inc</a></span></span>
+	</header><!-- .entry-header -->
+
+	<span id="description"></span>
+	<span id="reviews"></span>
+	<span id="installation"></span>
+	<span id="developers"></span>
+	<span id="advanced" class=""></span>
+	<span id="section-links">
+		<ul class="tabs clear">
+		<li id="tablink-description"><a href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/#description">Details</a></li>
+		<li id="tablink-reviews"><a href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/#reviews">Reviews</a></li>
+					<li id="tablink-installation">
+				<a href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/#installation">Installation</a>
+			</li>
+				<li id="tablink-developers"><a href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/#developers">Development</a></li>
+				</ul>
+		<div id="link-support">
+			<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/">Support</a>
+		</div>
+	</span>
+	<script type="text/javascript">if ( '#changelog' == window.location.hash ) { window.setTimeout( function() { window.location.hash = '#developers'; }, 10 ); }</script>
+
+	<div class="entry-content">
+		
+<div id="tab-description" class="plugin-description section">
+	<h2 id="description-header">Description</h2>
+	<p><strong>The Ultimate Companion to the WordPress Block Editor</strong></p>
+<p><a href="https://wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Stackable</a> is the ultimate trusted block plugin you&#8217;ve been waiting for. Build dynamic websites with our powerful yet lightweight custom WordPress blocks, ready-made designs, UI Kits, global settings, and advanced customization options all whilst boasting speedy performance. Have the confidence to easily design professional websites that stand out using a new page building experience for Gutenberg &#8211; the WordPress Block Editor.</p>
+<blockquote>
+<p><a href="https://demo.wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Try our live demo</a></p>
+</blockquote>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="640" height="360" src="https://www.youtube.com/embed/yzmk0qoW880?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent" allowfullscreen="true" style="border:0;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"></iframe></span>
+<h3>Transform Gutenberg into a Page Builder.</h3>
+<p>Stackable is the all-in-one block plugin for creating stunning websites by transforming the WordPress Block Editor into a Page Builder. Stackable has helped thousands of bloggers, merchants, marketers, designers and web development professionals make the most out of the WordPress Block Editor through fast, powerful and intuitive features.</p>
+<h3>Ready Made Templates, Block Designs and Wireframes</h3>
+<p>Enjoy an impressive Design Library to jumpstart your designing process. Never start from scratch and design like a pro with the help of our stunning and professionally-made designs.</p>
+<ul>
+<li>Dozens of UI Kit designs</li>
+<li>Hundreds of ready-made block designs</li>
+<li>Dozens of block layouts</li>
+<li>Various shape separator designs</li>
+</ul>
+<h3>Powerful Custom Blocks</h3>
+<p>Get 41 flexible custom WordPress blocks that are feature-rich and look good out of the box, and provide a robust foundation for any website even without a single line of code.</p>
+<p>You can choose which of these blocks you need, depending on your workflow. You can also disable blocks if you don&#8217;t need them.</p>
+<p>Essential Blocks<br />
+&#8211; Advanced Columns Block — <a href="https://wpstackable.com/columns-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Advanced Heading Block &#8211; <a href="https://wpstackable.com/advanced-heading-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Advanced Text Block &#8211; <a href="https://wpstackable.com/advanced-text-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Advanced Image Block<br />
+&#8211; Icon List Block — <a href="https://wpstackable.com/icon-list-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Button Block — <a href="https://wpstackable.com/button-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Icon Button Block<br />
+&#8211; Icon Block — <a href="https://wpstackable.com/icon-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a></p>
+<p>Special Blocks<br />
+&#8211; Horizontal Scroller Block &#8211; <a href="https://wpstackable.com/horizontal-scroller-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Countdown Block &#8211; <a href="https://wpstackable.com/countdown-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Table of Contents Block &#8211; <a href="https://wpstackable.com/table-of-contents-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Posts Block — <a href="https://wpstackable.com/blog-posts-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Image Box Block — <a href="https://wpstackable.com/image-box-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Video Popup Block — <a href="https://wpstackable.com/video-popup-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Progress Circle Block — <a href="https://wpstackable.com/progress-circle-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Progress Bar Block — <a href="https://wpstackable.com/progress-bar-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Accordion Block — <a href="https://wpstackable.com/accordion-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Map Block — <a href="https://wpstackable.com/map-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Icon Label Block<br />
+&#8211; Social Buttons Block<br />
+&#8211; Card Block — <a href="https://wpstackable.com/card-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Count Up Block — <a href="https://wpstackable.com/count-up-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Number Box Block — <a href="https://wpstackable.com/number-box-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Notification Block — <a href="https://wpstackable.com/notification-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Expand / Show More Block — <a href="https://wpstackable.com/expand-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Separator Block — <a href="https://wpstackable.com/separator-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Subtitle Block<br />
+&#8211; Price Block<br />
+&#8211; Divider Block<br />
+&#8211; Spacer Block</p>
+<p>Section Blocks<br />
+&#8211; Hero Block — <a href="https://wpstackable.com/header-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Call to Action Block — <a href="https://wpstackable.com/call-to-action-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Feature Block — <a href="https://wpstackable.com/feature-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Feature Grid Block — <a href="https://wpstackable.com/feature-grid-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Pricing Box Block — <a href="https://wpstackable.com/pricing-table-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Icon Box Block<br />
+&#8211; Testimonial Block — <a href="https://wpstackable.com/testimonial-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Team Members Block — <a href="https://wpstackable.com/team-member-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a><br />
+&#8211; Blockquote Block — <a href="https://wpstackable.com/blockquote-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">View Block</a></p>
+<h3>Page Builder-like Design Options</h3>
+<p>Turn the WordPress Block Editor into a page builder. Fine-tune your creations with a wide range of familiar web design options.</p>
+<ul>
+<li>Multiple Block Layouts</li>
+<li>Save Block Defaults</li>
+<li>Customize block hover styles</li>
+<li>Block Background and Image Color Settings</li>
+<li>Block Typography Settings</li>
+<li>Image Shapes and Settings</li>
+<li>Advanced Icon Options</li>
+<li>Advanced Column and Spacing Settings</li>
+<li>Global Colors &amp; Typography Settings</li>
+<li>Responsiveness
+<ul>
+<li>Live Responsive Editing</li>
+<li>Ability to tweak designs for Tablet and Mobile views</li>
+<li>Specify how Columns collapse in Tablet and Mobile</li>
+<li>Hide / Show Specific Blocks on Desktop, Tablet or Mobile</li>
+<li>Custom Tablet and Mobile breakpoints</li>
+</ul>
+</li>
+<li>Custom <code>data-*</code> attributes</li>
+</ul>
+<h3>Fast Page Loading Speed</h3>
+<p>Optimize your website’s performance, and get lightning fast page loading to make your site visitors stay. Have the chance to maximize your page speed insights and achieve high Core Web Vitals and higher SEO rankings.</p>
+<ul>
+<li>Loads the smallest file size possible of CSS and JS files in the frontend, ~ only 7.8kb total</li>
+<li>Adds almost no PHP server overhead for fast page loads</li>
+<li>Zero Bloat, no jQuery, no dependencies</li>
+<li>Optimized page loading with focus on Core Web Vitals</li>
+<li>Responsive image loading for faster browsing speeds in mobile devices</li>
+<li>Compatible with Optimization Plugins and use optimization techniques such as combining CSS and JS files and minification</li>
+</ul>
+<h3>Integrations &amp; Compatibility</h3>
+<p>Make your page building experience more well-rounded by using other popular tools. We&#8217;ve seamlessly integrated with these essential third-party plugins and tools:</p>
+<ul>
+<li>WPML</li>
+<li>Weglot</li>
+<li>Blocksy</li>
+<li>Toolset</li>
+<li>Font Awesome</li>
+<li>Google Fonts</li>
+<li><a href="https://wpstackable.com/compatibility/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">see our full list of integrations and compatibility</a></li>
+</ul>
+<h3>Premium Features</h3>
+<p>Take web designing to the next level. Stackable Premium helps you unlock the full potential of the WordPress Block Editor with awesome advanced features that will give you the ability to create high-end websites.</p>
+<h3>Dynamic Content (Premium)</h3>
+<p>Create dynamic WordPress websites that cater to the specific interests of visitors.</p>
+<ul>
+<li>Dynamic content</li>
+<li>Fully customize your query loops</li>
+<li>Site Custom Fields</li>
+<li>Conditionally display blocks</li>
+</ul>
+<h3>More Integrations (Premium)</h3>
+<p>In premium, you get more integrations.</p>
+<ul>
+<li>ACF</li>
+<li>Metabox</li>
+<li>JetEngine</li>
+</ul>
+<h3>Agency Tools (Premium)</h3>
+<p>Cater to more clients effectively and efficiently with our Agency Tools, which were specially made for web design professionals.</p>
+<ul>
+<li>Block CSS Customizer</li>
+<li>Role Manager</li>
+</ul>
+<h3>Motion Effects (Premium)</h3>
+<p>Add animations that will bring your site to life and make it more visually engaging.</p>
+<ul>
+<li>Scroll Animations</li>
+<li>Entrance Animations</li>
+<li>Transform &amp; Transition Effects</li>
+</ul>
+<h3>More Blocks (Premium)</h3>
+<ul>
+<li>Load More Block (for the Blog Posts Block)</li>
+<li>Pagination Block (for the Blog Posts Block)</li>
+</ul>
+<blockquote>
+<p><a href="https://demo.wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Try our live demo</a> | <a href="https://wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Learn more</a></p>
+</blockquote>
+<h3>News Article Updates</h3>
+<ul>
+<li><a href="https://wpstackable.com/blog/introducing-new-horizontal-scroller-and-countdown-blocks/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.7 Introducing: New Horizontal Scroller and Countdown Blocks</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-new-progress-circle-and-progress-bar-blocks/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.6 Introducing: New Progress Circle and Progress Bar Blocks</a></li>
+<li><a href="https://wpstackable.com/blog/improved-performance/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.5 No Bloat &amp; Improved Performance</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-map-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.4 Introducing: Map Block</a></li>
+<li><a href="https://wpstackable.com/blog/saving-block-defaults/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.3 Saving Block Defaults</a></li>
+<li><a href="https://wpstackable.com/blog/table-of-contents-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.2 Table of Contents Block</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-wireframes/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.1 Wireframes</a></li>
+<li><a href="https://wpstackable.com/blog/how-to-shift-from-version-2-to-version-3/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v3.0 How To Shift From Version 2 to Version 3</a></li>
+<li><a href="https://wpstackable.com/blog/custom-attributes-and-optimization/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.17 Custom Attributes and Optimization</a></li>
+<li><a href="https://wpstackable.com/blog/clickable-containers-and-pagination/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.16 Clickable Containers and Pagination</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-dynamic-content/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.15 Introducing Dynamic Content</a></li>
+<li><a href="https://wpstackable.com/blog/copy-and-paste-block-styles/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.14 Copy and Paste Block Styles</a></li>
+<li><a href="https://wpstackable.com/blog/ui-kits-borders/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.13 UI Kits, Borders &amp; Improved Performance</a></li>
+<li><a href="https://wpstackable.com/blog/better-user-interface-and-user-experience/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.12 Better User Interface and User Experience</a></li>
+<li><a href="https://wpstackable.com/blog/global-colors-and-global-typography/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.11 Introducing Global Colors and Global Typography</a></li>
+<li><a href="https://wpstackable.com/blog/better-responsive-controls-better-list-block-icons-low-highlight-effect/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.10 Better Responsive Controls, Better List Block Icons and Low-Highlight Effect</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-live-responsive-editing/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.9 Introducing: Live Responsive Editing</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-role-manager-for-gutenberg/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.8 Introducing: Role Manager for Gutenberg</a></li>
+<li><a href="https://wpstackable.com/blog/new-icon-block-amazing-icons-and-font-awesome-pro/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.7 New Icon Block, Amazing Icons and Font Awesome Pro</a></li>
+<li><a href="https://wpstackable.com/blog/new-advanced-blocks-and-load-more-blog-posts-button/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.6 New Advanced Blocks and Load More Blog Posts Button</a></li>
+<li><a href="https://wpstackable.com/blog/better-onboarding-for-first-time-users/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.5 Better Onboarding for First Time Users</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-the-advanced-columns-and-grid-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.4 Introducing the Advanced Columns &amp; Grid Block</a></li>
+<li><a href="https://wpstackable.com/blog/introducing-the-design-library-and-new-block-designs/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.3 Introducing the Design Library and New Block Designs</a></li>
+<li><a href="https://wpstackable.com/blog/welcome-video-better-separators-and-auto-block-recovery/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.2 Welcome Video, Better Separators and Auto-Block Recovery</a></li>
+<li><a href="https://wpstackable.com/blog/help-video-snippets-auto-expand-settings/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.1 Help Video Snippets and Auto-Expand Settings</a></li>
+<li><a href="https://wpstackable.com/blog/version-2-is-out/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">v2.0 Version 2 is Out!</a></li>
+</ul>
+<h3>Learn More About Stackable &#8211; Page Builder Gutenberg Blocks &amp; Designs</h3>
+<ul>
+<li>Read our <a href="https://docs.wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">documentation and tutorials</a></li>
+<li>Visit our <a href="https://wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">site wpstackable.com</a></li>
+<li>Subscribe to our <a href="http://eepurl.com/dJY9xI" rel="nofollow ugc">newsletter</a></li>
+</ul>
+<h3>Enjoying Stackable Blocks?</h3>
+<ul>
+<li>Join the <a href="https://www.facebook.com/groups/wpstackable/" rel="nofollow ugc">Stackable Community in Facebook</a></li>
+<li>Follow us in <a href="https://twitter.com/wpstackable" rel="nofollow ugc">Twitter @wpstackable</a></li>
+<li><a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?rate=5#new-post" rel="ugc">Leave us a rating</a></li>
+</ul>
+<blockquote>
+<p>** Those marked with asterisks are part of Stackable Premium</p>
+</blockquote></div>
+
+<div id="screenshots" class="plugin-screenshots section">
+	<h2 id="screenshots-header">Screenshots</h2>
+	<ul class="plugin-screenshots"><li><figure><a href="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-1.gif?rev=2635655" rel="nofollow"><img class="screenshot" src="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-1.gif?rev=2635655" alt="" /></a><figcaption>Responsive Gutenberg Blocks</figcaption></figure></li><li><figure><a href="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-2.gif?rev=2635655" rel="nofollow"><img class="screenshot" src="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-2.gif?rev=2635655" alt="" /></a><figcaption>Page Builder-like Block Options</figcaption></figure></li><li><figure><a href="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-3.gif?rev=2635655" rel="nofollow"><img class="screenshot" src="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-3.gif?rev=2635655" alt="" /></a><figcaption>Global Settings that affect your entire site</figcaption></figure></li><li><figure><a href="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-4.gif?rev=2635655" rel="nofollow"><img class="screenshot" src="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-4.gif?rev=2635655" alt="" /></a><figcaption>Powerful Custom Gutenberg Blocks</figcaption></figure></li><li><figure><a href="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-5.gif?rev=2635655" rel="nofollow"><img class="screenshot" src="https://ps.w.org/stackable-ultimate-gutenberg-blocks/assets/screenshot-5.gif?rev=2635655" alt="" /></a><figcaption>Ready-made Design Library</figcaption></figure></li></ul></div>
+
+<div id="blocks" class="plugin-blocks section">
+	<h2 id="blocks-header">Blocks</h2>
+
+	<p>This plugin provides 41 blocks.</p>
+	<ul class="plugin-blocks-list">
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Subtitle</span>
+									<span class="block-description">Subtitle text that you can add custom styling to from the global settings.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Icon List</span>
+									<span class="block-description">An unordered list with icons. You can use this as a list of features or benefits.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Map</span>
+									<span class="block-description">Embedded Google Map with advanced controls.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Spacer</span>
+									<span class="block-description">Sometimes you just need some space.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Text</span>
+									<span class="block-description">Start with the building block of all page layouts.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Image Box</span>
+									<span class="block-description">Display an image that shows more information when hovered on. Can be used as a fancy link to other pages.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Blockquote</span>
+									<span class="block-description">Display a quote in style</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Icon Label</span>
+									<span class="block-description">An Icon and Heading paired together.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Pricing Box</span>
+									<span class="block-description">Display the different pricing tiers of your business.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Progress Bar</span>
+									<span class="block-description">Visualize a progress value or percentage in a bar.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Feature Grid</span>
+									<span class="block-description">Display multiple product features or services. You can use Feature Grids one after another.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Card</span>
+									<span class="block-description">Describe a single subject in a small card. You can use this to describe your product, service or a person.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Progress Circle</span>
+									<span class="block-description">Visualize a progress value or percentage in a circle.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Feature</span>
+									<span class="block-description">Display a product feature or a service in a large area.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Accordion</span>
+									<span class="block-description">A title that your visitors can toggle to view more text. Use as FAQs or multiple ones for an Accordion.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Count Up</span>
+									<span class="block-description">Showcase your stats. Display how many customers you have or the number of downloads of your app.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Heading</span>
+									<span class="block-description">Introduce new sections of your content in style.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Table of Contents</span>
+									<span class="block-description">Automatically generated table of contents based on Heading blocks.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Countdown</span>
+									<span class="block-description">Display a countdown timer on your website.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Divider</span>
+									<span class="block-description">Add a pause between your content.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Team Member</span>
+									<span class="block-description">Display members of your team or your office. Use multiple Team Member blocks if you have a large team.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Call to Action</span>
+									<span class="block-description">A small section you can use to call the attention of your visitors. Great for calling attention to your products or deals.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Design Library</span>
+									<span class="block-description">Choose a layout or block from the Stackable Design Library.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Columns / Container</span>
+									<span class="block-description">Add a block that displays content in multiple columns. Get advanced options on how you want your columns to look.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Number Box</span>
+									<span class="block-description">Display steps or methods that your users will do in your service.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Price</span>
+									<span class="block-description">Show a price of a product or service with currency and a suffix styled with different weights</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Posts</span>
+									<span class="block-description">Your latest blog posts. Use this to showcase a few of your posts in your landing pages.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Icon Box</span>
+									<span class="block-description">A small text area with an icon that can be used to summarize features or services</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Horizontal Scroller</span>
+									<span class="block-description">A slider that scrolls horizontally.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Testimonial</span>
+									<span class="block-description">Showcase what your users say about your product or service.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Expand / Show More</span>
+									<span class="block-description">Display a small snippet of text. Your readers can toggle it to show more information.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Notification</span>
+									<span class="block-description">Show a notice to your readers. People can dismiss the notice to permanently hide it.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Image</span>
+									<span class="block-description">An image with advanced controls to make a visual statement.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Button Group</span>
+									<span class="block-description">Add a customizable button.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Separator</span>
+									<span class="block-description">A fancy separator to be placed between content.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Icon</span>
+									<span class="block-description">Pick an icon or upload your own SVG icon to decorate your content.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Video Popup</span>
+									<span class="block-description">Display a large thumbnail that your users can click to play a video full-screen. Great for introductory or tutorial videos.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Hero</span>
+									<span class="block-description">A large hero area. Typically used at the very top of a page.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Button</span>
+									<span class="block-description">Add a customizable button.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Icon Button</span>
+									<span class="block-description">Add a customizable button.</dd>
+							</li>
+					<li class="plugin-blocks-list-item has-description">
+									<span class="block-icon dashicons dashicons-block-default"></span>
+								<span class="block-title">Column</span>
+									<span class="block-description">A single column within an advanced columns block. Get advanced options on how you want your column to look.</dd>
+							</li>
+			</ul>
+</div>
+
+<div id="tab-installation" class="plugin-installation section">
+	<h2 id="installation-header">Installation</h2>
+	<h4>Minimum Requirements</h4>
+<p>You&#8217;ll need WordPress version 5.9 or higher for this to work.</p></div>
+
+<div id="faq" class="plugin-faq section">
+	<h2 id="faq-header">FAQ</h2>
+	<dl>
+<dt id='is%20stackable%20free%3F'>
+<h3>Is Stackable Free?</h3>
+</dt>
+<dd>
+<p>Yes, Stackable is free forever.</p>
+<p>We have a premium version that adds more designs and advanced features. You may want to check <a href="https://wpstackable.com/premium/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Stackable Premium here</a>.</p>
+</dd>
+<dt id='do%20i%20need%20to%20know%20how%20to%20code%20to%20use%20stackable%3F'>
+<h3>Do I need to know how to code to use Stackable?</h3>
+</dt>
+<dd>
+<p>No, you don&#8217;t need to know a single line of code when using Stackable</p>
+</dd>
+<dt id='do%20you%20have%20a%20live%20demo%3F'>
+<h3>Do you have a live demo?</h3>
+</dt>
+<dd>
+<p>Yes, we have <a href="https://demo.wpstackable.com?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">live demo that you can check out here</a>.</p>
+</dd>
+<dt id='what%20are%20blocks%3F'>
+<h3>What are Blocks?</h3>
+</dt>
+<dd>
+<p>Blocks are the new shortcodes in WordPress 5.0 / Gutenberg. They&#8217;re the basic elements that you add into your content to build your pages, like buttons, cards, videos, etc.</p>
+<p>Stackable gives you an extensive collection of blocks that allows you to flexibly create any kind of professional landing page and front page.</p>
+</dd>
+<dt id='what%20are%20ui%20kits%3F'>
+<h3>What are UI Kits?</h3>
+</dt>
+<dd>
+<p>UI kits are a beautiful and cohesive collection of our block designs for budiling full sites easily. These kits offer a wide variety of web design styles and categories that allow you to kick start your design process right away</p>
+</dd>
+<dt id='what%20themes%20can%20i%20use%20with%20stackable%3F'>
+<h3>What themes can I use with Stackable?</h3>
+</dt>
+<dd>
+<p>Stackable should work with any theme.</p>
+</dd>
+<dt id='can%20i%20disable%20blocks%20that%20i%20do%20not%20use%3F'>
+<h3>Can I disable blocks that I do not use?</h3>
+</dt>
+<dd>
+<p>Yes, you can manage your blocks and choose what blocks to enable/disable.</p>
+</dd>
+<dt id='can%20i%20use%20this%20plugin%20with%20other%20block%20plugins%3F'>
+<h3>Can I use this plugin with other block plugins?</h3>
+</dt>
+<dd>
+<p>Yes! Stackable blocks play well with other blocks.</p>
+</dd>
+<dt id='can%20i%20use%20this%20add-on%20for%20other%20page%20builders%20i%27m%20using%3F'>
+<h3>Can I use this add-on for other page builders I&#8217;m using?</h3>
+</dt>
+<dd>
+<p>Nope. Stackable only works with Gutenberg, the new WordPress editor.</p>
+</dd>
+</dl></div>
+
+<div id="tab-reviews" class="plugin-reviews section">
+	<h2 id="reviews-header">Reviews</h2>
+	<div class="plugin-reviews">
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/c62de755ec655d2be929edf93c3310a6?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/c62de755ec655d2be929edf93c3310a6?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/just-perfect-632/">Just perfect</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/newshopdev/" title="Posts by newshopdev" rel="author">newshopdev</a></span>
+								<span class="review-date">April 28, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">I use stackable on my latest sites with pleasure.</div>
+					</div>
+				</article>
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/a8e3283c30c63e489951e4f4fcc830f9?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/a8e3283c30c63e489951e4f4fcc830f9?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/great-block-plugin-2/">Great block plugin</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/thecatweasel/" title="Posts by thecatweasel" rel="author">thecatweasel</a></span>
+								<span class="review-date">April 17, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">I've been using Stackable on multiple projects now and find it to be quick and stable with many customisation options for each Block. Would recommend purchasing Stackable Premium for more options and dynamic content for ACF.</div>
+					</div>
+				</article>
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/ea259d23355d7d2c7ef1e43f1216fd44?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/ea259d23355d7d2c7ef1e43f1216fd44?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/stackable-2/">Stackable</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/navajamm/" title="Posts by navajamm" rel="author">navajamm</a></span>
+								<span class="review-date">April 6, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">Fine plugin. Solved some issues for my site, and I have not encounter any problems so far.</div>
+					</div>
+				</article>
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/8a526776f9e41a08d1609b8c33a5c09f?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/8a526776f9e41a08d1609b8c33a5c09f?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/stackable-page-builder-gutenberg-blocks/">Stackable &#8211; Page Builder Gutenberg Blocks</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/books95/" title="Posts by books95" rel="author">books95</a></span>
+								<span class="review-date">March 30, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">Клаччный плагин</div>
+					</div>
+				</article>
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/3c92ae91934c3064183d0368910dd881?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/3c92ae91934c3064183d0368910dd881?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/great-plugin-36481/">Great Plugin</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/rawrbear/" title="Posts by rawrbear" rel="author">rawrbear</a></span>
+								<span class="review-date">March 26, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">It's always up to date with the latest versions of WP in no time flat, easy to use and stable. Couldn't ask for better for free!</div>
+					</div>
+				</article>
+							<article class="plugin-review">
+					<div class="review-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/0bdae2d8d7072e57bcb26c65477de4b1?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/0bdae2d8d7072e57bcb26c65477de4b1?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' loading='lazy' decoding='async'/>					</div><div class="review">
+						<header>
+							<div class="header-top">
+								<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>								<h3 class="review-title"><a class="url" href="https://wordpress.org/support/topic/great-plugin-36480/">Great Plugin</a></h3>
+							</div>
+							<div class="header-bottom">
+								<span class="review-author author vcard"><a href="https://profiles.wordpress.org/jenteck/" title="Posts by jenteck" rel="author">jenteck</a></span>
+								<span class="review-date">March 25, 2023</span>
+															</div>
+						</header>
+						<div class="review-content">You're able to do everything you need for a website. Works very good. No issues</div>
+					</div>
+				</article>
+					</div>
+
+		<a class="reviews-link" href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/">
+			Read all 380 reviews		</a></div>
+
+<div id="tab-developers" class="plugin-developers section">
+	<h2 id="developers-header">Contributors &amp; Developers</h2>
+	<div class="plugin-contributors"><p>&#8220;Stackable &#8211; Page Builder Gutenberg Blocks&#8221; is open source software. The following people have contributed to this plugin.</p><span class="screen-reader-text">Contributors</span>
+		<ul id="contributors-list" class="contributors-list">
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/b5d60b4470879529eb13d9f7ff5302da?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b5d60b4470879529eb13d9f7ff5302da?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/bfintal/">
+					Benjamin Intal				</a>
+			</li>
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/7f07148a74a2743b26d144de85546255?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7f07148a74a2743b26d144de85546255?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/gambitph/">
+					gambitph				</a>
+			</li>
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/3ac33da92186a78937b307bdd9e906ee?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3ac33da92186a78937b307bdd9e906ee?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/freemius/">
+					Freemius				</a>
+			</li>
+					</ul>
+
+		</div><div class="plugin-development"><p>&#8220;Stackable &#8211; Page Builder Gutenberg Blocks&#8221; has been translated into 7 locales. Thank you to <a href="https://translate.wordpress.org/projects/wp-plugins/stackable-ultimate-gutenberg-blocks/contributors">the translators</a> for their contributions.</p><p><a href="https://translate.wordpress.org/projects/wp-plugins/stackable-ultimate-gutenberg-blocks">Translate &#8220;Stackable &#8211; Page Builder Gutenberg Blocks&#8221; into your language.</a></p><h3>Interested in development?</h3><p><a href="https://plugins.trac.wordpress.org/browser/stackable-ultimate-gutenberg-blocks/">Browse the code</a>, check out the <a href="https://plugins.svn.wordpress.org/stackable-ultimate-gutenberg-blocks/">SVN repository</a>, or subscribe to the <a href="https://plugins.trac.wordpress.org/log/stackable-ultimate-gutenberg-blocks/">development log</a> by <a href="https://plugins.trac.wordpress.org/log/stackable-ultimate-gutenberg-blocks/?limit=100&#038;mode=stop_on_copy&#038;format=rss">RSS</a>.</p></div></div>
+
+<div id="tab-changelog" class="plugin-changelog section">
+	<h2 id="changelog-header">Changelog</h2>
+	<h4>3.7.2</h4>
+<ul>
+<li>New: WordPress 6.2 compatibility</li>
+<li>New: Stackable blocks now appear in the new Style Book</li>
+<li>New: Stackable global settings are now available in the Site Editor / FSE</li>
+<li>Fixed: Responsive block settings now working in the Site Editor</li>
+<li>Fixed: Tablet styles sometimes show up in the editor when the screen is small</li>
+<li>Fixed: Reusable blocks performance improvements</li>
+<li>Fixed: Blocksy theme responsive breakpoints conflict</li>
+<li>Change: Removed v2 editor migration helper (it&#8217;s been 1.5 years since it was introduced)</li>
+</ul>
+<h4>3.7.1</h4>
+<ul>
+<li>Fixed: Dynamic Content issue where ACF image fields sometimes did not output correctly</li>
+<li>Fixed: Shape separators were always covering some content in some blocks #2268</li>
+<li>Fixed: Cannot select a color for shape separator layers</li>
+<li>Fixed: Custom roles did not appear in the Conditional Display role picker #2409</li>
+<li>Fixed: Shape separator layer 2 options were not visible</li>
+<li>Fixed: Block error that resulted when using a Display Condition taxonomy that was deleted</li>
+<li>Fixed: CSS optimization post meta options are now hidden from the custom fields view</li>
+<li>Fixed: Some strings in the Countdown block were not translated #2585</li>
+<li>Fixed: Some JS hook tweaks #2588</li>
+</ul>
+<h4>3.7.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-new-horizontal-scroller-and-countdown-blocks/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: New Horizontal Scroller and Countdown Blocks</a></p>
+<ul>
+<li>New: Horizontal Scroller block #2494</li>
+<li>New: Countdown block #2501</li>
+<li>Fixed: Dynamic Content database performance, no more duplicate db calls #2569</li>
+<li>Fixed: Some tablet and mobile styling options were being overwritten by desktop values #2571</li>
+<li>Fixed: Right clicking on an Image block now triggers on the image itself</li>
+</ul>
+<h4>3.6.5</h4>
+<ul>
+<li>Fixed: Possible error if the theme color palette is unavailable</li>
+</ul>
+<h4>3.6.4</h4>
+<ul>
+<li>New: Inversed the behavior of the Heading&#8217;s margins (it now doesn&#8217;t use the theme&#8217;s margins by default) #2190</li>
+<li>Fixed: Editor performance improvements #2446</li>
+<li>Fixed: Better PHP 8.1 compatibility #2560</li>
+<li>Fixed: Max content width doesn&#8217;t show correctly in the editor #2531</li>
+<li>Fixed: Posts block not showing hover colors correctly in the editor #2351 #2473</li>
+</ul>
+<h4>3.6.3</h4>
+<ul>
+<li>New: The Table of Contents block can now have a title #2346</li>
+<li>Fixed: In Conditional Display, added support for named and 0 timezones #2530</li>
+<li>Fixed: FontAwesome script loading is now delayed in the editor</li>
+<li>Fixed: Possible error in the Accordion block&#8217;s icon #2546</li>
+<li>Fixed: Tablet and mobile units are not being followed in the editor #2547</li>
+<li>Fixed: Added missing translation strings #2399 #2402 #2472 #2498 (Thanks DAnn2012)</li>
+<li>Fixed: Table of Contents block now support the Stackable v2 Heading block #2376</li>
+<li>Fixed: Content vertical align option in the Column block doesn&#8217;t appear correctly in the editor #2408</li>
+<li>Fixed: Using a custom SVG in the Icon block can result in it losing its colors  #2137</li>
+<li>Fixed: Image Box block selection goes past its container in the editor #2369</li>
+<li>Fixed: Block example show a &#8220;no blocks in the group&#8221; placeholder #2405</li>
+<li>Fixed: Image alt now no longer gets overridden when picking images #2524</li>
+</ul>
+<h4>3.6.2</h4>
+<ul>
+<li>New: (Freemius) Granular opt-out controls</li>
+<li>New: (Freemius) Support for anonymous license activation</li>
+<li>New: (Freemius) New opt-in screen</li>
+<li>New: (Freemius) User IP is no longer sent during opt-in</li>
+<li>New: (Freemius) No data is now sent when skipping the opt-in screen</li>
+<li>New: (Freemius) Admin query strings no longer include a Freemius flag</li>
+<li>New: (Freemius) Better PHP 8 compatibility</li>
+<li>Fixed: Some PHP 8 warning messages with Twenty Twenty Three theme and Dynamic Content #2508 #2503</li>
+<li>Fixed: Design Library button text label now shows properly #2486</li>
+<li>Fixed: Possible Block error with v2 Button blocks and Blocksy #2484</li>
+</ul>
+<h4>3.6.1</h4>
+<ul>
+<li>New: WordPress 6.1 compatibility</li>
+<li>New: You can now change the Query String of the Posts block&#8217;s Pagination Block #2313</li>
+<li>New: Added Advanced Tab &gt; Responsive &gt; Tablet column arrangement option ##2325</li>
+<li>New: Added Advanced Tab &gt; Responsive &gt; Tablet and mobile column arrangement option #2361</li>
+<li>Fixed: RankMath compatibility for the Table of Contents block #2424</li>
+<li>Fixed: Newly created columns are not cloned correctly when using the Columns block&#8217;s Columns option #2476</li>
+<li>Fixed: Posts block pagination could not navigate back to page 1 #2313</li>
+<li>Fixed: Reset button on icon options now reset correctly #2329</li>
+<li>Fixed: Copy and pasting styles on the Progress Circle and Bar blocks also copied some content #2469</li>
+<li>Fixed: Progress Bar block percentage text can wrap around spaces #2464</li>
+<li>Fixed: Button blocks can still be added even if they&#8217;re disabled in the admin #2305</li>
+<li>Fixed: Possible block error when adding conditional display about dates #2477</li>
+</ul>
+<h4>3.6.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-new-progress-circle-and-progress-bar-blocks/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: New Progress Circle and Progress Bar Blocks</a></p>
+<ul>
+<li>New: Progress Circle and Progress Bar Blocks</li>
+<li>Fixed: You can now select transparent as the color for the 2nd gradient background color #2358</li>
+</ul>
+<h4>3.5.0</h4>
+<p><a href="https://wpstackable.com/blog/improved-performance/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">No Bloat &amp; Improved Performance</a></p>
+<ul>
+<li>New: Various performance improvements</li>
+<li>New: Smaller plugin filesize</li>
+<li>New: New exposed window.stk API (undocumented)</li>
+<li>New: Support for block theme contentSize and wideSize</li>
+<li>Fixed: Wide and fullwidth blocks sometimes showed centered in the editor</li>
+<li>Fixed: Column content vertical align did not show up correctly in the editor</li>
+<li>Fixed: Some block options not showing up in the editor</li>
+<li>Fixed: Column block&#8217;s Content Vertical Align not displaying correctly in the editor</li>
+<li>Fixed: Icon block margin and size options not displaying correctly in the editor #2426</li>
+<li>Fixed: Card block horizontal layout image resizing issues in tablet and mobile</li>
+<li>Fixed: Hero block can get an error when switching layouts</li>
+<li>Fixed: Accordion content in the editor overlapped sometimes</li>
+<li>Fixed: Some styles did not show in the editor when changing hover states</li>
+<li>Fixed: Some shadows flicker or get clipped in Safari #2328</li>
+<li>Fixed: Accordions close adjacent doesn&#8217;t work with reduced motion OS setting #2352</li>
+<li>Fixed: Custom Fields PHP warnings #2415</li>
+<li>Fixed: Using custom SVGs with colors can sometimes cause block errors #2411</li>
+</ul>
+<h4>3.4.5</h4>
+<ul>
+<li>Fixed: Accordion containers incorrectly collapsed when placed inside columns</li>
+</ul>
+<h4>3.4.4</h4>
+<ul>
+<li>Fixed: This update fixes some issues which were found in v3.4.3 in the Accordion and Image box blocks</li>
+<li>Fixed: Accordion column height issues</li>
+<li>Fixed: Hard to select the accordion block contents</li>
+<li>Fixed: Containers with containers inside incorrectly inherit the parent container&#8217;s size styles</li>
+<li>Fixed: Content alignment issue in the image box block</li>
+<li>Fixed: Content vertical align option now works correctly in the icon box block #2404</li>
+</ul>
+<h4>3.4.3</h4>
+<ul>
+<li>New: Added duration option for the Count Up block #2355</li>
+<li>New: Added button alignment &amp; full-width options for the Button Group block</li>
+<li>Change: Remove doubled Stackable icons in the block inserter #2383</li>
+<li>Change: Video popup now uses YouTube&#8217;s no-cookie domain #2392</li>
+<li>Fixed: Buttons stacking on mobile adds a margin to some buttons #2249</li>
+<li>Fixed: Full width buttons force other non-full width buttons to wrap text</li>
+<li>Fixed: Multiple full width buttons in a group incorrectly wrap in mobile</li>
+<li>Fixed: Buttons with borders sometimes show a thin white border</li>
+<li>Fixed: Typing in a global color name is slow #2339</li>
+<li>Fixed: Resetting max width doesn&#8217;t reset content horizontal align #2338</li>
+<li>Fixed: Icon panel doesn&#8217;t close</li>
+<li>Fixed: Icon list block contents are also copied when copying styles #2320</li>
+<li>Fixed: Columns &amp; Button group blocks show &#8220;add block&#8221; panel when used in reusable blocks &amp; in widget editor #2371</li>
+<li>Fixed: Dynamic content button is not aligned in link inspector control #2332</li>
+<li>Fixed: Remove highlight toolbar button for button blocks #2314</li>
+<li>Fixed: Icon is not visible in some notification block layouts #2323</li>
+<li>Fixed: Position &#8220;sticky&#8221; doesn&#8217;t work as intended inside columns #2212</li>
+<li>Fixed: Global typography does not show in tablet &amp; mobile and in FSE #2340 &amp; #2289</li>
+<li>Fixed: Fatal error with Freemius in edge case when blog no longer exists in multisite</li>
+<li>Fixed: ACF &amp; Metabox dynamic content images show blurry #2064</li>
+<li>Fixed: ACF &amp; Metabox added image size selector for dynamic content image fields #2064</li>
+<li>Fixed: Added single image field type support for Metabox</li>
+<li>Fixed: Related map block scripts now do not appear in the frontend when no map block is used #2386</li>
+</ul>
+<h4>3.4.2</h4>
+<ul>
+<li>Fixed: Editor speed performance improvements when editing blocks</li>
+<li>Fixed: Error when saving a page when styling some blocks with PHP 8</li>
+<li>Fixed: Taxonomies and post types now show up in Dynamic Content if you have more than 10</li>
+<li>Fixed: Rare block error when using the highlight text color</li>
+<li>Fixed: Updated Freemius SDK to 2.5.0 for PHP 8.1 support</li>
+</ul>
+<h4>3.4.1</h4>
+<ul>
+<li>New: JetEngine post and taxonomy meta box integration with Stackable Dynamic Content</li>
+<li>Fixed: Icon speed improvements</li>
+<li>Fixed: Resizing the 1st column to 33.33% can make the second column wrap</li>
+<li>Fixed: Added missing translation text domains</li>
+<li>Fixed: Minor UI, warning &amp; security fixes</li>
+</ul>
+<h4>3.4.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-map-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: Map Block</a><br />
+* New: Map Block<br />
+* Fixed: Editing Default Blocks now work when the Classic Editor plugin is activated</p>
+<h4>3.3.5</h4>
+<ul>
+<li>New: Updated Stackable logos to the new one</li>
+<li>Fixed: Font family picker cannot be clicked</li>
+<li>Fixed: Posts block sometimes do not render correctly in the frontend</li>
+<li>Fixed: In some servers the Posts Block won&#8217;t display columns side by side</li>
+</ul>
+<h4>3.3.4</h4>
+<ul>
+<li>New: Metabox plugin integration with Stackable Dynamic Content</li>
+<li>Fixed: Margin bottom indicators won&#8217;t show up when inside a native Row Block</li>
+<li>Fixed: Dynamic Content field dropdown gets cut when inside a popover</li>
+<li>Fixed: Icon block styles now work correctly when used inside a Query Loop block</li>
+<li>Fixed: Block widths now collapse as expected when used in a Row Block</li>
+</ul>
+<h4>3.3.3</h4>
+<ul>
+<li>New: WordPress 6.0 compatibility</li>
+<li>New: Optimized selectors when combining CSS, this results in 40% less generated CSS size!</li>
+<li>Fixed: Possible PHP 5.6 error</li>
+<li>Fixed: Fixed background are now correctly forced to scroll and show up in iOS devices</li>
+<li>Fixed: Some editor optimizations</li>
+</ul>
+<h4>3.3.2</h4>
+<ul>
+<li>New: You can now select multiple designs in the Design Library</li>
+<li>Fixed: Custom breakpoints do not work with Optimize Inline CSS</li>
+<li>Fixed: Some overriding issues with Optimize Inline CSS and responsive styles</li>
+<li>Fixed: The dynamic content popover can get hidden behind the editor&#8217;s sides / inspector / admin menu</li>
+<li>Fixed: The contents of text highlight and dynamic content popovers go past their bounds</li>
+<li>Fixed: Some slider controls now show the correct slider position at default</li>
+<li>Fixed: Accordion block now opens on Windows if &#8216;Show Animations on Windows&#8217; is turned off</li>
+<li>Fixed: Column gap option also affects Icon Label block in the editor</li>
+<li>Fixed: Sometimes theme colors do not show up in shadows and other color pickers</li>
+<li>Fixed: Hovering your mouse over the corner of the column size indicator makes it flicker</li>
+<li>Fixed: Icon list block bottom margin will not conflict with theme styles</li>
+<li>Fixed: Overflow can sometimes not be followed when there is a border radius on a block</li>
+</ul>
+<h4>3.3.1</h4>
+<ul>
+<li>New: Added block list in the getting started page</li>
+<li>Fixed: Now loads JS scripts in the footer to prevent blocking the page render</li>
+<li>Fixed: Inline CSS Optimization sometimes made Parent Hovered style work incorrectly (if this is happening to you, update your post)</li>
+<li>Fixed: Image Box (v2) images sometimes won&#8217;t show in Chrome</li>
+</ul>
+<h4>3.3.0</h4>
+<p><a href="https://wpstackable.com/blog/saving-block-defaults/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Saving Block Defaults</a></p>
+<ul>
+<li>New: You can now Save Block Defaults (Check out the Block Defaults panel in the Stackable sidebar)</li>
+<li>New: Inline CSS Optimization</li>
+<li>Fixed: Issues with Block Themes such as fullwidth &amp; options missing</li>
+<li>Fixed: Astra compatibility, some Gutenberg options are missing and fixed spacing</li>
+<li>Fixed: LearnDash compatibility, Inspector shows blank when navigation panel is enabled</li>
+<li>Fixed: WordPress 5.8.x compatibility, prevents block errors</li>
+<li>Fixed: Fullwidth buttons no longer go past their containers</li>
+<li>Fixed: Multiple Posts block with Load More buttons now work correctly</li>
+<li>Fixed: Responsive toggles now work in the widgets editor, you can now edit tablet and mobile styles</li>
+<li>Fixed: Posts Block Card variation was not showing the post title</li>
+<li>Fixed: The last column of the native Posts block wraps sometimes when Global Typography is used</li>
+<li>Fixed: Removed alignment option of the Icon Label block</li>
+<li>Fixed: Block inserter doesn&#8217;t appear if the last block is a text block</li>
+<li>Fixed: Hide button overlaps with long text in the table of contents block</li>
+<li>Fixed: Long text in table of contents block gets cut when using columns</li>
+</ul>
+<h4>3.2.0</h4>
+<p><a href="https://wpstackable.com/blog/table-of-contents-block/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Table of Contents Block</a></p>
+<ul>
+<li>New: Table of Contents block</li>
+<li>Fixed: Button shadows don&#8217;t show when the button has a border radius</li>
+<li>Fixed: Added button text alignment button</li>
+<li>Fixed: Buttons do not wrap text</li>
+<li>Fixed: Buttons and links get followed when previewing in tablet or mobile</li>
+<li>Fixed: Using a video background with a top/bottom separator now shows the content correctly</li>
+<li>Fixed: Card block Horizontal layout mobile collapse issue</li>
+<li>Fixed: Image now clickable in the image card variation in the Posts block</li>
+<li>Fixed: When changing typography color type to gradient for the first time, the text becomes transparent</li>
+<li>Fixed: Enqueue CodeMirror only in Gutenberg, it might interfere with other plugins that use it</li>
+<li>Fixed: Changing the block&#8217;s HTML tag now shows the block in the correct width in the editor</li>
+<li>Fixed: Button block popover closes when clicking edit (v2)</li>
+</ul>
+<h4>3.1.5</h4>
+<ul>
+<li>New: Navigation Panel</li>
+<li>Fixed: Missing Featured Image in the Default Posts block variation</li>
+<li>Fixed: Content order issues in the Posts block</li>
+<li>Fixed: Content order Posts block always shows the reset button</li>
+<li>Fixed: A block can show an error when saving without picking a layout</li>
+<li>Fixed: The margin bottom resizer can be visible when picking a layout</li>
+<li>Fixed: Security fixes</li>
+</ul>
+<h4>3.1.4</h4>
+<ul>
+<li>Fixed: Blocks with variations couldn&#8217;t be added (free only)</li>
+<li>Fixed: Layout switcher button doesn&#8217;t show</li>
+</ul>
+<h4>3.1.3</h4>
+<ul>
+<li>New: You can now change the Layout after adding a block</li>
+<li>New: Added Row Gap option in Icon List block</li>
+<li>New: Added Horizontal 2 layout for the Posts block (inverse of Horizontal layout)</li>
+<li>Fixed: Editor performance improvements</li>
+<li>Fixed: Accordion block support for some older browsers</li>
+<li>Fixed: Featured Image bottom margin can now be changed in the Posts block</li>
+<li>Fixed: Sometimes line-height won&#8217;t get applied to the post titles in the Posts block</li>
+<li>Fixed: Column resizer handlers now show correctly for nested column blocks</li>
+<li>Fixed: Text and heading blocks now appear when in Content Editing Mode</li>
+<li>Fixed: Added center, wide and fullwidth to the Header block</li>
+<li>Fixed: Posts block Horizontal layout doesn&#8217;t collapse correctly in mobile</li>
+<li>Fixed: Some Posts block content go past their containers in mobile</li>
+<li>Fixed: Using custom color pickers can close the current popover</li>
+<li>Fixed: Using rem font size shows the font size differently in mobile</li>
+<li>Fixed: The button appender button is now on the right side of the block</li>
+<li>Fixed: Alignment of the top &amp; bottom lines of the header block now work in tablet/mobile correctly if there&#8217;s a desktop alignment provided</li>
+<li>Fixed: Multiple copy and paste notifications won&#8217;t anymore fill up the screen</li>
+<li>Fixed: Column styles can affect inner blocks in the editor</li>
+<li>Fixed: Jetpack form goes side-by-side in the editor</li>
+<li>Fixed: Hitting return while editing image dimensions in the size popover opens the Media Library</li>
+</ul>
+<h4>3.1.2</h4>
+<ul>
+<li>New: WordPress 5.9 compatibility &amp; FSE compatibility</li>
+<li>New: Added Overlay Colors to the Image block &#8211; now you can add solid or gradient colored overlays!</li>
+<li>Fixed: Clicking the expand block link scrolls the screen down</li>
+<li>Fixed: Inspector tabs went behind the visible area when scrolling down</li>
+<li>Fixed: Clearing a text highlight color, resets the highlight type.</li>
+<li>Fixed: Possible PHP error when a custom post used in Dynamic Content becomes unavailable</li>
+</ul>
+<h4>3.1.1</h4>
+<ul>
+<li>New: Added link option to the Image Block</li>
+<li>New: Added back ability to change the column order when columns collapse in mobile (premium)</li>
+<li>New: Added Post Taxonomies in dynamic content (premium)</li>
+<li>Fixed: Trigger when all display conditions are met is not triggering properly</li>
+<li>Fixed: Entrance animation speeds and delay do not take effect correctly</li>
+<li>Fixed: Column gap and fit columns options now work in Feature Grid block</li>
+<li>Fixed: Display conditions: post meta &amp; site option true &amp; false condition now works if the value is &#8221;</li>
+<li>Fixed: Display conditions: Post meta &amp; site option contains &amp; does-not-contain condition now works if the string matched is at the start of the string</li>
+<li>Fixed: Content Vertical Align option prevents the responsive display options from being applied</li>
+<li>Fixed: Top and bottom lines in Heading block not left aligning</li>
+<li>Fixed: Icon block custom CSS not showing correctly in the editor</li>
+</ul>
+<h4>3.1.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-wireframes/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: Wireframes</a></p>
+<ul>
+<li>New: Added Wireframes in the Design Library</li>
+<li>Change: Removed plugin deactivation feedback</li>
+<li>Fixed: Block alignments not inherited properly in tablet and mobile</li>
+<li>Fixed: Text in post block not aligning in tablet and mobile</li>
+<li>Fixed: Shadows in the design library are cut when viewing only a few designs</li>
+</ul>
+<h4>3.0.7</h4>
+<ul>
+<li>Fixed: Button link popover is hard to close</li>
+<li>Fixed: Less Content Layout Shift (CLS)</li>
+<li>Fixed: Memory usage optimization (10% memory savings)</li>
+<li>Fixed: Aligning content in tablet doesn&#8217;t inherit correctly in mobile</li>
+<li>Fixed: Column gap in desktop collapses columns in tablet</li>
+<li>Fixed: Unwanted delay when icons change color on hover</li>
+<li>Fixed: Translations are now properly applied across the plugin</li>
+</ul>
+<h4>3.0.6</h4>
+<ul>
+<li>New: Dynamic Content can now be used for link titles</li>
+<li>New: Added Row Gap option for the Columns block</li>
+<li>Fixed: Design Library won&#8217;t load designs in some server configurations</li>
+<li>Fixed: Column collapsing in tablet and mobile now takes into account the column gap</li>
+<li>Fixed: Resizing columns is jumpy when there is a column gap</li>
+<li>Fixed: In some themes alignfull does not work properly</li>
+<li>Fixed: Icon Button block styles get applied to the button instead of the background</li>
+<li>Fixed: Prevent Column block from being added as a reusable block</li>
+<li>Fixed: Added transform panel in the Separator block</li>
+<li>Fixed: Error when saving an Icon block while having a non-administrator role in multisite</li>
+<li>Fixed: Load more button now gets removed properly when all posts have loaded</li>
+<li>Fixed: Added missing translations</li>
+<li>Fixed: Updated FontAwesome script to use CDN</li>
+<li>Fixed: Some WordPress 5.7 and 5.6 compatibility issues</li>
+</ul>
+<h4>3.0.5</h4>
+<ul>
+<li>Fixed: Design library infinite loading spinner and fails to load design</li>
+<li>Fixed: PublishPress workaround &#8211; Stackable blocks won&#8217;t load</li>
+<li>Fixed: Posts block can affect the display of other Posts block in the editor</li>
+<li>Fixed: Posts block won&#8217;t show featured image if size is not full</li>
+<li>Fixed: Icon list columns flexbox issue</li>
+<li>Fixed: Accordion block affects the icon of nested accordion blocks</li>
+<li>Fixed: Pricing box alignment in some layouts</li>
+<li>Fixed: Notification block close button can go out of the container</li>
+<li>Fixed: Kadence compatibility &#8211; dots added to the blog posts meta (v2 block)</li>
+<li>Fixed: Image box can have a small white gap if the container size has fractions in its widt (v2 block)</li>
+</ul>
+<h4>3.0.4</h4>
+<ul>
+<li>New: Added note at the bottom of the Style tab in some blocks about how to style inner blocks.</li>
+<li>New: Added tip to open the List View</li>
+<li>Change: Renamed Columns block to &#8220;Columns / Container&#8221; block</li>
+<li>Fixed: Added another failsafe in case the frontend migration doesn&#8217;t get automatically enabled when v2 blocks are present.</li>
+<li>Fixed: Removed small gap between full width blocks in the editor so they look merged together</li>
+<li>Fixed: Separator now preserve aspect ratio correctly in mobile</li>
+</ul>
+<h4>3.0.3</h4>
+<ul>
+<li>New: Added a modal popup to help with the migration process to version 3</li>
+<li>New: Shadow options can now be styled on hover</li>
+<li>Fixed: Block widths when nested</li>
+<li>Fixed: Column content widths sometimes didn&#8217;t apply especially when nested</li>
+<li>Fixed: Layout styles of the Blog Posts and Card block</li>
+<li>Fixed: The image cannot be selected some Card block layouts</li>
+<li>Fixed: Posts Block title tag can&#8217;t be changed</li>
+<li>Fixed: Remove unwanted bottom margin in columns</li>
+<li>Fixed: Content Vertical Align did not apply</li>
+<li>Fixed: Icon Label block icon gap showing incorrectly in the backend when you have multiple icon labels</li>
+<li>Fixed: PHP warning for themes using theme.json</li>
+<li>Fixed: Feature block horizontal layout didn&#8217;t show as horizontal</li>
+<li>Fixed: Image Box block layouts were not aligned correctly</li>
+<li>Fixed: Image placeholder height now shows correctly</li>
+<li>Fixed: Blocks can be linked together if creating multiple columns at once</li>
+<li>Fixed: Compatibility with wide/full align when Kadence blocks is enabled</li>
+<li>Fixed: Fixed typo in the wizard text</li>
+</ul>
+<h4>3.0.2</h4>
+<ul>
+<li>Fixed: Compatibility with some plugins when backward compatibility with v2 blocks is enabled</li>
+<li>Fixed: Backward compatibility with v2 blocks now work with reusable blocks</li>
+<li>Fixed: Possible too many redirects when going to the wizard</li>
+</ul>
+<h4>3.0.1</h4>
+<ul>
+<li>Fixed: The onboarding / migration wizard sometimes did not appear</li>
+<li>Fixed: Auto-updating to v3 doesn&#8217;t perform the migration process immediately</li>
+</ul>
+<h4>3.0.0</h4>
+<p><a href="https://wpstackable.com/blog/how-to-shift-from-version-2-to-version-3/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">How To Shift From Version 2 to Version 3</a></p>
+<ul>
+<li>New: New version 3 blocks (old version 2 blocks will still be available)</li>
+<li>New: Completely new way to use Stackable blocks</li>
+<li>New: Now very lightweight</li>
+<li>New: Advanced Columns which are immensely responsive (you can control how they collapse in tablet and mobile)</li>
+<li>New: Style blocks when they&#8217;re hovered</li>
+<li>New: Dyanmic Breakpoints</li>
+<li>New: Stackable Custom Fields (premium)</li>
+<li>New: Use Dynamic Content in images, buttons, and other content (premium)</li>
+<li>New: Motion Effects (premium)</li>
+<li>New: Conditionally Display blocks (premium)</li>
+<li>New: A lot more</li>
+</ul>
+<h4>2.17.1</h4>
+<ul>
+<li>Fixed: Compatibility fix with Toolset</li>
+<li>Fixed: Turning on Optimization settings prevents global colors from working in Divider block colors</li>
+<li>Fixed: When no aria-label is given in Image Box blocks, role=&#8221;img&#8221; is no longer added</li>
+<li>Fixed: WordPress 5.8 compatibility issues</li>
+<li>Fixed: Removed some attributes which should not be included when copy and pasting styles</li>
+</ul>
+<h4>2.17.0</h4>
+<p><a href="https://wpstackable.com/blog/custom-attributes-and-optimization/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Custom Attributes and Optimization</a></p>
+<ul>
+<li>New: You can now add your own Custom Attributes in Stackable blocks</li>
+<li>New: You can now opt to only load JS and CSS frontend files only in pages that use Stackable blocks</li>
+<li>Fixed: The featured image in blog posts blocks now correctly use the image&#8217;s alt text</li>
+<li>Fixed: JS error encountered when a global color becomes null</li>
+<li>Fixed: Icon block&#8217;s icon alignment issue when align is set to right</li>
+<li>Fixed: Compatibility with WP Review Pro in the blog posts block</li>
+<li>Fixed: Possible PHP warning when encountering a block without attributes when loading Google Fonts</li>
+<li>Fixed: Possible dynamic content PHP warning</li>
+<li>Fixed: Block error with ACF Pro when using Wysiwyg fields from Options pages as dynamic content</li>
+<li>Fixed: Container links should not be included when copy and pasting styles</li>
+<li>Fixed: Increased clamped padding in tablets from 30 to 100</li>
+<li>Fixed: Updated documentation links</li>
+<li>Fixed: The icon&#8217;s column gap did not take effect in mobile</li>
+</ul>
+<h4>2.16.0</h4>
+<p><a href="https://wpstackable.com/blog/clickable-containers-and-pagination/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Clickable Containers and Pagination</a></p>
+<ul>
+<li>New: Containers in some blocks can now become links</li>
+<li>New: Added pagination to the Blog Posts block (premium)</li>
+<li>Change: Increased the minimum PHP to 5.6</li>
+<li>Fixed: Jetpack social sharing buttons won&#8217;t show up anymore in the blog posts block excerpt</li>
+<li>Fixed: Compatibility with WP Review Pro in the blog posts block</li>
+<li>Fixed: The Video Popup block play button can be misaligned</li>
+<li>Fixed: Right and bottom Container paddings in tablet and mobile are interchanged</li>
+<li>Fixed: Global colors can have an error when colors are set to null</li>
+<li>Fixed: A vertical scrollbar can be present in the block editor</li>
+</ul>
+<h4>2.15.3</h4>
+<ul>
+<li>Fixed: Backward compatibility with WordPress 5.6</li>
+<li>Change: Increased minimum compatibility of Stackable to at least WordPress 5.5.4</li>
+</ul>
+<h4>2.15.2</h4>
+<ul>
+<li>Fixed: Constant naming issue in PHP 5.3</li>
+</ul>
+<h4>2.15.1</h4>
+<ul>
+<li>Fixed: E_PARSE PHP warning</li>
+<li>Fixed: Deprecated warning shown in PHP 8</li>
+</ul>
+<h4>2.15.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-dynamic-content/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing Dynamic Content</a></p>
+<ul>
+<li>New: You can now add Dynamic Content to your blocks from the Dynamic Fields toolbar button (premium)</li>
+<li>Fixed: Changed &#8220;Gutenberg plugin is active&#8221; notice message to be clearer</li>
+<li>Fixed: Team Member block image now doesn&#8217;t grow bigger than its container</li>
+<li>Fixed: Global color reset popover width</li>
+<li>Fixed: Corrected custom CSS selector name in the blog post block</li>
+</ul>
+<h4>2.14.2</h4>
+<ul>
+<li>Fixed: Added Auto Block Recovery support for reusable blocks</li>
+<li>Fixed: Video Popup block play button SEO and accessibility issues</li>
+<li>Fixed: Possible PHP undefined variable warning in global settings</li>
+<li>Fixed: Image border radius now properly shows in mobile for the Feature block</li>
+<li>Fixed: Gradient backgrounds would overlap if there&#8217;s a border in Column blocks</li>
+<li>Fixed: Picking a global color did not visibly show as active</li>
+<li>Fixed: Text highlight toolbar button now shows pressed state when active</li>
+<li>Fixed: Block title and Block description spacing in some blocks didn&#8217;t get applied</li>
+<li>Fixed: Count Up and Notification block&#8217;s icon alignment not working in tablet and mobile</li>
+<li>Fixed: Some em units did not display as active</li>
+<li>Fixed: Missing stretch class in Feature block</li>
+<li>Fixed: Disabled html editing in the Accordion block</li>
+<li>Fixed: Text of some blocks now are blank when you first add them so you can type immediately</li>
+<li>Fixed: Get the correct color from custom properties in Icon List block icons</li>
+<li>Fixed: Better color picker support for Neve Theme colors</li>
+<li>Fixed: Image Box block now properly adds min-height</li>
+</ul>
+<h4>2.14.1</h4>
+<ul>
+<li>Fixed: Compatibility adjustments for WordPress 5.7</li>
+<li>Fixed: Advanced tab can sometimes be visible in the Styles tab</li>
+</ul>
+<h4>2.14.0</h4>
+<p><a href="https://wpstackable.com/blog/copy-and-paste-block-styles/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Copy and Paste Block Styles</a></p>
+<ul>
+<li>New: You can now copy and paste Stackable and native block styles! (premium)</li>
+<li>New: Added block previews</li>
+<li>Fixed: Feature Grid block container image is always set to cover</li>
+<li>Fixed: Removed inapplicable margin/padding unit in separators</li>
+<li>Fixed: Accordion text content can be a bit blurry</li>
+<li>Fixed: Don&#8217;t enqueue blank Google Fonts in Global Settings</li>
+<li>Fixed: Expand block text color doesn&#8217;t apply in backend</li>
+<li>Fixed: Icon block, title alignment in tablet and mobile did not apply</li>
+<li>Fixed: Auto block recovery should not affect v1 blocks</li>
+<li>Fixed: Margins of the Icon block title won&#8217;t apply</li>
+</ul>
+<h4>2.13.4</h4>
+<ul>
+<li>Fixed: Issue with styling duplicated blocks</li>
+<li>Fixed: Accordion block migration error</li>
+<li>Fixed: Google Fonts possible enqueueing issue</li>
+</ul>
+<h4>2.13.3</h4>
+<ul>
+<li>New: You can now select titles to use Pargraph tags instead of H1-H6</li>
+<li>Fixed: Can&#8217;t convert reusable blocks to regular blocks</li>
+<li>Fixed: Some inspector style conflicts</li>
+<li>Fixed: Nested Accordion block arrows did not rotate when opened</li>
+<li>Fixed: Feature Grid image shape for the column is now working</li>
+<li>Fixed: Clicking on the default quote icon in the Blockquote block</li>
+</ul>
+<h4>2.13.2</h4>
+<ul>
+<li>Fixed: Accordion SEO issue with heading levels</li>
+<li>Fixed: Blocks didn&#8217;t re-render when some props changed</li>
+<li>Fixed: Don&#8217;t show number spacing for some layouts</li>
+</ul>
+<h4>2.13.1</h4>
+<ul>
+<li>Fixed: Blog posts block load more button stopped working</li>
+<li>Fixed: Number box alignment does not apply for some layouts</li>
+</ul>
+<h4>2.13.0</h4>
+<p><a href="https://wpstackable.com/blog/ui-kits-borders/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">UI Kits, Borders &amp; Improved Performance</a></p>
+<ul>
+<li>New: UI Kits, check the Design Library</li>
+<li>New: Border options for all blocks</li>
+<li>New: Inspector performance improvements</li>
+<li>New: Added ID anchor tags to all blocks</li>
+<li>New: Revamped getting started page</li>
+<li>New: Compatibility with WordPress 5.6</li>
+<li>New: Gave the Design Library window a face lift</li>
+<li>Fixed: Blog Posts block now handle custom taxonomies in posts and pages correctly</li>
+<li>Fixed: Blog Posts block now shows the correct number of entries when specifying post IDs</li>
+<li>Fixed: Expand block typography can sometimes not apply in the frontend</li>
+<li>Fixed: Blockquote block background image tint not working</li>
+<li>Fixed: Global Settings will no longer show up when in content only editing mode</li>
+<li>Fixed: PHP error when other plugins use the plugin_action_links filter incorrectly</li>
+<li>Fixed: Some slider controls are stuck on the left when moving them</li>
+</ul>
+<h4>2.12.2</h4>
+<ul>
+<li>Fixed: WordPress 5.4 compatibility</li>
+<li>Fixed: Blocks without a layout tab would not show options when they&#8217;re first added</li>
+<li>Fixed: Some image width options won&#8217;t respond</li>
+</ul>
+<h4>2.12.1</h4>
+<ul>
+<li>Fixed: Blog Posts block filter wasn&#8217;t called correctly.</li>
+</ul>
+<h4>2.12.0</h4>
+<p><a href="https://wpstackable.com/blog/better-user-interface-and-user-experience/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Better User Interface and User Experience</a></p>
+<ul>
+<li>New: You can now pick multiple categories / taxonomies in the Blog Posts block</li>
+<li>New: Improved UX/UI for the block inspector and popups</li>
+<li>New: Speed improvements when editing block styles</li>
+<li>Fixed: Now easier to set left/right paddings to zero</li>
+<li>Fixed: Compatibility issue when coming from a Stackable beta build</li>
+<li>Fixed: Some disabled toggle buttons did not display as disabled</li>
+<li>Fixed: Unable to reset range controls when the value has been previously changed</li>
+<li>Fixed: Do not include post attributes when importing Blog Posts block designs</li>
+<li>Fixed: SEO warning about duplicate id attributes</li>
+<li>Fixed: A few CSS styling issues with some block layouts</li>
+<li>Fixed: Some JavaScript warnings</li>
+</ul>
+<h4>2.11.4</h4>
+<ul>
+<li>New: Redesigned responsive toggles to make them easier to use and discover</li>
+<li>New: Added deactivation notice when the Gutenberg plugin is detected to be activated</li>
+<li>New: Added settings and Go Premium links to the plugins page</li>
+<li>Fixed: Possible error when you previously installed the beta version and updated to the released version</li>
+<li>Fixed: Global colors can possibly show a warning if a theme has invalid colors</li>
+<li>Fixed: Footer text was in the middle of the screen in the Stackable accounts page</li>
+</ul>
+<h4>2.11.3</h4>
+<ul>
+<li>Fixed: Only add attribute identifiers in some native blocks if needed for Global Typography</li>
+<li>Fixed: Partial compatibility with Gutenberg v9.1</li>
+</ul>
+<h4>2.11.2</h4>
+<ul>
+<li>Fixed: Potential PHP warnings when generating global styles</li>
+</ul>
+<h4>2.11.1</h4>
+<ul>
+<li>Fixed: Custom HTML block can result in invalid HTML and can cause frontend display issues</li>
+<li>Fixed: Global colors can possibly show a warning</li>
+</ul>
+<h4>2.11.0</h4>
+<p><a href="https://wpstackable.com/blog/global-colors-and-global-typography/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing Global Colors and Global Typography</a></p>
+<ul>
+<li>New: Global Colors</li>
+<li>New: Global Typography</li>
+<li>Fixed: Speed improvements</li>
+<li>Fixed: Some popup settings close right away when clicking in Firefox</li>
+<li>Fixed: Blocksy compatibility when detecting dark colors</li>
+</ul>
+<h4>2.10.4</h4>
+<ul>
+<li>Fixed: Some responsive font-sizes won&#8217;t apply</li>
+<li>Fixed: Feature grid block default title tag shows as H2 in the Block Editor</li>
+</ul>
+<h4>2.10.3</h4>
+<ul>
+<li>Fixed: Block errors in nested blocks</li>
+<li>Fixed: PHP warning undefined index page</li>
+</ul>
+<h4>2.10.2</h4>
+<ul>
+<li>Change: Moved Stackable admin settings inside Settings menu</li>
+<li>Fixed: Column blocks and other blocks that use innerBlocks do not auto-recover</li>
+<li>Fixed: WordPress 5.4 compatibility</li>
+<li>Fixed: Background color and image in Video Popup won&#8217;t apply</li>
+<li>Fixed: Force removal of pseudo elements in the Blockquote block</li>
+<li>Fixed: Kadence Theme color picker issue</li>
+<li>Fixed: CORS error when editing in mobile or tablet if Stackable&#8217;s CSS files are located in a another domain. When it happens now, live responsive editing will just not work.</li>
+</ul>
+<h4>2.10.1</h4>
+<ul>
+<li>Change: Added &#8220;Other&#8221; options on the bottom of the admin settings</li>
+<li>Fixed: Icon list text were flowing over the other lines in the editor</li>
+<li>Fixed: Admin spinner was always visible</li>
+<li>Fixed: Responsive hiding doesn&#8217;t show blocks on exactly 600px and 960px widths</li>
+<li>Fixed: Load more button in Blog Posts block wasn&#8217;t centered correctly</li>
+<li>Fixed: Typography mobile font size issue when inheriting clipped desktop values</li>
+<li>Fixed: Group into Container was producing an error</li>
+<li>Fixed: AdvancedToolbarControl fullwidth console warning</li>
+<li>Fixed: Block bottom margin placeholder now correctly shows 35 instead of 0</li>
+<li>Fixed: Images with labels can produce invalid block html output</li>
+<li>Fixed: Console warning for alignRight when displaying block designs in the inspector</li>
+<li>Fixed: Added aria-label &#8220;Play&#8221; in Video Popup block</li>
+<li>Fixed: Max. Content Width option now gets inherited in tablet and mobile</li>
+<li>Fixed: Min. Block Height option now gets inherited in tablet and mobile</li>
+<li>Fixed: Block and column margins and paddings now get inherited in tablets</li>
+<li>Fixed: Some styles will now get inherited in tablets also</li>
+<li>Fixed: Block errors may appear and not auto-recover when using the Gutenberg plugin</li>
+</ul>
+<h4>2.10.0</h4>
+<p><a href="https://wpstackable.com/blog/better-responsive-controls-better-list-block-icons-low-highlight-effect/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Better Responsive Controls, Better List Block Icons and Low-Highlight Effect</a></p>
+<ul>
+<li>New: Better responsiveness controls: some tablet and mobile options do not automatically inherit desktop styles</li>
+<li>New: You can now pick any icon for the Icon List block</li>
+<li>New: You can now have different icons per line in the Icon List block</li>
+<li>New: Additional icon options in the Icon List block</li>
+<li>New: Icon size is now responsive in the Icon List block</li>
+<li>New: Added low-highlight text formatting style</li>
+<li>New: Now compatible with Kadence Theme global color palette</li>
+<li>New: You can now select the text color for highlighted text styles</li>
+<li>Fixed: Multisite or unfiltered HTML issue where some container styles do not reflect in the frontend</li>
+<li>Fixed: Icon list block didn&#8217;t follow tablet and mobile column counts.</li>
+<li>Fixed: Blog Posts Block doesn&#8217;t detect category and tag taxonomies for custom post types</li>
+<li>Fixed: When in white label mode, the pricing tab still appears in the settings page</li>
+<li>Fixed: Container blocks with small content widths have large paddings in mobile</li>
+</ul>
+<h4>2.9.1</h4>
+<ul>
+<li>Fixed: Columns Block uneven columns</li>
+<li>Fixed: PHP Rest API notice about register_rest_route used incorrectly.</li>
+<li>Change: Removed affiliate page</li>
+<li>Change: Removed main menu notification for a more unobtrusive experience</li>
+</ul>
+<h4>2.9.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-live-responsive-editing/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: Live Responsive Editing</a></p>
+<ul>
+<li>New: Responsive Preview and Editing!</li>
+<li>New: Multi-block editing support</li>
+<li>New: Improved styling for the admin settings</li>
+<li>New: Complete WordPress 5.5 support</li>
+<li>Fixed: Separator can show a thin white line sometimes</li>
+<li>Fixed: Divider block alignment not being applied</li>
+<li>Fixed: Column gap option not working in Icon Block</li>
+<li>Fixed: Expand block showed wrong heading tag in the editor</li>
+<li>Fixed: PHP Rest API notice about register_setting used incorrectly.</li>
+</ul>
+<h4>2.8.0</h4>
+<p><a href="https://wpstackable.com/blog/introducing-role-manager-for-gutenberg/?utm_source=wp-repo&amp;utm_campaign=readme&amp;utm_medium=link" rel="nofollow ugc">Introducing: Role Manager for Gutenberg</a></p>
+<ul>
+<li>New: User Role Manager (premium)</li>
+<li>New: Updated URL picker</li>
+<li>New: Added alt text for image using title and subtitle in Image Box block.</li>
+<li>Fixed: Partial WordPress 5.5 compatibility</li>
+<li>Fixed: Responsive breakpoint for hiding in desktop.</li>
+<li>Fixed: Missing guided CSS rules for Card Block (premium).</li>
+<li>Fixed: Only show Stackable menu for users that have the manage_options capability</li>
+<li>Fixed: Text transform &#8220;normal&#8221; was not working as expected.</li>
+<li>Fixed: IconButton deprecation warnings.</li>
+<li>Fixed: Disabling the title can possibly make the Image Box block error out</li>
+<li>Fixed: Social buttons give block errors in Team Member blocks.</li>
+</ul></div>
+	</div><!-- .entry-content -->
+
+	<div class="entry-meta">
+		<div class="widget plugin-meta">
+		<h2 class="screen-reader-text">Meta</h2>
+
+		<ul>
+			
+			<li>
+				Version: <strong>3.7.2</strong>			</li>
+
+			<li>
+				Last updated: <strong><span>1 month</span> ago</strong>			</li>
+			<li>
+				Active installations: <strong>80,000+</strong>			</li>
+
+							<li>
+					WordPress Version:					<strong>
+						6.0 or higher					</strong>
+				</li>
+			
+							<li>
+					Tested up to: <strong>6.2</strong>				</li>
+			
+							<li>
+					PHP Version:					<strong>
+						5.7 or higher					</strong>
+				</li>
+			
+							<li>
+					Languages:<div class="languages">						<button type="button" class="button-link popover-trigger" aria-expanded="false" data-target="popover-languages">
+							See all 8						</button>
+						<div id="popover-languages" class="popover is-top-right">
+							<div class="popover-arrow"></div>
+
+							<button type="button" class="button-link popover-close" aria-label="Close this popover">
+								Close							</button>
+
+							<div class="popover-inner">
+								<p><a href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">English (US)</a>, <a href="https://fr.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">French (France)</a>, <a href="https://it.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Italian</a>, <a href="https://nb.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Norwegian (Bokmål)</a>, <a href="https://br.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Portuguese (Brazil)</a>, <a href="https://ru.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Russian</a>, <a href="https://es.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Spanish (Spain)</a>, and <a href="https://uk.wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/">Ukrainian</a>.</p>
+								<p>
+								<a href="https://translate.wordpress.org/projects/wp-plugins/stackable-ultimate-gutenberg-blocks">Translate into your language</a>								</p>
+							</div>
+						</div>
+						</div>				</li>
+				
+			<li class="clear">Tags: <div class="tags"><a href="https://wordpress.org/plugins/tags/blocks/" rel="tag">blocks</a><a href="https://wordpress.org/plugins/tags/gutenberg/" rel="tag">gutenberg</a><a href="https://wordpress.org/plugins/tags/gutenberg-blocks/" rel="tag">gutenberg blocks</a><a href="https://wordpress.org/plugins/tags/page-builder/" rel="tag">page builder</a><a href="https://wordpress.org/plugins/tags/wordpress-blocks/" rel="tag">wordpress blocks</a></div></li>
+							<li class="hide-if-no-js">
+					<strong><a class="plugin-admin" href="https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/advanced/">Advanced View</a></strong>				</li>
+					</ul>
+
+		</div><div class="widget plugin-ratings"><h2 class="widget-title">Ratings</h2>			<a class="reviews-link" href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/">See all</a>
+
+			<div class="rating">
+				<div class="wporg-ratings" aria-label="5 out of 5 stars" data-title-template="%s out of 5 stars" data-rating="5" style="color:#ffb900;"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>			</div>
+
+			<ul class="ratings-list">
+									<li class="counter-container">
+						<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?filter=5">
+							<span class="counter-label">5 stars</span>
+					<span class="counter-back">
+						<span class="counter-bar" style="width: 93.157894736842%;"></span>
+					</span>
+							<span class="counter-count">354</span>
+						</a>
+					</li>
+									<li class="counter-container">
+						<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?filter=4">
+							<span class="counter-label">4 stars</span>
+					<span class="counter-back">
+						<span class="counter-bar" style="width: 3.4210526315789%;"></span>
+					</span>
+							<span class="counter-count">13</span>
+						</a>
+					</li>
+									<li class="counter-container">
+						<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?filter=3">
+							<span class="counter-label">3 stars</span>
+					<span class="counter-back">
+						<span class="counter-bar" style="width: 2.3684210526316%;"></span>
+					</span>
+							<span class="counter-count">9</span>
+						</a>
+					</li>
+									<li class="counter-container">
+						<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?filter=2">
+							<span class="counter-label">2 stars</span>
+					<span class="counter-back">
+						<span class="counter-bar" style="width: 0.26315789473684%;"></span>
+					</span>
+							<span class="counter-count">1</span>
+						</a>
+					</li>
+									<li class="counter-container">
+						<a href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/reviews/?filter=1">
+							<span class="counter-label">1 star</span>
+					<span class="counter-back">
+						<span class="counter-bar" style="width: 0.78947368421053%;"></span>
+					</span>
+							<span class="counter-count">3</span>
+						</a>
+					</li>
+							</ul>
+
+		
+					<div class="user-rating">
+				<a href="https://login.wordpress.org/?redirect_to=https%3A%2F%2Fwordpress.org%2Fsupport%2Fplugin%2Fstackable-ultimate-gutenberg-blocks%2Freviews%2F%23new-post&#038;locale=en_US" rel="nofollow" title="Log in to WordPress.org">Log in to submit a review.</a>
+			</div>
+		</div><div id="plugin-contributors" class="widget plugin-contributors"><h2 class="widget-title">Contributors</h2>
+		<ul id="contributors-list" class="contributors-list">
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/b5d60b4470879529eb13d9f7ff5302da?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b5d60b4470879529eb13d9f7ff5302da?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/bfintal/">
+					Benjamin Intal				</a>
+			</li>
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/7f07148a74a2743b26d144de85546255?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7f07148a74a2743b26d144de85546255?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/gambitph/">
+					gambitph				</a>
+			</li>
+						<li>
+				<img alt='' src='https://secure.gravatar.com/avatar/3ac33da92186a78937b307bdd9e906ee?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3ac33da92186a78937b307bdd9e906ee?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>				<a href="https://profiles.wordpress.org/freemius/">
+					Freemius				</a>
+			</li>
+					</ul>
+
+		</div><div class="widget plugin-support"><h2 class="widget-title">Support</h2>			<p class="aside">Issues resolved in last two months:</p>
+			<p class="counter-container">
+				<span class="counter-back">
+					<span class="counter-bar" style="width: 50%;"></span>
+				</span>
+				<span class="counter-count">
+					3 out of 6				</span>
+			</p>
+
+		
+		<p>
+			<a class="button" href="https://wordpress.org/support/plugin/stackable-ultimate-gutenberg-blocks/">View support forum</a>
+		</p>
+
+		</div>	</div><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+	</main><!-- #main -->
+
+
+	</div><!-- #content -->
+</div><!-- #page -->
+<footer class="global-footer wp-block-group wp-block-wporg-global-footer">
+
+<div class="wp-block-group global-footer__navigation-container is-layout-flow wp-block-group-is-layout-flow">
+	<nav class="global-footer__navigation-important wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/"><span class="wp-block-navigation-item__label">About</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/news/"><span class="wp-block-navigation-item__label">News</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/hosting/"><span class="wp-block-navigation-item__label">Hosting</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpressfoundation.org/donate/"><span class="wp-block-navigation-item__label">Donate</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://mercantile.wordpress.org/"><span class="wp-block-navigation-item__label">Swag</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-information wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/documentation/"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://developer.wordpress.org/"><span class="wp-block-navigation-item__label">Developers</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://make.wordpress.org/"><span class="wp-block-navigation-item__label">Get Involved</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://learn.wordpress.org/"><span class="wp-block-navigation-item__label">Learn</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-resources wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/showcase/"><span class="wp-block-navigation-item__label">Showcase</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/plugins/"><span class="wp-block-navigation-item__label">Plugins</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/themes/"><span class="wp-block-navigation-item__label">Themes</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/patterns/"><span class="wp-block-navigation-item__label">Patterns</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-community wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://central.wordcamp.org/"><span class="wp-block-navigation-item__label">WordCamp</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.tv/"><span class="wp-block-navigation-item__label">WordPress.TV</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://buddypress.org/"><span class="wp-block-navigation-item__label">BuddyPress</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://bbpress.org/"><span class="wp-block-navigation-item__label">bbPress</span></a></li></ul></nav>
+
+	<nav class="global-footer__navigation-external wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label=""><ul class="wp-block-navigation__container"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.com/?ref=wporg-footer"><span class="wp-block-navigation-item__label">WordPress.com</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://ma.tt/"><span class="wp-block-navigation-item__label">Matt</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://wordpress.org/about/privacy/"><span class="wp-block-navigation-item__label">Privacy</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://publiccode.eu/"><span class="wp-block-navigation-item__label">Public Code</span></a></li></ul></nav>
+</div> 
+
+
+<div class="wp-block-group global-footer__logos-container is-layout-flow wp-block-group-is-layout-flow">
+	
+	<div class="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-19 wp-block-group-is-layout-flex">
+		
+		<!-- The design calls for two logos, a small "mark" on mobile/tablet, and the full logo for desktops. -->
+			<figure class="wp-block-image global-footer__wporg-logo-mark">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="28" height="28" viewBox="0 0 28 28">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z" />
+	<path fill="currentColor" d="M2.36011 13.6133C2.36011 17.9198 4.81711 21.8618 8.70511 23.7383L3.33211 9.03684C2.68411 10.4813 2.36011 12.0338 2.36011 13.6133ZM21.2061 13.0463C21.2061 11.6558 20.7066 10.6973 20.2746 9.94134C19.8426 9.18534 19.1676 8.22684 19.1676 7.30884C19.1676 6.39084 19.9506 5.31084 21.0576 5.31084H21.2061C16.6296 1.11234 9.51511 1.42284 5.31661 6.01284C4.91161 6.45834 4.53361 6.93084 4.20961 7.43034H4.93861C6.11311 7.43034 7.93561 7.28184 7.93561 7.28184C8.54311 7.24134 8.61061 8.13234 8.00311 8.21334C8.00311 8.21334 7.39561 8.28084 6.72061 8.32134L10.8111 20.5118L13.2681 13.1273L11.5131 8.32134C10.9056 8.28084 10.3386 8.21334 10.3386 8.21334C9.73111 8.17284 9.79861 7.25484 10.4061 7.28184C10.4061 7.28184 12.2691 7.43034 13.3626 7.43034C14.4561 7.43034 16.3596 7.28184 16.3596 7.28184C16.9671 7.24134 17.0346 8.13234 16.4271 8.21334C16.4271 8.21334 15.8196 8.28084 15.1446 8.32134L19.2081 20.4173L20.3691 16.7453C20.8821 15.1388 21.1926 14.0048 21.1926 13.0328L21.2061 13.0463ZM13.7946 14.5853L10.4196 24.3998C12.6876 25.0613 15.1041 25.0073 17.3316 24.2243L17.2506 24.0758L13.7946 14.5853ZM23.4741 8.21334C23.5281 8.59134 23.5551 8.98284 23.5551 9.37434C23.5551 10.5218 23.3391 11.8043 22.7046 13.3973L19.2621 23.3333C24.5271 20.2688 26.4036 13.5593 23.4741 8.21334Z" />
+</svg>				</a>
+			</figure>
+
+			<figure class="wp-block-image global-footer__wporg-logo-full">
+				<a href="https://wordpress.org/">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" width="329" height="52" viewBox="0 0 329 52">
+	<title>WordPress.org</title>
+	<path fill="currentColor" d="M4.33 26a21.68 21.68 0 0 0 12.22 19.5L6.21 17.18A21.66 21.66 0 0 0 4.33 26ZM26.38 27.89l-6.5 18.89a21.31 21.31 0 0 0 6.12.89 21.77 21.77 0 0 0 7.2-1.23 1.429 1.429 0 0 1-.16-.3l-6.66-18.25Z"/>
+	<path fill="currentColor" d="M26 0a26 26 0 1 0 0 52 26 26 0 0 0 0-52Zm20.27 39.66a24.47 24.47 0 0 1-29.78 8.86 24.49 24.49 0 0 1-13-13 24.4 24.4 0 0 1 5.23-26.8 24.46 24.46 0 0 1 26.79-5.24 24.49 24.49 0 0 1 13 13 24.42 24.42 0 0 1-2.25 23.17l.01.01Z"/>
+	<path fill="currentColor" d="M45 15.61c.103.736.153 1.477.15 2.22a20.38 20.38 0 0 1-1.65 7.76l-6.61 19.14A21.65 21.65 0 0 0 45 15.61ZM40.63 24.91a11.45 11.45 0 0 0-1.79-6c-1.1-1.78-2.13-3.29-2.13-5.08A3.76 3.76 0 0 1 40.35 10h.28A21.65 21.65 0 0 0 7.9 14.1h1.39c2.27 0 5.78-.27 5.78-.27a.9.9 0 0 1 .13 1.79s-1.17.13-2.47.2l7.88 23.47 4.75-14.22L22 15.84c-1.17-.07-2.27-.2-2.27-.2a.9.9 0 0 1 .14-1.79s3.57.27 5.7.27c2.13 0 5.78-.27 5.78-.27a.9.9 0 0 1 .14 1.79s-1.18.13-2.48.2l7.83 23.29 2.23-7.08a25.171 25.171 0 0 0 1.56-7.14ZM145.83 19.3h-10.34v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85-2.48-.35-4.16-1.68-6.47-4.22l-2.66-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.24 0 3.76.69 3.76 4.79v7.4c0 4.1-.52 4.85-3.76 4.85v1.1h11.5v-1.1c-3.24 0-3.76-.75-3.76-4.85v-2.08h1l6.42 8h16.81c8.26 0 11.85-4.39 11.85-9.65 0-5.26-3.61-9.56-11.87-9.56Zm-24.21 9.42V21H124a3.551 3.551 0 0 1 3.76 3.87 3.536 3.536 0 0 1-3.76 3.85h-2.38Zm24.38 8h-.4c-2.08 0-2.37-.52-2.37-3.18V21H146c6 0 7.11 4.39 7.11 7.8S152 36.75 146 36.75v-.03ZM93.49 13.52H82.62v1.16c3.7 0 4.22 1 3.07 4.39l-4 11.78L76 13.52h-1.1l-5.85 17.33-3.87-11.78c-1.22-3.59-.29-4.39 3.12-4.39v-1.16H55.47v1.16c3.35 0 4.28.86 5.66 5.08l6.42 19.76h.75l6-18.08 5.9 18.08h.8l6.59-19.76c1.44-4.22 2.31-5.08 5.95-5.08l-.05-1.16ZM101.34 18.55c-6.35 0-11.55 4.68-11.55 10.34s5.2 10.4 11.55 10.4c6.35 0 11.56-4.68 11.56-10.4 0-5.72-5.2-10.34-11.56-10.34Zm0 18.89c-5.31 0-7.16-4.74-7.16-8.55 0-3.81 1.85-8.55 7.16-8.55 5.31 0 7.23 4.79 7.23 8.55 0 3.76-1.85 8.55-7.23 8.55ZM170.67 13.52h-12v1.16c3.88 0 4.57.92 4.57 6.7v9.24c0 5.78-.69 6.76-4.57 6.76v1.16H172v-1.16c-3.88 0-4.57-1-4.57-6.76v-2.83h3.29c6 0 9.25-3.12 9.25-7.11s-3.35-7.16-9.3-7.16Zm0 12.13h-3.29v-10h3.29c3.24 0 4.74 2.31 4.74 5.08s-1.5 4.92-4.74 4.92ZM219.32 34.15c-.52 1.9-1.15 2.6-5.26 2.6h-.81c-3 0-3.52-.7-3.52-4.8v-2.66c4.51 0 4.85.41 4.85 3.41h1.1v-8.61h-1.1c0 3-.34 3.41-4.85 3.41V21h3.18c4.1 0 4.74.69 5.26 2.6l.28 1.1h.93l-.38-5.4h-17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 3.75-.44 4.69-3 4.83-2.42-.37-4.09-1.69-6.37-4.2l-2.65-2.89c3.58-.63 5.49-2.89 5.49-5.43 0-3.18-2.72-5.6-7.8-5.6h-10.17v1.1c3.23 0 3.75.69 3.75 4.79v7.4c0 4.1-.52 4.85-3.75 4.85v1.1h11.49v-1.1c-3.23 0-3.75-.75-3.75-4.85v-2.08h1l6.41 8h23.75l.35-5.43h-.87l-.31 1.07ZM189 28.72V21h2.37a3.542 3.542 0 0 1 3.75 3.87 3.532 3.532 0 0 1-.998 2.77 3.532 3.532 0 0 1-2.752 1.05l-2.37.03ZM234.52 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85h-1.09a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7-2.54 7-6.18.07-1.77-1.03-3.9-3.8-5.23ZM252 27.91l-3.18-1.56c-2.78-1.27-4-2.08-4-3.59 0-1.51 1.5-2.36 3.12-2.36 3.06 0 4.57 2.25 5 5h1.21v-6.85H253a3.415 3.415 0 0 1-.75 1.56 7.25 7.25 0 0 0-4.51-1.5c-3.58 0-6.18 2.36-6.18 5.14 0 2.54 1.73 4.45 4 5.54l3.29 1.56c2.37 1.1 3.7 2.26 3.7 3.76 0 1.73-1.5 2.77-3.35 2.77-3.41 0-6.07-2.25-6.53-6.06h-1.15v8h1.09a4.194 4.194 0 0 1 .93-2 8.481 8.481 0 0 0 5.2 2c3.87 0 7.05-2.54 7.05-6.18.07-1.77-1.03-3.9-3.79-5.23ZM277.56 18.75a10.481 10.481 0 0 0-10.68 10.17 10.47 10.47 0 0 0 10.68 10.16c5.9 0 10.71-4.58 10.71-10.16s-4.81-10.17-10.71-10.17Zm0 19c-5.52 0-7.63-4.91-7.63-8.88 0-3.97 2.07-8.87 7.63-8.87 5.56 0 7.66 4.94 7.66 8.92 0 3.98-2.11 8.88-7.66 8.88v-.05ZM301.71 33.79l-3.14-3.69c3.63-.38 5.71-2.59 5.71-5.38 0-3-2.44-5.42-6.89-5.42h-8.47v.7c2.66 0 3.05.51 3.05 3.72v10.39c0 3.21-.39 3.76-3.05 3.76v.67h8.66v-.67c-2.66 0-3.05-.55-3.05-3.76v-4H296l6.35 8.44h5.29v-.67c-1.88-.24-4.03-1.88-5.93-4.09ZM294.53 29v-8.52h2.82c2.79 0 4.08 1.93 4.08 4.24 0 2.31-1.29 4.28-4.08 4.28h-2.82ZM319.6 30.59v.64c2.21 0 3 .7 3 2.08 0 2.89-2.5 4.39-5.29 4.39-5.93 0-7.6-4.81-7.6-8.78 0-3.97 1.86-8.92 7-8.92 3.59 0 6.09 2.54 7 6.7h.64v-7h-.64a3.281 3.281 0 0 1-1.09 1.83 8.203 8.203 0 0 0-6-2.73 10.167 10.167 0 0 0-9.851 10.165 10.169 10.169 0 0 0 9.851 10.165c3.34 0 4.78-1.66 8.34-1.66V35c0-3.21.39-3.75 3.05-3.75v-.64l-8.41-.02ZM261.9 34.77a2.061 2.061 0 1 0 .288 4.112 2.061 2.061 0 0 0-.288-4.112Z"/>
+</svg>				</a>
+			</figure>
+		
+
+			</div>
+	
+
+	
+	<ul class="wp-block-social-links is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex">
+		<li class="wp-social-link wp-social-link-facebook wp-block-social-link"><a href="https://www.facebook.com/WordPress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Facebook page</span></a></li>
+		<li class="wp-social-link wp-social-link-twitter wp-block-social-link"><a href="https://twitter.com/WordPress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Twitter account</span></a></li>
+		<li class="wp-social-link wp-social-link-instagram wp-block-social-link"><a href="https://www.instagram.com/wordpress/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our Instagram account</span></a></li>
+		<li class="wp-social-link wp-social-link-linkedin wp-block-social-link"><a href="https://www.linkedin.com/company/wordpress" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Visit our LinkedIn account</span></a></li>
+	</ul> 
+
+			<!-- Use an image so it can have the MrsEaves font. -->
+		
+		<figure class="wp-block-image is-resized global-footer__code_is_poetry">
+			<img
+				src=https://s.w.org/style/images/code-is-poetry-for-dark-bg.svg				alt="Code is Poetry"
+				width="188"
+				height="13"
+			/>
+		</figure> 
+
+	</div> 
+</footer><style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-6.wp-container-6{flex-direction:column;align-items:flex-start;}.wp-container-19.wp-container-19{flex-wrap:nowrap;justify-content:flex-start;}
+</style>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-includes/js/admin-bar.min.js?ver=6.3-alpha-55700' id='admin-bar-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/navigation.js?ver=20181209' id='wporg-navigation-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/skip-link-focus-fix.js?ver=20151215' id='wporg-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-includes/js/jquery/jquery.min.js?ver=3.6.3' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/popover.js?ver=20171002' id='wporg-plugins-popover-js'></script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/section-faq.js?ver=1646806000' id='wporg-plugins-faq-js'></script>
+<script type='text/javascript' id='wporg-plugins-locale-banner-js-extra'>
+/* <![CDATA[ */
+var wporgLocaleBanner = {"apiURL":"https:\/\/wordpress.org\/plugins\/wp-json\/plugins\/v1\/locale-banner","currentPlugin":"stackable-ultimate-gutenberg-blocks"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/locale-banner.js?ver=1670985889' id='wporg-plugins-locale-banner-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/escape-html/index.min.js?ver=8514c67d158be39ab130' id='wp-escape-html-js'></script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/plugins/gutenberg/build/element/index.min.js?ver=4ff9ba19d5e52ccd0f8d' id='wp-element-js'></script>
+<script type='text/javascript' id='wporg-plugins-client-js-extra'>
+/* <![CDATA[ */
+var localeData = {"":{"Plural-Forms":"nplurals=2; plural=n != 1;","Language":"en","localeSlug":"en"},"screenshots":"Screenshots"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s.w.org/wp-content/themes/pub/wporg-plugins/js/build/theme.js?ver=0871522737fbf9eda28ca5efd36e6774' id='wporg-plugins-client-js'></script>
+<script type='text/javascript' id='wporg-global-header-script-js-extra'>
+/* <![CDATA[ */
+var wporgGlobalHeaderI18n = {"openSearchLabel":"Open Search","closeSearchLabel":"Close Search","overflowMenuLabel":"More menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1659374792' id='wporg-global-header-script-js'></script>
+	<script src='https://stats.wp.com/e-202318.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'108986944',post:'81770',tz:'0',srv:'wordpress.org',j:'1:12.0'} ]);
+		_stq.push([ 'clickTrackerInit', '108986944', '81770' ]);
+	</script>
+	</body>
+</html>

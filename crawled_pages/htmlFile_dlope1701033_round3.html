@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+	>
+
+<channel>
+	<title>Andrew Ozz on WordPress</title>
+	<atom:link href="https://ozz.blog/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ozz.blog</link>
+	<description>Just another WordPress.com weblog</description>
+	<lastBuildDate>Sat, 19 Apr 2014 07:06:22 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>http://wordpress.com/</generator>
+<cloud domain='ozz.blog' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+<image>
+		<url>https://s0.wp.com/i/buttonw-com.png</url>
+		<title>Andrew Ozz on WordPress</title>
+		<link>https://ozz.blog</link>
+	</image>
+	<atom:link rel="search" type="application/opensearchdescription+xml" href="https://ozz.blog/osd.xml" title="Andrew Ozz on WordPress" />
+	<atom:link rel='hub' href='https://ozz.blog/?pushpress=hub'/>
+	<item>
+		<title>Customizing TinyMCE 4.0</title>
+		<link>https://ozz.blog/2014/04/19/customizing-tinymce-4-0/</link>
+					<comments>https://ozz.blog/2014/04/19/customizing-tinymce-4-0/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Sat, 19 Apr 2014 07:04:36 +0000</pubDate>
+				<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[TinyMCE]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=380</guid>
+
+					<description><![CDATA[Many of the TinyMCE settings have changed in version 4.0. There is a new default theme: Modern, and all the UI settings for the former Advanced theme (theme_advanced...) are deprecated. One often used setting was theme_advanced_blockformats. It was renamed to &#8230; <a href="https://ozz.blog/2014/04/19/customizing-tinymce-4-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Many of the TinyMCE settings have changed in version 4.0. There is a new default theme: Modern, and all the UI settings for the former Advanced theme (<code>theme_advanced...)</code> are deprecated.</p>
+<p>One often used setting was <code>theme_advanced_blockformats</code><strong><code>.</code></strong> It was renamed to <code>block_formats</code> and keeps the same formatting. To specify a different set of elements for the &#8216;blockformats&#8217; drop-down (second toolbar row in the WordPress Visual editor), you can set a string of name=value pairs separated by a semicolon in the initialization object:</p>
+<pre class="brush: jscript; title: ; notranslate">block_formats: &quot;Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3&quot;</pre>
+<p>Another handy setting: <code>theme_advanced_styles</code> doesn&#8217;t exist any more. However there is a more powerful version: <code>style_formats</code>. Now it can replace or add items to the new &#8220;Formats&#8221; menu.The value is an array of objects each containing a name that is displayed as sub-menu and several settings: a CSS class name or an inline style, and optionally the wrapper element where the class or inline style will be set:</p>
+<pre class="brush: jscript; title: ; notranslate">
+toolbar3: 'styleselect',
+style_formats_merge: true,
+style_formats: { name: 'Custom styles', [
+  {title: 'Red bold text', inline: 'b', styles: {color: '#ff0000'}},
+  {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+  {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+  {title: 'Example 1', inline: 'span', classes: 'example1'},
+  {title: 'Example 2', inline: 'span', classes: 'example2'}
+]}
+</pre>
+<p>The above code will add another sub-menu to &#8220;Formats&#8221; without replacing the default menu items. There is <a href="http://www.tinymce.com/wiki.php/Configuration:style_formats">more information</a> and an <a href="http://www.tinymce.com/tryit/custom_formats.php">example</a> on the TinyMCE website.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2014/04/19/customizing-tinymce-4-0/feed/</wfw:commentRss>
+			<slash:comments>14</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Server managed cache in the browser</title>
+		<link>https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/</link>
+					<comments>https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Wed, 11 May 2011 15:32:57 +0000</pubDate>
+				<category><![CDATA[HTML 5.0]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[Optimization]]></category>
+		<category><![CDATA[web specs]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=145</guid>
+
+					<description><![CDATA[Imagine browsing to a big web page with lots of images and scripts, and it loads in your browser almost instantly, nearly as fast as loading it from your hard drive. Now imagine you&#8217;re browsing a web site with about &#8230; <a href="https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Imagine browsing to a big web page with lots of images and scripts, and it loads in your browser almost instantly, nearly as fast as loading it from your hard drive. Now imagine you&#8217;re browsing a web site with about 60-70 of these pages and they all load very very fast. Sounds interesting? But how to do that? Prime the browser&#8217;s cache? Preload all components of the web pages somehow? Is that possible?</p>
+<p>Well, yes and no. It is possible by using <a href="http://gears.google.com/">Gears</a>. It can be set to store all &#8220;static&#8221; components (JS, CSS, images, etc.) of a web page or a whole web site and load them from the local storage every time they are requested by the browser. However the Gears team <a href="http://gearsblog.blogspot.com/2010/02/hello-html5.html">shifted their priorities</a> to HTML 5.0 offline storage which was the main idea behind Gears in the first place. Unfortunately the HTML 5.0 specification for offline storage implements only some of the features that were available in Gears, so this type of caching (controlled by the user and managed by the server) is impossible.</p>
+<p><em>But why server managed cache? Isn&#8217;t the standard browser caching good enough?</em> Yes, it is good. It has evolved significantly during the 15 or so years since the beginning of the World Wide Web. However it just can&#8217;t do that.</p>
+<p>Lets take a simplistic look at how the browser cache works:</p>
+<ul>
+<li>We (the users) browse to a web page.</li>
+<li>The Server tells the Browser: &#8220;Hey there, these few files (images, JS, CSS, etc.) are almost never updated, put them in your cache and don&#8217;t ask me to send them again for the next 10 years.&#8221;</li>
+<li>The Browser thinks: &#8220;Hmm, put them in the cache you saying? I&#8217;ll think about it. You know, I&#8217;m a Web Browser. I need to load pages very very fast. I don&#8217;t want a huge cache with millions of files in it. That will slow me down. Lets see if the User would come back to this page ever again.&#8221;</li>
+</ul>
+<p>If we keep going to the same web page eventually the Browser would change his mind: &#8220;Maybe that Server was right and I should put these files in my cache. That would speed up page loading. But what will happen if these files are updated&#8230; I better keep asking the Server to check if they have been updated so my cache is always fresh.&#8221;</p>
+<p>Couple of years ago we implemented Gears as WordPress&#8217; Turbo feature. We didn&#8217;t use it to make WordPress an offline app, we used it to create server managed cache. It worked great. Even the heaviest pages in the WordPress admin were loading considerably faster regardless of how often the users were visiting them.</p>
+<p>The implementation was very simple: we had a manifest that listed all &#8220;static&#8221; files and couple of user options to enable and initialize the &#8220;super cache&#8221;. The rest was handled automatically by Gears. So in reality we discovered the perfect way of browser caching for web apps:</p>
+<ul>
+<li>The User decides which web sites / web apps are cached and can add or remove them.</li>
+<li>The server (i.e. the web app) maintains the cache, updating, adding, deleting files as needed.</li>
+</ul>
+<p>The results were spectacular. We didn&#8217;t need to concatenate and compress scripts and stylesheets. We even stopped compressing TinyMCE which alone can load about 30-40 files on initialization. And page load time was from 0.5 to 1.5 sec. no matter how heavy the page was. For comparison before implementing this &#8220;super caching&#8221; pages were loading in 5 to 9 sec.</p>
+<p><em>Why was it performing that well?</em> Simple: it eliminated all requests to the server for the files that were cached. And that means <strong>all</strong>, even the &#8220;HEAD&#8221; requests. In our implementation the only file that was loaded from the server was the actual HTML. All other components of the web page were stored in Gears&#8217; offline storage.</p>
+<p>That also had the side benefit of eliminating a big chunk of traffic to the server. At first look it doesn&#8217;t seem like a lot, 30-40 requests for the web page components followed by 30-40 of HEAD requests per page every now and then (while the browser cache is hot), but think about it in global scope: several millions of these pages are loaded every hour.</p>
+<p><em>So, why not do the same with HTML 5.0 offline storage?</em> Because it doesn&#8217;t work that way. The HTML 5.0 specification for offline storage is good only for&#8230; Offline storage. It&#8217;s missing a lot of the features Gears has. Yes, there is a workaround. We can &#8220;store offline&#8221; a skeleton of the web page and then load all the dynamic content with XHR (a.k.a. AJAX), but that method has other (quite annoying) limitations. Despite that we will try this method in WordPress for sure, but that discussion is for another post.</p>
+<p><em>In short:</em> the HTML 5.0 offline storage implementation is missing some critical features. For example a file that is stored there <strong>is not</strong> loaded from the storage when the browser goes to another page on the same website. Yes, it&#8217;s sad watching the browser load the same file again and again from the Internet when that file is already on the user&#8217;s hard drive.</p>
+<p><em>What can we do about it?</em> Don&#8217;t think there is anything that can be done short of changing, or rather enhancing the HTML 5.0 specification for offline storage. The XHR &#8220;hack&#8221; that makes this kind of caching possible with the current HTML 5.0 is still just a hack.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2011/05/11/server-managed-cache-in-the-browser/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Can themes style the visual editor?</title>
+		<link>https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/</link>
+					<comments>https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2010 08:29:49 +0000</pubDate>
+				<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[Themes]]></category>
+		<category><![CDATA[TinyMCE]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=130</guid>
+
+					<description><![CDATA[Short answer: yes. This has been available for quite some time but don&#8217;t think I&#8217;ve seen themes that do it. Things like typefaces, headings, image padding and borders, etc. can easily be set by the current theme making the visual &#8230; <a href="https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Short answer: yes. This has been available for quite some time but don&#8217;t think I&#8217;ve seen themes that do it. Things like typefaces, headings, image padding and borders, etc. can easily be set by the current theme making the visual editor&#8230; more WYSIWYG. All it takes is a stylesheet and a small function in the theme&#8217;s functions.php file:</p>
+<pre class="brush: php; title: ; notranslate">
+add_filter('mce_css', 'my_editor_style');
+function my_editor_style($url) {
+
+  if ( !empty($url) )
+    $url .= ',';
+
+  // Change the path here if using sub-directory
+  $url .= trailingslashit( get_stylesheet_directory_uri() ) . 'editor-style.css';
+
+  return $url;
+}
+</pre>
+<p>where editor-style.css will be applied to TinyMCE&#8217;s iframe.</p>
+<p>There is also an option to define CSS classes that can be inserted by the user and to add the &#8220;Styles&#8221; drop-down selector to the editor toolbar. This is probably most useful for developers when creating a custom theme for a client as these classes would stop working if the theme is changed.</p>
+<p>I&#8217;ve put together a small package with examples of how to enable this. If you are creating WordPress themes, <a href="http://plugins.svn.wordpress.org/tinymce-advanced/branches/tinymce-kit/">download it or have a look</a>, it&#8217;s quite simple. If not, perhaps ask the author of your theme to add it to the next update. <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><ins datetime="2010-01-03T20:41:06+00:00">Update:</ins> as Dion points out in the comments, this is not meant for adding the whole &#8220;style.css&#8221; to the editor. That could bring problems and most of the styling won&#8217;t apply there anyways. It works best when a separate stylesheet is made specifically for use in the editor (editor-style.css in the example). It should contain a small subset from style.css, usually the part that is applied to the actual posts.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2010/01/02/can-themes-style-the-visual-editor/feed/</wfw:commentRss>
+			<slash:comments>69</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>PodPress 8.8.2</title>
+		<link>https://ozz.blog/2009/12/31/podpress-8-8-2/</link>
+					<comments>https://ozz.blog/2009/12/31/podpress-8-8-2/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Thu, 31 Dec 2009 12:23:16 +0000</pubDate>
+				<category><![CDATA[Plugins]]></category>
+		<category><![CDATA[podPress]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=125</guid>
+
+					<description><![CDATA[PodPress version 8.8.2 is a maintenance and bugfix release including patches by Tim Berger. It makes podPress compatible with WordPress 2.9 and fixes several other bugs. If someone has other patches please open tickets on the plugins trac and leave &#8230; <a href="https://ozz.blog/2009/12/31/podpress-8-8-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://wordpress.org/extend/plugins/podpress/">PodPress</a> version 8.8.2 is a maintenance and bugfix release including patches by <a href="http://profiles.wordpress.org/ntm/">Tim Berger</a>. It makes podPress compatible with WordPress 2.9 and fixes several other bugs. If someone has other patches please open tickets on the <a href="http://plugins.trac.wordpress.org/">plugins trac</a> and leave a comment here.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2009/12/31/podpress-8-8-2/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>podPress and Popularity Contest</title>
+		<link>https://ozz.blog/2009/03/25/podpress-and-popularity-contest/</link>
+					<comments>https://ozz.blog/2009/03/25/podpress-and-popularity-contest/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Wed, 25 Mar 2009 23:48:35 +0000</pubDate>
+				<category><![CDATA[Plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=76</guid>
+
+					<description><![CDATA[There have been couple of patches for the feeds in podPress by Tim Berger, Update and bugfix for the atom feed and Bypass of the RSS Feed does not work. Currently they are in the Development Version. If anybody wants &#8230; <a href="https://ozz.blog/2009/03/25/podpress-and-popularity-contest/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>There have been couple of patches for the feeds in podPress by Tim Berger, <a href="http://plugins.trac.wordpress.org/ticket/961">Update and bugfix for the atom feed</a> and <a href="http://plugins.trac.wordpress.org/ticket/962">Bypass of the RSS Feed does not work</a>. Currently they are in the <a href="http://downloads.wordpress.org/plugin/podpress.zip">Development Version.</a> If anybody wants to add more, please make a ticket on the <a href="http://plugins.trac.wordpress.org/wiki">plugins trac</a> and drop me an <a href="https://azaozz.wordpress.com/contact/">email</a>.</p>
+<p>Also recently had a look at the <a href="http://wordpress.org/extend/plugins/popularity-contest/">Popularity Contest</a> plugin. It works well in WordPress 2.7 and 2.8-bleeding only the activation fails. To make it compatible a small piece of code has to be added to the beginning: <code>global $wpdb;</code></p>
+<p>This should go just above the first &#8220;if&#8221; statement, so it looks like this:</p>
+<pre class="brush: php; title: ; notranslate">
+// add this 
+global $wpdb;
+
+// existing code
+if (!isset($wpdb)) {
+	require('../../wp-blog-header.php');
+	...
+</pre>
+<p>Tried to contact the author and send him this fix so he can add it to the plugin.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2009/03/25/podpress-and-popularity-contest/feed/</wfw:commentRss>
+			<slash:comments>18</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Troubleshooting TinyMCE in WordPress 2.7</title>
+		<link>https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/</link>
+					<comments>https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Thu, 11 Dec 2008 11:01:18 +0000</pubDate>
+				<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[TinyMCE]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=53</guid>
+
+					<description><![CDATA[One of the many improvements in WordPress 2.7 is the updated configuration of the visual editor, TinyMCE. It was optimized to support caching better and to load faster. The compression whitin WordPress is gone and all editor components are included &#8230; <a href="https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>One of the many improvements in WordPress 2.7 is the updated configuration of the visual editor, <a href="http://tinymce.moxiecode.com/">TinyMCE</a>. It was optimized to support caching better  and to load faster.</p>
+<p>The compression whitin WordPress is gone and all editor components are included as standard Javascript, CSS and HTML files. However a lot of servers compress these files automatically. If your server doesn&#8217;t do that, the first loading of the write/edit page will be slower, but after that the editor loads a lot faster than before, as all files are in the browser&#8217;s cache on the hard disk. And if the &#8220;Turbo&#8221; is turned on in WordPress and Gears enabled, the speed increase is even bigger as the browser does not have to check if any file has been updated.</p>
+<p>In my (non-scientific) tests the loading time of the Add New Post screen went from about 5 &#8211; 8 sec. to about 1 &#8211; 2 sec. depending on the Internet connection and the computer speed.</p>
+<p>The removal of the compression whitin WordPress also improves compatibility with some unusual server configurations and fixes some hard to catch errors, for example when there are php errors or output starts in the current theme&#8217;s functions.php file.</p>
+<p>Currently the editor&#8217;s settings together with all Javascript files are included directly in the HTML head section of the page, making it a lot easier to troubleshoot.</p>
+<p>There are a few steps that would help with the troubleshooting if the editor doesn&#8217;t start or work properly:</p>
+<ol>
+<li>Make sure the &#8220;Disable the visual editor when writing&#8221; checkbox in your profile is <strong>not</strong> selected.</li>
+<li>Whitelist or set your blog as &#8220;trusted&#8221; in your firewall and antivirus program.</li>
+<li>Disable Gears, clear your browser&#8217;s cache, quit it, start it again, go back to the write page and force-reload it several times, while holding down Shift (Firefox) or Ctrl (IE). In Safari select Clear Cache (from the Safari menu on Mac).</li>
+<li>Try another browser and/or another computer.</li>
+<li>Disable all plugins, clear the cache, restart the browser and try again.</li>
+<li>Delete both <code>wp-admin</code> and <code>wp-includes</code> directories and upload fresh copies from the WordPress <a href="http://wordpress.org/download/">installation package</a>.</li>
+<li>And finally install <a href="http://www.mozilla.com/">Firefox</a> or <a href="http://www.opera.com/">Opera</a>, note any Javascript errors, especially the first one and try searching on the <a href="http://wordpress.org/support/">support forum</a> for a solution. If no solution exists, open a new thread including the error.</li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2008/12/11/troubleshooting-tinymce-in-wordpress-27/feed/</wfw:commentRss>
+			<slash:comments>54</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>PodPress in WordPress 2.6</title>
+		<link>https://ozz.blog/2008/07/31/podpress-in-wordpress-26/</link>
+					<comments>https://ozz.blog/2008/07/31/podpress-in-wordpress-26/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Thu, 31 Jul 2008 19:06:26 +0000</pubDate>
+				<category><![CDATA[Plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=43</guid>
+
+					<description><![CDATA[Yesterday had a quick look at podPress, the premier plugin for podcasting. It has a small incompatibility with the new Post Revisions feature introduced in WordPress 2.6. PodPress seems to be in the middle of a large update. I&#8217;ve used &#8230; <a href="https://ozz.blog/2008/07/31/podpress-in-wordpress-26/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Yesterday had a quick look at <a href="http://wordpress.org/extend/plugins/podpress/">podPress,</a> the premier plugin for <a href="http://en.wikipedia.org/wiki/Podcasting">podcasting.</a> It has a small incompatibility with the new Post Revisions feature introduced in WordPress 2.6.</p>
+<p>PodPress seems to be in the middle of a large update. I&#8217;ve used the <a href="http://downloads.wordpress.org/plugin/podpress.experimental.zip">&#8220;experimental&#8221;</a> version (8.9) of the plugin and emailed the proposed fix to the authors, however for the more impatient here is the patch:</p>
+<pre class="brush: php; title: ; notranslate">
+function post_edit($post_id) {
+	GLOBAL $post;
+	if($this-&gt;justposted) {
+		return;
+	}
+	$this-&gt;justposted = true;
+
+	if ( isset($_POST['post_ID']) &amp;&amp; (int) $_POST['post_ID'] )
+		$post_id = (int) $_POST['post_ID'];
+
+	$this-&gt;settings_item_save($post_id, $_POST);
+}
+</pre>
+<p>It goes in <code>podpress/podpress_admin_class.php,</code> around line 51. What it does is to make sure the custom post meta fields used by podPress are attached to the actual Post, not one of the revisions.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2008/07/31/podpress-in-wordpress-26/feed/</wfw:commentRss>
+			<slash:comments>64</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Thank you!</title>
+		<link>https://ozz.blog/2008/07/16/thank-you/</link>
+					<comments>https://ozz.blog/2008/07/16/thank-you/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Wed, 16 Jul 2008 00:02:00 +0000</pubDate>
+				<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=32</guid>
+
+					<description><![CDATA[I am deeply honoured to be chosen as WordPress.org core committer. That was a very nice surprise on the eve of the 2.6 release 🙂 Thanks a lot guys. I&#8217;ll do my best (and try not to mess anything up &#8230; <a href="https://ozz.blog/2008/07/16/thank-you/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I am deeply honoured to be chosen as WordPress.org core committer. That was a very nice surprise on the eve of the 2.6 release <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Thanks a lot guys. I&#8217;ll do my best (and try not to mess anything up on trac).</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2008/07/16/thank-you/feed/</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>WordPress 2.6: quick tips</title>
+		<link>https://ozz.blog/2008/07/15/wordpress-26-quick-tips/</link>
+					<comments>https://ozz.blog/2008/07/15/wordpress-26-quick-tips/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Ozz]]></dc:creator>
+		<pubDate>Tue, 15 Jul 2008 15:59:52 +0000</pubDate>
+				<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[release]]></category>
+		<guid isPermaLink="false">http://azaozz.wordpress.com/?p=20</guid>
+
+					<description><![CDATA[The new WordPress 2.6 perfects most of the features introduced in 2.5 and adds several big enhancements. A nice security enhancement is the full support for SSL in the the admin area, ensuring all data sent from the browser to &#8230; <a href="https://ozz.blog/2008/07/15/wordpress-26-quick-tips/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The new <a href="http://wordpress.org/development/2008/07/wordpress-26-tyner/">WordPress 2.6</a> perfects most of the features introduced in 2.5 and adds several big enhancements. A nice security enhancement is the full support for <a href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer">SSL</a> in the the admin area, ensuring all data sent from the browser to the server and back is encrypted.</p>
+<p>To take full advantage of it, everybody should enter not one but three &#8220;Secret Keys&#8221; in their <code>wp-config.php</code> file. More details are available on <a href="http://boren.nu/archives/2008/07/14/ssl-and-cookies-in-wordpress-26/">Ryan&#8217;s blog.</a></p>
+<p>Another security improvement is the disabling by default of the <a href="http://en.wikipedia.org/wiki/Atom_(standard)">Atom Publishing</a> and the <a href="http://en.wikipedia.org/wiki/XML-RPC">XML-RPC</a> protocols. This is more of a &#8220;locking of the back door when we know nobody is coming through there&#8221; kind of thing, not a &#8220;security guards with dogs&#8221;. However these protocols are used by the off-line blog editors and by some plugins, so if you have one of these, make sure to enable the protocol you need from the Settings screen.</p>
+<p>A new improvement is the ability to add captions to all images. Just enter some text in the Caption field on the Insert Image dialog and a caption will be added both in the editor and on the blog. To show the captions on the blog correctly, a few CSS styles may need to be added to your current theme&#8217;s style.css file. These styles are in both the Default and Classic themes&#8217; style.css and are as follows:</p>
+<pre class="brush: css; title: ; notranslate">
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 4px;
+    margin: 10px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+</pre>
+<p>Of course these styles can be edited to suit your theme. A nice way of editing CSS styles is to use FireFox with FireBug. When changing styles there, it would show you immediately how the look changes, and when everything looks good, just copy/paste the edited styles to your style.css file (don&#8217;t forget to check them in Internet Explorer, Safari and Opera too).</p>
+<p>Editing image captions should be very intuitive. Clicking on the Edit button that pops up when you click on an image in the editor would open the newly enhanced Edit Image dialog that has the same options as the Insert Image one. It would let you align, resize, change the title, link or caption for the image. There is also an advanced tab that has more options.</p>
+<p>Images with captions can also be aligned with the Align Left, Align Center, Align Right buttons on the editor&#8217;s toolbar. In FireFox and Internet Explorer, the images and the captions can be resized by dragging the corners, however that&#8217;s not recommended since most images don&#8217;t look very well after using this method. Best is to select the right size image when inserting it.</p>
+<p>Trying to move an image that has a caption by dragging it doesn&#8217;t work (yet). Currently there&#8217;s no support for dragging in the editor. Since all modern browsers seem to support dragging better, it won&#8217;t be long before that will work well too.</p>
+<p>Another nice enhancement is the &#8220;Turbo&#8221; (top-right corner on the dashboard). Behind it is a new browser plugin &#8211; Gears. Currently it only works in FireFox and Internet Explorer, soon in Safari.</p>
+<p>In WordPress, Gears captures all &#8220;static&#8221; files (images, css and JavaScript) from the admin area to the computer&#8217;s Hard Disk. This eliminates needless connections to the server when these files are needed. That makes page loading quite &#8220;snappier&#8221; for people with fast connections and much faster when Internet is congested or the connection is slow.</p>
+<p>After enabling Gears it would download about 200 small files (just over 1MB in total) to your Hard Disk. Any errors during the download usually mean that some files in WordPress haven&#8217;t been installed properly. The best way to fix this is to delete the <code>wp-admin</code> and <code>wp-includes</code> directories and upload fresh copies from the installation package.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://ozz.blog/2008/07/15/wordpress-26-quick-tips/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		
+		<media:content url="https://0.gravatar.com/avatar/9f376366854d750124dffe057dda99c9?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">azaozz</media:title>
+		</media:content>
+	</item>
+	</channel>
+</rss>
