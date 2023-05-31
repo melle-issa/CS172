@@ -1,0 +1,12 @@
+{
+    "title": "Google Docs: Sign-in",
+    "body": "Sign into continue to DocsEmail or phoneForgot email?Not your computer? Use a private browsing window to sign in. Learn moreNextCreate account",
+    "links": [
+        "/signin/usernamerecovery?continue=https://docs.google.com/document/d/1ZW4Mznw_Pgtx8wrpuBpg0CEhawUEqWi0CYredcYxBfw/edit&dsh=S-922414857:1682972220328620&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://docs.google.com/document/d/1ZW4Mznw_Pgtx8wrpuBpg0CEhawUEqWi0CYredcYxBfw/edit&ifkv=Af_xneHi0g0jG_Hp4_P0GCj3J1ZH7ypzHoDbTIPV3MNNkecRcHcGfXNsUlQYrDcxHwzterxObQVEfw&ltmpl=docs&osid=1&service=wise",
+        "https://support.google.com/accounts?p=signin_privatebrowsing&hl=en-US",
+        "/SignUp?cc=US&continue=https://docs.google.com/document/d/1ZW4Mznw_Pgtx8wrpuBpg0CEhawUEqWi0CYredcYxBfw/edit&dsh=S-922414857:1682972220328620&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://docs.google.com/document/d/1ZW4Mznw_Pgtx8wrpuBpg0CEhawUEqWi0CYredcYxBfw/edit&ifkv=Af_xneHi0g0jG_Hp4_P0GCj3J1ZH7ypzHoDbTIPV3MNNkecRcHcGfXNsUlQYrDcxHwzterxObQVEfw&ltmpl=docs&osid=1&service=wise",
+        "https://support.google.com/accounts?hl=en-US&p=account_iph",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US&privacy=true",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US"
+    ]
+}

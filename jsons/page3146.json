@@ -1,0 +1,28 @@
+{
+    "title": "Disaster Recovery Site - Division of Information Technology | CSUF",
+    "body": "\n\u00a0\n\u00a0\n\n\nSkip Navigation\n\n\n\n \n\t\t\u00a0\n\t\n\n\n\nCalifornia State University, Fullerton\n\n\u00a0\n\n\n\u00a0\n\u00a0\n\n\nSite Menu\n \n \n \n\n\n\n\n\n\nDivision of Information Technology\n\n\n\n\n\nMain Navigation\n\t\tAbout IT\n\t\t\n\t\tServices\n\t\tShow Extended\n\n\n\nStudents\n\n\nFaculty / Staff\n\n\n\n\n\t\tCEDA\n\t\t\n\t\tSoftware\n\t\tShow Extended\n\n\n\nStudents\n\n\nFaculty / Staff\n\n\n\n\n\t\tEvents & Projects\n\t\t\n\t\tIT Strategic Plan\n\t\t \n\n\n\n\n\n\n\u00a0\n\n\nFaculty and Staff Help Desk\nCall: 657-278-7777\nEmail: ITHelpDesk@fullerton.edu\n\n\u00a0\nStudent IT Help Desk\nCall: 657-278-8888\nEmail: StudentITHelpDesk@fullerton.edu\n\n\n\n\nIT Disaster Recovery\n\n\n\n\n***The Disaster Recovery Site Test is scheduled for May 27, 2023, 8:00AM-8:00PM\n\n\n\n\n\nIn the event of a catastrophic disaster where campus services are distrupted, California State University, Fullerton's Division of Information Technology wants to ensure that critical campus applications are available. \u00a0We have partnered with California State University, Sacramento to provide an alternative location to host our critical services.\nOnce the test concludes, all critical services are expected to be up and running within 48 hours.\u00a0\n\n\n\n\nIT Disaster recovery Site testing information\nThe Division of Information Technology will be conducting the annual IT Disaster Recovery (DR) testing of critical services which will involve the following:\n\nDisconnecting the campus connectivity to internet and critical services to simulate a disaster interruption.\nFailover the following critical services to the DR site:\u00a0\u00a0\n\nCampus Website (home page)\nCampus Portal\nTitanOnline\nSingle Sign-on service (Shibboleth, ADFS)\n\n\n\nCloud-based applications will continue to function during the DR test:\n\nO365 (Email, MS Teams, OneDrive)\nCanvas (Learning Management System)\nDropbox\nZoom\n\n\nIncoming calls to campus will go to Zoom Phone service.\u00a0\n\nIncoming calls can be answered remotely if laptop or mobile device has Zoom Application installed and open\nOutbound and internal extension calls will be in Zoom Phone service\nOutbound and extension calls can be made remotely\n911 calls will go to local emergency line (Fullerton Police Department)\nCodeblue and elevator emergency phones will go to UPD Dispatch\n\n\nTest the functionality of the DR site applications\nRestore Internet connectivity to the campus\nTest functionality of the campus critical services\n\n\nYou may experience service interruptions during the testing period on or off campus.\n\nWhat to expect if on campus during the testing period?\n\nAccess to workstations and local services like printing\u00a0may be available\nNo internet access for the duration of the test\nWi-Fi connections will be down\nCampus Zoom phones can be used to dial another extension or outside number, including 911\nEmergency Blue Phones will function as normal\nCalls from an outside number into a campus Zoom phone will be routed if the Zoom app is installed and open\n\u00a0Mobile Print will not be available\n\n\nThe Faculty, Staff and Student IT Help Desks will be available during the site testing period.\n\n\nWhen?\n\nSaturday, May 27, 2023, 8:00AM \u2013 8:00PM\u00a0\u00a0\n\u00a0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis site is maintained by \n\t\t\t\t\t\tDivision of Information Technology.\nLast Published 3/28/23\nTo report problems or comments with this site, please contact \n\t\t\t\t\t\thelpdesk@fullerton.edu. \n\t\t\t\t\t\u00a9 California State University, Fullerton. All Rights Reserved.\n\n\nWeb Accessibility\n\n\t\t\tCSUF is committed to ensuring equal accessibility to our users.  Let us know about any accessibility problems you encounter using this website.\n\t\t\tWe'll do our best to improve things and get you the information you need.\n\t\t\n\nResources:\nDownload Adobe Acrobat Reader\n\nAdobe Reader\n\nDownload Word viewer, or download Excel viewer, or download PowerPoint viewer\n\nMicrosoft Viewers\n\n\nReport An ATI Issue\n\n\nAccessible @ CSUF\n\n\n\n\nVersion_4.8.18\n\n\n\n\n\t\t\tThis page uses javascript to help render elements, if you have problems please enable javascript.\n\t\t\n",
+    "links": [
+        "#skipnavigation",
+        "https://www.fullerton.edu",
+        "https://www.fullerton.edu/it",
+        "javascript:ShowMainNavMobile()",
+        "https://www.fullerton.edu/it/about/index.php",
+        "//www.fullerton.edu/it/students",
+        "//www.fullerton.edu/it/services",
+        "https://www.fullerton.edu/ceda",
+        "//www.fullerton.edu/it/students/software",
+        "//www.fullerton.edu/it/services/software",
+        "https://www.fullerton.edu/it/events_projects/index.php",
+        "https://www.fullerton.edu/it/../it_planning/index.php",
+        "mailto:ITHelpDesk@fullerton.edu",
+        "#top",
+        "http://www.fullerton.edu",
+        "https://www.fullerton.edu/it",
+        "https://a.cms.omniupdate.com/11/?skin=csufullerton&account=IT&site=IT_V4&action=de&path=/events_projects/disaster-recovery/index.pcf",
+        "mailto:helpdesk@fullerton.edu",
+        "https://get.adobe.com/reader/",
+        "https://www.microsoft.com/en-us/download/office.aspx",
+        "https://www.fullerton.edu/reportati/",
+        "//www.fullerton.edu/ATI"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "title": "SDSU IT Status",
+    "body": "SUBSCRIBESUBSCRIBEAll Systems OperationalUpdated a few seconds agoUpdated a few seconds agoSelect link below to report a new issue:\n\nhttp://it.sdsu.edu/help/report.aspxCanvasCanvas OperationalDuoDuo OperationalGoogle WorkspaceGoogle G Suite OperationalInstructional ClusterInstructional Cluster OperationalJamfJamf OperationalLibrary SystemsLibrary Systems OperationalMediasiteMediasite OperationalMicrosoft 365Microsoft 365 OperationalOnBase ImagingOnBase Imaging OperationalOracle FinancialsOracle Financials OperationalOther Campus SystemsOther Campus Systems OperationalPeopleSoft CS (my.SDSU)PeopleSoft CS (my.SDSU) OperationalPeopleSoft HCMPeopleSoft HCM OperationalPhone SystemPhone System OperationalRespondusRespondus OperationalSA+CD database (Enterprize)SA+CD database (Enterprize) OperationalSDSUidSDSUid OperationalServiceNowServiceNow OperationalSharePointSharePoint OperationalSIMS/RSIMS/R OperationalSlackSlack OperationalTurnitinTurnitin OperationalWebPortalWebPortal OperationalWebsitesWebsites OperationalWireless NetworkWireless Network OperationalWired NetworkWired Network OperationalZoomZoom OperationalScheduled MaintenancePeopleSoft my.SDSU Campus Solutions maintenancePlanned MaintenanceSchedule  May 2, 2023 6:00PM - 9:00PM PDTComponents  PeopleSoft CS (my.SDSU)Service  PeopleSoft CS (my.SDSU)Description  PeopleSoft my.SDSU Campus Solutions will be down due to maintenanceExternal Services Amazon Web Services Azure Duo Google Search LastPass MS Office365 OmniUpdate Salesforce Slack Status.io Twilio ZoomStatusHistoryPowered by Status.io  Subscribe to receive status updates by emailCloseSubscribeManage SubscriptionManage Existing SubscriptionCreate New SubscriptionSubscribe to receive status updates by text messageExample: 201-555-1717CloseSubscribeManage SubscriptionManage Existing SubscriptionCreate New SubscriptionFollow our status updates on Twitter@SDSUWirelessCloseSubscribe to receive status updates in SlackSlack channel IDFind the channel ID: Select the channel in your Slack workspace. The channel ID is displayed in the browser URL.Example: https://app.slack.com/client/T04SJBK1C/C03SKGJ1PEmail addressCloseManage SubscriptionManage Existing SubscriptionCreate New Subscription\nGet Help / Report a Problem\n\nVendor status sites:\nUrgent Campus Information\nCanvas\nGoogle Workspace\nLastPass\nZoom\n\n",
+    "links": [
+        "http://it.sdsu.edu",
+        "/pages/maintenance/58f939135e3d3eed2000278c/64472d8af44fff05203ff4ca",
+        "https://status.aws.amazon.com",
+        "https://azure.microsoft.com/en-us/status/",
+        "https://status.duo.com",
+        "https://status.lastpass.com",
+        "https://omniupdate.status.io",
+        "https://status.salesforce.com",
+        "https://status.slack.com",
+        "https://status.status.io",
+        "https://status.twilio.com",
+        "https://status.zoom.us",
+        "/pages/58f939135e3d3eed2000278c",
+        "/pages/history/58f939135e3d3eed2000278c",
+        "https://status.io",
+        "#tab_email",
+        "#tab_sms",
+        "#tab_slack",
+        "#tab_twitter",
+        "https://twitter.com/SDSUWireless",
+        "https://slack.com/oauth/v2/authorize?client_id=656052646563.656045388978&scope=incoming-webhook&redirect_uri=https://status.io/pages/58f939135e3d3eed2000278c/slack_auth",
+        "https://it.sdsu.edu/help",
+        "https://urgent.sdsu.edu//",
+        "https://status.instructure.com/",
+        "https://www.google.com/appsstatus#hl=en&v=status",
+        "https://status.lastpass.com/",
+        "https://status.zoom.us/"
+    ]
+}

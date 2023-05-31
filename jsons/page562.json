@@ -1,0 +1,10 @@
+{
+    "title": "Blackboard Learn",
+    "body": "\n\n\n\n\nBlackboard Learn \u2122\n\nView Options\n\n\n\nChange Text Size\n\n\n\nHigh Contrast Setting\n\n\n\n\n\n\n\n\n\nRedirecting you to the login page...\n\n          If that does not work, please select your login provider below:\n        \n\n\nPlease enable JavaScript in your browser for the Blackboard application to function.\n\n\n\n\nHave an account?\n\n\nPlease enter your credentials and click the Login button below.\n    \n\n\n\n\nUsername\n\n\n\nPassword\n\n\n\n\n\n\n\n\n\n\n\n\nSign in with third-party account\n\nhttps://cas.csuchico.edu/cas/login\n\n\n\n\n\n\n\n\n\nWelcome to the Blackboard e-Education platform\u2014designed to enable educational innovations everywhere by connecting people and technology.\n\n\n\n\n\n\n\n\n\n  \t\t\u00a9 1997-2023 Blackboard Inc. All Rights Reserved. U.S. Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.\n  \t\n\nAccessibility information\n\n\n\n\n\n\n\n\n",
+    "links": [
+        "#",
+        "#",
+        "/webapps/bb-auth-provider-cas-BB5de9a46e09e4a/execute/casLogin?cmd=login&authProviderId=_103_1&redirectUrl=https%3A%2F%2Flearn.csuchico.edu%2Fwebapps%2Fportal%2Fexecute%2FdefaultTab",
+        "http://access.blackboard.com"
+    ]
+}

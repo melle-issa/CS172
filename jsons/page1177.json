@@ -1,0 +1,15 @@
+{
+    "title": "homepage",
+    "body": "\n\n\nGo to Main Content\nBrown University\n\n\n\n\n\n\u00a0\n\n\n\n\nHELP\n|\nEXIT\n\n\n\n\n\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Important message to Faculty/Advisors - If you intend on using the e-mail classlist/advisee list feature within Banner Web please set up your default 'mail to' client on your web browser to Brown GMail by following the directions at http://brown.edu/go/mailto\n\n\n\u00a0\n\nEnter Secure Area\n\nLogin here to access secure Banner Web for students, faculty, and advisors.\n\n\n\n\u00a0\n\nCourses@Brown\n\nUse this advanced search engine to find all credit bearing Brown Courses for a given term.  (Includes textbook information if present).\n\n\n\n\u00a0\n\nClass Schedule\n\nBasic search of courses offered in a given term (credit bearing and non-credit bearing).\n\n\n\n\u00a0\n\nCourse Catalog\n\nBasic search for credit bearing and non-credit bearing courses which includes a detailed course description.\n\n\n\n\n\nSkip to top of page\n\n\n\n\n\n\n\n\n\n\nRelease: 8.9.1\n\n\n\n\n\n\n\n\n\n\n",
+    "links": [
+        "#main_content",
+        "/wtlhelp/twbhhelp.htm",
+        "twbkwbis.P_Logout",
+        "http://brown.edu/go/mailto",
+        "/ss/twbkwbis.P_WWWLogin",
+        "https://cab.brown.edu",
+        "bwckschd.p_disp_dyn_sched",
+        "bwckctlg.p_disp_dyn_ctlg",
+        "#top"
+    ]
+}

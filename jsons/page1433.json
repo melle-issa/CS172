@@ -1,0 +1,18 @@
+{
+    "title": "Web Login Service",
+    "body": "\n\n\n\nBrown University\n\n\n\n\n\n\nAuthentication Required\n\n\n\n\n\nEnter your Brown credentials\n\nUsername\n\n\n\n\nPassword\n\n\nLog In\n\n\n\n\n\nYou have asked to log in to:\n\n\n\n\n\nspace-reservations.brown.edu\n\n\n\n\n\nBrown University\nLogin Help\nmyAccount\nNew Users: Activate your account now\n\n\nForgot your password? Faculty/Staff/Student or \n\tAlumni & Friends\n\n\n\nNeed to know more? Learn more about Shibboleth at Brown.\n\n\n\n\n\n\nBrown University\nProvidence, Rhode Island 02912, USA\nPhone: 401-863-1000\nMaps & Directions / Contact Us / Accessibility\n\u00a9 2013 Brown University\n\n\n\n\n\n",
+    "links": [
+        "http://www.brown.edu",
+        "http://www.brown.edu/",
+        "http://www.brown.edu/cis/services/shibboleth/help.html",
+        "http://myaccount.brown.edu",
+        "http://myaccount.brown.edu/activate",
+        "https://myaccount.brown.edu/password/brown",
+        "https://myaccount.brown.edu/password/alumni",
+        "http://www.brown.edu/information-technology/services/web-authentication-shibboleth",
+        "http://www.brown.edu/Facilities/Facilities_Management/maps/#building/",
+        "http://www.brown.edu/about/visit/driving-directions",
+        "http://www.brown.edu/contact",
+        "https://www.brown.edu/website-accessibility/"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "title": "Student Portal Login | University of California Riverside Extension",
+    "body": "\n\n\nThe following fields are required:\n\n\n\nError has occurred.  Please reload this page and try the operation again.\n\n\n\n\n\n\n\n\n\n\n\nSkip to Main Content\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUniversity of California, Riverside Extension\n\n\n\n\n\n\n\n\n\n        Login\n      \nMenu\n\n\n\n          Student Login\n        \n\n            Instructor Login\n          \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nToggle navigation\n\n\n\n\n\n\nStudent Login\n\n\n Instructor Login\n\n\nCourses\nCertificates\nPrograms\nRequest Information\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Portal Login\n\n\n\n\n\n\n\n\n",
+    "links": [
+        "#mainContentWrapper",
+        "https://extension.ucr.edu/",
+        "#",
+        "/portal/logon.do?method=load",
+        "/portal/logonInstructor.do?method=load",
+        "/coursebasket/publicCourseBasket.do?method=load",
+        "#",
+        "/portal/logon.do?method=load",
+        "/portal/logonInstructor.do?method=load",
+        "https://extension.ucr.edu/courses/courseoverview",
+        "https://extension.ucr.edu/certificatesandcredentials/overview",
+        "https://extension.ucr.edu/internationaleducationprograms/programpages/overview",
+        "https://extension.ucr.edu/"
+    ]
+}

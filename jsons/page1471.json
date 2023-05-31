@@ -1,0 +1,15 @@
+{
+    "title": "CSUF SSO Service",
+    "body": "\n\n\nSkip to main content\nCSUF SSO Service\n\n\n\n\n\n\nLogin Box\n\n\n\n\n\nLogin to CSUF Portal\n                     \n\nUsername\n\n\n\n                     Your username is the name before the '@' in your CSUF email address.\n                     \nForgot your username?\n\n\n                     Please click the link below to create your campus account.\n                     \nCreate my campus account\n\n\nPassword\n\n\n\nLogin\n\n\n\nNeed help logging in?\nDUO Two-Factor Authentication (2FA) is required to login.  Check \u201cRemember me for 5 days\u201d to stay authenticated.\n\n\n\n\nFirst time students and applicants\n\nCreate my campus account\n\n\nAlumni\n\nAlumni click here\nto Alumni Portal\n\n\n\n\n\n\n\n\nCalifornia State University, Fullerton\nCampus Website\n\n\nReport errors\n\n\n",
+    "links": [
+        "#content",
+        "https://my.fullerton.edu/Accounts",
+        "https://my.fullerton.edu/Accounts/StudentRegistration",
+        "http://my.fullerton.edu/Accounts",
+        "http://www.fullerton.edu/it/students/2fa/index.php",
+        "https://my.fullerton.edu/Accounts/StudentRegistration",
+        "http://www.fullerton.edu/Alumni",
+        "http://www.fullerton.edu",
+        "mailto:helpdesk@fullerton.edu?subject=Portal Error"
+    ]
+}

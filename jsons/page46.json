@@ -1,0 +1,12 @@
+{
+    "title": "Google Forms: Sign-in",
+    "body": "Sign into continue to FormsEmail or phoneForgot email?Not your computer? Use a private browsing window to sign in. Learn moreNextCreate account",
+    "links": [
+        "/signin/usernamerecovery?continue=https://docs.google.com/forms/d/e/1FAIpQLSfDYPBuq633T-WlHDiAbhUgjoRV6xWF0Hz7vrCGhQP9dEFPQQ/viewform&dsh=S-553606412:1683167645551957&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://docs.google.com/forms/d/e/1FAIpQLSfDYPBuq633T-WlHDiAbhUgjoRV6xWF0Hz7vrCGhQP9dEFPQQ/viewform&ifkv=Af_xneHpzufjL5zxgbEYQswHonYARkjaNWfyk32jA8fAxrHpY7ndvfFdyc6H-KH5WKrB0yzmqcfksw&ltmpl=forms&osid=1&service=wise",
+        "https://support.google.com/accounts?p=signin_privatebrowsing&hl=en-US",
+        "/SignUp?cc=US&continue=https://docs.google.com/forms/d/e/1FAIpQLSfDYPBuq633T-WlHDiAbhUgjoRV6xWF0Hz7vrCGhQP9dEFPQQ/viewform&dsh=S-553606412:1683167645551957&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://docs.google.com/forms/d/e/1FAIpQLSfDYPBuq633T-WlHDiAbhUgjoRV6xWF0Hz7vrCGhQP9dEFPQQ/viewform&ifkv=Af_xneHpzufjL5zxgbEYQswHonYARkjaNWfyk32jA8fAxrHpY7ndvfFdyc6H-KH5WKrB0yzmqcfksw&ltmpl=forms&osid=1&service=wise",
+        "https://support.google.com/accounts?hl=en-US&p=account_iph",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US&privacy=true",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US"
+    ]
+}

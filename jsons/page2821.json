@@ -1,0 +1,12 @@
+{
+    "title": "Gmail",
+    "body": "Sign into continue to GmailEmail or phoneForgot email?Not your computer? Use a private browsing window to sign in. Learn moreNextCreate account",
+    "links": [
+        "/signin/usernamerecovery?continue=https://mail.google.com/mail/u/0/&dsh=S-720611600:1682974997846908&emr=1&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://mail.google.com/mail/u/0/&ifkv=Af_xneHUKjulSveF_w5mQbZQ2B2ZbSq1ZAAj_1hJ3Pq5hxakFIRhjlQ8xoOlal46nrJDJ4gFoqSh2w&osid=1&service=mail",
+        "https://support.google.com/accounts?p=signin_privatebrowsing&hl=en-US",
+        "/SignUp?cc=US&continue=https://mail.google.com/mail/u/0/&dsh=S-720611600:1682974997846908&emr=1&flowEntry=ServiceLogin&flowName=WebLiteSignIn&followup=https://mail.google.com/mail/u/0/&ifkv=Af_xneHUKjulSveF_w5mQbZQ2B2ZbSq1ZAAj_1hJ3Pq5hxakFIRhjlQ8xoOlal46nrJDJ4gFoqSh2w&osid=1&service=mail",
+        "https://support.google.com/accounts?hl=en-US&p=account_iph",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US&privacy=true",
+        "https://accounts.google.com/TOS?loc=US&hl=en-US"
+    ]
+}

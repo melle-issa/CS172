@@ -1,0 +1,12 @@
+{
+    "title": "Log In - Omni CMS",
+    "body": "\n\n\nOmni CMS Logo\nOmni CMS Lite Logo\nOmni CMS Enterprise Logo\n \n\n\n\n\n\n\n\n\n\nOmni CMS\n\n\n\n\n\nHelp\n\n Support\n Feedback\n\n\n\n\n\n\n\n\n\n\n\n\nLog in to your account\n\n\nUsername\n\n\n\n\n\n\n\n\nLOGIN\n\n\nReset Password\n\n\n\n\nChange Password\n Please enter a new password for user  in account .\n\n\n\nNew Password\n\n\n\n\n\n\n\n\nReset\nCancel\n\n\n\n\nSystem Announcements\n\n\n\n\n\n\n\nWe're sorry; the system could not log you in.\nThe authentication server returned the following error message:\n\n\n\n\n\n\n\n\n\n\n\n\n\nReset Password\nPassword reset instructions will be emailed to the address entered below.\n\n\n\nUsername\n\n\n\n\n\n\n\n\nSUBMIT\nBack to Login Page\n\n\n\n\n\nReset Password\n\n\nYour request was successfull. You will receive an email containing a link to reset your password.\n\n\nBack to Login Page\n\n\n\n\n\n\n Javascript Disabled\nOmni CMS requires Javascript. Please enable Javascript in your browser settings.\n\n\n\n\n\n\n\n",
+    "links": [
+        "javascript:;",
+        "https://support.moderncampus.com",
+        "https://omniroadmap.moderncampus.com/",
+        "javascript:;",
+        "javascript:;",
+        "javascript:;"
+    ]
+}
