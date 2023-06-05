@@ -2,13 +2,44 @@
 <html>
 <head>
     <title>Our CS172 Search Engine</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #0000FF;
+        }
+        .search-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-box input[type="text"] {
+            width: 300px;
+            padding: 10px;
+        }
+        .search-box input[type="submit"] {
+            margin-left: 10px;
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Our CS172 Search Engine</h1>
-    <form action="/" method="POST">
-        <input type="text" name="query" placeholder="Enter your query">
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <h1>Our CS172 Search Engine</h1>
+        <form class="search-box" action="">
+            <input type="text" name="query" placeholder="Enter your query">
+            <input type="submit" value="Search">
+        </form>
+    </div>
 </body>
 </html>
-

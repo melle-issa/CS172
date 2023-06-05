@@ -17,8 +17,8 @@ import os
 from jcc import initVM
 lucene.initVM()
 
-def create_index():
-    store = SimpleFSDirectory(Paths.get("index"))
+def create_index(input_directory):
+    store = SimpleFSDirectory(Paths.get(input_directory))
     analyzer = StandardAnalyzer()
     config = IndexWriterConfig(analyzer)
     config.setOpenMode(IndexWriterConfig.OpenMode.CREATE)
@@ -77,5 +77,5 @@ def retrieve(storedir, query):
 
 query = input("Please enter a search: ")
 
-create_index()
+create_index("index")
 retrieve("index", query)
