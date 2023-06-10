@@ -14,4 +14,9 @@ def search():
     return render_template('results.html', query=query, results=results)
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
+
+@app.route('/results')
+def results():
+    return render_template('results.html')
